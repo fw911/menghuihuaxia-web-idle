@@ -3258,16 +3258,13 @@ function renderCloud(sub){
   if(on('save')) html+='<hr><h3>账号'+(C.user? '（已登录）':'')+'</h3>';
   if(on('save')){
   if(!C.ok){
-    html+='<div class="muted">后端未启动，云存档不可用。启动后刷新页面即可。</div>';
+    html+='<div class="muted">后端未启动，云存档不可用。启动后端（node server/server.js）后<b style="color:var(--gold)">刷新页面重新登录</b>。</div>';
   }else if(C.user){
     html+='<div class="muted">账号 <b style="color:var(--gold)">'+C.user+'</b>　当前槽位：'+C.slot+'</div>';
-    html+='<div class="bag-tools"><button class="mini" data-cloudact="logout">退出登录</button></div>';
+    html+='<div class="bag-tools"><button class="mini" data-cloudact="logout">退出登录</button>'
+      +'<button class="mini" data-cloudact="logout">切换账号</button></div>';
   }else{
-    html+='<div class="row"><input class="name" id="cloud-user" placeholder="账号（2~16 位）" style="flex:1;min-width:120px"/>'
-      +'<input class="name" id="cloud-pass" type="password" placeholder="密码（≥6 位）" style="flex:1;min-width:120px"/></div>';
-    html+='<div class="bag-tools"><button class="mini" data-cloudact="register">注册</button>'
-      +'<button class="mini" data-cloudact="login">登录</button></div>';
-    html+='<div class="muted">注册后存档存到服务器，换浏览器/设备都能继续；未登录时仅存本机。</div>';
+    html+='<div class="muted">启动页未完成登录。请<b style="color:var(--gold)">刷新页面</b>，在登录框注册或登录后进入游戏。</div>';
   }
   }
 
@@ -4118,7 +4115,7 @@ function bindTabClicks(){
     const u=cu? cu.value.trim():'', pw=cp? cp.value:'';
     if(a==='register'){ const r=await cloudRegister(u,pw); log(r.ok? ('<span class="loot">注册成功：'+r.user+'</span>') : ('<span class="dmg">'+r.msg+'</span>')); if(r.ok) renderTab(); }
     else if(a==='login'){ const r=await cloudLogin(u,pw); log(r.ok? ('<span class="loot">登录成功：'+r.user+'</span>') : ('<span class="dmg">'+r.msg+'</span>')); if(r.ok) renderTab(); }
-    else if(a==='logout'){ await cloudLogout(); log('<span class="sys">已退出账号</span>'); renderTab(); }
+    else if(a==='logout'){ await cloudLogout(); location.reload(); }   // 强制登录：退出后回登录页
     else if(a==='save'){ const slot=parseInt(d.getAttribute('data-slot'),10); const r=await cloudSave(slot, true);
       log(r.ok? ('<span class="loot">已保存到云端槽位 '+slot+'</span>') : ('<span class="dmg">保存失败：'+r.msg+'</span>')); state.cloud.slot=slot; persistCloud(); renderTab(); }
     else if(a==='load'){ const slot=parseInt(d.getAttribute('data-slot'),10); const r=await cloudLoad(slot);
