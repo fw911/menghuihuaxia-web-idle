@@ -219,7 +219,8 @@ async function ensureLogin(cdp) {
 
   // 游戏已改为「启动强制登录」：先自动注册/登录并把令牌写进 localStorage，再重载，
   // 否则遮罩停在账号页，点 .job 会弹 alert 把 Runtime.evaluate 卡死（30s timeout）。
-  await ensureLogin(cdp);
+  // 想拍「登录页」本身时设 UICDP_NOLOGIN=1 跳过这一步。
+  if (!process.env.UICDP_NOLOGIN) await ensureLogin(cdp);
 
   // UICDP_SAVE='{...存档 JSON...}' → 预置 localStorage 后重载，可直达指定地图/等级
   //   （用于拍副本等需要先旅行过去的页面，免得靠点邻居绕路）

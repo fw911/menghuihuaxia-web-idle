@@ -7,10 +7,10 @@ main 横向溢出       false (scrollW=1440 clientW=1440)
 右·功能页签          w=476 (33.1%)
 header          h=1440x43 横向溢出=false
 tabs            clientW=475 scrollW=475 高=68 需滚动=false
-tab-pane        475x709
+tab-pane        475x763
 log 区           713x220
-map-pane        713x300
-battle-pane     713x255
+map-pane        713x20
+battle-pane     713x535
 右列内溢出           无
 中列内溢出           无
 左列内溢出           无
