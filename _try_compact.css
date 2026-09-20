@@ -1,0 +1,10 @@
+/* 候选：让列表项在右列宽度下自动 2 列排布，用于消除「子页还剩半屏」的下拉。
+   不写进 index.html 之前先用 _probe_compact.js 试算。 */
+#tab-pane{display:grid;grid-template-columns:repeat(auto-fill,minmax(206px,1fr));
+  gap:5px 8px;align-content:start;}
+#tab-pane>h3,#tab-pane>hr,#tab-pane>.muted,#tab-pane>.bag-tools,#tab-pane>.shop{grid-column:1/-1;}
+#tab-pane>.bag-tools{margin-bottom:0;}
+#tab-pane>h3{margin-bottom:0;}
+.shop{display:grid;grid-template-columns:repeat(auto-fill,minmax(206px,1fr));gap:5px 8px;}
+.shop>.shop-name{grid-column:1/-1;}
+.item{margin-bottom:0;}

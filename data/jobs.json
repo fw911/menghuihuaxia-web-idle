@@ -1,0 +1,118 @@
+{
+  "jobs": [
+    {
+      "key": "warrior",
+      "name": "战士",
+      "desc": "近战物理系，拥有强大的物理攻击和防御能力。",
+      "icon": "",
+      "base_stats": {"strength": 12, "agility": 8, "constitution": 10, "intelligence": 2, "spirit": 4},
+      "growth": {"strength": 2.0, "agility": 1.5, "constitution": 2.0, "intelligence": 0.0, "spirit": 1.0},
+      "attribute_effects": {
+        "strength": {"phys_atk": 2, "max_hp": 5},
+        "constitution": {"max_hp": 15, "phys_def": 2},
+        "agility": {"phys_crit": 0.142857},
+        "intelligence": {},
+        "spirit": {"max_mp": 15, "magic_def": 2}
+      },
+      "per_level_points": 5,
+      "main_damage": "physical",
+      "forms": ["xu", "pan"],
+      "forms_cn": {"xu": "蓄势形态", "pan": "磐石形态"},
+      "shenmo": {
+        "_comment": "神魔（修验）形态元数据：阵营→变身形态映射 + 形态规则（原写死在 shenmo.json#factions 的 pan/xu 属职业无关段落误吞战士专有形态，见暗巫篇设计文档 §3.2）",
+        "forms": {"shen": "pan", "mo": "xu"},
+        "form_rules": {"pan": {"require_shield": true}}
+      },
+      "available_slots": ["weapon", "helmet", "chest", "legs", "boots", "ring", "necklace"],
+      "skill_pool": "warrior_skills",
+      "perk_pool": "warrior",
+      "skills": ["hanguang_zhan"]
+    },
+    {
+      "key": "mage",
+      "name": "法师",
+      "desc": "远程法术系，智力精神为主，精通四系法术与治疗。",
+      "icon": "",
+      "base_stats": {"strength": 4, "agility": 6, "constitution": 5, "intelligence": 14, "spirit": 10},
+      "growth": {"strength": 0.5, "agility": 1.0, "constitution": 1.0, "intelligence": 2.5, "spirit": 2.0},
+      "attribute_effects": {
+        "strength": {},
+        "constitution": {"max_hp": 15, "phys_def": 2},
+        "agility": {"phys_crit": 0.142857},
+        "intelligence": {"magic_atk": 2, "magic_crit": 0.142857},
+        "spirit": {"max_mp": 15, "magic_def": 2}
+      },
+      "per_level_points": 5,
+      "main_damage": "magic",
+      "forms": ["du", "qun"],
+      "forms_cn": {"du": "独行形态", "qun": "群攻形态"},
+      "available_slots": ["weapon", "helmet", "chest", "legs", "boots", "ring", "necklace"],
+      "skill_pool": "mage_skills",
+      "perk_pool": "mage",
+      "skills": ["jihuo_zhu"]
+    },
+    {
+      "key": "darkwitch",
+      "name": "暗巫",
+      "desc": "远程法术系，精通暗系法术，精神可强化宠物。",
+      "icon": "",
+      "base_stats": {"strength": 4, "agility": 6, "constitution": 6, "intelligence": 12, "spirit": 12},
+      "growth": {"strength": 0.5, "agility": 1.0, "constitution": 1.2, "intelligence": 2.2, "spirit": 2.4},
+      "attribute_effects": {
+        "strength": {},
+        "constitution": {"max_hp": 15, "phys_def": 2},
+        "agility": {"phys_crit": 0.142857},
+        "intelligence": {"magic_atk": 2, "magic_crit": 0.142857},
+        "spirit": {"max_mp": 15, "magic_def": 2}
+      },
+      "per_level_points": 5,
+      "main_damage": "magic",
+      "forms": ["zhao", "zu"],
+      "forms_cn": {"zhao": "召唤形态", "zu": "诅咒形态"},
+      "shenmo": {
+        "_comment": "暗巫神魔（修验）：神道=召唤形态 zhao、魔道=诅咒形态 zu；无装备前置，故 form_rules 为空（磐石持盾类规则只属于战士）",
+        "forms": {"shen": "zhao", "mo": "zu"},
+        "form_rules": {}
+      },
+      "available_slots": ["weapon", "helmet", "chest", "legs", "boots", "ring", "necklace"],
+      "skill_pool": "darkwitch_skills",
+      "perk_pool": "darkwitch",
+      "skills": ["an_ying"]
+    },
+    {
+      "key": "shaman",
+      "name": "幻师",
+      "desc": "多面手，敏捷智力精神均衡，精通治疗与幻化形态。",
+      "icon": "",
+      "base_stats": {"strength": 6, "agility": 10, "constitution": 8, "intelligence": 10, "spirit": 10},
+      "growth": {"strength": 0.8, "agility": 1.8, "constitution": 1.4, "intelligence": 1.8, "spirit": 1.8},
+      "attribute_effects": {
+        "strength": {"max_hp": 5},
+        "constitution": {"max_hp": 15, "phys_def": 2},
+        "agility": {"phys_crit": 0.142857, "phys_atk": 1.5},
+        "intelligence": {"magic_atk": 2, "magic_crit": 0.142857},
+        "spirit": {"max_mp": 15, "magic_def": 2}
+      },
+      "per_level_points": 5,
+      "main_damage": "magic",
+      "forms": ["zhi", "huan"],
+      "forms_cn": {"zhi": "治疗形态", "huan": "幻化形态"},
+      "shenmo": {
+        "_comment": "幻师神魔（修验）：神道=治疗形态 zhi、魔道=幻化形态 huan；无装备前置，故 form_rules 为空",
+        "forms": {"shen": "zhi", "mo": "huan"},
+        "form_rules": {}
+      },
+      "available_slots": ["weapon", "helmet", "chest", "legs", "boots", "ring", "necklace"],
+      "skill_pool": "shaman_skills",
+      "perk_pool": "shaman",
+      "skills": ["zi_dian"]
+    }
+  ],
+  "attribute_effects": {
+    "strength": {"phys_atk": 2, "max_hp": 5},
+    "constitution": {"max_hp": 15, "phys_def": 2},
+    "agility": {"phys_crit": 0.142857, "phys_atk": 1.5},
+    "intelligence": {"magic_atk": 2, "magic_crit": 0.142857},
+    "spirit": {"max_mp": 15, "magic_def": 2}
+  }
+}

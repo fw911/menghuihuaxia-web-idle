@@ -1,0 +1,529 @@
+{
+  "shops": [
+    {
+      "key": "yaodian",
+      "name": "药店",
+      "category": "potion",
+      "desc": "出售各类回复生命的丹药与凝神液",
+      "items": [
+        {
+          "item": "xumingdan",
+          "price": 20,
+          "kind": "consumable"
+        },
+        {
+          "item": "xuming_xiao",
+          "price": 45,
+          "kind": "consumable"
+        },
+        {
+          "item": "xuming_da",
+          "price": 80,
+          "kind": "consumable"
+        },
+        {
+          "item": "xuming_sanqing",
+          "price": 130,
+          "kind": "consumable"
+        },
+        {
+          "item": "xuming_jiuzhuan",
+          "price": 190,
+          "kind": "consumable"
+        },
+        {
+          "item": "xuming_longxian",
+          "price": 260,
+          "kind": "consumable"
+        },
+        {
+          "item": "ningshenye",
+          "price": 20,
+          "kind": "consumable"
+        },
+        {
+          "item": "ningshen_lingfu",
+          "price": 45,
+          "kind": "consumable"
+        },
+        {
+          "item": "ningshen_yuquan",
+          "price": 80,
+          "kind": "consumable"
+        },
+        {
+          "item": "ningshen_sanhua",
+          "price": 130,
+          "kind": "consumable"
+        },
+        {
+          "item": "ningshen_jiuzhuan",
+          "price": 190,
+          "kind": "consumable"
+        },
+        {
+          "item": "ningshen_longxian",
+          "price": 260,
+          "kind": "consumable"
+        }
+      ]
+    },
+    {
+      "key": "zahuodian",
+      "name": "杂货店",
+      "category": "material",
+      "desc": "出售精炼所需的矿石与神魔修验炼丹工具",
+      "items": [
+        {
+          "item": "hantie",
+          "price": 15,
+          "kind": "ore"
+        },
+        {
+          "item": "chitong",
+          "price": 30,
+          "kind": "ore"
+        },
+        {
+          "item": "moyin",
+          "price": 60,
+          "kind": "ore"
+        },
+        {
+          "item": "liandan_shenlu",
+          "price": 10000,
+          "kind": "consumable"
+        },
+        {
+          "item": "yipin_luopan",
+          "price": 200,
+          "kind": "consumable"
+        },
+        {
+          "item": "lianhua_ping",
+          "price": 500,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_lingyin_1",
+          "price": 1200,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_lingyin_2",
+          "price": 1800,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_lingyin_3",
+          "price": 2600,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_lingyin_4",
+          "price": 3800,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_lingyin_5",
+          "price": 5400,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_mingqi_2",
+          "price": 3200,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_mingqi_3",
+          "price": 4800,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_mingqi_4",
+          "price": 6800,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_mingqi_5",
+          "price": 9500,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_niepan_2",
+          "price": 5000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_niepan_3",
+          "price": 7200,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_niepan_4",
+          "price": 9800,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_niepan_5",
+          "price": 13500,
+          "kind": "consumable"
+        },
+        {
+          "item": "tianshengyuan_chuansongjuan",
+          "price": 1000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_gem_beidou_碎石",
+          "price": 200000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_gem_tianxing_碎石",
+          "price": 200000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_gem_wangyue_碎石",
+          "price": 200000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_gem_wuxiang_碎石",
+          "price": 200000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_gem_yuanru_碎石",
+          "price": 200000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_bailian_1",
+          "price": 200000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_bailian_2",
+          "price": 500000,
+          "kind": "consumable"
+        },
+        {
+          "item": "recipe_bailian_3",
+          "price": 2000000,
+          "kind": "consumable"
+        }
+      ]
+    },
+    {
+      "key": "wuqidian",
+      "name": "武器店",
+      "category": "equip_weapon",
+      "desc": "出售 1 档武器（四职业各系兵刃）",
+      "items": [
+        {
+          "slot": "weapon",
+          "name": "石刀",
+          "tier": 1,
+          "price": 80,
+          "kind": "equip",
+          "base_key": "base_warrior_weapons_1_1"
+        },
+        {
+          "slot": "weapon",
+          "name": "紫铜刀",
+          "tier": 1,
+          "price": 160,
+          "kind": "equip",
+          "base_key": "base_warrior_weapons_1_2"
+        },
+        {
+          "slot": "weapon",
+          "name": "分金斧",
+          "tier": 1,
+          "price": 180,
+          "kind": "equip",
+          "base_key": "base_warrior_weapons_1_3"
+        },
+        {
+          "slot": "weapon",
+          "name": "拂柳杖",
+          "tier": 1,
+          "price": 150,
+          "kind": "equip",
+          "base_key": "base_mage_weapons_1_1"
+        },
+        {
+          "slot": "weapon",
+          "name": "悬铁锤",
+          "tier": 1,
+          "price": 150,
+          "kind": "equip",
+          "base_key": "base_shaman_weapons_1_1"
+        },
+        {
+          "slot": "weapon",
+          "name": "双锋剑",
+          "tier": 1,
+          "price": 150,
+          "kind": "equip",
+          "base_key": "base_darkwitch_weapons_1_1"
+        }
+      ]
+    },
+    {
+      "key": "fangjidian",
+      "name": "防具店",
+      "category": "equip_armor",
+      "desc": "出售 1 档防具（四职业各系护具）",
+      "items": [
+        {
+          "slot": "shoes",
+          "name": "异兽靴",
+          "tier": 1,
+          "price": 70,
+          "kind": "equip",
+          "base_key": "base_warrior_shoes_1_1"
+        },
+        {
+          "slot": "gloves",
+          "name": "异兽护腕",
+          "tier": 1,
+          "price": 80,
+          "kind": "equip",
+          "base_key": "base_warrior_gloves_1_1"
+        },
+        {
+          "slot": "pants",
+          "name": "皮裙",
+          "tier": 1,
+          "price": 75,
+          "kind": "equip",
+          "base_key": "base_warrior_pants_1_1"
+        },
+        {
+          "slot": "shield",
+          "name": "枯藤盾",
+          "tier": 1,
+          "price": 95,
+          "kind": "equip",
+          "base_key": "base_warrior_shields_1_1"
+        },
+        {
+          "slot": "belt",
+          "name": "异兽腰带",
+          "tier": 1,
+          "price": 110,
+          "kind": "equip",
+          "base_key": "base_warrior_belts_1_1"
+        },
+        {
+          "slot": "helmet",
+          "name": "异兽盔",
+          "tier": 1,
+          "price": 130,
+          "kind": "equip",
+          "base_key": "base_warrior_helmets_1_1"
+        },
+        {
+          "slot": "armor",
+          "name": "异兽铠",
+          "tier": 1,
+          "price": 150,
+          "kind": "equip",
+          "base_key": "base_warrior_armors_1_1"
+        },
+        {
+          "slot": "shoes",
+          "name": "海丝鞋",
+          "tier": 1,
+          "price": 65,
+          "kind": "equip",
+          "base_key": "base_mage_shoes_1_1"
+        },
+        {
+          "slot": "gloves",
+          "name": "海丝护腕",
+          "tier": 1,
+          "price": 75,
+          "kind": "equip",
+          "base_key": "base_mage_gloves_1_1"
+        },
+        {
+          "slot": "pants",
+          "name": "海丝护腿",
+          "tier": 1,
+          "price": 120,
+          "kind": "equip",
+          "base_key": "base_mage_pants_1_1"
+        },
+        {
+          "slot": "belt",
+          "name": "海丝腰带",
+          "tier": 1,
+          "price": 105,
+          "kind": "equip",
+          "base_key": "base_mage_belts_1_1"
+        },
+        {
+          "slot": "helmet",
+          "name": "海丝冠",
+          "tier": 1,
+          "price": 120,
+          "kind": "equip",
+          "base_key": "base_mage_helmets_1_1"
+        },
+        {
+          "slot": "armor",
+          "name": "海丝袍",
+          "tier": 1,
+          "price": 145,
+          "kind": "equip",
+          "base_key": "base_mage_armors_1_1"
+        },
+        {
+          "slot": "shoes",
+          "name": "翠羽鞋",
+          "tier": 1,
+          "price": 65,
+          "kind": "equip",
+          "base_key": "base_shaman_shoes_1_1"
+        },
+        {
+          "slot": "gloves",
+          "name": "翠羽护腕",
+          "tier": 1,
+          "price": 75,
+          "kind": "equip",
+          "base_key": "base_shaman_gloves_1_1"
+        },
+        {
+          "slot": "pants",
+          "name": "翠羽护腿",
+          "tier": 1,
+          "price": 120,
+          "kind": "equip",
+          "base_key": "base_shaman_pants_1_1"
+        },
+        {
+          "slot": "belt",
+          "name": "翠羽腰带",
+          "tier": 1,
+          "price": 105,
+          "kind": "equip",
+          "base_key": "base_shaman_belts_1_1"
+        },
+        {
+          "slot": "helmet",
+          "name": "翠羽帽",
+          "tier": 1,
+          "price": 120,
+          "kind": "equip",
+          "base_key": "base_shaman_helmets_1_1"
+        },
+        {
+          "slot": "armor",
+          "name": "翠羽衫",
+          "tier": 1,
+          "price": 145,
+          "kind": "equip",
+          "base_key": "base_shaman_armors_1_1"
+        },
+        {
+          "slot": "shoes",
+          "name": "百结鞋",
+          "tier": 1,
+          "price": 65,
+          "kind": "equip",
+          "base_key": "base_darkwitch_shoes_1_1"
+        },
+        {
+          "slot": "gloves",
+          "name": "百结护腕",
+          "tier": 1,
+          "price": 75,
+          "kind": "equip",
+          "base_key": "base_darkwitch_gloves_1_1"
+        },
+        {
+          "slot": "pants",
+          "name": "百结护腿",
+          "tier": 1,
+          "price": 120,
+          "kind": "equip",
+          "base_key": "base_darkwitch_pants_1_1"
+        },
+        {
+          "slot": "belt",
+          "name": "百结腰带",
+          "tier": 1,
+          "price": 105,
+          "kind": "equip",
+          "base_key": "base_darkwitch_belts_1_1"
+        },
+        {
+          "slot": "helmet",
+          "name": "百结帽",
+          "tier": 1,
+          "price": 120,
+          "kind": "equip",
+          "base_key": "base_darkwitch_helmets_1_1"
+        },
+        {
+          "slot": "armor",
+          "name": "百结衣",
+          "tier": 1,
+          "price": 145,
+          "kind": "equip",
+          "base_key": "base_darkwitch_armors_1_1"
+        }
+      ]
+    },
+    {
+      "key": "shoushidian",
+      "name": "首饰店",
+      "category": "equip_jewelry",
+      "desc": "出售 1 档首饰（戒指）",
+      "items": [
+        {
+          "slot": "ring1",
+          "name": "玄木环",
+          "tier": 1,
+          "price": 120,
+          "kind": "equip",
+          "base_key": "base_accessory_rings_1_1"
+        }
+      ]
+    },
+    {
+      "key": "shenmi_shangren",
+      "name": "神秘商人",
+      "category": "mystic",
+      "desc": "用神秘结晶兑换本职业指定部位的 5、6、7 档装备（选职业、选部位，兑换后直接生成装备进背包）",
+      "items": [
+        {
+          "item": "shenmi_jingjie",
+          "name": "5 档装备兑换",
+          "tier": 5,
+          "price": 10,
+          "kind": "mystic_equip"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "name": "6 档装备兑换",
+          "tier": 6,
+          "price": 30,
+          "kind": "mystic_equip"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "name": "7 档装备兑换",
+          "tier": 7,
+          "price": 50,
+          "kind": "mystic_equip"
+        }
+      ]
+    }
+  ]
+}

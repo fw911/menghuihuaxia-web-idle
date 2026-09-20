@@ -1,0 +1,18 @@
+{
+  "generate_modes": {
+    "whiteboard": "白板",
+    "random": "纯随机",
+    "percent": "百分比",
+    "atk_fixed": "攻击固定值",
+    "def_fixed": "防御固定值",
+    "full_perk": "满词条"
+  },
+  "mode_categories": {
+    "whiteboard": [],
+    "random": ["stat_fixed", "stat_percent", "atk_fixed", "atk_percent", "elemental"],
+    "percent": ["stat_percent", "atk_percent"],
+    "atk_fixed": ["atk_fixed"],
+    "def_fixed": ["stat_fixed"],
+    "full_perk": ["stat_fixed", "stat_percent", "atk_fixed", "atk_percent", "elemental"]
+  }
+}

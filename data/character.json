@@ -1,0 +1,26 @@
+{
+  "exp_formula": {
+    "coefficient": 15,
+    "power": 3
+  },
+  "monster_exp_scale": {
+    "over_low_factor": 0.2,
+    "over_high_factor": 1.2,
+    "max_cap": 2.5,
+    "online_eff_factor": 0.35,
+    "reward_extra_factor": 0.5
+  },
+  "type_exp_multiplier": {
+    "normal": 1.0,
+    "elite": 2.9,
+    "boss": 6.0,
+    "jubao": 15.0,
+    "dungeon_boss": 15.0
+  },
+  "type_exp_tiers": {
+    "elite": [2.9, 3.4, 3.9, 4.4, 4.9, 5.4],
+    "boss": [6.0, 7.0, 8.0, 9.0, 10.0, 11.0],
+    "jubao": [15.0, 17.0, 19.0, 21.0, 23.0, 25.0],
+    "dungeon_boss": [15.0, 17.0, 19.0, 21.0, 23.0, 25.0]
+  }
+}

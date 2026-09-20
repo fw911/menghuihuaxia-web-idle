@@ -1,0 +1,18 @@
+{
+  "quality_colors": {
+    "white":  {"name": "白板",   "color": "#9E9E9E", "border": "#BDBDBD"},
+    "green":  {"name": "绿色",   "color": "#4CAF50", "border": "#66BB6A"},
+    "blue":   {"name": "蓝色",   "color": "#2196F3", "border": "#42A5F5"},
+    "purple": {"name": "紫色",   "color": "#9C27B0", "border": "#AB47BC"},
+    "gold":   {"name": "橙色",   "color": "#FF9800", "border": "#FFA726"},
+    "red":    {"name": "红色",   "color": "#F44336", "border": "#EF5350"}
+  },
+  "quality_thresholds": [
+    {"min_perks": 9, "quality": "red"},
+    {"min_perks": 8, "quality": "gold"},
+    {"min_perks": 6, "quality": "purple"},
+    {"min_perks": 4, "quality": "blue"},
+    {"min_perks": 1, "quality": "green"},
+    {"min_perks": 0, "quality": "white"}
+  ]
+}

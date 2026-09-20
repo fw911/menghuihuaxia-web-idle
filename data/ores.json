@@ -1,0 +1,69 @@
+{
+  "ore_types": [
+    {
+      "key": "hantie",
+      "name": "寒铁矿石",
+      "icon": "static/icons/ores/ore_hantie.jpg",
+      "tier": 1,
+      "price": 15,
+      "desc": "寒光流转的铁矿石，主要用于精炼"
+    },
+    {
+      "key": "chitong",
+      "name": "炽铜矿石",
+      "icon": "static/icons/ores/ore_chitong.jpg",
+      "tier": 2,
+      "price": 30,
+      "desc": "火光炽热四射的铜矿石，主要用于精炼"
+    },
+    {
+      "key": "moyin",
+      "name": "墨银矿石",
+      "icon": "static/icons/ores/ore_moyin.jpg",
+      "tier": 3,
+      "price": 60,
+      "desc": "其色如墨不带一丝杂质的银矿石，主要用于精炼"
+    },
+    {
+      "key": "wujin",
+      "name": "乌金矿石",
+      "icon": "static/icons/ores/ore_wujin.jpg",
+      "tier": 4,
+      "price": 120,
+      "desc": "吸取山川灵气，色泽灰暗的金矿石，主要用于精炼"
+    },
+    {
+      "key": "liufang",
+      "name": "六方金刚石",
+      "icon": "static/icons/ores/ore_liufang_jingang.jpg",
+      "tier": 5,
+      "price": 240,
+      "desc": "历经千劫而成的金刚石，晶莹剔透坚硬无比，主要用于精炼"
+    },
+    {
+      "key": "lihuo",
+      "name": "离火翡翠",
+      "icon": "static/icons/ores/ore_lihuo_feicui.jpg",
+      "tier": 6,
+      "price": 480,
+      "desc": "通常只有在离火火眼才能见到，乃世间极品，主要用于精炼"
+    },
+    {
+      "key": "haihun",
+      "name": "海魂水晶",
+      "icon": "static/icons/ores/ore_haihun_shuijing.jpg",
+      "tier": 7,
+      "price": 960,
+      "desc": "由海怪魂魄幻化而来，可遇不可求，主要用于精炼"
+    }
+  ],
+  "ore_gen_weights": {
+    "hantie": 40,
+    "chitong": 25,
+    "moyin": 15,
+    "wujin": 10,
+    "liufang": 5,
+    "lihuo": 3,
+    "haihun": 2
+  }
+}

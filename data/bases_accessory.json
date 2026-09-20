@@ -1,0 +1,432 @@
+{
+  "rings": [
+    {
+      "name": "星芒戒",
+      "tier": 1,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 1,
+      "icon": "static/icons/bases/accessory_ring_1.jpg",
+      "desc": "任务奖励\n\n[gc]可在林教头[北郡（55，273）]处，完成任务获得",
+      "durability": [
+        14,
+        14
+      ],
+      "stats": {
+        "phys_atk": [
+          12,
+          13
+        ],
+        "magic_atk": [
+          12,
+          13
+        ]
+      },
+      "key": "base_accessory_rings_1_1",
+      "req_level": 5
+    },
+    {
+      "name": "玄木环",
+      "tier": 1,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_ring_1.jpg",
+      "desc": "以乌木制成，古朴大方",
+      "durability": [
+        12,
+        12
+      ],
+      "stats": {
+        "phys_atk": [
+          15,
+          18
+        ],
+        "magic_atk": [
+          14,
+          16
+        ]
+      },
+      "key": "base_accessory_rings_1_2",
+      "req_level": 19
+    },
+    {
+      "name": "紫络环",
+      "tier": 2,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_ring_2.jpg",
+      "desc": "以紫藤制成，在普通百姓眼里已是十分难得了",
+      "durability": [
+        16,
+        16
+      ],
+      "stats": {
+        "phys_atk": [
+          20,
+          25
+        ],
+        "magic_atk": [
+          18,
+          22
+        ]
+      },
+      "key": "base_accessory_rings_2_1",
+      "req_level": 34
+    },
+    {
+      "name": "幽香指环",
+      "tier": 3,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_ring_3.jpg",
+      "desc": "以香玉浸于冽泉制成，隐隐有暗香浮动",
+      "durability": [
+        20,
+        20
+      ],
+      "stats": {
+        "phys_atk": [
+          26,
+          34
+        ],
+        "magic_atk": [
+          22,
+          28
+        ]
+      },
+      "key": "base_accessory_rings_3_1",
+      "req_level": 49
+    },
+    {
+      "name": "幻影环",
+      "tier": 4,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_ring_4.jpg",
+      "desc": "用术法幻化而成，似有还无，若隐若现，故名\n疏影",
+      "durability": [
+        24,
+        24
+      ],
+      "stats": {
+        "phys_atk": [
+          35,
+          45
+        ],
+        "magic_atk": [
+          29,
+          37
+        ]
+      },
+      "key": "base_accessory_rings_4_1",
+      "req_level": 64
+    },
+    {
+      "name": "曦金环",
+      "tier": 5,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 1,
+      "icon": "static/icons/bases/accessory_ring_5.jpg",
+      "desc": "刘小虎随身佩带的辟邪戒指",
+      "durability": [
+        24,
+        24
+      ],
+      "stats": {
+        "phys_atk": [
+          37,
+          47
+        ],
+        "magic_atk": [
+          31,
+          39
+        ]
+      },
+      "key": "base_accessory_rings_5_1",
+      "req_level": 70
+    },
+    {
+      "name": "暮辰环",
+      "tier": 5,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_ring_5.jpg",
+      "desc": "以天外陨石取其菁华，再将其置于高山顶峰，\n采集夜幕星辰之毫光而成",
+      "durability": [
+        28,
+        28
+      ],
+      "stats": {
+        "phys_atk": [
+          46,
+          59
+        ],
+        "magic_atk": [
+          37,
+          47
+        ]
+      },
+      "key": "base_accessory_rings_5_2",
+      "req_level": 79
+    },
+    {
+      "name": "遥月环",
+      "tier": 6,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 1,
+      "icon": "static/icons/bases/accessory_ring_6.jpg",
+      "desc": "每晚有一种灵气伴月而飞，天将破晓则不知所\n终，采此灵气制成",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_atk": [
+          53,
+          70
+        ],
+        "magic_atk": [
+          42,
+          54
+        ]
+      },
+      "key": "base_accessory_rings_6_1",
+      "req_level": 94
+    },
+    {
+      "name": "幽隐戒",
+      "tier": 7,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_ring_7.jpg",
+      "desc": "传说是用神娲补天所余的五彩石所制，幻化莫\n测难以捉摸，故名隐戒",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          68,
+          89
+        ],
+        "magic_atk": [
+          54,
+          70
+        ]
+      },
+      "key": "base_accessory_rings_7_1",
+      "req_level": 109
+    },
+    {
+      "name": "同心玉环",
+      "tier": 7,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_ring_8.jpg",
+      "desc": "爱情忠贞不渝的信物\n相伴天涯海角，直到海枯石烂\n已绑定\n增加10%经验",
+      "durability": [
+        30,
+        30
+      ],
+      "stats": {
+        "phys_def": [
+          50,
+          70
+        ],
+        "magic_def": [
+          50,
+          70
+        ]
+      },
+      "effect": "exp_bonus_10",
+      "key": "base_accessory_rings_7_2",
+      "req_level": 0
+    }
+  ],
+  "necklaces": [
+    {
+      "name": "羽坠链",
+      "tier": 2,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_necklace_2.jpg",
+      "desc": "项链坠子是以灵雀翠羽制成，故名衔羽",
+      "durability": [
+        12,
+        12
+      ],
+      "stats": {
+        "phys_def": [
+          14,
+          16
+        ],
+        "magic_def": [
+          34,
+          44
+        ]
+      },
+      "key": "base_accessory_necklaces_2_1",
+      "req_level": 26
+    },
+    {
+      "name": "珠贝链",
+      "tier": 3,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 1,
+      "icon": "static/icons/bases/accessory_necklace_3.jpg",
+      "desc": "以产自深海的鱼珠攒成，故名拈珠",
+      "durability": [
+        16,
+        16
+      ],
+      "stats": {
+        "phys_def": [
+          18,
+          21
+        ],
+        "magic_def": [
+          52,
+          68
+        ]
+      },
+      "key": "base_accessory_necklaces_3_1",
+      "req_level": 41
+    },
+    {
+      "name": "云珠链",
+      "tier": 4,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_necklace_4.jpg",
+      "desc": "以云海中依山而结的琳珠为坠，冰凉滋润",
+      "durability": [
+        20,
+        20
+      ],
+      "stats": {
+        "phys_def": [
+          21,
+          27
+        ],
+        "magic_def": [
+          71,
+          94
+        ]
+      },
+      "key": "base_accessory_necklaces_4_1",
+      "req_level": 56
+    },
+    {
+      "name": "玲珑佩",
+      "tier": 5,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 1,
+      "icon": "static/icons/bases/accessory_necklace_5b.jpg",
+      "desc": "铸造行打造的极品项链",
+      "durability": [
+        28,
+        28
+      ],
+      "stats": {
+        "phys_def": [
+          28,
+          35
+        ],
+        "magic_def": [
+          103,
+          134
+        ]
+      },
+      "key": "base_accessory_necklaces_5_1",
+      "req_level": 80
+    },
+    {
+      "name": "悯珠链",
+      "tier": 5,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 1,
+      "icon": "static/icons/bases/accessory_necklace_5b.jpg",
+      "desc": "溟海日落处有一巨贝，每日以悯光珍珠对着落\n日的最后一缕余晖，故此得名悯光",
+      "durability": [
+        24,
+        24
+      ],
+      "stats": {
+        "phys_def": [
+          29,
+          36
+        ],
+        "magic_def": [
+          96,
+          127
+        ]
+      },
+      "key": "base_accessory_necklaces_5_2",
+      "req_level": 71
+    },
+    {
+      "name": "五蕴链",
+      "tier": 6,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_necklace_6.jpg",
+      "desc": "将五蕴以法咒注入其中，用来平服心中因外界\n而起的种种颠倒妄想",
+      "durability": [
+        28,
+        28
+      ],
+      "stats": {
+        "phys_def": [
+          34,
+          44
+        ],
+        "magic_def": [
+          121,
+          161
+        ]
+      },
+      "key": "base_accessory_necklaces_6_1",
+      "req_level": 86
+    },
+    {
+      "name": "灵弦",
+      "tier": 7,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_necklace_7.jpg",
+      "desc": "传说羲皇曾制七里神弦用来降服恶龙，以此神\n弦挂在胸前，能避百邪驱心魔",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_def": [
+          41,
+          53
+        ],
+        "magic_def": [
+          150,
+          201
+        ]
+      },
+      "key": "base_accessory_necklaces_7_1",
+      "req_level": 101
+    }
+  ]
+}

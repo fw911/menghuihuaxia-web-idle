@@ -1,0 +1,848 @@
+{
+  "passive_skills": [
+    {
+      "key": "qianggong",
+      "name": "破锋术",
+      "jobs": [
+        "warrior",
+        "mage",
+        "darkwitch",
+        "shaman"
+      ],
+      "learn_level": 18,
+      "max_level": 18,
+      "icon": "static/icons/skills/image073.png",
+      "desc": "通用被动，永久提升物理攻击。",
+      "effect": {
+        "phys_atk": 8
+      },
+      "levels": [
+        {
+          "phys_atk": 8
+        },
+        {
+          "phys_atk": 14
+        },
+        {
+          "phys_atk": 20
+        },
+        {
+          "phys_atk": 26
+        },
+        {
+          "phys_atk": 32
+        },
+        {
+          "phys_atk": 39
+        },
+        {
+          "phys_atk": 45
+        },
+        {
+          "phys_atk": 51
+        },
+        {
+          "phys_atk": 57
+        },
+        {
+          "phys_atk": 63
+        },
+        {
+          "phys_atk": 69
+        },
+        {
+          "phys_atk": 75
+        },
+        {
+          "phys_atk": 81
+        },
+        {
+          "phys_atk": 88
+        },
+        {
+          "phys_atk": 94
+        },
+        {
+          "phys_atk": 100
+        },
+        {
+          "phys_atk": 106
+        },
+        {
+          "phys_atk": 112
+        }
+      ],
+      "requirements": [
+        {
+          "level": 18,
+          "money": 1378,
+          "exp": 1060
+        },
+        {
+          "level": 20,
+          "money": 1800,
+          "exp": 1385
+        },
+        {
+          "level": 23,
+          "money": 2353,
+          "exp": 1810
+        },
+        {
+          "level": 26,
+          "money": 3074,
+          "exp": 2365
+        },
+        {
+          "level": 28,
+          "money": 4017,
+          "exp": 3090
+        },
+        {
+          "level": 30,
+          "money": 5248,
+          "exp": 4037
+        },
+        {
+          "level": 33,
+          "money": 6858,
+          "exp": 5275
+        },
+        {
+          "level": 36,
+          "money": 8961,
+          "exp": 6893
+        },
+        {
+          "level": 38,
+          "money": 11709,
+          "exp": 9007
+        },
+        {
+          "level": 40,
+          "money": 15300,
+          "exp": 11769
+        },
+        {
+          "level": 43,
+          "money": 19991,
+          "exp": 15378
+        },
+        {
+          "level": 46,
+          "money": 26121,
+          "exp": 20093
+        },
+        {
+          "level": 48,
+          "money": 34132,
+          "exp": 26255
+        },
+        {
+          "level": 50,
+          "money": 44598,
+          "exp": 34306
+        },
+        {
+          "level": 53,
+          "money": 58272,
+          "exp": 44825
+        },
+        {
+          "level": 56,
+          "money": 76142,
+          "exp": 58571
+        },
+        {
+          "level": 58,
+          "money": 99492,
+          "exp": 76532
+        },
+        {
+          "level": 60,
+          "money": 130000,
+          "exp": 100000
+        }
+      ]
+    },
+    {
+      "key": "ningjia",
+      "name": "坚甲术",
+      "jobs": [
+        "warrior",
+        "mage",
+        "darkwitch",
+        "shaman"
+      ],
+      "learn_level": 16,
+      "max_level": 18,
+      "icon": "static/icons/skills/image074.png",
+      "desc": "通用被动，永久提升物理防御。",
+      "effect": {
+        "phys_def": 6
+      },
+      "levels": [
+        {
+          "phys_def": 6
+        },
+        {
+          "phys_def": 11
+        },
+        {
+          "phys_def": 15
+        },
+        {
+          "phys_def": 20
+        },
+        {
+          "phys_def": 24
+        },
+        {
+          "phys_def": 29
+        },
+        {
+          "phys_def": 34
+        },
+        {
+          "phys_def": 38
+        },
+        {
+          "phys_def": 43
+        },
+        {
+          "phys_def": 47
+        },
+        {
+          "phys_def": 52
+        },
+        {
+          "phys_def": 56
+        },
+        {
+          "phys_def": 61
+        },
+        {
+          "phys_def": 66
+        },
+        {
+          "phys_def": 70
+        },
+        {
+          "phys_def": 75
+        },
+        {
+          "phys_def": 79
+        },
+        {
+          "phys_def": 84
+        }
+      ],
+      "requirements": [
+        {
+          "level": 16,
+          "money": 962,
+          "exp": 740
+        },
+        {
+          "level": 18,
+          "money": 1284,
+          "exp": 988
+        },
+        {
+          "level": 21,
+          "money": 1713,
+          "exp": 1318
+        },
+        {
+          "level": 24,
+          "money": 2287,
+          "exp": 1759
+        },
+        {
+          "level": 26,
+          "money": 3051,
+          "exp": 2347
+        },
+        {
+          "level": 28,
+          "money": 4073,
+          "exp": 3133
+        },
+        {
+          "level": 31,
+          "money": 5435,
+          "exp": 4181
+        },
+        {
+          "level": 34,
+          "money": 7254,
+          "exp": 5580
+        },
+        {
+          "level": 36,
+          "money": 9680,
+          "exp": 7446
+        },
+        {
+          "level": 38,
+          "money": 12919,
+          "exp": 9938
+        },
+        {
+          "level": 41,
+          "money": 17241,
+          "exp": 13262
+        },
+        {
+          "level": 44,
+          "money": 23010,
+          "exp": 17700
+        },
+        {
+          "level": 46,
+          "money": 30707,
+          "exp": 23621
+        },
+        {
+          "level": 48,
+          "money": 40981,
+          "exp": 31524
+        },
+        {
+          "level": 51,
+          "money": 54692,
+          "exp": 42071
+        },
+        {
+          "level": 54,
+          "money": 72990,
+          "exp": 56146
+        },
+        {
+          "level": 56,
+          "money": 97410,
+          "exp": 74931
+        },
+        {
+          "level": 58,
+          "money": 130000,
+          "exp": 100000
+        }
+      ]
+    },
+    {
+      "key": "wuxing_zhou",
+      "name": "五行法咒",
+      "jobs": [
+        "warrior",
+        "mage",
+        "darkwitch",
+        "shaman"
+      ],
+      "learn_level": 18,
+      "max_level": 18,
+      "icon": "static/icons/skills/image075.png",
+      "desc": "通用被动，永久提升五行法术攻击。",
+      "effect": {
+        "magic_atk": 8
+      },
+      "levels": [
+        {
+          "magic_atk": 8
+        },
+        {
+          "magic_atk": 14
+        },
+        {
+          "magic_atk": 20
+        },
+        {
+          "magic_atk": 26
+        },
+        {
+          "magic_atk": 32
+        },
+        {
+          "magic_atk": 39
+        },
+        {
+          "magic_atk": 45
+        },
+        {
+          "magic_atk": 51
+        },
+        {
+          "magic_atk": 57
+        },
+        {
+          "magic_atk": 63
+        },
+        {
+          "magic_atk": 69
+        },
+        {
+          "magic_atk": 75
+        },
+        {
+          "magic_atk": 81
+        },
+        {
+          "magic_atk": 88
+        },
+        {
+          "magic_atk": 94
+        },
+        {
+          "magic_atk": 100
+        },
+        {
+          "magic_atk": 106
+        },
+        {
+          "magic_atk": 112
+        }
+      ],
+      "requirements": [
+        {
+          "level": 18,
+          "money": 1378,
+          "exp": 1060
+        },
+        {
+          "level": 20,
+          "money": 1800,
+          "exp": 1385
+        },
+        {
+          "level": 23,
+          "money": 2353,
+          "exp": 1810
+        },
+        {
+          "level": 26,
+          "money": 3074,
+          "exp": 2365
+        },
+        {
+          "level": 28,
+          "money": 4017,
+          "exp": 3090
+        },
+        {
+          "level": 30,
+          "money": 5248,
+          "exp": 4037
+        },
+        {
+          "level": 33,
+          "money": 6858,
+          "exp": 5275
+        },
+        {
+          "level": 36,
+          "money": 8961,
+          "exp": 6893
+        },
+        {
+          "level": 38,
+          "money": 11709,
+          "exp": 9007
+        },
+        {
+          "level": 40,
+          "money": 15300,
+          "exp": 11769
+        },
+        {
+          "level": 43,
+          "money": 19991,
+          "exp": 15378
+        },
+        {
+          "level": 46,
+          "money": 26121,
+          "exp": 20093
+        },
+        {
+          "level": 48,
+          "money": 34132,
+          "exp": 26255
+        },
+        {
+          "level": 50,
+          "money": 44598,
+          "exp": 34306
+        },
+        {
+          "level": 53,
+          "money": 58272,
+          "exp": 44825
+        },
+        {
+          "level": 56,
+          "money": 76142,
+          "exp": 58571
+        },
+        {
+          "level": 58,
+          "money": 99492,
+          "exp": 76532
+        },
+        {
+          "level": 60,
+          "money": 130000,
+          "exp": 100000
+        }
+      ]
+    },
+    {
+      "key": "hushen_zhou",
+      "name": "御法咒",
+      "jobs": [
+        "warrior",
+        "mage",
+        "darkwitch",
+        "shaman"
+      ],
+      "learn_level": 17,
+      "max_level": 18,
+      "icon": "static/icons/skills/image076.png",
+      "desc": "通用被动，永久提升法术防御。",
+      "effect": {
+        "magic_def": 4
+      },
+      "levels": [
+        {
+          "magic_def": 4
+        },
+        {
+          "magic_def": 7
+        },
+        {
+          "magic_def": 10
+        },
+        {
+          "magic_def": 13
+        },
+        {
+          "magic_def": 16
+        },
+        {
+          "magic_def": 19
+        },
+        {
+          "magic_def": 22
+        },
+        {
+          "magic_def": 25
+        },
+        {
+          "magic_def": 28
+        },
+        {
+          "magic_def": 32
+        },
+        {
+          "magic_def": 35
+        },
+        {
+          "magic_def": 38
+        },
+        {
+          "magic_def": 41
+        },
+        {
+          "magic_def": 44
+        },
+        {
+          "magic_def": 47
+        },
+        {
+          "magic_def": 50
+        },
+        {
+          "magic_def": 53
+        },
+        {
+          "magic_def": 56
+        }
+      ],
+      "requirements": [
+        {
+          "level": 17,
+          "money": 1131,
+          "exp": 870
+        },
+        {
+          "level": 20,
+          "money": 1495,
+          "exp": 1150
+        },
+        {
+          "level": 22,
+          "money": 1976,
+          "exp": 1520
+        },
+        {
+          "level": 24,
+          "money": 2613,
+          "exp": 2010
+        },
+        {
+          "level": 27,
+          "money": 3454,
+          "exp": 2657
+        },
+        {
+          "level": 30,
+          "money": 4566,
+          "exp": 3512
+        },
+        {
+          "level": 32,
+          "money": 6035,
+          "exp": 4642
+        },
+        {
+          "level": 34,
+          "money": 7978,
+          "exp": 6137
+        },
+        {
+          "level": 37,
+          "money": 10547,
+          "exp": 8113
+        },
+        {
+          "level": 40,
+          "money": 13941,
+          "exp": 10724
+        },
+        {
+          "level": 42,
+          "money": 18429,
+          "exp": 14176
+        },
+        {
+          "level": 44,
+          "money": 24362,
+          "exp": 18740
+        },
+        {
+          "level": 47,
+          "money": 32205,
+          "exp": 24773
+        },
+        {
+          "level": 50,
+          "money": 42572,
+          "exp": 32748
+        },
+        {
+          "level": 52,
+          "money": 56277,
+          "exp": 43290
+        },
+        {
+          "level": 54,
+          "money": 74394,
+          "exp": 57226
+        },
+        {
+          "level": 57,
+          "money": 98342,
+          "exp": 75648
+        },
+        {
+          "level": 60,
+          "money": 130000,
+          "exp": 100000
+        }
+      ]
+    },
+    {
+      "key": "peiyuan_dafa",
+      "name": "凝源大法",
+      "jobs": [
+        "warrior",
+        "mage",
+        "darkwitch",
+        "shaman"
+      ],
+      "learn_level": 15,
+      "max_level": 18,
+      "icon": "static/icons/skills/image077.png",
+      "desc": "通用被动，永久提升生命与法术值上限。",
+      "effect": {
+        "max_hp": 50,
+        "max_mp": 30
+      },
+      "levels": [
+        {
+          "max_hp": 50,
+          "max_mp": 30
+        },
+        {
+          "max_hp": 88,
+          "max_mp": 53
+        },
+        {
+          "max_hp": 126,
+          "max_mp": 76
+        },
+        {
+          "max_hp": 165,
+          "max_mp": 99
+        },
+        {
+          "max_hp": 203,
+          "max_mp": 122
+        },
+        {
+          "max_hp": 241,
+          "max_mp": 145
+        },
+        {
+          "max_hp": 279,
+          "max_mp": 168
+        },
+        {
+          "max_hp": 318,
+          "max_mp": 191
+        },
+        {
+          "max_hp": 356,
+          "max_mp": 214
+        },
+        {
+          "max_hp": 394,
+          "max_mp": 236
+        },
+        {
+          "max_hp": 432,
+          "max_mp": 259
+        },
+        {
+          "max_hp": 471,
+          "max_mp": 282
+        },
+        {
+          "max_hp": 509,
+          "max_mp": 305
+        },
+        {
+          "max_hp": 547,
+          "max_mp": 328
+        },
+        {
+          "max_hp": 585,
+          "max_mp": 351
+        },
+        {
+          "max_hp": 624,
+          "max_mp": 374
+        },
+        {
+          "max_hp": 662,
+          "max_mp": 397
+        },
+        {
+          "max_hp": 700,
+          "max_mp": 420
+        }
+      ],
+      "requirements": [
+        {
+          "level": 15,
+          "money": 780,
+          "exp": 600
+        },
+        {
+          "level": 18,
+          "money": 1054,
+          "exp": 811
+        },
+        {
+          "level": 20,
+          "money": 1424,
+          "exp": 1095
+        },
+        {
+          "level": 22,
+          "money": 1924,
+          "exp": 1480
+        },
+        {
+          "level": 25,
+          "money": 2600,
+          "exp": 2000
+        },
+        {
+          "level": 28,
+          "money": 3513,
+          "exp": 2702
+        },
+        {
+          "level": 30,
+          "money": 4745,
+          "exp": 3650
+        },
+        {
+          "level": 32,
+          "money": 6412,
+          "exp": 4932
+        },
+        {
+          "level": 35,
+          "money": 8663,
+          "exp": 6664
+        },
+        {
+          "level": 38,
+          "money": 11705,
+          "exp": 9004
+        },
+        {
+          "level": 40,
+          "money": 15814,
+          "exp": 12165
+        },
+        {
+          "level": 42,
+          "money": 21368,
+          "exp": 16437
+        },
+        {
+          "level": 45,
+          "money": 28870,
+          "exp": 22208
+        },
+        {
+          "level": 48,
+          "money": 39008,
+          "exp": 30006
+        },
+        {
+          "level": 50,
+          "money": 52705,
+          "exp": 40542
+        },
+        {
+          "level": 52,
+          "money": 71211,
+          "exp": 54778
+        },
+        {
+          "level": 55,
+          "money": 96216,
+          "exp": 74012
+        },
+        {
+          "level": 58,
+          "money": 130000,
+          "exp": 100000
+        }
+      ]
+    }
+  ]
+}

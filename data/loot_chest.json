@@ -1,0 +1,9 @@
+{
+  "宝匣_玄龟": { "drops": [ { "item": "consumable", "key": "baoxia_xuangui", "prob": 0.005 } ] },
+  "宝匣_青鸾": { "drops": [ { "item": "consumable", "key": "baoxia_qingluan", "prob": 0.005 } ] },
+  "宝匣_白泽": { "drops": [ { "item": "consumable", "key": "baoxia_baize", "prob": 0.0045 } ] },
+  "宝匣_麒麟": { "drops": [ { "item": "consumable", "key": "baoxia_qilin", "prob": 0.004 } ] },
+  "宝匣_九尾": { "drops": [ { "item": "consumable", "key": "baoxia_jiuwei", "prob": 0.0035 } ] },
+  "宝匣_应龙": { "drops": [ { "item": "consumable", "key": "baoxia_yinglong", "prob": 0.003 } ] },
+  "宝匣_烛龙": { "drops": [ { "item": "consumable", "key": "baoxia_zhulong", "prob": 0.0025 } ] }
+}

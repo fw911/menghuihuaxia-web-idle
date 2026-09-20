@@ -1,0 +1,195 @@
+{
+  "_furnace_meta": {
+    "comment": "南郡·乾坤炉合成配方表。配置驱动，无时间延时（瞬间合成），只校验材料 + 扣金币。配方按 category 分组：stone(精炼/重随石)、compass(罗盘)、box(宝匣1-7级)、lingpai(令牌)、potion_box(药水盒)、ore(打造矿石)、yuanbao(元宝)。每条 result_key 必须存在于 items.json；src_key 多条时按 src_count 总和消耗。src_count=0 的条目表示该侧不消耗（如矿石 100:10 拆解为 src_key 100 + extra_key 10 时，src_count 100 配 extra_count 10 一起扣）。"
+  },
+  "tiangong_shi_to_shenshi": {
+    "key": "tiangong_shi_to_shenshi",
+    "name": "砺金石→砺金神石",
+    "category": "stone",
+    "src_key": "tiangong_shi",
+    "src_count": 3,
+    "result_key": "tiangong_shenshi",
+    "result_count": 1,
+    "gold_cost": 45
+  },
+  "lunhui_shi_to_shenshi": {
+    "key": "lunhui_shi_to_shenshi",
+    "name": "回炉石→回炉神石",
+    "category": "stone",
+    "src_key": "lunhui_shi",
+    "src_count": 3,
+    "result_key": "lunhui_shenshi",
+    "result_count": 1,
+    "gold_cost": 135
+  },
+  "lunhui_shenshi_to_chaoji": {
+    "key": "lunhui_shenshi_to_chaoji",
+    "name": "回炉神石→超级回炉石",
+    "category": "stone",
+    "src_key": "lunhui_shenshi",
+    "src_count": 3,
+    "result_key": "lunhui_chaoji",
+    "result_count": 1,
+    "gold_cost": 405
+  },
+  "erpin_luopan_to_sanpin": {
+    "key": "erpin_luopan_to_sanpin",
+    "name": "二品罗盘→三品罗盘",
+    "category": "compass",
+    "src_key": "erpin_luopan",
+    "src_count": 3,
+    "result_key": "sanpin_luopan",
+    "result_count": 1,
+    "gold_cost": 6
+  },
+  "box_1_to_2": {
+    "key": "box_1_to_2",
+    "name": "玄龟匣→青鸾匣",
+    "category": "box",
+    "src_key": "baoxia_xuangui",
+    "src_count": 50,
+    "result_key": "baoxia_qingluan",
+    "result_count": 1,
+    "gold_cost": 45
+  },
+  "box_2_to_3": {
+    "key": "box_2_to_3",
+    "name": "青鸾匣→白泽匣",
+    "category": "box",
+    "src_key": "baoxia_qingluan",
+    "src_count": 50,
+    "result_key": "baoxia_baize",
+    "result_count": 1,
+    "gold_cost": 75
+  },
+  "box_3_to_4": {
+    "key": "box_3_to_4",
+    "name": "白泽匣→麒麟匣",
+    "category": "box",
+    "src_key": "baoxia_baize",
+    "src_count": 50,
+    "result_key": "baoxia_qilin",
+    "result_count": 1,
+    "gold_cost": 125
+  },
+  "box_4_to_5": {
+    "key": "box_4_to_5",
+    "name": "麒麟匣→九尾匣",
+    "category": "box",
+    "src_key": "baoxia_qilin",
+    "src_count": 50,
+    "result_key": "baoxia_jiuwei",
+    "result_count": 1,
+    "gold_cost": 175
+  },
+  "box_5_to_6": {
+    "key": "box_5_to_6",
+    "name": "九尾匣→应龙匣",
+    "category": "box",
+    "src_key": "baoxia_jiuwei",
+    "src_count": 50,
+    "result_key": "baoxia_yinglong",
+    "result_count": 1,
+    "gold_cost": 250
+  },
+  "box_6_to_7": {
+    "key": "box_6_to_7",
+    "name": "应龙匣→烛龙匣",
+    "category": "box",
+    "src_key": "baoxia_yinglong",
+    "src_count": 50,
+    "result_key": "baoxia_zhulong",
+    "result_count": 1,
+    "gold_cost": 300
+  },
+  "baiyu_lingpai_to_lvyu": {
+    "key": "baiyu_lingpai_to_lvyu",
+    "name": "白玉令→绿玉令",
+    "category": "lingpai",
+    "src_key": "baiyu_lingpai",
+    "src_count": 3,
+    "result_key": "lvyu_lingpai",
+    "result_count": 1,
+    "gold_cost": 100
+  },
+  "lvyu_lingpai_to_huangjin": {
+    "key": "lvyu_lingpai_to_huangjin",
+    "name": "绿玉令→黄金令",
+    "category": "lingpai",
+    "src_key": "lvyu_lingpai",
+    "src_count": 3,
+    "result_key": "huangjin_lingpai",
+    "result_count": 1,
+    "gold_cost": 250
+  },
+  "yuquan_box_to_sanhua": {
+    "key": "yuquan_box_to_sanhua",
+    "name": "玉泉灵浆盒→三花玉露盒",
+    "category": "potion_box",
+    "src_key": "yuquan_box",
+    "src_count": 5,
+    "result_key": "sanhua_box",
+    "result_count": 1,
+    "gold_cost": 25
+  },
+  "sanhua_box_to_jiuzhuan": {
+    "key": "sanhua_box_to_jiuzhuan",
+    "name": "三花玉露盒→九转神水盒",
+    "category": "potion_box",
+    "src_key": "sanhua_box",
+    "src_count": 5,
+    "result_key": "jiuzhuan_box",
+    "result_count": 1,
+    "gold_cost": 37
+  },
+  "ore_moyin_to_wujin": {
+    "key": "ore_moyin_to_wujin",
+    "name": "墨银矿→乌金矿",
+    "category": "ore",
+    "src_key": "moyin",
+    "src_count": 100,
+    "result_key": "wujin",
+    "result_count": 10,
+    "gold_cost": 25
+  },
+  "ore_wujin_to_liufang": {
+    "key": "ore_wujin_to_liufang",
+    "name": "乌金矿→六方金刚石",
+    "category": "ore",
+    "src_key": "wujin",
+    "src_count": 100,
+    "result_key": "liufang",
+    "result_count": 10,
+    "gold_cost": 50
+  },
+  "ore_liufang_to_lihuo": {
+    "key": "ore_liufang_to_lihuo",
+    "name": "六方金刚石→离火翡翠",
+    "category": "ore",
+    "src_key": "liufang",
+    "src_count": 100,
+    "result_key": "lihuo",
+    "result_count": 10,
+    "gold_cost": 150
+  },
+  "ore_lihuo_to_haihun": {
+    "key": "ore_lihuo_to_haihun",
+    "name": "离火翡翠→海魂水晶",
+    "category": "ore",
+    "src_key": "lihuo",
+    "src_count": 100,
+    "result_key": "haihun",
+    "result_count": 10,
+    "gold_cost": 250
+  },
+  "tong_ban_to_yin_yuanbao": {
+    "key": "tong_ban_to_yin_yuanbao",
+    "name": "铜板→银元宝",
+    "category": "yuanbao",
+    "src_key": "tong_ban",
+    "src_count": 9,
+    "result_key": "yin_yuanbao",
+    "result_count": 1,
+    "gold_cost": 250
+  }
+}

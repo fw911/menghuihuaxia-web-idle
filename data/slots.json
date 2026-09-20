@@ -1,0 +1,169 @@
+{
+  "slots": [
+    {
+      "key": "helmet",
+      "name": "头盔",
+      "slot_type": "armor",
+      "hand": false,
+      "stat_fields": ["strength", "constitution", "phys_def", "magic_def"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "shoulder_l",
+      "name": "护肩",
+      "slot_type": "armor",
+      "hand": false,
+      "stat_fields": ["constitution", "phys_def", "magic_def", "max_hp"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "armor",
+      "name": "盔甲",
+      "slot_type": "armor",
+      "hand": false,
+      "stat_fields": ["constitution", "phys_def", "magic_def", "max_hp"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "pants",
+      "name": "护腿",
+      "slot_type": "armor",
+      "hand": false,
+      "stat_fields": ["constitution", "agility", "phys_def", "magic_def"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "necklace",
+      "name": "项链",
+      "slot_type": "jewelry",
+      "hand": false,
+      "stat_fields": ["magic_atk", "max_mp", "phys_atk"],
+      "has_atk_range": false,
+      "has_durability": false,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "jewelry"
+    },
+    {
+      "key": "cloak",
+      "name": "披风",
+      "slot_type": "armor",
+      "hand": false,
+      "stat_fields": ["magic_def", "max_hp", "max_mp"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "belt",
+      "name": "腰带",
+      "slot_type": "armor",
+      "hand": false,
+      "stat_fields": ["constitution", "max_hp", "magic_def"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "gloves",
+      "name": "护手",
+      "slot_type": "armor",
+      "hand": false,
+      "stat_fields": ["strength", "agility", "phys_atk"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["beidou", "tianxing", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "shoes",
+      "name": "鞋子",
+      "slot_type": "armor",
+      "hand": false,
+      "stat_fields": ["agility", "constitution", "phys_def"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "weapon",
+      "name": "武器",
+      "slot_type": "weapon",
+      "hand": true,
+      "stat_fields": ["strength", "agility", "constitution", "phys_atk"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["beidou", "tianxing", "wangyue", "wuxiang", "yuanru", "xiuxian"],
+      "perk_pool": "weapon"
+    },
+    {
+      "key": "shield",
+      "name": "盾牌",
+      "slot_type": "offhand",
+      "hand": false,
+      "stat_fields": ["phys_def", "magic_def", "max_hp"],
+      "has_atk_range": false,
+      "has_durability": true,
+      "gems": ["wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "armor"
+    },
+    {
+      "key": "ring1",
+      "name": "戒指",
+      "slot_type": "jewelry",
+      "hand": false,
+      "stat_fields": ["phys_atk", "magic_atk", "max_hp"],
+      "has_atk_range": false,
+      "has_durability": false,
+      "gems": ["beidou", "tianxing", "wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "jewelry"
+    },
+    {
+      "key": "ring2",
+      "name": "戒指",
+      "slot_type": "jewelry",
+      "hand": false,
+      "stat_fields": ["phys_atk", "magic_atk", "max_hp"],
+      "has_atk_range": false,
+      "has_durability": false,
+      "gems": ["beidou", "tianxing", "wangyue", "wuxiang", "yuanru"],
+      "perk_pool": "jewelry"
+    },
+    {
+      "key": "soul1",
+      "name": "武魂",
+      "slot_type": "soul",
+      "hand": false,
+      "stat_fields": ["phys_atk", "magic_atk", "max_hp"],
+      "has_atk_range": false,
+      "has_durability": false,
+      "gems": [],
+      "perk_pool": "jewelry"
+    },
+    {
+      "key": "soul2",
+      "name": "武魂",
+      "slot_type": "soul",
+      "hand": false,
+      "stat_fields": ["phys_atk", "magic_atk", "max_hp"],
+      "has_atk_range": false,
+      "has_durability": false,
+      "gems": [],
+      "perk_pool": "jewelry"
+    }
+  ]
+}

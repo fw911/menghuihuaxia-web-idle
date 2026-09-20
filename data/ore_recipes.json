@@ -1,0 +1,102 @@
+{
+  "recipe_ore_4": {
+    "key": "recipe_ore_4",
+    "name": "金矿炼制配方",
+    "icon": "static/icons/ores/recipe_ore_4.png",
+    "category": "ore_recipe",
+    "effect_type": "ore_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 2000,
+    "desc": "金矿（乌金）炼制配方。右键开始炼制，约 20 分钟后产出乌金矿石。",
+    "recipe_key": "recipe_ore_4",
+    "result_item": "wujin",
+    "result_name": "乌金矿石",
+    "result_count": 30,
+    "duration_sec": 1200,
+    "time": "【20 分钟】",
+    "cost": {
+      "ore": {"key": "moyin", "count": 15},
+      "crystal": {"key": "yumo_crystal", "count": 1},
+      "coin": 2000
+    },
+    "bottle_key": "lianhua_ping",
+    "obtain": []
+  },
+  "recipe_ore_5": {
+    "key": "recipe_ore_5",
+    "name": "金刚石炼制配方",
+    "icon": "static/icons/ores/recipe_ore_5.png",
+    "category": "ore_recipe",
+    "effect_type": "ore_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 4000,
+    "desc": "六方金刚石炼制配方。右键开始炼制，约 20 分钟后产出六方金刚石。",
+    "recipe_key": "recipe_ore_5",
+    "result_item": "liufang",
+    "result_name": "六方金刚石",
+    "result_count": 30,
+    "duration_sec": 1200,
+    "time": "【20 分钟】",
+    "cost": {
+      "ore": {"key": "wujin", "count": 15},
+      "crystal": {"key": "zhanhun_crystal", "count": 1},
+      "coin": 4000
+    },
+    "bottle_key": "lianhua_ping",
+    "obtain": []
+  },
+  "recipe_ore_6": {
+    "key": "recipe_ore_6",
+    "name": "离火翡翠炼制配方",
+    "icon": "static/icons/ores/recipe_ore_6.png",
+    "category": "ore_recipe",
+    "effect_type": "ore_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 8000,
+    "desc": "离火翡翠炼制配方。右键开始炼制，约 20 分钟后产出离火翡翠。",
+    "recipe_key": "recipe_ore_6",
+    "result_item": "lihuo",
+    "result_name": "离火翡翠",
+    "result_count": 30,
+    "duration_sec": 1200,
+    "time": "【20 分钟】",
+    "cost": {
+      "ore": {"key": "liufang", "count": 15},
+      "crystal": {"key": "lingnian_crystal", "count": 1},
+      "coin": 8000
+    },
+    "bottle_key": "lianhua_ping",
+    "obtain": []
+  },
+  "recipe_ore_7": {
+    "key": "recipe_ore_7",
+    "name": "海魂水晶炼制配方",
+    "icon": "static/icons/ores/recipe_ore_7.png",
+    "category": "ore_recipe",
+    "effect_type": "ore_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 16000,
+    "desc": "海魂水晶炼制配方。右键开始炼制，约 20 分钟后产出海魂水晶。",
+    "recipe_key": "recipe_ore_7",
+    "result_item": "haihun",
+    "result_name": "海魂水晶",
+    "result_count": 30,
+    "duration_sec": 1200,
+    "time": "【20 分钟】",
+    "cost": {
+      "ore": {"key": "lihuo", "count": 15},
+      "crystal": {"key": "jufa_crystal", "count": 1},
+      "coin": 16000
+    },
+    "bottle_key": "lianhua_ping",
+    "obtain": []
+  }
+}

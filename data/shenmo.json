@@ -1,0 +1,695 @@
+{
+ "entry": {
+  "min_char_level": 101,
+  "npc": {
+   "shen": {
+    "name": "修真导师",
+    "map": "tianshengyuan",
+    "pos": [
+     235,
+     248
+    ]
+   },
+   "mo": {
+    "name": "炼魔导师",
+    "map": "tianshengyuan",
+    "pos": [
+     238,
+     220
+    ]
+   }
+  }
+ },
+ "level": {
+  "max": 100,
+  "exp_curve": [
+   0,
+   1716,
+   2096,
+   2560,
+   3127,
+   3820,
+   4666,
+   5699,
+   6962,
+   8504,
+   10388,
+   12689,
+   15501,
+   18934,
+   23129,
+   28253,
+   34512,
+   42157,
+   51496,
+   68163,
+   90225,
+   99989,
+   110810,
+   122802,
+   136092,
+   150820,
+   167142,
+   185230,
+   205276,
+   227492,
+   252111,
+   279395,
+   309631,
+   343140,
+   380275,
+   421429,
+   467036,
+   517580,
+   573593,
+   635668,
+   704461,
+   780698,
+   865186,
+   958818,
+   1062583,
+   1177577,
+   1305015,
+   1446246,
+   1602761,
+   1776213,
+   1968437,
+   2181464,
+   2417545,
+   2679175,
+   2969119,
+   3290441,
+   3646536,
+   4041169,
+   4478510,
+   4963180,
+   5500302,
+   6095552,
+   6755220,
+   7486279,
+   8296454,
+   9194306,
+   10189326,
+   11292028,
+   12514066,
+   13868355,
+   15369206,
+   17032481,
+   18875758,
+   20918517,
+   23182347,
+   25691170,
+   28471502,
+   31552725,
+   34967401,
+   38751619,
+   42945369,
+   47592972,
+   52743545,
+   58451520,
+   64777219,
+   71787494,
+   79556429,
+   88166129,
+   97707582,
+   108281623,
+   120000000,
+   135156001,
+   152226206,
+   171452378,
+   193106815,
+   217496208,
+   244965982,
+   275905188,
+   310752017,
+   350000000
+  ]
+ },
+ "factions": {
+  "shen": {
+   "name": "神道",
+   "desc": "防御/团队核心路线"
+  },
+  "mo": {
+   "name": "魔道",
+   "desc": "输出/控制路线"
+  }
+ },
+ "transform_levels": [
+  {
+   "min_level": 1,
+   "title_shen": "凡神",
+   "title_mo": "凡魔",
+   "title_shen_shaman": "凡神",
+   "title_mo_shaman": "凡魔",
+   "title_shen_darkwitch": "凡神",
+   "title_mo_darkwitch": "凡魔",
+   "atk": 62,
+   "def": 13,
+   "hp": 800,
+   "dmg_reduce": 1
+  },
+  {
+   "min_level": 10,
+   "title_shen": "玄神",
+   "title_mo": "邪魔",
+   "atk": 62,
+   "def": 16,
+   "hp": 900,
+   "dmg_reduce": 1
+  },
+  {
+   "min_level": 20,
+   "title_shen": "真神",
+   "title_mo": "巨魔",
+   "atk": 67,
+   "def": 20,
+   "hp": 1000,
+   "dmg_reduce": 1
+  },
+  {
+   "min_level": 30,
+   "title_shen": "神将",
+   "title_mo": "魔将",
+   "atk": 67,
+   "def": 23,
+   "hp": 1100,
+   "dmg_reduce": 1
+  },
+  {
+   "min_level": 40,
+   "title_shen": "神君",
+   "title_mo": "魔君",
+   "atk": 72,
+   "def": 26,
+   "hp": 1200,
+   "dmg_reduce": 2
+  },
+  {
+   "min_level": 50,
+   "title_shen": "神皇",
+   "title_mo": "魔皇",
+   "atk": 72,
+   "def": 29,
+   "hp": 1300,
+   "dmg_reduce": 2
+  },
+  {
+   "min_level": 60,
+   "title_shen": "晏龙",
+   "title_mo": "天殇",
+   "atk": 77,
+   "def": 33,
+   "hp": 1400,
+   "dmg_reduce": 2
+  },
+  {
+   "min_level": 70,
+   "title_shen": "傲魂",
+   "title_mo": "修罗",
+   "atk": 77,
+   "def": 38,
+   "hp": 1500,
+   "dmg_reduce": 2
+  },
+  {
+   "min_level": 80,
+   "title_shen": "帝俊",
+   "title_mo": "灭神",
+   "atk": 82,
+   "def": 42,
+   "hp": 1600,
+   "dmg_reduce": 3
+  },
+  {
+   "min_level": 90,
+   "title_shen": "神领",
+   "title_mo": "魔界王",
+   "title_shen_shaman": "圣祭",
+   "title_mo_shaman": "魔尊王",
+   "title_shen_darkwitch": "月影",
+   "title_mo_darkwitch": "魔道王",
+   "atk": 82,
+   "def": 47,
+   "hp": 1700,
+   "dmg_reduce": 3
+  },
+  {
+   "min_level": 100,
+   "title_shen": "梵天",
+   "title_mo": "阎魔",
+   "atk": 87,
+   "def": 50,
+   "hp": 1800,
+   "dmg_reduce": 3
+  }
+ ],
+ "tiers": [
+  {
+   "tier": 1,
+   "name": "一档",
+   "spent_required": 0,
+   "points_per_level": 1
+  },
+  {
+   "tier": 2,
+   "name": "二档",
+   "spent_required": 20,
+   "points_per_level": 2
+  },
+  {
+   "tier": 3,
+   "name": "一档进阶",
+   "spent_required": 25,
+   "points_per_level": 3
+  },
+  {
+   "tier": 4,
+   "name": "二档进阶",
+   "spent_required": 60,
+   "points_per_level": 3
+  }
+ ],
+ "reset": {
+  "below_level_50": {
+   "currency": "gold",
+   "formula": "level * 100"
+  },
+  "above_level_50": {
+   "item": "shoushan_shi",
+   "star_by_level": {
+    "50": 1,
+    "60": 2,
+    "70": 3,
+    "80": 4,
+    "90": 5
+   }
+  }
+ },
+ "hundred_challenge": {
+  "boss_key": "",
+  "reward": "终极变身解锁"
+ },
+ "xianzhijing": {
+  "_comment": "仙之境·神魔专属挂机地图（设计文档 §7.3）。安全区无战斗，按滞留分钟结算修验值。每日上限 60 分钟（Q13 已定），每天 24:00 重置；不做周日限制（Q12）。入口 NPC 欧文子在北原郡（beijun，对应原版北郡，Q14 已定）。",
+  "map": "xianzhijing",
+  "daily_minutes": 60,
+  "npc": {
+   "name": "欧文子",
+   "map": "beijun",
+   "pos": [
+    20,
+    20
+   ]
+  },
+  "per_min_exp": [
+   {
+    "min_level": 1,
+    "per_min": 25
+   },
+   {
+    "min_level": 10,
+    "per_min": 200
+   },
+   {
+    "min_level": 20,
+    "per_min": 660
+   },
+   {
+    "min_level": 30,
+    "per_min": 1850
+   },
+   {
+    "min_level": 40,
+    "per_min": 5200
+   },
+   {
+    "min_level": 50,
+    "per_min": 14500
+   },
+   {
+    "min_level": 60,
+    "per_min": 40500
+   },
+   {
+    "min_level": 70,
+    "per_min": 113000
+   },
+   {
+    "min_level": 80,
+    "per_min": 316000
+   },
+   {
+    "min_level": 90,
+    "per_min": 1000000
+   }
+  ]
+ },
+ "quest": {
+  "_comment": "修验任务（炼丹产线）配置，见设计文档 §7.1。等级键 1A~5A；by_grade 数组按 [1A,2A,3A,4A,5A] 顺序。",
+  "recipe_types": {
+   "exp": {
+    "name": "经验",
+    "store": "none",
+    "mode": "none"
+   },
+   "ore": {
+    "name": "矿石",
+    "store": "ore",
+    "mode": "exact",
+    "by_grade": [
+     "hantie",
+     "chitong",
+     "moyin",
+     "wujin",
+     "liufang"
+    ]
+   },
+   "crystal": {
+    "name": "晶石",
+    "store": "crystal",
+    "mode": "exact",
+    "by_grade": [
+     "yuehen",
+     "jidan",
+     "yumo",
+     "zhanhun",
+     "lingnian"
+    ]
+   },
+   "gem": {
+    "name": "宝石",
+    "store": "gem",
+    "mode": "any_of",
+    "by_grade": [
+     [
+      "beidou_碎石",
+      "tianxing_碎石",
+      "wangyue_碎石",
+      "wuxiang_碎石",
+      "yuanru_碎石"
+     ],
+     [
+      "beidou_石",
+      "tianxing_石",
+      "wangyue_石",
+      "wuxiang_石",
+      "yuanru_石"
+     ],
+     [
+      "beidou_灵石",
+      "tianxing_灵石",
+      "wangyue_灵石",
+      "wuxiang_灵石",
+      "yuanru_灵石"
+     ],
+     [
+      "beidou_神石",
+      "tianxing_神石",
+      "wangyue_神石",
+      "wuxiang_神石",
+      "yuanru_神石"
+     ],
+     [
+      "beidou_神石",
+      "tianxing_神石",
+      "wangyue_神石",
+      "wuxiang_神石",
+      "yuanru_神石"
+     ]
+    ]
+   },
+   "soul": {
+    "name": "魂魄",
+    "store": "consumable",
+    "mode": "any_of",
+    "by_grade": [
+     [
+      "sanhun_tian",
+      "sanhun_di",
+      "sanhun_ren",
+      "qipo_xi",
+      "qipo_nu",
+      "qipo_ai_sorrow",
+      "qipo_ju",
+      "qipo_ai_love",
+      "qipo_wu",
+      "qipo_yu"
+     ],
+     [
+      "sanhun_tian",
+      "sanhun_di",
+      "sanhun_ren",
+      "qipo_xi",
+      "qipo_nu",
+      "qipo_ai_sorrow",
+      "qipo_ju",
+      "qipo_ai_love",
+      "qipo_wu",
+      "qipo_yu"
+     ],
+     [
+      "sanhun_tian",
+      "sanhun_di",
+      "sanhun_ren",
+      "qipo_xi",
+      "qipo_nu",
+      "qipo_ai_sorrow",
+      "qipo_ju",
+      "qipo_ai_love",
+      "qipo_wu",
+      "qipo_yu"
+     ],
+     [
+      "sanhun_tian",
+      "sanhun_di",
+      "sanhun_ren",
+      "qipo_xi",
+      "qipo_nu",
+      "qipo_ai_sorrow",
+      "qipo_ju",
+      "qipo_ai_love",
+      "qipo_wu",
+      "qipo_yu"
+     ],
+     [
+      "sanhun_tian",
+      "sanhun_di",
+      "sanhun_ren",
+      "qipo_xi",
+      "qipo_nu",
+      "qipo_ai_sorrow",
+      "qipo_ju",
+      "qipo_ai_love",
+      "qipo_wu",
+      "qipo_yu"
+     ]
+    ]
+   },
+   "bailian": {
+    "name": "百炼石",
+    "store": "consumable",
+    "mode": "exact",
+    "by_grade": [
+     "bailian_shi",
+     "bailian_shi",
+     "bailian_shi",
+     "bailian_shi",
+     "bailian_shi"
+    ]
+   }
+  },
+  "grade_order": [
+   "1A",
+   "2A",
+   "3A",
+   "4A",
+   "5A"
+  ],
+  "grades": {
+   "1A": {
+    "label": "A",
+    "quality": "普通",
+    "color": "白",
+    "weight": 40,
+    "dan_pct": 0.002,
+    "mat_qty": 5,
+    "exp_cost": 10000,
+    "yinzi_qty": 1,
+    "pill": "xiuyandan_1",
+    "submit_gold": 5000
+   },
+   "2A": {
+    "label": "AA",
+    "quality": "良品",
+    "color": "绿",
+    "weight": 30,
+    "dan_pct": 0.008,
+    "mat_qty": 10,
+    "exp_cost": 50000,
+    "yinzi_qty": 2,
+    "pill": "xiuyandan_2",
+    "submit_gold": 12000
+   },
+   "3A": {
+    "label": "AAA",
+    "quality": "珍贵",
+    "color": "黄",
+    "weight": 20,
+    "dan_pct": 0.03,
+    "mat_qty": 20,
+    "exp_cost": 150000,
+    "yinzi_qty": 4,
+    "pill": "xiuyandan_3",
+    "submit_gold": 30000
+   },
+   "4A": {
+    "label": "AAAA",
+    "quality": "稀有",
+    "color": "蓝",
+    "weight": 8,
+    "dan_pct": 0.12,
+    "mat_qty": 40,
+    "exp_cost": 400000,
+    "yinzi_qty": 8,
+    "pill": "xiuyandan_4",
+    "submit_gold": 80000
+   },
+   "5A": {
+    "label": "AAAAA",
+    "quality": "极品",
+    "color": "紫",
+    "weight": 2,
+    "dan_pct": 0.5,
+    "mat_qty": 80,
+    "exp_cost": 1000000,
+    "yinzi_qty": 15,
+    "pill": "xiuyandan_5",
+    "submit_gold": 200000
+   }
+  },
+  "yinzi": {
+   "pool": [
+    "ziling_hua",
+    "fengling_zhu",
+    "bailian_shi"
+   ]
+  },
+  "furnace_item": "liandan_shenlu",
+  "talisman": {
+   "item": "shenmo_xiulian_fu",
+   "dan_bonus_pct": 0.2
+  },
+  "submit_bonus_pct": 0.2,
+  "daily": {
+   "base_times": 5,
+   "talisman_extra": 5,
+   "talisman_extra_min_level": 40,
+   "talisman_unlimited_min_level": 80
+  },
+  "refresh": {
+   "min_level": 40,
+   "gold_free_times": 3,
+   "gold_per_level": 1000,
+   "wash_item": "xishuashua",
+   "wash_daily_max": 99,
+   "boost": [
+    {
+     "below": 30,
+     "mult": {
+      "4A": 1.5,
+      "5A": 1.6
+     }
+    },
+    {
+     "below": 50,
+     "mult": {
+      "4A": 2.2,
+      "5A": 3.2
+     }
+    },
+    {
+     "below": 9999999,
+     "mult": {
+      "4A": 3.0,
+      "5A": 5.0
+     }
+    }
+   ],
+   "wash_cost": 5
+  },
+  "strengthen": {
+   "name": "强化修验任务",
+   "mats": {
+    "bailian_shi": [
+     10,
+     20,
+     30,
+     40,
+     50
+    ],
+    "ziling_hua": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "fengling_zhu": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   "daily": {
+    "base_times": 1,
+    "talisman_extra": 2,
+    "talisman_min_level": 0
+   },
+   "refresh": {
+    "min_level": 0,
+    "gold_free_times": 3,
+    "gold_per_level": 1000,
+    "wash_cost": 1,
+    "wash_daily_max": 99
+   }
+  },
+  "trial": {
+   "name": "修验导师的考验",
+   "bailian_qty": [
+    5,
+    10,
+    15,
+    20,
+    25
+   ],
+   "min_kills": [
+    10,
+    20,
+    30,
+    50,
+    80
+   ],
+   "kill_seconds": 900,
+   "per_kill_exp": {
+    "1A": 100,
+    "2A": 300,
+    "3A": 1000,
+    "4A": 3000,
+    "5A": 10000
+   },
+   "daily": {
+    "base_times": 1
+   },
+   "refresh": {
+    "min_level": 0,
+    "gold_free_times": 3,
+    "gold_per_level": 1000,
+    "wash_cost": 1,
+    "wash_daily_max": 99
+   }
+  }
+ }
+}

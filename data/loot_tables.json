@@ -1,0 +1,7489 @@
+{
+  "spider": {
+    "desc": "蜘蛛类（蜘蛛/猿蛛/绿毛蜘蛛）：掉1档武器",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.008,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "scorpion": {
+    "desc": "蝎子类：掉1档护手",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "ape_spider": {
+    "desc": "猿蛛类：掉1档头部",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "bear": {
+    "desc": "熊类（熊/冷血鬃熊/怒熊）：掉1档盔甲",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "wild_dog": {
+    "desc": "野狗类（猎狗/凶残野狗）：掉1档鞋",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "shoes",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "bandit": {
+    "desc": "人形贼寇类（杂兵/巡反/索魂系）：掉护腿，tier 随怪物等级动态（monster_tier）+ 续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "bandit_leader": {
+    "desc": "黄野贼头目（首领）：掉2档盔甲 + 续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.08,
+        "count": 2
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "pheasant": {
+    "desc": "山鸡类（小山鸡/小卒/大兽）：掉1档护肩",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "shoulder_l",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "pheasant_elite": {
+    "desc": "山鸡头领（精英）：掉2档武器 + 凝神液",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "beijun_yajun": {
+    "desc": "北郡都尉（BOSS，与BOSS自身绑定）：专属掉1档装备 + 北斗宝石 + 续命丹 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.6,
+        "count": 2
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shanjian_dongzhong_ba": {
+    "desc": "山涧洞中霸（BOSS，与BOSS自身绑定）：专属掉2档武器 + 天星宝石 + 龙涎续命丹 + 必掉金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.6,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "bandit_new": {
+    "desc": "长股逃犯类怪物掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "soldier_new": {
+    "desc": "长股伤兵类怪物掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "spirit_new": {
+    "desc": "花妖/树妖类怪物掉落：掉护手，tier 随怪物等级动态（monster_tier）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "maominetu9_drop": {
+    "desc": "毛民恶徒（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "zhangguetu12_drop": {
+    "desc": "长股恶徒（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "bird_new": {
+    "desc": "鸟鹰/飞虫类怪物掉落：掉鞋，tier 随怪物等级动态（monster_tier）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "shoes",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "misc_new": {
+    "desc": "蜥蜴/石妖类怪物掉落：掉护腿，tier 随怪物等级动态（monster_tier）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "zhangyouezei19_drop": {
+    "desc": "长右恶贼（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "beast_new": {
+    "desc": "虎类怪物掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "menghu21_drop": {
+    "desc": "猛虎（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lvyijugu25_drop": {
+    "desc": "绿依巨贾（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shanqingxinshi42_drop": {
+    "desc": "山膏信使（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "juhunegui45_drop": {
+    "desc": "拘魂恶鬼（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "humaoyongshi47_drop": {
+    "desc": "胡毛勇士（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "humaosishi48_drop": {
+    "desc": "胡毛死士（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "humaozhaizhu49_drop": {
+    "desc": "胡毛寨主（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shanqingwuzhe52_drop": {
+    "desc": "山膏武者（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "canhunegui60_drop": {
+    "desc": "残魂恶鬼（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shihun61_drop": {
+    "desc": "噬魂（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "tunhunegui62_drop": {
+    "desc": "吞魂恶鬼（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "hanjurentouling66_drop": {
+    "desc": "酣巨人头领（聚宝）专属掉落：必掉装备（档位随怪物等级）+ 精炼/合成材料 + 北斗宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shenshi",
+        "prob": 0.08,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shenshi",
+        "prob": 0.06,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou",
+        "prob": 0.2,
+        "count": 1
+      }
+    ]
+  },
+  "shanzei64_drop": {
+    "desc": "山贼（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "hanjurentufu65_drop": {
+    "desc": "酣巨人屠夫（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "bandit_cs": {
+    "desc": "山膏流民类怪物掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shanqingkuangtu3_drop": {
+    "desc": "山膏狂徒（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "beast_cs": {
+    "desc": "软壳甲虫类怪物掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shanqingfeishou9_drop": {
+    "desc": "山膏匪首（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "soldier_cs": {
+    "desc": "厉角劲卒类怪物掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lijiaojinzu10_drop": {
+    "desc": "厉角劲卒（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "spirit_cs": {
+    "desc": "厉角潜行类怪物掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lijiaoqianxing11_drop": {
+    "desc": "厉角潜行（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lijiaowushi12_drop": {
+    "desc": "厉角巫师（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shanqingtoumu16_drop": {
+    "desc": "山膏头目（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "mantao26_drop": {
+    "desc": "聚宝（蛮淘23级）：装备必掉 + 宝石随机5系(碎石~石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "shanqingqiangdao28_drop": {
+    "desc": "山膏强盗（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shanqinghanfei29_drop": {
+    "desc": "山膏悍匪（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shanqingjiangjun30_drop": {
+    "desc": "山膏将军（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "suohunshiwei36_drop": {
+    "desc": "索魂侍卫（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "suohunshouwei37_drop": {
+    "desc": "索魂守卫（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "egui40_drop": {
+    "desc": "恶鬼（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lijiaojingrui41_drop": {
+    "desc": "厉角精锐（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lijiaolieshou42_drop": {
+    "desc": "厉角猎手（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lijiaoshashou46_drop": {
+    "desc": "厉角杀手（elite）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "ligui50_drop": {
+    "desc": "厉鬼（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "guige51_drop": {
+    "desc": "聚宝（鬼格34级）：装备必掉 + 宝石随机5系(碎石~石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "gloves",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "yuangu_drop": {
+    "desc": "远古生物（聚宝BOSS）专属掉落：装备必掉（档位随怪物等级）+ 宝石随机5系(碎石~神石全阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shenshi",
+        "prob": 0.08,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shenshi",
+        "prob": 0.06,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_神石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_神石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_神石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_神石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_神石",
+        "prob": 0.2,
+        "count": 1
+      }
+    ]
+  },
+  "nanjun_common": {
+    "desc": "南郡普通怪通用掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 50,
+        "max": 200
+      }
+    ]
+  },
+  "nanjun_elite": {
+    "desc": "南郡精英怪掉落：中档装备+概率药水+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 100,
+        "max": 400
+      }
+    ]
+  },
+  "zhangyoutongling_27_drop": {
+    "desc": "长右统领(27级首领)掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 300,
+        "max": 800
+      }
+    ]
+  },
+  "lvyitouling_33_drop": {
+    "desc": "绿依头领(33级首领)掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 300,
+        "max": 800
+      }
+    ]
+  },
+  "lijiaobiaoke_37_drop": {
+    "desc": "厉角镖客(37级首领)掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 300,
+        "max": 800
+      }
+    ]
+  },
+  "duanbigu_drop": {
+    "desc": "断壁谷普通/精英：低概率当前档装备+回血/回蓝药+金币（档随等级动态算）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.05,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.05,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.04,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.04,
+        "slot": "shoes",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_jiuzhuan",
+        "prob": 0.15,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "ningshen_jiuzhuan",
+        "prob": 0.15,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "duanbigu_boss_drop": {
+    "desc": "断壁谷首领：必掉2件装备+精炼/合成材料+北斗石（档随等级）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.3,
+        "count": 2
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "qiufengyuan_common": {
+    "desc": "秋枫原普通怪通用掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 80,
+        "max": 300
+      }
+    ]
+  },
+  "qiufengyuan_elite": {
+    "desc": "秋枫原精英怪掉落：中档装备+概率药水+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 150,
+        "max": 500
+      }
+    ]
+  },
+  "changyoutongling_drop": {
+    "desc": "长右统领(28级首领)掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 300,
+        "max": 800
+      }
+    ]
+  },
+  "dingfengxunlie_drop": {
+    "desc": "定风迅烈(44级首领)掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 800,
+        "max": 2000
+      }
+    ]
+  },
+  "yugu_drop": {
+    "desc": "玉骨(51级首领)掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 1000,
+        "max": 2500
+      }
+    ]
+  },
+  "suohunzunzhe_drop": {
+    "desc": "索魂尊者(51级首领)掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 1000,
+        "max": 2500
+      }
+    ]
+  },
+  "lijiaotangzhu_38_drop": {
+    "desc": "厉角堂主(38级聚宝)：装备必掉 + 宝石随机5系(碎石~石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      }
+    ]
+  },
+  "suohunanshi_53_drop": {
+    "desc": "索魂暗使(55级聚宝)：装备必掉 + 宝石随机5系(碎石~灵石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      }
+    ]
+  },
+  "muxiuyulin_common": {
+    "desc": "暮秀雨林普通怪通用掉落：低概装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 200,
+        "max": 700
+      }
+    ]
+  },
+  "muxiuyulin_elite": {
+    "desc": "暮秀雨林精英怪掉落：中概装备+概率续命丹+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 400,
+        "max": 1200
+      }
+    ]
+  },
+  "muxiuyulin_boss": {
+    "desc": "暮秀雨林首领掉落：高概装备+概率北斗宝石+概率凝神液+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 600,
+        "max": 2000
+      }
+    ]
+  },
+  "xuanyuan_common": {
+    "desc": "轩辕普通怪通用掉落：低概装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 100,
+        "max": 400
+      }
+    ]
+  },
+  "xuanyuan_elite": {
+    "desc": "轩辕精英怪掉落：中概装备+概率续命丹+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 200,
+        "max": 700
+      }
+    ]
+  },
+  "xuanyuan_boss": {
+    "desc": "轩辕首领掉落：高概装备+概率北斗宝石+概率凝神液+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 400,
+        "max": 1200
+      }
+    ]
+  },
+  "linhai_normal": {
+    "desc": "林海普通怪物（绿依守卫/村民/南海中军等）：掉同档武器 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "linhai_elite": {
+    "desc": "林海精英（绿依巫老/南海禁军/香魂冢禁卫）：掉同档护甲 + 凝神液 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "linhai_boss": {
+    "desc": "林海BOSS（绿依长老/香魂冢护法/南海副帅）：专属掉同档武器+护甲 + 北斗宝石 + 续命丹 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.6,
+        "count": 2
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "linhai_jubao": {
+    "desc": "林海聚宝（绿依偏将75级）：装备必掉 + 宝石随机5系(碎石~灵石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "donglicao_normal": {
+    "desc": "东篱草原普通怪（绿依斥侯/胡煞伏兵/幻影索魂等）：低概率同档武器 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "donglicao_elite": {
+    "desc": "东篱草原精英（铁卫/绿依禁卫/使团暗卫/铁影索魂等）：同档护甲 + 凝神液 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "donglicao_boss": {
+    "desc": "东篱草原BOSS（铁卫统领/绿依将军/胡煞刺客/胡煞统领/索魂明王）：同档武器+护甲 + 北斗宝石 + 续命丹 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.6,
+        "count": 2
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "donglicao_jubao": {
+    "desc": "东篱草原聚宝（翔舞使臣）：装备必掉 + 北斗五系宝石 + 天工/轮回石（金币恒0）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "langyapendi_normal": {
+    "desc": "琅琊盆地普通怪（长右/一目/嗜魂/迅烈/胡煞等）：低概率同档武器 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "langyapendi_elite": {
+    "desc": "琅琊盆地精英怪（长右巫师/长右勇士/胡煞精兵/长股系/一目暴徒等）：中概率同档装备 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "langyapendi_boss": {
+    "desc": "琅琊盆地首领（安和/迅烈头领/一目头领/胡煞头领）：必掉2装备 + 精炼石 + 北斗宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 2
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      }
+    ]
+  },
+  "langyapendi_jubao": {
+    "desc": "琅琊盆地聚宝（常山）：装备必掉 + 北斗五系宝石 + 天工/轮回石（金币恒0）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "yanwen_drop": {
+    "desc": "燕闻聚宝掉落（装备 + 北斗五系宝石，金币恒0）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_神石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "zhaozexiyi": {
+    "desc": "蜥蜴类（沼泽蜥蜴/猎蜥）：掉护手",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "liebao": {
+    "desc": "豹类（猎豹）：掉鞋子",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "shoes",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "banyueshuyao": {
+    "desc": "花妖/树妖类（半月树妖/半月花妖）：掉护手",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "banyuehuayao": {
+    "desc": "花妖/树妖类（半月树妖/半月花妖）：掉护手",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "guyuan": {
+    "desc": "魂类（孤怨/游魂孤怨/孤魂）：掉灵魂石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "soul1",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "youhunguyuan": {
+    "desc": "魂类（孤怨/游魂孤怨/孤魂）：掉灵魂石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "soul1",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "guhun": {
+    "desc": "魂类（孤怨/游魂孤怨/孤魂）：掉灵魂石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "soul1",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "liexi": {
+    "desc": "蜥蜴类（沼泽蜥蜴/猎蜥）：掉护手",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "ying": {
+    "desc": "鹰类（鹰）：掉护手",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shangaozeishou": {
+    "desc": "山膏贼首（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shangaoliukou": {
+    "desc": "山膏系（流寇/锐卒/祭司）：掉护腿",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shangaoruizu": {
+    "desc": "山膏系（流寇/锐卒/祭司）：掉护腿",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shangaojisi": {
+    "desc": "山膏系（流寇/锐卒/祭司）：掉护腿",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huangyelouluo": {
+    "desc": "煌叶系（喽罗/盗贼/守卫）：掉护腿",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huangyedaozei": {
+    "desc": "煌叶系（喽罗/盗贼/守卫）：掉护腿",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huangyebujiang": {
+    "desc": "煌叶系（喽罗/盗贼/守卫）：掉护腿",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huangyeshouwei": {
+    "desc": "煌叶系（喽罗/盗贼/守卫）：掉护腿",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "pants",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huangyetoumu": {
+    "desc": "煌叶头目（boss）专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huangyepianjiang": {
+    "desc": "煌叶偏将（聚宝）：装备必掉 + 北斗宝石 + 天工/轮回石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "linhaishizhe_drop": {
+    "desc": "林海使者(51级首领)掉落：护手概率掉 + 概率药水 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.08,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "xunlutongling_drop": {
+    "desc": "巡路统领(51级首领)掉落：盔甲概率掉 + 概率药水 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "liqi_drop": {
+    "desc": "厉其(58级聚宝)：装备必掉 + 宝石随机5系(碎石~灵石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "zuzhang_drop": {
+    "desc": "族长(71级首领)掉落：护手概率掉 + 概率药水 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.12,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "hanjurenlieshou_drop": {
+    "desc": "酣巨人猎手(66级首领)掉落：盔甲概率掉 + 概率药水 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "juhunguyuan_drop": {
+    "desc": "拘魂孤怨(70级首领)掉落：护手概率掉 + 概率药水 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "shehun_drop": {
+    "desc": "摄魂(71级首领)掉落：护手概率掉 + 概率药水 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "mihun_drop": {
+    "desc": "迷魂(71级首领)掉落：护手概率掉 + 概率药水 + 金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "chishui_soldier": {
+    "desc": "赤水兵卒系（护军/守卫/哨卫/洞府守卫）：掉盔甲",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "chishui_soldier_elite": {
+    "desc": "赤水兵卒精英（护卫/洞府侍卫/禁卫/护卫）：掉盔甲，概率略高 + 宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "chishui_soldier_boss": {
+    "desc": "赤水兵卒首领（副将/守卫统领/巡检/参将）：不建专属表，复用通用结构，掉率高（非必掉）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.08,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "chishui_spirit": {
+    "desc": "赤水鬼妖魔恶系（煌叶护卫/冥都鬼兵）：掉护手",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "chishui_spirit_elite": {
+    "desc": "赤水鬼妖魔恶精英（巫老/血卫/冥都鬼兵）：掉护手，概率略高 + 宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "chishui_spirit_boss": {
+    "desc": "赤水鬼妖魔恶首领（冥都鬼将/煌叶头领/七绝）：不建专属表，复用通用结构，掉率高（非必掉）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.08,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "csq_miehun_drop": {
+    "desc": "灭魂（聚宝，96级）专属掉落：装备必掉 + 天工/轮回石 + 概率北斗宝石，金币恒 0",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.6,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.35,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_神石",
+        "prob": 0.06,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shenshi",
+        "prob": 0.12,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shenshi",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "huangyetongling_drop": {
+    "desc": "煌叶统领（聚宝，80级）专属掉落：装备必掉 + 天工/轮回石 + 概率北斗宝石，金币恒 0",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.15,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shenshi",
+        "prob": 0.08,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shenshi",
+        "prob": 0.06,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "kunlun_beast": {
+    "desc": "昆仑兽类（金雕/熊怪/牦牛）：掉鞋子",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "shoes",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "kunlun_beast_boss": {
+    "desc": "昆仑兽类首领（雪域牦牛王）：不建专属表，复用通用结构，掉率高（非必掉）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "shoes",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.06,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "kunlun_soldier": {
+    "desc": "昆仑人形兵卒（毛民残兵/翔舞暗探/南海武士）：掉盔甲",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "kunlun_soldier_elite": {
+    "desc": "昆仑人形兵卒精英（毛民巫师/残将/翔舞刺客/巫师/护卫/南海武士）：掉盔甲 + 宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "kunlun_soldier_boss": {
+    "desc": "昆仑人形首领（统领/南海使者/将军）：不建专属表，复用通用结构，掉率高（非必掉）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.08,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "kunlun_spirit": {
+    "desc": "昆仑妖异系（暗目等目系）：掉护手",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "kunlun_spirit_elite": {
+    "desc": "昆仑妖异系精英（一目武士/术士/延维武士）：掉护手 + 宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "kunlun_spirit_boss": {
+    "desc": "昆仑妖异系首领（鹰眼/鹰魔/邪目/天目）：不建专属表，复用通用结构，掉率高（非必掉）",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "gloves",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.08,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "yanweizhanglao_drop": {
+    "desc": "延维长老（聚宝，88级）专属掉落：装备必掉 + 天工/轮回石 + 概率北斗宝石，金币恒 0",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.6,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.4,
+        "slot": "gloves",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.35,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.18,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_神石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shenshi",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shenshi",
+        "prob": 0.08,
+        "count": 1
+      }
+    ]
+  },
+  "qibingdong_l1_normal": {
+    "desc": "奇兵洞一层普通怪通用掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "qibingdong_l1_elite": {
+    "desc": "奇兵洞一层精英通用掉落：1~2档装备+概率药水+宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "qibingdong_l1_boss": {
+    "desc": "奇兵洞一层首领通用掉落：掉率高(非必掉)+装备+宝石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fenglie_89_drop": {
+    "desc": "聚宝（风烈89级）专属掉落：武器必掉 + 5系宝石(碎石~石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "bingjiashijing_45_drop": {
+    "desc": "聚宝（冰甲石精45级）专属掉落：武器必掉 + 5系宝石(碎石~石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "tanbao_44_drop": {
+    "desc": "聚宝（探宝44级）专属掉落：武器必掉 + 5系宝石(碎石~石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "canmou1_drop": {
+    "desc": "聚宝（参谋54级）专属掉落：武器必掉 + 5系宝石(碎石~石阶) + 天工/轮回石概率掉",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "qibingdong_l2_normal": {
+    "desc": "二层普通怪通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.2,
+        "count": 1
+      }
+    ]
+  },
+  "qibingdong_l2_elite": {
+    "desc": "二层精英怪通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.25,
+        "count": 1
+      }
+    ]
+  },
+  "qibingdong_l2_boss": {
+    "desc": "二层boss通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.4,
+        "count": 1
+      }
+    ]
+  },
+  "guanrong1_drop": {
+    "desc": "聚宝管融专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "qimidong_l1_normal": {
+    "desc": "七迷洞一层普通怪通用掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "qimidong_l1_elite": {
+    "desc": "七迷洞一层精英通用掉落：中档装备+宝石+药水",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "qimidong_l1_boss": {
+    "desc": "七迷洞一层BOSS通用掉落：高档装备+宝石+药水",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.6,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fushejisi1_drop": {
+    "desc": "七迷洞一层聚宝·复社祭司专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.8,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.7,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.8,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      }
+    ]
+  },
+  "qimidong_l2_normal": {
+    "desc": "七迷洞二层普通怪通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "qimidong_l2_elite": {
+    "desc": "七迷洞二层精英通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "qimidong_l2_boss": {
+    "desc": "七迷洞二层BOSS通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.6,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fushedazhanglao1_drop": {
+    "desc": "七迷洞二层聚宝·复社大长老专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.8,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.7,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.8,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      }
+    ]
+  },
+  "fuxiling_mudao_normal": {
+    "desc": "伏羲陵墓道普通怪通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fuxiling_mudao_elite": {
+    "desc": "伏羲陵墓道精英通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fuxiling_mudao_boss": {
+    "desc": "伏羲陵墓道BOSS通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.6,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "xiongmu1_drop": {
+    "desc": "伏羲陵墓道聚宝·凶目专属掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.8,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.7,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.8,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      }
+    ]
+  },
+  "fuxiling_shangceng_normal": {
+    "desc": "伏羲陵上层区域通用掉落·normal",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "helmet",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fuxiling_shangceng_elite": {
+    "desc": "伏羲陵上层区域通用掉落·elite",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fuxiling_shangceng_boss": {
+    "desc": "伏羲陵上层区域通用掉落·boss",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.6,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fuxiling_xiaceng_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "warrior"
+      },
+      {
+        "item": "gem",
+        "prob": 0.2,
+        "key": "beidou_石",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "prob": 0.2,
+        "key": "xuming_xiao",
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fuxiling_xiaceng_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "warrior"
+      },
+      {
+        "item": "gem",
+        "prob": 0.25,
+        "key": "beidou_石",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "prob": 0.2,
+        "key": "xuming_xiao",
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "fuxiling_xiaceng_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "warrior"
+      },
+      {
+        "item": "gem",
+        "prob": 0.3,
+        "key": "beidou_石",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "prob": 0.15,
+        "key": "xuming_xiao",
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l1_normal": {
+    "desc": "炼骨窟lianguku_l1普通怪",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l1_elite": {
+    "desc": "炼骨窟lianguku_l1精英",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l1_jubao": {
+    "desc": "炼骨窟lianguku_l1聚宝",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.4,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "lianguku_l1_boss": {
+    "desc": "炼骨窟lianguku_l1首领",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l2_normal": {
+    "desc": "炼骨窟lianguku_l2普通怪",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l2_elite": {
+    "desc": "炼骨窟lianguku_l2精英",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l2_boss": {
+    "desc": "炼骨窟lianguku_l2首领",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l2_jubao": {
+    "desc": "炼骨窟lianguku_l2聚宝",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.4,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "lianguku_l3_boss": {
+    "desc": "炼骨窟lianguku_l3首领",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l3_elite": {
+    "desc": "炼骨窟lianguku_l3精英",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l3_normal": {
+    "desc": "炼骨窟lianguku_l3普通怪",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "lianguku_l3_jubao": {
+    "desc": "炼骨窟lianguku_l3聚宝",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.4,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "qingyunzhai_l1_normal": {
+    "desc": "青云寨qingyunzhai_l1normal",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "qingyunzhai_l1_elite": {
+    "desc": "青云寨qingyunzhai_l1elite",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "qingyunzhai_l1_boss": {
+    "desc": "青云寨qingyunzhai_l1boss",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "qingyunzhai_l2_normal": {
+    "desc": "青云寨qingyunzhai_l2normal",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "qingyunzhai_l2_elite": {
+    "desc": "青云寨qingyunzhai_l2elite",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "qingyunzhai_l2_boss": {
+    "desc": "青云寨qingyunzhai_l2boss",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "qingyunzhai_l2_jubao": {
+    "desc": "青云寨qingyunzhai_l2聚宝",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.4,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      }
+    ]
+  },
+  "qingyunzhai_l3_normal": {
+    "desc": "青云寨qingyunzhai_l3normal",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "qingyunzhai_l3_elite": {
+    "desc": "青云寨qingyunzhai_l3elite",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "qingyunzhai_l3_boss": {
+    "desc": "青云寨qingyunzhai_l3boss",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 0.5,
+        "min": 10,
+        "max": 50
+      }
+    ]
+  },
+  "tianzun_normal": {
+    "desc": "天尊洞府普通怪通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "tianzun_elite": {
+    "desc": "天尊洞府精英通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "tianzun_boss": {
+    "desc": "天尊洞府首领通用掉落",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "tianzhanglao_drop": {
+    "desc": "聚宝(天尊长老95·刑房)专属:武器必掉+北斗五系+轮回石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shenshi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "tianzun_95_drop": {
+    "desc": "聚宝(天尊95·天尊洞府)专属:装备必掉+北斗五系+轮回石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.4,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shenshi",
+        "prob": 0.2,
+        "count": 1
+      }
+    ]
+  },
+  "yaowang_normal": {
+    "tier": 1,
+    "gold": {
+      "min": 10,
+      "max": 40
+    },
+    "items": [
+      {
+        "key": "beidou_碎石",
+        "type": "gem",
+        "rate": 0.15,
+        "min": 1,
+        "max": 2
+      },
+      {
+        "key": "xumingdan",
+        "type": "consumable",
+        "rate": 0.2,
+        "min": 1,
+        "max": 2
+      }
+    ]
+  },
+  "yaowang_elite": {
+    "tier": 3,
+    "gold": {
+      "min": 30,
+      "max": 90
+    },
+    "items": [
+      {
+        "key": "beidou_石",
+        "type": "gem",
+        "rate": 0.3,
+        "min": 1,
+        "max": 2
+      },
+      {
+        "key": "lunhui_shi",
+        "type": "consumable",
+        "rate": 0.15,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "key": "xumingdan",
+        "type": "consumable",
+        "rate": 0.25,
+        "min": 1,
+        "max": 2
+      }
+    ]
+  },
+  "yaowang_boss": {
+    "tier": 5,
+    "gold": {
+      "min": 80,
+      "max": 200
+    },
+    "items": [
+      {
+        "key": "beidou_灵石",
+        "type": "gem",
+        "rate": 0.5,
+        "min": 1,
+        "max": 2
+      },
+      {
+        "key": "lunhui_shi",
+        "type": "consumable",
+        "rate": 0.35,
+        "min": 1,
+        "max": 2
+      },
+      {
+        "key": "lunhui_shenshi",
+        "type": "consumable",
+        "rate": 0.2,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "key": "xumingdan",
+        "type": "consumable",
+        "rate": 0.4,
+        "min": 2,
+        "max": 3
+      }
+    ]
+  },
+  "fengxiandiandianshi_drop": {
+    "tier": 6,
+    "gold": {
+      "min": 0,
+      "max": 0
+    },
+    "items": [
+      {
+        "key": "beidou_灵石",
+        "type": "gem",
+        "rate": 0.6,
+        "min": 2,
+        "max": 3
+      },
+      {
+        "key": "lunhui_shi",
+        "type": "consumable",
+        "rate": 0.4,
+        "min": 2,
+        "max": 3
+      },
+      {
+        "key": "lunhui_shenshi",
+        "type": "consumable",
+        "rate": 0.25,
+        "min": 1,
+        "max": 2
+      }
+    ],
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "jiaomu_drop": {
+    "tier": 6,
+    "gold": {
+      "min": 0,
+      "max": 0
+    },
+    "items": [
+      {
+        "key": "beidou_灵石",
+        "type": "gem",
+        "rate": 0.65,
+        "min": 2,
+        "max": 4
+      },
+      {
+        "key": "lunhui_shi",
+        "type": "consumable",
+        "rate": 0.45,
+        "min": 2,
+        "max": 3
+      },
+      {
+        "key": "lunhui_shenshi",
+        "type": "consumable",
+        "rate": 0.3,
+        "min": 1,
+        "max": 2
+      }
+    ],
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "yumo_drop": {
+    "desc": "聚宝(狱魔95·弱档)专属:武器必掉+北斗五系+轮回石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.8,
+        "count": 2
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.5,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "bianyi_yumo_drop": {
+    "desc": "聚宝(变异狱魔95·强档)专属:武器必掉+北斗五系+轮回石+续命丹(略丰厚)",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.6,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 1.0,
+        "count": 3
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.8,
+        "count": 2
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "yaojia_drop": {
+    "desc": "聚宝(耀嘉95·弱档)专属:武器必掉+北斗五系+轮回石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.8,
+        "count": 2
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.5,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "bianyi_yaojia_drop": {
+    "desc": "聚宝(变异耀嘉95·强档)专属:武器必掉+北斗五系+轮回石+续命丹(略丰厚)",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.6,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 1.0,
+        "count": 3
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.8,
+        "count": 2
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "tianzun_drop": {
+    "desc": "聚宝(天尊95·弱档)专属:武器必掉+北斗五系+轮回石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.8,
+        "count": 2
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.5,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "bianyi_tianzun_drop": {
+    "desc": "聚宝(变异天尊95·强档)专属:武器必掉+北斗五系+轮回石+续命丹(略丰厚)",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.6,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 1.0,
+        "count": 3
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.8,
+        "count": 2
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "youmingguiwang_drop": {
+    "desc": "聚宝(幽冥鬼王84·特殊BOSS)专属:武器必掉+北斗五系+轮回石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 1.0,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.8,
+        "count": 2
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.5,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      }
+    ]
+  },
+  "huanhai_l1_normal": {
+    "desc": "huanhai_l1 普通怪通用掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l1_elite": {
+    "desc": "huanhai_l1 精英通用掉落：装备+概率药水+北斗宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l1_boss": {
+    "desc": "huanhai_l1 首领通用掉落：装备+北斗灵石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l1_jubao": {
+    "desc": "huanhai_l1 聚宝专属掉落：装备必掉+北斗五系+天工/轮回石(金币恒0)",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "huanhai_l2_normal": {
+    "desc": "huanhai_l2 普通怪通用掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l2_elite": {
+    "desc": "huanhai_l2 精英通用掉落：装备+概率药水+北斗宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l2_boss": {
+    "desc": "huanhai_l2 首领通用掉落：装备+北斗灵石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l2_jubao": {
+    "desc": "huanhai_l2 聚宝专属掉落：装备必掉+北斗五系+天工/轮回石(金币恒0)",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "huanhai_l3_normal": {
+    "desc": "huanhai_l3 普通怪通用掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l3_elite": {
+    "desc": "huanhai_l3 精英通用掉落：装备+概率药水+北斗宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l3_boss": {
+    "desc": "huanhai_l3 首领通用掉落：装备+北斗灵石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l3_jubao": {
+    "desc": "huanhai_l3 聚宝专属掉落：装备必掉+北斗五系+天工/轮回石(金币恒0)",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "huanhai_l4_normal": {
+    "desc": "huanhai_l4 普通怪通用掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.01,
+        "slot": "weapon",
+        "job": "战士"
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l4_elite": {
+    "desc": "huanhai_l4 精英通用掉落：装备+概率药水+北斗宝石",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l4_boss": {
+    "desc": "huanhai_l4 首领通用掉落：装备+北斗灵石+续命丹",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.5,
+        "slot": "armor",
+        "job": "战士"
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0
+      }
+    ]
+  },
+  "huanhai_l4_jubao": {
+    "desc": "huanhai_l4 聚宝专属掉落：装备必掉+北斗五系+天工/轮回石(金币恒0)",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 1.0,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.25,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.2,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.025,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 0.0
+      },
+      {
+        "item": "consumable",
+        "key": "lingyin_0",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yanmie",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "mingqi_1",
+        "prob": 0.04,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "niepan_1",
+        "prob": 0.03,
+        "count": 1
+      }
+    ]
+  },
+  "guimu_common": {
+    "desc": "诡墓普通怪掉落：低档装备+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.02,
+        "slot": "weapon",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 50,
+        "max": 200
+      }
+    ]
+  },
+  "guimu_elite": {
+    "desc": "诡墓精英怪掉落：中档装备+概率药水+金币",
+    "drops": [
+      {
+        "item": "equip",
+        "prob": 0.08,
+        "slot": "armor",
+        "job": "战士",
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.03,
+        "count": 1
+      },
+      {
+        "item": "gold",
+        "prob": 1.0,
+        "min": 100,
+        "max": 400
+      }
+    ]
+  },
+  "guimu_boss": {
+    "desc": "诡墓副本头目掉落：装备50%（档位随怪物等级=2档，3档靠死亡护符兑换）+5系宝石(碎石/石)+武魂+铜元宝+小药盒子+死亡护符必掉",
+    "drops": [
+      {"item": "equip", "slot": "weapon", "job": "战士"},
+      {"item": "equip", "slot": "helmet", "job": "战士"},
+      {"item": "equip", "slot": "shoulder_l", "job": "战士"},
+      {"item": "equip", "slot": "armor", "job": "战士"},
+      {"item": "equip", "slot": "pants", "job": "战士"},
+      {"item": "equip", "slot": "cloak", "job": "战士"},
+      {"item": "equip", "slot": "belt", "job": "战士"},
+      {"item": "equip", "slot": "gloves", "job": "战士"},
+      {"item": "equip", "slot": "shoes", "job": "战士"},
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.3,
+        "count": 1
+      },
+      {
+        "item": "wuhun",
+        "prob": 0.3,
+        "min": 60,
+        "max": 90,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "yuquan_box",
+        "prob": 0.05,
+        "count": 1
+      },
+      {
+        "item": "consumable",
+        "key": "tong_yuanbao",
+        "prob": 0.005,
+        "count": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "mining": {
+    "base_round_seconds": 10,
+    "rounds_per_compass": 1,
+    "levelup": {
+      "base_exp": 30,
+      "growth": 1.18,
+      "max_level": 100
+    },
+    "outcomes": {
+      "empty": 0.05,
+      "ore": 0.9,
+      "ancient": 0.05,
+      "ore_find_rate": 0.88
+    },
+    "compass": {
+      "yipin": {
+        "key": "yipin_luopan",
+        "name": "一品罗盘",
+        "source": "shop",
+        "level_required": 1,
+        "ancient_max_level": 60,
+        "open_maps": [
+          "tianshengyuan",
+          "banquan"
+        ],
+        "unlock_level": 1
+      },
+      "erpin": {
+        "key": "erpin_luopan",
+        "name": "二品罗盘",
+        "source": "BOSS/聚宝掉落(34级+)、点券罗盘包",
+        "level_required": 13,
+        "ancient_max_level": 80,
+        "open_maps": [
+          "banquan"
+        ],
+        "unlock_level": 13
+      },
+      "sanpin": {
+        "key": "sanpin_luopan",
+        "name": "三品罗盘",
+        "source": "BOSS/聚宝掉落(66级+)、点券罗盘包",
+        "level_required": 27,
+        "open_maps": [
+          "xuanyuan",
+          "xilie"
+        ],
+        "unlock_level": 27
+      }
+    },
+    "ore_tables": {
+      "yipin": {
+        "hantie": 40,
+        "chitong": 35,
+        "moyin": 25
+      },
+      "erpin": {
+        "moyin": 20,
+        "wujin": 40,
+        "liufang": 40
+      },
+      "sanpin": {
+        "liufang": 56,
+        "lihuo": 40,
+        "haihun": 4
+      }
+    },
+    "ore_tables_by_map": {
+      "sanpin": {
+        "xuanyuan": {
+          "liufang": 55,
+          "lihuo": 40,
+          "haihun": 4
+        },
+        "xilie": {
+          "liufang": 20,
+          "lihuo": 70,
+          "haihun": 7
+        }
+      }
+    },
+    "ore_group_base": 20,
+    "ancient_monster": [
+      {
+        "level": 9,
+        "monster": "yuangu_9"
+      },
+      {
+        "level": 19,
+        "monster": "yuangu_19"
+      },
+      {
+        "level": 29,
+        "monster": "yuangu_29"
+      },
+      {
+        "level": 39,
+        "monster": "yuangu_39"
+      },
+      {
+        "level": 49,
+        "monster": "yuangu_49"
+      },
+      {
+        "level": 59,
+        "monster": "yuangu_59"
+      },
+      {
+        "level": 69,
+        "monster": "yuangu_69"
+      },
+      {
+        "level": 79,
+        "monster": "yuangu_79"
+      },
+      {
+        "level": 89,
+        "monster": "yuangu_89"
+      },
+      {
+        "level": 99,
+        "monster": "yuangu_99"
+      },
+      {
+        "level": 109,
+        "monster": "yuangu_109"
+      }
+    ],
+    "steps": [
+      {
+        "name": "使用罗盘·确认方位",
+        "seconds": 15,
+        "color": "#4aa3ff"
+      },
+      {
+        "name": "抵达矿脉·确认方位",
+        "seconds": 15,
+        "color": "#46c46a"
+      },
+      {
+        "name": "确位开凿·准备探矿",
+        "seconds": 10,
+        "color": "#e6a23c"
+      },
+      {
+        "name": "探矿作业·结算结果",
+        "seconds": 10,
+        "color": "#f0d060"
+      }
+    ]
+  }
+}

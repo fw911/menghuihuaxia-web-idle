@@ -1,0 +1,32 @@
+{
+  "武魂_elite": {
+    "drops": [
+      {
+        "item": "wuhun",
+        "prob": 0.001,
+        "star_min": 0,
+        "star_max": 0
+      }
+    ]
+  },
+  "武魂_boss": {
+    "drops": [
+      {
+        "item": "wuhun",
+        "prob": 0.01,
+        "star_min": 0,
+        "star_max": 0
+      }
+    ]
+  },
+  "武魂_jubao": {
+    "drops": [
+      {
+        "item": "wuhun",
+        "prob": 0.08,
+        "star_min": 0,
+        "star_max": 0
+      }
+    ]
+  }
+}

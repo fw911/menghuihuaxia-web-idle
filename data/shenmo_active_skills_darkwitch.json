@@ -1,0 +1,156 @@
+{
+  "_comment": "暗巫神魔主动技能条（设计文档《神魔系统设计文档（暗巫篇）》§5-§6：随修炼加点解锁，仅变身中下发）。归属神魔域，不进职业技能表（/api/skills 面板不展示）；战斗引擎经 core.shenmo.get_active_skill_def 回退查本表。",
+  "active_skills": [
+    {
+      "key": "sm_zhuanhua",
+      "name": "转化",
+      "job": "darkwitch",
+      "form": null,
+      "element": "magic",
+      "type": "active",
+      "skill_type": "heal",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/darkwitch_010.gif",
+      "desc": "神魔·转化：立即恢复自身大量生命",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 80, "cd": 12, "desc": "立即恢复自身600点生命"},
+        {"damage": 0, "mp": 80, "cd": 12, "desc": "立即恢复自身700点生命"},
+        {"damage": 0, "mp": 80, "cd": 12, "desc": "立即恢复自身800点生命"},
+        {"damage": 0, "mp": 80, "cd": 12, "desc": "立即恢复自身900点生命"},
+        {"damage": 0, "mp": 80, "cd": 12, "desc": "立即恢复自身1000点生命"}
+      ]
+    },
+    {
+      "key": "sm_zhipei",
+      "name": "支配",
+      "job": "darkwitch",
+      "form": "zhao",
+      "element": "magic",
+      "type": "active",
+      "skill_type": "summon",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/darkwitch_003.gif",
+      "desc": "神魔·支配：立即召唤炎灵兽助战（不受召唤技能冷却限制）",
+      "sm_skill": true,
+      "summon": "yanling",
+      "summon_duration": 30,
+      "summon_level_map": {"1": 1, "2": 5, "3": 10, "4": 15, "5": 20},
+      "levels": [
+        {"damage": 0, "mp": 100, "cd": 20, "desc": "召唤1级炎灵兽，持续30回合"},
+        {"damage": 0, "mp": 100, "cd": 20, "desc": "召唤5级炎灵兽，持续30回合"},
+        {"damage": 0, "mp": 100, "cd": 20, "desc": "召唤10级炎灵兽，持续30回合"},
+        {"damage": 0, "mp": 100, "cd": 20, "desc": "召唤15级炎灵兽，持续30回合"},
+        {"damage": 0, "mp": 100, "cd": 20, "desc": "召唤20级炎灵兽，持续30回合"}
+      ]
+    },
+    {
+      "key": "sm_weishe",
+      "name": "威慑",
+      "job": "darkwitch",
+      "form": "zhao",
+      "element": "dark",
+      "type": "active",
+      "skill_type": "control",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/darkwitch_013.gif",
+      "desc": "神魔·威慑：使目标陷入昏迷",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 60, "cd": 16, "desc": "使目标昏迷2回合", "effects": [{"type": "stun", "value": 0, "duration": 2}]},
+        {"damage": 0, "mp": 60, "cd": 16, "desc": "使目标昏迷3回合", "effects": [{"type": "stun", "value": 0, "duration": 3}]},
+        {"damage": 0, "mp": 60, "cd": 16, "desc": "使目标昏迷4回合", "effects": [{"type": "stun", "value": 0, "duration": 4}]},
+        {"damage": 0, "mp": 60, "cd": 16, "desc": "使目标昏迷5回合", "effects": [{"type": "stun", "value": 0, "duration": 5}]},
+        {"damage": 0, "mp": 60, "cd": 16, "desc": "使目标昏迷6回合", "effects": [{"type": "stun", "value": 0, "duration": 6}]}
+      ]
+    },
+    {
+      "key": "sm_xisheng",
+      "name": "牺牲",
+      "job": "darkwitch",
+      "form": "zhao",
+      "element": "magic",
+      "type": "active",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/darkwitch_003.gif",
+      "desc": "神魔·牺牲：为自己附加法术伤害吸收护盾",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 70, "cd": 14, "desc": "获得可吸收300点法术伤害的护盾，持续10回合", "effects": [{"type": "shield_magic", "value": 300, "duration": 10}]},
+        {"damage": 0, "mp": 70, "cd": 14, "desc": "获得可吸收400点法术伤害的护盾，持续10回合", "effects": [{"type": "shield_magic", "value": 400, "duration": 10}]},
+        {"damage": 0, "mp": 70, "cd": 14, "desc": "获得可吸收500点法术伤害的护盾，持续10回合", "effects": [{"type": "shield_magic", "value": 500, "duration": 10}]},
+        {"damage": 0, "mp": 70, "cd": 14, "desc": "获得可吸收600点法术伤害的护盾，持续10回合", "effects": [{"type": "shield_magic", "value": 600, "duration": 10}]},
+        {"damage": 0, "mp": 70, "cd": 14, "desc": "获得可吸收700点法术伤害的护盾，持续10回合", "effects": [{"type": "shield_magic", "value": 700, "duration": 10}]}
+      ]
+    },
+    {
+      "key": "sm_youfa",
+      "name": "诱发",
+      "job": "darkwitch",
+      "form": "zu",
+      "element": "dark",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/darkwitch_015.gif",
+      "desc": "神魔·诱发：引爆中毒目标，造成暗系伤害并清除其持续伤害",
+      "sm_skill": true,
+      "condition": "has_poison",
+      "levels": [
+        {"damage": 200, "mp": 50, "cd": 8, "desc": "对中毒目标造成200点暗系伤害，清除所有持续伤害效果"},
+        {"damage": 250, "mp": 50, "cd": 8, "desc": "对中毒目标造成250点暗系伤害，清除所有持续伤害效果"},
+        {"damage": 300, "mp": 50, "cd": 8, "desc": "对中毒目标造成300点暗系伤害，清除所有持续伤害效果"},
+        {"damage": 350, "mp": 50, "cd": 8, "desc": "对中毒目标造成350点暗系伤害，清除所有持续伤害效果"},
+        {"damage": 400, "mp": 50, "cd": 8, "desc": "对中毒目标造成400点暗系伤害，清除所有持续伤害效果"}
+      ]
+    },
+    {
+      "key": "sm_fenliu",
+      "name": "生命分流",
+      "job": "darkwitch",
+      "form": "zu",
+      "element": "dark",
+      "type": "active",
+      "skill_type": "debuff",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/darkwitch_006.gif",
+      "desc": "神魔·生命分流：每回合将目标生命上限的一部分转给自己",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 65, "cd": 10, "desc": "8回合内每回合转移目标5%生命上限给自己", "effects": [{"type": "hp_drain", "value": 5, "duration": 8}]},
+        {"damage": 0, "mp": 65, "cd": 10, "desc": "8回合内每回合转移目标6%生命上限给自己", "effects": [{"type": "hp_drain", "value": 6, "duration": 8}]},
+        {"damage": 0, "mp": 65, "cd": 10, "desc": "8回合内每回合转移目标7%生命上限给自己", "effects": [{"type": "hp_drain", "value": 7, "duration": 8}]},
+        {"damage": 0, "mp": 65, "cd": 10, "desc": "8回合内每回合转移目标8%生命上限给自己", "effects": [{"type": "hp_drain", "value": 8, "duration": 8}]},
+        {"damage": 0, "mp": 65, "cd": 10, "desc": "8回合内每回合转移目标10%生命上限给自己", "effects": [{"type": "hp_drain", "value": 10, "duration": 8}]}
+      ]
+    },
+    {
+      "key": "sm_tonghua",
+      "name": "生命同化",
+      "job": "darkwitch",
+      "form": "zu",
+      "element": "dark",
+      "type": "active",
+      "skill_type": "debuff",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/darkwitch_018.gif",
+      "desc": "神魔·生命同化：使目标所受治疗降低，同时提升自身恢复",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 75, "cd": 12, "desc": "目标所受治疗降低20%，自身每回合回复30点生命，持续8回合", "effects": [{"type": "heal_down", "value": 20, "duration": 8}, {"type": "hot", "value": 30, "duration": 8, "target": "self"}]},
+        {"damage": 0, "mp": 75, "cd": 12, "desc": "目标所受治疗降低25%，自身每回合回复40点生命，持续8回合", "effects": [{"type": "heal_down", "value": 25, "duration": 8}, {"type": "hot", "value": 40, "duration": 8, "target": "self"}]},
+        {"damage": 0, "mp": 75, "cd": 12, "desc": "目标所受治疗降低30%，自身每回合回复50点生命，持续8回合", "effects": [{"type": "heal_down", "value": 30, "duration": 8}, {"type": "hot", "value": 50, "duration": 8, "target": "self"}]},
+        {"damage": 0, "mp": 75, "cd": 12, "desc": "目标所受治疗降低35%，自身每回合回复60点生命，持续8回合", "effects": [{"type": "heal_down", "value": 35, "duration": 8}, {"type": "hot", "value": 60, "duration": 8, "target": "self"}]},
+        {"damage": 0, "mp": 75, "cd": 12, "desc": "目标所受治疗降低40%，自身每回合回复70点生命，持续8回合", "effects": [{"type": "heal_down", "value": 40, "duration": 8}, {"type": "hot", "value": 70, "duration": 8, "target": "self"}]}
+      ]
+    }
+  ]
+}

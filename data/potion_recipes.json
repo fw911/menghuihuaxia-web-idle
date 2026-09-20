@@ -1,0 +1,77 @@
+{
+  "recipe_potion_t3": {
+    "key": "recipe_potion_t3",
+    "name": "玉泉灵浆炼制配方",
+    "icon": "static/icons/items/recipe_potion_t3.png",
+    "category": "potion_recipe",
+    "effect_type": "potion_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 40,
+    "price": 5000,
+    "desc": "五瓶回春大还丹、五瓶玉泉定神液与一颗镇魔晶石，可炼成五瓶玉泉灵浆。右键开始炼制，约 5 分钟后产出。",
+    "recipe_key": "recipe_potion_t3",
+    "result_item": "yuquan_qiongjiang",
+    "result_name": "玉泉灵浆",
+    "result_count": 5,
+    "duration_sec": 300,
+    "time": "【5 分钟】",
+    "cost": {
+      "hp_potion": {"key": "xuming_da", "count": 5},
+      "mp_potion": {"key": "ningshen_yuquan", "count": 5},
+      "crystal": {"key": "yumo_crystal", "count": 1},
+      "bottle": {"key": "lianhua_ping", "count": 1}
+    },
+    "obtain": []
+  },
+  "recipe_potion_t4": {
+    "key": "recipe_potion_t4",
+    "name": "三花玉露炼制配方",
+    "icon": "static/icons/items/recipe_potion_t4.png",
+    "category": "potion_recipe",
+    "effect_type": "potion_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 60,
+    "price": 8000,
+    "desc": "五瓶三清回天丹、五瓶三花定神液与一颗战意晶石，可炼成五瓶三花玉露。右键开始炼制，约 5 分钟后产出。",
+    "recipe_key": "recipe_potion_t4",
+    "result_item": "sanhua_yuye",
+    "result_name": "三花玉露",
+    "result_count": 5,
+    "duration_sec": 300,
+    "time": "【5 分钟】",
+    "cost": {
+      "hp_potion": {"key": "xuming_sanqing", "count": 5},
+      "mp_potion": {"key": "ningshen_sanhua", "count": 5},
+      "crystal": {"key": "zhanhun_crystal", "count": 1},
+      "bottle": {"key": "lianhua_ping", "count": 1}
+    },
+    "obtain": []
+  },
+  "recipe_potion_t5": {
+    "key": "recipe_potion_t5",
+    "name": "九转神水炼制配方",
+    "icon": "static/icons/items/recipe_potion_t5.png",
+    "category": "potion_recipe",
+    "effect_type": "potion_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 80,
+    "price": 12000,
+    "desc": "五瓶九转还魂丹、五瓶九转定神液与一颗灵心晶石，可炼成五瓶九转神水。右键开始炼制，约 5 分钟后产出。",
+    "recipe_key": "recipe_potion_t5",
+    "result_item": "jiuzhuan_shengshui",
+    "result_name": "九转神水",
+    "result_count": 5,
+    "duration_sec": 300,
+    "time": "【5 分钟】",
+    "cost": {
+      "hp_potion": {"key": "xuming_jiuzhuan", "count": 5},
+      "mp_potion": {"key": "ningshen_jiuzhuan", "count": 5},
+      "crystal": {"key": "lingnian_crystal", "count": 1},
+      "bottle": {"key": "lianhua_ping", "count": 1}
+    },
+    "obtain": []
+  }
+}

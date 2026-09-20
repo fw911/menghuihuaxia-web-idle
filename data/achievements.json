@@ -1,0 +1,2036 @@
+{
+  "categories": {
+    "level": "等级",
+    "kill": "击杀",
+    "jubao": "聚宝",
+    "map_clear": "地图通关",
+    "map_single": "单图通关",
+    "refine7": "精炼大师",
+    "craft53": "锻造宗师",
+    "kill_type": "同类型猎杀"
+  },
+  "achievements": [
+    {
+      "key": "level_5",
+      "category": "level",
+      "name": "初出茅庐",
+      "desc": "角色等级达到 5 级",
+      "metric": "level",
+      "target": 5,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "xingyun_zhu",
+          "count": 1
+        },
+        {
+          "key": "yaoshi_xuangui",
+          "count": 3
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_10",
+      "category": "level",
+      "name": "小有所成",
+      "desc": "角色等级达到 10 级",
+      "metric": "level",
+      "target": 10,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "yaoshi_qingluan",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_15",
+      "category": "level",
+      "name": "崭露头角",
+      "desc": "角色等级达到 15 级",
+      "metric": "level",
+      "target": 15,
+      "reward_coins": 150000,
+      "reward_coupon": 0,
+      "reward_items": [],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_20",
+      "category": "level",
+      "name": "声名鹊起",
+      "desc": "角色等级达到 20 级",
+      "metric": "level",
+      "target": 20,
+      "reward_coins": 0,
+      "reward_coupon": 300,
+      "reward_items": [],
+      "icon": "achievement_level",
+      "milestone": true
+    },
+    {
+      "key": "level_25",
+      "category": "level",
+      "name": "锋芒初露",
+      "desc": "角色等级达到 25 级",
+      "metric": "level",
+      "target": 25,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "gaoji_xingyun",
+          "count": 1
+        },
+        {
+          "key": "baiyu_lingpai",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_30",
+      "category": "level",
+      "name": "侠名远播",
+      "desc": "角色等级达到 30 级",
+      "metric": "level",
+      "target": 30,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "beidou_石",
+          "count": 1
+        },
+        {
+          "key": "tianxing_石",
+          "count": 1
+        },
+        {
+          "key": "yuanru_石",
+          "count": 1
+        },
+        {
+          "key": "wuxiang_石",
+          "count": 1
+        },
+        {
+          "key": "wangyue_石",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_35",
+      "category": "level",
+      "name": "名动一方",
+      "desc": "角色等级达到 35 级",
+      "metric": "level",
+      "target": 35,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "tiangong_shi",
+          "count": 2
+        },
+        {
+          "key": "yaoshi_baize",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_40",
+      "category": "level",
+      "name": "一方豪杰",
+      "desc": "角色等级达到 40 级",
+      "metric": "level",
+      "target": 40,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "tiangong_shi",
+          "count": 2
+        },
+        {
+          "key": "erpin_luopan",
+          "count": 10
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": true
+    },
+    {
+      "key": "level_45",
+      "category": "level",
+      "name": "名震一方",
+      "desc": "角色等级达到 45 级",
+      "metric": "level",
+      "target": 45,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "xiangrui_zhu",
+          "count": 1
+        },
+        {
+          "key": "lunhui_shi",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_50",
+      "category": "level",
+      "name": "纵横江湖",
+      "desc": "角色等级达到 50 级",
+      "metric": "level",
+      "target": 50,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "qiyuan_shi",
+          "count": 1
+        },
+        {
+          "key": "baiyu_lingpai",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_55",
+      "category": "level",
+      "name": "声威赫赫",
+      "desc": "角色等级达到 55 级",
+      "metric": "level",
+      "target": 55,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "lunhui_shi",
+          "count": 2
+        },
+        {
+          "key": "yaoshi_qilin",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_60",
+      "category": "level",
+      "name": "炼虚合道",
+      "desc": "角色等级达到 60 级",
+      "metric": "level",
+      "target": 60,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "tiangong_shi",
+          "count": 3
+        },
+        {
+          "key": "lingyin_0",
+          "count": 1
+        },
+        {
+          "key": "lvyu_lingpai",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": true
+    },
+    {
+      "key": "level_65",
+      "category": "level",
+      "name": "道骨仙风",
+      "desc": "角色等级达到 65 级",
+      "metric": "level",
+      "target": 65,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "gaoji_xiangrui",
+          "count": 2
+        },
+        {
+          "key": "yaoshi_jiuwei",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_70",
+      "category": "level",
+      "name": "御兽乘云",
+      "desc": "角色等级达到 70 级",
+      "metric": "level",
+      "target": 70,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "sanpin_luopan",
+          "count": 10
+        },
+        {
+          "key": "gaoji_xiangrui",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_75",
+      "category": "level",
+      "name": "白日飞升",
+      "desc": "角色等级达到 75 级",
+      "metric": "level",
+      "target": 75,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "sanpin_luopan",
+          "count": 20
+        },
+        {
+          "key": "gaoji_xiangrui",
+          "count": 1
+        },
+        {
+          "key": "yaoshi_yinglong",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_80",
+      "category": "level",
+      "name": "昆仑问道",
+      "desc": "角色等级达到 80 级",
+      "metric": "level",
+      "target": 80,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "sanhua_yuye",
+          "count": 50
+        },
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        },
+        {
+          "key": "huangjin_lingpai",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": true
+    },
+    {
+      "key": "level_85",
+      "category": "level",
+      "name": "蓬莱访仙",
+      "desc": "角色等级达到 85 级",
+      "metric": "level",
+      "target": 85,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "lunhui_shenshi",
+          "count": 1
+        },
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        },
+        {
+          "key": "yaoshi_zhulong",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_90",
+      "category": "level",
+      "name": "瑶池赴会",
+      "desc": "角色等级达到 90 级",
+      "metric": "level",
+      "target": 90,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "qiyuan_shi",
+          "count": 1
+        },
+        {
+          "key": "huangjin_lingpai",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_95",
+      "category": "level",
+      "name": "大荒纵横",
+      "desc": "角色等级达到 95 级",
+      "metric": "level",
+      "target": 95,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "lunhui_shenshi",
+          "count": 1
+        },
+        {
+          "key": "tiangong_shenshi",
+          "count": 3
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_100",
+      "category": "level",
+      "name": "封神列位",
+      "desc": "角色等级达到 100 级",
+      "metric": "level",
+      "target": 100,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "lunhui_chaoji",
+          "count": 1
+        },
+        {
+          "key": "yaoshi_zhulong",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": true
+    },
+    {
+      "key": "level_105",
+      "category": "level",
+      "name": "混元归一",
+      "desc": "角色等级达到 105 级",
+      "metric": "level",
+      "target": 105,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "lunhui_chaoji",
+          "count": 1
+        },
+        {
+          "key": "yaoshi_zhulong",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_110",
+      "category": "level",
+      "name": "鸿蒙初开",
+      "desc": "角色等级达到 110 级",
+      "metric": "level",
+      "target": 110,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "lunhui_chaoji",
+          "count": 1
+        },
+        {
+          "key": "yaoshi_zhulong",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_115",
+      "category": "level",
+      "name": "齐天不朽",
+      "desc": "角色等级达到 115 级",
+      "metric": "level",
+      "target": 115,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "lunhui_chaoji",
+          "count": 1
+        },
+        {
+          "key": "yaoshi_zhulong",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": false
+    },
+    {
+      "key": "level_120",
+      "category": "level",
+      "name": "开天辟地",
+      "desc": "角色等级达到 120 级（满级）",
+      "metric": "level",
+      "target": 120,
+      "reward_coins": 0,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "lunhui_chaoji",
+          "count": 1
+        },
+        {
+          "key": "yaoshi_zhulong",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_level",
+      "milestone": true
+    },
+    {
+      "key": "kill_100",
+      "category": "kill",
+      "name": "杀伐决断·1",
+      "desc": "累计击杀怪物 100 只",
+      "metric": "kill",
+      "target": 100,
+      "reward_coins": 20000,
+      "reward_coupon": 0,
+      "reward_items": [
+        {
+          "key": "xingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "kill_500",
+      "category": "kill",
+      "name": "杀伐决断·2",
+      "desc": "累计击杀怪物 500 只",
+      "metric": "kill",
+      "target": 500,
+      "reward_coins": 50000,
+      "reward_coupon": 5,
+      "reward_items": [
+        {
+          "key": "xingyun_zhu",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "kill_1000",
+      "category": "kill",
+      "name": "杀伐决断·3",
+      "desc": "累计击杀怪物 1000 只",
+      "metric": "kill",
+      "target": 1000,
+      "reward_coins": 100000,
+      "reward_coupon": 10,
+      "reward_items": [
+        {
+          "key": "xiangrui_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "kill_5000",
+      "category": "kill",
+      "name": "杀伐决断·4",
+      "desc": "累计击杀怪物 5000 只",
+      "metric": "kill",
+      "target": 5000,
+      "reward_coins": 200000,
+      "reward_coupon": 15,
+      "reward_items": [
+        {
+          "key": "xiangrui_zhu",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "kill_10000",
+      "category": "kill",
+      "name": "杀伐决断·5",
+      "desc": "累计击杀怪物 10000 只",
+      "metric": "kill",
+      "target": 10000,
+      "reward_coins": 500000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "kill_30000",
+      "category": "kill",
+      "name": "杀伐决断·6",
+      "desc": "累计击杀怪物 30000 只",
+      "metric": "kill",
+      "target": 30000,
+      "reward_coins": 1000000,
+      "reward_coupon": 30,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 2
+        },
+        {
+          "key": "baiyu_lingpai",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "kill_50000",
+      "category": "kill",
+      "name": "杀伐决断·7",
+      "desc": "累计击杀怪物 50000 只",
+      "metric": "kill",
+      "target": 50000,
+      "reward_coins": 2000000,
+      "reward_coupon": 50,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 3
+        },
+        {
+          "key": "lvyu_lingpai",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "jubao_1",
+      "category": "jubao",
+      "name": "聚宝寻踪·1",
+      "desc": "累计挑战聚宝 BOSS 1 次",
+      "metric": "jubao",
+      "target": 1,
+      "reward_coins": 20000,
+      "reward_coupon": 5,
+      "reward_items": [
+        {
+          "key": "lunhui_shi",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_jubao"
+    },
+    {
+      "key": "jubao_3",
+      "category": "jubao",
+      "name": "聚宝寻踪·2",
+      "desc": "累计挑战聚宝 BOSS 3 次",
+      "metric": "jubao",
+      "target": 3,
+      "reward_coins": 50000,
+      "reward_coupon": 10,
+      "reward_items": [
+        {
+          "key": "lunhui_shi",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_jubao"
+    },
+    {
+      "key": "jubao_5",
+      "category": "jubao",
+      "name": "聚宝寻踪·3",
+      "desc": "累计挑战聚宝 BOSS 5 次",
+      "metric": "jubao",
+      "target": 5,
+      "reward_coins": 100000,
+      "reward_coupon": 15,
+      "reward_items": [
+        {
+          "key": "tiangong_shi",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_jubao"
+    },
+    {
+      "key": "jubao_10",
+      "category": "jubao",
+      "name": "聚宝寻踪·4",
+      "desc": "累计挑战聚宝 BOSS 10 次",
+      "metric": "jubao",
+      "target": 10,
+      "reward_coins": 200000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "tiangong_shenshi",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_jubao"
+    },
+    {
+      "key": "jubao_20",
+      "category": "jubao",
+      "name": "聚宝寻踪·5",
+      "desc": "累计挑战聚宝 BOSS 20 次",
+      "metric": "jubao",
+      "target": 20,
+      "reward_coins": 500000,
+      "reward_coupon": 30,
+      "reward_items": [
+        {
+          "key": "tiangong_shenshi",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_jubao"
+    },
+    {
+      "key": "jubao_40",
+      "category": "jubao",
+      "name": "聚宝寻踪·6",
+      "desc": "累计挑战聚宝 BOSS 40 次",
+      "metric": "jubao",
+      "target": 40,
+      "reward_coins": 1000000,
+      "reward_coupon": 50,
+      "reward_items": [
+        {
+          "key": "tiangong_shenshi",
+          "count": 3
+        }
+      ],
+      "icon": "achievement_jubao"
+    },
+    {
+      "key": "jubao_60",
+      "category": "jubao",
+      "name": "聚宝寻踪·7",
+      "desc": "累计挑战聚宝 BOSS 60 次",
+      "metric": "jubao",
+      "target": 60,
+      "reward_coins": 2000000,
+      "reward_coupon": 80,
+      "reward_items": [
+        {
+          "key": "tiangong_shenshi",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_jubao"
+    },
+    {
+      "key": "map_1",
+      "category": "map_clear",
+      "name": "行万里路·1",
+      "desc": "累计通关地图 1 张",
+      "metric": "map_clear",
+      "target": 1,
+      "reward_coins": 10000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "map_5",
+      "category": "map_clear",
+      "name": "行万里路·2",
+      "desc": "累计通关地图 5 张",
+      "metric": "map_clear",
+      "target": 5,
+      "reward_coins": 30000,
+      "reward_coupon": 10,
+      "reward_items": [
+        {
+          "key": "xingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "map_10",
+      "category": "map_clear",
+      "name": "行万里路·3",
+      "desc": "累计通关地图 10 张",
+      "metric": "map_clear",
+      "target": 10,
+      "reward_coins": 50000,
+      "reward_coupon": 15,
+      "reward_items": [
+        {
+          "key": "xingyun_zhu",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "map_15",
+      "category": "map_clear",
+      "name": "行万里路·4",
+      "desc": "累计通关地图 15 张",
+      "metric": "map_clear",
+      "target": 15,
+      "reward_coins": 100000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "xiangrui_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "map_20",
+      "category": "map_clear",
+      "name": "行万里路·5",
+      "desc": "累计通关地图 20 张",
+      "metric": "map_clear",
+      "target": 20,
+      "reward_coins": 200000,
+      "reward_coupon": 30,
+      "reward_items": [
+        {
+          "key": "xiangrui_zhu",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "map_30",
+      "category": "map_clear",
+      "name": "行万里路·6",
+      "desc": "累计通关地图 30 张",
+      "metric": "map_clear",
+      "target": 30,
+      "reward_coins": 500000,
+      "reward_coupon": 40,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "map_40",
+      "category": "map_clear",
+      "name": "行万里路·7",
+      "desc": "累计通关地图 40 张",
+      "metric": "map_clear",
+      "target": 40,
+      "reward_coins": 1000000,
+      "reward_coupon": 60,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_beijun",
+      "category": "map_single",
+      "name": "北原郡通关",
+      "desc": "通关「北原郡」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "beijun",
+      "reward_coins": 30000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_tianshengyuan",
+      "category": "map_single",
+      "name": "天圣原通关",
+      "desc": "通关「天圣原」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "tianshengyuan",
+      "reward_coins": 40000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_banquan",
+      "category": "map_single",
+      "name": "阪泉通关",
+      "desc": "通关「阪泉」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "banquan",
+      "reward_coins": 68000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_nanjun",
+      "category": "map_single",
+      "name": "南原郡通关",
+      "desc": "通关「南原郡」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "nanjun",
+      "reward_coins": 78000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_qiufengyuan",
+      "category": "map_single",
+      "name": "秋野原通关",
+      "desc": "通关「秋野原」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "qiufengyuan",
+      "reward_coins": 110000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_kunlun",
+      "category": "map_single",
+      "name": "昆仑通关",
+      "desc": "通关「昆仑」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "kunlun",
+      "reward_coins": 120000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_muxiuyulin",
+      "category": "map_single",
+      "name": "暮雨林通关",
+      "desc": "通关「暮雨林」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "muxiuyulin",
+      "reward_coins": 160000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_jurenye",
+      "category": "map_single",
+      "name": "巨灵野通关",
+      "desc": "通关「巨灵野」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "jurenye",
+      "reward_coins": 144000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_chishui",
+      "category": "map_single",
+      "name": "赤水通关",
+      "desc": "通关「赤水」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "chishui",
+      "reward_coins": 176000,
+      "reward_coupon": 6,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_congyuzhaoze",
+      "category": "map_single",
+      "name": "丛雨沼泽通关",
+      "desc": "通关「丛雨沼泽」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "congyuzhaoze",
+      "reward_coins": 52000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_duanbigu",
+      "category": "map_single",
+      "name": "断崖谷通关",
+      "desc": "通关「断崖谷」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "duanbigu",
+      "reward_coins": 178000,
+      "reward_coupon": 6,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_linhai",
+      "category": "map_single",
+      "name": "林海通关",
+      "desc": "通关「林海」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "linhai",
+      "reward_coins": 150000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_xuanyuan",
+      "category": "map_single",
+      "name": "轩辕通关",
+      "desc": "通关「轩辕」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "xuanyuan",
+      "reward_coins": 90000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_donglicao",
+      "category": "map_single",
+      "name": "东篱草原通关",
+      "desc": "通关「东篱草原」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "donglicao",
+      "reward_coins": 60000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_langyapendi",
+      "category": "map_single",
+      "name": "琅琊盆地通关",
+      "desc": "通关「琅琊盆地」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "langyapendi",
+      "reward_coins": 100000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_ninghaizhou",
+      "category": "map_single",
+      "name": "宁海州通关",
+      "desc": "通关「宁海州」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "ninghaizhou",
+      "reward_coins": 116000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_xilie",
+      "category": "map_single",
+      "name": "西莽荒原通关",
+      "desc": "通关「西莽荒原」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "xilie",
+      "reward_coins": 124000,
+      "reward_coupon": 5,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "msingle_guimu",
+      "category": "map_single",
+      "name": "诡墓通关",
+      "desc": "通关「诡墓」",
+      "metric": "map_single",
+      "target": 1,
+      "map_key": "guimu",
+      "reward_coins": 190000,
+      "reward_coupon": 6,
+      "reward_items": [],
+      "icon": "achievement_map"
+    },
+    {
+      "key": "refine7_1",
+      "category": "refine7",
+      "name": "百炼成钢·1",
+      "desc": "累计将装备精炼到 +7（1 件）",
+      "metric": "refine7",
+      "target": 1,
+      "reward_coins": 20000,
+      "reward_coupon": 5,
+      "reward_items": [
+        {
+          "key": "tiangong_shi",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_refine"
+    },
+    {
+      "key": "refine7_3",
+      "category": "refine7",
+      "name": "百炼成钢·2",
+      "desc": "累计将装备精炼到 +7（3 件）",
+      "metric": "refine7",
+      "target": 3,
+      "reward_coins": 50000,
+      "reward_coupon": 10,
+      "reward_items": [
+        {
+          "key": "tiangong_shi",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_refine"
+    },
+    {
+      "key": "refine7_5",
+      "category": "refine7",
+      "name": "百炼成钢·3",
+      "desc": "累计将装备精炼到 +7（5 件）",
+      "metric": "refine7",
+      "target": 5,
+      "reward_coins": 100000,
+      "reward_coupon": 15,
+      "reward_items": [
+        {
+          "key": "tiangong_shi",
+          "count": 3
+        }
+      ],
+      "icon": "achievement_refine"
+    },
+    {
+      "key": "refine7_10",
+      "category": "refine7",
+      "name": "百炼成钢·4",
+      "desc": "累计将装备精炼到 +7（10 件）",
+      "metric": "refine7",
+      "target": 10,
+      "reward_coins": 200000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "tiangong_shenshi",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_refine"
+    },
+    {
+      "key": "refine7_20",
+      "category": "refine7",
+      "name": "百炼成钢·5",
+      "desc": "累计将装备精炼到 +7（20 件）",
+      "metric": "refine7",
+      "target": 20,
+      "reward_coins": 500000,
+      "reward_coupon": 30,
+      "reward_items": [
+        {
+          "key": "tiangong_shenshi",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_refine"
+    },
+    {
+      "key": "refine7_40",
+      "category": "refine7",
+      "name": "百炼成钢·6",
+      "desc": "累计将装备精炼到 +7（40 件）",
+      "metric": "refine7",
+      "target": 40,
+      "reward_coins": 1000000,
+      "reward_coupon": 50,
+      "reward_items": [
+        {
+          "key": "tiangong_shenshi",
+          "count": 3
+        }
+      ],
+      "icon": "achievement_refine"
+    },
+    {
+      "key": "refine7_60",
+      "category": "refine7",
+      "name": "百炼成钢·7",
+      "desc": "累计将装备精炼到 +7（60 件）",
+      "metric": "refine7",
+      "target": 60,
+      "reward_coins": 2000000,
+      "reward_coupon": 80,
+      "reward_items": [
+        {
+          "key": "tiangong_shenshi",
+          "count": 5
+        }
+      ],
+      "icon": "achievement_refine"
+    },
+    {
+      "key": "craft53_1",
+      "category": "craft53",
+      "name": "匠心独运·1",
+      "desc": "累计合成出 5 属性 3 洞装备（1 件）",
+      "metric": "craft53",
+      "target": 1,
+      "reward_coins": 20000,
+      "reward_coupon": 5,
+      "reward_items": [
+        {
+          "key": "lunhui_shi",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_craft"
+    },
+    {
+      "key": "craft53_3",
+      "category": "craft53",
+      "name": "匠心独运·2",
+      "desc": "累计合成出 5 属性 3 洞装备（3 件）",
+      "metric": "craft53",
+      "target": 3,
+      "reward_coins": 50000,
+      "reward_coupon": 10,
+      "reward_items": [
+        {
+          "key": "lunhui_shi",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_craft"
+    },
+    {
+      "key": "craft53_5",
+      "category": "craft53",
+      "name": "匠心独运·3",
+      "desc": "累计合成出 5 属性 3 洞装备（5 件）",
+      "metric": "craft53",
+      "target": 5,
+      "reward_coins": 100000,
+      "reward_coupon": 15,
+      "reward_items": [
+        {
+          "key": "lunhui_shi",
+          "count": 3
+        }
+      ],
+      "icon": "achievement_craft"
+    },
+    {
+      "key": "craft53_10",
+      "category": "craft53",
+      "name": "匠心独运·4",
+      "desc": "累计合成出 5 属性 3 洞装备（10 件）",
+      "metric": "craft53",
+      "target": 10,
+      "reward_coins": 200000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "tiangong_shi",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_craft"
+    },
+    {
+      "key": "craft53_20",
+      "category": "craft53",
+      "name": "匠心独运·5",
+      "desc": "累计合成出 5 属性 3 洞装备（20 件）",
+      "metric": "craft53",
+      "target": 20,
+      "reward_coins": 500000,
+      "reward_coupon": 30,
+      "reward_items": [
+        {
+          "key": "lunhui_shenshi",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_craft"
+    },
+    {
+      "key": "craft53_40",
+      "category": "craft53",
+      "name": "匠心独运·6",
+      "desc": "累计合成出 5 属性 3 洞装备（40 件）",
+      "metric": "craft53",
+      "target": 40,
+      "reward_coins": 1000000,
+      "reward_coupon": 50,
+      "reward_items": [
+        {
+          "key": "lunhui_shenshi",
+          "count": 2
+        }
+      ],
+      "icon": "achievement_craft"
+    },
+    {
+      "key": "craft53_60",
+      "category": "craft53",
+      "name": "匠心独运·7",
+      "desc": "累计合成出 5 属性 3 洞装备（60 件）",
+      "metric": "craft53",
+      "target": 60,
+      "reward_coins": 2000000,
+      "reward_coupon": 80,
+      "reward_items": [
+        {
+          "key": "lunhui_chaoji",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_craft"
+    },
+    {
+      "key": "ktype_蜘蛛_1500",
+      "category": "kill_type",
+      "name": "蜘蛛克星",
+      "desc": "累计击杀含「蜘蛛」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "蜘蛛",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_熊_1500",
+      "category": "kill_type",
+      "name": "猎熊克星",
+      "desc": "累计击杀含「熊」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "熊",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_虎_1500",
+      "category": "kill_type",
+      "name": "伏虎克星",
+      "desc": "累计击杀含「虎」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "虎",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_蝎_1500",
+      "category": "kill_type",
+      "name": "灭蝎克星",
+      "desc": "累计击杀含「蝎」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "蝎",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_鬼_1500",
+      "category": "kill_type",
+      "name": "驱鬼克星",
+      "desc": "累计击杀含「鬼」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "鬼",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_厉角_1500",
+      "category": "kill_type",
+      "name": "破厉角克星",
+      "desc": "累计击杀含「厉角」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "厉角",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_延维_1500",
+      "category": "kill_type",
+      "name": "斩延维克星",
+      "desc": "累计击杀含「延维」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "延维",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_青依_1500",
+      "category": "kill_type",
+      "name": "诛青依克星",
+      "desc": "累计击杀含「青依」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "青依",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_赤社_1500",
+      "category": "kill_type",
+      "name": "荡赤社克星",
+      "desc": "累计击杀含「赤社」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "赤社",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_山膏_1500",
+      "category": "kill_type",
+      "name": "镇山膏克星",
+      "desc": "累计击杀含「山膏」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "山膏",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    }
+  ],
+  "titles": [
+    {
+      "key": "kx_蜘蛛",
+      "name": "蜘蛛克星",
+      "desc": "对含「蜘蛛」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "蜘蛛",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "蜘蛛",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_熊",
+      "name": "猎熊克星",
+      "desc": "对含「熊」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "熊",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "熊",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_虎",
+      "name": "伏虎克星",
+      "desc": "对含「虎」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "虎",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "虎",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_蝎",
+      "name": "灭蝎克星",
+      "desc": "对含「蝎」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "蝎",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "蝎",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_鬼",
+      "name": "驱鬼克星",
+      "desc": "对含「鬼」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "鬼",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "鬼",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_厉角",
+      "name": "破厉角克星",
+      "desc": "对含「厉角」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "厉角",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "厉角",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_延维",
+      "name": "斩延维克星",
+      "desc": "对含「延维」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "延维",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "延维",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_青依",
+      "name": "诛青依克星",
+      "desc": "对含「青依」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "青依",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "青依",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_赤社",
+      "name": "荡赤社克星",
+      "desc": "对含「赤社」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "赤社",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "赤社",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_山膏",
+      "name": "镇山膏克星",
+      "desc": "对含「山膏」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "山膏",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "山膏",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "my_beijun",
+      "name": "北原郡勇者",
+      "desc": "在北原郡内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "beijun"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "beijun",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_tianshengyuan",
+      "name": "天圣原勇者",
+      "desc": "在天圣原内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "tianshengyuan"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "tianshengyuan",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_banquan",
+      "name": "阪泉勇者",
+      "desc": "在阪泉内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "banquan"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "banquan",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_nanjun",
+      "name": "南原郡勇者",
+      "desc": "在南原郡内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "nanjun"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "nanjun",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_qiufengyuan",
+      "name": "秋野原勇者",
+      "desc": "在秋野原内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "qiufengyuan"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "qiufengyuan",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_kunlun",
+      "name": "昆仑勇者",
+      "desc": "在昆仑内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "kunlun"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "kunlun",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_muxiuyulin",
+      "name": "暮雨林勇者",
+      "desc": "在暮雨林内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "muxiuyulin"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "muxiuyulin",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_jurenye",
+      "name": "巨灵野勇者",
+      "desc": "在巨灵野内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "jurenye"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "jurenye",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_chishui",
+      "name": "赤水勇者",
+      "desc": "在赤水内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "chishui"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "chishui",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_congyuzhaoze",
+      "name": "丛雨沼泽勇者",
+      "desc": "在丛雨沼泽内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "congyuzhaoze"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "congyuzhaoze",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_duanbigu",
+      "name": "断崖谷勇者",
+      "desc": "在断崖谷内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "duanbigu"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "duanbigu",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_linhai",
+      "name": "林海勇者",
+      "desc": "在林海内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "linhai"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "linhai",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_xuanyuan",
+      "name": "轩辕勇者",
+      "desc": "在轩辕内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "xuanyuan"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "xuanyuan",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_donglicao",
+      "name": "东篱草原勇者",
+      "desc": "在东篱草原内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "donglicao"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "donglicao",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_langyapendi",
+      "name": "琅琊盆地勇者",
+      "desc": "在琅琊盆地内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "langyapendi"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "langyapendi",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_ninghaizhou",
+      "name": "宁海州勇者",
+      "desc": "在宁海州内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "ninghaizhou"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "ninghaizhou",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_xilie",
+      "name": "西莽荒原勇者",
+      "desc": "在西莽荒原内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "xilie"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "xilie",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "my_guimu",
+      "name": "诡墓勇者",
+      "desc": "在诡墓内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "guimu"
+      },
+      "effect": {
+        "type": "map_buff",
+        "map_key": "guimu",
+        "dmg_pct": 15,
+        "hp_pct": 2,
+        "mp_pct": 2
+      }
+    },
+    {
+      "key": "ms_10",
+      "name": "崭露头角",
+      "desc": "累计解锁 10 个成就",
+      "unlock": {
+        "type": "achieve_count",
+        "count": 10
+      }
+    },
+    {
+      "key": "ms_20",
+      "name": "小有名声",
+      "desc": "累计解锁 20 个成就",
+      "unlock": {
+        "type": "achieve_count",
+        "count": 20
+      }
+    },
+    {
+      "key": "ms_35",
+      "name": "一代宗师",
+      "desc": "累计解锁 35 个成就",
+      "unlock": {
+        "type": "achieve_count",
+        "count": 35
+      }
+    },
+    {
+      "key": "ms_50",
+      "name": "武林传说",
+      "desc": "累计解锁 50 个成就",
+      "unlock": {
+        "type": "achieve_count",
+        "count": 50
+      }
+    }
+  ]
+}

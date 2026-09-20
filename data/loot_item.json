@@ -1,0 +1,200 @@
+{
+  "聚宝道具_金": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.15
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.1
+      },
+      {
+        "item": "consumable",
+        "key": "jin_yuanbao",
+        "prob": 0.005
+      }
+    ]
+  },
+  "聚宝道具_银": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "tiangong_shi",
+        "prob": 0.15
+      },
+      {
+        "item": "consumable",
+        "key": "lunhui_shi",
+        "prob": 0.1
+      },
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.01
+      }
+    ]
+  },
+  "元宝_铜_boss": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "tong_yuanbao",
+        "prob": 0.005,
+        "count": 1
+      }
+    ]
+  },
+  "元宝_银_boss": {
+    "desc": "幽芷冢BOSS掉落",
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "yin_yuanbao",
+        "prob": 0.005,
+        "count": 1
+      }
+    ]
+  },
+  "铜板_boss": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "tong_ban",
+        "prob": 0.008,
+        "count": 1
+      }
+    ]
+  },
+  "罗盘_二品_boss": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "erpin_luopan",
+        "prob": 0.06
+      }
+    ]
+  },
+  "罗盘_二品_jubao": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "erpin_luopan",
+        "prob": 0.15
+      }
+    ]
+  },
+  "罗盘_三品_boss": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "sanpin_luopan",
+        "prob": 0.03
+      }
+    ]
+  },
+  "罗盘_三品_jubao": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "sanpin_luopan",
+        "prob": 0.08
+      }
+    ]
+  },
+  "令牌_白玉": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "baiyu_lingpai",
+        "prob": 0.05
+      }
+    ]
+  },
+  "令牌_绿玉": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "lvyu_lingpai",
+        "prob": 0.05
+      }
+    ]
+  },
+  "令牌_黄金": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "huangjin_lingpai",
+        "prob": 0.05
+      }
+    ]
+  },
+  "护符_圣者": {
+    "desc": "香魂冢头目必掉（冢将/剧毒寡妇/狂暴的幽芷之魂）",
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "shengzhe_fufu",
+        "prob": 1.0,
+        "count": 1
+      }
+    ]
+  },
+  "护符_圣者_必掉": {
+    "desc": "香魂冢最终头目黑目必掉",
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "shengzhe_fufu",
+        "prob": 1.0,
+        "count": 1
+      }
+    ]
+  },
+  "护符_光明": {
+    "desc": "轩辕台五头目必掉",
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "guangming_fufu",
+        "prob": 1.0,
+        "count": 1
+      }
+    ]
+  },
+  "药盒_三花_轩辕台": {
+    "desc": "轩辕台BOSS掉落中药盒子",
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "sanhua_box",
+        "prob": 0.05,
+        "count": 1
+      }
+    ]
+  },
+  "药盒_九转_幽芷冢": {
+    "desc": "幽芷冢BOSS掉落大药盒子",
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "jiuzhuan_box",
+        "prob": 0.05,
+        "count": 1
+      }
+    ]
+  },
+  "护符_死亡": {
+    "desc": "诡墓三头目必掉(画皮/厉鬼/寂灭)",
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "siwang_fufu",
+        "prob": 1.0,
+        "count": 1
+      }
+    ]
+  }
+}

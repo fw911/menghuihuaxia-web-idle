@@ -1,0 +1,1042 @@
+{
+  "recipe_mingqi_2": {
+    "name": "融魂令☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_merge_2.png",
+    "materials": [
+      {
+        "名称": "天魂",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "地魂",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "融魂令☆",
+        "数量": "0/2",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "mingqi_2",
+    "result_name": "冥祈☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_mingqi_2",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 3200,
+    "desc": "融魂令☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_mingqi_2"
+  },
+  "recipe_mingqi_3": {
+    "name": "融魂令☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_merge_3.png",
+    "materials": [
+      {
+        "名称": "人魂",
+        "数量": "0/3",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "天魂",
+        "数量": "0/2",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "融魂令☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“融魂令☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "mingqi_3",
+    "result_name": "冥祈☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_mingqi_3",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 4800,
+    "desc": "融魂令☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_mingqi_3"
+  },
+  "recipe_mingqi_4": {
+    "name": "融魂令☆☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_merge_4.png",
+    "materials": [
+      {
+        "名称": "地魂",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "人魂",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "融魂令☆☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“融魂令☆☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "mingqi_4",
+    "result_name": "冥祈☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_mingqi_4",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 6800,
+    "desc": "融魂令☆☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_mingqi_4"
+  },
+  "recipe_mingqi_5": {
+    "name": "融魂令☆☆☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_merge_5.png",
+    "materials": [
+      {
+        "名称": "天魂",
+        "数量": "0/5",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "地魂",
+        "数量": "0/5",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "融魂令☆☆☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“融魂令☆☆☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "mingqi_5",
+    "result_name": "冥祈☆☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_mingqi_5",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 9500,
+    "desc": "融魂令☆☆☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_mingqi_5"
+  },
+  "recipe_mingqi_3_adv": {
+    "name": "融魂令☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_merge_3.png",
+    "materials": [
+      {
+        "名称": "天魂",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "地魂",
+        "数量": "0/2",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "人魂",
+        "数量": "0/3",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "融魂令☆",
+        "数量": "0/4",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "mingqi_3",
+    "result_name": "冥祈☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_mingqi_3_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 4800,
+    "desc": "融魂令☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_mingqi_3_adv"
+  },
+  "recipe_mingqi_4_adv": {
+    "name": "融魂令☆☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_merge_4.png",
+    "materials": [
+      {
+        "名称": "天魂",
+        "数量": "0/8",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "地魂",
+        "数量": "0/8",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "人魂",
+        "数量": "0/10",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "融魂令☆",
+        "数量": "0/8",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "mingqi_4",
+    "result_name": "冥祈☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_mingqi_4_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 6800,
+    "desc": "融魂令☆☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_mingqi_4_adv"
+  },
+  "recipe_mingqi_5_adv": {
+    "name": "融魂令☆☆☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_merge_5.png",
+    "materials": [
+      {
+        "名称": "天魂",
+        "数量": "0/21",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "地魂",
+        "数量": "0/21",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "人魂",
+        "数量": "0/20",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "融魂令☆",
+        "数量": "0/16",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "mingqi_5",
+    "result_name": "冥祈☆☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_mingqi_5_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 9500,
+    "desc": "融魂令☆☆☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_mingqi_5_adv"
+  },
+  "recipe_niepan_2": {
+    "name": "化星诀☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_enhance_2.png",
+    "materials": [
+      {
+        "名称": "一魄（喜）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "二魄（怒）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "化星诀☆☆",
+        "数量": "0/2",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "niepan_2",
+    "result_name": "涅盘☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_niepan_2",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 5000,
+    "desc": "化星诀☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_niepan_2"
+  },
+  "recipe_niepan_3": {
+    "name": "化星诀☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_enhance_3.png",
+    "materials": [
+      {
+        "名称": "二魄（怒）",
+        "数量": "0/2",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "三魄（哀）",
+        "数量": "0/3",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "化星诀☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“化星诀☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "niepan_3",
+    "result_name": "涅盘☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_niepan_3",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 7200,
+    "desc": "化星诀☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_niepan_3"
+  },
+  "recipe_niepan_4": {
+    "name": "化星诀☆☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_enhance_4.png",
+    "materials": [
+      {
+        "名称": "三魄（哀）",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "一魄（喜）",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "化星诀☆☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“化星诀☆☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "niepan_4",
+    "result_name": "涅盘☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_niepan_4",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 9800,
+    "desc": "化星诀☆☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_niepan_4"
+  },
+  "recipe_niepan_5": {
+    "name": "化星诀☆☆☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_enhance_5.png",
+    "materials": [
+      {
+        "名称": "一魄（喜）",
+        "数量": "0/5",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "二魄（怒）",
+        "数量": "0/5",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "化星诀☆☆☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“化星诀☆☆☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "niepan_5",
+    "result_name": "涅盘☆☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_niepan_5",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 13500,
+    "desc": "化星诀☆☆☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_niepan_5"
+  },
+  "recipe_niepan_3_adv": {
+    "name": "化星诀☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_enhance_3.png",
+    "materials": [
+      {
+        "名称": "一魄（喜）",
+        "数量": "0/2",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "二魄（怒）",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "三魄（哀）",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "化星诀☆",
+        "数量": "0/4",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "niepan_3",
+    "result_name": "涅盘☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_niepan_3_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 7200,
+    "desc": "化星诀☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_niepan_3_adv"
+  },
+  "recipe_niepan_4_adv": {
+    "name": "化星诀☆☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_enhance_4.png",
+    "materials": [
+      {
+        "名称": "一魄（喜）",
+        "数量": "0/8",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "二魄（怒）",
+        "数量": "0/8",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "三魄（哀）",
+        "数量": "0/10",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "化星诀☆",
+        "数量": "0/8",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "niepan_4",
+    "result_name": "涅盘☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_niepan_4_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 9800,
+    "desc": "化星诀☆☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_niepan_4_adv"
+  },
+  "recipe_niepan_5_adv": {
+    "name": "化星诀☆☆☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_enhance_5.png",
+    "materials": [
+      {
+        "名称": "一魄（喜）",
+        "数量": "0/21",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "二魄（怒）",
+        "数量": "0/20",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "三魄（哀）",
+        "数量": "0/20",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "化星诀☆",
+        "数量": "0/16",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "niepan_5",
+    "result_name": "涅盘☆☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_niepan_5_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 13500,
+    "desc": "化星诀☆☆☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_niepan_5_adv"
+  },
+  "recipe_lingyin_1": {
+    "name": "启魂符☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_1.png",
+    "materials": [
+      {
+        "名称": "五魄（爱）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "七魄（欲）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符",
+        "数量": "0/2",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_1",
+    "result_name": "灵引☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_1",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 1200,
+    "desc": "启魂符☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_1"
+  },
+  "recipe_lingyin_2": {
+    "name": "启魂符☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_2.png",
+    "materials": [
+      {
+        "名称": "六魄（恶）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "四魄（惧）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符☆",
+        "数量": "0/2",
+        "获取方式": "通过“启魂符☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_2",
+    "result_name": "灵引☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_2",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 1800,
+    "desc": "启魂符☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_2"
+  },
+  "recipe_lingyin_3": {
+    "name": "启魂符☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_3.png",
+    "materials": [
+      {
+        "名称": "五魄（爱）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "六魄（恶）",
+        "数量": "0/2",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“启魂符☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_3",
+    "result_name": "灵引☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_3",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 2600,
+    "desc": "启魂符☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_3"
+  },
+  "recipe_lingyin_4": {
+    "name": "启魂符☆☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_4.png",
+    "materials": [
+      {
+        "名称": "五魄（爱）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "四魄（惧）",
+        "数量": "0/7",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符☆☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“启魂符☆☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_4",
+    "result_name": "灵引☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_4",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 3800,
+    "desc": "启魂符☆☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_4"
+  },
+  "recipe_lingyin_5": {
+    "name": "启魂符☆☆☆☆☆炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_5.png",
+    "materials": [
+      {
+        "名称": "七魄（欲）",
+        "数量": "0/6",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "六魄（恶）",
+        "数量": "0/6",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符☆☆☆☆",
+        "数量": "0/2",
+        "获取方式": "通过“启魂符☆☆☆☆炼制配方”炼制得到"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "0/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_5",
+    "result_name": "灵引☆☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_5",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 5400,
+    "desc": "启魂符☆☆☆☆☆炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_5"
+  },
+  "recipe_lingyin_1_adv": {
+    "name": "启魂符☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_1.png",
+    "materials": [
+      {
+        "名称": "四魄（惧）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "五魄（爱）",
+        "数量": "0/2",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "六魄（恶）",
+        "数量": "0/1",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "七魄（欲）",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符",
+        "数量": "0/4",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_1",
+    "result_name": "灵引☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_1_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 1200,
+    "desc": "启魂符☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_1_adv"
+  },
+  "recipe_lingyin_2_adv": {
+    "name": "启魂符☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_2.png",
+    "materials": [
+      {
+        "名称": "四魄（惧）",
+        "数量": "0/2",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "五魄（爱）",
+        "数量": "0/5",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "六魄（恶）",
+        "数量": "0/4",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "七魄（欲）",
+        "数量": "0/8",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符",
+        "数量": "0/8",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_2",
+    "result_name": "灵引☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_2_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 1800,
+    "desc": "启魂符☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_2_adv"
+  },
+  "recipe_lingyin_3_adv": {
+    "name": "启魂符☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_3.png",
+    "materials": [
+      {
+        "名称": "四魄（惧）",
+        "数量": "0/11",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "五魄（爱）",
+        "数量": "0/11",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "六魄（恶）",
+        "数量": "0/8",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "七魄（欲）",
+        "数量": "0/16",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符",
+        "数量": "0/16",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_3",
+    "result_name": "灵引☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_3_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 2600,
+    "desc": "启魂符☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_3_adv"
+  },
+  "recipe_lingyin_4_adv": {
+    "name": "启魂符☆☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_4.png",
+    "materials": [
+      {
+        "名称": "四魄（惧）",
+        "数量": "0/22",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "五魄（爱）",
+        "数量": "0/22",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "六魄（恶）",
+        "数量": "0/22",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "七魄（欲）",
+        "数量": "0/22",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符",
+        "数量": "0/32",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_4",
+    "result_name": "灵引☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_4_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 3800,
+    "desc": "启魂符☆☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_4_adv"
+  },
+  "recipe_lingyin_5_adv": {
+    "name": "启魂符☆☆☆☆☆高级炼制配方",
+    "icon": "static/icons/wuhun/recipe_activate_5.png",
+    "materials": [
+      {
+        "名称": "四魄（惧）",
+        "数量": "0/22",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "五魄（爱）",
+        "数量": "0/22",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "六魄（恶）",
+        "数量": "0/22",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "七魄（欲）",
+        "数量": "0/22",
+        "获取方式": "通过从北郡平原村鬼谷子处获得的“分解配方”获取"
+      },
+      {
+        "名称": "启魂符",
+        "数量": "0/32",
+        "获取方式": "“道具有城”的“武魄系列”中有售"
+      },
+      {
+        "名称": "淬魂瓶",
+        "数量": "1/1",
+        "获取方式": "可以在北郡平原村的【炼化师】鬼谷子处获得"
+      }
+    ],
+    "obtain": [],
+    "time": "【1 分钟】",
+    "result_item": "lingyin_5",
+    "result_name": "灵引☆☆☆☆☆",
+    "result_count": 1,
+    "recipe_key": "recipe_lingyin_5_adv",
+    "category": "wuhun_recipe",
+    "effect_type": "wuhun_recipe",
+    "type": "consumable",
+    "stackable": true,
+    "level_required": 1,
+    "price": 5400,
+    "desc": "启魂符☆☆☆☆☆高级炼制配方。右键或悬停查看原料与获取方式。",
+    "key": "recipe_lingyin_5_adv"
+  }
+}

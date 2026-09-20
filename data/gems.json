@@ -1,0 +1,280 @@
+{
+  "gem_series": [
+    {
+      "key": "beidou",
+      "name": "北斗",
+      "type": "phys_atk",
+      "effect": "物理攻击",
+      "slots": [
+        "武器",
+        "护手",
+        "戒指"
+      ],
+      "flavor": "形如七曜，能激发不可思议的力量"
+    },
+    {
+      "key": "tianxing",
+      "name": "天行",
+      "type": "magic_atk",
+      "effect": "法术攻击",
+      "slots": [
+        "武器",
+        "护手",
+        "戒指"
+      ],
+      "flavor": "循势而行，法力自此源源不绝"
+    },
+    {
+      "key": "wangyue",
+      "name": "望月",
+      "type": "phys_def",
+      "effect": "物理防御",
+      "slots": [
+        "头盔",
+        "护肩",
+        "盔甲",
+        "项链",
+        "护腿",
+        "盾牌"
+      ],
+      "flavor": "遥望清辉，身似山岳不可撼动"
+    },
+    {
+      "key": "wuxiang",
+      "name": "无相",
+      "type": "magic_def",
+      "effect": "法术防御",
+      "slots": [
+        "头盔",
+        "护肩",
+        "盔甲",
+        "项链",
+        "护腿",
+        "盾牌"
+      ],
+      "flavor": "空寂无形，诸法难侵其身"
+    },
+    {
+      "key": "yuanru",
+      "name": "元如",
+      "type": "hp",
+      "effect": "生命上限",
+      "slots": [
+        "头盔",
+        "护肩",
+        "盔甲",
+        "项链",
+        "护腿",
+        "盾牌",
+        "鞋子",
+        "披风",
+        "腰带"
+      ],
+      "flavor": "元气浑然，如渊之不息"
+    },
+    {
+      "key": "xiuxian",
+      "name": "修仙石",
+      "type": "exp_buff",
+      "effect": "杀怪经验",
+      "slots": [
+        "武器"
+      ],
+      "flavor": "灵石蕴道，镶嵌武器可增杀怪经验"
+    }
+  ],
+  "gem_grades": [
+    "碎石",
+    "石",
+    "灵石",
+    "神石"
+  ],
+  "gem_grade_values": {
+    "phys_atk": {
+      "碎石": [
+        2,
+        4,
+        6
+      ],
+      "石": [
+        5,
+        8,
+        11
+      ],
+      "灵石": [
+        10,
+        14,
+        18
+      ],
+      "神石": [
+        20,
+        24,
+        28
+      ]
+    },
+    "magic_atk": {
+      "碎石": [
+        2,
+        4,
+        6
+      ],
+      "石": [
+        5,
+        8,
+        10
+      ],
+      "灵石": [
+        10,
+        14,
+        18
+      ],
+      "神石": [
+        20,
+        24,
+        28
+      ]
+    },
+    "phys_def": {
+      "碎石": [
+        6,
+        10,
+        14
+      ],
+      "石": [
+        12,
+        18,
+        24
+      ],
+      "灵石": [
+        20,
+        28,
+        36
+      ],
+      "神石": [
+        40,
+        48,
+        56
+      ]
+    },
+    "magic_def": {
+      "碎石": [
+        6,
+        10,
+        14
+      ],
+      "石": [
+        12,
+        18,
+        24
+      ],
+      "灵石": [
+        20,
+        28,
+        36
+      ],
+      "神石": [
+        40,
+        48,
+        56
+      ]
+    },
+    "hp": {
+      "碎石": [
+        14,
+        20,
+        26
+      ],
+      "石": [
+        30,
+        40,
+        50
+      ],
+      "灵石": [
+        50,
+        60,
+        70
+      ],
+      "神石": [
+        80,
+        95,
+        110
+      ]
+    },
+    "exp_buff": {
+      "碎石": [
+        7
+      ],
+      "石": [
+        7
+      ],
+      "灵石": [
+        7
+      ],
+      "神石": [
+        7
+      ]
+    }
+  },
+  "gem_roll_weight": [
+    50,
+    30,
+    20
+  ],
+  "gem_icons": {
+    "beidou": [
+      "static/icons/gems/gem_001.jpg",
+      "static/icons/gems/gem_002.jpg",
+      "static/icons/gems/gem_003.jpg",
+      "static/icons/gems/gem_004.jpg"
+    ],
+    "tianxing": [
+      "static/icons/gems/gem_005.jpg",
+      "static/icons/gems/gem_006.jpg",
+      "static/icons/gems/gem_007.jpg",
+      "static/icons/gems/gem_008.jpg"
+    ],
+    "wangyue": [
+      "static/icons/gems/gem_009.jpg",
+      "static/icons/gems/gem_010.jpg",
+      "static/icons/gems/gem_011.jpg",
+      "static/icons/gems/gem_012.jpg"
+    ],
+    "wuxiang": [
+      "static/icons/gems/gem_013.jpg",
+      "static/icons/gems/gem_014.jpg",
+      "static/icons/gems/gem_015.jpg",
+      "static/icons/gems/gem_016.jpg"
+    ],
+    "yuanru": [
+      "static/icons/gems/gem_017.jpg",
+      "static/icons/gems/gem_018.jpg",
+      "static/icons/gems/gem_019.jpg",
+      "static/icons/gems/gem_020.jpg"
+    ],
+    "xiuxian": [
+      "/static/icons/gems/gem_xiuxian.png"
+    ]
+  },
+  "gem_grade_info": {
+    "碎石": {
+      "skill": "入门级",
+      "level": 1,
+      "skill_lv": 1
+    },
+    "石": {
+      "skill": "熟练级",
+      "level": 20,
+      "skill_lv": 2
+    },
+    "灵石": {
+      "skill": "大师级",
+      "level": 40,
+      "skill_lv": 4
+    },
+    "神石": {
+      "skill": "宗师级",
+      "level": 80,
+      "skill_lv": 5
+    }
+  }
+}

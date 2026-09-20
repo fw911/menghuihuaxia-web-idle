@@ -1,0 +1,35 @@
+== 视口 1440 x 900 ==
+body 横向溢出       false (scrollW=1440)
+main 横向溢出       false (scrollW=1440 clientW=1440)
+布局              三列（横向）
+左·角色            w=250 (17.4%)
+中·地图战斗日志        w=714 (49.6%)
+右·功能页签          w=476 (33.1%)
+header          h=1440x43 横向溢出=false
+tabs            clientW=475 scrollW=475 高=68 需滚动=false
+tab-pane        475x709
+log 区           713x220
+map-pane        713x300
+battle-pane     713x255
+右列内溢出           无
+中列内溢出           无
+左列内溢出           无
+header 内溢出      无
+
+== 视口 1920 x 1080 ==
+body 横向溢出       false (scrollW=1920)
+main 横向溢出       false (scrollW=1920 clientW=1920)
+布局              三列（横向）
+左·角色            w=340 (17.7%)
+中·地图战斗日志        w=840 (43.8%)
+右·功能页签          w=560 (29.2%)
+header          h=1920x43 横向溢出=false
+tabs            clientW=559 scrollW=559 高=68 需滚动=false
+tab-pane        559x889
+log 区           839x220
+map-pane        839x300
+battle-pane     839x435
+右列内溢出           无
+中列内溢出           无
+左列内溢出           无
+header 内溢出      无

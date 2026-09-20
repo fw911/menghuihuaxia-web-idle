@@ -1,0 +1,154 @@
+{
+  "_comment": "幻师神魔主动技能条（设计文档《神魔系统设计文档（幻师篇）》）。key 规范 sm_shaman_<shen|mo>_<拼音>；技能名一律用 MOD 加载后的原版名。神道侧重治疗/辅助/复活，魔道侧重控制/输出/干扰。duration/cd 单位=回合（1 回合=0.5 秒），换算唯一入口 scripts/migrate_round_unit.py。",
+  "active_skills": [
+    {
+      "key": "sm_shaman_shen_ziran_fennu",
+      "name": "自然忿怒",
+      "job": "shaman",
+      "form": "zhi",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "control",
+      "target_rule": "all_enemies",
+      "max_level": 5,
+      "icon": "static/icons/skills/shaman_004.gif",
+      "desc": "神魔·自然忿怒：以自身为中心AOE定身敌人",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 55, "cd": 20, "desc": "敌方全体被定身2回合", "effects": [{"type": "root", "value": 0, "duration": 2, "target": "enemies"}]},
+        {"damage": 0, "mp": 55, "cd": 20, "desc": "敌方全体被定身3回合", "effects": [{"type": "root", "value": 0, "duration": 3, "target": "enemies"}]},
+        {"damage": 0, "mp": 55, "cd": 20, "desc": "敌方全体被定身4回合", "effects": [{"type": "root", "value": 0, "duration": 4, "target": "enemies"}]},
+        {"damage": 0, "mp": 55, "cd": 20, "desc": "敌方全体被定身5回合", "effects": [{"type": "root", "value": 0, "duration": 5, "target": "enemies"}]},
+        {"damage": 0, "mp": 55, "cd": 20, "desc": "敌方全体被定身6回合", "effects": [{"type": "root", "value": 0, "duration": 6, "target": "enemies"}]}
+      ]
+    },
+    {
+      "key": "sm_shaman_shen_fenghuang_niepan",
+      "name": "凤凰涅磐",
+      "job": "shaman",
+      "form": "zhi",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/shaman_017.gif",
+      "desc": "神魔·凤凰涅磐：致死时恢复HP上限百分比，每场一次",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 80, "cd": 600, "desc": "受到超过当前血量的伤害时恢复20%HP上限，每场一次", "effects": [{"type": "death_save", "value": 20, "duration": 0, "target": "self", "once_per_battle": true}]},
+        {"damage": 0, "mp": 80, "cd": 600, "desc": "受到超过当前血量的伤害时恢复25%HP上限，每场一次", "effects": [{"type": "death_save", "value": 25, "duration": 0, "target": "self", "once_per_battle": true}]},
+        {"damage": 0, "mp": 80, "cd": 600, "desc": "受到超过当前血量的伤害时恢复30%HP上限，每场一次", "effects": [{"type": "death_save", "value": 30, "duration": 0, "target": "self", "once_per_battle": true}]},
+        {"damage": 0, "mp": 80, "cd": 600, "desc": "受到超过当前血量的伤害时恢复35%HP上限，每场一次", "effects": [{"type": "death_save", "value": 35, "duration": 0, "target": "self", "once_per_battle": true}]},
+        {"damage": 0, "mp": 80, "cd": 600, "desc": "受到超过当前血量的伤害时恢复40%HP上限，每场一次", "effects": [{"type": "death_save", "value": 40, "duration": 0, "target": "self", "once_per_battle": true}]}
+      ]
+    },
+    {
+      "key": "sm_shaman_shen_bianhuan_zizai",
+      "name": "变换自在",
+      "job": "shaman",
+      "form": "zhi",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/shaman_006.gif",
+      "desc": "神魔·变换自在：10回合内无视形态限制施法",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 60, "cd": 120, "desc": "10回合内解除形态限制，伤害按原文打折", "effects": [{"type": "form_bypass", "value": 0, "duration": 10, "target": "self"}]},
+        {"damage": 0, "mp": 60, "cd": 110, "desc": "10回合内解除形态限制，伤害按原文打折", "effects": [{"type": "form_bypass", "value": 0, "duration": 10, "target": "self"}]},
+        {"damage": 0, "mp": 60, "cd": 100, "desc": "10回合内解除形态限制，伤害按原文打折", "effects": [{"type": "form_bypass", "value": 0, "duration": 10, "target": "self"}]},
+        {"damage": 0, "mp": 60, "cd": 90, "desc": "10回合内解除形态限制，伤害按原文打折", "effects": [{"type": "form_bypass", "value": 0, "duration": 10, "target": "self"}]},
+        {"damage": 0, "mp": 60, "cd": 60, "desc": "10回合内解除形态限制，伤害按原文打折", "effects": [{"type": "form_bypass", "value": 0, "duration": 10, "target": "self"}]}
+      ]
+    },
+    {
+      "key": "sm_shaman_mo_duoshan",
+      "name": "躲闪",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/shaman_009.jpg",
+      "desc": "神魔·躲闪：提升回避率",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 45, "cd": 30, "desc": "8回合内回避率提升25%", "effects": [{"type": "dodge_up", "value": 25, "duration": 8, "target": "self"}]},
+        {"damage": 0, "mp": 45, "cd": 30, "desc": "9回合内回避率提升30%", "effects": [{"type": "dodge_up", "value": 30, "duration": 9, "target": "self"}]},
+        {"damage": 0, "mp": 45, "cd": 30, "desc": "10回合内回避率提升35%", "effects": [{"type": "dodge_up", "value": 35, "duration": 10, "target": "self"}]},
+        {"damage": 0, "mp": 45, "cd": 30, "desc": "11回合内回避率提升40%", "effects": [{"type": "dodge_up", "value": 40, "duration": 11, "target": "self"}]},
+        {"damage": 0, "mp": 45, "cd": 30, "desc": "12回合内回避率提升45%", "effects": [{"type": "dodge_up", "value": 45, "duration": 12, "target": "self"}]}
+      ]
+    },
+    {
+      "key": "sm_shaman_mo_feilong_zaitian",
+      "name": "飞龙在天",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/shaman_011.gif",
+      "desc": "神魔·飞龙在天：单体伤害并眩晕目标",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 150, "mp": 50, "cd": 12, "desc": "造成150点伤害并眩晕2回合", "effects": [{"type": "stun", "value": 0, "duration": 2, "target": "enemies"}]},
+        {"damage": 200, "mp": 50, "cd": 12, "desc": "造成200点伤害并眩晕3回合", "effects": [{"type": "stun", "value": 0, "duration": 3, "target": "enemies"}]},
+        {"damage": 250, "mp": 50, "cd": 12, "desc": "造成250点伤害并眩晕4回合", "effects": [{"type": "stun", "value": 0, "duration": 4, "target": "enemies"}]},
+        {"damage": 300, "mp": 50, "cd": 12, "desc": "造成300点伤害并眩晕5回合", "effects": [{"type": "stun", "value": 0, "duration": 5, "target": "enemies"}]},
+        {"damage": 350, "mp": 50, "cd": 12, "desc": "造成350点伤害并眩晕6回合", "effects": [{"type": "stun", "value": 0, "duration": 6, "target": "enemies"}]}
+      ]
+    },
+    {
+      "key": "sm_shaman_mo_yinmou_zhiying",
+      "name": "阴谋之影",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/shaman_014.gif",
+      "desc": "神魔·阴谋之影：隐身状态下造成高额伤害并眩晕",
+      "sm_skill": true,
+      "condition": "has_stealth",
+      "levels": [
+        {"damage": 600, "mp": 70, "cd": 20, "desc": "隐身状态下造成600点伤害并眩晕2回合", "effects": [{"type": "stun", "value": 0, "duration": 2, "target": "enemies"}]},
+        {"damage": 700, "mp": 70, "cd": 20, "desc": "隐身状态下造成700点伤害并眩晕3回合", "effects": [{"type": "stun", "value": 0, "duration": 3, "target": "enemies"}]},
+        {"damage": 800, "mp": 70, "cd": 20, "desc": "隐身状态下造成800点伤害并眩晕4回合", "effects": [{"type": "stun", "value": 0, "duration": 4, "target": "enemies"}]},
+        {"damage": 900, "mp": 70, "cd": 20, "desc": "隐身状态下造成900点伤害并眩晕5回合", "effects": [{"type": "stun", "value": 0, "duration": 5, "target": "enemies"}]},
+        {"damage": 1000, "mp": 70, "cd": 20, "desc": "隐身状态下造成1000点伤害并眩晕6回合", "effects": [{"type": "stun", "value": 0, "duration": 6, "target": "enemies"}]}
+      ]
+    },
+    {
+      "key": "sm_shaman_mo_youhunzhua",
+      "name": "幽魂爪",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/shaman_015.gif",
+      "desc": "神魔·幽魂爪：对眩晕目标造成额外暴击",
+      "sm_skill": true,
+      "atk_mult": 1.7,
+      "levels": [
+        {"damage": 0, "mp": 65, "cd": 8, "desc": "170%物攻伤害，目标眩晕时暴击率+20%", "bonus_pct": 20},
+        {"damage": 0, "mp": 65, "cd": 8, "desc": "175%物攻伤害，目标眩晕时暴击率+25%", "bonus_pct": 25},
+        {"damage": 0, "mp": 65, "cd": 8, "desc": "180%物攻伤害，目标眩晕时暴击率+30%", "bonus_pct": 30},
+        {"damage": 0, "mp": 65, "cd": 8, "desc": "190%物攻伤害，目标眩晕时暴击率+35%", "bonus_pct": 35},
+        {"damage": 0, "mp": 65, "cd": 8, "desc": "200%物攻伤害，目标眩晕时暴击率+40%", "bonus_pct": 40}
+      ]
+    }
+  ]
+}

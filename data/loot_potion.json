@@ -1,0 +1,85 @@
+{
+  "药水_普通": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "xumingdan",
+        "prob": 0.15
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_xiao",
+        "prob": 0.15
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_da",
+        "prob": 0.15
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_sanqing",
+        "prob": 0.15
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_jiuzhuan",
+        "prob": 0.15
+      },
+      {
+        "item": "consumable",
+        "key": "xuming_longxian",
+        "prob": 0.15
+      },
+      {
+        "item": "consumable",
+        "key": "ningshenye",
+        "prob": 0.13
+      },
+      {
+        "item": "consumable",
+        "key": "ningshen_lingfu",
+        "prob": 0.13
+      },
+      {
+        "item": "consumable",
+        "key": "ningshen_yuquan",
+        "prob": 0.13
+      },
+      {
+        "item": "consumable",
+        "key": "ningshen_sanhua",
+        "prob": 0.13
+      },
+      {
+        "item": "consumable",
+        "key": "ningshen_jiuzhuan",
+        "prob": 0.13
+      },
+      {
+        "item": "consumable",
+        "key": "ningshen_longxian",
+        "prob": 0.13
+      }
+    ]
+  },
+  "药水_瞬间": {
+    "drops": [
+      {
+        "item": "consumable",
+        "key": "yuquan_qiongjiang",
+        "prob": 0.1
+      },
+      {
+        "item": "consumable",
+        "key": "sanhua_yuye",
+        "prob": 0.1
+      },
+      {
+        "item": "consumable",
+        "key": "jiuzhuan_shengshui",
+        "prob": 0.1
+      }
+    ]
+  }
+}

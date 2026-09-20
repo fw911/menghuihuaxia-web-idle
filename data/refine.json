@@ -1,0 +1,123 @@
+{
+  "refine_max": 7,
+  "refine_per_level_pct": 0.05,
+  "refine_per_level_pct_list": [0.05, 0.06, 0.07, 0.08, 0.09, 0.11, 0.13],
+  "refine_per_level_flat": {
+    "1": [3, 3],
+    "2": [4, 5],
+    "3": [5, 6],
+    "4": [6, 8],
+    "5": [7, 9],
+    "6": [9, 12],
+    "7": [11, 15]
+  },
+  "refine_durability_pct": 0.04,
+  "refine_hidden_perks": {
+    "attack": ["致命一击概率 +1%"],
+    "defense": ["伤害减免 +1%"]
+  },
+  "refine_success_rate": {"1": 1.0, "2": 0.90, "3": 0.80, "4": 0.70, "5": 0.50, "6": 0.30, "7": 0.15},
+  "refine_high_risk_threshold": 5,
+  "refine_fail_drop_rate": 0.5,
+  "refine_destroy_rate": 0.05,
+  "refine_outcomes": {
+    "1": {"destroy": 0, "zero": 0, "drop": 0, "keep": 0.01, "up": 0.99},
+    "2": {"destroy": 0, "zero": 0, "drop": 0, "keep": 0.15, "up": 0.85},
+    "3": {"destroy": 0, "zero": 0, "drop": 0, "keep": 0.27, "up": 0.73},
+    "4": {"destroy": 0, "zero": 0, "drop": 0.07, "keep": 0.38, "up": 0.55},
+    "5": {"destroy": 0.01, "zero": 0.01, "drop": 0.12, "keep": 0.46, "up": 0.40},
+    "6": {"destroy": 0.01, "zero": 0.01, "drop": 0.16, "keep": 0.52, "up": 0.30},
+    "7": {"destroy": 0.01, "zero": 0.01, "drop": 0.19, "keep": 0.64, "up": 0.15}
+  },
+  "refine_recipes": {
+    "1": {
+      "name": "1档装备",
+      "note": "新手装精炼不要晶石，其他1档装备+6和+7要晶石",
+      "levels": {
+        "1": [{"key": "hantie", "count": 1}],
+        "2": [{"key": "hantie", "count": 1}],
+        "3": [{"key": "hantie", "count": 2}],
+        "4": [{"key": "hantie", "count": 2}, {"key": "chitong", "count": 2}],
+        "5": [{"key": "hantie", "count": 4}, {"key": "chitong", "count": 2}],
+        "6": [{"key": "hantie", "count": 4}, {"key": "chitong", "count": 2}, {"key": "yuehen_crystal", "count": 1}],
+        "7": [{"key": "hantie", "count": 6}, {"key": "chitong", "count": 4}, {"key": "yuehen_crystal", "count": 1}]
+      },
+      "newbie_levels": {
+        "6": [{"key": "hantie", "count": 4}, {"key": "chitong", "count": 2}],
+        "7": [{"key": "hantie", "count": 6}, {"key": "chitong", "count": 4}]
+      }
+    },
+    "2": {
+      "name": "2档装备",
+      "levels": {
+        "1": [{"key": "chitong", "count": 2}],
+        "2": [{"key": "chitong", "count": 2}],
+        "3": [{"key": "chitong", "count": 4}],
+        "4": [{"key": "chitong", "count": 4}, {"key": "moyin", "count": 2}],
+        "5": [{"key": "chitong", "count": 6}, {"key": "moyin", "count": 2}],
+        "6": [{"key": "chitong", "count": 6}, {"key": "moyin", "count": 2}, {"key": "jidan_crystal", "count": 1}],
+        "7": [{"key": "chitong", "count": 8}, {"key": "moyin", "count": 4}, {"key": "jidan_crystal", "count": 1}]
+      }
+    },
+    "3": {
+      "name": "3档装备",
+      "levels": {
+        "1": [{"key": "moyin", "count": 2}],
+        "2": [{"key": "moyin", "count": 2}],
+        "3": [{"key": "moyin", "count": 4}],
+        "4": [{"key": "moyin", "count": 4}, {"key": "wujin", "count": 2}],
+        "5": [{"key": "moyin", "count": 6}, {"key": "wujin", "count": 2}],
+        "6": [{"key": "moyin", "count": 6}, {"key": "wujin", "count": 2}, {"key": "yumo_crystal", "count": 1}],
+        "7": [{"key": "moyin", "count": 8}, {"key": "wujin", "count": 4}, {"key": "yumo_crystal", "count": 1}]
+      }
+    },
+    "4": {
+      "name": "4档装备",
+      "levels": {
+        "1": [{"key": "wujin", "count": 2}],
+        "2": [{"key": "wujin", "count": 2}],
+        "3": [{"key": "wujin", "count": 4}],
+        "4": [{"key": "wujin", "count": 4}, {"key": "liufang", "count": 2}],
+        "5": [{"key": "wujin", "count": 6}, {"key": "liufang", "count": 2}],
+        "6": [{"key": "wujin", "count": 6}, {"key": "liufang", "count": 2}, {"key": "zhanhun_crystal", "count": 1}],
+        "7": [{"key": "wujin", "count": 8}, {"key": "liufang", "count": 4}, {"key": "zhanhun_crystal", "count": 1}]
+      }
+    },
+    "5": {
+      "name": "5档装备",
+      "levels": {
+        "1": [{"key": "liufang", "count": 2}],
+        "2": [{"key": "liufang", "count": 2}],
+        "3": [{"key": "liufang", "count": 4}],
+        "4": [{"key": "liufang", "count": 4}, {"key": "lihuo", "count": 2}],
+        "5": [{"key": "liufang", "count": 6}, {"key": "lihuo", "count": 2}],
+        "6": [{"key": "liufang", "count": 6}, {"key": "lihuo", "count": 2}, {"key": "lingnian_crystal", "count": 1}],
+        "7": [{"key": "liufang", "count": 8}, {"key": "lihuo", "count": 4}, {"key": "lingnian_crystal", "count": 1}]
+      }
+    },
+    "6": {
+      "name": "6档装备",
+      "levels": {
+        "1": [{"key": "lihuo", "count": 2}],
+        "2": [{"key": "lihuo", "count": 2}],
+        "3": [{"key": "lihuo", "count": 4}],
+        "4": [{"key": "lihuo", "count": 4}, {"key": "haihun", "count": 2}],
+        "5": [{"key": "lihuo", "count": 6}, {"key": "haihun", "count": 2}],
+        "6": [{"key": "lihuo", "count": 6}, {"key": "haihun", "count": 2}, {"key": "jufa_crystal", "count": 1}],
+        "7": [{"key": "lihuo", "count": 8}, {"key": "haihun", "count": 4}, {"key": "jufa_crystal", "count": 1}]
+      }
+    },
+    "7": {
+      "name": "7档装备",
+      "levels": {
+        "1": [{"key": "haihun", "count": 2}],
+        "2": [{"key": "haihun", "count": 2}],
+        "3": [{"key": "haihun", "count": 4}],
+        "4": [{"key": "haihun", "count": 4}],
+        "5": [{"key": "haihun", "count": 6}, {"key": "huanshen_crystal", "count": 1}],
+        "6": [{"key": "haihun", "count": 6}, {"key": "huanshen_crystal", "count": 1}],
+        "7": [{"key": "haihun", "count": 8}, {"key": "huanshen_crystal", "count": 1}]
+      }
+    }
+  }
+}

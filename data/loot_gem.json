@@ -1,0 +1,118 @@
+{
+  "宝石_碎石": {
+    "drops": [
+      {
+        "item": "gem",
+        "key": "beidou_碎石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_碎石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_碎石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_碎石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_碎石",
+        "prob": 0.1
+      }
+    ]
+  },
+  "宝石_石": {
+    "drops": [
+      {
+        "item": "gem",
+        "key": "beidou_石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_石",
+        "prob": 0.1
+      }
+    ]
+  },
+  "宝石_灵石": {
+    "drops": [
+      {
+        "item": "gem",
+        "key": "beidou_灵石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_灵石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_灵石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_灵石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_灵石",
+        "prob": 0.1
+      }
+    ]
+  },
+  "宝石_神石": {
+    "drops": [
+      {
+        "item": "gem",
+        "key": "beidou_神石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "tianxing_神石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "wangyue_神石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "wuxiang_神石",
+        "prob": 0.1
+      },
+      {
+        "item": "gem",
+        "key": "yuanru_神石",
+        "prob": 0.1
+      }
+    ]
+  }
+}

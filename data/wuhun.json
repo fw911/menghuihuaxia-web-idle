@@ -1,0 +1,1542 @@
+{
+  "version": "1.0",
+  "comment": "武魂系统配置。base 为 1 级值，max 为满级值；除白虎 0 星/5 星 1 级 base 有截图外，其余 base 暂用 max 占位，待真实截图后替换。",
+  "wuhun_types": {
+    "qinglong": {
+      "name": "浑沌",
+      "element": "dark",
+      "desc": "太古幽冥之魄，无形无相，主掌晦暗玄妙之力",
+      "star_descs": [
+        "初醒之魂，最高可成长至 10 级",
+        "初生之魂，最高可成长至 15 级",
+        "成长之魂，最高可成长至 20 级",
+        "成熟之魂，最高可成长至 25 级",
+        "精进之魂，最高可成长至 30 级",
+        "圆满之魂，最高可成长至 40 级"
+      ],
+      "stats": [
+        "phys_atk",
+        "phys_def",
+        "magic_atk",
+        "magic_def"
+      ],
+      "icons": [
+        "static/icons/wuhun/qinglong_00.png",
+        "static/icons/wuhun/qinglong_01.png",
+        "static/icons/wuhun/qinglong_02.png",
+        "static/icons/wuhun/qinglong_03.png",
+        "static/icons/wuhun/qinglong_04.png",
+        "static/icons/wuhun/qinglong_05.png"
+      ]
+    },
+    "baihu": {
+      "name": "穷奇",
+      "element": "physical",
+      "desc": "上古凶禽之魂，攻伐凌厉，锐不可当",
+      "star_descs": [
+        "初醒之魂，最高可成长至 10 级",
+        "初生之魂，最高可成长至 15 级",
+        "成长之魂，最高可成长至 20 级",
+        "成熟之魂，最高可成长至 25 级",
+        "精进之魂，最高可成长至 30 级",
+        "圆满之魂，最高可成长至 40 级"
+      ],
+      "stats": [
+        "phys_atk",
+        "phys_def",
+        "magic_atk",
+        "magic_def"
+      ],
+      "icons": [
+        "static/icons/wuhun/baihu_00.png",
+        "static/icons/wuhun/baihu_01.png",
+        "static/icons/wuhun/baihu_02.png",
+        "static/icons/wuhun/baihu_03.png",
+        "static/icons/wuhun/baihu_04.png",
+        "static/icons/wuhun/baihu_05.png"
+      ]
+    },
+    "zhuque": {
+      "name": "梼杌",
+      "element": "magic",
+      "desc": "北冥顽魄所化，玄法通幽，威势慑人",
+      "star_descs": [
+        "初醒之魂，最高可成长至 10 级",
+        "初生之魂，最高可成长至 15 级",
+        "成长之魂，最高可成长至 20 级",
+        "成熟之魂，最高可成长至 25 级",
+        "精进之魂，最高可成长至 30 级",
+        "圆满之魂，最高可成长至 40 级"
+      ],
+      "stats": [
+        "phys_atk",
+        "phys_def",
+        "magic_atk",
+        "magic_def"
+      ],
+      "icons": [
+        "static/icons/wuhun/zhuque_00.png",
+        "static/icons/wuhun/zhuque_01.png",
+        "static/icons/wuhun/zhuque_02.png",
+        "static/icons/wuhun/zhuque_03.png",
+        "static/icons/wuhun/zhuque_04.png",
+        "static/icons/wuhun/zhuque_05.png"
+      ]
+    },
+    "xuanwu": {
+      "name": "饕餮",
+      "element": "defense",
+      "desc": "吞天古兽之魂，厚德载物，守御万全",
+      "star_descs": [
+        "初醒之魂，最高可成长至 10 级",
+        "初生之魂，最高可成长至 15 级",
+        "成长之魂，最高可成长至 20 级",
+        "成熟之魂，最高可成长至 25 级",
+        "精进之魂，最高可成长至 30 级",
+        "圆满之魂，最高可成长至 40 级"
+      ],
+      "stats": [
+        "phys_atk",
+        "phys_def",
+        "magic_atk",
+        "magic_def"
+      ],
+      "icons": [
+        "static/icons/wuhun/xuanwu_00.png",
+        "static/icons/wuhun/xuanwu_01.png",
+        "static/icons/wuhun/xuanwu_02.png",
+        "static/icons/wuhun/xuanwu_03.png",
+        "static/icons/wuhun/xuanwu_04.png",
+        "static/icons/wuhun/xuanwu_05.png"
+      ]
+    }
+  },
+  "stat_labels": {
+    "phys_atk": "物理攻击",
+    "phys_def": "物理防御",
+    "magic_atk": "法术攻击",
+    "magic_def": "法术防御",
+    "dark_atk": "暗法术攻击",
+    "max_hp_pct": "生命上限百分比",
+    "max_hp": "生命上限"
+  },
+  "star_rules": {
+    "levels": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      40
+    ],
+    "level_required": [
+      60,
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "star_names": [
+      "",
+      "★",
+      "★★",
+      "★★★",
+      "★★★★",
+      "★★★★★"
+    ],
+    "attr_value_ranges": {
+      "five_dim": {
+        "0": [
+          3,
+          5
+        ],
+        "1": [
+          4,
+          6
+        ],
+        "2": [
+          5,
+          7
+        ],
+        "3": [
+          6,
+          9
+        ],
+        "4": [
+          8,
+          11
+        ],
+        "5": [
+          10,
+          14
+        ]
+      },
+      "atk_flat": {
+        "0": [
+          7,
+          13
+        ],
+        "1": [
+          10,
+          16
+        ],
+        "2": [
+          14,
+          22
+        ],
+        "3": [
+          18,
+          28
+        ],
+        "4": [
+          22,
+          32
+        ],
+        "5": [
+          28,
+          38
+        ]
+      },
+      "atk_pct": {
+        "0": [
+          1,
+          1
+        ],
+        "1": [
+          1,
+          2
+        ],
+        "2": [
+          1,
+          2
+        ],
+        "3": [
+          2,
+          3
+        ],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          3,
+          5
+        ]
+      },
+      "def_flat": {
+        "0": [
+          4,
+          9
+        ],
+        "1": [
+          7,
+          13
+        ],
+        "2": [
+          11,
+          20
+        ],
+        "3": [
+          16,
+          27
+        ],
+        "4": [
+          22,
+          36
+        ],
+        "5": [
+          28,
+          40
+        ]
+      },
+      "def_pct": {
+        "0": [
+          1,
+          1
+        ],
+        "1": [
+          1,
+          2
+        ],
+        "2": [
+          1,
+          2
+        ],
+        "3": [
+          2,
+          3
+        ],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          3,
+          5
+        ]
+      },
+      "hp_flat": {
+        "0": [
+          12,
+          18
+        ],
+        "1": [
+          15,
+          23
+        ],
+        "2": [
+          19,
+          28
+        ],
+        "3": [
+          24,
+          34
+        ],
+        "4": [
+          28,
+          38
+        ],
+        "5": [
+          30,
+          41
+        ]
+      },
+      "hp_pct": {
+        "0": [
+          1,
+          1
+        ],
+        "1": [
+          1,
+          2
+        ],
+        "2": [
+          1,
+          2
+        ],
+        "3": [
+          2,
+          3
+        ],
+        "4": [
+          2,
+          3
+        ],
+        "5": [
+          3,
+          5
+        ]
+      },
+      "crit": {
+        "0": [
+          1,
+          1
+        ],
+        "1": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ],
+        "4": [
+          2,
+          2
+        ],
+        "5": [
+          2,
+          2
+        ]
+      },
+      "reduce": {
+        "0": [
+          1,
+          1
+        ],
+        "1": [
+          1,
+          1
+        ],
+        "2": [
+          1,
+          1
+        ],
+        "3": [
+          1,
+          1
+        ],
+        "4": [
+          2,
+          2
+        ],
+        "5": [
+          2,
+          2
+        ]
+      }
+    },
+    "growth_formula": "round(base + (max - base) * (level - 1) / (max_level - 1))"
+  },
+  "stars": {
+    "qinglong": [
+      {
+        "star": 0,
+        "max_level": 10,
+        "base": [
+          8,
+          14,
+          8,
+          10
+        ],
+        "max": [
+          20,
+          68,
+          30,
+          35
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution",
+          "dark_atk",
+          "max_hp_pct"
+        ]
+      },
+      {
+        "star": 1,
+        "max_level": 15,
+        "base": [
+          12,
+          22,
+          13,
+          16
+        ],
+        "max": [
+          40,
+          119,
+          50,
+          63
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution",
+          "dark_atk",
+          "max_hp_pct"
+        ]
+      },
+      {
+        "star": 2,
+        "max_level": 20,
+        "base": [
+          16,
+          32,
+          19,
+          23
+        ],
+        "max": [
+          60,
+          187,
+          80,
+          99
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution",
+          "dark_atk",
+          "max_hp_pct"
+        ]
+      },
+      {
+        "star": 3,
+        "max_level": 25,
+        "base": [
+          21,
+          45,
+          26,
+          31
+        ],
+        "max": [
+          80,
+          255,
+          111,
+          141
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution",
+          "dark_atk",
+          "max_hp_pct"
+        ]
+      },
+      {
+        "star": 4,
+        "max_level": 30,
+        "base": [
+          27,
+          62,
+          34,
+          42
+        ],
+        "max": [
+          105,
+          357,
+          154,
+          183
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution",
+          "dark_atk",
+          "max_hp_pct"
+        ]
+      },
+      {
+        "star": 5,
+        "max_level": 40,
+        "base": [
+          34,
+          85,
+          44,
+          55
+        ],
+        "max": [
+          184,
+          467,
+          200,
+          241
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution",
+          "dark_atk",
+          "max_hp_pct"
+        ]
+      }
+    ],
+    "baihu": [
+      {
+        "star": 0,
+        "max_level": 10,
+        "base": [
+          15,
+          10,
+          3,
+          10
+        ],
+        "max": [
+          33,
+          44,
+          12,
+          32
+        ],
+        "attr_pool": [
+          "strength",
+          "agility",
+          "phys_atk",
+          "phys_atk_pct",
+          "phys_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 1,
+        "max_level": 15,
+        "base": [
+          20,
+          15,
+          7,
+          15
+        ],
+        "max": [
+          55,
+          70,
+          19,
+          52
+        ],
+        "attr_pool": [
+          "strength",
+          "agility",
+          "phys_atk",
+          "phys_atk_pct",
+          "phys_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 2,
+        "max_level": 20,
+        "base": [
+          25,
+          20,
+          12,
+          20
+        ],
+        "max": [
+          89,
+          110,
+          30,
+          80
+        ],
+        "attr_pool": [
+          "strength",
+          "agility",
+          "phys_atk",
+          "phys_atk_pct",
+          "phys_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 3,
+        "max_level": 25,
+        "base": [
+          30,
+          25,
+          16,
+          25
+        ],
+        "max": [
+          120,
+          150,
+          40,
+          110
+        ],
+        "attr_pool": [
+          "strength",
+          "agility",
+          "phys_atk",
+          "phys_atk_pct",
+          "phys_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 4,
+        "max_level": 30,
+        "base": [
+          35,
+          30,
+          21,
+          30
+        ],
+        "max": [
+          165,
+          210,
+          60,
+          150
+        ],
+        "attr_pool": [
+          "strength",
+          "agility",
+          "phys_atk",
+          "phys_atk_pct",
+          "phys_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 5,
+        "max_level": 40,
+        "base": [
+          40,
+          35,
+          25,
+          35
+        ],
+        "max": [
+          220,
+          275,
+          80,
+          200
+        ],
+        "attr_pool": [
+          "strength",
+          "agility",
+          "phys_atk",
+          "phys_atk_pct",
+          "phys_crit",
+          "max_hp",
+          "constitution"
+        ]
+      }
+    ],
+    "zhuque": [
+      {
+        "star": 0,
+        "max_level": 10,
+        "base": [
+          4,
+          10,
+          13,
+          10
+        ],
+        "max": [
+          10,
+          40,
+          40,
+          34
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 1,
+        "max_level": 15,
+        "base": [
+          5,
+          15,
+          20,
+          15
+        ],
+        "max": [
+          19,
+          70,
+          65,
+          60
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 2,
+        "max_level": 20,
+        "base": [
+          8,
+          22,
+          28,
+          22
+        ],
+        "max": [
+          30,
+          110,
+          105,
+          95
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 3,
+        "max_level": 25,
+        "base": [
+          10,
+          30,
+          36,
+          29
+        ],
+        "max": [
+          39,
+          150,
+          145,
+          135
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 4,
+        "max_level": 30,
+        "base": [
+          13,
+          40,
+          41,
+          36
+        ],
+        "max": [
+          49,
+          210,
+          200,
+          175
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution"
+        ]
+      },
+      {
+        "star": 5,
+        "max_level": 40,
+        "base": [
+          16,
+          50,
+          46,
+          44
+        ],
+        "max": [
+          64,
+          275,
+          260,
+          230
+        ],
+        "attr_pool": [
+          "intelligence",
+          "spirit",
+          "magic_atk",
+          "magic_atk_pct",
+          "magic_crit",
+          "max_hp",
+          "constitution"
+        ]
+      }
+    ],
+    "xuanwu": [
+      {
+        "star": 0,
+        "max_level": 10,
+        "base": [
+          5,
+          22,
+          4,
+          14
+        ],
+        "max": [
+          19,
+          126,
+          14,
+          61
+        ],
+        "attr_pool": [
+          "spirit",
+          "max_hp",
+          "constitution",
+          "phys_def_pct",
+          "magic_def_pct",
+          "phys_def",
+          "magic_def",
+          "max_hp_pct",
+          "dmg_reduce_pct"
+        ]
+      },
+      {
+        "star": 1,
+        "max_level": 15,
+        "base": [
+          8,
+          35,
+          7,
+          22
+        ],
+        "max": [
+          30,
+          198,
+          35,
+          104
+        ],
+        "attr_pool": [
+          "spirit",
+          "max_hp",
+          "constitution",
+          "phys_def_pct",
+          "magic_def_pct",
+          "phys_def",
+          "magic_def",
+          "max_hp_pct",
+          "dmg_reduce_pct"
+        ]
+      },
+      {
+        "star": 2,
+        "max_level": 20,
+        "base": [
+          12,
+          50,
+          11,
+          32
+        ],
+        "max": [
+          50,
+          324,
+          60,
+          171
+        ],
+        "attr_pool": [
+          "spirit",
+          "max_hp",
+          "constitution",
+          "phys_def_pct",
+          "magic_def_pct",
+          "phys_def",
+          "magic_def",
+          "max_hp_pct",
+          "dmg_reduce_pct"
+        ]
+      },
+      {
+        "star": 3,
+        "max_level": 25,
+        "base": [
+          16,
+          66,
+          15,
+          44
+        ],
+        "max": [
+          68,
+          450,
+          81,
+          226
+        ],
+        "attr_pool": [
+          "spirit",
+          "max_hp",
+          "constitution",
+          "phys_def_pct",
+          "magic_def_pct",
+          "phys_def",
+          "magic_def",
+          "max_hp_pct",
+          "dmg_reduce_pct"
+        ]
+      },
+      {
+        "star": 4,
+        "max_level": 30,
+        "base": [
+          21,
+          86,
+          20,
+          58
+        ],
+        "max": [
+          90,
+          612,
+          110,
+          318
+        ],
+        "attr_pool": [
+          "spirit",
+          "max_hp",
+          "constitution",
+          "phys_def_pct",
+          "magic_def_pct",
+          "phys_def",
+          "magic_def",
+          "max_hp_pct",
+          "dmg_reduce_pct"
+        ]
+      },
+      {
+        "star": 5,
+        "max_level": 40,
+        "base": [
+          27,
+          110,
+          26,
+          76
+        ],
+        "max": [
+          125,
+          819,
+          145,
+          422
+        ],
+        "attr_pool": [
+          "spirit",
+          "max_hp",
+          "constitution",
+          "phys_def_pct",
+          "magic_def_pct",
+          "phys_def",
+          "magic_def",
+          "max_hp_pct",
+          "dmg_reduce_pct"
+        ]
+      }
+    ]
+  },
+  "attr_labels": {
+    "strength": "力量",
+    "agility": "敏捷",
+    "constitution": "体质",
+    "intelligence": "智力",
+    "spirit": "精神",
+    "phys_atk": "物理攻击",
+    "magic_atk": "法术攻击",
+    "phys_def": "物理防御",
+    "magic_def": "法术防御",
+    "phys_atk_pct": "物攻百分比",
+    "magic_atk_pct": "法攻百分比",
+    "phys_def_pct": "物理防御百分比",
+    "magic_def_pct": "法术防御百分比",
+    "phys_crit": "物攻致命一击",
+    "magic_crit": "法攻致命一击",
+    "max_hp": "生命上限",
+    "max_hp_pct": "生命上限百分比",
+    "dark_atk": "暗法术攻击",
+    "dmg_reduce_pct": "伤害减少百分比"
+  },
+  "operations": {
+    "activate": {
+      "name": "潜能激活",
+      "npc": "武魂使者",
+      "item_prefix": "lingyin",
+      "same_star": true,
+      "tip": "激活后武魂会带有特殊光效，并附加一条随机激活属性。"
+    },
+    "evolve": {
+      "name": "武魂进化",
+      "npc": "武魂使者",
+      "item_prefix": "niepan",
+      "needs_two_max": true,
+      "result_star_plus": 1,
+      "tip": "两个满级同星武魂 + 对应星级化星诀 → 高星级 0 级未激活武魂。"
+    },
+    "fuse": {
+      "name": "武魂融合",
+      "npc": "武魂使者",
+      "item_prefix": "mingqi",
+      "needs_two_activated": true,
+      "tip": "两个已激活武魂 + 融魂令 → 属性重组。"
+    },
+    "annihilate": {
+      "name": "武魂湮灭",
+      "npc": "武魂使者",
+      "item": "yanmie",
+      "tip": "解除武魂的激活状态，清除激活属性。"
+    }
+  },
+  "materials": {
+    "lianhua_ping": {
+      "name": "淬魂瓶",
+      "desc": "炼制启魂符、融魂令、化星诀的必备容器。"
+    },
+    "sanhun": {
+      "tian": {
+        "name": "天魂",
+        "idx": 1
+      },
+      "di": {
+        "name": "地魂",
+        "idx": 2
+      },
+      "ren": {
+        "name": "人魂",
+        "idx": 3
+      }
+    },
+    "qipo": {
+      "xi": {
+        "name": "喜",
+        "idx": 1
+      },
+      "nu": {
+        "name": "怒",
+        "idx": 2
+      },
+      "ai": {
+        "name": "哀",
+        "idx": 3
+      },
+      "ju": {
+        "name": "惧",
+        "idx": 4
+      },
+      "ai2": {
+        "name": "爱",
+        "idx": 5
+      },
+      "wu": {
+        "name": "恶",
+        "idx": 6
+      },
+      "yu": {
+        "name": "欲",
+        "idx": 7
+      }
+    }
+  },
+  "recipes": {
+    "recipe_groups": [
+      "lingyin",
+      "mingqi",
+      "niepan"
+    ],
+    "result_item_map": {
+      "启魂符": "lingyin_0",
+      "启魂符☆": "lingyin_1",
+      "启魂符☆☆": "lingyin_2",
+      "启魂符☆☆☆": "lingyin_3",
+      "启魂符☆☆☆☆": "lingyin_4",
+      "启魂符☆☆☆☆☆": "lingyin_5",
+      "融魂令☆": "mingqi_1",
+      "融魂令☆☆": "mingqi_2",
+      "融魂令☆☆☆": "mingqi_3",
+      "融魂令☆☆☆☆": "mingqi_4",
+      "融魂令☆☆☆☆☆": "mingqi_5",
+      "化星诀☆": "niepan_1",
+      "化星诀☆☆": "niepan_2",
+      "化星诀☆☆☆": "niepan_3",
+      "化星诀☆☆☆☆": "niepan_4",
+      "化星诀☆☆☆☆☆": "niepan_5"
+    }
+  },
+  "items": {
+    "sanhun_tian": {
+      "key": "sanhun_tian",
+      "name": "天魂",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "sanhun",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_006.png",
+      "desc": "三魂之一，一缕先天精魂，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "sanhun_di": {
+      "key": "sanhun_di",
+      "name": "地魂",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "sanhun",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_005.png",
+      "desc": "三魂之一，一缕先天精魂，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "sanhun_ren": {
+      "key": "sanhun_ren",
+      "name": "人魂",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "sanhun",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_001.png",
+      "desc": "三魂之一，一缕先天精魂，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "qipo_xi": {
+      "key": "qipo_xi",
+      "name": "喜魄",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "qipo",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_004.png",
+      "desc": "七魄之一，一缕情志之魄，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "qipo_nu": {
+      "key": "qipo_nu",
+      "name": "怒魄",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "qipo",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_007.png",
+      "desc": "七魄之一，一缕情志之魄，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "qipo_ai_sorrow": {
+      "key": "qipo_ai_sorrow",
+      "name": "哀魄",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "qipo",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_003.png",
+      "desc": "七魄之一，一缕情志之魄，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "qipo_ju": {
+      "key": "qipo_ju",
+      "name": "惧魄",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "qipo",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_002.png",
+      "desc": "七魄之一，一缕情志之魄，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "qipo_ai_love": {
+      "key": "qipo_ai_love",
+      "name": "爱魄",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "qipo",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_010.png",
+      "desc": "七魄之一，一缕情志之魄，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "qipo_wu": {
+      "key": "qipo_wu",
+      "name": "恶魄",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "qipo",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_008.png",
+      "desc": "七魄之一，一缕情志之魄，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "qipo_yu": {
+      "key": "qipo_yu",
+      "name": "欲魄",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "qipo",
+      "price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/hunpo_009.png",
+      "desc": "七魄之一，一缕情志之魄，可为炼制启魂符、融魂令、化星诀的原料。",
+      "stackable": true
+    },
+    "lianhua_ping": {
+      "key": "lianhua_ping",
+      "name": "淬魂瓶",
+      "type": "consumable",
+      "effect_type": "wuhun_material",
+      "category": "lianhua",
+      "price": 500,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/bottle.jpg",
+      "desc": "炼制启魂符、融魂令、化星诀的必备容器。",
+      "stackable": true
+    },
+    "lingyin_0": {
+      "key": "lingyin_0",
+      "name": "启魂符",
+      "type": "consumable",
+      "effect_type": "wuhun_activate",
+      "category": "lingyin",
+      "price": 2000,
+      "coupon_price": 150,
+      "level_required": 60,
+      "icon": "static/icons/wuhun/activate_000.png",
+      "desc": "激发对应星级武魂的潜能，觉醒一条激活属性。",
+      "star": 0,
+      "stackable": true
+    },
+    "lingyin_1": {
+      "key": "lingyin_1",
+      "name": "启魂符☆",
+      "type": "consumable",
+      "effect_type": "wuhun_activate",
+      "category": "lingyin",
+      "price": 4000,
+      "coupon_price": 300,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/activate_001.png",
+      "desc": "激发对应星级武魂的潜能，觉醒一条激活属性。",
+      "star": 1,
+      "stackable": true
+    },
+    "lingyin_2": {
+      "key": "lingyin_2",
+      "name": "启魂符☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_activate",
+      "category": "lingyin",
+      "price": 6000,
+      "coupon_price": 600,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/activate_002.png",
+      "desc": "激发对应星级武魂的潜能，觉醒一条激活属性。",
+      "star": 2,
+      "stackable": true
+    },
+    "lingyin_5": {
+      "key": "lingyin_5",
+      "name": "启魂符☆☆☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_activate",
+      "category": "lingyin",
+      "price": 12000,
+      "coupon_price": 4800,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/activate_005.png",
+      "desc": "激发对应星级武魂的潜能，觉醒一条激活属性。",
+      "star": 5,
+      "stackable": true
+    },
+    "lingyin_3": {
+      "key": "lingyin_3",
+      "name": "启魂符☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_activate",
+      "category": "lingyin",
+      "price": 8000,
+      "coupon_price": 1200,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/activate_003.png",
+      "desc": "激发对应星级武魂的潜能，觉醒一条激活属性。",
+      "star": 3,
+      "stackable": true
+    },
+    "lingyin_4": {
+      "key": "lingyin_4",
+      "name": "启魂符☆☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_activate",
+      "category": "lingyin",
+      "price": 10000,
+      "coupon_price": 2400,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/activate_004.png",
+      "desc": "激发对应星级武魂的潜能，觉醒一条激活属性。",
+      "star": 4,
+      "stackable": true
+    },
+    "mingqi_1": {
+      "key": "mingqi_1",
+      "name": "融魂令☆",
+      "type": "consumable",
+      "effect_type": "wuhun_fuse",
+      "category": "mingqi",
+      "price": 6000,
+      "coupon_price": 150,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/merge_001.png",
+      "desc": "用于武魂融合，可提升副魂属性继承的成功率。",
+      "star": 1,
+      "stackable": true
+    },
+    "mingqi_2": {
+      "key": "mingqi_2",
+      "name": "融魂令☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_fuse",
+      "category": "mingqi",
+      "price": 9000,
+      "coupon_price": 300,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/merge_002.png",
+      "desc": "用于武魂融合，可提升副魂属性继承的成功率。",
+      "star": 2,
+      "stackable": true
+    },
+    "mingqi_3": {
+      "key": "mingqi_3",
+      "name": "融魂令☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_fuse",
+      "category": "mingqi",
+      "price": 12000,
+      "coupon_price": 600,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/merge_003.png",
+      "desc": "用于武魂融合，可提升副魂属性继承的成功率。",
+      "star": 3,
+      "stackable": true
+    },
+    "mingqi_4": {
+      "key": "mingqi_4",
+      "name": "融魂令☆☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_fuse",
+      "category": "mingqi",
+      "price": 15000,
+      "coupon_price": 1200,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/merge_004.png",
+      "desc": "用于武魂融合，可提升副魂属性继承的成功率。",
+      "star": 4,
+      "stackable": true
+    },
+    "mingqi_5": {
+      "key": "mingqi_5",
+      "name": "融魂令☆☆☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_fuse",
+      "category": "mingqi",
+      "price": 18000,
+      "coupon_price": 2400,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/merge_005.png",
+      "desc": "用于武魂融合，可提升副魂属性继承的成功率。",
+      "star": 5,
+      "stackable": true
+    },
+    "niepan_1": {
+      "key": "niepan_1",
+      "name": "化星诀☆",
+      "type": "consumable",
+      "effect_type": "wuhun_evolve",
+      "category": "niepan",
+      "price": 8000,
+      "coupon_price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/enhance_001.png",
+      "desc": "用于武魂进化，可将同星满级武魂提升至更高星级。",
+      "star": 1,
+      "stackable": true
+    },
+    "niepan_2": {
+      "key": "niepan_2",
+      "name": "化星诀☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_evolve",
+      "category": "niepan",
+      "price": 12000,
+      "coupon_price": 200,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/enhance_002.png",
+      "desc": "用于武魂进化，可将同星满级武魂提升至更高星级。",
+      "star": 2,
+      "stackable": true
+    },
+    "niepan_3": {
+      "key": "niepan_3",
+      "name": "化星诀☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_evolve",
+      "category": "niepan",
+      "price": 16000,
+      "coupon_price": 400,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/enhance_003.png",
+      "desc": "用于武魂进化，可将同星满级武魂提升至更高星级。",
+      "star": 3,
+      "stackable": true
+    },
+    "niepan_4": {
+      "key": "niepan_4",
+      "name": "化星诀☆☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_evolve",
+      "category": "niepan",
+      "price": 20000,
+      "coupon_price": 800,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/enhance_004.png",
+      "desc": "用于武魂进化，可将同星满级武魂提升至更高星级。",
+      "star": 4,
+      "stackable": true
+    },
+    "niepan_5": {
+      "key": "niepan_5",
+      "name": "化星诀☆☆☆☆☆",
+      "type": "consumable",
+      "effect_type": "wuhun_evolve",
+      "category": "niepan",
+      "price": 24000,
+      "coupon_price": 1600,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/enhance_005.png",
+      "desc": "用于武魂进化，可将同星满级武魂提升至更高星级。",
+      "star": 5,
+      "stackable": true
+    },
+    "yanmie": {
+      "key": "yanmie",
+      "name": "涤魂砂",
+      "type": "consumable",
+      "effect_type": "wuhun_annihilate",
+      "category": "yanmie",
+      "price": 1000,
+      "coupon_price": 100,
+      "level_required": 1,
+      "icon": "static/icons/wuhun/remove_001.png",
+      "desc": "可抹除武魂的一条已激活属性，自末条起依次消去。",
+      "stackable": true
+    }
+  },
+  "recycle_price": {
+    "comment": "武魂回收换点券的折算规则。base 为各星级 1 级未激活基础价，activated_bonus 为已激活额外乘数，level_bonus_per 为每升 1 级额外乘数（作用于 base）。最终价 = round(base[star] * (activated?activated_bonus:1) * (1 + level*level_bonus_per))。索引 0~5 对应星级 0~5。",
+    "base": [
+      5,
+      15,
+      40,
+      100,
+      250,
+      600
+    ],
+    "activated_bonus": 1.5,
+    "level_bonus_per": 0.1
+  },
+  "exp_formula": {
+    "comment": "武魂打怪吸经验升级公式：每级所需经验 = ceil(coef_by_star[star] * level^power)（level 为当前等级，升到 level+1 所需）。coef_by_star 按星级 0~5 分档，使各星满级累计经验阶梯递增（0★约 4000 万 → 5★约 9000 万）。武魂佩戴后杀怪吸经验（每只怪给双槽各 50% 角色经验），自动升级、满级停吸，满级后方可进化升星。",
+    "power": 2.4,
+    "coef_by_star": [
+      64701,
+      19165,
+      8393,
+      4505,
+      2737,
+      1141
+    ]
+  }
+}

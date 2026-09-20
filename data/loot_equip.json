@@ -1,0 +1,434 @@
+{
+  "部位_weapon_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "weapon",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_helmet_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "helmet",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shoulder_l_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shoulder_l",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_armor_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "armor",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_pants_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "pants",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_cloak_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "cloak",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_belt_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "belt",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_gloves_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "gloves",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shoes_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shoes",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shield_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shield",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_necklace_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "necklace",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_ring1_normal": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "ring1",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_weapon_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "weapon",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_helmet_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "helmet",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shoulder_l_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shoulder_l",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_armor_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "armor",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_pants_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "pants",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_cloak_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "cloak",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_belt_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "belt",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_gloves_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "gloves",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shoes_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shoes",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shield_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shield",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_necklace_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "necklace",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_ring1_elite": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "ring1",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_weapon_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "weapon",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_helmet_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "helmet",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shoulder_l_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shoulder_l",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_armor_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "armor",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_pants_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "pants",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_cloak_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "cloak",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_belt_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "belt",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_gloves_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "gloves",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shoes_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shoes",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shield_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shield",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_necklace_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "necklace",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_ring1_boss": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "ring1",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_weapon_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "weapon",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_helmet_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "helmet",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shoulder_l_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shoulder_l",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_armor_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "armor",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_pants_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "pants",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_cloak_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "cloak",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_belt_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "belt",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_gloves_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "gloves",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shoes_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shoes",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_shield_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "shield",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_necklace_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "necklace",
+        "job": "战士"
+      }
+    ]
+  },
+  "部位_ring1_jubao": {
+    "drops": [
+      {
+        "item": "equip",
+        "slot": "ring1",
+        "job": "战士"
+      }
+    ]
+  }
+}

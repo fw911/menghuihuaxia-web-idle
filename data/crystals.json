@@ -1,0 +1,56 @@
+{
+  "crystal_types": [
+    {
+      "key": "yuehen",
+      "name": "霜月晶石",
+      "icon": "static/icons/crystals/crystal_001.jpg",
+      "tier": 1
+    },
+    {
+      "key": "jidan",
+      "name": "凝丹晶石",
+      "icon": "static/icons/crystals/crystal_002.jpg",
+      "tier": 2
+    },
+    {
+      "key": "yumo",
+      "name": "镇魔晶石",
+      "icon": "static/icons/crystals/crystal_003.jpg",
+      "tier": 3
+    },
+    {
+      "key": "zhanhun",
+      "name": "战意晶石",
+      "icon": "static/icons/crystals/crystal_004.jpg",
+      "tier": 4
+    },
+    {
+      "key": "lingnian",
+      "name": "灵心晶石",
+      "icon": "static/icons/crystals/crystal_005.jpg",
+      "tier": 5
+    },
+    {
+      "key": "jufa",
+      "name": "聚灵晶石",
+      "icon": "static/icons/crystals/crystal_006.jpg",
+      "tier": 6
+    },
+    {
+      "key": "huanshen",
+      "name": "幻影晶石",
+      "icon": "static/icons/crystals/crystal_007.jpg",
+      "tier": 7
+    }
+  ],
+  "tier_to_crystal": {
+    "1": "yuehen",
+    "2": "jidan",
+    "3": "yumo",
+    "4": "zhanhun",
+    "5": "lingnian",
+    "6": "jufa",
+    "7": "huanshen"
+  },
+  "crystal_start_refine": 5
+}

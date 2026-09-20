@@ -1,0 +1,3716 @@
+{
+  "active_skills": [
+    {
+      "key": "yu_quan",
+      "name": "玉露",
+      "job": "shaman",
+      "form": "common",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "heal",
+      "target_rule": "self",
+      "max_level": 22,
+      "icon": "static/icons/skills/shaman_001.gif",
+      "hits": 1,
+      "desc": "甘泉注体，使目标在10秒内持续回复约140点生命值",
+      "levels": [
+        {
+          "mp": 40,
+          "cd": 3,
+          "desc": "在10秒内持续回复约140点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 7,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 40,
+          "cd": 3,
+          "desc": "在10秒内持续回复约240点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 12,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 50,
+          "cd": 3,
+          "desc": "在10秒内持续回复约340点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 17,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 60,
+          "cd": 3,
+          "desc": "在10秒内持续回复约440点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 22,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 60,
+          "cd": 3,
+          "desc": "在10秒内持续回复约540点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 27,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 70,
+          "cd": 3,
+          "desc": "在10秒内持续回复约640点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 32,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 80,
+          "cd": 3,
+          "desc": "在10秒内持续回复约760点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 38,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 90,
+          "cd": 3,
+          "desc": "在10秒内持续回复约840点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 42,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 100,
+          "cd": 3,
+          "desc": "在10秒内持续回复约960点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 48,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 110,
+          "cd": 3,
+          "desc": "在10秒内持续回复约1080点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 54,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 120,
+          "cd": 3,
+          "desc": "在10秒内持续回复约1240点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 62,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 130,
+          "cd": 3,
+          "desc": "在10秒内持续回复约1380点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 69,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 150,
+          "cd": 3,
+          "desc": "在10秒内持续回复约1520点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 76,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 170,
+          "cd": 3,
+          "desc": "在10秒内持续回复约1680点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 84,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 190,
+          "cd": 3,
+          "desc": "在10秒内持续回复约1860点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 93,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 210,
+          "cd": 3,
+          "desc": "在10秒内持续回复约2040点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 102,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 230,
+          "cd": 3,
+          "desc": "在10秒内持续回复约2200点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 110,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 260,
+          "cd": 3,
+          "desc": "在10秒内持续回复约2400点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 120,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 290,
+          "cd": 3,
+          "desc": "在10秒内持续回复约2560点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 128,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 320,
+          "cd": 3,
+          "desc": "在10秒内持续回复约2760点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 138,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 360,
+          "cd": 3,
+          "desc": "在10秒内持续回复约2960点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 148,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 400,
+          "cd": 3,
+          "desc": "在10秒内持续回复约3460点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 173,
+              "duration": 20,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        }
+      ],
+      "learn_level": 4,
+      "requirements": [
+        {
+          "level": 4,
+          "money": 21,
+          "exp": 20
+        },
+        {
+          "level": 6,
+          "money": 32,
+          "exp": 31
+        },
+        {
+          "level": 8,
+          "money": 49,
+          "exp": 47
+        },
+        {
+          "level": 10,
+          "money": 75,
+          "exp": 72
+        },
+        {
+          "level": 12,
+          "money": 113,
+          "exp": 109
+        },
+        {
+          "level": 14,
+          "money": 173,
+          "exp": 167
+        },
+        {
+          "level": 16,
+          "money": 265,
+          "exp": 256
+        },
+        {
+          "level": 18,
+          "money": 405,
+          "exp": 391
+        },
+        {
+          "level": 20,
+          "money": 620,
+          "exp": 599
+        },
+        {
+          "level": 22,
+          "money": 948,
+          "exp": 916
+        },
+        {
+          "level": 24,
+          "money": 1450,
+          "exp": 1401
+        },
+        {
+          "level": 26,
+          "money": 2217,
+          "exp": 2142
+        },
+        {
+          "level": 28,
+          "money": 3391,
+          "exp": 3276
+        },
+        {
+          "level": 30,
+          "money": 5185,
+          "exp": 5010
+        },
+        {
+          "level": 32,
+          "money": 7931,
+          "exp": 7663
+        },
+        {
+          "level": 34,
+          "money": 12130,
+          "exp": 11720
+        },
+        {
+          "level": 36,
+          "money": 18552,
+          "exp": 17925
+        },
+        {
+          "level": 38,
+          "money": 28375,
+          "exp": 27415
+        },
+        {
+          "level": 40,
+          "money": 43397,
+          "exp": 41929
+        },
+        {
+          "level": 42,
+          "money": 66371,
+          "exp": 64127
+        },
+        {
+          "level": 44,
+          "money": 101509,
+          "exp": 98076
+        },
+        {
+          "level": 46,
+          "money": 155250,
+          "exp": 150000
+        }
+      ],
+      "cd": 3
+    },
+    {
+      "key": "zhen_yuan",
+      "name": "聚元功",
+      "job": "shaman",
+      "form": "common",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "defense",
+      "target_rule": "self",
+      "max_level": 17,
+      "icon": "static/icons/skills/shaman_002.gif",
+      "hits": 1,
+      "desc": "调息凝元，使目标物理防御与法术防御增加12点、生命值上限增加40点，持续30分钟",
+      "levels": [
+        {
+          "mp": 28,
+          "cd": 3,
+          "desc": "防御增加 12 点；防御增加 12 点；生命值上限增加 40 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 12,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 12,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 40,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 32,
+          "cd": 3,
+          "desc": "防御增加 16 点；防御增加 16 点；生命值上限增加 54 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 16,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 16,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 54,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 40,
+          "cd": 3,
+          "desc": "防御增加 20 点；防御增加 20 点；生命值上限增加 68 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 20,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 20,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 68,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 50,
+          "cd": 3,
+          "desc": "防御增加 25 点；防御增加 25 点；生命值上限增加 83 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 25,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 25,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 83,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 60,
+          "cd": 3,
+          "desc": "防御增加 29 点；防御增加 29 点；生命值上限增加 99 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 29,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 29,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 99,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 72,
+          "cd": 3,
+          "desc": "防御增加 33 点；防御增加 33 点；生命值上限增加 115 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 33,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 33,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 115,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 88,
+          "cd": 3,
+          "desc": "防御增加 39 点；防御增加 39 点；生命值上限增加 136 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 39,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 39,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 136,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 105,
+          "cd": 3,
+          "desc": "防御增加 46 点；防御增加 46 点；生命值上限增加 164 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 46,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 46,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 164,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 128,
+          "cd": 3,
+          "desc": "防御增加 53 点；防御增加 53 点；生命值上限增加 194 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 53,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 53,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 194,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 155,
+          "cd": 3,
+          "desc": "防御增加 60 点；防御增加 60 点；生命值上限增加 225 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 60,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 60,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 225,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 188,
+          "cd": 3,
+          "desc": "防御增加 68 点；防御增加 68 点；生命值上限增加 259 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 68,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 68,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 259,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 225,
+          "cd": 3,
+          "desc": "防御增加 76 点；防御增加 76 点；生命值上限增加 295 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 76,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 76,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 295,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 272,
+          "cd": 3,
+          "desc": "防御增加 84 点；防御增加 84 点；生命值上限增加 333 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 84,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 84,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 333,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 330,
+          "cd": 3,
+          "desc": "防御增加 93 点；防御增加 93 点；生命值上限增加 374 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 93,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 93,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 374,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 400,
+          "cd": 3,
+          "desc": "防御增加 101 点；防御增加 101 点；生命值上限增加 417 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 101,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 101,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 417,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 485,
+          "cd": 3,
+          "desc": "防御增加 111 点；防御增加 111 点；生命值上限增加 463 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 111,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 111,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 463,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 588,
+          "cd": 3,
+          "desc": "防御增加 120 点；防御增加 120 点；生命值上限增加 512 点",
+          "effects": [
+            {
+              "type": "phys_def_flat",
+              "value": 120,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_def_flat",
+              "value": 120,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "buff_hp_flat",
+              "value": 512,
+              "duration": 0,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        }
+      ],
+      "learn_level": 11,
+      "requirements": [
+        {
+          "level": 11,
+          "money": 290,
+          "exp": 260
+        },
+        {
+          "level": 14,
+          "money": 425,
+          "exp": 381
+        },
+        {
+          "level": 16,
+          "money": 622,
+          "exp": 557
+        },
+        {
+          "level": 18,
+          "money": 911,
+          "exp": 816
+        },
+        {
+          "level": 21,
+          "money": 1334,
+          "exp": 1195
+        },
+        {
+          "level": 24,
+          "money": 1953,
+          "exp": 1749
+        },
+        {
+          "level": 26,
+          "money": 2860,
+          "exp": 2561
+        },
+        {
+          "level": 28,
+          "money": 4188,
+          "exp": 3750
+        },
+        {
+          "level": 31,
+          "money": 6130,
+          "exp": 5490
+        },
+        {
+          "level": 34,
+          "money": 8975,
+          "exp": 8037
+        },
+        {
+          "level": 36,
+          "money": 13141,
+          "exp": 11768
+        },
+        {
+          "level": 38,
+          "money": 19239,
+          "exp": 17229
+        },
+        {
+          "level": 41,
+          "money": 28168,
+          "exp": 25225
+        },
+        {
+          "level": 44,
+          "money": 41241,
+          "exp": 36932
+        },
+        {
+          "level": 46,
+          "money": 60380,
+          "exp": 54072
+        },
+        {
+          "level": 48,
+          "money": 88403,
+          "exp": 79167
+        },
+        {
+          "level": 51,
+          "money": 129432,
+          "exp": 115909
+        }
+      ],
+      "cd": 3
+    },
+    {
+      "key": "zi_dian",
+      "name": "紫电击",
+      "job": "shaman",
+      "form": "common",
+      "element": "elec",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 26,
+      "icon": "static/icons/skills/shaman_003.gif",
+      "hits": 1,
+      "desc": "引紫电轰击敌身，造成约19点伤害，并使敌人在4秒内受到约12点电伤",
+      "levels": [
+        {
+          "mp": 6,
+          "cd": 1,
+          "desc": "对单体造成约 19 点电伤害；并使敌人持续流血，在4秒内受到约16点伤害",
+          "damage": 19,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 2,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 7,
+          "cd": 1,
+          "desc": "对单体造成约 45 点电伤害；并使敌人持续流血，在4秒内受到约32点伤害",
+          "damage": 45,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 4,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 7,
+          "cd": 1,
+          "desc": "对单体造成约 66 点电伤害；并使敌人持续流血，在4秒内受到约40点伤害",
+          "damage": 66,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 5,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 9,
+          "cd": 1,
+          "desc": "对单体造成约 84 点电伤害；并使敌人持续流血，在4秒内受到约48点伤害",
+          "damage": 84,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 6,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 11,
+          "cd": 1,
+          "desc": "对单体造成约 103 点电伤害；并使敌人持续流血，在4秒内受到约64点伤害",
+          "damage": 103,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 8,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 15,
+          "cd": 1,
+          "desc": "对单体造成约 121 点电伤害；并使敌人持续流血，在4秒内受到约72点伤害",
+          "damage": 121,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 9,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 19,
+          "cd": 1,
+          "desc": "对单体造成约 139 点电伤害；并使敌人持续流血，在4秒内受到约80点伤害",
+          "damage": 139,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 10,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 22,
+          "cd": 1,
+          "desc": "对单体造成约 156 点电伤害；并使敌人持续流血，在4秒内受到约96点伤害",
+          "damage": 156,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 12,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 26,
+          "cd": 1,
+          "desc": "对单体造成约 173 点电伤害；并使敌人持续流血，在4秒内受到约104点伤害",
+          "damage": 173,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 13,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 31,
+          "cd": 1,
+          "desc": "对单体造成约 189 点电伤害；并使敌人持续流血，在4秒内受到约112点伤害",
+          "damage": 189,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 14,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 39,
+          "cd": 1,
+          "desc": "对单体造成约 208 点电伤害；并使敌人持续流血，在4秒内受到约128点伤害",
+          "damage": 208,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 16,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 46,
+          "cd": 1,
+          "desc": "对单体造成约 226 点电伤害；并使敌人持续流血，在4秒内受到约136点伤害",
+          "damage": 226,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 17,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 56,
+          "cd": 1,
+          "desc": "对单体造成约 245 点电伤害；并使敌人持续流血，在4秒内受到约144点伤害",
+          "damage": 245,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 18,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 69,
+          "cd": 1,
+          "desc": "对单体造成约 266 点电伤害；并使敌人持续流血，在4秒内受到约160点伤害",
+          "damage": 266,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 20,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 82,
+          "cd": 1,
+          "desc": "对单体造成约 287 点电伤害；并使敌人持续流血，在4秒内受到约176点伤害",
+          "damage": 287,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 22,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 101,
+          "cd": 1,
+          "desc": "对单体造成约 307 点电伤害；并使敌人持续流血，在4秒内受到约184点伤害",
+          "damage": 307,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 23,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 121,
+          "cd": 1,
+          "desc": "对单体造成约 327 点电伤害；并使敌人持续流血，在4秒内受到约192点伤害",
+          "damage": 327,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 24,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 148,
+          "cd": 1,
+          "desc": "对单体造成约 346 点电伤害；并使敌人持续流血，在4秒内受到约208点伤害",
+          "damage": 346,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 26,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 178,
+          "cd": 1,
+          "desc": "对单体造成约 366 点电伤害；并使敌人持续流血，在4秒内受到约224点伤害",
+          "damage": 366,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 28,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 216,
+          "cd": 1,
+          "desc": "对单体造成约 385 点电伤害；并使敌人持续流血，在4秒内受到约232点伤害",
+          "damage": 385,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 29,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 261,
+          "cd": 1,
+          "desc": "对单体造成约 404 点电伤害；并使敌人持续流血，在4秒内受到约240点伤害",
+          "damage": 404,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 30,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 317,
+          "cd": 1,
+          "desc": "对单体造成约 421 点电伤害；并使敌人持续流血，在4秒内受到约472点伤害",
+          "damage": 421,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 59,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 373,
+          "cd": 1,
+          "desc": "对单体造成约 438 点电伤害；并使敌人持续流血，在4秒内受到约472点伤害",
+          "damage": 438,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 59,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 429,
+          "cd": 1,
+          "desc": "对单体造成约 455 点电伤害；并使敌人持续流血，在4秒内受到约472点伤害",
+          "damage": 455,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 59,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 485,
+          "cd": 1,
+          "desc": "对单体造成约 884 点电伤害；并使敌人持续流血，在4秒内受到约472点伤害",
+          "damage": 884,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 59,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 541,
+          "cd": 1,
+          "desc": "对单体造成约 976 点电伤害；并使敌人持续流血，在4秒内受到约472点伤害",
+          "damage": 976,
+          "effects": [
+            {
+              "type": "bleed",
+              "value": 59,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        }
+      ],
+      "learn_level": 1,
+      "requirements": [
+        {
+          "level": 1,
+          "money": 0,
+          "exp": 0
+        },
+        {
+          "level": 6,
+          "money": 60,
+          "exp": 50
+        },
+        {
+          "level": 11,
+          "money": 95,
+          "exp": 81
+        },
+        {
+          "level": 17,
+          "money": 149,
+          "exp": 131
+        },
+        {
+          "level": 22,
+          "money": 235,
+          "exp": 212
+        },
+        {
+          "level": 27,
+          "money": 371,
+          "exp": 344
+        },
+        {
+          "level": 32,
+          "money": 586,
+          "exp": 557
+        },
+        {
+          "level": 37,
+          "money": 924,
+          "exp": 903
+        },
+        {
+          "level": 43,
+          "money": 1458,
+          "exp": 1462
+        },
+        {
+          "level": 48,
+          "money": 2300,
+          "exp": 2369
+        },
+        {
+          "level": 53,
+          "money": 3627,
+          "exp": 3837
+        },
+        {
+          "level": 58,
+          "money": 5722,
+          "exp": 6214
+        },
+        {
+          "level": 63,
+          "money": 9025,
+          "exp": 10065
+        },
+        {
+          "level": 68,
+          "money": 14236,
+          "exp": 16303
+        },
+        {
+          "level": 74,
+          "money": 22456,
+          "exp": 26406
+        },
+        {
+          "level": 79,
+          "money": 35421,
+          "exp": 42771
+        },
+        {
+          "level": 84,
+          "money": 55873,
+          "exp": 69277
+        },
+        {
+          "level": 89,
+          "money": 88133,
+          "exp": 112210
+        },
+        {
+          "level": 94,
+          "money": 139019,
+          "exp": 181749
+        },
+        {
+          "level": 100,
+          "money": 219285,
+          "exp": 294384
+        },
+        {
+          "level": 105,
+          "money": 345896,
+          "exp": 476822
+        },
+        {
+          "level": 110,
+          "money": 545610,
+          "exp": 772320
+        },
+        {
+          "level": 115,
+          "money": 860564,
+          "exp": 1218216
+        },
+        {
+          "level": 120,
+          "money": 1357690,
+          "exp": 1921780
+        },
+        {
+          "level": 125,
+          "money": 2142000,
+          "exp": 3031000
+        },
+        {
+          "level": 130,
+          "money": 3380000,
+          "exp": 4780000
+        }
+      ],
+      "cd": 1
+    },
+    {
+      "key": "gan_lu",
+      "name": "净霖",
+      "job": "shaman",
+      "form": "common",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "purify",
+      "target_rule": "self",
+      "max_level": 1,
+      "icon": "static/icons/skills/shaman_004.gif",
+      "hits": 1,
+      "desc": "挥洒甘露，驱散友方目标一个不利状态，或敌方目标一个有利状态",
+      "levels": [
+        {
+          "mp": 77,
+          "cd": 6,
+          "desc": "净化负面状态；净化负面状态",
+          "effects": [
+            {
+              "type": "cleanse",
+              "value": 1,
+              "target": "self",
+              "side": "debuff"
+            },
+            {
+              "type": "cleanse",
+              "value": 1,
+              "target": "enemies",
+              "side": "buff"
+            }
+          ]
+        }
+      ],
+      "learn_level": 46,
+      "requirements": [
+        {
+          "level": 46,
+          "money": 34506,
+          "exp": 25560
+        }
+      ],
+      "cd": 6
+    },
+    {
+      "key": "jingji_congsheng",
+      "name": "荆棘束缚",
+      "job": "shaman",
+      "form": "common",
+      "element": "elec",
+      "type": "active",
+      "skill_type": "control",
+      "target_rule": "single",
+      "max_level": 7,
+      "icon": "static/icons/skills/shaman_005.gif",
+      "hits": 1,
+      "desc": "唤出荆棘束缚，使目标3秒内无法移动并持续受到56点伤害",
+      "levels": [
+        {
+          "mp": 62,
+          "cd": 24,
+          "desc": "并使敌人持续流血，在3秒内受到约54点伤害",
+          "effects": [
+            {
+              "type": "root",
+              "value": 0,
+              "duration": 6,
+              "target": "enemies"
+            },
+            {
+              "type": "bleed",
+              "value": 9,
+              "duration": 6,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 83,
+          "cd": 24,
+          "desc": "并使敌人持续流血，在3秒内受到约66点伤害",
+          "effects": [
+            {
+              "type": "root",
+              "value": 0,
+              "duration": 6,
+              "target": "enemies"
+            },
+            {
+              "type": "bleed",
+              "value": 11,
+              "duration": 6,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 109,
+          "cd": 24,
+          "desc": "并使敌人持续流血，在3秒内受到约78点伤害",
+          "effects": [
+            {
+              "type": "root",
+              "value": 0,
+              "duration": 6,
+              "target": "enemies"
+            },
+            {
+              "type": "bleed",
+              "value": 13,
+              "duration": 6,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 146,
+          "cd": 24,
+          "desc": "并使敌人持续流血，在4秒内受到约120点伤害",
+          "effects": [
+            {
+              "type": "root",
+              "value": 0,
+              "duration": 8,
+              "target": "enemies"
+            },
+            {
+              "type": "bleed",
+              "value": 15,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 193,
+          "cd": 24,
+          "desc": "并使敌人持续流血，在4秒内受到约128点伤害",
+          "effects": [
+            {
+              "type": "root",
+              "value": 0,
+              "duration": 8,
+              "target": "enemies"
+            },
+            {
+              "type": "bleed",
+              "value": 16,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 258,
+          "cd": 24,
+          "desc": "并使敌人持续流血，在4秒内受到约144点伤害",
+          "effects": [
+            {
+              "type": "root",
+              "value": 0,
+              "duration": 8,
+              "target": "enemies"
+            },
+            {
+              "type": "bleed",
+              "value": 18,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 342,
+          "cd": 24,
+          "desc": "并使敌人持续流血，在5秒内受到约200点伤害",
+          "effects": [
+            {
+              "type": "root",
+              "value": 0,
+              "duration": 10,
+              "target": "enemies"
+            },
+            {
+              "type": "bleed",
+              "value": 20,
+              "duration": 10,
+              "target": "enemies"
+            }
+          ]
+        }
+      ],
+      "learn_level": 38,
+      "requirements": [
+        {
+          "level": 38,
+          "money": 17294,
+          "exp": 12810
+        },
+        {
+          "level": 42,
+          "money": 27834,
+          "exp": 20618
+        },
+        {
+          "level": 46,
+          "money": 44801,
+          "exp": 33186
+        },
+        {
+          "level": 50,
+          "money": 72110,
+          "exp": 53415
+        },
+        {
+          "level": 54,
+          "money": 116065,
+          "exp": 85974
+        },
+        {
+          "level": 58,
+          "money": 186812,
+          "exp": 138379
+        },
+        {
+          "level": 62,
+          "money": 300681,
+          "exp": 222727
+        }
+      ],
+      "cd": 24
+    },
+    {
+      "key": "lingguang_jinmo",
+      "name": "镇魔灵光",
+      "job": "shaman",
+      "form": "common",
+      "element": "elec",
+      "type": "active",
+      "skill_type": "control",
+      "target_rule": "single",
+      "max_level": 3,
+      "icon": "static/icons/skills/shaman_006.gif",
+      "hits": 1,
+      "desc": "灵光笼罩，禁止敌人使用任何技能，持续3秒",
+      "levels": [
+        {
+          "mp": 88,
+          "cd": 30,
+          "desc": "禁止敌人使用任何技能，持续3秒",
+          "effects": [
+            {
+              "type": "silence",
+              "value": 0,
+              "duration": 6,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 176,
+          "cd": 30,
+          "desc": "禁止敌人使用任何技能，持续4秒",
+          "effects": [
+            {
+              "type": "silence",
+              "value": 0,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 354,
+          "cd": 30,
+          "desc": "禁止敌人使用任何技能，持续5秒",
+          "effects": [
+            {
+              "type": "silence",
+              "value": 0,
+              "duration": 10,
+              "target": "enemies"
+            }
+          ]
+        }
+      ],
+      "learn_level": 62,
+      "requirements": [
+        {
+          "level": 62,
+          "money": 99225,
+          "exp": 73500
+        },
+        {
+          "level": 70,
+          "money": 148053,
+          "exp": 109669
+        },
+        {
+          "level": 78,
+          "money": 220909,
+          "exp": 163636
+        }
+      ],
+      "cd": 30
+    },
+    {
+      "key": "li_zao",
+      "name": "巨凿",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 22,
+      "icon": "static/icons/skills/shaman_007.gif",
+      "hits": 1,
+      "desc": "重凿直取，对敌人单体造成约98点伤害",
+      "levels": [
+        {
+          "mp": 49,
+          "cd": 2,
+          "desc": "对单体造成约 98 点物理伤害",
+          "damage": 98,
+          "effects": []
+        },
+        {
+          "mp": 54,
+          "cd": 2,
+          "desc": "对单体造成约 120 点物理伤害",
+          "damage": 120,
+          "effects": []
+        },
+        {
+          "mp": 60,
+          "cd": 2,
+          "desc": "对单体造成约 142 点物理伤害",
+          "damage": 142,
+          "effects": []
+        },
+        {
+          "mp": 66,
+          "cd": 2,
+          "desc": "对单体造成约 165 点物理伤害",
+          "damage": 165,
+          "effects": []
+        },
+        {
+          "mp": 74,
+          "cd": 2,
+          "desc": "对单体造成约 188 点物理伤害",
+          "damage": 188,
+          "effects": []
+        },
+        {
+          "mp": 82,
+          "cd": 2,
+          "desc": "对单体造成约 212 点物理伤害",
+          "damage": 212,
+          "effects": []
+        },
+        {
+          "mp": 90,
+          "cd": 2,
+          "desc": "对单体造成约 243 点物理伤害",
+          "damage": 243,
+          "effects": []
+        },
+        {
+          "mp": 101,
+          "cd": 2,
+          "desc": "对单体造成约 275 点物理伤害",
+          "damage": 275,
+          "effects": []
+        },
+        {
+          "mp": 112,
+          "cd": 2,
+          "desc": "对单体造成约 308 点物理伤害",
+          "damage": 308,
+          "effects": []
+        },
+        {
+          "mp": 123,
+          "cd": 2,
+          "desc": "对单体造成约 342 点物理伤害",
+          "damage": 342,
+          "effects": []
+        },
+        {
+          "mp": 137,
+          "cd": 2,
+          "desc": "对单体造成约 376 点物理伤害",
+          "damage": 376,
+          "effects": []
+        },
+        {
+          "mp": 151,
+          "cd": 2,
+          "desc": "对单体造成约 412 点物理伤害",
+          "damage": 412,
+          "effects": []
+        },
+        {
+          "mp": 167,
+          "cd": 2,
+          "desc": "对单体造成约 449 点物理伤害",
+          "damage": 449,
+          "effects": []
+        },
+        {
+          "mp": 186,
+          "cd": 2,
+          "desc": "对单体造成约 486 点物理伤害",
+          "damage": 486,
+          "effects": []
+        },
+        {
+          "mp": 207,
+          "cd": 2,
+          "desc": "对单体造成约 525 点物理伤害",
+          "damage": 525,
+          "effects": []
+        },
+        {
+          "mp": 228,
+          "cd": 2,
+          "desc": "对单体造成约 566 点物理伤害",
+          "damage": 566,
+          "effects": []
+        },
+        {
+          "mp": 254,
+          "cd": 2,
+          "desc": "对单体造成约 608 点物理伤害",
+          "damage": 608,
+          "effects": []
+        },
+        {
+          "mp": 281,
+          "cd": 2,
+          "desc": "对单体造成约 650 点物理伤害",
+          "damage": 650,
+          "effects": []
+        },
+        {
+          "mp": 308,
+          "cd": 2,
+          "desc": "对单体造成约 692 点物理伤害",
+          "damage": 692,
+          "effects": []
+        },
+        {
+          "mp": 335,
+          "cd": 2,
+          "desc": "对单体造成约 734 点物理伤害",
+          "damage": 734,
+          "effects": []
+        },
+        {
+          "mp": 362,
+          "cd": 2,
+          "desc": "对单体造成约 969 点物理伤害",
+          "damage": 969,
+          "effects": []
+        },
+        {
+          "mp": 389,
+          "cd": 2,
+          "desc": "对单体造成约 1046 点物理伤害",
+          "damage": 1046,
+          "effects": []
+        }
+      ],
+      "learn_level": 17,
+      "requirements": [
+        {
+          "level": 17,
+          "money": 1032,
+          "exp": 870
+        },
+        {
+          "level": 20,
+          "money": 1451,
+          "exp": 1223
+        },
+        {
+          "level": 22,
+          "money": 2042,
+          "exp": 1721
+        },
+        {
+          "level": 24,
+          "money": 2872,
+          "exp": 2420
+        },
+        {
+          "level": 27,
+          "money": 4038,
+          "exp": 3403
+        },
+        {
+          "level": 30,
+          "money": 5679,
+          "exp": 4786
+        },
+        {
+          "level": 32,
+          "money": 7986,
+          "exp": 6730
+        },
+        {
+          "level": 34,
+          "money": 11231,
+          "exp": 9464
+        },
+        {
+          "level": 37,
+          "money": 15795,
+          "exp": 13310
+        },
+        {
+          "level": 40,
+          "money": 22212,
+          "exp": 18718
+        },
+        {
+          "level": 42,
+          "money": 31237,
+          "exp": 26323
+        },
+        {
+          "level": 44,
+          "money": 43929,
+          "exp": 37019
+        },
+        {
+          "level": 47,
+          "money": 61778,
+          "exp": 52060
+        },
+        {
+          "level": 50,
+          "money": 86879,
+          "exp": 73213
+        },
+        {
+          "level": 52,
+          "money": 122180,
+          "exp": 102961
+        },
+        {
+          "level": 54,
+          "money": 171823,
+          "exp": 144795
+        },
+        {
+          "level": 57,
+          "money": 241637,
+          "exp": 203627
+        },
+        {
+          "level": 60,
+          "money": 339819,
+          "exp": 286364
+        },
+        {
+          "level": 63,
+          "money": 478000,
+          "exp": 403000
+        },
+        {
+          "level": 66,
+          "money": 674000,
+          "exp": 568000
+        },
+        {
+          "level": 69,
+          "money": 950000,
+          "exp": 801000
+        },
+        {
+          "level": 72,
+          "money": 1340000,
+          "exp": 1130000
+        }
+      ],
+      "cd": 2
+    },
+    {
+      "key": "huanzhao_wuxing",
+      "name": "破空爪",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 14,
+      "icon": "static/icons/skills/shaman_008.gif",
+      "hits": 3,
+      "desc": "利爪疾出连击3次，每次约117点伤害，并打断敌人施法",
+      "levels": [
+        {
+          "mp": 158,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 117 点物理伤害",
+          "damage": 117,
+          "effects": []
+        },
+        {
+          "mp": 170,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 135 点物理伤害",
+          "damage": 135,
+          "effects": []
+        },
+        {
+          "mp": 185,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 154 点物理伤害",
+          "damage": 154,
+          "effects": []
+        },
+        {
+          "mp": 202,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 173 点物理伤害",
+          "damage": 173,
+          "effects": []
+        },
+        {
+          "mp": 220,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 192 点物理伤害",
+          "damage": 192,
+          "effects": []
+        },
+        {
+          "mp": 240,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 213 点物理伤害",
+          "damage": 213,
+          "effects": []
+        },
+        {
+          "mp": 260,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 234 点物理伤害",
+          "damage": 234,
+          "effects": []
+        },
+        {
+          "mp": 282,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 256 点物理伤害",
+          "damage": 256,
+          "effects": []
+        },
+        {
+          "mp": 308,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 278 点物理伤害",
+          "damage": 278,
+          "effects": []
+        },
+        {
+          "mp": 335,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 301 点物理伤害",
+          "damage": 301,
+          "effects": []
+        },
+        {
+          "mp": 362,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 325 点物理伤害",
+          "damage": 325,
+          "effects": []
+        },
+        {
+          "mp": 395,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 349 点物理伤害",
+          "damage": 349,
+          "effects": []
+        },
+        {
+          "mp": 430,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 374 点物理伤害",
+          "damage": 374,
+          "effects": []
+        },
+        {
+          "mp": 468,
+          "cd": 10,
+          "desc": "对单体造成连续 3 次伤害，每次约造成 401 点物理伤害",
+          "damage": 401,
+          "effects": []
+        }
+      ],
+      "learn_level": 34,
+      "requirements": [
+        {
+          "level": 34,
+          "money": 11786,
+          "exp": 8730
+        },
+        {
+          "level": 37,
+          "money": 15949,
+          "exp": 11814
+        },
+        {
+          "level": 40,
+          "money": 21581,
+          "exp": 15986
+        },
+        {
+          "level": 43,
+          "money": 29205,
+          "exp": 21633
+        },
+        {
+          "level": 46,
+          "money": 39520,
+          "exp": 29274
+        },
+        {
+          "level": 49,
+          "money": 53480,
+          "exp": 39615
+        },
+        {
+          "level": 52,
+          "money": 72369,
+          "exp": 53607
+        },
+        {
+          "level": 55,
+          "money": 97933,
+          "exp": 72543
+        },
+        {
+          "level": 58,
+          "money": 132524,
+          "exp": 98166
+        },
+        {
+          "level": 61,
+          "money": 179334,
+          "exp": 132840
+        },
+        {
+          "level": 64,
+          "money": 242679,
+          "exp": 179762
+        },
+        {
+          "level": 67,
+          "money": 328398,
+          "exp": 243258
+        },
+        {
+          "level": 70,
+          "money": 444394,
+          "exp": 329181
+        },
+        {
+          "level": 73,
+          "money": 601364,
+          "exp": 445455
+        }
+      ],
+      "cd": 10,
+      "interrupt": true
+    },
+    {
+      "key": "pao_xiao",
+      "name": "威慑咆哮",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "control",
+      "target_rule": "single",
+      "max_level": 6,
+      "icon": "static/icons/skills/shaman_009.gif",
+      "hits": 1,
+      "desc": "一声咆哮，对敌人单体造成约385点伤害并吸引其攻击3秒",
+      "levels": [
+        {
+          "mp": 75,
+          "cd": 16,
+          "desc": "对单体造成约 385 点物理伤害；吸引敌人攻击，持续 3 秒",
+          "damage": 385,
+          "effects": [
+            {
+              "type": "taunt",
+              "value": 0,
+              "duration": 6,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 101,
+          "cd": 16,
+          "desc": "对单体造成约 460 点物理伤害；吸引敌人攻击，持续 4 秒",
+          "damage": 460,
+          "effects": [
+            {
+              "type": "taunt",
+              "value": 0,
+              "duration": 7,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 135,
+          "cd": 16,
+          "desc": "对单体造成约 538 点物理伤害；吸引敌人攻击，持续 4 秒",
+          "damage": 538,
+          "effects": [
+            {
+              "type": "taunt",
+              "value": 0,
+              "duration": 8,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 182,
+          "cd": 16,
+          "desc": "对单体造成约 621 点物理伤害；吸引敌人攻击，持续 4 秒",
+          "damage": 621,
+          "effects": [
+            {
+              "type": "taunt",
+              "value": 0,
+              "duration": 9,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 245,
+          "cd": 16,
+          "desc": "对单体造成约 709 点物理伤害；吸引敌人攻击，持续 5 秒",
+          "damage": 709,
+          "effects": [
+            {
+              "type": "taunt",
+              "value": 0,
+              "duration": 10,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 328,
+          "cd": 16,
+          "desc": "对单体造成约 940 点物理伤害；吸引敌人攻击，持续 6 秒",
+          "damage": 940,
+          "effects": [
+            {
+              "type": "taunt",
+              "value": 0,
+              "duration": 11,
+              "target": "enemies"
+            }
+          ]
+        }
+      ],
+      "learn_level": 54,
+      "requirements": [
+        {
+          "level": 54,
+          "money": 61236,
+          "exp": 45360
+        },
+        {
+          "level": 58,
+          "money": 90918,
+          "exp": 67347
+        },
+        {
+          "level": 62,
+          "money": 134991,
+          "exp": 99993
+        },
+        {
+          "level": 66,
+          "money": 200424,
+          "exp": 148462
+        },
+        {
+          "level": 70,
+          "money": 297575,
+          "exp": 220426
+        },
+        {
+          "level": 74,
+          "money": 441819,
+          "exp": 327273
+        },
+        {
+          "level": 78,
+          "money": 655819,
+          "exp": 486000
+        },
+        {
+          "level": 82,
+          "money": 973819,
+          "exp": 721818
+        },
+        {
+          "level": 86,
+          "money": 1445000,
+          "exp": 1071000
+        },
+        {
+          "level": 90,
+          "money": 2145000,
+          "exp": 1590000
+        }
+      ],
+      "cd": 16
+    },
+    {
+      "key": "xuanlong_suo",
+      "name": "龙缚索",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "all",
+      "max_level": 12,
+      "icon": "static/icons/skills/shaman_010.gif",
+      "hits": 1,
+      "desc": "旋索横击前方多个敌人，造成约219点伤害",
+      "levels": [
+        {
+          "mp": 168,
+          "cd": 2,
+          "desc": "对单体造成约 219 点物理伤害",
+          "damage": 219,
+          "effects": []
+        },
+        {
+          "mp": 187,
+          "cd": 2,
+          "desc": "对单体造成约 260 点物理伤害",
+          "damage": 260,
+          "effects": []
+        },
+        {
+          "mp": 211,
+          "cd": 2,
+          "desc": "对单体造成约 301 点物理伤害",
+          "damage": 301,
+          "effects": []
+        },
+        {
+          "mp": 234,
+          "cd": 2,
+          "desc": "对单体造成约 345 点物理伤害",
+          "damage": 345,
+          "effects": []
+        },
+        {
+          "mp": 262,
+          "cd": 2,
+          "desc": "对单体造成约 390 点物理伤害",
+          "damage": 390,
+          "effects": []
+        },
+        {
+          "mp": 294,
+          "cd": 2,
+          "desc": "对单体造成约 438 点物理伤害",
+          "damage": 438,
+          "effects": []
+        },
+        {
+          "mp": 328,
+          "cd": 2,
+          "desc": "对单体造成约 488 点物理伤害",
+          "damage": 488,
+          "effects": []
+        },
+        {
+          "mp": 368,
+          "cd": 2,
+          "desc": "对单体造成约 539 点物理伤害",
+          "damage": 539,
+          "effects": []
+        },
+        {
+          "mp": 411,
+          "cd": 2,
+          "desc": "对单体造成约 593 点物理伤害",
+          "damage": 593,
+          "effects": []
+        },
+        {
+          "mp": 454,
+          "cd": 2,
+          "desc": "对单体造成约 647 点物理伤害",
+          "damage": 647,
+          "effects": []
+        },
+        {
+          "mp": 497,
+          "cd": 2,
+          "desc": "对单体造成约 948 点物理伤害",
+          "damage": 948,
+          "effects": []
+        },
+        {
+          "mp": 540,
+          "cd": 2,
+          "desc": "对单体造成约 1045 点物理伤害",
+          "damage": 1045,
+          "effects": []
+        }
+      ],
+      "learn_level": 42,
+      "requirements": [
+        {
+          "level": 42,
+          "money": 24692,
+          "exp": 18290
+        },
+        {
+          "level": 46,
+          "money": 34825,
+          "exp": 25796
+        },
+        {
+          "level": 49,
+          "money": 49116,
+          "exp": 36382
+        },
+        {
+          "level": 52,
+          "money": 69273,
+          "exp": 51313
+        },
+        {
+          "level": 56,
+          "money": 97701,
+          "exp": 72371
+        },
+        {
+          "level": 60,
+          "money": 137796,
+          "exp": 102071
+        },
+        {
+          "level": 63,
+          "money": 194346,
+          "exp": 143960
+        },
+        {
+          "level": 66,
+          "money": 274103,
+          "exp": 203039
+        },
+        {
+          "level": 70,
+          "money": 386591,
+          "exp": 286364
+        },
+        {
+          "level": 74,
+          "money": 545000,
+          "exp": 404000
+        },
+        {
+          "level": 78,
+          "money": 768000,
+          "exp": 570000
+        },
+        {
+          "level": 82,
+          "money": 1083000,
+          "exp": 804000
+        }
+      ],
+      "cd": 2
+    },
+    {
+      "key": "hezhang_duanhun",
+      "name": "裂魂掌",
+      "job": "shaman",
+      "form": "huan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 6,
+      "icon": "static/icons/skills/shaman_011.gif",
+      "hits": 1,
+      "desc": "合掌一击，对敌人单体造成约867点伤害并扣除35%法力",
+      "levels": [
+        {
+          "mp": 460,
+          "cd": 120,
+          "desc": "对单体造成约 867 点物理伤害",
+          "damage": 867,
+          "effects": [
+            {
+              "type": "mp_drain_pct",
+              "value": 35,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 478,
+          "cd": 120,
+          "desc": "对单体造成约 1019 点物理伤害",
+          "damage": 1019,
+          "effects": [
+            {
+              "type": "mp_drain_pct",
+              "value": 40,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 492,
+          "cd": 120,
+          "desc": "对单体造成约 1182 点物理伤害",
+          "damage": 1182,
+          "effects": [
+            {
+              "type": "mp_drain_pct",
+              "value": 45,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 509,
+          "cd": 120,
+          "desc": "对单体造成约 1353 点物理伤害",
+          "damage": 1353,
+          "effects": [
+            {
+              "type": "mp_drain_pct",
+              "value": 50,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 526,
+          "cd": 120,
+          "desc": "对单体造成约 2027 点物理伤害",
+          "damage": 2027,
+          "effects": [
+            {
+              "type": "mp_drain_pct",
+              "value": 50,
+              "target": "enemies"
+            }
+          ]
+        },
+        {
+          "mp": 543,
+          "cd": 120,
+          "desc": "对单体造成约 2354 点物理伤害",
+          "damage": 2354,
+          "effects": [
+            {
+              "type": "mp_drain_pct",
+              "value": 50,
+              "target": "enemies"
+            }
+          ]
+        }
+      ],
+      "learn_level": 70,
+      "requirements": [
+        {
+          "level": 70,
+          "money": 143546,
+          "exp": 106330
+        },
+        {
+          "level": 76,
+          "money": 182408,
+          "exp": 135117
+        },
+        {
+          "level": 82,
+          "money": 231792,
+          "exp": 171698
+        },
+        {
+          "level": 88,
+          "money": 294546,
+          "exp": 218182
+        },
+        {
+          "level": 94,
+          "money": 373000,
+          "exp": 276000
+        },
+        {
+          "level": 100,
+          "money": 472000,
+          "exp": 350000
+        }
+      ],
+      "cd": 120
+    },
+    {
+      "key": "miaoshou_huichun",
+      "name": "妙手生春",
+      "job": "shaman",
+      "form": "zhi",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "heal",
+      "target_rule": "self",
+      "max_level": 14,
+      "icon": "static/icons/skills/shaman_012.gif",
+      "hits": 1,
+      "desc": "妙手施为，回复一个友方目标约1034点生命值",
+      "levels": [
+        {
+          "mp": 310,
+          "cd": 3,
+          "desc": "回复一个友方目标约 1034 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 1034,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 330,
+          "cd": 3,
+          "desc": "回复一个友方目标约 1207 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 1207,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 350,
+          "cd": 3,
+          "desc": "回复一个友方目标约 1386 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 1386,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 370,
+          "cd": 3,
+          "desc": "回复一个友方目标约 1571 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 1571,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 390,
+          "cd": 3,
+          "desc": "回复一个友方目标约 1761 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 1761,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 420,
+          "cd": 3,
+          "desc": "回复一个友方目标约 1957 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 1957,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 440,
+          "cd": 3,
+          "desc": "回复一个友方目标约 2159 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 2159,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 470,
+          "cd": 3,
+          "desc": "回复一个友方目标约 2366 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 2366,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 500,
+          "cd": 3,
+          "desc": "回复一个友方目标约 2580 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 2580,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 530,
+          "cd": 3,
+          "desc": "回复一个友方目标约 2801 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 2801,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 560,
+          "cd": 3,
+          "desc": "回复一个友方目标约 3029 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 3029,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 600,
+          "cd": 3,
+          "desc": "回复一个友方目标约 3263 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 3263,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 630,
+          "cd": 3,
+          "desc": "回复一个友方目标约 3504 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 3504,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 670,
+          "cd": 3,
+          "desc": "回复一个友方目标约 3753 点生命值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 3753,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        }
+      ],
+      "learn_level": 31,
+      "requirements": [
+        {
+          "level": 31,
+          "money": 8687,
+          "exp": 6435
+        },
+        {
+          "level": 34,
+          "money": 12035,
+          "exp": 8915
+        },
+        {
+          "level": 37,
+          "money": 16672,
+          "exp": 12350
+        },
+        {
+          "level": 40,
+          "money": 23097,
+          "exp": 17109
+        },
+        {
+          "level": 43,
+          "money": 31998,
+          "exp": 23702
+        },
+        {
+          "level": 46,
+          "money": 44327,
+          "exp": 32835
+        },
+        {
+          "level": 49,
+          "money": 61409,
+          "exp": 45488
+        },
+        {
+          "level": 52,
+          "money": 85073,
+          "exp": 63017
+        },
+        {
+          "level": 55,
+          "money": 117855,
+          "exp": 87300
+        },
+        {
+          "level": 58,
+          "money": 163269,
+          "exp": 120940
+        },
+        {
+          "level": 61,
+          "money": 226184,
+          "exp": 167544
+        },
+        {
+          "level": 64,
+          "money": 313344,
+          "exp": 232107
+        },
+        {
+          "level": 67,
+          "money": 434090,
+          "exp": 321548
+        },
+        {
+          "level": 70,
+          "money": 601364,
+          "exp": 445455
+        }
+      ],
+      "cd": 3,
+      "cast_time": 3
+    },
+    {
+      "key": "xiangguang_puzhao",
+      "name": "普照圣光",
+      "job": "shaman",
+      "form": "zhi",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "heal",
+      "target_rule": "all",
+      "max_level": 5,
+      "icon": "static/icons/skills/shaman_013.gif",
+      "hits": 1,
+      "desc": "持续施法，使身边队友每秒回复约852点生命值，共6秒",
+      "levels": [
+        {
+          "mp": 1334,
+          "cd": 3,
+          "desc": "在6秒内持续回复约5112点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 426,
+              "duration": 12,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 1516,
+          "cd": 3,
+          "desc": "在6秒内持续回复约5760点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 480,
+              "duration": 12,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 1718,
+          "cd": 3,
+          "desc": "在6秒内持续回复约6444点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 537,
+              "duration": 12,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 1940,
+          "cd": 3,
+          "desc": "在6秒内持续回复约7152点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 596,
+              "duration": 12,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 2203,
+          "cd": 3,
+          "desc": "在6秒内持续回复约7896点生命值",
+          "effects": [
+            {
+              "type": "hot",
+              "value": 658,
+              "duration": 12,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        }
+      ],
+      "learn_level": 66,
+      "requirements": [
+        {
+          "level": 66,
+          "money": 123647,
+          "exp": 91590
+        },
+        {
+          "level": 72,
+          "money": 162425,
+          "exp": 120315
+        },
+        {
+          "level": 78,
+          "money": 213365,
+          "exp": 158048
+        },
+        {
+          "level": 84,
+          "money": 280280,
+          "exp": 207615
+        },
+        {
+          "level": 90,
+          "money": 368181,
+          "exp": 272727
+        }
+      ],
+      "cd": 3,
+      "cast_time": 13
+    },
+    {
+      "key": "huanhun_shu",
+      "name": "招魂引",
+      "job": "shaman",
+      "form": "zhi",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "heal",
+      "target_rule": "self",
+      "max_level": 8,
+      "icon": "static/icons/skills/shaman_014.gif",
+      "hits": 1,
+      "desc": "招魂还阳，复活一个友方目标并回复其300点生命与180点法力",
+      "levels": [
+        {
+          "mp": 676,
+          "cd": 3,
+          "desc": "复活一个友方目标，并回复目标 300 点生命值和 180 点法力值",
+          "effects": [
+            {
+              "type": "revive",
+              "value": 300,
+              "mp_restore": 180,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 761,
+          "cd": 3,
+          "desc": "复活一个友方目标，并回复目标 460 点生命值和 280 点法力值",
+          "effects": [
+            {
+              "type": "revive",
+              "value": 460,
+              "mp_restore": 280,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 873,
+          "cd": 3,
+          "desc": "复活一个友方目标，并回复目标 620 点生命值和 380 点法力值",
+          "effects": [
+            {
+              "type": "revive",
+              "value": 620,
+              "mp_restore": 380,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 986,
+          "cd": 3,
+          "desc": "复活一个友方目标，并回复目标 800 点生命值和 480 点法力值",
+          "effects": [
+            {
+              "type": "revive",
+              "value": 800,
+              "mp_restore": 480,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 1127,
+          "cd": 3,
+          "desc": "复活一个友方目标，并回复目标 1000 点生命值和 600 点法力值",
+          "effects": [
+            {
+              "type": "revive",
+              "value": 1000,
+              "mp_restore": 600,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 1296,
+          "cd": 3,
+          "desc": "复活一个友方目标，并回复目标 1220 点生命值和 730 点法力值",
+          "effects": [
+            {
+              "type": "revive",
+              "value": 1220,
+              "mp_restore": 730,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 1465,
+          "cd": 3,
+          "desc": "复活一个友方目标，并回复目标 1470 点生命值和 880 点法力值",
+          "effects": [
+            {
+              "type": "revive",
+              "value": 1470,
+              "mp_restore": 880,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 1662,
+          "cd": 3,
+          "desc": "复活一个友方目标，并回复目标 1750 点生命值和 1050 点法力值",
+          "effects": [
+            {
+              "type": "revive",
+              "value": 1750,
+              "mp_restore": 1050,
+              "target": "allies",
+              "fixed": true
+            }
+          ]
+        }
+      ],
+      "learn_level": 24,
+      "requirements": [
+        {
+          "level": 24,
+          "money": 3348,
+          "exp": 2640
+        },
+        {
+          "level": 28,
+          "money": 5825,
+          "exp": 4593
+        },
+        {
+          "level": 32,
+          "money": 10133,
+          "exp": 7989
+        },
+        {
+          "level": 36,
+          "money": 17627,
+          "exp": 13898
+        },
+        {
+          "level": 40,
+          "money": 30664,
+          "exp": 24177
+        },
+        {
+          "level": 44,
+          "money": 53342,
+          "exp": 42057
+        },
+        {
+          "level": 48,
+          "money": 92795,
+          "exp": 73163
+        },
+        {
+          "level": 52,
+          "money": 161425,
+          "exp": 127273
+        }
+      ],
+      "cd": 3,
+      "cast_time": 8
+    },
+    {
+      "key": "dou_qi",
+      "name": "战意凝元",
+      "job": "shaman",
+      "form": "zhi",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 7,
+      "icon": "static/icons/skills/shaman_015.gif",
+      "hits": 1,
+      "desc": "凝神运劲，使目标物理与法术攻击增加32点，持续5分钟",
+      "levels": [
+        {
+          "mp": 111,
+          "cd": 3,
+          "desc": "攻击力增加 32 点；攻击力增加 32 点",
+          "effects": [
+            {
+              "type": "atk_flat",
+              "value": 32,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_atk_flat",
+              "value": 32,
+              "duration": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "mp": 148,
+          "cd": 3,
+          "desc": "攻击力增加 37 点；攻击力增加 37 点",
+          "effects": [
+            {
+              "type": "atk_flat",
+              "value": 37,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_atk_flat",
+              "value": 37,
+              "duration": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "mp": 196,
+          "cd": 3,
+          "desc": "攻击力增加 42 点；攻击力增加 42 点",
+          "effects": [
+            {
+              "type": "atk_flat",
+              "value": 42,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_atk_flat",
+              "value": 42,
+              "duration": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "mp": 260,
+          "cd": 3,
+          "desc": "攻击力增加 47 点；攻击力增加 47 点",
+          "effects": [
+            {
+              "type": "atk_flat",
+              "value": 47,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_atk_flat",
+              "value": 47,
+              "duration": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "mp": 346,
+          "cd": 3,
+          "desc": "攻击力增加 52 点；攻击力增加 52 点",
+          "effects": [
+            {
+              "type": "atk_flat",
+              "value": 52,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_atk_flat",
+              "value": 52,
+              "duration": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "mp": 457,
+          "cd": 3,
+          "desc": "攻击力增加 58 点；攻击力增加 58 点",
+          "effects": [
+            {
+              "type": "atk_flat",
+              "value": 58,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_atk_flat",
+              "value": 58,
+              "duration": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "mp": 607,
+          "cd": 3,
+          "desc": "攻击力增加 64 点；攻击力增加 64 点",
+          "effects": [
+            {
+              "type": "atk_flat",
+              "value": 64,
+              "duration": 0,
+              "target": "self"
+            },
+            {
+              "type": "magic_atk_flat",
+              "value": 64,
+              "duration": 0,
+              "target": "self"
+            }
+          ]
+        }
+      ],
+      "learn_level": 58,
+      "requirements": [
+        {
+          "level": 58,
+          "money": 73642,
+          "exp": 54550
+        },
+        {
+          "level": 62,
+          "money": 101852,
+          "exp": 75446
+        },
+        {
+          "level": 66,
+          "money": 140868,
+          "exp": 104347
+        },
+        {
+          "level": 70,
+          "money": 194832,
+          "exp": 144320
+        },
+        {
+          "level": 74,
+          "money": 269465,
+          "exp": 199604
+        },
+        {
+          "level": 78,
+          "money": 372689,
+          "exp": 276066
+        },
+        {
+          "level": 82,
+          "money": 515454,
+          "exp": 381818
+        }
+      ],
+      "cd": 3
+    },
+    {
+      "key": "dingli_huitian",
+      "name": "回天圣手",
+      "job": "shaman",
+      "form": "zhi",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "heal",
+      "target_rule": "self",
+      "max_level": 6,
+      "icon": "static/icons/skills/shaman_016.gif",
+      "hits": 1,
+      "desc": "运力施救，回复一个友方目标约1378点生命与827点法力",
+      "levels": [
+        {
+          "mp": 101,
+          "cd": 600,
+          "desc": "回复一个友方目标约 1378 点生命值；回复约 827 点法力值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 1378,
+              "target": "self",
+              "fixed": true
+            },
+            {
+              "type": "mp_restore",
+              "value": 827,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 113,
+          "cd": 600,
+          "desc": "回复一个友方目标约 1694 点生命值；回复约 1016 点法力值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 1694,
+              "target": "self",
+              "fixed": true
+            },
+            {
+              "type": "mp_restore",
+              "value": 1016,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 127,
+          "cd": 600,
+          "desc": "回复一个友方目标约 2030 点生命值；回复约 1218 点法力值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 2030,
+              "target": "self",
+              "fixed": true
+            },
+            {
+              "type": "mp_restore",
+              "value": 1218,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 144,
+          "cd": 600,
+          "desc": "回复一个友方目标约 2386 点生命值；回复约 1432 点法力值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 2386,
+              "target": "self",
+              "fixed": true
+            },
+            {
+              "type": "mp_restore",
+              "value": 1432,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 162,
+          "cd": 600,
+          "desc": "回复一个友方目标约 2764 点生命值；回复约 1658 点法力值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 2764,
+              "target": "self",
+              "fixed": true
+            },
+            {
+              "type": "mp_restore",
+              "value": 1658,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        },
+        {
+          "mp": 182,
+          "cd": 600,
+          "desc": "回复一个友方目标约 3166 点生命值；回复约 1899 点法力值",
+          "effects": [
+            {
+              "type": "heal",
+              "value": 3166,
+              "target": "self",
+              "fixed": true
+            },
+            {
+              "type": "mp_restore",
+              "value": 1899,
+              "target": "self",
+              "fixed": true
+            }
+          ]
+        }
+      ],
+      "learn_level": 50,
+      "requirements": [
+        {
+          "level": 50,
+          "money": 46588,
+          "exp": 34510
+        },
+        {
+          "level": 54,
+          "money": 65592,
+          "exp": 48587
+        },
+        {
+          "level": 58,
+          "money": 92349,
+          "exp": 68407
+        },
+        {
+          "level": 62,
+          "money": 130020,
+          "exp": 96311
+        },
+        {
+          "level": 66,
+          "money": 183056,
+          "exp": 135597
+        },
+        {
+          "level": 70,
+          "money": 257727,
+          "exp": 190909
+        }
+      ],
+      "cd": 600
+    },
+    {
+      "key": "jiutian_shenlei",
+      "name": "天降神雷",
+      "job": "shaman",
+      "form": "common",
+      "element": "elec",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "all",
+      "max_level": 1,
+      "icon": "static/icons/skills/shaman_017.jpg",
+      "desc": "召引九天神雷，自天而降轰击敌人",
+      "levels": [
+        {
+          "damage": 0,
+          "mp": 2120,
+          "cd": 20,
+          "desc": "并使敌人持续流血，在8秒内受到约6048点伤害"
+        }
+      ],
+      "requirements": [
+        {
+          "level": 100,
+          "money": 418500,
+          "exp": 310000
+        }
+      ],
+      "learn_level": 100,
+      "effects": [
+        {
+          "type": "bleed",
+          "value": 378,
+          "duration": 16,
+          "target": "all"
+        }
+      ],
+      "cd": 20
+    },
+    {
+      "key": "huanying_wuxing",
+      "name": "潜影术",
+      "job": "shaman",
+      "form": "common",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "defense",
+      "target_rule": "self",
+      "max_level": 1,
+      "icon": "static/icons/skills/shaman_018.jpg",
+      "desc": "借自然之形隐藏行踪，遁于无形",
+      "levels": [
+        {
+          "mp": 350,
+          "cd": 60,
+          "desc": "使自己隐形不被其他生物发现，持续12.0秒"
+        }
+      ],
+      "effects": [
+        {
+          "type": "stealth",
+          "duration": 24,
+          "target": "self"
+        }
+      ],
+      "requirements": [
+        {
+          "level": 100,
+          "money": 418500,
+          "exp": 310000
+        }
+      ],
+      "learn_level": 100,
+      "cd": 60
+    }
+  ]
+}

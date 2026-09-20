@@ -1,0 +1,330 @@
+{
+  "guimu_weituo": {
+    "key": "guimu_weituo",
+    "name": "诸富的委托",
+    "npc": "诸富",
+    "map_key": "congyuzhaoze",
+    "desc": "诡墓之中亡魂游荡，先清剿墓室亡魂，再斩除深居墓室深处的寂灭。",
+    "type": "kill",
+    "stages": [
+      {
+        "stage": 1,
+        "name": "墓室亡魂",
+        "target": {
+          "monsters": [
+            "guimu_30000",
+            "guimu_30001",
+            "guimu_30002",
+            "guimu_30003",
+            "guimu_30004",
+            "guimu_30005",
+            "guimu_30006",
+            "guimu_30007",
+            "guimu_30008",
+            "guimu_30009",
+            "guimu_30010",
+            "guimu_30011",
+            "guimu_30012",
+            "guimu_30013",
+            "guimu_30014",
+            "guimu_30015",
+            "guimu_30016",
+            "guimu_30017",
+            "guimu_30018",
+            "guimu_30019",
+            "guimu_30021",
+            "guimu_30022",
+            "guimu_30023",
+            "guimu_30024",
+            "guimu_30025",
+            "guimu_30026",
+            "guimu_30027",
+            "guimu_30029",
+            "guimu_30030",
+            "guimu_30031",
+            "guimu_30032",
+            "guimu_30033",
+            "guimu_30034",
+            "guimu_30035",
+            "guimu_30036",
+            "guimu_30037",
+            "guimu_30038",
+            "guimu_30039",
+            "guimu_30040",
+            "guimu_30041",
+            "guimu_30042",
+            "guimu_30043",
+            "guimu_30044",
+            "guimu_30045",
+            "guimu_30046",
+            "guimu_30047",
+            "guimu_30048",
+            "guimu_30049",
+            "guimu_30050",
+            "guimu_30051",
+            "guimu_30052",
+            "guimu_30053",
+            "guimu_30055",
+            "guimu_30056",
+            "guimu_30057",
+            "guimu_30058",
+            "guimu_30059",
+            "guimu_30060",
+            "guimu_30061",
+            "guimu_30062",
+            "guimu_30063",
+            "guimu_30064",
+            "guimu_30065"
+          ],
+          "count": 10,
+          "map_restrict": "guimu"
+        },
+        "reward": {
+          "exp": 15000,
+          "silver": 40
+        }
+      },
+      {
+        "stage": 2,
+        "name": "寂灭",
+        "target": {
+          "monsters": [
+            "guimu_30054"
+          ],
+          "count": 1,
+          "map_restrict": "guimu"
+        },
+        "reward": {
+          "exp": 20000,
+          "silver": 40
+        }
+      }
+    ]
+  },
+  "xianghunzhong_weituo": {
+    "key": "xianghunzhong_weituo",
+    "name": "卿阎的委托",
+    "npc": "卿阎",
+    "map_key": "linhai",
+    "desc": "幽芷冢中亡魂游荡、盗墓贼横行。先清剿墓中亡魂，再斩除四名守冢头目，最后取盗墓贼头领黑目的性命。",
+    "type": "kill",
+    "stages": [
+      {
+        "stage": 1,
+        "name": "墓中亡魂",
+        "target": {
+          "monsters": [
+            "xhz_824",
+            "xhz_825",
+            "xhz_823",
+            "xhz_30814",
+            "xhz_30819",
+            "xhz_30810",
+            "xhz_30811",
+            "xhz_30803",
+            "xhz_30804",
+            "xhz_30812",
+            "xhz_30813",
+            "xhz_30805",
+            "xhz_30806",
+            "xhz_30816",
+            "xhz_30815",
+            "xhz_30818",
+            "xhz_30821",
+            "xhz_30824",
+            "xhz_30825",
+            "xhz_30826",
+            "xhz_30830",
+            "xhz_821"
+          ],
+          "count": 20,
+          "map_restrict": "xianghunzhong_instance"
+        },
+        "reward": {
+          "exp": 120000,
+          "silver": 200
+        }
+      },
+      {
+        "stage": 2,
+        "name": "冢将",
+        "target": {
+          "monsters": [
+            "xhz_30807"
+          ],
+          "count": 1,
+          "map_restrict": "xianghunzhong_instance"
+        },
+        "reward": {
+          "exp": 100000,
+          "silver": 300
+        }
+      },
+      {
+        "stage": 3,
+        "name": "剧毒寡妇",
+        "target": {
+          "monsters": [
+            "xhz_30822"
+          ],
+          "count": 1,
+          "map_restrict": "xianghunzhong_instance"
+        },
+        "reward": {
+          "exp": 100000,
+          "silver": 300
+        }
+      },
+      {
+        "stage": 4,
+        "name": "狂暴的卿妤之魂",
+        "target": {
+          "monsters": [
+            "xhz_30828"
+          ],
+          "count": 1,
+          "map_restrict": "xianghunzhong_instance"
+        },
+        "reward": {
+          "exp": 100000,
+          "silver": 400
+        }
+      },
+      {
+        "stage": 5,
+        "name": "剿灭盗墓贼",
+        "target": {
+          "monsters": [
+            "xhz_30829",
+            "xhz_30833",
+            "xhz_30835"
+          ],
+          "count": 20,
+          "map_restrict": "xianghunzhong_instance"
+        },
+        "reward": {
+          "exp": 120000,
+          "silver": 400
+        }
+      },
+      {
+        "stage": 6,
+        "name": "黑目",
+        "target": {
+          "monsters": [
+            "xhz_30836"
+          ],
+          "count": 1,
+          "map_restrict": "xianghunzhong_instance"
+        },
+        "reward": {
+          "exp": 150000,
+          "silver": 500
+        }
+      }
+    ]
+  },
+  "xuanyuantai_weituo": {
+    "key": "xuanyuantai_weituo",
+    "name": "景海的委托",
+    "npc": "景海",
+    "map_key": "xuanyuan",
+    "desc": "轩辕台祭坛被匪类占据。逐层清剿，斩除盘踞深处的五名头目。",
+    "type": "kill",
+    "stages": [
+      {
+        "stage": 1,
+        "name": "台前喽啰",
+        "target": {
+          "monsters": [
+            "xyt_30201",
+            "xyt_30203",
+            "xyt_30204",
+            "xyt_30208"
+          ],
+          "count": 20,
+          "map_restrict": "xuanyuantai"
+        },
+        "reward": {
+          "exp": 30000,
+          "silver": 100
+        }
+      },
+      {
+        "stage": 2,
+        "name": "戾酣",
+        "target": {
+          "monsters": [
+            "xyt_30212"
+          ],
+          "count": 1,
+          "map_restrict": "xuanyuantai"
+        },
+        "reward": {
+          "exp": 25000,
+          "silver": 120
+        }
+      },
+      {
+        "stage": 3,
+        "name": "残牙",
+        "target": {
+          "monsters": [
+            "xyt_30230"
+          ],
+          "count": 1,
+          "map_restrict": "xuanyuantai"
+        },
+        "reward": {
+          "exp": 25000,
+          "silver": 140
+        }
+      },
+      {
+        "stage": 4,
+        "name": "怒血",
+        "target": {
+          "monsters": [
+            "xyt_30235"
+          ],
+          "count": 1,
+          "map_restrict": "xuanyuantai"
+        },
+        "reward": {
+          "exp": 25000,
+          "silver": 160
+        }
+      },
+      {
+        "stage": 5,
+        "name": "厉南",
+        "target": {
+          "monsters": [
+            "xyt_30255"
+          ],
+          "count": 1,
+          "map_restrict": "xuanyuantai"
+        },
+        "reward": {
+          "exp": 25000,
+          "silver": 180
+        }
+      },
+      {
+        "stage": 6,
+        "name": "厉盛",
+        "target": {
+          "monsters": [
+            "xyt_30254"
+          ],
+          "count": 1,
+          "map_restrict": "xuanyuantai"
+        },
+        "reward": {
+          "exp": 25000,
+          "silver": 200
+        }
+      }
+    ]
+  }
+}

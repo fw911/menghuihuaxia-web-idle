@@ -1,0 +1,6243 @@
+{
+  "maps": [
+    {
+      "key": "beijun",
+      "name": "北原郡",
+      "desc": "新手区域，含平原村、农田、演武场、北郡军营、榕树林、东岭、招魂台等",
+      "neighbors": [
+        "tianshengyuan",
+        "banquan"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "平原村"
+      },
+      "zones": [
+        {
+          "key": "farm",
+          "name": "农田·演武场",
+          "monsters": [
+            "zhizhu",
+            "xiezi",
+            "yuanzhu",
+            "xiong"
+          ],
+          "elite_monsters": [],
+          "monster_level": 3,
+          "explore_target": 35
+        },
+        {
+          "key": "central",
+          "name": "北原郡平原中央",
+          "monsters": [
+            "liegou",
+            "lengxue_zongxiong"
+          ],
+          "elite_monsters": [
+            "lvmao_zhizhu"
+          ],
+          "monster_level": 5,
+          "explore_target": 35
+        },
+        {
+          "key": "ronglin",
+          "name": "榕树林",
+          "monsters": [
+            "huangye_zei",
+            "huangye_zei_xunfan",
+            "huangye_zei_toumu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 7,
+          "explore_target": 35
+        },
+        {
+          "key": "zhaohuntai",
+          "name": "招魂台",
+          "monsters": [
+            "xiongcan_ye_gou",
+            "nuxiong"
+          ],
+          "elite_monsters": [],
+          "monster_level": 7,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "dongling",
+        "name": "东岭",
+        "boss": [
+          "shanji_touling",
+          "beijun_yajun"
+        ],
+        "unlock_level": 10,
+        "monsters": [
+          "xiaoshanji",
+          "shanji_xiaozu",
+          "shanji_dashou"
+        ],
+        "elite_monsters": [
+          "lvmao_zhizhu"
+        ],
+        "monster_level": 10,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "is_dungeon": false
+    },
+    {
+      "key": "xianzhijing",
+      "name": "仙之境",
+      "desc": "神魔修验者的专属静修之地，安全区无战斗，按滞留时长自动获得修验经验。每日最多进入 60 分钟。",
+      "neighbors": [
+        "beijun"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "仙之境"
+      },
+      "require_shenmo": true,
+      "zones": [],
+      "is_dungeon": false
+    },
+    {
+      "key": "tianshengyuan",
+      "name": "天圣原",
+      "desc": "南郡平原南侧，10-21级练级区域，华夏城为安全区",
+      "neighbors": [
+        "beijun",
+        "banquan",
+        "chaoshan_l1",
+        "nanjun",
+        "congyuzhaoze"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "华夏城"
+      },
+      "zones": [
+        {
+          "key": "hua_xia_jun_ying",
+          "name": "华夏军营",
+          "monsters": [
+            "zhanggutaofan1"
+          ],
+          "elite_monsters": [],
+          "monster_level": 14,
+          "explore_target": 35
+        },
+        {
+          "key": "hu_xiao_gu",
+          "name": "虎啸谷",
+          "monsters": [
+            "juxiniao15",
+            "xiyi16",
+            "zhangyoudaozei17",
+            "jujiaoxiyi18",
+            "hu20"
+          ],
+          "elite_monsters": [
+            "zhangyouezei19"
+          ],
+          "monster_level": 14,
+          "explore_target": 35
+        },
+        {
+          "key": "tian_sheng_hu",
+          "name": "天圣湖",
+          "monsters": [
+            "huayao4",
+            "feichong24"
+          ],
+          "elite_monsters": [],
+          "monster_level": 16,
+          "explore_target": 35
+        },
+        {
+          "key": "cheng_dong_mi_lin",
+          "name": "城东密林",
+          "monsters": [
+            "lvyizayi6"
+          ],
+          "elite_monsters": [],
+          "monster_level": 16,
+          "explore_target": 35
+        },
+        {
+          "key": "ji_chang",
+          "name": "技场",
+          "monsters": [
+            "zhangguchongfan2",
+            "zhanggushangbing3"
+          ],
+          "elite_monsters": [],
+          "monster_level": 17,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_shan_da_lao",
+          "name": "北山大牢",
+          "monsters": [
+            "maominshangbing7",
+            "maominchongfan8"
+          ],
+          "elite_monsters": [],
+          "monster_level": 19,
+          "explore_target": 35
+        }
+      ],
+      "is_dungeon": false,
+      "boss_zone": {
+        "key": "bei_shan",
+        "name": "北山",
+        "boss": [
+          "menghu21",
+          "maominetu9",
+          "zhangguetu12",
+          "lvyijugu25"
+        ],
+        "unlock_level": 21,
+        "monsters": [
+          "maomintaobing10",
+          "zhanggushangbing3",
+          "suohun13",
+          "duohun14"
+        ],
+        "elite_monsters": [
+          "zhangyouezei19"
+        ],
+        "monster_level": 21,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "banquan",
+      "name": "阪泉",
+      "desc": "北郡平原北侧，22-35级高级区域，阪泉军营为安全区",
+      "neighbors": [
+        "tianshengyuan",
+        "xilie"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "阪泉军营"
+      },
+      "zones": [
+        {
+          "key": "bai_zhang_gu_fu_jin",
+          "name": "白障谷附近",
+          "monsters": [
+            "gankushuyao27",
+            "taguai28"
+          ],
+          "elite_monsters": [],
+          "monster_level": 22,
+          "explore_target": 35
+        },
+        {
+          "key": "fei_ying_ya",
+          "name": "飞鹰崖",
+          "monsters": [
+            "lieying30",
+            "lizhuaheixiong31"
+          ],
+          "elite_monsters": [],
+          "monster_level": 25,
+          "explore_target": 35
+        },
+        {
+          "key": "you_lin_ji_zhong_nan_bu",
+          "name": "幽林及中南部",
+          "monsters": [
+            "gankushuyao36",
+            "humaozhaimin35"
+          ],
+          "elite_monsters": [],
+          "monster_level": 25,
+          "explore_target": 35
+        },
+        {
+          "key": "ban_quan_jun_ying_ji_zhong_bei_bu",
+          "name": "阪泉军营及中北部",
+          "monsters": [
+            "chixueshiyao38",
+            "aohuoshiyao39",
+            "shanqingbingding51"
+          ],
+          "elite_monsters": [
+            "shanqingxinshi42"
+          ],
+          "monster_level": 30,
+          "explore_target": 35
+        },
+        {
+          "key": "feng_gu",
+          "name": "风谷",
+          "monsters": [
+            "shihun61"
+          ],
+          "elite_monsters": [],
+          "monster_level": 30,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_xian_jun_ying",
+          "name": "西线军营",
+          "monsters": [
+            "shihun54"
+          ],
+          "elite_monsters": [],
+          "monster_level": 31,
+          "explore_target": 35
+        },
+        {
+          "key": "yu_chi_zhou_bian",
+          "name": "雨池周边",
+          "monsters": [
+            "tiezhaoliebao55",
+            "tiezhaoehu56",
+            "miwushuyao57",
+            "hanjurenzeikou59"
+          ],
+          "elite_monsters": [],
+          "monster_level": 33,
+          "explore_target": 35
+        },
+        {
+          "key": "hu_mao_zhai",
+          "name": "胡毛寨",
+          "monsters": [
+            "humaozhaishou46"
+          ],
+          "elite_monsters": [
+            "humaoyongshi47",
+            "humaosishi48"
+          ],
+          "monster_level": 34,
+          "explore_target": 35
+        },
+        {
+          "key": "tian_lie_shan",
+          "name": "天裂山",
+          "monsters": [
+            "shanqingbingding51"
+          ],
+          "elite_monsters": [
+            "shanqingwuzhe52"
+          ],
+          "monster_level": 34,
+          "explore_target": 35
+        },
+        {
+          "key": "hua_xia_yi_zhi",
+          "name": "华夏遗址",
+          "monsters": [],
+          "elite_monsters": [
+            "canhunegui60",
+            "shihun61"
+          ],
+          "monster_level": 35,
+          "explore_target": 35
+        }
+      ],
+      "is_dungeon": false,
+      "jubao_spots": [
+        {
+          "key": "banquan_jubao",
+          "zone": "ku_song_shan",
+          "name": "酣巨人头领",
+          "monster": "hanjurentouling66",
+          "level": 34,
+          "refresh_minutes": 50
+        }
+      ],
+      "boss_zone": {
+        "key": "ku_song_shan",
+        "name": "枯松山",
+        "boss": [
+          "juhunegui45",
+          "humaozhaizhu49",
+          "tunhunegui62"
+        ],
+        "unlock_level": 35,
+        "monsters": [
+          "humaozhaimin35",
+          "gankushuyao36",
+          "lieying30"
+        ],
+        "elite_monsters": [
+          "shanqingxinshi42",
+          "humaoyongshi47",
+          "humaosishi48",
+          "shanqingwuzhe52",
+          "canhunegui60",
+          "shihun61"
+        ],
+        "monster_level": 35,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "chaoshan_l1",
+      "name": "朝歌山一层",
+      "desc": "地下城一层，17-23级，天圣原入口",
+      "neighbors": [
+        "tianshengyuan",
+        "chaoshan_l2"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "dong_nan_qu_yu_ / _tian_sheng_yuan_chu_kou_fu_jin",
+          "name": "东南区域",
+          "monsters": [
+            "shiyao14",
+            "jiachong25"
+          ],
+          "elite_monsters": [],
+          "monster_level": 18,
+          "explore_target": 35
+        },
+        {
+          "key": "nan_bu_qu_yu",
+          "name": "南部区域",
+          "monsters": [
+            "lijiao20",
+            "houkejiachong22"
+          ],
+          "elite_monsters": [],
+          "monster_level": 20,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_ce_qu_yu",
+          "name": "西侧区域",
+          "monsters": [
+            "shanqingliumin1",
+            "shanqingdaozei18"
+          ],
+          "elite_monsters": [
+            "shanqingkuangtu3"
+          ],
+          "monster_level": 22,
+          "explore_target": 35
+        },
+        {
+          "key": "chao_ge_shan_er_ceng_ru_kou_fu_jin",
+          "name": "朝歌山二层入口附近",
+          "monsters": [
+            "shanqingdaozei18",
+            "shiyao14"
+          ],
+          "elite_monsters": [],
+          "monster_level": 22,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_bei_bu_qu_yu",
+          "name": "中北部区域",
+          "monsters": [
+            "ruankejiachong4",
+            "duxie5",
+            "shanqinglouluo8"
+          ],
+          "elite_monsters": [],
+          "monster_level": 23,
+          "explore_target": 35
+        },
+        {
+          "key": "shi_shi_zhou_bian",
+          "name": "石室周边",
+          "monsters": [
+            "lijiaoxiaozu13",
+            "shiyao14"
+          ],
+          "elite_monsters": [
+            "lijiaojinzu10",
+            "lijiaoqianxing11"
+          ],
+          "monster_level": 23,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_jian_pian_you_qu_yu",
+          "name": "中间偏右区域",
+          "monsters": [
+            "lijiaoxiaozu13",
+            "shiyao14",
+            "shanqinglouluo8"
+          ],
+          "elite_monsters": [
+            "lijiaowushi12"
+          ],
+          "monster_level": 23,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "l1_jubao",
+          "zone": "xi_nan_qu_yu",
+          "name": "蛮淘",
+          "monster": "mantao26",
+          "level": 23,
+          "refresh_minutes": 46
+        }
+      ],
+      "boss_zone": {
+        "key": "xi_nan_qu_yu",
+        "name": "西南区域",
+        "boss": [
+          "shanjian_dongzhong_ba",
+          "shanqingfeishou9",
+          "shanqingtoumu16"
+        ],
+        "unlock_level": 21,
+        "monsters": [
+          "houkejiachong22",
+          "shanqingliumin1"
+        ],
+        "elite_monsters": [
+          "shanqingkuangtu3",
+          "lijiaojinzu10",
+          "lijiaoqianxing11",
+          "lijiaowushi12"
+        ],
+        "monster_level": 21,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "chaoshan_l2",
+      "name": "朝歌山二层",
+      "desc": "地下城二层，30-34级，朝歌山一层入口",
+      "neighbors": [
+        "chaoshan_l1"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "unlock_map": "chaoshan_l1",
+      "zones": [
+        {
+          "key": "zhong_zuo_qu_yu",
+          "name": "中左区域",
+          "monsters": [
+            "shanqingfeitu31"
+          ],
+          "elite_monsters": [
+            "shanqingqiangdao28"
+          ],
+          "monster_level": 30,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_xia_qu_yu",
+          "name": "左下区域",
+          "monsters": [
+            "zhangyimao33",
+            "shanqingfeitu31"
+          ],
+          "elite_monsters": [
+            "shanqinghanfei29"
+          ],
+          "monster_level": 30,
+          "explore_target": 35
+        },
+        {
+          "key": "you_ce_zhong_bu_qu_yu",
+          "name": "右侧中部区域",
+          "monsters": [
+            "lijiaowushi44"
+          ],
+          "elite_monsters": [
+            "lijiaoshashou46"
+          ],
+          "monster_level": 31,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_shang_qu_yu",
+          "name": "左上区域",
+          "monsters": [],
+          "elite_monsters": [
+            "shanqingqiangdao28",
+            "shanqinghanfei29"
+          ],
+          "monster_level": 33,
+          "explore_target": 35
+        },
+        {
+          "key": "mu_shi",
+          "name": "墓室",
+          "monsters": [],
+          "elite_monsters": [
+            "suohunshiwei36",
+            "suohunshouwei37"
+          ],
+          "monster_level": 33,
+          "explore_target": 35
+        },
+        {
+          "key": "you_shang_qu_yu",
+          "name": "右上区域",
+          "monsters": [],
+          "elite_monsters": [
+            "lijiaojingrui41",
+            "lijiaolieshou42"
+          ],
+          "monster_level": 33,
+          "explore_target": 35
+        },
+        {
+          "key": "mu_shi_xia_fang_qu_yu",
+          "name": "墓室下方区域",
+          "monsters": [
+            "yeguisuohun38"
+          ],
+          "elite_monsters": [
+            "suohunshiwei36"
+          ],
+          "monster_level": 34,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "l2_jubao",
+          "zone": "you_xia_qu_yu",
+          "name": "鬼将",
+          "monster": "guige51",
+          "level": 34,
+          "refresh_minutes": 49
+        }
+      ],
+      "boss_zone": {
+        "key": "you_xia_qu_yu",
+        "name": "右下区域",
+        "boss": [
+          "shanqingjiangjun30",
+          "egui40",
+          "ligui50"
+        ],
+        "unlock_level": 34,
+        "monsters": [
+          "lijiaowushi44",
+          "anchifu48",
+          "xiaoguisuohun49"
+        ],
+        "elite_monsters": [
+          "shanqingqiangdao28",
+          "shanqinghanfei29",
+          "suohunshiwei36",
+          "suohunshouwei37",
+          "lijiaojingrui41",
+          "lijiaolieshou42",
+          "lijiaoshashou46"
+        ],
+        "monster_level": 34,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "nanjun",
+      "name": "南原郡",
+      "desc": "华夏南部边境，23-39级练级区域，南郡城为安全区",
+      "neighbors": [
+        "tianshengyuan",
+        "congyuzhaoze",
+        "xuanyuan",
+        "qingyunzhai_l1"
+      ],
+      "region_type": "field",
+      "is_dungeon": false,
+      "safe_zone": {
+        "name": "南郡"
+      },
+      "zones": [
+        {
+          "key": "tao_jiang_xi_pan",
+          "name": "桃江西畔",
+          "monsters": [
+            "lizuixiniao_23",
+            "lizuitujiu_24"
+          ],
+          "elite_monsters": [],
+          "monster_level": 25,
+          "explore_target": 35
+        },
+        {
+          "key": "cun_yao_sen_lin",
+          "name": "村妖森林",
+          "monsters": [
+            "tiezhangxiongguai_22",
+            "jugenshuyao_24",
+            "xixuehuayao_26"
+          ],
+          "elite_monsters": [],
+          "monster_level": 27,
+          "explore_target": 35
+        },
+        {
+          "key": "man_zhang_yu_lin",
+          "name": "漫瘴雨林",
+          "monsters": [
+            "zhangyouwushi_24"
+          ],
+          "elite_monsters": [
+            "zhangyouhuwei_25"
+          ],
+          "monster_level": 28,
+          "explore_target": 35
+        },
+        {
+          "key": "dan_shui_cun",
+          "name": "淡水村",
+          "monsters": [
+            "lizhualiegou_27",
+            "lizuitujiu_24"
+          ],
+          "elite_monsters": [],
+          "monster_level": 28,
+          "explore_target": 35
+        },
+        {
+          "key": "lv_yi_cun",
+          "name": "青依村",
+          "monsters": [
+            "lvyizhaimin_30"
+          ],
+          "elite_monsters": [
+            "lvyiwushi_31",
+            "lvyiwushi_31b",
+            "lvyiwushi_js"
+          ],
+          "monster_level": 34,
+          "explore_target": 35
+        },
+        {
+          "key": "tao_jiang_nan_an",
+          "name": "桃江南岸",
+          "monsters": [
+            "daoke_31",
+            "daoketouling_34"
+          ],
+          "elite_monsters": [],
+          "monster_level": 35,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "nanjun_jubao",
+          "zone": "hui_xuan_shan_gu",
+          "name": "厉角堂主",
+          "monster": "lijiaotangzhu_38",
+          "level": 39,
+          "refresh_minutes": 51
+        }
+      ],
+      "boss_zone": {
+        "key": "hui_xuan_shan_gu",
+        "name": "回旋山谷",
+        "boss": [
+          "lijiaobiaoke_37",
+          "changyoutongling",
+          "lvyitouling_33"
+        ],
+        "unlock_level": 39,
+        "monsters": [
+          "lijiaodaoke_35"
+        ],
+        "elite_monsters": [
+          "lijiaowuzhe_36",
+          "lvyiwushi_31",
+          "lvyiwushi_31b",
+          "lvyiwushi_js",
+          "zhangyouhuwei_25"
+        ],
+        "monster_level": 39,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "qiufengyuan",
+      "name": "秋野原",
+      "desc": "华夏边陲战场遗迹，40-55级练级区域，华夏军营为安全区",
+      "neighbors": [
+        "congyuzhaoze",
+        "kunlun",
+        "muxiuyulin",
+        "qiufengyuan_midao"
+      ],
+      "region_type": "field",
+      "is_dungeon": false,
+      "safe_zone": {
+        "name": "华夏军营"
+      },
+      "zones": [
+        {
+          "key": "xun_lie_shan",
+          "name": "迅烈山",
+          "monsters": [
+            "zhangweixiyi"
+          ],
+          "elite_monsters": [
+            "julinxiyi"
+          ],
+          "monster_level": 42,
+          "explore_target": 35
+        },
+        {
+          "key": "qiu_feng_gu",
+          "name": "秋野谷",
+          "monsters": [
+            "xunlie",
+            "xunlie"
+          ],
+          "elite_monsters": [
+            "pofengxunlie"
+          ],
+          "monster_level": 43,
+          "explore_target": 35
+        },
+        {
+          "key": "fen_shui_shi",
+          "name": "分水石",
+          "monsters": [
+            "meihuobinv",
+            "meihuoshinv"
+          ],
+          "elite_monsters": [],
+          "monster_level": 43,
+          "explore_target": 35
+        },
+        {
+          "key": "jiao_mu_gu",
+          "name": "焦木谷",
+          "monsters": [
+            "xunlie"
+          ],
+          "elite_monsters": [],
+          "monster_level": 44,
+          "explore_target": 35
+        },
+        {
+          "key": "duo_ming_gu",
+          "name": "夺命谷",
+          "monsters": [],
+          "elite_monsters": [
+            "nifengxunlie"
+          ],
+          "monster_level": 44,
+          "explore_target": 35
+        },
+        {
+          "key": "luo_ye_yu_lin",
+          "name": "落叶雨林",
+          "monsters": [
+            "ducihuayao",
+            "ducihuayao",
+            "jutengshuyao"
+          ],
+          "elite_monsters": [],
+          "monster_level": 46,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_hun_shi",
+          "name": "吸魂石",
+          "monsters": [
+            "suohunhuwei",
+            "huanxueshuyao",
+            "huanxuehuayao"
+          ],
+          "elite_monsters": [],
+          "monster_level": 48,
+          "explore_target": 35
+        },
+        {
+          "key": "zhu_mo_zhen",
+          "name": "诛魔阵",
+          "monsters": [
+            "meihuoyahuan",
+            "meihuoyahuan",
+            "mihunmeihuo"
+          ],
+          "elite_monsters": [],
+          "monster_level": 49,
+          "explore_target": 35
+        },
+        {
+          "key": "duan_jian_xia",
+          "name": "断剑峡",
+          "monsters": [
+            "xixueduxie",
+            "xisuitujiu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 52,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "qiufengyuan_jubao",
+          "zone": "suo_hun_po",
+          "name": "索魂暗使",
+          "monster": "suohunanshi_53",
+          "level": 55,
+          "refresh_minutes": 48
+        }
+      ],
+      "boss_zone": {
+        "key": "suo_hun_po",
+        "name": "索魂坡",
+        "boss": [
+          "dingfengxunlie",
+          "yugu",
+          "suohunzunzhe"
+        ],
+        "unlock_level": 55,
+        "monsters": [
+          "suohunhuwei"
+        ],
+        "elite_monsters": [
+          "suohunmingwang",
+          "suohunjinwei",
+          "suohunshizhe"
+        ],
+        "monster_level": 55,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "qiufengyuan_midao",
+      "name": "秋野原密道",
+      "desc": "秋枫原深处的隐秘通道，可直达奇兵洞一层，沿途驻扎煌叶叛军暗桩",
+      "neighbors": [
+        "qiufengyuan",
+        "qibingdong_l1"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "yin_mi_tong_dao",
+          "name": "隐秘通道",
+          "monsters": [
+            "shixueliyi1",
+            "huangyeanzhuang1",
+            "huangyeanshao1"
+          ],
+          "elite_monsters": [],
+          "monster_level": 52,
+          "explore_target": 35
+        },
+        {
+          "key": "mi_dao_jin_tou",
+          "name": "密道尽头",
+          "monsters": [
+            "shixueliyi2",
+            "huangyezeikou1"
+          ],
+          "elite_monsters": [
+            "huangyejunshi1",
+            "huangyeanwei1",
+            "huangyefashi1"
+          ],
+          "monster_level": 54,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "mi_dao_shen_chu",
+        "name": "密道深处",
+        "boss": [
+          "huangyewushi1"
+        ],
+        "unlock_level": 54,
+        "monsters": [
+          "huangyeanzhuang1",
+          "huangyeanshao1"
+        ],
+        "elite_monsters": [
+          "huangyejunshi1",
+          "huangyefashi1"
+        ],
+        "monster_level": 54,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "qibingdong_l1",
+      "name": "奇石洞一层",
+      "desc": "奇兵洞的表层洞窟，分左右两翼与密室，驻扎煌叶叛军与延维一族",
+      "neighbors": [
+        "qiufengyuan_midao",
+        "qibingdong_l2",
+        "congyuzhaoze"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "zuo_yi_tong_dao",
+          "name": "左翼通道",
+          "monsters": [
+            "shixueliyi1",
+            "shixueliyi2",
+            "huangyeanzhuang1"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 50,
+          "explore_target": 35
+        },
+        {
+          "key": "you_yi_tong_dao",
+          "name": "右翼通道",
+          "monsters": [
+            "huangyeanshao1",
+            "huangyezeikou1"
+          ],
+          "elite_monsters": [
+            "huangyeanwei1"
+          ],
+          "boss": [],
+          "monster_level": 52,
+          "explore_target": 35
+        },
+        {
+          "key": "xia_ceng_ru_kou",
+          "name": "下层入口",
+          "monsters": [
+            "juchiliyi1",
+            "huangyeshanzei1"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 56,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_nan_pian_ting",
+          "name": "东南偏厅",
+          "monsters": [
+            "yanwei1",
+            "yanweishiwei1"
+          ],
+          "elite_monsters": [
+            "yanwei1",
+            "yanweishiwei1"
+          ],
+          "boss": [],
+          "monster_level": 57,
+          "explore_target": 35
+        },
+        {
+          "key": "mi_dao_chu_kou",
+          "name": "密道出口",
+          "monsters": [
+            "huangyemozu1"
+          ],
+          "elite_monsters": [
+            "huangyemozu1"
+          ],
+          "boss": [],
+          "monster_level": 57,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "mi_shi",
+        "name": "密室",
+        "boss": [
+          "datouling1",
+          "junshi1",
+          "yanweitoumu1",
+          "futouling1",
+          "huangyewushi1"
+        ],
+        "unlock_level": 53,
+        "monsters": [
+          "huangyezeikou1",
+          "huangyeanshao1"
+        ],
+        "elite_monsters": [
+          "huangyeanwei1",
+          "huangyejunshi1",
+          "huangyefashi1",
+          "yanwei1",
+          "yanweishiwei1",
+          "huangyemozu1"
+        ],
+        "monster_level": 53,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "qibing_l1_jubao",
+          "zone": "mi_shi",
+          "name": "参谋",
+          "monster": "canmou1",
+          "level": 54,
+          "refresh_minutes": 56
+        }
+      ]
+    },
+    {
+      "key": "qibingdong_l2",
+      "name": "奇石洞二层",
+      "desc": "奇兵洞一层之下的深层洞窟，分西北角/中西部/将军台/中南部等区域，驻扎煌叶叛军精锐、延维一族与聚宝管融",
+      "neighbors": [
+        "qibingdong_l1"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "unlock_map": "qibingdong_l1",
+      "zones": [
+        {
+          "key": "qibingdong_l2_dongnantongdao",
+          "name": "东南通道",
+          "monsters": [
+            "xunlieshouwei1",
+            "huangyexunjian2",
+            "huangyeshaowei1",
+            "huangyeshaowei2",
+            "lijiaoshouwei1",
+            "shiguliebao2"
+          ],
+          "elite_monsters": [],
+          "monster_level": 64,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "qibingdong_l2_zhongbeibu",
+          "name": "中北部",
+          "monsters": [
+            "huangyehuanshi1",
+            "yishi1",
+            "huangyehuanshi2",
+            "huangyeshiwei1",
+            "huangyexunjian1"
+          ],
+          "elite_monsters": [],
+          "monster_level": 66,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "qibingdong_l2_dongbeijiao",
+          "name": "东北角",
+          "monsters": [
+            "huangyejinwei1",
+            "huangyejinwei2",
+            "huangyeshiwei2",
+            "huangyejinwei3",
+            "huangyeshushi1"
+          ],
+          "elite_monsters": [],
+          "monster_level": 66,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "qibingdong_l2_zhongnanbu",
+          "name": "中南部",
+          "monsters": [
+            "yanweihuwei1",
+            "yanweitiewei1"
+          ],
+          "elite_monsters": [],
+          "monster_level": 66,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "qibingdong_l2_xibeijiao",
+          "name": "西北角",
+          "monsters": [
+            "tiejiao1",
+            "tiejiao2",
+            "tiejiao3"
+          ],
+          "elite_monsters": [],
+          "monster_level": 69,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "qibingdong_l2_zhongxibu",
+          "name": "中西部",
+          "monsters": [
+            "huangyewuzhe1",
+            "huangyewuzhe2",
+            "huangyemengshi1",
+            "xunliehuwei1",
+            "huangyexunshao1",
+            "huangyexunshao2",
+            "shiguliebao1"
+          ],
+          "elite_monsters": [],
+          "monster_level": 69,
+          "explore_target": 35,
+          "boss": []
+        }
+      ],
+      "boss_zone": {
+        "key": "jiang_jun_tai",
+        "name": "将军台",
+        "boss": [
+          "huangyejisi1"
+        ],
+        "unlock_level": 69,
+        "monsters": [
+          "huangyehuanshi1",
+          "xunliehuwei1",
+          "shiguliebao1"
+        ],
+        "elite_monsters": [
+          "huangyeyongshi1",
+          "yanweimengshi1"
+        ],
+        "monster_level": 69,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "qibingdong_l2_jubao",
+          "zone": "jiang_jun_tai",
+          "name": "管融",
+          "monster": "guanrong1",
+          "level": 69,
+          "refresh_minutes": 56
+        }
+      ]
+    },
+    {
+      "key": "kunlun",
+      "name": "昆仑",
+      "desc": "西极神山，70-88级高阶练级区域，昆仑仙关为安全区",
+      "neighbors": [
+        "qiufengyuan"
+      ],
+      "region_type": "field",
+      "is_dungeon": false,
+      "safe_zone": {
+        "name": "昆仑仙关"
+      },
+      "zones": [
+        {
+          "key": "ju_bing_yuan",
+          "name": "聚冰原",
+          "monsters": [
+            "shixuejindiao",
+            "huanxuexiongguai"
+          ],
+          "elite_monsters": [],
+          "monster_level": 71,
+          "explore_target": 35
+        },
+        {
+          "key": "gu_mu_lin",
+          "name": "古木林",
+          "monsters": [
+            "maominmcanbing72",
+            "maominmcanbing73",
+            "maominmcanbing74",
+            "maominmcanbing75"
+          ],
+          "elite_monsters": [
+            "maominwushi"
+          ],
+          "monster_level": 74,
+          "explore_target": 35
+        },
+        {
+          "key": "guo_yun_ti",
+          "name": "过云梯",
+          "monsters": [
+            "xueyumaoniu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 77,
+          "explore_target": 35
+        },
+        {
+          "key": "yao_chi",
+          "name": "瑶池",
+          "monsters": [
+            "xiangwuantan"
+          ],
+          "elite_monsters": [
+            "xiangwucike"
+          ],
+          "monster_level": 82,
+          "explore_target": 35
+        },
+        {
+          "key": "fu_xiao_shan",
+          "name": "浮宵山",
+          "monsters": [
+            "xiangwuantan82"
+          ],
+          "elite_monsters": [
+            "xiangwucike",
+            "xiangwuwushi"
+          ],
+          "monster_level": 83,
+          "explore_target": 35
+        },
+        {
+          "key": "bu_zhou_shan",
+          "name": "不周山",
+          "monsters": [
+            "anmu"
+          ],
+          "elite_monsters": [
+            "yimuwushi",
+            "yimushushi"
+          ],
+          "monster_level": 84,
+          "explore_target": 35
+        },
+        {
+          "key": "kun_lun_xu_wai",
+          "name": "昆仑墟外",
+          "monsters": [],
+          "elite_monsters": [
+            "nanhaiwushi83",
+            "nanhaiwushi84",
+            "maomincanjiang",
+            "xiangwuhuwei",
+            "yimuwushi",
+            "yanweiwushi"
+          ],
+          "monster_level": 85,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "bu_tian_tai",
+        "name": "补天台",
+        "boss": [
+          "yingyan",
+          "nanhaishizhe",
+          "kl_jiangjun",
+          "yingmo",
+          "xiemu",
+          "tianmu",
+          "maomintongling",
+          "xueyumaoniuwang"
+        ],
+        "unlock_level": 88,
+        "monsters": [
+          "xiangwuantan",
+          "xiangwuantan82",
+          "anmu"
+        ],
+        "elite_monsters": [
+          "yanweiwushi",
+          "xiangwuwushi",
+          "xiangwucike"
+        ],
+        "monster_level": 86,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "kunlun_jubao",
+          "zone": "bu_tian_tai",
+          "name": "延维长老",
+          "monster": "yanweizhanglao",
+          "level": 88,
+          "refresh_minutes": 71
+        }
+      ]
+    },
+    {
+      "key": "muxiuyulin",
+      "name": "暮雨林",
+      "desc": "华夏南方热带雨林秘境，66-80级高阶练级区域，雨林营地为安全区。原版相邻：秋枫原/巨人野/赤水。",
+      "neighbors": [
+        "qiufengyuan",
+        "jurenye",
+        "chishui",
+        "dongfu_yaowang_1"
+      ],
+      "region_type": "field",
+      "is_dungeon": false,
+      "safe_zone": {
+        "name": "百果城"
+      },
+      "zones": [
+        {
+          "key": "danchí",
+          "name": "丹池",
+          "monsters": [
+            "xuelinghuayao",
+            "xuefeichong",
+            "xuejiachong"
+          ],
+          "elite_monsters": [],
+          "monster_level": 68,
+          "explore_target": 35
+        },
+        {
+          "key": "changwucun",
+          "name": "长梧村",
+          "monsters": [
+            "fushechengyuan",
+            "fushe_shashou",
+            "fushe_wushi"
+          ],
+          "elite_monsters": [],
+          "monster_level": 70,
+          "explore_target": 35
+        },
+        {
+          "key": "yudaihe",
+          "name": "玉带河",
+          "monsters": [
+            "huanxueliyi"
+          ],
+          "elite_monsters": [],
+          "monster_level": 71,
+          "explore_target": 35
+        },
+        {
+          "key": "baizhulin",
+          "name": "百蛛林",
+          "monsters": [
+            "xihunxiongguai"
+          ],
+          "elite_monsters": [],
+          "monster_level": 74,
+          "explore_target": 35
+        },
+        {
+          "key": "xinghanghuisuo",
+          "name": "行商会所",
+          "monsters": [
+            "shanghuibaobiao",
+            "shanghui_zuoyi"
+          ],
+          "elite_monsters": [],
+          "monster_level": 74,
+          "explore_target": 35
+        },
+        {
+          "key": "qiancaoya",
+          "name": "千草崖",
+          "monsters": [
+            "molinghuayao"
+          ],
+          "elite_monsters": [],
+          "monster_level": 74,
+          "explore_target": 35
+        },
+        {
+          "key": "yuhushan",
+          "name": "玉湖山",
+          "monsters": [
+            "huangye_tanzi",
+            "huangyewushi"
+          ],
+          "elite_monsters": [
+            "huangyejisi"
+          ],
+          "monster_level": 75,
+          "explore_target": 35
+        },
+        {
+          "key": "baihuaya",
+          "name": "百花崖",
+          "monsters": [
+            "qianshoujuchong"
+          ],
+          "elite_monsters": [],
+          "monster_level": 75,
+          "explore_target": 35
+        },
+        {
+          "key": "lieyanya",
+          "name": "烈焰崖",
+          "monsters": [
+            "qiuyao_yimu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 77,
+          "explore_target": 35
+        },
+        {
+          "key": "wangyueyuan",
+          "name": "望月原",
+          "monsters": [],
+          "elite_monsters": [
+            "gouhunmeihuo",
+            "wuyingmeihuo"
+          ],
+          "monster_level": 78,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "boss_zone",
+        "name": "首领区",
+        "boss": [
+          "moxueliyi",
+          "fushezhanglao",
+          "shanghuihuizhang"
+        ],
+        "unlock_level": 75,
+        "monsters": [
+          "fushechengyuan",
+          "fushe_wushi",
+          "shanghuibaobiao",
+          "shanghui_zuoyi"
+        ],
+        "elite_monsters": [
+          "huangyewushi",
+          "fushe_shashou"
+        ],
+        "monster_level": 75,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "huangyetongling_spot",
+          "zone": "boss_zone",
+          "name": "煌叶统领",
+          "monster": "huangyetongling",
+          "level": 80,
+          "refresh_minutes": 61
+        }
+      ]
+    },
+    {
+      "key": "jurenye",
+      "name": "巨灵野",
+      "desc": "巨人野（55-72级）莽憨岭、暮云岭、采石场、荒寂林、巨人野野外、临渊崖、落日崖、巨人野深处，含首领族长、酣巨人猎手、拘魂孤怨、摄魂、迷魂；内部炼骨窟为地下城",
+      "neighbors": [
+        "xuanyuan",
+        "muxiuyulin",
+        "lianguku_l1"
+      ],
+      "region_type": "field",
+      "is_dungeon": false,
+      "safe_zone": {
+        "name": "戚轩村"
+      },
+      "zones": [
+        {
+          "key": "mang_han_ling",
+          "name": "莽憨岭",
+          "monster_level": 55,
+          "monsters": [
+            "jry_etu",
+            "jry_eba",
+            "jry_egun",
+            "jry_kuangtu"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "mu_yun_ling",
+          "name": "暮云岭",
+          "monster_level": 56,
+          "monsters": [
+            "jry_youxia",
+            "jry_haoxia",
+            "jry_youxia"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "cai_shi_chang",
+          "name": "采石场",
+          "monster_level": 57,
+          "monsters": [
+            "hongmaoxiniao",
+            "tiezhaoxiniao",
+            "ezhaoxunlie"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "huang_ji_lin",
+          "name": "荒寂林",
+          "monster_level": 59,
+          "monsters": [
+            "shixueliebao",
+            "shihunliebao",
+            "jry_moxuehuayao",
+            "xuehan"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "ju_ren_ye_ye_wai",
+          "name": "巨灵野野外",
+          "monster_level": 66,
+          "monsters": [
+            "hanjurenshanmin",
+            "juhan",
+            "jue",
+            "eyi"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "lin_yuan_ya",
+          "name": "临渊崖",
+          "monster_level": 68,
+          "monsters": [
+            "huanxuetujiu",
+            "shixuexiniao",
+            "manghan"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "luo_ri_ya",
+          "name": "落日崖",
+          "monster_level": 69,
+          "monsters": [
+            "baofengxunlie",
+            "egu",
+            "shihunehu",
+            "huanxueshanbao"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "ju_ren_ye_shen_chu",
+          "name": "巨灵野深处",
+          "monster_level": 71,
+          "monsters": [
+            "manghan",
+            "juhan",
+            "jue",
+            "shixuexiniao"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "juren_shouling",
+        "name": "巨人野·首领区",
+        "boss": [
+          "hanjurenlieshou",
+          "juhunguyuan",
+          "shehun",
+          "mihun"
+        ],
+        "monsters": [
+          "jry_etu",
+          "jry_egun",
+          "jry_kuangtu"
+        ],
+        "elite_monsters": [
+          "jry_haoxia",
+          "ezhaoxunlie"
+        ],
+        "monster_level": 66,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        },
+        "unlock_level": 71
+      },
+      "jubao_spots": [
+        {
+          "key": "jubao_zuzhang",
+          "zone": "juren_shouling",
+          "name": "族长",
+          "monster": "zuzhang",
+          "level": 72,
+          "refresh_minutes": 60
+        }
+      ]
+    },
+    {
+      "key": "lianguku_l1",
+      "name": "炼骨洞一层",
+      "desc": "炼骨窟一层（63-68级），巨人野入口",
+      "neighbors": [
+        "jurenye",
+        "lianguku_l2"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "you_shang_jiao",
+          "name": "右上角",
+          "monsters": [
+            "shixueliegou63",
+            "erengushouwei64"
+          ],
+          "elite_monsters": [],
+          "monster_level": 64,
+          "explore_target": 35
+        },
+        {
+          "key": "you_ce_tong_dao",
+          "name": "右侧通道",
+          "monsters": [
+            "shixueliegou64",
+            "erengushouwei65"
+          ],
+          "elite_monsters": [],
+          "monster_level": 66,
+          "explore_target": 35
+        },
+        {
+          "key": "nan_bu_ru_kou",
+          "name": "南部入口",
+          "monsters": [
+            "dongkushaowei65",
+            "dongkushaowei66"
+          ],
+          "elite_monsters": [],
+          "monster_level": 66,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_yi",
+          "name": "左翼",
+          "monsters": [
+            "maominezei65",
+            "maominjiaotu66"
+          ],
+          "elite_monsters": [],
+          "monster_level": 67,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_nan_jiao",
+          "name": "西南角",
+          "monsters": [
+            "dongkushouwei65",
+            "anyingshouwei66"
+          ],
+          "elite_monsters": [],
+          "monster_level": 67,
+          "explore_target": 35
+        },
+        {
+          "key": "sha_xue_dong",
+          "name": "煞血洞",
+          "monsters": [
+            "maominezei65",
+            "maominjiaotu65"
+          ],
+          "elite_monsters": [
+            "xiongtu66"
+          ],
+          "monster_level": 67,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_shang_jiao",
+          "name": "左上角",
+          "monsters": [
+            "dongkushouwei65"
+          ],
+          "elite_monsters": [
+            "tiebishiwei67",
+            "shixueetu66"
+          ],
+          "monster_level": 68,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "lianguku_l1_jb_liebao68",
+          "name": "猎宝",
+          "monster": "liebao68",
+          "level": 68,
+          "refresh_minutes": 59,
+          "zone": "you_xia_jiao"
+        }
+      ],
+      "boss_zone": {
+        "key": "you_xia_jiao",
+        "name": "炼骨窟一层·首领区",
+        "boss": [
+          "daidushangao66",
+          "duanya67",
+          "emin67",
+          "xiongtutoumu67",
+          "xueya68"
+        ],
+        "unlock_level": 68,
+        "monsters": [
+          "anyingshouwei66",
+          "dongkuhuwei65",
+          "dongkuhuwei66",
+          "dongkushaowei65",
+          "dongkushaowei66",
+          "dongkushouwei65",
+          "erengushouwei64",
+          "erengushouwei65",
+          "maominezei65",
+          "maominjiaotu65",
+          "maominjiaotu66",
+          "shixueliegou63",
+          "shixueliegou64"
+        ],
+        "elite_monsters": [
+          "anyingmaomin66",
+          "canxuemaomin67",
+          "shixueetu66",
+          "tiebishiwei67",
+          "xiongtu66"
+        ],
+        "monster_level": 68,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "lianguku_l2",
+      "name": "炼骨洞二层",
+      "desc": "炼骨窟二层（66-73级），炼骨窟一层入口",
+      "neighbors": [
+        "lianguku_l1",
+        "lianguku_l3"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "unlock_map": "lianguku_l1",
+      "zones": [
+        {
+          "key": "zhong_shu_di_dai",
+          "name": "中枢地带",
+          "monsters": [
+            "juchishangao68",
+            "juchishangao69",
+            "etushouwei67",
+            "etushouwei68",
+            "etumowei68",
+            "shigumaoyao67"
+          ],
+          "elite_monsters": [
+            "cuihunshangao69",
+            "mantu70"
+          ],
+          "monster_level": 71,
+          "explore_target": 35
+        },
+        {
+          "key": "xue_chi",
+          "name": "血池",
+          "monsters": [
+            "xiangwuetu70"
+          ],
+          "elite_monsters": [
+            "tiechixiangwu70",
+            "baoyixiangwu71"
+          ],
+          "monster_level": 72,
+          "explore_target": 35
+        },
+        {
+          "key": "nan_bu_ru_kou",
+          "name": "南部入口",
+          "monsters": [
+            "manxueyimu71",
+            "anmushouwei72"
+          ],
+          "elite_monsters": [],
+          "monster_level": 72,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_shang_jiao",
+          "name": "左上角",
+          "monsters": [
+            "xiangwushiwei71",
+            "shigumaoyao66",
+            "shigumaoyao67"
+          ],
+          "elite_monsters": [
+            "xiangwutiewei72",
+            "tiemuhuwei72",
+            "moyan72"
+          ],
+          "monster_level": 73,
+          "explore_target": 35
+        },
+        {
+          "key": "jin_di",
+          "name": "禁地",
+          "monsters": [
+            "juchishangao69"
+          ],
+          "elite_monsters": [
+            "duohunshangao70",
+            "kuangtushouwei72"
+          ],
+          "monster_level": 73,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_nan_tong_dao",
+          "name": "西南通道",
+          "monsters": [
+            "huanxueshanmao71"
+          ],
+          "elite_monsters": [
+            "shangaotiewei72",
+            "shangaomowei71"
+          ],
+          "monster_level": 73,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "lianguku_l2_jb_eyunkuangtu73",
+          "name": "厄运狂徒",
+          "monster": "eyunkuangtu73",
+          "level": 73,
+          "refresh_minutes": 59,
+          "zone": "tie_lao"
+        }
+      ],
+      "boss_zone": {
+        "key": "tie_lao",
+        "name": "炼骨窟二层·首领区",
+        "boss": [
+          "chimu71",
+          "eji73",
+          "kuange71",
+          "kuyi72",
+          "liegu73",
+          "lingyi73"
+        ],
+        "unlock_level": 73,
+        "monsters": [
+          "anmushouwei72",
+          "canhunyimu69",
+          "dixueyimu70",
+          "etumowei68",
+          "etushouwei67",
+          "etushouwei68",
+          "huanxueshanmao71",
+          "juchishangao68",
+          "juchishangao69",
+          "manxueyimu71",
+          "shigumaoyao66",
+          "shigumaoyao67",
+          "xiangwuetu70",
+          "xiangwukuangtu72",
+          "xiangwushiwei71"
+        ],
+        "elite_monsters": [
+          "baoyixiangwu71",
+          "cuihunshangao69",
+          "duohunshangao70",
+          "kuangtushouwei72",
+          "mantu70",
+          "moyan72",
+          "shangaomowei71",
+          "shangaotiewei72",
+          "tiechixiangwu70",
+          "tiemuhuwei72",
+          "xiangwutiewei72"
+        ],
+        "monster_level": 73,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "lianguku_l3",
+      "name": "炼骨洞三层",
+      "desc": "炼骨窟三层（76-80级），炼骨窟二层入口",
+      "neighbors": [
+        "lianguku_l2"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "unlock_map": "lianguku_l2",
+      "zones": [
+        {
+          "key": "you_shang_jiao",
+          "name": "右上角",
+          "monsters": [
+            "shixueshiyao76",
+            "lijiaoetu76"
+          ],
+          "elite_monsters": [
+            "tiejiaoxuewei77"
+          ],
+          "monster_level": 77,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_ce",
+          "name": "左侧",
+          "monsters": [
+            "anyingyanwei77",
+            "yanweietu77"
+          ],
+          "elite_monsters": [
+            "yanweixuewei78"
+          ],
+          "monster_level": 78,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_shang_bu",
+          "name": "中上部",
+          "monsters": [],
+          "elite_monsters": [
+            "juemowei78",
+            "juetiewei77"
+          ],
+          "monster_level": 78,
+          "explore_target": 35
+        },
+        {
+          "key": "you_xia_jiao",
+          "name": "右下角",
+          "monsters": [
+            "xunlieetu76",
+            "anyingxunlie76"
+          ],
+          "elite_monsters": [
+            "lizhaoxuewei77"
+          ],
+          "monster_level": 78,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_shu_di_dai",
+          "name": "中枢地带",
+          "monsters": [
+            "juehuwei77",
+            "jueshouwei77"
+          ],
+          "elite_monsters": [
+            "jueshashou78",
+            "tiejiaoxuewei78",
+            "juetiewei78"
+          ],
+          "monster_level": 79,
+          "explore_target": 35
+        },
+        {
+          "key": "you_ce",
+          "name": "右侧",
+          "monsters": [
+            "lijiaoetu76",
+            "anyinglijiao76",
+            "yanweietu78"
+          ],
+          "elite_monsters": [
+            "tiejiaoxuewei77",
+            "yanweixuewei79"
+          ],
+          "monster_level": 80,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "lianguku_l3_jb_erenwang80",
+          "name": "恶人王",
+          "monster": "erenwang80",
+          "level": 80,
+          "refresh_minutes": 61,
+          "zone": "hua_gu_tan"
+        }
+      ],
+      "boss_zone": {
+        "key": "hua_gu_tan",
+        "name": "化骨坛·BOSS",
+        "boss": [
+          "duwei80",
+          "kuangmang80",
+          "liedi78",
+          "nujiao79",
+          "xunliejisi79"
+        ],
+        "unlock_level": 80,
+        "monsters": [
+          "anyinglijiao76",
+          "anyingxunlie76",
+          "anyingyanwei77",
+          "juehuwei77",
+          "jueshouwei77",
+          "lijiaoetu76",
+          "shixueshiyao76",
+          "xunlieetu76",
+          "yanweietu77",
+          "yanweietu78"
+        ],
+        "elite_monsters": [
+          "juejinwei79",
+          "juemowei78",
+          "jueshashou78",
+          "jueshiwei79",
+          "juetiewei77",
+          "juetiewei78",
+          "lizhaoxuewei77",
+          "tiejiaomowei78",
+          "tiejiaoxuewei77",
+          "tiejiaoxuewei78",
+          "yanweixuewei78",
+          "yanweixuewei79"
+        ],
+        "monster_level": 80,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "chishui",
+      "name": "赤水",
+      "desc": "赤水流域高阶战场，88-97级。原版相邻：暮秀雨林",
+      "neighbors": [
+        "muxiuyulin",
+        "dongfu_tianzun"
+      ],
+      "region_type": "field",
+      "is_dungeon": false,
+      "safe_zone": {
+        "name": "连云寨"
+      },
+      "zones": [
+        {
+          "key": "luo_ri_yuan",
+          "name": "落日原",
+          "monsters": [
+            "mohunshuyao",
+            "mohuntujiu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 88,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "feng_mu_lin",
+          "name": "凤木林",
+          "monsters": [
+            "chishuihujun",
+            "chishuishouwei",
+            "chishuishouwei",
+            "chishuihujun",
+            "chishuishaowei"
+          ],
+          "elite_monsters": [
+            "chishuihuwei"
+          ],
+          "monster_level": 88,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "xi_yu_lin",
+          "name": "细雨林",
+          "monsters": [
+            "huangyehuwei",
+            "huangyehuwei"
+          ],
+          "elite_monsters": [
+            "huangyewulao",
+            "huangyexuewei"
+          ],
+          "monster_level": 88,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "cang_wu_shan",
+          "name": "苍梧山",
+          "monsters": [
+            "shihunguyuan"
+          ],
+          "elite_monsters": [
+            "luohun3",
+            "luohun3"
+          ],
+          "monster_level": 93,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "chi_shui_cheng",
+          "name": "赤水城",
+          "monsters": [],
+          "elite_monsters": [
+            "kuileishouwei",
+            "duomingguibing",
+            "gouhunguizu",
+            "mingdouguibing",
+            "kuileishibing",
+            "mihunguimei",
+            "shangaowanghun",
+            "shihunxiushi"
+          ],
+          "monster_level": 94,
+          "explore_target": 35,
+          "boss": []
+        }
+      ],
+      "boss_zone": {
+        "key": "shi_hun_gu",
+        "name": "嗜魂谷",
+        "boss": [
+          "mingdouguijiang",
+          "csq_fujiang",
+          "csq_shouweitongling",
+          "chishuixunjian",
+          "csq_canjiang",
+          "huangyetouling",
+          "qijue"
+        ],
+        "monsters": [
+          "dongfushouwei",
+          "dongfushouwei"
+        ],
+        "elite_monsters": [
+          "dongfushiwei",
+          "dongfujinwei",
+          "dongfuhuwei"
+        ],
+        "monster_level": 91,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 50
+        },
+        "unlock_level": 91
+      },
+      "jubao_spots": [
+        {
+          "key": "jubao_csq_miehun",
+          "zone": "shi_hun_gu",
+          "group": "chishui_miehun",
+          "name": "灭魂",
+          "monster": "csq_miehun",
+          "level": 91,
+          "refresh_minutes": 96
+        },
+        {
+          "key": "chishui_youmingguiwang",
+          "zone": "shi_hun_gu",
+          "group": "chishui_youmingguiwang",
+          "name": "幽冥鬼王",
+          "monster": "youmingguiwang",
+          "level": 84,
+          "refresh_minutes": 120
+        }
+      ]
+    },
+    {
+      "key": "congyuzhaoze",
+      "name": "丛雨沼泽",
+      "desc": "水网密布的沼泽地，毒虫猛兽与流寇盘踞。原版相邻：南郡/天圣原/秋枫原，12-26级区域，含地下城奇兵洞与聚宝煌叶偏将。",
+      "neighbors": [
+        "nanjun",
+        "tianshengyuan",
+        "qiufengyuan",
+        "qibingdong_l1",
+        "guimu"
+      ],
+      "region_type": "field",
+      "is_dungeon": false,
+      "safe_zone": {
+        "name": "逐遗村"
+      },
+      "zones": [
+        {
+          "key": "hongnizhaoze",
+          "name": "红泥沼泽",
+          "monsters": [
+            "zhaozexiyi"
+          ],
+          "elite_monsters": [],
+          "monster_level": 13,
+          "explore_target": 35
+        },
+        {
+          "key": "luanfengang",
+          "name": "乱坟岗",
+          "monsters": [
+            "liebao"
+          ],
+          "elite_monsters": [],
+          "monster_level": 15,
+          "explore_target": 35
+        },
+        {
+          "key": "banyuezhaoze",
+          "name": "半月沼泽",
+          "monsters": [
+            "banyueshuyao",
+            "banyuehuayao"
+          ],
+          "elite_monsters": [],
+          "monster_level": 17,
+          "explore_target": 35
+        },
+        {
+          "key": "sanchaokou",
+          "name": "三岔口",
+          "monsters": [
+            "liexi",
+            "ying"
+          ],
+          "elite_monsters": [],
+          "monster_level": 19,
+          "explore_target": 35
+        },
+        {
+          "key": "huangnigang",
+          "name": "黄泥岗",
+          "monsters": [
+            "shangaoliukou",
+            "shangaoruizu",
+            "shangaojisi"
+          ],
+          "elite_monsters": [
+            "shangaoruizu",
+            "shangaojisi"
+          ],
+          "monster_level": 21,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "guohunnizhao",
+          "name": "孤魂泥沼",
+          "monsters": [
+            "guyuan",
+            "youhunguyuan",
+            "guhun"
+          ],
+          "elite_monsters": [],
+          "monster_level": 24,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "milinshidi",
+        "name": "密林湿地",
+        "boss": [
+          "shangaozeishou",
+          "huangyetoumu"
+        ],
+        "monsters": [
+          "huangyelouluo",
+          "huangyedaozei",
+          "huangyeshouwei"
+        ],
+        "elite_monsters": [
+          "huangyebujiang"
+        ],
+        "monster_level": 25,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        },
+        "unlock_level": 24
+      },
+      "jubao_spots": [
+        {
+          "key": "congyu_jubao_1",
+          "zone": "milinshidi",
+          "name": "煌叶偏将",
+          "monster": "huangyepianjiang",
+          "level": 26,
+          "refresh_minutes": 46
+        }
+      ]
+    },
+    {
+      "key": "duanbigu",
+      "name": "断崖谷",
+      "desc": "76-89级高级区域，铁旗/东夷/山膏三族混战，含聚宝风烈与四大首领。原版相邻：林海。",
+      "neighbors": [
+        "linhai"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "断壁驿"
+      },
+      "zones": [
+        {
+          "key": "wang_xia_cun",
+          "name": "望夏村",
+          "monsters": [
+            "dbg_321__wang_xia_cun",
+            "dbg_323__wang_xia_cun"
+          ],
+          "elite_monsters": [],
+          "monster_level": 76,
+          "explore_target": 35
+        },
+        {
+          "key": "lin_hai_gang_shao",
+          "name": "林海岗哨",
+          "monsters": [
+            "dbg_270__lin_hai_gang_shao",
+            "dbg_270__lin_hai_gang_shao",
+            "dbg_270__lin_hai_gang_shao",
+            "dbg_322__lin_hai_gang_shao",
+            "dbg_321__lin_hai_gang_shao"
+          ],
+          "elite_monsters": [],
+          "monster_level": 76,
+          "explore_target": 35
+        },
+        {
+          "key": "duan_bi_gu",
+          "name": "断崖谷",
+          "monsters": [
+            "dbg_290__duan_bi_gu",
+            "dbg_299__duan_bi_gu",
+            "dbg_294__duan_bi_gu",
+            "dbg_295__duan_bi_gu",
+            "dbg_291__duan_bi_gu",
+            "dbg_292__duan_bi_gu",
+            "dbg_293__duan_bi_gu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 79,
+          "explore_target": 35
+        },
+        {
+          "key": "xing_keng",
+          "name": "刑坑",
+          "monsters": [
+            "dbg_277__xing_keng",
+            "dbg_279__xing_keng"
+          ],
+          "elite_monsters": [],
+          "monster_level": 79,
+          "explore_target": 35
+        },
+        {
+          "key": "gui_yun_feng",
+          "name": "归云峰",
+          "monsters": [
+            "dbg_325__gui_yun_feng",
+            "dbg_299__gui_yun_feng",
+            "dbg_302__gui_yun_feng",
+            "dbg_299__gui_yun_feng"
+          ],
+          "elite_monsters": [],
+          "monster_level": 80,
+          "explore_target": 35
+        },
+        {
+          "key": "jue_ling_guan",
+          "name": "绝岭关",
+          "monsters": [
+            "dbg_309__jue_ling_guan",
+            "dbg_308__jue_ling_guan",
+            "dbg_307__jue_ling_guan",
+            "dbg_306__jue_ling_guan"
+          ],
+          "elite_monsters": [],
+          "monster_level": 81,
+          "explore_target": 35
+        },
+        {
+          "key": "chu_shan",
+          "name": "楚山",
+          "monsters": [
+            "dbg_311__chu_shan",
+            "dbg_284__chu_shan",
+            "dbg_292__chu_shan"
+          ],
+          "elite_monsters": [],
+          "monster_level": 82,
+          "explore_target": 35
+        },
+        {
+          "key": "duan_ya",
+          "name": "断崖",
+          "monsters": [
+            "dbg_326__duan_ya",
+            "dbg_287__duan_ya",
+            "dbg_326__duan_ya",
+            "dbg_284__duan_ya"
+          ],
+          "elite_monsters": [],
+          "monster_level": 82,
+          "explore_target": 35
+        },
+        {
+          "key": "gui_yun_ling",
+          "name": "归云岭",
+          "monsters": [
+            "dbg_306__gui_yun_ling",
+            "dbg_307__gui_yun_ling",
+            "dbg_308__gui_yun_ling",
+            "dbg_309__gui_yun_ling"
+          ],
+          "elite_monsters": [],
+          "monster_level": 82,
+          "explore_target": 35
+        },
+        {
+          "key": "xing_gui_cun",
+          "name": "形归村",
+          "monsters": [],
+          "elite_monsters": [
+            "dbg_297__xing_gui_cun",
+            "dbg_305__xing_gui_cun"
+          ],
+          "monster_level": 82,
+          "explore_target": 35
+        },
+        {
+          "key": "qian_jue_ling",
+          "name": "千绝岭",
+          "monsters": [],
+          "elite_monsters": [
+            "dbg_337__qian_jue_ling",
+            "dbg_336__qian_jue_ling",
+            "dbg_336__qian_jue_ling",
+            "dbg_341__qian_jue_ling"
+          ],
+          "monster_level": 85,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "duanbigu_shouling",
+        "name": "断壁谷·首领区",
+        "boss": [
+          "dbg_310__chu_shan",
+          "dbg_288__duan_bi_gu",
+          "dbg_275__xing_keng",
+          "dbg_296__xing_gui_cun"
+        ],
+        "unlock_level": 80,
+        "monsters": [
+          "dbg_290__duan_bi_gu",
+          "dbg_291__duan_bi_gu",
+          "dbg_292__duan_bi_gu",
+          "dbg_294__duan_bi_gu",
+          "dbg_295__duan_bi_gu",
+          "dbg_299__duan_bi_gu"
+        ],
+        "elite_monsters": [
+          "dbg_293__duan_bi_gu"
+        ],
+        "monster_level": 84,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "duanbigu_jubao",
+          "zone": "duanbigu_shouling",
+          "name": "风烈",
+          "monster": "dbg_335__qian_jue_ling",
+          "level": 89,
+          "refresh_minutes": 30
+        }
+      ],
+      "is_dungeon": false
+    },
+    {
+      "key": "linhai",
+      "name": "林海",
+      "desc": "占位壳（待正式接入），原版相邻：断壁谷，76级起区域。",
+      "neighbors": [
+        "duanbigu",
+        "xuanyuan",
+        "donglicao",
+        "xianghunzhong_instance"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "华夏军营",
+        "desc": "华夏军营（林海安全区）"
+      },
+      "zones": [
+        {
+          "key": "shiluosenlin",
+          "name": "失落森林",
+          "monster_level": 65,
+          "monsters": [
+            "lvyijunshi66",
+            "lvyicunmin64",
+            "lvyilieshou65",
+            "lvyicunmin65",
+            "huanxueehu64",
+            "shixuemaoyao64"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "wangqingpo",
+          "name": "忘情坡",
+          "monster_level": 66,
+          "monsters": [
+            "lvyishushi70",
+            "lvyicunmin70",
+            "lvyicunmin68",
+            "moxueshuyao67",
+            "huanxueehu66",
+            "lvyicunmin69",
+            "guiyingmeihuo65",
+            "qingsimeihuo64",
+            "qingsimeihuo63",
+            "shixuemaoyao63",
+            "xuelingshuyao64"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "xianghunzhong",
+          "name": "香魂冢外围",
+          "monster_level": 67,
+          "monsters": [
+            "lvyihuwei67",
+            "xuelingshuyao65",
+            "shixuemaoyao64",
+            "lvyijunshi66"
+          ],
+          "elite_monsters": [
+            "xianghunzhongjinwei68",
+            "xianghunzhongshouwei65",
+            "lvyishushi70"
+          ],
+          "explore_target": 35
+        },
+        {
+          "key": "baicaoyuan",
+          "name": "百草原",
+          "monster_level": 67,
+          "monsters": [
+            "nanhaizhongjun68",
+            "nanhaizhongjun66",
+            "nanhaizhongjun65",
+            "nanhaizhongjun67",
+            "moxueehu65",
+            "nanhaitongling69"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "donghepingyuan",
+          "name": "东河平原",
+          "monster_level": 67,
+          "monsters": [
+            "nanhaitongling69",
+            "nanhaizhongjun68",
+            "guiyingmeihuo67",
+            "moxueshuyao65",
+            "moxueliebao66"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "nanhaixingying",
+          "name": "南海行营",
+          "monster_level": 69,
+          "monsters": [],
+          "elite_monsters": [
+            "nanhaijingbing69"
+          ],
+          "explore_target": 35
+        },
+        {
+          "key": "donghegu",
+          "name": "东河谷",
+          "monster_level": 72,
+          "monsters": [
+            "hunicike73",
+            "hunisanbing72",
+            "hunisanbing71",
+            "hunisanbing70"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "lvyicunluo",
+          "name": "青依村落",
+          "monster_level": 73,
+          "monsters": [
+            "lvyiyongshi73",
+            "lvyishouwei70",
+            "lvyiyongshi74",
+            "lvyifashi73",
+            "lvyishouwei70"
+          ],
+          "elite_monsters": [
+            "lvyiwulao74",
+            "lijiaobaobiao73",
+            "lvyilieshou70"
+          ],
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "poxiao_senlin",
+        "name": "破晓森林",
+        "boss": [
+          "lvyicunzhang67",
+          "xianghunzhonghufa69",
+          "nanhaipianjiang70",
+          "hunitouling74",
+          "lvyizhanglao75",
+          "nanhaifushuai75"
+        ],
+        "unlock_level": 73,
+        "monsters": [
+          "nanhaijingbing71"
+        ],
+        "elite_monsters": [
+          "nanhaijinjun73",
+          "nanhaijinjun74"
+        ],
+        "monster_level": 73,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "is_dungeon": false,
+      "jubao_spots": [
+        {
+          "key": "lvyipianjiang75",
+          "zone": "poxiao_senlin",
+          "name": "绿依偏将",
+          "monster": "lvyipianjiang75",
+          "level": 75,
+          "refresh_minutes": 60
+        }
+      ]
+    },
+    {
+      "key": "xuanyuan",
+      "name": "轩辕",
+      "desc": "轩辕古战场，32-48级区域，含轩辕台副本与二聚宝（冰甲石精/探宝）",
+      "neighbors": [
+        "nanjun",
+        "linhai",
+        "ninghaizhou",
+        "jurenye",
+        "xuanyuantai"
+      ],
+      "region_type": "field",
+      "is_dungeon": false,
+      "safe_zone": {
+        "name": "城西村"
+      },
+      "zones": [
+        {
+          "key": "chengxishan",
+          "name": "城西山",
+          "monsters": [
+            "xuediao",
+            "suiguxiongguai"
+          ],
+          "elite_monsters": [],
+          "monster_level": 35,
+          "explore_target": 35
+        },
+        {
+          "key": "yinmingshan",
+          "name": "银明山",
+          "monsters": [
+            "shangaizhaimin"
+          ],
+          "elite_monsters": [
+            "xueyushangao",
+            "shangaoshiwei"
+          ],
+          "monster_level": 38,
+          "explore_target": 35
+        },
+        {
+          "key": "dongtaobei",
+          "name": "东陶碑",
+          "monsters": [
+            "shifutujiu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 39,
+          "explore_target": 35
+        },
+        {
+          "key": "manniuye",
+          "name": "蛮牛野",
+          "monsters": [
+            "maoniu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 41,
+          "explore_target": 35
+        },
+        {
+          "key": "bingleihu",
+          "name": "冰泪湖",
+          "monsters": [
+            "tiejiadaoke",
+            "daokeantan",
+            "daokemingshao"
+          ],
+          "elite_monsters": [
+            "tiejiashiwei",
+            "tiejiadaoke"
+          ],
+          "monster_level": 45,
+          "explore_target": 35
+        },
+        {
+          "key": "xuanyuanyizhi",
+          "name": "轩辕遗址",
+          "monsters": [
+            "meihuo"
+          ],
+          "elite_monsters": [
+            "guimei"
+          ],
+          "monster_level": 45,
+          "explore_target": 35
+        },
+        {
+          "key": "daxueshan",
+          "name": "大雪山",
+          "monsters": [
+            "yimu",
+            "xueyushiyao"
+          ],
+          "elite_monsters": [],
+          "monster_level": 45,
+          "explore_target": 35
+        },
+        {
+          "key": "hushenling",
+          "name": "狐魂岭",
+          "monsters": [],
+          "elite_monsters": [
+            "yimuanwei"
+          ],
+          "monster_level": 45,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "junying",
+        "name": "军营",
+        "boss": [
+          "maoniuwang",
+          "lieguxiongwang",
+          "xuediaowang",
+          "bingji",
+          "shangaotongling",
+          "humaotongling"
+        ],
+        "monsters": [
+          "humaowushi",
+          "humaowushi",
+          "humaowushi"
+        ],
+        "elite_monsters": [
+          "humaotiewei",
+          "humaojisi"
+        ],
+        "monster_level": 48,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        },
+        "unlock_level": 48
+      },
+      "jubao_spots": [
+        {
+          "key": "bingjiashijing_spot",
+          "zone": "junying",
+          "group": "junying_bingji",
+          "name": "冰甲石精",
+          "monster": "bingjiashijing",
+          "level": 45,
+          "refresh_minutes": 53
+        },
+        {
+          "key": "tanbao_spot",
+          "zone": "junying",
+          "group": "junying_tanbao",
+          "name": "探宝",
+          "monster": "tanbao",
+          "level": 45,
+          "refresh_minutes": 60
+        }
+      ]
+    },
+    {
+      "key": "xuanyuantai",
+      "name": "轩辕台",
+      "desc": "轩辕古祭坛副本，35 级可入，头目掉落曜光护符",
+      "neighbors": [
+        "xuanyuan"
+      ],
+      "region_type": "副本",
+      "is_dungeon": false,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "xyt_z1",
+          "name": "台前石阶",
+          "monster_level": 40,
+          "monsters": [
+            "xyt_30201",
+            "xyt_30203",
+            "xyt_30204"
+          ],
+          "elite_monsters": [
+            "xyt_30208"
+          ],
+          "explore_target": 10
+        },
+        {
+          "key": "xyt_z2",
+          "name": "断碑广场",
+          "monster_level": 41,
+          "monsters": [
+            "xyt_30259"
+          ],
+          "elite_monsters": [
+            "xyt_30202",
+            "xyt_30209"
+          ],
+          "explore_target": 15
+        },
+        {
+          "key": "xyt_z2b",
+          "name": "邪祟通道",
+          "monster_level": 41,
+          "monsters": [
+            "xyt_30205",
+            "xyt_30211",
+            "xyt_30220"
+          ],
+          "elite_monsters": [
+            "xyt_30232"
+          ],
+          "explore_target": 10
+        },
+        {
+          "key": "xyt_z3",
+          "name": "残垣回廊",
+          "monster_level": 42,
+          "monsters": [],
+          "elite_monsters": [
+            "xyt_30213",
+            "xyt_30214"
+          ],
+          "explore_target": 15
+        },
+        {
+          "key": "xyt_z3b",
+          "name": "血雾走廊",
+          "monster_level": 42,
+          "monsters": [
+            "xyt_30225",
+            "xyt_30231"
+          ],
+          "elite_monsters": [
+            "xyt_30234"
+          ],
+          "explore_target": 10
+        },
+        {
+          "key": "xyt_z4",
+          "name": "血祭台",
+          "monster_level": 43,
+          "monsters": [],
+          "elite_monsters": [
+            "xyt_30228",
+            "xyt_30236"
+          ],
+          "explore_target": 15
+        },
+        {
+          "key": "xyt_z4b",
+          "name": "囚牢甬道",
+          "monster_level": 43,
+          "monsters": [
+            "xyt_30237",
+            "xyt_30250"
+          ],
+          "elite_monsters": [],
+          "explore_target": 10
+        },
+        {
+          "key": "xyt_z5",
+          "name": "祭坛深处",
+          "monster_level": 44,
+          "monsters": [],
+          "elite_monsters": [
+            "xyt_30240",
+            "xyt_30242"
+          ],
+          "explore_target": 15
+        }
+      ],
+      "enter_level_min": 35,
+      "daily_enter_limit": 3,
+      "enter_npc": "景海",
+      "enter_npc_map": "xuanyuan",
+      "dungeon_bosses": [
+        {
+          "key": "xyt_lihan",
+          "zone": "xyt_z2",
+          "name": "戾酣",
+          "monster": "xyt_30212",
+          "level": 42
+        },
+        {
+          "key": "xyt_canya",
+          "zone": "xyt_z3",
+          "name": "残牙",
+          "monster": "xyt_30230",
+          "level": 42
+        },
+        {
+          "key": "xyt_nuxue",
+          "zone": "xyt_z4",
+          "name": "怒血",
+          "monster": "xyt_30235",
+          "level": 43
+        },
+        {
+          "key": "xyt_linan",
+          "zone": "xyt_z5",
+          "name": "厉南",
+          "monster": "xyt_30255",
+          "level": 44
+        },
+        {
+          "key": "xyt_lisheng",
+          "zone": "xyt_z5",
+          "name": "厉盛",
+          "monster": "xyt_30254",
+          "level": 45
+        }
+      ]
+    },
+    {
+      "key": "donglicao",
+      "name": "东篱草原",
+      "desc": "林海以东的辽阔草原，绿依残部、胡煞游骑与翔舞使团在此角力，84~97 级区域。",
+      "region_type": "field",
+      "is_dungeon": false,
+      "zones": [
+        {
+          "key": "songlinmangyuan",
+          "name": "松林莽原",
+          "monster_level": 85,
+          "monsters": [
+            "molingshuyao84",
+            "mohunhuayao85"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "yuluhu",
+          "name": "玉绿湖",
+          "monster_level": 87,
+          "monsters": [
+            "xuelingliebao86",
+            "mohunhuayao87",
+            "huanxuexiniao88"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "lvyijunying",
+          "name": "青依军营",
+          "monster_level": 90,
+          "monsters": [
+            "lvyichihou88",
+            "lvyishaowei90",
+            "lvyishaowei89"
+          ],
+          "elite_monsters": [
+            "lvyijinwei91"
+          ],
+          "explore_target": 35
+        },
+        {
+          "key": "bingpogudao",
+          "name": "冰魄古道",
+          "monster_level": 91,
+          "monsters": [
+            "hushafubing88",
+            "hushafubing89"
+          ],
+          "elite_monsters": [
+            "hushamobing91"
+          ],
+          "explore_target": 35
+        },
+        {
+          "key": "cangfangling",
+          "name": "苍芳岭",
+          "monster_level": 91,
+          "monsters": [
+            "lijiaohuwei90",
+            "huanxuexiniao88"
+          ],
+          "elite_monsters": [
+            "tiewei91",
+            "tiewei93"
+          ],
+          "explore_target": 35
+        },
+        {
+          "key": "anyuecaoyuan",
+          "name": "暗月草原",
+          "monster_level": 94,
+          "monsters": [
+            "huanyingsuohun92",
+            "huanyingsuohun93"
+          ],
+          "elite_monsters": [
+            "tieyingsuohun94"
+          ],
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "donglicao_xiangwushichen",
+          "zone": "yemayuan",
+          "name": "翔舞使臣",
+          "monster": "xiangwushichen96",
+          "level": 96,
+          "refresh_minutes": 90
+        }
+      ],
+      "boss_zone": {
+        "key": "yemayuan",
+        "name": "野马原",
+        "boss": [
+          "lvyijiangjun93",
+          "hushacike92",
+          "hushatongling94",
+          "tieweitongling94",
+          "suohunmingwang95"
+        ],
+        "unlock_level": 95,
+        "monsters": [
+          "xuelingehu93",
+          "xiangwushituan95",
+          "xiangwumobing95"
+        ],
+        "elite_monsters": [
+          "shituananwei97",
+          "shituanshiwei96"
+        ],
+        "monster_level": 95,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "safe_zone": {
+        "name": "默颜洲",
+        "desc": "默颜洲（东篱草原安全区）"
+      },
+      "neighbors": [
+        "linhai"
+      ],
+      "no_safe_zone": false
+    },
+    {
+      "key": "langyapendi",
+      "name": "琅琊盆地",
+      "desc": "琅琊盆地，含长右村、古道、界碑林、枯竹林、七迷洞外、长股村、望海崖等，邻接宁海州与七迷洞地下城",
+      "neighbors": [
+        "ninghaizhou",
+        "qimidong_l1"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "长右村"
+      },
+      "zones": [
+        {
+          "key": "lang_ya_gu_dao",
+          "name": "琅琊古道",
+          "monsters": [
+            "shihunxiniao69",
+            "moxuetujiu68",
+            "moxuetujiu68"
+          ],
+          "elite_monsters": [],
+          "monster_level": 67,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "gu_dao_xiong_guan",
+          "name": "古道雄关",
+          "monsters": [
+            "yimubaomin68",
+            "yimubaomin68",
+            "liufengxunlie69",
+            "liufengxunlie69"
+          ],
+          "elite_monsters": [
+            "yimukuangtu70",
+            "yimuwushi71"
+          ],
+          "monster_level": 70,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "ku_se_hu",
+          "name": "苦涩湖",
+          "monsters": [
+            "shihunxiniao69",
+            "shihunshiyao71",
+            "xuelingtujiu71"
+          ],
+          "elite_monsters": [],
+          "monster_level": 70,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "jie_bei_lin",
+          "name": "界碑林",
+          "monsters": [
+            "shihunshiyao71",
+            "shihunxiniao69",
+            "huanxueshiyao72",
+            "huanxueshiyao72",
+            "shihunliegou71"
+          ],
+          "elite_monsters": [],
+          "monster_level": 71,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "zhang_you_cun_wai",
+          "name": "长右村外",
+          "monsters": [
+            "zhangyouzhaimin69",
+            "zhangyoulieshou70"
+          ],
+          "elite_monsters": [
+            "zhangyouwushi72",
+            "zhangyouyongshi73"
+          ],
+          "monster_level": 72,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "gu_dao_cun",
+          "name": "古道村",
+          "monsters": [
+            "nuleixunlie72",
+            "kuangfengxunlie73"
+          ],
+          "elite_monsters": [],
+          "monster_level": 73,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "ku_zhu_lin",
+          "name": "枯竹林",
+          "monsters": [
+            "zhangyoushouwei72",
+            "zhangyoushouwei72",
+            "zhangyouanwei73"
+          ],
+          "elite_monsters": [
+            "zhangyouzhanglao74"
+          ],
+          "monster_level": 73,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "fang_zhu_ge_bi",
+          "name": "放逐戈壁",
+          "monsters": [
+            "shiguxiniao73",
+            "shiguxiniao73",
+            "shiguliegou75"
+          ],
+          "elite_monsters": [],
+          "monster_level": 74,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "qi_mi_dong_wai",
+          "name": "七曲洞外",
+          "monsters": [],
+          "elite_monsters": [
+            "hushajingbing77",
+            "zhangyoushushi78"
+          ],
+          "monster_level": 78,
+          "explore_target": 35,
+          "boss": []
+        },
+        {
+          "key": "wang_hai_ya",
+          "name": "望海崖",
+          "monsters": [
+            "hushaqibing75",
+            "zhangyoumowei77",
+            "jifengxunlie78",
+            "yimudashou77"
+          ],
+          "elite_monsters": [
+            "zhanggushushi78",
+            "yimubaotu79",
+            "hushajingbing77",
+            "zhangguzhanglao79"
+          ],
+          "monster_level": 78,
+          "explore_target": 35,
+          "boss": []
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "changshan_jubao",
+          "zone": "zhang_gu_cun",
+          "name": "常山",
+          "monster": "changshan81",
+          "level": 81,
+          "refresh_minutes": 61
+        }
+      ],
+      "boss_zone": {
+        "key": "zhang_gu_cun",
+        "name": "长股村",
+        "boss": [
+          "anhe75",
+          "xunlietouling74",
+          "yimutouling73",
+          "hushatouling80"
+        ],
+        "unlock_level": 81,
+        "monsters": [
+          "zhanggushouwei76",
+          "zhangguanwei77"
+        ],
+        "elite_monsters": [
+          "zhangguwuzhe78",
+          "zhanggufashi79"
+        ],
+        "monster_level": 78,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "is_dungeon": false
+    },
+    {
+      "key": "qimidong_l1",
+      "name": "七曲洞一层",
+      "desc": "七迷洞的表层洞窟，分左上角/左翼廊道/北翼通道等十区，驻扎复社叛军与虫妖一族",
+      "neighbors": [
+        "langyapendi",
+        "qimidong_l2"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "xi_nan_jiao",
+          "name": "西南角",
+          "monsters": [
+            "fushehuwei1",
+            "huanxuechongguai5",
+            "huanxuechongguai6"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 75,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_nan_jiao",
+          "name": "东南角",
+          "monsters": [
+            "fushehuwei2",
+            "fushehuwei3",
+            "moxuechongguai1",
+            "moxuechongguai2"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 75,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_ce_hui_lang",
+          "name": "东侧回廊",
+          "monsters": [
+            "fusheyuanbing3",
+            "huanxuechongguai4",
+            "fusheshouwei4"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 76,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_yi_lang_dao",
+          "name": "左翼廊道",
+          "monsters": [
+            "fusheshouwei1",
+            "fusheyuanbing1",
+            "huanxuechongguai1"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 77,
+          "explore_target": 35
+        },
+        {
+          "key": "you_yi_bei_tong_dao",
+          "name": "右翼北通道",
+          "monsters": [
+            "fusheyuanbing2",
+            "huanxuechongguai3",
+            "fusheshouwei2",
+            "fusheshouwei3"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 77,
+          "explore_target": 35
+        },
+        {
+          "key": "shi_mi_dong",
+          "name": "失迷洞",
+          "monsters": [],
+          "elite_monsters": [
+            "mowei1",
+            "yuanbingjingrui1"
+          ],
+          "boss": [],
+          "monster_level": 77,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_shu_di_dai",
+          "name": "中枢地带",
+          "monsters": [],
+          "elite_monsters": [
+            "mowei2",
+            "shiguchongguai1",
+            "fushetiewei1",
+            "fushejinwei1"
+          ],
+          "boss": [],
+          "monster_level": 77,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_yi_tong_dao",
+          "name": "北翼通道",
+          "monsters": [
+            "fusheshaowei1",
+            "huanxuechongguai2",
+            "fusheanshao1"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 78,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_shang_jiao",
+          "name": "左上角",
+          "monsters": [],
+          "elite_monsters": [
+            "fusheshashou1",
+            "yuanbingshashou1",
+            "xuelingchongyao1"
+          ],
+          "boss": [],
+          "monster_level": 79,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "zhong_xin_da_ting",
+        "name": "中心大厅",
+        "boss": [
+          "fushelaozhang1",
+          "fushetongling1"
+        ],
+        "unlock_level": 77,
+        "monsters": [
+          "fushehuwei1",
+          "fushehuwei2",
+          "huanxuechongguai1"
+        ],
+        "elite_monsters": [
+          "fushejinwei2",
+          "fushetiewei2"
+        ],
+        "monster_level": 77,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "qimidong_l1_fushejisi1",
+          "zone": "zhong_xin_da_ting",
+          "name": "复社祭司",
+          "monster": "fushejisi1",
+          "level": 77,
+          "refresh_minutes": 61
+        }
+      ]
+    },
+    {
+      "key": "qimidong_l2",
+      "name": "七曲洞二层",
+      "desc": "七迷洞深层洞窟，复社叛军核心据点，3 名 BOSS（复社巫老/复社大统领/魔蛛王）+ 聚宝复社大长老",
+      "neighbors": [
+        "qimidong_l1"
+      ],
+      "unlock_map": "qimidong_l1",
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "nan_yi_ru_kou",
+          "name": "南翼入口",
+          "monsters": [
+            "fushiwushi3",
+            "fusheshushi3"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 83,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_yi_tong_dao",
+          "name": "左翼通道",
+          "monsters": [
+            "fusheshushi2",
+            "fushiwushi1",
+            "xuelingzhizhu1",
+            "xuelingzhizhu2"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 84,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_shang_jiao",
+          "name": "左上角",
+          "monsters": [
+            "fusheshiwei1",
+            "fusheshushi1",
+            "huanxuezhizhu1"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 85,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_ce_hui_lang",
+          "name": "北侧回廊",
+          "monsters": [
+            "fusheshiwei2",
+            "molingzhizhu1"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 86,
+          "explore_target": 35
+        },
+        {
+          "key": "fu_she_shen_tan",
+          "name": "赤社神坛",
+          "monsters": [],
+          "elite_monsters": [
+            "fushiwuzhe1",
+            "fushefashi1",
+            "fushiwuzhe2"
+          ],
+          "boss": [],
+          "monster_level": 87,
+          "explore_target": 35
+        },
+        {
+          "key": "you_yi_chao_xue",
+          "name": "右翼巢穴",
+          "monsters": [
+            "shiguzhizhu1",
+            "shiguzhizhu2"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 87,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_ce_shi_shi",
+          "name": "东侧石室",
+          "monsters": [
+            "yuanbingfashi1",
+            "molingzhizhu2",
+            "fusheshiwei3"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 87,
+          "explore_target": 35
+        },
+        {
+          "key": "an_tian_shen_tan",
+          "name": "暗天神坛",
+          "monsters": [],
+          "elite_monsters": [
+            "mochizhizhu1",
+            "mochizhizhu2",
+            "fusheyongshi1"
+          ],
+          "boss": [],
+          "monster_level": 88,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "ji_zu_shen_tan",
+        "name": "祭祖神坛",
+        "boss": [
+          "fushewulao1",
+          "fushedatongling1",
+          "mozhuwang1"
+        ],
+        "unlock_level": 88,
+        "monsters": [
+          "fushiwushi3",
+          "fusheshushi2",
+          "xuelingzhizhu1"
+        ],
+        "elite_monsters": [
+          "fushefashi2",
+          "fusheyongshi2",
+          "fushiwushi2",
+          "fushefashi3"
+        ],
+        "monster_level": 88,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "qimidong_l2_fushedazhanglao1",
+          "zone": "ji_zu_shen_tan",
+          "name": "复社大长老",
+          "monster": "fushedazhanglao1",
+          "level": 88,
+          "refresh_minutes": 61
+        },
+        {
+          "key": "qimidong_l2_yaojia1",
+          "zone": "ji_zu_shen_tan",
+          "name": "耀嘉",
+          "monster": "yaojia",
+          "level": 95,
+          "refresh_minutes": 119,
+          "group": "qimidong_l2_yaojia",
+          "weight": 9
+        },
+        {
+          "key": "qimidong_l2_bianyi_yaojia1",
+          "zone": "ji_zu_shen_tan",
+          "name": "变异耀嘉",
+          "monster": "bianyi_yaojia",
+          "level": 95,
+          "refresh_minutes": 119,
+          "group": "qimidong_l2_yaojia",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "key": "ninghaizhou",
+      "name": "宁海州",
+      "desc": "宁海州（44-58级）飞云山、大堰关、白暮湖、宁海州野外、遗民村、青云岭、巨兽山、三叶湖、内海湖，含首领林海使者与巡路统领，内海湖藏聚宝厉其",
+      "neighbors": [
+        "langyapendi",
+        "xuanyuan",
+        "huanhai_l1"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "遗民村"
+      },
+      "zones": [
+        {
+          "key": "fei_yun_shan",
+          "name": "飞云山",
+          "monster_level": 44,
+          "monsters": [
+            "shihunhu",
+            "shanzei",
+            "shanzei"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "qing_yun_ling",
+          "name": "青云岭",
+          "monster_level": 47,
+          "monsters": [
+            "shanzhailiushou",
+            "shanzhailiushou",
+            "zhaizhu",
+            "shanzhaitoumu"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "da_yan_guan",
+          "name": "大堰关",
+          "monster_level": 50,
+          "monsters": [
+            "shituanshouwei",
+            "shituanweishi",
+            "shituanweishi"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "bai_mu_hu",
+          "name": "白暮湖",
+          "monster_level": 50,
+          "monsters": [
+            "xunlujunshi"
+          ],
+          "elite_monsters": [
+            "xunlujinzu"
+          ],
+          "explore_target": 35
+        },
+        {
+          "key": "ning_hai_zhou_ye_wai",
+          "name": "宁海州野外",
+          "monster_level": 51,
+          "monsters": [
+            "huanxueshu",
+            "huanxueshu",
+            "tiekejiachong",
+            "nanhaishizu",
+            "nanhaishizu"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "san_ye_hu",
+          "name": "三叶湖",
+          "monster_level": 52,
+          "monsters": [
+            "nhz_huanxuehuayao",
+            "tieyifeichong",
+            "tieyiduchong",
+            "tierenchong"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "ju_shou_shan",
+          "name": "巨兽山",
+          "monster_level": 54,
+          "monsters": [
+            "shihunmenghu",
+            "tiezhaomaoyao"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        },
+        {
+          "key": "nei_hai_hu",
+          "name": "内海湖",
+          "monster_level": 57,
+          "monsters": [
+            "nanhaiyouyong",
+            "nanhaiwushi",
+            "nanhaiwushi",
+            "nanhaiyouyong"
+          ],
+          "elite_monsters": [],
+          "explore_target": 35
+        }
+      ],
+      "is_dungeon": false,
+      "boss_zone": {
+        "key": "ninghaizhou_shouling",
+        "name": "宁海州·首领区",
+        "boss": [
+          "linhaishizhe",
+          "xunlutongling"
+        ],
+        "monsters": [
+          "shituanshouwei",
+          "shituanweishi",
+          "xunlujunshi"
+        ],
+        "elite_monsters": [
+          "xunlujinzu"
+        ],
+        "monster_level": 51,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        },
+        "unlock_level": 51
+      },
+      "jubao_spots": [
+        {
+          "key": "ninghaizhou_jubao",
+          "zone": "ninghaizhou_shouling",
+          "name": "厉其",
+          "monster": "liqi",
+          "level": 58,
+          "refresh_minutes": 57
+        }
+      ]
+    },
+    {
+      "key": "xilie",
+      "name": "西莽荒原",
+      "desc": "荒原与村落交织的战场，阪泉以南的高阶区域（47-62级）",
+      "neighbors": [
+        "banquan",
+        "fuxiling_mudao"
+      ],
+      "region_type": "field",
+      "safe_zone": {
+        "name": "神农村"
+      },
+      "zones": [
+        {
+          "key": "jing_shui_hu",
+          "name": "静水湖",
+          "monsters": [
+            "tiezhaolieying",
+            "shixuexiongguai",
+            "shiguxiong",
+            "shiguying"
+          ],
+          "elite_monsters": [],
+          "monster_level": 51,
+          "explore_target": 35
+        },
+        {
+          "key": "luan_shi_gang",
+          "name": "乱石岗",
+          "monsters": [
+            "lihuoshiyao",
+            "zhuohuoshiyao",
+            "hanfei",
+            "haganjufeitu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 54,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_yi_cun",
+          "name": "东黎村",
+          "monsters": [
+            "dongyiwushi",
+            "dongyiwushi",
+            "dongyiwushi"
+          ],
+          "elite_monsters": [],
+          "monster_level": 55,
+          "explore_target": 35
+        },
+        {
+          "key": "huang_lin",
+          "name": "荒林",
+          "monsters": [
+            "huangyeshangao",
+            "huangyeshangao",
+            "jienuaxiong"
+          ],
+          "elite_monsters": [],
+          "monster_level": 55,
+          "explore_target": 35
+        },
+        {
+          "key": "shan_jiao_cun",
+          "name": "山角村",
+          "monsters": [
+            "qiangdaoloulou",
+            "shangaolieshou",
+            "shangaowushi"
+          ],
+          "elite_monsters": [],
+          "monster_level": 57,
+          "explore_target": 35
+        },
+        {
+          "key": "huang_sha_ling",
+          "name": "黄沙岭",
+          "monsters": [
+            "hanfei",
+            "hanfei"
+          ],
+          "elite_monsters": [],
+          "monster_level": 58,
+          "explore_target": 35
+        },
+        {
+          "key": "ku_mu_lin",
+          "name": "枯木林",
+          "monsters": [
+            "lihuoshiyao",
+            "tanbaoyimu",
+            "tanbaoyimu",
+            "tanbaoyimu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 58,
+          "explore_target": 35
+        },
+        {
+          "key": "chi_yi_ling",
+          "name": "赤夷岭",
+          "monsters": [
+            "xiangwuermu",
+            "xiangwuermu",
+            "xiangwuermu"
+          ],
+          "elite_monsters": [],
+          "monster_level": 62,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "xilie_shouling",
+        "name": "西烈荒原·首领区",
+        "boss": [
+          "yongshi",
+          "jurentouling",
+          "dumu",
+          "qiangdaotoumu",
+          "shangaozhaizhu"
+        ],
+        "unlock_level": 62,
+        "monsters": [
+          "huangyeshangao",
+          "qiangdaoloulou",
+          "lihuoshiyao",
+          "tanbaoyimu"
+        ],
+        "elite_monsters": [
+          "xiangwuermu",
+          "dongyiwushi",
+          "shangaolieshou",
+          "shangaowushi"
+        ],
+        "monster_level": 62,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "xilie_jubao",
+          "zone": "xilie_shouling",
+          "name": "燕闻",
+          "monster": "yanwen",
+          "level": 62,
+          "refresh_minutes": 58
+        }
+      ],
+      "is_dungeon": false
+    },
+    {
+      "key": "fuxiling_mudao",
+      "name": "伏羲陵墓道",
+      "desc": "伏羲陵中层墓道，分迷窟/北侧墓道/东北墓室等七区，3 名 BOSS（幻目/恶目/贪目）",
+      "neighbors": [
+        "xilie",
+        "fuxiling_shangceng"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "xi_nan_mu_dao",
+          "name": "西南墓道",
+          "monsters": [
+            "xunbaolvyi3",
+            "daomulvyi1",
+            "lingmuzhizhu2"
+          ],
+          "elite_monsters": [],
+          "monster_level": 51,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_ce_mu_dao",
+          "name": "左侧墓道",
+          "monsters": [
+            "xunbaolvyi1",
+            "daomuzei3",
+            "daomuzei4"
+          ],
+          "elite_monsters": [],
+          "monster_level": 52,
+          "explore_target": 35
+        },
+        {
+          "key": "you_ce_mu_dao",
+          "name": "右侧墓道",
+          "monsters": [
+            "lingmuzhizhu1",
+            "xunbaolvyi2"
+          ],
+          "elite_monsters": [],
+          "monster_level": 52,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_ce_mu_dao",
+          "name": "北侧墓道",
+          "monsters": [
+            "daomuzei1",
+            "daomuzei2"
+          ],
+          "elite_monsters": [
+            "daodouzei1"
+          ],
+          "monster_level": 53,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_bei_mu_shi",
+          "name": "东北墓室",
+          "monsters": [
+            "wanglinglvyi1"
+          ],
+          "elite_monsters": [
+            "moyinglvyi1",
+            "mojinzei3"
+          ],
+          "monster_level": 54,
+          "explore_target": 35
+        },
+        {
+          "key": "mi_ku",
+          "name": "迷窟",
+          "monsters": [
+            "huanlingyimu1",
+            "mojinzei1",
+            "mojinzei2"
+          ],
+          "elite_monsters": [],
+          "monster_level": 55,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "dong_nan_mu_dao",
+        "name": "东南墓道",
+        "boss": [
+          "huanmu1",
+          "emu1",
+          "tanmu1"
+        ],
+        "unlock_level": 52,
+        "monsters": [
+          "daomuzei5",
+          "daomulvyi2",
+          "lingmuzhizhu3"
+        ],
+        "elite_monsters": [
+          "daodouzei1",
+          "moyinglvyi1",
+          "mojinzei3"
+        ],
+        "monster_level": 52,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "fuxiling_mudao_xiongmu1",
+          "zone": "dong_nan_mu_dao",
+          "name": "凶目",
+          "monster": "xiongmu1",
+          "level": 55,
+          "refresh_minutes": 59
+        }
+      ]
+    },
+    {
+      "key": "dongfu_tianzun",
+      "name": "天罗洞府",
+      "desc": "天尊遗留的洞府，机关重重，强敌环伺，深处有聚宝天尊长老镇守。",
+      "neighbors": [
+        "chishui"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "zones": [
+        {
+          "key": "nan_bu_tong_dao",
+          "name": "南部通道",
+          "monsters": [
+            "tianzunshouwei"
+          ],
+          "elite_monsters": [
+            "dongfuwushi"
+          ],
+          "monster_level": 90,
+          "explore_target": 35
+        },
+        {
+          "key": "hui_lang",
+          "name": "回廊",
+          "monsters": [
+            "jurenshouwei"
+          ],
+          "elite_monsters": [
+            "jupu"
+          ],
+          "monster_level": 90,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_xin_qu_yu",
+          "name": "中心区域",
+          "monsters": [
+            "tianzunhuwei"
+          ],
+          "elite_monsters": [
+            "tiebi"
+          ],
+          "monster_level": 92,
+          "explore_target": 35
+        },
+        {
+          "key": "you_ce_qu_yu",
+          "name": "右侧区域",
+          "monsters": [
+            "xunshao",
+            "lizhao"
+          ],
+          "elite_monsters": [
+            "moyi"
+          ],
+          "monster_level": 93,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_xia_qu_yu",
+          "name": "左下区域",
+          "monsters": [
+            "dongfufashi"
+          ],
+          "elite_monsters": [],
+          "monster_level": 93,
+          "explore_target": 35
+        },
+        {
+          "key": "you_xia_qu_yu",
+          "name": "右下区域",
+          "monsters": [
+            "lijiaohujun"
+          ],
+          "elite_monsters": [
+            "hujuntongling"
+          ],
+          "monster_level": 93,
+          "explore_target": 35
+        },
+        {
+          "key": "cang_fang",
+          "name": "仓房",
+          "monsters": [],
+          "elite_monsters": [
+            "tianzunjinwei"
+          ],
+          "monster_level": 94,
+          "explore_target": 35
+        },
+        {
+          "key": "di_bu_da_ting",
+          "name": "底部大厅",
+          "monsters": [
+            "moyu"
+          ],
+          "elite_monsters": [
+            "juhui"
+          ],
+          "monster_level": 94,
+          "explore_target": 35
+        }
+      ],
+      "no_safe_zone": true,
+      "jubao_spots": [
+        {
+          "key": "dongfu_tianzun_jb_tianzunzhanglao95",
+          "name": "天尊长老",
+          "monster": "tianzunzhanglao",
+          "level": 95,
+          "refresh_minutes": 85,
+          "zone": "xing_fang"
+        },
+        {
+          "key": "dongfu_tianzun_jb_tianzun95",
+          "zone": "xing_fang",
+          "name": "天尊",
+          "monster": "tianzun",
+          "level": 95,
+          "refresh_minutes": 127,
+          "group": "dongfu_tianzun_tianzun",
+          "weight": 9
+        },
+        {
+          "key": "dongfu_tianzun_jb_bianyi_tianzun95",
+          "zone": "xing_fang",
+          "name": "变异天尊",
+          "monster": "bianyi_tianzun",
+          "level": 95,
+          "refresh_minutes": 127,
+          "group": "dongfu_tianzun_tianzun",
+          "weight": 1
+        }
+      ],
+      "boss_zone": {
+        "key": "xing_fang",
+        "name": "天尊洞府·首领区",
+        "boss": [
+          "dongfutongling",
+          "dongfuwulao",
+          "tianzunhufa",
+          "tianzunjisi"
+        ],
+        "unlock_level": 95,
+        "monsters": [
+          "jurenshouwei",
+          "tianzunhuwei",
+          "tianzunshouwei"
+        ],
+        "elite_monsters": [
+          "tianzuntiewei",
+          "hujuntongling",
+          "jupu",
+          "dongfuwushi",
+          "juhui",
+          "moyi",
+          "tianzunmowei",
+          "tianzunjinwei",
+          "tiebi"
+        ],
+        "monster_level": 95,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "fuxiling_shangceng",
+      "name": "伏羲陵上层",
+      "desc": "伏羲陵上层（L58-66），分西北角/北部/东北角/天坛/地坛/西南角/东南角七区，多 BOSS 据点",
+      "neighbors": [
+        "fuxiling_mudao",
+        "fuxiling_xiaceng"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "unlock_map": "fuxiling_mudao",
+      "zones": [
+        {
+          "key": "xi_nan_jiao",
+          "name": "西南角",
+          "monsters": [
+            "guiyuanshouwei1",
+            "lingmuxiezi1",
+            "yanweishouwei1",
+            "xunbaojuren1"
+          ],
+          "elite_monsters": [
+            "wanglingguiyuan1"
+          ],
+          "monster_level": 58,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_bu",
+          "name": "北部",
+          "monsters": [
+            "yanweihushi1",
+            "yanweihushi2",
+            "huanxueyanwei1",
+            "lingmuduxie1"
+          ],
+          "elite_monsters": [],
+          "monster_level": 61,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_bei_jiao",
+          "name": "东北角",
+          "monsters": [
+            "yanweianwei1",
+            "lingmuduxie2"
+          ],
+          "elite_monsters": [
+            "yanweijinwei1"
+          ],
+          "monster_level": 61,
+          "explore_target": 35
+        },
+        {
+          "key": "di_tan",
+          "name": "地坛",
+          "monsters": [
+            "lingmushiyao2"
+          ],
+          "elite_monsters": [
+            "guiyuanjinwei1",
+            "tiexueyanwei1",
+            "daomujuren1",
+            "daomujuren2"
+          ],
+          "monster_level": 61,
+          "explore_target": 35
+        },
+        {
+          "key": "tian_tan",
+          "name": "天坛",
+          "monsters": [
+            "lingmushiyao1"
+          ],
+          "elite_monsters": [
+            "yanweijinwei2"
+          ],
+          "monster_level": 62,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_bei_jiao",
+          "name": "西北角",
+          "monsters": [],
+          "elite_monsters": [
+            "mojinjuren1",
+            "anyingguiyuan1",
+            "yanweijinwei1",
+            "yanweijinwei2",
+            "guiyuanjinwei1",
+            "tiexueyanwei1",
+            "daomujuren1",
+            "daomujuren2",
+            "wanglingguiyuan1",
+            "daodoujuren1",
+            "mojinjuren2"
+          ],
+          "monster_level": 64,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "dong_nan_jiao",
+        "name": "东南角",
+        "monsters": [
+          "duobaojuren1"
+        ],
+        "elite_monsters": [
+          "daodoujuren1",
+          "mojinjuren2"
+        ],
+        "monster_level": 64,
+        "explore_target": 35,
+        "boss": [
+          "wanglingtongling1",
+          "yanweijisi1",
+          "qiannianguiyuan1",
+          "yanweiwulao1",
+          "qingtian1",
+          "juli1"
+        ],
+        "unlock_level": 65,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "guyuanshiwang_jubao",
+          "zone": "dong_nan_jiao",
+          "name": "孤怨尸王",
+          "monster": "guyuanshiwang1",
+          "level": 66,
+          "refresh_minutes": 60
+        }
+      ]
+    },
+    {
+      "key": "fuxiling_xiaceng",
+      "name": "伏羲陵下层",
+      "desc": "伏羲陵下层（L70-76），分西北角/北部/东北角/左翼/右翼/西南角/东南角/伏羲坛九区，多 BOSS 据点",
+      "is_dungeon": true,
+      "region_type": "dungeon",
+      "no_safe_zone": true,
+      "unlock_map": "fuxiling_shangceng",
+      "zones": [
+        {
+          "key": "xi_bei_jiao",
+          "name": "西北角",
+          "monsters": [
+            "wanglingjuxi1",
+            "wanglingxiyi1"
+          ],
+          "elite_monsters": [
+            "wanglingjuxi1"
+          ],
+          "monster_level": 72,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_bu",
+          "name": "北部",
+          "monsters": [
+            "mollingshiyao1",
+            "wanglingshiyao1"
+          ],
+          "elite_monsters": [
+            "mollingshiyao1"
+          ],
+          "boss": [],
+          "monster_level": 72,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_yi",
+          "name": "左翼",
+          "monsters": [
+            "wanglingshouwei1",
+            "wanglingfashi1",
+            "wanglingtiewei1",
+            "wanglingtiewei2",
+            "wanglingfashi2",
+            "wanglingshouwei2"
+          ],
+          "elite_monsters": [
+            "wanglingfashi1",
+            "wanglingtiewei1",
+            "wanglingtiewei2",
+            "wanglingfashi2"
+          ],
+          "monster_level": 72,
+          "explore_target": 35
+        },
+        {
+          "key": "you_yi",
+          "name": "右翼",
+          "monsters": [
+            "wanglingshouwei3",
+            "wanglingshouwei4",
+            "wanglingfashi3",
+            "wanglingtiewei4"
+          ],
+          "elite_monsters": [
+            "wanglingtiewei4"
+          ],
+          "boss": [],
+          "monster_level": 72,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_nan_jiao",
+          "name": "西南角",
+          "monsters": [
+            "ningfengxunlie1",
+            "ningfengxunlie2",
+            "huanfengxunlie1",
+            "xunliewushi2"
+          ],
+          "elite_monsters": [
+            "xunliewushi2"
+          ],
+          "boss": [],
+          "monster_level": 72,
+          "explore_target": 35
+        },
+        {
+          "key": "nan_bu",
+          "name": "南部",
+          "monsters": [
+            "mollingshiyao2",
+            "wanglingshiyao2",
+            "wanglingshiyao3"
+          ],
+          "elite_monsters": [
+            "mollingshiyao2"
+          ],
+          "boss": [],
+          "monster_level": 72,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_nan_jiao",
+          "name": "东南角",
+          "monsters": [
+            "ningfengxunlie3",
+            "xunliewushi3",
+            "xunliewushi_22"
+          ],
+          "elite_monsters": [
+            "xunliewushi3",
+            "xunliewushi_22"
+          ],
+          "monster_level": 72,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "wanglingjisi_jubao",
+          "zone": "dong_bei_jiao",
+          "name": "皇陵祭司",
+          "monster": "wanglingjisi1",
+          "level": 75,
+          "refresh_minutes": 60
+        }
+      ],
+      "neighbors": [
+        "fuxiling_shangceng"
+      ],
+      "boss_zone": {
+        "key": "dong_bei_jiao",
+        "name": "东北角",
+        "monsters": [
+          "wanglingshouwei1",
+          "wanglingshiyao1",
+          "ningfengxunlie1"
+        ],
+        "elite_monsters": [
+          "xunliewushi1",
+          "xunliewushi_21"
+        ],
+        "monster_level": 73,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        },
+        "boss": [
+          "juxiwang1",
+          "fengmo1",
+          "wanglingjiangjun1",
+          "yanweishenshi1",
+          "wanglingjunshi1",
+          "moyushiyao1",
+          "guoyunshichen1",
+          "fengchi1"
+        ],
+        "unlock_level": 75
+      }
+    },
+    {
+      "key": "qingyunzhai_l1",
+      "name": "青云寨一层",
+      "desc": "青云寨一层（35-39级）",
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "neighbors": [
+        "qingyunzhai_l2",
+        "nanjun"
+      ],
+      "zones": [
+        {
+          "key": "you_xia_jiao",
+          "name": "右下角",
+          "monsters": [
+            "duzhizhu34",
+            "maomindaoke35",
+            "shangaodaoke34"
+          ],
+          "elite_monsters": [],
+          "monster_level": 35,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_xia_jiao",
+          "name": "左下角",
+          "monsters": [
+            "anyingshangao35"
+          ],
+          "elite_monsters": [
+            "shangaoshashou37",
+            "jurenshashou36"
+          ],
+          "monster_level": 37,
+          "explore_target": 35
+        },
+        {
+          "key": "zhao_hun_dian",
+          "name": "招魂殿",
+          "monsters": [
+            "maomindaoke35",
+            "shangaodaoke36"
+          ],
+          "elite_monsters": [],
+          "monster_level": 37,
+          "explore_target": 35
+        },
+        {
+          "key": "you_ce_tong_dao",
+          "name": "右侧通道",
+          "monsters": [
+            "jurendaoke35",
+            "anyingshangao35"
+          ],
+          "elite_monsters": [],
+          "monster_level": 37,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_shu_di_dai",
+          "name": "中枢地带",
+          "monsters": [
+            "shangaodaoke35",
+            "duzhizhu35",
+            "shixuezhizhu36"
+          ],
+          "elite_monsters": [
+            "juduzhizhu35"
+          ],
+          "monster_level": 37,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_ce_ru_kou",
+          "name": "左侧入口",
+          "monsters": [
+            "anyingshangao35",
+            "shangaodaoke36"
+          ],
+          "elite_monsters": [],
+          "monster_level": 38,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [],
+      "boss_zone": {
+        "key": "you_shang_jiao",
+        "name": "右上角·BOSS",
+        "boss": [
+          "canxuedaoke38",
+          "nuhuodaoke37",
+          "biaoketouling39",
+          "duanshoudaoke37",
+          "lengxuedaoke37"
+        ],
+        "unlock_level": 39,
+        "monsters": [
+          "anyingshangao35",
+          "shangaodaoke36",
+          "anyingshangao35",
+          "maomindaoke35",
+          "shangaodaoke36",
+          "jurendaoke35",
+          "anyingshangao35",
+          "shangaodaoke35",
+          "duzhizhu35",
+          "shixuezhizhu36",
+          "duzhizhu34",
+          "maomindaoke35",
+          "shangaodaoke34"
+        ],
+        "elite_monsters": [
+          "maominshashou37",
+          "juduzhizhu35",
+          "shangaoshashou37",
+          "maominshashou38",
+          "jurenshashou36"
+        ],
+        "monster_level": 39,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      }
+    },
+    {
+      "key": "qingyunzhai_l2",
+      "name": "青云寨二层",
+      "desc": "青云寨二层（46-51级）",
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "neighbors": [
+        "qingyunzhai_l1",
+        "qingyunzhai_l3"
+      ],
+      "zones": [
+        {
+          "key": "zuo_xia_tong_dao",
+          "name": "左下通道",
+          "monsters": [
+            "tieqiangdaoke45",
+            "tieqiangdaoke46",
+            "lichifeichong45"
+          ],
+          "elite_monsters": [],
+          "monster_level": 46,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_bu_da_dian",
+          "name": "中部大殿",
+          "monsters": [
+            "lichifeichong45",
+            "lichifeichong46",
+            "tieqiangdaoke47"
+          ],
+          "elite_monsters": [],
+          "monster_level": 47,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_shang_jiao",
+          "name": "左上角",
+          "monsters": [],
+          "elite_monsters": [
+            "xunzhaiyimu46",
+            "tieyingdaoke46",
+            "mojiadaoke47"
+          ],
+          "monster_level": 48,
+          "explore_target": 35
+        },
+        {
+          "key": "you_ce_tong_dao",
+          "name": "右侧通道",
+          "monsters": [
+            "tiejiadaoke48",
+            "tiejiadaoke49",
+            "moxuedaoke49"
+          ],
+          "elite_monsters": [],
+          "monster_level": 50,
+          "explore_target": 35
+        },
+        {
+          "key": "you_shang_jiao",
+          "name": "右上角",
+          "monsters": [],
+          "elite_monsters": [
+            "xunzhaiyimu48",
+            "xunzhaiyimu49",
+            "moxuedaoke49"
+          ],
+          "monster_level": 50,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_bu_tong_dao",
+          "name": "北部通道",
+          "monsters": [],
+          "elite_monsters": [
+            "tieyingdaoke50",
+            "molingdaoke51"
+          ],
+          "monster_level": 51,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "qingyunzhai_l2_jb_duobao51",
+          "name": "夺宝",
+          "monster": "duobao51",
+          "level": 51,
+          "refresh_minutes": 55,
+          "zone": "nan_bu_dong_shi"
+        }
+      ],
+      "boss_zone": {
+        "key": "nan_bu_dong_shi",
+        "name": "南部洞室·BOSS",
+        "boss": [
+          "zhuimingdaoke48",
+          "chonghou47",
+          "duomingdaoke50",
+          "yimutongling50"
+        ],
+        "unlock_level": 51,
+        "monsters": [
+          "lichifeichong45",
+          "lichifeichong46",
+          "tieqiangdaoke47",
+          "tieqiangdaoke45",
+          "tieqiangdaoke46",
+          "lichifeichong45",
+          "tiejiadaoke48",
+          "tiejiadaoke49",
+          "moxuedaoke49"
+        ],
+        "elite_monsters": [
+          "tieyingdaoke46",
+          "molingdaoke51",
+          "tieyingdaoke50",
+          "mojiadaoke47",
+          "xunzhaiyimu48",
+          "duobaoyimu50",
+          "moxuedaoke49",
+          "xunzhaiyimu46",
+          "daobaoyimu49",
+          "xunzhaiyimu49"
+        ],
+        "monster_level": 51,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "unlock_map": "qingyunzhai_l1"
+    },
+    {
+      "key": "qingyunzhai_l3",
+      "name": "青云寨三层",
+      "desc": "青云寨三层（57-61级）",
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "neighbors": [
+        "qingyunzhai_l2"
+      ],
+      "zones": [
+        {
+          "key": "xi_bei_jiao",
+          "name": "西北角",
+          "monsters": [
+            "jinjiadaoke56n",
+            "jinjiadaoke57n"
+          ],
+          "elite_monsters": [
+            "xuexie55",
+            "shixuemaoxie56",
+            "jinjiashashou57"
+          ],
+          "monster_level": 57,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_nan_jiao",
+          "name": "东南角",
+          "monsters": [
+            "jinjiadaoke57n",
+            "jinjiadaoke58n"
+          ],
+          "elite_monsters": [
+            "jinjiadaoke56",
+            "lijiaoxuewei57",
+            "lijiaotiewei57"
+          ],
+          "monster_level": 58,
+          "explore_target": 35
+        },
+        {
+          "key": "zhan_hun_dian",
+          "name": "战魂殿",
+          "monsters": [
+            "jinjiadaoke56n",
+            "jinjiadaoke58n"
+          ],
+          "elite_monsters": [
+            "shixuemaoxie56",
+            "huanjiadaoke55",
+            "moyingdaoke57"
+          ],
+          "monster_level": 59,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_bei_jiao",
+          "name": "东北角",
+          "monsters": [
+            "jinjiadaoke57n",
+            "jinjiadaoke58n"
+          ],
+          "elite_monsters": [
+            "huanjiadaoke56",
+            "huanjiadaoke56",
+            "jinjiashashou60"
+          ],
+          "monster_level": 60,
+          "explore_target": 35
+        }
+      ],
+      "jubao_spots": [
+        {
+          "key": "qingyunzhai_l3_jb_lijiaotongling59",
+          "zone": "xi_nan_jiao",
+          "name": "厉角统领",
+          "monster": "lijiaotongling59",
+          "level": 59,
+          "refresh_minutes": 61
+        }
+      ],
+      "boss_zone": {
+        "key": "xi_nan_jiao",
+        "name": "西南角·BOSS",
+        "boss": [
+          "kuangzhandaoke59",
+          "kuangtudaoke61",
+          "kuanglongdaoke58"
+        ],
+        "unlock_level": 61,
+        "monsters": [
+          "jinjiadaoke56n",
+          "jinjiadaoke57n",
+          "jinjiadaoke58n"
+        ],
+        "elite_monsters": [
+          "jinjiadaoke56",
+          "huanjiadaoke56",
+          "lijiaotiewei57",
+          "huanjiadaoke55",
+          "xuexie55",
+          "lijiaotiewei59",
+          "shixuemaoxie56",
+          "jinjiashashou60",
+          "jinjiashashou57",
+          "moyingdaoke57",
+          "lijiaoxuewei57"
+        ],
+        "monster_level": 61,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "unlock_map": "qingyunzhai_l2"
+    },
+    {
+      "key": "dongfu_yaowang_1",
+      "name": "药王阁·一层",
+      "desc": "药王殿一层，殿中药香弥漫，暗藏杀机。",
+      "neighbors": [
+        "muxiuyulin",
+        "dongfu_yaowang_2"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "boss_zone": {
+        "key": "feng_xian_dian",
+        "name": "药王殿·一层·首领区",
+        "boss": [
+          "fengxiandianjiangjun",
+          "yuanshi"
+        ],
+        "monsters": [
+          "lvyipuyi_164",
+          "dianqianshouwei_164",
+          "zhanggupuyi_164"
+        ],
+        "elite_monsters": [
+          "zhengdianhuwei_167",
+          "hufa_168",
+          "zhengdianhuwei_168",
+          "hufa_169",
+          "hufa_170",
+          "cedianshouhu_165",
+          "anyinglvyi",
+          "anyingzhanggu",
+          "cedianshouhu_167",
+          "huweizhang",
+          "dadianhuwei_166",
+          "dadianhuwei_167",
+          "weizhang"
+        ],
+        "monster_level": 71,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        },
+        "unlock_level": 69
+      },
+      "jubao_spots": [
+        {
+          "key": "fengxiandiandianshi",
+          "zone": "feng_xian_dian",
+          "name": "奉贤殿殿师",
+          "monster": "fengxiandiandianshi",
+          "level": 71,
+          "refresh_minutes": 60
+        }
+      ],
+      "zones": [
+        {
+          "key": "dong_bei_ce",
+          "name": "东北侧",
+          "monsters": [
+            "lvyipuyi_164",
+            "lvyipuyi_165"
+          ],
+          "elite_monsters": [
+            "cedianshouhu_165",
+            "anyinglvyi"
+          ],
+          "monster_level": 66,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_nan_ce",
+          "name": "东南侧",
+          "monsters": [
+            "dianqianshouwei_164",
+            "dianqianshouwei_165"
+          ],
+          "elite_monsters": [
+            "weizhang"
+          ],
+          "monster_level": 66,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_nan_ce",
+          "name": "西南侧",
+          "monsters": [
+            "zhanggupuyi_164",
+            "zhanggupuyi_165"
+          ],
+          "elite_monsters": [
+            "anyingzhanggu",
+            "cedianshouhu_167"
+          ],
+          "monster_level": 67,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_yang_zhu_ting",
+          "name": "中央主厅",
+          "monsters": [
+            "shangaopuyi"
+          ],
+          "elite_monsters": [
+            "huweizhang",
+            "dadianhuwei_166",
+            "dadianhuwei_167"
+          ],
+          "monster_level": 67,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_bei_ce",
+          "name": "西北侧",
+          "monsters": [],
+          "elite_monsters": [
+            "zhengdianhuwei_167",
+            "hufa_168",
+            "zhengdianhuwei_168",
+            "hufa_169",
+            "hufa_170"
+          ],
+          "monster_level": 70,
+          "explore_target": 35
+        }
+      ]
+    },
+    {
+      "key": "dongfu_yaowang_2",
+      "name": "药王阁·二层",
+      "desc": "药王殿二层，殿中药香弥漫，暗藏杀机。",
+      "neighbors": [
+        "dongfu_yaowang_1"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "boss_zone": {
+        "key": "you_xia_jiao",
+        "name": "药王殿·二层·首领区",
+        "boss": [
+          "yingkong",
+          "yingsha",
+          "siying",
+          "panmenzhanglao",
+          "canying",
+          "heimu"
+        ],
+        "monsters": [
+          "yaotong",
+          "yimupuyi",
+          "xiangwupuyi"
+        ],
+        "elite_monsters": [
+          "tieyixiangwu_286",
+          "anyinglingyi",
+          "tieyixiangwu_286_2",
+          "lihun",
+          "jiyingsuohun",
+          "tanfengxiangwu",
+          "yaoshi",
+          "huanyingsuohun_285",
+          "xunyaoyimu",
+          "anyingdaozei",
+          "yaowangdiandaofei_285",
+          "yaowangdiandaofei_286",
+          "daofeiwushi"
+        ],
+        "monster_level": 88,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        },
+        "unlock_level": 88
+      },
+      "jubao_spots": [
+        {
+          "key": "jiaomu",
+          "zone": "you_xia_jiao",
+          "name": "骄目",
+          "monster": "jiaomu",
+          "level": 88,
+          "refresh_minutes": 60
+        },
+        {
+          "key": "yumo",
+          "zone": "you_xia_jiao",
+          "name": "狱魔",
+          "monster": "yumo",
+          "level": 95,
+          "refresh_minutes": 127,
+          "group": "yaowang_yumo",
+          "weight": 9
+        },
+        {
+          "key": "bianyi_yumo",
+          "zone": "you_xia_jiao",
+          "name": "变异狱魔",
+          "monster": "bianyi_yumo",
+          "level": 95,
+          "refresh_minutes": 127,
+          "group": "yaowang_yumo",
+          "weight": 1
+        }
+      ],
+      "zones": [
+        {
+          "key": "zhong_xia_bu",
+          "name": "中下部",
+          "monsters": [
+            "yaotong",
+            "yimupuyi"
+          ],
+          "elite_monsters": [
+            "xunyaoyimu"
+          ],
+          "monster_level": 84,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_shang_qu_yu",
+          "name": "中上区域",
+          "monsters": [
+            "xiangwupuyi"
+          ],
+          "elite_monsters": [
+            "tanfengxiangwu",
+            "yaoshi"
+          ],
+          "monster_level": 85,
+          "explore_target": 35
+        },
+        {
+          "key": "you_shang_jiao",
+          "name": "右上角",
+          "monsters": [
+            "daoyaozei"
+          ],
+          "elite_monsters": [
+            "anyingdaozei"
+          ],
+          "monster_level": 85,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_zuo_bu",
+          "name": "中左部",
+          "monsters": [
+            "huanyingsuohun_284"
+          ],
+          "elite_monsters": [
+            "huanyingsuohun_285"
+          ],
+          "monster_level": 86,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_ce",
+          "name": "左侧",
+          "monsters": [
+            "duoyaoxiangwu"
+          ],
+          "elite_monsters": [
+            "tieyixiangwu_286_2"
+          ],
+          "monster_level": 87,
+          "explore_target": 35
+        },
+        {
+          "key": "shen_nong_dian",
+          "name": "神农殿",
+          "monsters": [],
+          "elite_monsters": [
+            "lihun",
+            "jiyingsuohun"
+          ],
+          "monster_level": 87,
+          "explore_target": 35
+        },
+        {
+          "key": "zuo_shang_jiao",
+          "name": "左上角",
+          "monsters": [],
+          "elite_monsters": [
+            "tieyixiangwu_286",
+            "anyinglingyi"
+          ],
+          "monster_level": 88,
+          "explore_target": 35
+        }
+      ]
+    },
+    {
+      "key": "huanhai_l1",
+      "name": "幻月海一层",
+      "desc": "幻海第1层，深海秘境，强敌环伺。",
+      "neighbors": [
+        "ninghaizhou",
+        "huanhai_l2"
+      ],
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "zuo_shang_jiao",
+          "name": "左上角",
+          "monsters": [
+            "xunhaiermu",
+            "xunhaishibing"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 92,
+          "explore_target": 35
+        },
+        {
+          "key": "you_shang_jiao",
+          "name": "右上角",
+          "monsters": [
+            "xunhaiermu",
+            "xunhaishibing"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 92,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_shang_bu",
+          "name": "中上部",
+          "monsters": [
+            "qianhaijuxie",
+            "qianhaidaoqi",
+            "qianhaihaigui"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 93,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_zuo_bu",
+          "name": "中左部",
+          "monsters": [
+            "qianhaijuxie",
+            "qianhaidaoqi",
+            "qianhaihaigui"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 93,
+          "explore_target": 35
+        },
+        {
+          "key": "hai_di_wei_suo",
+          "name": "海底卫所",
+          "monsters": [
+            "hailingxie",
+            "haironggui"
+          ],
+          "elite_monsters": [
+            "xunhaifujiang",
+            "xunhaiqinbing"
+          ],
+          "boss": [],
+          "monster_level": 95,
+          "explore_target": 35
+        },
+        {
+          "key": "you_du_hai_kou",
+          "name": "右渡海口",
+          "monsters": [
+            "qianhaidaoqi",
+            "qianhaihaigui",
+            "lichidaoqi",
+            "lingjiaronggui"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 97,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "zuo_du_hai_kou",
+        "name": "幻海一层·首领区",
+        "boss": [
+          "hanmoxianfeng"
+        ],
+        "unlock_level": 100,
+        "monsters": [
+          "hailingxie",
+          "haironggui",
+          "houjiadaoqi",
+          "lichidaoqi",
+          "lingjiaronggui"
+        ],
+        "elite_monsters": [
+          "xunhaifujiang",
+          "xunhaiqinbing",
+          "hanmotanzi",
+          "hanmoshushi",
+          "hanmodouzu"
+        ],
+        "monster_level": 100,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "huanhai_l1_jb_xunhaijiangjun",
+          "zone": "zuo_du_hai_kou",
+          "name": "巡海将军",
+          "monster": "xunhaijiangjun",
+          "level": 96,
+          "refresh_minutes": 120
+        },
+        {
+          "key": "huanhai_l1_jb_xueewang",
+          "zone": "zuo_du_hai_kou",
+          "name": "血颚王",
+          "monster": "xueewang",
+          "level": 100,
+          "refresh_minutes": 130
+        }
+      ]
+    },
+    {
+      "key": "huanhai_l2",
+      "name": "幻月海二层",
+      "desc": "幻海第2层，深海秘境，强敌环伺。",
+      "neighbors": [
+        "huanhai_l1",
+        "huanhai_l3"
+      ],
+      "unlock_map": "huanhai_l1",
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "zuo_yi_shui_yu",
+          "name": "左翼水域",
+          "monsters": [
+            "tanhaijingbing",
+            "tanhaijiaobing"
+          ],
+          "elite_monsters": [
+            "tanhaitoumu",
+            "tanhaijinsui",
+            "tanhaihucong"
+          ],
+          "boss": [],
+          "monster_level": 102,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_bu_hai_yu",
+          "name": "北部海域",
+          "monsters": [
+            "shenhailingxie",
+            "shenhaironggui"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 103,
+          "explore_target": 35
+        },
+        {
+          "key": "xuan_gui_hai_yu",
+          "name": "玄龟海域",
+          "monsters": [
+            "gangqianlingxie",
+            "gangkeronggui",
+            "shenhaidaoqi"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 104,
+          "explore_target": 35
+        },
+        {
+          "key": "jiao_yi_ju_dian",
+          "name": "鲛衣据点",
+          "monsters": [],
+          "elite_monsters": [
+            "xunhaiyajiang",
+            "xunhaijinshi"
+          ],
+          "boss": [],
+          "monster_level": 105,
+          "explore_target": 35
+        },
+        {
+          "key": "you_yi_shui_yu",
+          "name": "右翼水域",
+          "monsters": [],
+          "elite_monsters": [
+            "lianzhihanmo",
+            "qiangzhihanmo",
+            "fanjianghanmo",
+            "daohaihanmo"
+          ],
+          "boss": [],
+          "monster_level": 106,
+          "explore_target": 35
+        },
+        {
+          "key": "han_mo_bao_lei",
+          "name": "玄墨堡垒",
+          "monsters": [
+            "shixuedaoqi",
+            "shixuelingxie"
+          ],
+          "elite_monsters": [
+            "hanmojunshi",
+            "hanmofujiang",
+            "gangchidaoqi",
+            "hanmojingzu"
+          ],
+          "boss": [],
+          "monster_level": 107,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "han_mo_qian_shao",
+        "name": "幻海二层·首领区",
+        "boss": [
+          "xunhaidajiang",
+          "xuanwushengui"
+        ],
+        "unlock_level": 105,
+        "monsters": [
+          "gangqianlingxie",
+          "gangkeronggui",
+          "shenhaidaoqi"
+        ],
+        "elite_monsters": [
+          "xunhaiyajiang",
+          "xunhaijinshi",
+          "lianzhihanmo",
+          "qiangzhihanmo",
+          "fanjianghanmo",
+          "daohaihanmo",
+          "tanhaitoumu",
+          "tanhaijinsui",
+          "tanhaihucong",
+          "hanmojunshi",
+          "hanmofujiang",
+          "gangchidaoqi",
+          "hanmojingzu"
+        ],
+        "monster_level": 105,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "huanhai_l2_jb_molongwang",
+          "zone": "han_mo_qian_shao",
+          "name": "魔龙王",
+          "monster": "molongwang",
+          "level": 104,
+          "refresh_minutes": 137
+        }
+      ]
+    },
+    {
+      "key": "huanhai_l3",
+      "name": "幻月海三层",
+      "desc": "幻海第3层，深海秘境，强敌环伺。",
+      "neighbors": [
+        "huanhai_l2",
+        "huanhai_l4"
+      ],
+      "unlock_map": "huanhai_l2",
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "bei_bu_qian_tan",
+          "name": "北部浅滩",
+          "monsters": [
+            "youxiaohaima",
+            "chushengdengyu"
+          ],
+          "elite_monsters": [
+            "shixuehaima",
+            "shixuehaima_2"
+          ],
+          "boss": [],
+          "monster_level": 110,
+          "explore_target": 35
+        },
+        {
+          "key": "hai_di_fei_xu",
+          "name": "海底废墟",
+          "monsters": [],
+          "elite_monsters": [
+            "shenhailongma",
+            "molinghanmo",
+            "hanmojingrui"
+          ],
+          "boss": [],
+          "monster_level": 113,
+          "explore_target": 35
+        },
+        {
+          "key": "xi_nan_jiao",
+          "name": "西南角",
+          "monsters": [],
+          "elite_monsters": [
+            "molinghanmo",
+            "hanmoshashou"
+          ],
+          "boss": [],
+          "monster_level": 114,
+          "explore_target": 35
+        },
+        {
+          "key": "zhong_yang_shui_yu",
+          "name": "中央水域",
+          "monsters": [
+            "shenhaidengyu",
+            "shenhaidae",
+            "xiaolongma",
+            "xiaoshie",
+            "denglongyu"
+          ],
+          "elite_monsters": [
+            "shenhaishie_2",
+            "shenhaishie_3"
+          ],
+          "boss": [],
+          "monster_level": 115,
+          "explore_target": 35
+        },
+        {
+          "key": "xiong_yu_hai_gu",
+          "name": "凶鱼海谷",
+          "monsters": [],
+          "elite_monsters": [
+            "baonveshie",
+            "baonveshie_2",
+            "mishidengyu",
+            "mishidengyu_2"
+          ],
+          "boss": [],
+          "monster_level": 116,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_bu_an_liu",
+          "name": "东部暗流",
+          "monsters": [],
+          "elite_monsters": [
+            "mohunhaima",
+            "mishidengyu"
+          ],
+          "boss": [],
+          "monster_level": 116,
+          "explore_target": 35
+        },
+        {
+          "key": "shui_fu",
+          "name": "水府",
+          "monsters": [],
+          "elite_monsters": [
+            "shenhaishuimu",
+            "shishahanmo",
+            "shishahanmo_2",
+            "hanmoxiewu",
+            "hanmoxiewu_2"
+          ],
+          "boss": [],
+          "monster_level": 118,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "da_hai_gou",
+        "name": "幻海三层·首领区",
+        "boss": [
+          "hanmoxiewu_boss"
+        ],
+        "unlock_level": 109,
+        "monsters": [
+          "youxiaohaima",
+          "chushengdengyu",
+          "shenhaidengyu",
+          "shenhaidae",
+          "xiaolongma",
+          "xiaoshie",
+          "denglongyu"
+        ],
+        "elite_monsters": [
+          "hanmojingbing",
+          "hanmofashi",
+          "hanmojingrui",
+          "shenhaishie",
+          "shixuehaima",
+          "shixuehaima_2",
+          "shenhaishie_2",
+          "shenhaishie_3",
+          "shenhailongma",
+          "molinghanmo",
+          "hanmoshashou",
+          "shenhaishuimu",
+          "shishahanmo",
+          "shishahanmo_2",
+          "hanmoxiewu_2",
+          "baonveshie",
+          "baonveshie_2",
+          "mishidengyu",
+          "mishidengyu_2",
+          "mohunhaima"
+        ],
+        "monster_level": 109,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "huanhai_l3_jb_mingsha",
+          "zone": "da_hai_gou",
+          "name": "冥刹",
+          "monster": "mingsha",
+          "level": 109,
+          "refresh_minutes": 147
+        }
+      ]
+    },
+    {
+      "key": "huanhai_l4",
+      "name": "幻月海四层",
+      "desc": "幻海第4层，深海秘境，强敌环伺。",
+      "neighbors": [
+        "huanhai_l3"
+      ],
+      "unlock_map": "huanhai_l3",
+      "region_type": "dungeon",
+      "is_dungeon": true,
+      "no_safe_zone": true,
+      "zones": [
+        {
+          "key": "nan_bu_hai_yu",
+          "name": "南部海域",
+          "monsters": [
+            "shenhaishuimu",
+            "molongma"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 118,
+          "explore_target": 35
+        },
+        {
+          "key": "dong_nan_hai_yu",
+          "name": "东南海域",
+          "monsters": [
+            "shenhaishuimu_2"
+          ],
+          "elite_monsters": [],
+          "boss": [],
+          "monster_level": 119,
+          "explore_target": 35
+        },
+        {
+          "key": "bei_bu_hai_yu",
+          "name": "北部海域",
+          "monsters": [],
+          "elite_monsters": [
+            "hanmomoshi",
+            "zhenhaihanmo",
+            "zhenhaihanmo_2",
+            "jumoshuimu"
+          ],
+          "boss": [],
+          "monster_level": 120,
+          "explore_target": 35
+        }
+      ],
+      "boss_zone": {
+        "key": "hai_dian_yi_ji",
+        "name": "幻海四层·首领区",
+        "boss": [
+          "zhenhaihanmo_boss"
+        ],
+        "unlock_level": 115,
+        "monsters": [
+          "shenhaishuimu",
+          "molongma",
+          "shenhaishuimu_2"
+        ],
+        "elite_monsters": [
+          "hanmomoshi",
+          "zhenhaihanmo_2",
+          "jumoshuimu"
+        ],
+        "monster_level": 115,
+        "explore_target": 35,
+        "minion_target": {
+          "normal": 50,
+          "elite": 20
+        }
+      },
+      "jubao_spots": [
+        {
+          "key": "huanhai_l4_jb_haisha",
+          "zone": "hai_dian_yi_ji",
+          "name": "海煞",
+          "monster": "haisha",
+          "level": 115,
+          "refresh_minutes": 240
+        }
+      ]
+    },
+    {
+      "key": "guimu",
+      "name": "诡墓",
+      "desc": "丛雨沼泽深处的上古墓穴，藏有大量经验、金钱、宝物",
+      "region_type": "副本",
+      "is_dungeon": false,
+      "no_safe_zone": true,
+      "enter_level_min": 20,
+      "daily_enter_limit": 3,
+      "enter_npc": "诸富",
+      "enter_npc_map": "congyuzhaoze",
+      "neighbors": [
+        "congyuzhaoze"
+      ],
+      "zones": [
+        {
+          "key": "gm_z1",
+          "name": "墓道一层",
+          "monsters": [
+            "guimu_30000"
+          ],
+          "elite_monsters": [
+            "guimu_30001",
+            "guimu_30002",
+            "guimu_30003",
+            "guimu_30004",
+            "guimu_30005",
+            "guimu_30006"
+          ],
+          "monster_level": 22,
+          "explore_target": 10
+        },
+        {
+          "key": "gm_z2",
+          "name": "墓道二层",
+          "monsters": [
+            "guimu_30009"
+          ],
+          "elite_monsters": [
+            "guimu_30007",
+            "guimu_30008",
+            "guimu_30010",
+            "guimu_30011",
+            "guimu_30012",
+            "guimu_30013"
+          ],
+          "monster_level": 22,
+          "explore_target": 10
+        },
+        {
+          "key": "gm_z3",
+          "name": "墓室一层",
+          "monsters": [
+            "guimu_30018"
+          ],
+          "elite_monsters": [
+            "guimu_30014",
+            "guimu_30015",
+            "guimu_30016",
+            "guimu_30017",
+            "guimu_30019",
+            "guimu_30021"
+          ],
+          "monster_level": 22,
+          "explore_target": 15
+        },
+        {
+          "key": "gm_z4",
+          "name": "墓室二层",
+          "monsters": [
+            "guimu_30024"
+          ],
+          "elite_monsters": [
+            "guimu_30022",
+            "guimu_30023",
+            "guimu_30025",
+            "guimu_30026",
+            "guimu_30027",
+            "guimu_30029"
+          ],
+          "monster_level": 23,
+          "explore_target": 10
+        },
+        {
+          "key": "gm_z5",
+          "name": "回廊一层",
+          "monsters": [
+            "guimu_30031",
+            "guimu_30035"
+          ],
+          "elite_monsters": [
+            "guimu_30030",
+            "guimu_30032",
+            "guimu_30033",
+            "guimu_30034",
+            "guimu_30036"
+          ],
+          "monster_level": 23,
+          "explore_target": 10
+        },
+        {
+          "key": "gm_z6",
+          "name": "回廊二层",
+          "monsters": [],
+          "elite_monsters": [
+            "guimu_30037",
+            "guimu_30038",
+            "guimu_30039",
+            "guimu_30040",
+            "guimu_30041",
+            "guimu_30042",
+            "guimu_30043"
+          ],
+          "monster_level": 23,
+          "explore_target": 15
+        },
+        {
+          "key": "gm_z7",
+          "name": "地宫一层",
+          "monsters": [],
+          "elite_monsters": [
+            "guimu_30044",
+            "guimu_30045",
+            "guimu_30046",
+            "guimu_30047",
+            "guimu_30048",
+            "guimu_30049",
+            "guimu_30050"
+          ],
+          "monster_level": 24,
+          "explore_target": 10
+        },
+        {
+          "key": "gm_z8",
+          "name": "地宫二层",
+          "monsters": [],
+          "elite_monsters": [
+            "guimu_30051",
+            "guimu_30052",
+            "guimu_30053",
+            "guimu_30055",
+            "guimu_30056",
+            "guimu_30057",
+            "guimu_30058"
+          ],
+          "monster_level": 25,
+          "explore_target": 10
+        },
+        {
+          "key": "gm_z9",
+          "name": "寂灭之殿",
+          "monsters": [],
+          "elite_monsters": [
+            "guimu_30059",
+            "guimu_30060",
+            "guimu_30061",
+            "guimu_30062",
+            "guimu_30063",
+            "guimu_30064",
+            "guimu_30065"
+          ],
+          "monster_level": 26,
+          "explore_target": 15
+        }
+      ],
+      "dungeon_bosses": [
+        {
+          "key": "guimu_huapi",
+          "zone": "gm_z3",
+          "name": "画皮",
+          "monster": "guimu_30020",
+          "level": 22
+        },
+        {
+          "key": "guimu_lv_gui",
+          "zone": "gm_z6",
+          "name": "厉鬼",
+          "monster": "guimu_30028",
+          "level": 24
+        },
+        {
+          "key": "guimu_ji_mie",
+          "zone": "gm_z9",
+          "name": "寂灭",
+          "monster": "guimu_30054",
+          "level": 26
+        }
+      ]
+    },
+    {
+      "key": "xianghunzhong_instance",
+      "name": "幽芷冢",
+      "desc": "幽芷公主陵墓，青依族世代守墓，盗墓贼黑目一伙入侵盗墓",
+      "region_type": "副本",
+      "is_dungeon": false,
+      "no_safe_zone": true,
+      "enter_level_min": 60,
+      "daily_enter_limit": 3,
+      "enter_npc": "卿阎",
+      "enter_npc_map": "linhai",
+      "neighbors": [
+        "linhai"
+      ],
+      "zones": [
+        {
+          "key": "xhz_z1",
+          "name": "墓道入口",
+          "monster_level": 63,
+          "monsters": [
+            "xhz_824",
+            "xhz_825"
+          ],
+          "elite_monsters": [
+            "xhz_30810",
+            "xhz_30811"
+          ],
+          "explore_target": 10
+        },
+        {
+          "key": "xhz_z2",
+          "name": "殉葬坑",
+          "monster_level": 64,
+          "monsters": [
+            "xhz_823",
+            "xhz_30814"
+          ],
+          "elite_monsters": [
+            "xhz_30803",
+            "xhz_30804",
+            "xhz_30812",
+            "xhz_30813"
+          ],
+          "explore_target": 15
+        },
+        {
+          "key": "xhz_z3",
+          "name": "蛛巢墓室",
+          "monster_level": 65,
+          "monsters": [
+            "xhz_30819"
+          ],
+          "elite_monsters": [
+            "xhz_30805",
+            "xhz_30806",
+            "xhz_30816"
+          ],
+          "explore_target": 10
+        },
+        {
+          "key": "xhz_z4",
+          "name": "毒蛛巢穴",
+          "monster_level": 67,
+          "monsters": [],
+          "elite_monsters": [
+            "xhz_30815",
+            "xhz_30818",
+            "xhz_30821",
+            "xhz_30824",
+            "xhz_30825",
+            "xhz_30826",
+            "xhz_30830",
+            "xhz_821"
+          ],
+          "explore_target": 15
+        },
+        {
+          "key": "xhz_z5",
+          "name": "公主墓道",
+          "monster_level": 68,
+          "monsters": [],
+          "elite_monsters": [
+            "xhz_819",
+            "xhz_30829",
+            "xhz_30820",
+            "xhz_30823"
+          ],
+          "explore_target": 10
+        },
+        {
+          "key": "xhz_z6",
+          "name": "公主墓室",
+          "monster_level": 70,
+          "monsters": [],
+          "elite_monsters": [
+            "xhz_30833",
+            "xhz_30817",
+            "xhz_30832"
+          ],
+          "explore_target": 15
+        },
+        {
+          "key": "xhz_z6b",
+          "name": "盗洞通道",
+          "monster_level": 71,
+          "monsters": [
+            "xhz_30827",
+            "xhz_30809"
+          ],
+          "elite_monsters": [
+            "xhz_30834"
+          ],
+          "explore_target": 10
+        },
+        {
+          "key": "xhz_z7",
+          "name": "盗洞深处",
+          "monster_level": 72,
+          "monsters": [],
+          "elite_monsters": [
+            "xhz_30835",
+            "xhz_30808"
+          ],
+          "explore_target": 15
+        }
+      ],
+      "dungeon_bosses": [
+        {
+          "key": "xhz_zhongjiang",
+          "zone": "xhz_z2",
+          "name": "冢将",
+          "monster": "xhz_30807",
+          "level": 64
+        },
+        {
+          "key": "xhz_juduguafu",
+          "zone": "xhz_z4",
+          "name": "剧毒寡妇",
+          "monster": "xhz_30822",
+          "level": 67
+        },
+        {
+          "key": "xhz_qingyuzhihun",
+          "zone": "xhz_z6",
+          "name": "狂暴的幽芷之魂",
+          "monster": "xhz_30828",
+          "level": 69
+        },
+        {
+          "key": "xhz_heimu",
+          "zone": "xhz_z7",
+          "name": "黑目",
+          "monster": "xhz_30836",
+          "level": 74
+        }
+      ]
+    }
+  ]
+}

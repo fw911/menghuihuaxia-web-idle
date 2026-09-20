@@ -1,0 +1,48 @@
+{
+  "active_skills": [
+    {
+      "key": "ys_jg",
+      "name": "炽炎爪",
+      "job": "summon",
+      "form": "common",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 1,
+      "icon": "static/icons/skills/darkwitch_001.gif",
+      "desc": "炎灵兽以利爪撕裂敌人",
+      "levels": [
+        {
+          "damage": 60,
+          "mp": 0,
+          "cd": 2,
+          "desc": "对单体造成物理伤害"
+        }
+      ],
+      "cd": 2
+    },
+    {
+      "key": "my_jg",
+      "name": "幽电击",
+      "job": "summon",
+      "form": "common",
+      "element": "elec",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 1,
+      "icon": "static/icons/skills/darkwitch_001.gif",
+      "desc": "魅影施展电系法术攻击敌人",
+      "levels": [
+        {
+          "damage": 60,
+          "mp": 0,
+          "cd": 2,
+          "desc": "对单体造成电系伤害"
+        }
+      ],
+      "cd": 2
+    }
+  ]
+}

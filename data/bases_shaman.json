@@ -1,0 +1,1711 @@
+{
+  "helmets": [
+    {
+      "name": "绛羽帽",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_1.png",
+      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "durability": [
+        14,
+        14
+      ],
+      "stats": {
+        "phys_def": [
+          16,
+          19
+        ],
+        "magic_def": [
+          18,
+          23
+        ]
+      },
+      "key": "base_shaman_helmets_1_1",
+      "req_level": 11
+    },
+    {
+      "name": "苍翎帽",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_2.png",
+      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "durability": [
+        18,
+        18
+      ],
+      "stats": {
+        "phys_def": [
+          32,
+          40
+        ],
+        "magic_def": [
+          38,
+          49
+        ]
+      },
+      "key": "base_shaman_helmets_2_2",
+      "req_level": 26
+    },
+    {
+      "name": "鸿翎帽",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_3.png",
+      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "durability": [
+        23,
+        23
+      ],
+      "stats": {
+        "phys_def": [
+          41,
+          54
+        ],
+        "magic_def": [
+          53,
+          70
+        ]
+      },
+      "key": "base_shaman_helmets_3_3",
+      "req_level": 41
+    },
+    {
+      "name": "玄鹤帽",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_4.png",
+      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "durability": [
+        27,
+        27
+      ],
+      "stats": {
+        "phys_def": [
+          57,
+          75
+        ],
+        "magic_def": [
+          77,
+          102
+        ]
+      },
+      "key": "base_shaman_helmets_4_4",
+      "req_level": 56
+    },
+    {
+      "name": "鹏翎帽",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_5.png",
+      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_def": [
+          72,
+          96
+        ],
+        "magic_def": [
+          102,
+          136
+        ]
+      },
+      "key": "base_shaman_helmets_5_5",
+      "req_level": 71
+    },
+    {
+      "name": "鸾铭帽",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_6.png",
+      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_def": [
+          92,
+          121
+        ],
+        "magic_def": [
+          134,
+          179
+        ]
+      },
+      "key": "base_shaman_helmets_6_6",
+      "req_level": 86
+    },
+    {
+      "name": "夜啸天帽",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_7.png",
+      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_def": [
+          114,
+          150
+        ],
+        "magic_def": [
+          171,
+          228
+        ]
+      },
+      "key": "base_shaman_helmets_7_7",
+      "req_level": 101
+    }
+  ],
+  "shoulders": [
+    {
+      "name": "苍翎护肩",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_2.png",
+      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "durability": [
+        14,
+        14
+      ],
+      "stats": {
+        "phys_def": [
+          27,
+          34
+        ],
+        "magic_def": [
+          30,
+          38
+        ]
+      },
+      "key": "base_shaman_shoulders_2_1",
+      "req_level": 29
+    },
+    {
+      "name": "鸿翎护肩",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_3.png",
+      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "durability": [
+        18,
+        18
+      ],
+      "stats": {
+        "phys_def": [
+          42,
+          54
+        ],
+        "magic_def": [
+          48,
+          62
+        ]
+      },
+      "key": "base_shaman_shoulders_3_2",
+      "req_level": 44
+    },
+    {
+      "name": "玄鹤护肩",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_4.png",
+      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "durability": [
+        23,
+        23
+      ],
+      "stats": {
+        "phys_def": [
+          50,
+          65
+        ],
+        "magic_def": [
+          60,
+          80
+        ]
+      },
+      "key": "base_shaman_shoulders_4_3",
+      "req_level": 59
+    },
+    {
+      "name": "鹏翎护肩",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_5.png",
+      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "durability": [
+        27,
+        27
+      ],
+      "stats": {
+        "phys_def": [
+          66,
+          87
+        ],
+        "magic_def": [
+          83,
+          109
+        ]
+      },
+      "key": "base_shaman_shoulders_5_4",
+      "req_level": 74
+    },
+    {
+      "name": "鸾铭护肩",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_6.png",
+      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_def": [
+          81,
+          106
+        ],
+        "magic_def": [
+          106,
+          140
+        ]
+      },
+      "key": "base_shaman_shoulders_6_5",
+      "req_level": 89
+    },
+    {
+      "name": "夜啸天护肩",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_7.png",
+      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_def": [
+          97,
+          128
+        ],
+        "magic_def": [
+          130,
+          173
+        ]
+      },
+      "key": "base_shaman_shoulders_7_6",
+      "req_level": 104
+    }
+  ],
+  "armors": [
+    {
+      "name": "绛羽衫",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_1.png",
+      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "durability": [
+        15,
+        15
+      ],
+      "stats": {
+        "phys_def": [
+          27,
+          35
+        ],
+        "magic_def": [
+          33,
+          43
+        ]
+      },
+      "key": "base_shaman_armors_1_1",
+      "req_level": 15
+    },
+    {
+      "name": "苍翎衫",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_2.png",
+      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "durability": [
+        20,
+        20
+      ],
+      "stats": {
+        "phys_def": [
+          50,
+          65
+        ],
+        "magic_def": [
+          65,
+          84
+        ]
+      },
+      "key": "base_shaman_armors_2_2",
+      "req_level": 30
+    },
+    {
+      "name": "鸿翎衫",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_3.png",
+      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "durability": [
+        25,
+        25
+      ],
+      "stats": {
+        "phys_def": [
+          69,
+          91
+        ],
+        "magic_def": [
+          95,
+          125
+        ]
+      },
+      "key": "base_shaman_armors_3_3",
+      "req_level": 45
+    },
+    {
+      "name": "玄鹤衫",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_4.png",
+      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "durability": [
+        30,
+        30
+      ],
+      "stats": {
+        "phys_def": [
+          92,
+          122
+        ],
+        "magic_def": [
+          132,
+          176
+        ]
+      },
+      "key": "base_shaman_armors_4_4",
+      "req_level": 60
+    },
+    {
+      "name": "鹏翎衫",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_5.png",
+      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "durability": [
+        35,
+        35
+      ],
+      "stats": {
+        "phys_def": [
+          115,
+          153
+        ],
+        "magic_def": [
+          173,
+          232
+        ]
+      },
+      "key": "base_shaman_armors_5_5",
+      "req_level": 75
+    },
+    {
+      "name": "鸾铭衫",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_6.png",
+      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "durability": [
+        40,
+        40
+      ],
+      "stats": {
+        "phys_def": [
+          142,
+          190
+        ],
+        "magic_def": [
+          223,
+          300
+        ]
+      },
+      "key": "base_shaman_armors_6_6",
+      "req_level": 90
+    },
+    {
+      "name": "夜啸天衫",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_7.png",
+      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_def": [
+          172,
+          231
+        ],
+        "magic_def": [
+          277,
+          373
+        ]
+      },
+      "key": "base_shaman_armors_7_7",
+      "req_level": 105
+    },
+    {
+      "name": "青竹襟",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": true,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_1.png",
+      "desc": "竹襟",
+      "durability": [
+        10,
+        10
+      ],
+      "stats": {
+        "phys_def": [
+          6,
+          8
+        ],
+        "magic_def": [
+          5,
+          6
+        ]
+      },
+      "key": "base_shaman_armors_1_8",
+      "req_level": 0
+    }
+  ],
+  "pants": [
+    {
+      "name": "绛羽护腿",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_1.png",
+      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "durability": [
+        15,
+        15
+      ],
+      "stats": {
+        "phys_def": [
+          28,
+          35
+        ],
+        "magic_def": [
+          33,
+          42
+        ]
+      },
+      "key": "base_shaman_pants_1_1",
+      "req_level": 19
+    },
+    {
+      "name": "苍翎护腿",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_2.png",
+      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "durability": [
+        20,
+        20
+      ],
+      "stats": {
+        "phys_def": [
+          46,
+          58
+        ],
+        "magic_def": [
+          56,
+          72
+        ]
+      },
+      "key": "base_shaman_pants_2_2",
+      "req_level": 34
+    },
+    {
+      "name": "鸿翎护腿",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_3.png",
+      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "durability": [
+        25,
+        25
+      ],
+      "stats": {
+        "phys_def": [
+          57,
+          76
+        ],
+        "magic_def": [
+          75,
+          99
+        ]
+      },
+      "key": "base_shaman_pants_3_3",
+      "req_level": 49
+    },
+    {
+      "name": "玄鹤护腿",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_4.png",
+      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "durability": [
+        30,
+        30
+      ],
+      "stats": {
+        "phys_def": [
+          80,
+          105
+        ],
+        "magic_def": [
+          108,
+          143
+        ]
+      },
+      "key": "base_shaman_pants_4_4",
+      "req_level": 64
+    },
+    {
+      "name": "鹏翎护腿",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_5.png",
+      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "durability": [
+        35,
+        35
+      ],
+      "stats": {
+        "phys_def": [
+          96,
+          128
+        ],
+        "magic_def": [
+          137,
+          183
+        ]
+      },
+      "key": "base_shaman_pants_5_5",
+      "req_level": 79
+    },
+    {
+      "name": "鸾铭护腿",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_6.png",
+      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "durability": [
+        40,
+        40
+      ],
+      "stats": {
+        "phys_def": [
+          121,
+          161
+        ],
+        "magic_def": [
+          178,
+          238
+        ]
+      },
+      "key": "base_shaman_pants_6_6",
+      "req_level": 94
+    },
+    {
+      "name": "夜啸天护腿",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_7.png",
+      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_def": [
+          144,
+          192
+        ],
+        "magic_def": [
+          216,
+          289
+        ]
+      },
+      "key": "base_shaman_pants_7_7",
+      "req_level": 109
+    },
+    {
+      "name": "青竹裙",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": true,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_1.png",
+      "desc": "竹裙",
+      "durability": [
+        10,
+        10
+      ],
+      "stats": {
+        "phys_def": [
+          5,
+          6
+        ],
+        "magic_def": [
+          3,
+          4
+        ]
+      },
+      "key": "base_shaman_pants_1_8",
+      "req_level": 0
+    }
+  ],
+  "shoes": [
+    {
+      "name": "绛羽鞋",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_1.png",
+      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "durability": [
+        14,
+        14
+      ],
+      "stats": {
+        "phys_def": [
+          9,
+          11
+        ],
+        "magic_def": [
+          9,
+          11
+        ]
+      },
+      "key": "base_shaman_shoes_1_1",
+      "req_level": 5
+    },
+    {
+      "name": "苍翎鞋",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_2.png",
+      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "durability": [
+        18,
+        18
+      ],
+      "stats": {
+        "phys_def": [
+          17,
+          22
+        ],
+        "magic_def": [
+          18,
+          23
+        ]
+      },
+      "key": "base_shaman_shoes_2_2",
+      "req_level": 20
+    },
+    {
+      "name": "鸿翎鞋",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_3.png",
+      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "durability": [
+        23,
+        23
+      ],
+      "stats": {
+        "phys_def": [
+          26,
+          34
+        ],
+        "magic_def": [
+          29,
+          37
+        ]
+      },
+      "key": "base_shaman_shoes_3_3",
+      "req_level": 35
+    },
+    {
+      "name": "玄鹤鞋",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_4.png",
+      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "durability": [
+        27,
+        27
+      ],
+      "stats": {
+        "phys_def": [
+          36,
+          47
+        ],
+        "magic_def": [
+          41,
+          53
+        ]
+      },
+      "key": "base_shaman_shoes_4_4",
+      "req_level": 50
+    },
+    {
+      "name": "鹏翎鞋",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_5.png",
+      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_def": [
+          48,
+          62
+        ],
+        "magic_def": [
+          56,
+          74
+        ]
+      },
+      "key": "base_shaman_shoes_5_5",
+      "req_level": 65
+    },
+    {
+      "name": "鸾铭鞋",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_6.png",
+      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_def": [
+          58,
+          77
+        ],
+        "magic_def": [
+          72,
+          95
+        ]
+      },
+      "key": "base_shaman_shoes_6_6",
+      "req_level": 80
+    },
+    {
+      "name": "夜啸天鞋",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_7.png",
+      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_def": [
+          72,
+          95
+        ],
+        "magic_def": [
+          92,
+          122
+        ]
+      },
+      "key": "base_shaman_shoes_7_7",
+      "req_level": 95
+    }
+  ],
+  "gloves": [
+    {
+      "name": "绛羽护腕",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_1.png",
+      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "durability": [
+        12,
+        12
+      ],
+      "stats": {
+        "phys_def": [
+          13,
+          14
+        ],
+        "magic_def": [
+          12,
+          13
+        ]
+      },
+      "key": "base_shaman_gloves_1_1",
+      "req_level": 7
+    },
+    {
+      "name": "苍翎护腕",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_2.png",
+      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "durability": [
+        16,
+        16
+      ],
+      "stats": {
+        "phys_def": [
+          22,
+          26
+        ],
+        "magic_def": [
+          21,
+          25
+        ]
+      },
+      "key": "base_shaman_gloves_2_2",
+      "req_level": 22
+    },
+    {
+      "name": "鸿翎护腕",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_3.png",
+      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "durability": [
+        20,
+        20
+      ],
+      "stats": {
+        "phys_def": [
+          24,
+          31
+        ],
+        "magic_def": [
+          24,
+          30
+        ]
+      },
+      "key": "base_shaman_gloves_3_3",
+      "req_level": 37
+    },
+    {
+      "name": "玄鹤护腕",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_4.png",
+      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "durability": [
+        24,
+        24
+      ],
+      "stats": {
+        "phys_def": [
+          34,
+          44
+        ],
+        "magic_def": [
+          34,
+          44
+        ]
+      },
+      "key": "base_shaman_gloves_4_4",
+      "req_level": 52
+    },
+    {
+      "name": "鹏翎护腕",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_5.png",
+      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "durability": [
+        28,
+        28
+      ],
+      "stats": {
+        "phys_def": [
+          47,
+          60
+        ],
+        "magic_def": [
+          49,
+          63
+        ]
+      },
+      "key": "base_shaman_gloves_5_5",
+      "req_level": 67
+    },
+    {
+      "name": "鸾铭护腕",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_6.png",
+      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_def": [
+          53,
+          70
+        ],
+        "magic_def": [
+          58,
+          76
+        ]
+      },
+      "key": "base_shaman_gloves_6_6",
+      "req_level": 82
+    },
+    {
+      "name": "夜啸天护腕",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_7.png",
+      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_def": [
+          65,
+          86
+        ],
+        "magic_def": [
+          74,
+          97
+        ]
+      },
+      "key": "base_shaman_gloves_7_7",
+      "req_level": 97
+    }
+  ],
+  "belts": [
+    {
+      "name": "绛羽腰带",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_1.png",
+      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "durability": [
+        12,
+        12
+      ],
+      "stats": {
+        "phys_def": [
+          12,
+          14
+        ],
+        "magic_def": [
+          14,
+          17
+        ]
+      },
+      "key": "base_shaman_belts_1_1",
+      "req_level": 13
+    },
+    {
+      "name": "苍翎腰带",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_2.png",
+      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "durability": [
+        16,
+        16
+      ],
+      "stats": {
+        "phys_def": [
+          23,
+          28
+        ],
+        "magic_def": [
+          29,
+          35
+        ]
+      },
+      "key": "base_shaman_belts_2_2",
+      "req_level": 28
+    },
+    {
+      "name": "鸿翎腰带",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_3.png",
+      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "durability": [
+        20,
+        20
+      ],
+      "stats": {
+        "phys_def": [
+          26,
+          33
+        ],
+        "magic_def": [
+          36,
+          47
+        ]
+      },
+      "key": "base_shaman_belts_3_3",
+      "req_level": 43
+    },
+    {
+      "name": "玄鹤腰带",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_4.png",
+      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "durability": [
+        24,
+        24
+      ],
+      "stats": {
+        "phys_def": [
+          38,
+          48
+        ],
+        "magic_def": [
+          53,
+          69
+        ]
+      },
+      "key": "base_shaman_belts_4_4",
+      "req_level": 58
+    },
+    {
+      "name": "鹏翎腰带",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_5.png",
+      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "durability": [
+        28,
+        28
+      ],
+      "stats": {
+        "phys_def": [
+          42,
+          55
+        ],
+        "magic_def": [
+          64,
+          85
+        ]
+      },
+      "key": "base_shaman_belts_5_5",
+      "req_level": 73
+    },
+    {
+      "name": "鸾铭腰带",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_6.png",
+      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_def": [
+          52,
+          69
+        ],
+        "magic_def": [
+          83,
+          110
+        ]
+      },
+      "key": "base_shaman_belts_6_6",
+      "req_level": 88
+    },
+    {
+      "name": "夜啸天腰带",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_7.png",
+      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_def": [
+          66,
+          86
+        ],
+        "magic_def": [
+          106,
+          140
+        ]
+      },
+      "key": "base_shaman_belts_7_7",
+      "req_level": 103
+    }
+  ],
+  "cloaks": [
+    {
+      "name": "绛羽披风",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_1.png",
+      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "durability": [
+        12,
+        12
+      ],
+      "stats": {
+        "phys_def": [
+          14,
+          16
+        ],
+        "magic_def": [
+          27,
+          33
+        ]
+      },
+      "key": "base_shaman_cloaks_1_1",
+      "req_level": 17
+    },
+    {
+      "name": "苍翎披风",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_2.png",
+      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "durability": [
+        16,
+        16
+      ],
+      "stats": {
+        "phys_def": [
+          15,
+          18
+        ],
+        "magic_def": [
+          39,
+          51
+        ]
+      },
+      "key": "base_shaman_cloaks_2_2",
+      "req_level": 32
+    },
+    {
+      "name": "鸿翎披风",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_3.png",
+      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "durability": [
+        20,
+        20
+      ],
+      "stats": {
+        "phys_def": [
+          22,
+          26
+        ],
+        "magic_def": [
+          60,
+          78
+        ]
+      },
+      "key": "base_shaman_cloaks_3_3",
+      "req_level": 47
+    },
+    {
+      "name": "玄鹤披风",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_4.png",
+      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "durability": [
+        24,
+        24
+      ],
+      "stats": {
+        "phys_def": [
+          24,
+          30
+        ],
+        "magic_def": [
+          79,
+          104
+        ]
+      },
+      "key": "base_shaman_cloaks_4_4",
+      "req_level": 62
+    },
+    {
+      "name": "鹏翎披风",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_5.png",
+      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "durability": [
+        28,
+        28
+      ],
+      "stats": {
+        "phys_def": [
+          26,
+          33
+        ],
+        "magic_def": [
+          101,
+          135
+        ]
+      },
+      "key": "base_shaman_cloaks_5_5",
+      "req_level": 77
+    },
+    {
+      "name": "鸾铭披风",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_6.png",
+      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_def": [
+          32,
+          41
+        ],
+        "magic_def": [
+          130,
+          174
+        ]
+      },
+      "key": "base_shaman_cloaks_6_6",
+      "req_level": 92
+    },
+    {
+      "name": "夜啸天披风",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_7.png",
+      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_def": [
+          39,
+          51
+        ],
+        "magic_def": [
+          162,
+          216
+        ]
+      },
+      "key": "base_shaman_cloaks_7_7",
+      "req_level": 107
+    }
+  ],
+  "weapons": [
+    {
+      "name": "坠星锤",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_1.png",
+      "desc": "将精铁锻成兽角状，贯穿于峦石之中，故名悬\\n铁锤",
+      "durability": [
+        15,
+        15
+      ],
+      "stats": {
+        "phys_atk": [
+          37,
+          48
+        ],
+        "magic_atk": [
+          32,
+          40
+        ]
+      },
+      "key": "base_shaman_weapons_1_1",
+      "req_level": 9
+    },
+    {
+      "name": "破岩锤",
+      "tier": 2,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_2.png",
+      "desc": "两端为锥形，兼有凿击功效",
+      "durability": [
+        20,
+        20
+      ],
+      "stats": {
+        "phys_atk": [
+          56,
+          72
+        ],
+        "magic_atk": [
+          47,
+          60
+        ]
+      },
+      "key": "base_shaman_weapons_2_2",
+      "req_level": 24
+    },
+    {
+      "name": "展翼锤",
+      "tier": 3,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_3.png",
+      "desc": "其形稍扁，两端上下突出，如大鹏展翅",
+      "durability": [
+        25,
+        25
+      ],
+      "stats": {
+        "phys_atk": [
+          63,
+          83
+        ],
+        "magic_atk": [
+          52,
+          68
+        ]
+      },
+      "key": "base_shaman_weapons_3_3",
+      "req_level": 39
+    },
+    {
+      "name": "璃光锤",
+      "tier": 4,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_4.png",
+      "desc": "用七彩琉璃制成，其势犹如一鹤冲天",
+      "durability": [
+        30,
+        30
+      ],
+      "stats": {
+        "phys_atk": [
+          90,
+          119
+        ],
+        "magic_atk": [
+          72,
+          95
+        ]
+      },
+      "key": "base_shaman_weapons_4_4",
+      "req_level": 54
+    },
+    {
+      "name": "暮色锤",
+      "tier": 5,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_5.png",
+      "desc": "棰身如塔倒置，彷佛日暮西山",
+      "durability": [
+        35,
+        35
+      ],
+      "stats": {
+        "phys_atk": [
+          116,
+          155
+        ],
+        "magic_atk": [
+          91,
+          121
+        ]
+      },
+      "key": "base_shaman_weapons_5_5",
+      "req_level": 69
+    },
+    {
+      "name": "擎岳锤",
+      "tier": 6,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_6.png",
+      "desc": "棰为暗金锻制，表面布满扭曲的花纹，如擎天\\n巨柱",
+      "durability": [
+        40,
+        40
+      ],
+      "stats": {
+        "phys_atk": [
+          150,
+          201
+        ],
+        "magic_atk": [
+          116,
+          155
+        ]
+      },
+      "key": "base_shaman_weapons_6_6",
+      "req_level": 84
+    },
+    {
+      "name": "怒涛锤",
+      "tier": 7,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_7.png",
+      "desc": "棰身布满恶魔獠牙，于狞笑中掀起狂澜",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          190,
+          254
+        ],
+        "magic_atk": [
+          145,
+          193
+        ]
+      },
+      "key": "base_shaman_weapons_7_7",
+      "req_level": 99
+    },
+    {
+      "name": "桃木锤",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": true,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_1.png",
+      "desc": "以桃木打磨而成",
+      "durability": [
+        10,
+        10
+      ],
+      "stats": {
+        "phys_atk": [
+          11,
+          15
+        ],
+        "magic_atk": [
+          9,
+          12
+        ]
+      },
+      "key": "base_shaman_weapons_1_8",
+      "req_level": 0
+    }
+  ],
+  "shields": []
+}

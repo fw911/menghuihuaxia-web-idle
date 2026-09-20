@@ -1,0 +1,196 @@
+{
+  "_instance_exchange_meta": {
+    "comment": "副本护符兑换表（配置驱动）。核心表用原版名，MOD 加载后显示原创名。字段：instance=产出该护符的副本 key（同时用于日志分组）；npc_map=兑换 NPC 所在地图 key（决定该兑换条目在哪张图可见）；cost_key/cost_count=消耗护符与个数；slot=产出装备部位英文 key；tier=产出装备档位（香魂冢 5 档 req 66~80 / 轩辕台 4 档 req 51~65）；job 不写死，运行时按角色职业出本职业装备。key 以 _ 开头的是元数据块，程序跳过。"
+  },
+  "_exchange_spec": {
+    "comment": "兑换产出的统一规格（香魂冢/轩辕台/古墓三副本共用，只有 tier 不同）。sockets=固定空孔数；refine=固定精炼等级，由 refine.apply_refine_levels 逐级结算攻防与耐久，和玩家亲手精炼到同级完全一致；perk_value=mid 表示词条数值取该档位区间中值 (lo+hi)//2，区间真相在 config/perk_pool.json，此处不重复写数字；perks_by_pool_job 按「池×职业」写死词条显示名——weapon 池含 武器+护手，general 池含 头盔/护肩/盔甲/护腿/披风/腰带/鞋子（归属见 perk_pool._WEAPON_SLOTS）。词条名必须存在于对应职业的池里，否则兑换报错并退还护符。",
+    "sockets": 3,
+    "refine": 5,
+    "perk_value": "mid",
+    "perks_by_pool_job": {
+      "weapon": {
+        "warrior": ["物理攻击", "物理攻击%"],
+        "mage": ["火系法术攻击", "法术攻击%"],
+        "darkwitch": ["暗系法术攻击", "法术攻击%"],
+        "shaman": ["电系法术攻击", "法术攻击%"]
+      },
+      "general": {
+        "warrior": ["体质", "生命值"],
+        "mage": ["智力", "生命值"],
+        "darkwitch": ["精神", "生命值"],
+        "shaman": ["智力", "生命值"]
+      }
+    }
+  },
+  "xhz_weapon": {
+    "name": "5 档武器",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "weapon",
+    "tier": 5
+  },
+  "xhz_helmet": {
+    "name": "5 档头盔",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "helmet",
+    "tier": 5
+  },
+  "xhz_shoulder": {
+    "name": "5 档护肩",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "shoulder_l",
+    "tier": 5
+  },
+  "xhz_armor": {
+    "name": "5 档盔甲",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "armor",
+    "tier": 5
+  },
+  "xhz_pants": {
+    "name": "5 档护腿",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "pants",
+    "tier": 5
+  },
+  "xhz_cloak": {
+    "name": "5 档披风",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "cloak",
+    "tier": 5
+  },
+  "xhz_belt": {
+    "name": "5 档腰带",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "belt",
+    "tier": 5
+  },
+  "xhz_gloves": {
+    "name": "5 档护手",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "gloves",
+    "tier": 5
+  },
+  "xhz_shoes": {
+    "name": "5 档鞋子",
+    "instance": "xianghunzhong_instance",
+    "npc_map": "linhai",
+    "cost_key": "shengzhe_fufu",
+    "cost_count": 5,
+    "slot": "shoes",
+    "tier": 5
+  },
+  "xyt_weapon": {
+    "name": "4 档武器",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "weapon",
+    "tier": 4
+  },
+  "xyt_helmet": {
+    "name": "4 档头盔",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "helmet",
+    "tier": 4
+  },
+  "xyt_shoulder": {
+    "name": "4 档护肩",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "shoulder_l",
+    "tier": 4
+  },
+  "xyt_armor": {
+    "name": "4 档盔甲",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "armor",
+    "tier": 4
+  },
+  "xyt_pants": {
+    "name": "4 档护腿",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "pants",
+    "tier": 4
+  },
+  "xyt_cloak": {
+    "name": "4 档披风",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "cloak",
+    "tier": 4
+  },
+  "xyt_belt": {
+    "name": "4 档腰带",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "belt",
+    "tier": 4
+  },
+  "xyt_gloves": {
+    "name": "4 档护手",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "gloves",
+    "tier": 4
+  },
+  "xyt_shoes": {
+    "name": "4 档鞋子",
+    "instance": "xuanyuantai",
+    "npc_map": "xuanyuan",
+    "cost_key": "guangming_fufu",
+    "cost_count": 5,
+    "slot": "shoes",
+    "tier": 4
+  },
+  "gm_weapon": {"name": "3 档武器", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "weapon", "tier": 3},
+  "gm_helmet": {"name": "3 档头盔", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "helmet", "tier": 3},
+  "gm_shoulder": {"name": "3 档护肩", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "shoulder_l", "tier": 3},
+  "gm_armor": {"name": "3 档盔甲", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "armor", "tier": 3},
+  "gm_pants": {"name": "3 档护腿", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "pants", "tier": 3},
+  "gm_cloak": {"name": "3 档披风", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "cloak", "tier": 3},
+  "gm_belt": {"name": "3 档腰带", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "belt", "tier": 3},
+  "gm_gloves": {"name": "3 档护手", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "gloves", "tier": 3},
+  "gm_shoes": {"name": "3 档鞋子", "instance": "guimu", "npc_map": "congyuzhaoze", "cost_key": "siwang_fufu", "cost_count": 5, "slot": "shoes", "tier": 3}
+}

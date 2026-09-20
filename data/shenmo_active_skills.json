@@ -1,0 +1,135 @@
+{
+  "_comment": "神魔主动技能条（设计文档 §6.4：随修炼加点解锁，仅变身中下发）。归属神魔域，不进职业技能表（/api/skills 面板不展示）；战斗引擎经 core.shenmo.get_active_skill_def 回退查本表。shenmo_skills.json 的 active 节点用 active_key 引用本表 key。",
+  "active_skills": [
+    {
+      "key": "sm_mifa_dun",
+      "name": "秘法盾",
+      "job": "warrior",
+      "form": "pan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "defense",
+      "require_shield": true,
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/warrior_016.gif",
+      "desc": "神魔·秘法盾：激活后2回合内反弹下一个伤害技能的部分伤害",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 30, "cd": 8, "desc": "2回合内反弹下一个伤害技能60%伤害", "effects": [{"type": "reflect_skill", "value": 60, "duration": 2}]},
+        {"damage": 0, "mp": 30, "cd": 8, "desc": "2回合内反弹下一个伤害技能70%伤害", "effects": [{"type": "reflect_skill", "value": 70, "duration": 2}]},
+        {"damage": 0, "mp": 30, "cd": 8, "desc": "2回合内反弹下一个伤害技能80%伤害", "effects": [{"type": "reflect_skill", "value": 80, "duration": 2}]},
+        {"damage": 0, "mp": 30, "cd": 8, "desc": "2回合内反弹下一个伤害技能90%伤害", "effects": [{"type": "reflect_skill", "value": 90, "duration": 2}]},
+        {"damage": 0, "mp": 30, "cd": 8, "desc": "2回合内反弹下一个伤害技能100%伤害", "effects": [{"type": "reflect_skill", "value": 100, "duration": 2}]}
+      ]
+    },
+    {
+      "key": "sm_pochan_nuhou",
+      "name": "破胆怒吼",
+      "job": "warrior",
+      "form": "pan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "control",
+      "target_rule": "all",
+      "max_level": 5,
+      "icon": "static/icons/skills/warrior_005.gif",
+      "desc": "神魔·破胆怒吼：怒吼令多个敌人陷入混乱",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 45, "cd": 12, "desc": "使最多3个敌人混乱2回合", "effects": [{"type": "fear", "value": 0, "duration": 2, "max_targets": 3, "target": "enemies"}]},
+        {"damage": 0, "mp": 45, "cd": 12, "desc": "使最多4个敌人混乱3回合", "effects": [{"type": "fear", "value": 0, "duration": 3, "max_targets": 4, "target": "enemies"}]},
+        {"damage": 0, "mp": 45, "cd": 12, "desc": "使最多4个敌人混乱4回合", "effects": [{"type": "fear", "value": 0, "duration": 4, "max_targets": 4, "target": "enemies"}]},
+        {"damage": 0, "mp": 45, "cd": 12, "desc": "使最多5个敌人混乱5回合", "effects": [{"type": "fear", "value": 0, "duration": 5, "max_targets": 5, "target": "enemies"}]},
+        {"damage": 0, "mp": 45, "cd": 12, "desc": "使最多5个敌人混乱6回合", "effects": [{"type": "fear", "value": 0, "duration": 6, "max_targets": 5, "target": "enemies"}]}
+      ]
+    },
+    {
+      "key": "sm_dunpai_daji",
+      "name": "盾牌打击",
+      "job": "warrior",
+      "form": "pan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "require_shield": true,
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/warrior_014.gif",
+      "desc": "神魔·盾牌打击：以盾防猛击（无视防御），几率驱散目标一个增益",
+      "sm_skill": true,
+      "damage_from_def": true,
+      "levels": [
+        {"damage": 0, "mp": 35, "cd": 6, "def_mult": 1.0, "desc": "造成1倍盾防的无视防御伤害，50%几率驱散一个增益", "effects": [{"type": "cleanse", "side": "buff", "value": 1, "prob": 50}]},
+        {"damage": 0, "mp": 35, "cd": 6, "def_mult": 1.5, "desc": "造成1.5倍盾防的无视防御伤害，60%几率驱散一个增益", "effects": [{"type": "cleanse", "side": "buff", "value": 1, "prob": 60}]},
+        {"damage": 0, "mp": 35, "cd": 6, "def_mult": 2.0, "desc": "造成2倍盾防的无视防御伤害，75%几率驱散一个增益", "effects": [{"type": "cleanse", "side": "buff", "value": 1, "prob": 75}]},
+        {"damage": 0, "mp": 35, "cd": 6, "def_mult": 2.5, "desc": "造成2.5倍盾防的无视防御伤害，90%几率驱散一个增益", "effects": [{"type": "cleanse", "side": "buff", "value": 1, "prob": 90}]},
+        {"damage": 0, "mp": 35, "cd": 6, "def_mult": 3.0, "desc": "造成3倍盾防的无视防御伤害，必定驱散一个增益", "effects": [{"type": "cleanse", "side": "buff", "value": 1, "prob": 100}]}
+      ]
+    },
+    {
+      "key": "sm_zhuiji",
+      "name": "追击",
+      "job": "warrior",
+      "form": "pan",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/warrior_002.gif",
+      "desc": "神魔·追击：120%普攻追击，刷新破碎诀降防并按降防状态追加伤害",
+      "sm_skill": true,
+      "atk_mult": 1.2,
+      "levels": [
+        {"damage": 0, "mp": 40, "cd": 10, "desc": "120%普攻伤害，目标带降防时追加6%伤害", "bonus_pct": 6},
+        {"damage": 0, "mp": 40, "cd": 10, "desc": "120%普攻伤害，目标带降防时追加12%伤害", "bonus_pct": 12},
+        {"damage": 0, "mp": 40, "cd": 10, "desc": "120%普攻伤害，目标带降防时追加18%伤害", "bonus_pct": 18},
+        {"damage": 0, "mp": 40, "cd": 10, "desc": "120%普攻伤害，目标带降防时追加24%伤害", "bonus_pct": 24},
+        {"damage": 0, "mp": 40, "cd": 10, "desc": "120%普攻伤害，目标带降防时追加30%伤害", "bonus_pct": 30}
+      ]
+    },
+    {
+      "key": "sm_xiuluo",
+      "name": "修罗",
+      "job": "warrior",
+      "form": "xu",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/warrior_001.gif",
+      "desc": "神魔·修罗：爆发杀意大幅提升物攻，但每回合受生命上限1%反噬（自伤锁底1点，不会致命）",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 60, "cd": 24, "desc": "24回合内物攻提升10%，每回合受自身生命上限1%伤害", "effects": [{"type": "atk_up", "value": 10, "duration": 24, "target": "self"}, {"type": "self_harm", "value": 1, "duration": 24, "target": "self"}]},
+        {"damage": 0, "mp": 60, "cd": 24, "desc": "24回合内物攻提升15%，每回合受自身生命上限1%伤害", "effects": [{"type": "atk_up", "value": 15, "duration": 24, "target": "self"}, {"type": "self_harm", "value": 1, "duration": 24, "target": "self"}]},
+        {"damage": 0, "mp": 60, "cd": 24, "desc": "24回合内物攻提升20%，每回合受自身生命上限1%伤害", "effects": [{"type": "atk_up", "value": 20, "duration": 24, "target": "self"}, {"type": "self_harm", "value": 1, "duration": 24, "target": "self"}]},
+        {"damage": 0, "mp": 60, "cd": 24, "desc": "24回合内物攻提升25%，每回合受自身生命上限1%伤害", "effects": [{"type": "atk_up", "value": 25, "duration": 24, "target": "self"}, {"type": "self_harm", "value": 1, "duration": 24, "target": "self"}]},
+        {"damage": 0, "mp": 60, "cd": 24, "desc": "24回合内物攻提升30%，每回合受自身生命上限1%伤害", "effects": [{"type": "atk_up", "value": 30, "duration": 24, "target": "self"}, {"type": "self_harm", "value": 1, "duration": 24, "target": "self"}]}
+      ]
+    },
+    {
+      "key": "sm_fanji_fengbao",
+      "name": "反击风暴",
+      "job": "warrior",
+      "form": "xu",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/warrior_014.gif",
+      "desc": "神魔·反击风暴：持续期内所有近身物理攻击自动反击",
+      "sm_skill": true,
+      "levels": [
+        {"damage": 0, "mp": 55, "cd": 30, "desc": "16回合内近身物理攻击自动反击，反击伤害50%物攻", "effects": [{"type": "counter_all_phys", "value": 50, "duration": 16, "target": "self"}]},
+        {"damage": 0, "mp": 55, "cd": 30, "desc": "18回合内近身物理攻击自动反击，反击伤害60%物攻", "effects": [{"type": "counter_all_phys", "value": 60, "duration": 18, "target": "self"}]},
+        {"damage": 0, "mp": 55, "cd": 30, "desc": "20回合内近身物理攻击自动反击，反击伤害70%物攻", "effects": [{"type": "counter_all_phys", "value": 70, "duration": 20, "target": "self"}]},
+        {"damage": 0, "mp": 55, "cd": 30, "desc": "22回合内近身物理攻击自动反击，反击伤害80%物攻", "effects": [{"type": "counter_all_phys", "value": 80, "duration": 22, "target": "self"}]},
+        {"damage": 0, "mp": 55, "cd": 30, "desc": "24回合内近身物理攻击自动反击，反击伤害90%物攻", "effects": [{"type": "counter_all_phys", "value": 90, "duration": 24, "target": "self"}]}
+      ]
+    }
+  ]
+}
