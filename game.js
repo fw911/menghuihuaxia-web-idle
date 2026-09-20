@@ -4639,24 +4639,92 @@ function showJobPicker(){
     d.className='job';
     d.innerHTML='<h4>'+j.name+'</h4><small>'+j.desc+'</small>';
     d.onclick=()=>{
+      if(!state.cloud.user){ alert('请先注册 / 登录账号，再创建角色。'); return; }   // 强制登录
       const name=($('name-input').value||'').trim()||'游侠';
       $('overlay').style.display='none';
       newPlayer(name, j.key);
       renderHeader(); renderMap(); renderTab();
+      cloudSave(state.cloud.slot||1, true);                                          // 新号立即上云
     };
     el.appendChild(d);
   }
+}
+
+// ---------- 启动登录（强制登录才能进入游戏） ----------
+function setAuthMsg(txt, bad){
+  const el=$('auth-msg');
+  if(el) el.innerHTML = (bad? '<span style="color:var(--red)">':'')+txt+(bad? '</span>':'');
+}
+function wireAuthUI(){
+  const submit = async (mode) => {
+    const ui=$('acc-user'), pi=$('acc-pass');
+    const u=(ui&&ui.value||'').trim(), pw=(pi&&pi.value)||'';
+    if(!u || !pw){ setAuthMsg('请输入账号和密码', true); return; }
+    setAuthMsg('● 处理中…');
+    const r = mode==='register' ? await cloudRegister(u,pw) : await cloudLogin(u,pw);
+    if(!r || !r.ok){ setAuthMsg((r&&r.msg)||'操作失败', true); return; }
+    await afterLogin();
+  };
+  const bl=$('btn-login'), br=$('btn-register');
+  if(bl) bl.onclick=()=>submit('login');
+  if(br) br.onclick=()=>submit('register');
+  for(const id of ['acc-user','acc-pass']){
+    const el=$(id);
+    if(el) el.addEventListener('keydown', e=>{ if(e.key==='Enter') submit('login'); });
+  }
+}
+function renderCloudResume(){
+  const box=$('cloud-resume'); if(!box) return;
+  const used=(state.cloud.slots||[]).filter(s=>!s.empty);
+  if(!used.length){ box.innerHTML='<span class="muted">云端暂无存档，创建角色后会自动上传。</span>'; return; }
+  box.innerHTML='<span class="muted">云端存档：</span>'
+    + used.map(s=>'<button class="mini" data-resume="'+s.slot+'">读取槽位'+s.slot+'（'+s.name+' '+jobCn(s.job)+' Lv.'+s.level+'）</button>').join('');
+  box.querySelectorAll('[data-resume]').forEach(b=> b.onclick=async ()=>{
+    const slot=parseInt(b.getAttribute('data-resume'),10);
+    const r=await cloudLoad(slot);
+    if(r.ok){ state.cloud.slot=slot; persistCloud(); const ov=$('overlay'); if(ov) ov.style.display='none';
+      renderAll(); log('<span class="loot">'+r.msg+'</span>'); }
+    else log('<span class="dmg">'+(r.msg||'读取失败')+'</span>');
+  });
+}
+async function afterLogin(){
+  const authBox=$('auth-box'), charBox=$('char-box');
+  if(authBox) authBox.style.display='none';
+  if(charBox) charBox.style.display='';
+  const who=$('auth-user');
+  if(who) who.innerHTML='已登录：<b style="color:var(--gold)">'+state.cloud.user+'</b>　<button class="mini" id="btn-switch-account">切换账号</button>';
+  const sw=$('btn-switch-account');
+  if(sw) sw.onclick=async()=>{ await cloudLogout(); location.reload(); };
+  await refreshSlots();
+  renderCloudResume();
+  if(state.player){                                   // 本机已有存档 → 登录后直接继续
+    const ov=$('overlay'); if(ov) ov.style.display='none';
+    renderAll();
+    log('<span class="sys">登录成功，'+state.player.name+' 欢迎回来。</span>');
+  }
+}
+async function startAuthFlow(){
+  const ok = await apiProbe();
+  const f=$('f-cloud');
+  if(f){ f.textContent = ok? '● 后端已连接' : '● 后端未启动'; f.className = ok? 'ok' : ''; }
+  if(!ok){
+    setAuthMsg('后端未启动：请在项目目录执行 <b>node server/server.js</b>（端口 8014），然后刷新本页面。', true);
+    return;
+  }
+  if(state.cloud.token){                              // 有旧令牌 → 直接恢复登录
+    const me = await apiCall('/api/me');
+    if(me && me.ok){ state.cloud.user=me.user; persistCloud(); setAuthMsg('● 已恢复登录…'); await afterLogin(); return; }
+    state.cloud.token=null; state.cloud.user=null; persistCloud();
+  }
+  setAuthMsg('● 后端已连接，请注册或登录账号');
 }
 
 async function boot(){
   await loadData();
   loadAuto(); restoreCloud();
   showJobPicker();
-  if(load()){
-    $('overlay').style.display='none';
-    renderHeader(); renderMap(); renderTab();
-    log('<span class="sys">读取存档成功，'+state.player.name+' 欢迎回来。</span>');
-  }
+  wireAuthUI();
+  load();                       // 读取本地存档（不再直接进游戏，先过登录）
   applyOfflineEarnings();   // 离线收益：按离开时长补算经验/金币
   // 按钮
   $('btn-toggle').onclick=()=> setIdle(!state.idle);
@@ -4697,13 +4765,8 @@ async function boot(){
     window.addEventListener('beforeunload', ()=>{ try{ save(true); }catch(e){} });
   }
   if(state.player) renderAll();
-  // 探测后端（异步，不影响开局）
-  apiProbe().then(ok=>{
-    const f=$('f-cloud'); if(f) f.textContent = ok? '● 后端已连接' : '● 后端未启动（离线存档）';
-    if(f) f.className = ok? 'ok' : '';
-    if(ok && state.cloud.token) refreshSlots().then(()=>{ if(state.selTab==='cloud') renderTab(); });
-    if(state.selTab==='cloud') renderTab();
-  });
+  // 启动登录流程（强制）：后端未启动会给出指引；已登录过会自动恢复
+  startAuthFlow();
 }
 function renderAll(){ renderHeader(); renderMap(); renderTab(); renderBattle(); } // renderTab 内部会同步刷新角色面板
 

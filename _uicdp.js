@@ -154,6 +154,30 @@ const BOOT_EXPR = `(function(){
   })();
 })()`;
 
+// 自动注册/登录（游戏启动强制登录，截图工具必须先过这一关）
+async function ensureLogin(cdp) {
+  const user = process.env.UICDP_USER || 'uicdp';
+  const pass = process.env.UICDP_PASS || 'uicdp12345';
+  const expr = `(async function(){
+    try {
+      try { await fetch('/api/register', {method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({username: __U__, password: __P__})}); } catch(e) {}
+      const r = await fetch('/api/login', {method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({username: __U__, password: __P__})});
+      const j = await r.json();
+      if(!j.ok) return 'login-fail:' + (j.msg||'?');
+      localStorage.setItem('menghuihuaxia_cloud_v1', JSON.stringify({user:j.user, token:j.token, slot:1, base:''}));
+      return 'ok';
+    } catch(e) { return 'login-err:' + (e && e.message || e); }
+  })()`.replace(/__U__/g, JSON.stringify(user)).replace(/__P__/g, JSON.stringify(pass));
+  try {
+    const r = await cdp.eval(expr);
+    if (String(r).indexOf('ok') !== 0) { console.error('自动登录失败:', r); return; }
+    await cdp.send('Page.reload', { ignoreCache: false });
+    await sleep(2500);
+  } catch (e) { console.error('自动登录异常:', e.message); }
+}
+
 (async () => {
   const args = [
     '--headless=new', '--disable-gpu', '--no-sandbox', '--hide-scrollbars',
@@ -192,6 +216,10 @@ const BOOT_EXPR = `(function(){
   });
   await cdp.send('Page.navigate', { url: PAGE_URL });
   await sleep(2500);
+
+  // 游戏已改为「启动强制登录」：先自动注册/登录并把令牌写进 localStorage，再重载，
+  // 否则遮罩停在账号页，点 .job 会弹 alert 把 Runtime.evaluate 卡死（30s timeout）。
+  await ensureLogin(cdp);
 
   // UICDP_SAVE='{...存档 JSON...}' → 预置 localStorage 后重载，可直达指定地图/等级
   //   （用于拍副本等需要先旅行过去的页面，免得靠点邻居绕路）

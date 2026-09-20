@@ -25,6 +25,8 @@ EXPORTS = [
     'renderTab','renderLife','renderInstance','renderAch','renderSkill','renderShenmo','renderMap',
     # 右列二级菜单（子菜单）
     'renderBag','renderShop','renderWuhun','renderQuest',
+    # 启动登录（强制登录流程）
+    'setAuthMsg','wireAuthUI','afterLogin','startAuthFlow','renderCloudResume',
     'subTabs','subKey','renderSubtabsHtml','bagSubOf','bagSubLabel',
     # 第二轮细化：按配置原生维度再拆一层
     'bagSlotType','equipSubOf','skillBand','achSubs','achSubOf','smNodeTiers','smTierDef','renderInstance','jobSkills',

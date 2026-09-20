@@ -281,9 +281,29 @@
   <div class="box">
     <h2>梦回华夏 · 挂机怀旧版</h2>
     <p>基于解密后的真实游戏数据（地图 / 怪物 / 装备 / 经验公式 / 掉落 / 精炼）复刻的纯文字挂机游戏。选择你的职业，开始挂机征战华夏。</p>
-    <input class="name" id="name-input" placeholder="输入角色名（默认：游侠）" />
-    <div class="jobs" id="job-list"></div>
-    <div class="hint">数据来源：梦回华夏_v0.58 解密配置（config_enc/*.enc → *.json），共 57 张配置表。</div>
+
+    <!-- ① 账号：启动先登录（存档存服务器，换设备可续） -->
+    <div id="auth-box">
+      <div class="hint" id="auth-msg">● 正在检测后端…</div>
+      <div class="row">
+        <input class="name" id="acc-user" placeholder="账号（2~16 位中英文/数字/下划线）" style="flex:1;min-width:160px"/>
+        <input class="name" id="acc-pass" type="password" placeholder="密码（≥6 位）" style="flex:1;min-width:160px"/>
+      </div>
+      <div class="row">
+        <button class="mini primary" id="btn-login" style="margin-left:0">登录</button>
+        <button class="mini" id="btn-register">注册并登录</button>
+      </div>
+      <div class="hint">需先启动后端：<b>node server/server.js</b>（端口 8014）。注册后存档保存在服务器，换浏览器 / 换设备都能继续。</div>
+    </div>
+
+    <!-- ② 角色：登录后才出现 -->
+    <div id="char-box" style="display:none">
+      <div class="hint" id="auth-user"></div>
+      <div class="row" id="cloud-resume"></div>
+      <input class="name" id="name-input" placeholder="输入角色名（默认：游侠）" style="margin-top:8px"/>
+      <div class="jobs" id="job-list"></div>
+      <div class="hint">数据来源：梦回华夏_v0.58 解密配置（config_enc/*.enc → *.json），共 57 张配置表。</div>
+    </div>
   </div>
 </div>
 
