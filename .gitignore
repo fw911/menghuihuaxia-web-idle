@@ -25,3 +25,20 @@ _test_game.js
 # 截图 / 存档样本
 *.png
 _full_save.json
+
+# 已废弃的一次性补丁/探针脚本（保留本地，不入库）
+_patch_exp.py
+_patch_exp_test.py
+_patch_inlay.py
+_patch_inlay_test.py
+_patch_life_craftrow.py
+_patch_refine.py
+_patch_refine2.py
+_patch_refine_test.py
+_patch_stats.py
+_patch_subtabs.py
+_patch_subtabs2.py
+_patch_subtabs_html.py
+_run_tiers_ab.sh
+_uiprobe.py
+_try_compact.css

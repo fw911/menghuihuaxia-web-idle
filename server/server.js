@@ -117,14 +117,14 @@ async function readBody(req, limit) {
     req.on('error', reject);
   });
 }
-function auth(req) {
+async function auth(req) {
   const h = req.headers['authorization'] || '';
   const t = h.startsWith('Bearer ') ? h.slice(7) : (req.headers['x-token'] || '');
-  const tk = cache.tokens || {};
+  const tk = await tokens();
   const rec = tk[t];
   if (!rec) return null;
   const maxAge = 30 * 24 * 3600 * 1000;
-  if (Date.now() - rec.createdAt > maxAge) { delete tk[t]; return null; }
+  if (Date.now() - rec.createdAt > maxAge) { delete tk[t]; await persist('tokens'); return null; }
   return { token: t, user: rec.user };
 }
 function saveFile(user, slot) {
@@ -174,14 +174,14 @@ async function handleAPI(req, res, url) {
 
   // 登出
   if (p === '/api/logout' && req.method === 'POST') {
-    const a = auth(req);
+    const a = await auth(req);
     if (a) { const tk = await tokens(); delete tk[a.token]; await persist('tokens'); }
     return send(res, 200, { ok: true });
   }
 
   // 当前账号
   if (p === '/api/me') {
-    const a = auth(req);
+    const a = await auth(req);
     if (!a) return send(res, 401, { ok: false, msg: '未登录' });
     const us = await users();
     const rec = us[a.user] || {};
@@ -190,7 +190,7 @@ async function handleAPI(req, res, url) {
 
   // 存档槽位列表
   if (p === '/api/slots' && req.method === 'GET') {
-    const a = auth(req);
+    const a = await auth(req);
     if (!a) return send(res, 401, { ok: false, msg: '未登录' });
     const out = [];
     for (let i = 1; i <= MAX_SLOTS; i++) {
@@ -207,7 +207,7 @@ async function handleAPI(req, res, url) {
 
   // 保存存档
   if (p === '/api/save' && req.method === 'POST') {
-    const a = auth(req);
+    const a = await auth(req);
     if (!a) return send(res, 401, { ok: false, msg: '未登录' });
     const b = await readBody(req);
     const slot = Math.min(MAX_SLOTS, Math.max(1, Number(b.slot || 1)));
@@ -224,7 +224,7 @@ async function handleAPI(req, res, url) {
 
   // 读取存档
   if (p === '/api/load' && req.method === 'GET') {
-    const a = auth(req);
+    const a = await auth(req);
     if (!a) return send(res, 401, { ok: false, msg: '未登录' });
     const slot = Math.min(MAX_SLOTS, Math.max(1, Number(url.searchParams.get('slot') || 1)));
     try {
@@ -235,7 +235,7 @@ async function handleAPI(req, res, url) {
 
   // 删除存档
   if (p === '/api/save' && req.method === 'DELETE') {
-    const a = auth(req);
+    const a = await auth(req);
     if (!a) return send(res, 401, { ok: false, msg: '未登录' });
     const slot = Math.min(MAX_SLOTS, Math.max(1, Number(url.searchParams.get('slot') || 1)));
     const df = saveFile(a.user, slot);
@@ -252,7 +252,7 @@ async function handleAPI(req, res, url) {
   // 排行榜：上传快照
   if (p === '/api/rank' && req.method === 'POST') {
     const b = await readBody(req, 65536);
-    const a = auth(req);
+    const a = await auth(req);
     const lb = await board();
     const key = a ? a.user : ('guest:' + String(b.name || '游侠'));
     const entry = {

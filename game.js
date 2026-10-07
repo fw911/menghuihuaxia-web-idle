@@ -908,14 +908,20 @@ function smResetPoints(){
   if(!s||!s.faction) return {ok:false, msg:'尚未入道'};
   const R=(sm().reset||{}), lv=s.level||1;
   if(lv<50){
-    const cost=lv*((R.below_level_50&&R.below_level_50.formula)? 100 : 100);
+    // 成本按配置公式（"level * 100"）计算，避免硬编码漂移；公式来自受信本地配置，白名单校验后求值
+    const b=R.below_level_50||{};
+    let cost=lv*100; // 兜底，与配置 "level * 100" 一致
+    if(typeof b.formula==='string' && /^[\dlevel+\-*/().\s]+$/.test(b.formula)){
+      try{ const v=Function('"use strict";return ('+b.formula.replace(/level/g,'('+lv+')')+');')(); if(Number.isFinite(v)&&v>=0) cost=Math.round(v); }catch(e){}
+    }
     if(p.gold<cost) return {ok:false, msg:'重置需金币 '+fmtNum(cost)};
     p.gold-=cost;
   }else{
-    const starBy=(R.above_level_50||{}).star_by_level||{};
+    const a=(R.above_level_50||{}), itemKey=a.item||'shoushan_shi';
+    const starBy=a.star_by_level||{};
     let star=1; for(const k of Object.keys(starBy).map(Number).sort((a,b)=>a-b)) if(lv>=k) star=starBy[''+k];
-    if(itemCount('shoushan_shi')<star) return {ok:false, msg:'重置需寿山石 x'+star};
-    itemConsume('shoushan_shi', star);
+    if(itemCount(itemKey)<star) return {ok:false, msg:'重置需'+itemName(itemKey)+' x'+star};
+    itemConsume(itemKey, star);
   }
   const back=smSpent();
   s.nodes={}; s.spent=0; s.points=(s.points||0)+back;
