@@ -361,29 +361,29 @@ function ok(name, cond, extra) {
   ok('区域评估返回数值或 -1', typeof lowEval === 'number' && typeof highEval === 'number', lowEval + ' / ' + highEval);
   E.state.auto.zone = false;
 
-  // ---- 自动换区：首领优先（未通关且可打的首领区优先于普通区）----
-  console.log('-- 自动换区（首领优先）--');
-  {
-    const _orig = E.DATA.maps.maps;
-    const _mon = '__tz_boss_mon';
-    E.MONSTERS[_mon] = { key:_mon, name:'测试首领', level:25, hp:200, exp:80, min_phys_atk:1, max_phys_atk:3,
-      min_magic_atk:1, max_magic_atk:3, min_phys_def:1, max_phys_def:3, min_magic_def:1, max_magic_def:3,
-      dodge:0, gold_min:1, gold_max:3 };
-    const _fake = { key:'__tz_boss', name:'测试首领区', neighbors:['beijun'], zones:[],
-      boss_zone:{ key:'__tz_bz', name:'BZ', boss:[_mon], monsters:[_mon], elite_monsters:[], unlock_level:1 } };
-    E.DATA.maps.maps = _orig.concat([_fake]);
-    p.level = 25; E.refreshStats(); p.hp = p._s.max_hp;
-    p.unlocked = Object.assign({}, p.unlocked, {__tz_boss:true});
-    p.stats.mapClear = (p.stats.mapClear||[]).filter(k=>k!=='__tz_boss');
-    const bz2 = E.bestZone();
-    ok('首领优先：未通关且可打的首领区被优先', !!bz2 && bz2.mapKey==='__tz_boss' && bz2.isBoss===true, JSON.stringify(bz2));
-    p.stats.mapClear = (p.stats.mapClear||[]).concat(['__tz_boss']);
-    const bz3 = E.bestZone();
-    ok('已通关的首领区不再被首领优先', bz3.isBoss !== true || bz3.mapKey !== '__tz_boss', JSON.stringify(bz3));
-    E.DATA.maps.maps = _orig; delete E.MONSTERS[_mon];
-    p.unlocked = { beijun:true, tianshengyuan:true }; p.stats.mapClear = p.stats.mapClear.filter(k=>k!=='__tz_boss');
-  }
-
+  // ---- 自动换区：首领优先（未通关且可打的首领区优先于普通区）----
+  console.log('-- 自动换区（首领优先）--');
+  {
+    const _orig = E.DATA.maps.maps;
+    const _mon = '__tz_boss_mon';
+    E.MONSTERS[_mon] = { key:_mon, name:'测试首领', level:25, hp:200, exp:80, min_phys_atk:1, max_phys_atk:3,
+      min_magic_atk:1, max_magic_atk:3, min_phys_def:1, max_phys_def:3, min_magic_def:1, max_magic_def:3,
+      dodge:0, gold_min:1, gold_max:3 };
+    const _fake = { key:'__tz_boss', name:'测试首领区', neighbors:['beijun'], zones:[],
+      boss_zone:{ key:'__tz_bz', name:'BZ', boss:[_mon], monsters:[_mon], elite_monsters:[], unlock_level:1 } };
+    E.DATA.maps.maps = _orig.concat([_fake]);
+    p.level = 25; E.refreshStats(); p.hp = p._s.max_hp;
+    p.unlocked = Object.assign({}, p.unlocked, {__tz_boss:true});
+    p.stats.mapClear = (p.stats.mapClear||[]).filter(k=>k!=='__tz_boss');
+    const bz2 = E.bestZone();
+    ok('首领优先：未通关且可打的首领区被优先', !!bz2 && bz2.mapKey==='__tz_boss' && bz2.isBoss===true, JSON.stringify(bz2));
+    p.stats.mapClear = (p.stats.mapClear||[]).concat(['__tz_boss']);
+    const bz3 = E.bestZone();
+    ok('已通关的首领区不再被首领优先', bz3.isBoss !== true || bz3.mapKey !== '__tz_boss', JSON.stringify(bz3));
+    E.DATA.maps.maps = _orig; delete E.MONSTERS[_mon];
+    p.unlocked = { beijun:true, tianshengyuan:true }; p.stats.mapClear = p.stats.mapClear.filter(k=>k!=='__tz_boss');
+  }
+
   // ---- 挂机统计埋点 ----
   console.log('-- 挂机统计 --');
   E.state.sess.kills = 0; E.state.sess.exp = 0; E.state.sess.gold = 0; E.state.sess.drops = {};
@@ -1488,11 +1488,14 @@ function ok(name, cond, extra) {
     E.state.player.shenmo = saved;
     const smSubs = E.subTabs('shenmo');
     const tiers = E.smNodeTiers();
-    ok('入道后神魔子菜单 = 1（修验·变身）+ 修验节点实际档位数',
-      smSubs.length === tiers.length + 1 && tiers.length > 1,
+    ok('入道后神魔子菜单 = 1（修验·变身）+ 修验节点档位数 + 1（仙之境）',
+      smSubs.length === tiers.length + 2 && tiers.length > 1,
       smSubs.map(x => x.label).join(','));
     ok('技能树子菜单标签取自 shenmo.json#tiers 的 name',
-      smSubs.slice(1).every((x, i) => x.label === (E.smTierDef(tiers[i]) || {}).name),
+      smSubs.slice(1, 1 + tiers.length).every((x, i) => x.label === (E.smTierDef(tiers[i]) || {}).name),
+      smSubs.map(x => x.label).join(','));
+    ok('仙之境固定为末位子页且标签正确',
+      smSubs.length > 0 && smSubs[smSubs.length - 1].key === 'xianzhijing' && smSubs[smSubs.length - 1].label === '仙之境',
       smSubs.map(x => x.label).join(','));
     ok('子菜单档位与节点实际档位一一对应（升序、无重复）',
       tiers.join(',') === E.smNodeTiers().join(',') && new Set(tiers).size === tiers.length, tiers.join(','));
@@ -1701,6 +1704,99 @@ function ok(name, cond, extra) {
     ok('武魂配方卷轴显示中文名（启魂符☆炼制配方）', E.itemName('recipe_lingyin_1') === '启魂符☆炼制配方');
     ok('宝石原料显示中文名（北斗石）', E.itemName('beidou_石') === '北斗石');
     ok('武魂材料显示中文名（天魂）', E.itemName('sanhun_tian') === '天魂');
+  }
+
+  // ---- 仙之境（shenmo.json#xianzhijing：神魔专属安全区被动修验）----
+  console.log('-- 仙之境（被动修验）--');
+  {
+    // 配置存在性
+    const xc = E.DATA.shenmo && E.DATA.shenmo.xianzhijing;
+    ok('仙之境配置存在', !!xc, xc ? '' : 'null');
+    ok('仙之境每日上限 60 分钟', E.xzCapMin() === 60, String(E.xzCapMin()));
+    ok('仙之境 per_min_exp 表存在（≥10 段）', !!(xc && xc.per_min_exp && xc.per_min_exp.length >= 10),
+      xc && xc.per_min_exp ? xc.per_min_exp.length + ' 段' : 'null');
+
+    // 入道（神魔道）后才能进；未入道 travelTo 被拒
+    E.newPlayer('仙之', 'warrior');
+    const ps = E.state.player;
+    ps.level = 105; E.refreshStats();
+    ps.map = 'beijun';
+    E.travelTo('xianzhijing');
+    ok('未入神魔道时 travelTo(xianzhijing) 被拒', E.state.player.map === 'beijun', E.state.player.map);
+
+    const j = E.smJoin('shen');
+    ok('入道成功（Lv.105 神道）', j.ok, j.msg);
+    ok('入道后 shenmo.faction 已设', !!ps.shenmo.faction, ps.shenmo.faction);
+
+    // 子菜单 / 路由：renderShenmo(xianzhijing) 应路由到仙之境页面
+    ok('神魔子菜单含仙之境', E.subTabs('shenmo').some(x => x.key === 'xianzhijing' && x.label === '仙之境'),
+      JSON.stringify(E.subTabs('shenmo').map(x => x.key)));
+    ok('renderShenmo(xianzhijing) 路由到仙之境', E.renderShenmo('xianzhijing').indexOf('仙之境') >= 0,
+      E.renderShenmo('xianzhijing').slice(0, 30));
+
+    // 速率按等级取表
+    ps.shenmo.level = 1;
+    ok('Lv1 修验速率 = 25/分', E.xzRatePerMin(1) === 25, String(E.xzRatePerMin(1)));
+    ps.shenmo.level = 30;
+    ok('Lv30 修验速率 = 1850/分', E.xzRatePerMin(30) === 1850, String(E.xzRatePerMin(30)));
+    ps.shenmo.level = 90;
+    ok('Lv90 修验速率 = 1,000,000/分', E.xzRatePerMin(90) === 1000000, String(E.xzRatePerMin(90)));
+    ps.shenmo.level = 1;
+
+    // 直接结算分钟：精确累加 + 每日上限
+    ps.shenmo.xz_date = '2000-1-1'; ps.shenmo.xz_min = 0; ps.shenmo.xz_frac = 0; ps.shenmo.xz_exp_total = 0; ps.shenmo.exp = 0;
+    const g1 = E.smXianzhiAddMinutes(30);
+    ok('结算 30 分钟获得 30×25=750', g1 === 750, g1 + '');
+    ok('xz_min 累加至 30', Math.abs((ps.shenmo.xz_min || 0) - 30) < 1e-9, String(ps.shenmo.xz_min));
+    const g2 = E.smXianzhiAddMinutes(40);   // 上限 60，剩 30 → 只结算 30
+    ok('超每日上限只结算到 60（再得 750）', g2 === 750, g2 + '');
+    ok('xz_min 封顶 60', Math.abs((ps.shenmo.xz_min || 0) - 60) < 1e-9, String(ps.shenmo.xz_min));
+    const g3 = E.smXianzhiAddMinutes(10);    // 已封顶
+    ok('已达上限再结算为 0', g3 === 0, String(g3));
+
+    // 每 tick 结算：86 tick ≈ 1 分钟（loop 700ms → 60000/700≈85.7）
+    ps.shenmo.xz_date = '2000-1-1'; ps.shenmo.xz_min = 0; ps.shenmo.xz_frac = 0; ps.shenmo.xz_exp_total = 0; ps.shenmo.exp = 0;
+    ps.shenmo.level = 1;
+    const expB = ps.shenmo.exp;
+    for (let i = 0; i < 86; i++) E.smXianzhiTick();
+    ok('86 tick ≈ 1 分钟（xz_min≈1）', Math.abs((ps.shenmo.xz_min || 0) - 1) < 0.05, String(ps.shenmo.xz_min));
+    ok('86 tick 累积经验 ≈ 25（速率 25/分）', Math.abs((ps.shenmo.exp - expB) - 25) < 1.0,
+      'exp+' + (ps.shenmo.exp - expB).toFixed(2));
+
+    // 跨日重置：日期不同则 xz_min 归零后重新累加
+    ps.shenmo.xz_date = '1999-9-9'; ps.shenmo.xz_min = 50; ps.shenmo.xz_frac = 0;
+    E.smXianzhiAddMinutes(1);
+    ok('跨日重置：xz_min 归零后重新累加（≤1）', (ps.shenmo.xz_min || 0) <= 1 + 1e-9, String(ps.shenmo.xz_min));
+
+    // 进入仙之境：isXianzhiNow + tick 早退 + autoZone 不换走
+    ps.shenmo.level = 1;
+    E.travelTo('xianzhijing');
+    ok('入道后可进入 xianzhijing', E.state.player.map === 'xianzhijing', E.state.player.map);
+    ok('进入后 isXianzhiNow 为 true', E.isXianzhiNow() === true);
+    ok('仙之境 zone 置空（安全区无战斗）', E.state.zone === null);
+
+    // tick 在仙之境早退、不进战斗分支
+    E.state.player.map = 'xianzhijing'; E.state.zone = null; E.state.combat = null; E.state.idle = true;
+    let tickErr = null;
+    try { for (let i = 0; i < 100; i++) E.tick(); } catch (e) { tickErr = e; }
+    ok('仙之境 tick 不崩溃且不进战斗', !tickErr && E.state.combat === null, tickErr ? tickErr.message : ('combat=' + E.state.combat));
+    E.state.idle = false;
+
+    // autoZone 不强行换走仙之境（zone 仍为空）
+    E.state.auto.zone = true;
+    E.state.zone = null;
+    E.autoZone(false);
+    ok('autoZone 不换走仙之境', E.state.zone === null && E.isXianzhiNow());
+    E.state.auto.zone = false;
+
+    // 渲染：未进入时含「前往仙之境」按钮；进入后含「静修中」
+    E.state.player.map = 'beijun';
+    const htmlOut = E.renderXianzhi();
+    ok('仙之境页面含进入按钮', htmlOut.indexOf('前往仙之境') >= 0, htmlOut.slice(0, 30));
+    ok('仙之境页面含每日上限说明', htmlOut.indexOf('60') >= 0);
+    E.state.player.map = 'xianzhijing';
+    const htmlIn = E.renderXianzhi();
+    ok('在仙之境内页面显示静修中', htmlIn.indexOf('静修') >= 0);
   }
 
   // 恢复默认页签，避免影响后续/重复运行

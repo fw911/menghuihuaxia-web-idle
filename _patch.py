@@ -68,6 +68,8 @@ EXPORTS = [
     'consumeDungeonEntry', 'noteDungeonBossKilled',
     # 称号系统
     'titleList','titleByKey','titleUnlocked','titleEffect','titleDmgMult','titleHeal','titleProgress','titleTarget','grantTitle','checkTitles','equipTitle',
+    # 仙之境（shenmo.json#xianzhijing）
+    'xzRatePerMin','xzCapMin','smXianzhiAddMinutes','smXianzhiTick','isXianzhiNow','curMapKey','renderXianzhi',
     # 数值探针用
     'tierFromLevel', 'HERO_SLOTS', 'monsterDef',
     # 区域探索（explore_target）/ 首领区清剿（minion_target）

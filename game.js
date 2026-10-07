@@ -835,6 +835,54 @@ function smGain(charExp){
   }
 }
 
+// 仙之境（shenmo.json#xianzhijing）：安全区被动修验，按滞留 tick 结算，每日上限 60 分钟，24:00 重置
+const XIANZHI_TICKS_PER_MIN = 86;   // loop 700ms → 60000/700≈85.7，取整
+function curMapKey(){ return (state.zone && state.zone.mapKey) || (state.player && state.player.map) || null; }
+function xzCfg(){ return sm().xianzhijing || {}; }
+function xzRatePerMin(level){
+  const arr=(xzCfg().per_min_exp||[]); let r=0;
+  for(const t of arr) if(level>=(t.min_level||1)) r=t.per_min;
+  return r||0;
+}
+function xzCapMin(){ return xzCfg().daily_minutes || 60; }
+function xzDailyReset(s){
+  const d=todayKey();
+  if(s.xz_date!==d){ s.xz_date=d; s.xz_min=0; s.xz_frac=0; }
+}
+function isXianzhiNow(){ return curMapKey()==='xianzhijing'; }
+// 每 tick 结算（loop 700ms）：把「每分钟」修验值摊到每 tick
+function smXianzhiTick(){
+  const p=state.player, s=p.shenmo; if(!s||!s.faction) return;
+  if(s.level>=smMaxLevel()) return;
+  xzDailyReset(s);
+  if((s.xz_min||0) >= xzCapMin()) return;
+  const rate=xzRatePerMin(s.level); if(rate<=0) return;
+  const perTick=rate/XIANZHI_TICKS_PER_MIN;
+  s.xz_min=Math.min(xzCapMin(), (s.xz_min||0)+(1/XIANZHI_TICKS_PER_MIN));
+  s.xz_exp_total=(s.xz_exp_total||0)+perTick;
+  s.exp+=perTick;
+  let up=false;
+  while(s.level<smMaxLevel() && s.exp>=smExpNeed(s.level)){ s.exp-=smExpNeed(s.level); s.level++; up=true; }
+  if(up){
+    s.points=(s.points||0)+(smTier(s.spent||0).points_per_level||1);
+    eventLog('【仙之境】修验等级提升至 <span class="lv">'+s.level+'</span>，称号：'+smTitle(s.faction,s.level));
+  }
+}
+// 直接结算 minutes 分钟（测试/补领用，最多到当日上限）
+function smXianzhiAddMinutes(mins){
+  const p=state.player, s=p.shenmo; if(!s||!s.faction) return 0;
+  xzDailyReset(s);
+  const left=xzCapMin()-(s.xz_min||0); if(left<=0) return 0;
+  const use=Math.min(mins,left), rate=xzRatePerMin(s.level), gained=rate*use;
+  s.xz_min=(s.xz_min||0)+use;
+  s.xz_exp_total=(s.xz_exp_total||0)+gained;
+  s.exp+=gained;
+  let up=false;
+  while(s.level<smMaxLevel() && s.exp>=smExpNeed(s.level)){ s.exp-=smExpNeed(s.level); s.level++; up=true; }
+  if(up) s.points=(s.points||0)+(smTier(s.spent||0).points_per_level||1);
+  return gained;
+}
+
 // ---------- 神魔修验技能树（shenmo_skills.json） ----------
 function smNodes(){
   // 各职业技能树分散在 shenmo_skills(_darkwitch|_shaman).json
@@ -1461,6 +1509,8 @@ function tick(){
     if(th.hp>0){ p.hp=Math.min(p._s.max_hp, p.hp+th.hp); }
     if(th.mp>0){ p.mp=Math.min(p._s.max_mp, p.mp+th.mp); }
   }
+  // 仙之境：安全区被动修验（无战斗），按滞留 tick 结算后直接返回（避免进入下方战斗分支）
+  if(isXianzhiNow()){ smXianzhiTick(); renderHeader(); return; }
   if(!state.combat){
     const m = spawnMonster();
     if(!m){ return; }
@@ -1931,6 +1981,9 @@ function travelTo(mapKey){
   const map = DATA.maps.maps.find(m=>m.key===mapKey);
   if(!map) return;
   if(map.unlock_map && !p.unlocked[map.unlock_map]){ log('<span class="dmg">需先探索 '+map.unlock_map+' 才能进入</span>'); return; }
+  if(map.require_shenmo && !(p.shenmo && p.shenmo.faction)){
+    log('<span class="dmg">需先入神魔道（角色 Lv.'+((sm().entry||{}).min_char_level||101)+'）才能进入'+map.name+'</span>'); return;
+  }
   p.map = mapKey; p.unlocked[mapKey]=true;
   state.zone=null; state.combat=null;
   log('<span class="sys">来到 '+map.name+'（安全区：'+(map.safe_zone?map.safe_zone.name:'无')+'）</span>');
@@ -2458,7 +2511,28 @@ function renderWuhun(sub){
   }
   return html;
 }
+// 仙之境子页：神魔专属安全区静修（无战斗，按滞留 tick 结算修验值）
+function renderXianzhi(){
+  const p=state.player, s=p.shenmo;
+  if(!s||!s.faction) return '<div class="muted">需先入神魔道才能进入仙之境。</div>';
+  const rate=xzRatePerMin(s.level), cap=xzCapMin(), used=(s.xz_min||0);
+  const left=Math.max(0,cap-used), here=isXianzhiNow();
+  let h='<h3 class="sec">仙之境（神魔专属静修）</h3>';
+  h+='<div class="muted">安全区无战斗，滞留即按等级结算修验值。每日上限 '+cap+' 分钟，次日 0 点重置。</div>';
+  h+='<div class="stat-grid">'
+    +'<div class="st"><span>修验速率</span><b>'+rate.toLocaleString()+' / 分钟</b></div>'
+    +'<div class="st"><span>今日已用</span><b>'+used.toFixed(1)+' 分</b></div>'
+    +'<div class="st"><span>今日剩余</span><b>'+left.toFixed(1)+' 分</b></div>'
+    +'<div class="st"><span>累计获得</span><b>'+Math.round(s.xz_exp_total||0).toLocaleString()+'</b></div>'
+    +'</div>';
+  if(here) h+='<div class="loot">你正在仙之境静修，每 700ms 自动结算。</div>';
+  else h+='<div class="bag-tools"><button class="mini" data-sm="go_xz">前往仙之境</button></div>';
+  const needLv=((sm().entry||{}).min_char_level||101);
+  h+='<div class="muted">入口：北原郡 NPC 欧文子（需角色 Lv.'+needLv+' 入道后开启）。</div>';
+  return h;
+}
 function renderShenmo(sub){
+  if(sub==='xianzhijing') return renderXianzhi();
   const p=state.player; const S=sm();
   const need=(S.entry||{}).min_char_level||101;
   const cur = (p.shenmo&&p.shenmo.faction) ? smTransform(p.shenmo.level||1) : null;
@@ -2609,6 +2683,7 @@ function subTabs(tab){
     if(!joined) return [{key:'level',label:'修验·变身'}];
     const out=TAB_SUBS.shenmo.slice(0,1);          // 「修验·变身」
     for(const t of smNodeTiers()) out.push({key:'tree_'+t, label:(smTierDef(t)||{}).name || ('第'+t+'档')});
+    out.push({key:'xianzhijing', label:'仙之境'});
     return out;
   }
   return TAB_SUBS[tab]||[];
@@ -4090,6 +4165,7 @@ function bindTabClicks(){
       log(r.ok? ('<span class="loot">'+r.msg+'</span>') : ('<span class="dmg">'+r.msg+'</span>'));
       if(r.ok){ refreshStats(); eventLog('<span class="lv">'+r.msg+'</span>'); }
     }
+    else if(d.getAttribute('data-sm')==='go_xz'){ travelTo('xianzhijing'); }
     renderTab(); renderHero();
   });
   // 副本兑换
@@ -4551,6 +4627,7 @@ function bestZone(){
 function autoZone(force){
   const A=state.auto, p=state.player;
   if(!A.zone || !p) return;
+  if(isXianzhiNow()) return;   // 仙之境为手动静修，autoZone 不强行换走
   const b=bestZone(); if(!b) return;
   const cur=state.zone;
   const same = cur && cur.mapKey===b.mapKey && cur.zoneKey===b.zoneKey && cur.isBoss===b.isBoss;
