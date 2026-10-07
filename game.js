@@ -4520,12 +4520,14 @@ function zoneEval(mapKey, zoneKey, isBoss){
   return exp/ttk;
 }
 function bestZone(){
-  const p=state.player; let best=null, fb=null;
+  const p=state.player; let best=null, fb=null, bestBoss=null;
   const consider=(map, zoneKey, isBoss, name)=>{
     const mk=map.key;
     const sc=zoneEval(mk, zoneKey, isBoss);
     if(sc>0){
       if(!best || sc>best.score) best={mapKey:mk, zoneKey, isBoss, score:sc, name};
+      // 首领优先：未通关且可打的首领区，优先于普通区，改善 boss 进度推进
+      if(isBoss && !mapCleared(mk) && (!bestBoss || sc>bestBoss.score)) bestBoss={mapKey:mk, zoneKey, isBoss, score:sc, name};
       return;
     }
     // 保底：角色等级超出怪物上限后（最高怪 Lv120，怪低 5 级即 0 经验）所有区域经验都为 0，
@@ -4542,6 +4544,7 @@ function bestZone(){
     for(const z of (map.zones||[])) consider(map, z.key, false, map.name+' · '+(z.name||z.key));
     if(map.boss_zone) consider(map, null, true, map.name+' · 首领');
   }
+  if(bestBoss) return bestBoss;   // 首领优先：先推进未通关副本
   if(best) return best;
   return fb? {mapKey:fb.mapKey, zoneKey:fb.zoneKey, isBoss:fb.isBoss, score:0, name:fb.name} : null;
 }

@@ -361,6 +361,29 @@ function ok(name, cond, extra) {
   ok('区域评估返回数值或 -1', typeof lowEval === 'number' && typeof highEval === 'number', lowEval + ' / ' + highEval);
   E.state.auto.zone = false;
 
+  // ---- 自动换区：首领优先（未通关且可打的首领区优先于普通区）----
+  console.log('-- 自动换区（首领优先）--');
+  {
+    const _orig = E.DATA.maps.maps;
+    const _mon = '__tz_boss_mon';
+    E.MONSTERS[_mon] = { key:_mon, name:'测试首领', level:25, hp:200, exp:80, min_phys_atk:1, max_phys_atk:3,
+      min_magic_atk:1, max_magic_atk:3, min_phys_def:1, max_phys_def:3, min_magic_def:1, max_magic_def:3,
+      dodge:0, gold_min:1, gold_max:3 };
+    const _fake = { key:'__tz_boss', name:'测试首领区', neighbors:['beijun'], zones:[],
+      boss_zone:{ key:'__tz_bz', name:'BZ', boss:[_mon], monsters:[_mon], elite_monsters:[], unlock_level:1 } };
+    E.DATA.maps.maps = _orig.concat([_fake]);
+    p.level = 25; E.refreshStats(); p.hp = p._s.max_hp;
+    p.unlocked = Object.assign({}, p.unlocked, {__tz_boss:true});
+    p.stats.mapClear = (p.stats.mapClear||[]).filter(k=>k!=='__tz_boss');
+    const bz2 = E.bestZone();
+    ok('首领优先：未通关且可打的首领区被优先', !!bz2 && bz2.mapKey==='__tz_boss' && bz2.isBoss===true, JSON.stringify(bz2));
+    p.stats.mapClear = (p.stats.mapClear||[]).concat(['__tz_boss']);
+    const bz3 = E.bestZone();
+    ok('已通关的首领区不再被首领优先', bz3.isBoss !== true || bz3.mapKey !== '__tz_boss', JSON.stringify(bz3));
+    E.DATA.maps.maps = _orig; delete E.MONSTERS[_mon];
+    p.unlocked = { beijun:true, tianshengyuan:true }; p.stats.mapClear = p.stats.mapClear.filter(k=>k!=='__tz_boss');
+  }
+
   // ---- 挂机统计埋点 ----
   console.log('-- 挂机统计 --');
   E.state.sess.kills = 0; E.state.sess.exp = 0; E.state.sess.gold = 0; E.state.sess.drops = {};
