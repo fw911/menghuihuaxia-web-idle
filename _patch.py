@@ -70,6 +70,11 @@ EXPORTS = [
     'titleList','titleByKey','titleUnlocked','titleEffect','titleDmgMult','titleHeal','titleProgress','titleTarget','grantTitle','checkTitles','equipTitle',
     # 仙之境（shenmo.json#xianzhijing）
     'xzRatePerMin','xzCapMin','smXianzhiAddMinutes','smXianzhiTick','isXianzhiNow','curMapKey','renderXianzhi',
+    # 修验任务（shenmo.json#quest，炼丹产线）
+    'xyCfg','xyGrades','xyGradeDef','xyRecipeTypes','xyRecipeName','xyDailyCap','xyQuestState','xyYinziPool',
+    'xyHasYinzi','xyHasMaterials','xyMatRequirement','xyAccept','xySubmitMaterials','xyRefine','xyHandIn','xyRefresh',
+    'xyStrCap','xyStrengthen','xyTrialCap','xyTrialStart','xyTrialOnKill','xyRollGrade',
+    'renderXrTask','renderXrStr','renderXrTrial',
     # 数值探针用
     'tierFromLevel', 'HERO_SLOTS', 'monsterDef',
     # 区域探索（explore_target）/ 首领区清剿（minion_target）

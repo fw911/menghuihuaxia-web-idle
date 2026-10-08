@@ -1488,15 +1488,19 @@ function ok(name, cond, extra) {
     E.state.player.shenmo = saved;
     const smSubs = E.subTabs('shenmo');
     const tiers = E.smNodeTiers();
-    ok('入道后神魔子菜单 = 1（修验·变身）+ 修验节点档位数 + 1（仙之境）',
-      smSubs.length === tiers.length + 2 && tiers.length > 1,
+    ok('入道后神魔子菜单 = 修验·变身 + 档位 + 仙之境 + 3 修验任务页',
+      smSubs.length === tiers.length + 5 && tiers.length > 1,
       smSubs.map(x => x.label).join(','));
     ok('技能树子菜单标签取自 shenmo.json#tiers 的 name',
       smSubs.slice(1, 1 + tiers.length).every((x, i) => x.label === (E.smTierDef(tiers[i]) || {}).name),
       smSubs.map(x => x.label).join(','));
-    ok('仙之境固定为末位子页且标签正确',
-      smSubs.length > 0 && smSubs[smSubs.length - 1].key === 'xianzhijing' && smSubs[smSubs.length - 1].label === '仙之境',
-      smSubs.map(x => x.label).join(','));
+    ok('仙之境位于档位之后、修验任务页之前',
+      smSubs[1 + tiers.length] && smSubs[1 + tiers.length].key === 'xianzhijing',
+      smSubs.map(x => x.key).join(','));
+    ok('修验任务三页（task/str/trial）位于子菜单末位',
+      ['xr_task','xr_str','xr_trial'].every(k => smSubs.some(x => x.key === k)) &&
+      smSubs[smSubs.length-3].key === 'xr_task' && smSubs[smSubs.length-2].key === 'xr_str' && smSubs[smSubs.length-1].key === 'xr_trial',
+      smSubs.map(x => x.key).join(','));
     ok('子菜单档位与节点实际档位一一对应（升序、无重复）',
       tiers.join(',') === E.smNodeTiers().join(',') && new Set(tiers).size === tiers.length, tiers.join(','));
     {
@@ -1797,6 +1801,136 @@ function ok(name, cond, extra) {
     E.state.player.map = 'xianzhijing';
     const htmlIn = E.renderXianzhi();
     ok('在仙之境内页面显示静修中', htmlIn.indexOf('静修') >= 0);
+  }
+
+  // ---- 修验任务（shenmo.json#quest：炼丹产线三系统）----
+  console.log('-- 修验任务（炼丹产线）--');
+  {
+    const ps = E.state.player;
+    const qcfg = E.DATA.shenmo && E.DATA.shenmo.quest;
+    ok('修验任务配置存在', !!qcfg);
+    ok('recipe_types 含 6 类（exp/ore/crystal/gem/soul/bailian）',
+      Object.keys(E.xyRecipeTypes()).length === 6, Object.keys(E.xyRecipeTypes()).join(','));
+    ok('grade_order = 1A~5A', JSON.stringify(E.xyGrades()) === JSON.stringify(['1A','2A','3A','4A','5A']));
+    ok('5 个品阶均含 dan_pct/exp_cost/yinzi_qty/submit_gold/mat_qty',
+      E.xyGrades().every(g => { const d = E.xyGradeDef(g); return d && typeof d.dan_pct==='number' && typeof d.exp_cost==='number' && typeof d.yinzi_qty==='number' && typeof d.submit_gold==='number' && typeof d.mat_qty==='number'; }),
+      E.xyGrades().map(g => !!E.xyGradeDef(g)).join(','));
+    ok('yinzi.pool = 紫菱花/风铃珠/百炼石', JSON.stringify(E.xyYinziPool()) === JSON.stringify(['ziling_hua','fengling_zhu','bailian_shi']));
+    ok('furnace_item = liandan_shenlu', qcfg.furnace_item === 'liandan_shenlu');
+    ok('submit_bonus_pct = 0.2', qcfg.submit_bonus_pct === 0.2);
+    ok('talisman = 修验符 + dan_bonus_pct 0.2', qcfg.talisman.item === 'shenmo_xiulian_fu' && qcfg.talisman.dan_bonus_pct === 0.2);
+
+    // 每日上限受等级影响：基础5 / L40+5 / L80 无限
+    ps.shenmo.level = 10; ok('Lv10 每日上限 = 5', E.xyDailyCap() === 5, String(E.xyDailyCap()));
+    ps.shenmo.level = 50; ok('Lv50 每日上限 = 10', E.xyDailyCap() === 10, String(E.xyDailyCap()));
+    ps.shenmo.level = 100; ok('Lv100 每日上限 = Infinity', E.xyDailyCap() === Infinity, String(E.xyDailyCap()));
+
+    // 准备：干净背包 + 充足修验经验 + 银子池
+    ps.bag = []; ps.ores = {}; ps.crystal = 0;
+    ps.shenmo.quest = {}; ps.shenmo.exp = 2e9;
+    E.addToBag({type:'consumable', key:'ziling_hua', count:1000});
+    E.addToBag({type:'consumable', key:'fengling_zhu', count:1000});
+    E.addToBag({type:'consumable', key:'bailian_shi', count:1000});
+
+    // xyAccept：未知类型 / 每日上限 / exp+银子扣减 / tasks_done 累加
+    ok('xyAccept 未知配方类型被拒', E.xyAccept('nope').ok === false);
+    const poolSum = () => ['ziling_hua','fengling_zhu','bailian_shi'].reduce((a,k)=>a+E.itemCount(k),0);
+    ps.shenmo.level = 10; ps.shenmo.quest = {}; ps.shenmo.exp = 2e9;   // L10 → 每日 5 次
+    let okN = 0, expBefore = ps.shenmo.exp, poolBefore = poolSum();
+    for (let i = 0; i < 6; i++) if (E.xyAccept('ore').ok) okN++;
+    ok('Lv10 每日接取恰好 5 次（第 6 次超上限）', okN === 5, 'okN=' + okN);
+    ok('接取后 tasks_done 累加至 5', (ps.shenmo.quest.tasks_done||0) === 5, String(ps.shenmo.quest.tasks_done));
+    ok('接取消耗修验经验', ps.shenmo.exp < expBefore, expBefore + '→' + ps.shenmo.exp);
+    ok('接取消耗银子池', poolSum() < poolBefore, poolBefore + '→' + poolSum());
+    ps.shenmo.level = 100; ps.shenmo.quest = {}; ps.shenmo.exp = 2e9;   // 复位供后续
+
+    // 受控 current：矿石 1A（hantie×5），验证 store 路由 + submit + refine + handin
+    const q = E.xyQuestState(); q.current = { grade:'1A', type:'ore', status:'accepted' };
+    ok('矿石类型 xyHasMaterials 初始缺料为 false', E.xyHasMaterials('ore','1A') === false);
+    ps.ores.hantie = 5;
+    ok('注入 hantie×5 后 xyHasMaterials 为 true（ore 走 p.ores 路由）', E.xyHasMaterials('ore','1A') === true);
+    const rSub = E.xySubmitMaterials();
+    ok('提交材料成功（accepted→ready）', rSub.ok && q.current.status === 'ready', rSub.msg);
+    ok('提交后 hantie 被消耗（p.ores 路由扣减）', (ps.ores.hantie||0) === 0, String(ps.ores.hantie));
+    E.addToBag({type:'consumable', key:'liandan_shenlu', count:1});
+    const rRef = E.xyRefine();
+    ok('有炼丹神炉时炼丹成功（ready→refined）', rRef.ok && q.current.status === 'refined', rRef.msg);
+    ok('炼丹结果 gotPill 为布尔', typeof q.current.gotPill === 'boolean');
+    const goldBefore = ps.gold;
+    const rHand = E.xyHandIn();
+    ok('提交领金币成功（refined→清空 current）', rHand.ok && q.current === null, rHand.msg);
+    ok('1A 提交金币 = 5000×1.2 = 6000（强化0级）', ps.gold - goldBefore === 6000, '+' + (ps.gold - goldBefore));
+
+    // store 路由：晶石（p.crystal）
+    q.current = { grade:'1A', type:'crystal', status:'accepted' };
+    ok('晶石类型初始缺料为 false', E.xyHasMaterials('crystal','1A') === false);
+    ps.crystal = 5;
+    ok('注入晶石×5 后 xyHasMaterials 为 true（crystal 走 p.crystal 路由）', E.xyHasMaterials('crystal','1A') === true);
+    E.xySubmitMaterials();
+    ok('提交后晶石被消耗（p.crystal 路由扣减）', (ps.crystal||0) === 0, String(ps.crystal));
+
+    // store 路由：宝石（p.bag type=gem，any_of）
+    q.current = { grade:'1A', type:'gem', status:'accepted' };
+    ok('宝石类型初始缺料为 false', E.xyHasMaterials('gem','1A') === false);
+    E.addToBag({type:'gem', series:'beidou', grade:'碎石', count:5});
+    ok('注入 beidou_碎石×5 后 xyHasMaterials 为 true（gem 走 p.bag 路由）', E.xyHasMaterials('gem','1A') === true);
+    E.xySubmitMaterials();
+    const gemLeft = ps.bag.filter(b=>b.type==='gem'&&b.series==='beidou'&&b.grade==='碎石').reduce((a,b)=>a+(b.count||1),0);
+    ok('提交后宝石被消耗（gem 路由扣减）', gemLeft === 0, String(gemLeft));
+
+    // store 路由：魂魄（consumable，any_of）
+    q.current = { grade:'1A', type:'soul', status:'accepted' };
+    ok('魂魄类型初始缺料为 false', E.xyHasMaterials('soul','1A') === false);
+    E.addToBag({type:'consumable', key:'sanhun_tian', count:5});
+    ok('注入 sanhun_tian×5 后 xyHasMaterials 为 true（consumable 路由）', E.xyHasMaterials('soul','1A') === true);
+    E.xySubmitMaterials();
+    ok('提交后魂魄被消耗', E.itemCount('sanhun_tian') === 0, String(E.itemCount('sanhun_tian')));
+
+    // none 类型（exp）无材料需求 → 始终可提交
+    q.current = { grade:'1A', type:'exp', status:'accepted' };
+    ok('exp 类型无材料需求 → xyHasMaterials 恒 true', E.xyHasMaterials('exp','1A') === true);
+
+    // xyRefresh：Lv40 解锁；带免费次数
+    q.current = { grade:'1A', type:'ore', status:'accepted' };
+    ps.shenmo.level = 10;
+    ok('Lv10 刷新被拒（需 Lv40）', E.xyRefresh().ok === false);
+    ps.shenmo.level = 100;
+    const rRef2 = E.xyRefresh();
+    ok('Lv100 刷新成功（免费次数内）', rRef2.ok === true, rRef2.msg);
+    ok('刷新后 grade 仍为合法品阶', E.xyGrades().indexOf(q.current.grade) >= 0, q.current.grade);
+
+    // 强化：材料递增 + enhanced/times 累加 + 每日上限
+    ps.bag = []; ps.ores = {}; ps.crystal = 0;     // 干净背包，精准校验消耗
+    ps.shenmo.quest = {}; ps.shenmo.level = 100;
+    E.addToBag({type:'consumable', key:'bailian_shi', count:100});
+    E.addToBag({type:'consumable', key:'ziling_hua', count:20});
+    E.addToBag({type:'consumable', key:'fengling_zhu', count:20});
+    ok('强化每日上限 Lv100 = 3（基础1 + 符令加成2）', E.xyStrCap() === 3, String(E.xyStrCap()));
+    const rStr = E.xyStrengthen();
+    ok('强化成功（enhanced→1, times→1）', rStr.ok && ps.shenmo.quest.str.enhanced === 1 && ps.shenmo.quest.str.times === 1, rStr.msg);
+    ok('强化消耗 0 级材料（百炼石×10/紫菱花×1/风铃珠×1）',
+      E.itemCount('bailian_shi') === 90 && E.itemCount('ziling_hua') === 19 && E.itemCount('fengling_zhu') === 19,
+      [E.itemCount('bailian_shi'),E.itemCount('ziling_hua'),E.itemCount('fengling_zhu')].join(','));
+
+    // 导师考验：消耗百炼石 + 限时击杀给经验
+    ps.shenmo.quest = {}; ps.shenmo.level = 100;
+    E.addToBag({type:'consumable', key:'bailian_shi', count:100});
+    ok('考验每日上限 Lv100 = 1', E.xyTrialCap() === 1, String(E.xyTrialCap()));
+    const rTr = E.xyTrialStart();
+    ok('考验开始成功', rTr.ok && !!ps.shenmo.quest.trial.active, rTr.msg);
+    const tg = ps.shenmo.quest.trial.active;
+    const perKill = qcfg.trial.per_kill_exp[tg.grade], need = tg.target;
+    const expB2 = ps.shenmo.exp;
+    for (let i = 0; i < need; i++) E.xyTrialOnKill();
+    ok('达成目标击杀后给经验（per_kill_exp × target）', ps.shenmo.exp === expB2 + perKill * need, (ps.shenmo.exp - expB2) + ' vs ' + (perKill*need));
+    ok('达成后 active 清空', ps.shenmo.quest.trial.active === null);
+
+    // UI 路由：三页均渲染且含对应按钮
+    const tHtml = E.renderXrTask(), sHtml = E.renderXrStr(), trHtml = E.renderXrTrial();
+    ok('修验任务页含接取按钮 accept:*', tHtml.indexOf('accept:') >= 0);
+    ok('强化页含 data-xy="str"', sHtml.indexOf('data-xy="str"') >= 0);
+    ok('导师考验页含 data-xy="trial_start"', trHtml.indexOf('data-xy="trial_start"') >= 0);
+    ok('renderShenmo(xr_task) 路由到修验任务页', E.renderShenmo('xr_task').indexOf('修验任务') >= 0);
   }
 
   // 恢复默认页签，避免影响后续/重复运行
