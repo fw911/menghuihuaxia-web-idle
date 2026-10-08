@@ -440,14 +440,16 @@ function ok(name, cond, extra) {
     const pl = E.state.player;
     pl.level = 40; E.refreshStats(); pl.hp = pl._s.max_hp;
     const beforeExp = cumExp(pl), beforeGold = pl.gold;
-    // 模拟离开 1 小时（3600s），给定挂机速率 经验 100/s、金币 50/s，效率 50%
+    // 模拟离开 1 小时（3600s），给定挂机速率 经验 100/s、金币 50/s，效率 = OFFLINE_EFF（严格还原 0.0875）
     E.state._loadedTs = Date.now() - 3600 * 1000;
     E.state._loadedRate = { exp: 100, gold:50 };
     E.applyOfflineEarnings();
-    const grossExp = cumExp(pl) - beforeExp;       // 含升级吃掉的部分，应为 floor(100*3600*0.5)=180000
-    const goldGain = pl.gold - beforeGold;          // 离线金币 + 升级触发的成就奖励（应 ≥ 90000）
-    ok('离线经验补算≈18万（含升级）', Math.abs(grossExp - 180000) < 1, grossExp + '');
-    ok('离线金币至少补算9万', goldGain >= 90000, goldGain + '');
+    const grossExp = cumExp(pl) - beforeExp;       // 含升级吃掉的部分，应为 floor(100*3600*OFFLINE_EFF)
+    const goldGain = pl.gold - beforeGold;          // 离线金币，应为 floor(50*3600*OFFLINE_EFF)
+    const expExpect = Math.floor(100*3600*E.OFFLINE_EFF);
+    const goldExpect = Math.floor(50*3600*E.OFFLINE_EFF);
+    ok('离线经验补算 = floor(100×3600×OFFLINE_EFF)', Math.abs(grossExp - expExpect) < 1, grossExp + ' vs ' + expExpect);
+    ok('离线金币补算 = floor(50×3600×OFFLINE_EFF)', Math.abs(goldGain - goldExpect) < 1, goldGain + ' vs ' + goldExpect);
     ok('离线时间戳已清空', E.state._loadedTs === null);
   }
   {
@@ -1931,6 +1933,47 @@ function ok(name, cond, extra) {
     ok('强化页含 data-xy="str"', sHtml.indexOf('data-xy="str"') >= 0);
     ok('导师考验页含 data-xy="trial_start"', trHtml.indexOf('data-xy="trial_start"') >= 0);
     ok('renderShenmo(xr_task) 路由到修验任务页', E.renderShenmo('xr_task').indexOf('修验任务') >= 0);
+  }
+
+  // ---------- P2-3 数值类调整（挖矿 ore_find_rate + 离线 OFFLINE_EFF 严格还原） ----------
+  {
+    const ps = E.state.player;
+    const oreTotal = o => { let t=0; for(const k in (o||{})) t += o[k]; return t; };
+    const ml0 = ps.mining.level; ps.mining.level = 1;
+    E.addToBag({type:'consumable', key:'yipin_luopan', count:10});
+    const r0 = E.mineStart('yipin','tianshengyuan');
+    ok('P2-3 探矿接取成功(yipin@tianshengyuan)', r0.ok, r0.msg);
+
+    // ① ore 带内 + ore_find_rate 失败（0.95≥0.88）→ 空欢喜，不出矿
+    const realRandom = Math.random;
+    let seq = [0.5 /*roll 落入 ore 带(0.05~0.95)*/, 0.95 /*find_rate 失败*/];
+    Math.random = () => seq.shift();
+    const tBeforeFail = oreTotal(ps.ores);
+    E.mineSettle();
+    ok('P2-3 ore_find_rate 失败→不出矿(空欢喜)', oreTotal(ps.ores) === tBeforeFail,
+      'before='+tBeforeFail+' after='+oreTotal(ps.ores));
+
+    // ② ore 带内 + ore_find_rate 成功（0.1<0.88）+ weightedPick→首矿 → 固定产量 = base(20)
+    E.addToBag({type:'consumable', key:'yipin_luopan', count:5});
+    const r1 = E.mineStart('yipin','tianshengyuan');
+    ok('P2-3 二次探矿接取成功', r1.ok, r1.msg);
+    seq = [0.5 /*roll ore 带*/, 0.1 /*find_rate 成功*/, 0.0 /*weightedPick→首矿 hantie*/];
+    const tBeforeSucc = oreTotal(ps.ores);
+    E.mineSettle();
+    const gained = oreTotal(ps.ores) - tBeforeSucc;
+    ok('P2-3 ore_find_rate 成功→出矿', gained > 0, 'gained='+gained);
+    ok('P2-3 产量固定 = ore_group_base(20)（无等级加成/抖动）', gained === 20, 'gained='+gained);
+    Math.random = realRandom;
+    ps.mining.level = ml0;
+
+    // ③ 离线 OFFLINE_EFF 严格还原 = 0.0875（原版净倍率）
+    ok('P2-3 OFFLINE_EFF = 0.0875（原版 0.35×0.5×0.5）', E.OFFLINE_EFF === 0.0875, String(E.OFFLINE_EFF));
+    ok('P2-3 离线倍率低于在线估算 0.35（逻辑自洽）', E.OFFLINE_EFF < 0.35);
+    ok('P2-3 离线倍率低于此前硬编码 0.5', E.OFFLINE_EFF < 0.5);
+    const rate = E.idleRate();
+    ok('P2-3 idleRate 返回数值 exp/秒', typeof rate.exp === 'number' && rate.exp >= 0);
+    ok('P2-3 离线净经验 = rate.exp × 秒 × 0.0875',
+      Math.floor(rate.exp * 3600 * E.OFFLINE_EFF) === Math.floor(rate.exp * 3600 * 0.0875));
   }
 
   // 恢复默认页签，避免影响后续/重复运行

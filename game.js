@@ -3300,7 +3300,7 @@ function renderLife(sub){
   if(any || sub==='mine'){
     const mc=mineConf();
     const ml=(p.mining&&p.mining.level)||1, mexp=(p.mining&&p.mining.exp)||0, mneed=mineExpNeed(ml);
-    let h='<hr><h3>⑦ 探矿（罗盘）</h3><div class="muted">探矿等级 '+ml+'（'+mexp+'/'+mneed+'）· 矿石产量 +'+((ml-1)*5)+'%；每轮消耗 1 个罗盘，约 '+((mc.steps||[]).reduce((a,b)=>a+(b.seconds||0),0))+' 秒。</div>';
+    let h='<hr><h3>⑦ 探矿（罗盘）</h3><div class="muted">探矿等级 '+ml+'（'+mexp+'/'+mneed+'）· 每轮消耗 1 个罗盘，约 '+((mc.steps||[]).reduce((a,b)=>a+(b.seconds||0),0))+' 秒。</div>';
     h+='<div class="bar exp"><i style="width:'+clamp(mexp/mneed*100,0,100)+'%"></i></div>';
     h+='<div class="muted">罗盘：<select id="mine-compass">'+compassOpts()+'</select> 矿脉：<select id="mine-map">'+mineMapOpts()+'</select> <button class="mini" data-act="mine-start">开始探矿</button></div>';
     for(const g in (mc.compass||{})){ const cd=compassDef(g);
@@ -3967,22 +3967,27 @@ function mineSettle(){
   const mc=mineConf(), cd=compassDef(m.grade);
   if(!itemConsume(cd.key, (mc.rounds_per_compass||1))){ log('<span class="dmg">罗盘不足，探矿中止</span>'); return; }
   const oc=mc.outcomes||{};
+  const findRate = (oc.ore_find_rate!=null) ? oc.ore_find_rate : 0.88;  // 出矿带内实得率（原版 world/mining.py:_settle_round）
   const r=Math.random();
   const ml = p.mining.level;
-  const yieldMult = 1 + (ml-1)*0.05;
   let gain = 0, oreKey = null;
   if(r < (oc.empty||0.05)){
     log('<span class="sys">探矿结束：矿脉空空，一无所获。</span>');
     gain = 0;
   }else if(r < (oc.empty||0.05)+(oc.ore||0.9)){
+    // 出矿带：按 ore_find_rate 再判「是否真挖到」（原版约 12% 空欢喜）
     const tbl = ((mc.ore_tables_by_map||{})[m.grade]||{})[m.map] || (mc.ore_tables||{})[m.grade] || {};
     const keys=Object.keys(tbl);
     if(keys.length){
       const wmap={}; keys.forEach(k=> wmap[k]=tbl[k]);
       oreKey = weightedPick(keys, wmap);
-      gain = Math.max(1, Math.round((mc.ore_group_base||20)*yieldMult*rnd(0.8,1.2)));
-      addOre(oreKey, gain);
-      log('<span class="loot">探矿收获：'+ORE_NAME[oreKey]+' x'+gain+'</span>');
+      if(Math.random() < findRate){
+        gain = Math.max(1, Math.round(mc.ore_group_base||20));   // 产量固定 = base（原版无等级加成/抖动）
+        addOre(oreKey, gain);
+        log('<span class="loot">探矿收获：'+ORE_NAME[oreKey]+' x'+gain+'</span>');
+      }else{
+        log('<span class="sys">矿脉贫瘠，一无所获（空欢喜）。</span>');
+      }
     }
   }else{
     // 太古：双倍矿石 + 太古残片 + 远古宝箱（随机装备）
@@ -3991,7 +3996,7 @@ function mineSettle(){
     if(keys.length){
       const wmap={}; keys.forEach(k=> wmap[k]=tbl[k]);
       oreKey = weightedPick(keys, wmap);
-      gain = Math.max(1, Math.round((mc.ore_group_base||20)*yieldMult*rnd(0.8,1.2)*2));
+      gain = Math.max(1, Math.round((mc.ore_group_base||20)*2));   // 太古双倍，产量同样固定
       addOre(oreKey, gain);
     }
     addMaterial('taigu_canpian', 1);
@@ -4005,7 +4010,7 @@ function mineSettle(){
   while(p.mining.level < ((mc.levelup||{}).max_level||100) && p.mining.exp >= mineExpNeed(p.mining.level)){
     p.mining.exp -= mineExpNeed(p.mining.level);
     p.mining.level++;
-    log('<span class="lv">探矿等级提升至 '+p.mining.level+' 级（产量 +5%/级）</span>');
+    log('<span class="lv">探矿等级提升至 '+p.mining.level+' 级</span>');
     eventLog('<span class="lv">探矿等级 '+p.mining.level+'</span>');
   }
   renderTab(); renderHeader();
@@ -4705,7 +4710,7 @@ function importSaveFile(file){
 
 // ---------- 离线收益（离线挂机也能赚） ----------
 const OFFLINE_MAX_SEC = 12*3600;   // 最多补算 12 小时
-const OFFLINE_EFF = 0.5;           // 离线效率 50%
+const OFFLINE_EFF = 0.0875;       // 离线净倍率 = 原版 0.35(在线效率) × 0.5(离线系数) × 0.5(奖励额外) = 0.0875
 // 当前（或最优）区域的每秒收益：经验/秒来自 zoneEval，金币/秒按平均金币 ÷ 击杀耗时
 function idleRate(){
   const p=state.player; if(!p||!p._s) return {exp:0, gold:0};
