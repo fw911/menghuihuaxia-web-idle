@@ -1,6 +1,22 @@
 /* 梦回华夏·文字挂机版 — 基于解密真实配置数据复刻
  * 核心循环：选职业 → 地图挂机 → 自动战斗 → 经验/掉落/升级 → 装备 → 精炼/镶嵌
  * 数据全部来自 data/*.json（由 config_enc 解密而来）
+ *
+ * —— 分区索引（行号为近似值，改动后以 `// ----------` 横幅搜索为准）——
+ *   L74   后端 API 层                            L3445 云存档/账号/排行/统计
+ *   L179  武魂系统参数                           L2528 武魂面板
+ *   L266  数据加载（DATA_FILES = 57 份，勿重复）  L404  经验/属性
+ *   L1044 修验任务/导师考验                      L1084 神魔修验技能树
+ *   L1363 装备生成                               L1502 掉落
+ *   L1552 战斗引擎                               L1604 召唤兽
+ *   L1935 背包/装备                              L2074 生活技能：精炼/镶嵌
+ *   L3105 宝石镶嵌                               L3855 生活技能：打造/百炼/提取/炼制/乾坤炉
+ *   L2177 地图/导航/副本/区域探索                L3727 商店      L3788 任务
+ *   L3891 信使传送   L3943 探矿   L4035 副本兑换
+ *   L4094 成就       L4097 称号系统  L4195 宝石/药水炼制
+ *   L2307 渲染（Header/Map/Battle/Hero/各面板）   L2847 右侧页签子菜单
+ *   L4581 主循环   L4599 存档   L4639 本地导入导出   L4727 离线收益
+ *   L4770 自动挂机 L4820 自动换区 L4924 统计上报   L4968 启动/强制登录
  */
 (function(){
 'use strict';
@@ -10,10 +26,10 @@ const DATA_FILES = [
   'loot_tables','loot_equip','loot_probs','loot_gem','loot_item','loot_potion','loot_chest','loot_wuhun',
   'bases_warrior','bases_mage','bases_shaman','bases_darkwitch','bases_accessory',
   'perk_pool','gems','refine','items','extract','craft','ores','bailian_recipes','furnace_recipes','ore_recipes',
-  'modes','quality','shops','quests',
+  'modes','shops','quests',
   'wuhun','wuhun_recipes','shenmo','shenmo_skills','shenmo_active_skills',
   'shenmo_skills_darkwitch','shenmo_skills_shaman','shenmo_active_skills_darkwitch','shenmo_active_skills_shaman',
-  'crystals','couriers','modes',
+  'crystals','couriers',
   'skills_passive','skills_active_warrior','skills_active_mage','skills_active_shaman',
   'skills_active_darkwitch','skills_active_summon',
   'monster_skills','summons','mining','gem_recipes','potion_recipes','instance_exchange','achievements'

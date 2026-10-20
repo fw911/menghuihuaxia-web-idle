@@ -8,8 +8,13 @@
  *   users.json       账号（PBKDF2-SHA256 加盐哈希）
  *   tokens.json      登录令牌
  *   saves/*.json     云存档（每账号最多 3 个槽位）
+ *   saves/*.json.bak 上一代存档备份：覆盖保存 / 删除前自动保留（单代，可恢复；
+ *                    槽位列表只认正式 .json，.bak 不影响任何读取与展示）
  *   leaderboard.json 战力排行榜
  *   stats.json       挂机统计聚合（用于数值体检）
+ *
+ * 备份策略说明：saves 为本地明文 JSON 存储，适合本机/内网自用；若要公网部署，
+ * 请自行加 HTTPS 反向代理，并定期备份 server/data 目录（删档风险自担）。
  */
 'use strict';
 const http = require('node:http');
@@ -218,6 +223,9 @@ async function handleAPI(req, res, url) {
     const f = saveFile(a.user, slot);
     const tmp = f + '.tmp';
     await fsp.writeFile(tmp, JSON.stringify(b.payload), 'utf-8');
+    // 覆盖前保留上一代存档（.bak，单代）：防误操作/坏档丢档；首存（无上一代）时跳过
+    try { await fsp.copyFile(f, f + '.bak'); }
+    catch (e) { if (!e || e.code !== 'ENOENT') { console.error('[save] 备份上一代失败', f, e && e.code); } }
     await fsp.rename(tmp, f);
     return send(res, 200, { ok: true, slot, savedAt: b.payload.savedAt, bytes: Buffer.byteLength(raw, 'utf-8') });
   }
@@ -239,6 +247,9 @@ async function handleAPI(req, res, url) {
     if (!a) return send(res, 401, { ok: false, msg: '未登录' });
     const slot = Math.min(MAX_SLOTS, Math.max(1, Number(url.searchParams.get('slot') || 1)));
     const df = saveFile(a.user, slot);
+    // 删除前保留一代 .bak（可手动恢复：改回 .json 即可）；槽位列表不认 .bak
+    try { await fsp.copyFile(df, df + '.bak'); }
+    catch (e) { if (!e || e.code !== 'ENOENT') { console.error('[delete] 备份失败', df, e && e.code); } }
     try { await fsp.unlink(df); }
     catch (e) {
       if (e && e.code !== 'ENOENT') {

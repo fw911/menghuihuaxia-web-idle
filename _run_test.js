@@ -426,6 +426,17 @@ function ok(name, cond, extra) {
     ok('删除请求返回 ok（后端 unlink 未被静默吞错）', !!r6 && r6.ok === true, JSON.stringify(r6));
     const slots2 = await E.refreshSlots();
     ok('云删除生效', slots2[0].empty === true, JSON.stringify(slots2[0]));
+    // ---- 存档 .bak 备份（覆盖/删除前保留上一代，单代）----
+    const bakPath = path.join(__dirname, 'server', 'data', 'saves', uname + '__1.json.bak');
+    try { fs.unlinkSync(bakPath); } catch (e) {}
+    const r7 = await E.cloudSave(1, true);
+    ok('空槽直接保存不产生 .bak', r7.ok === true && !fs.existsSync(bakPath), bakPath);
+    const r8 = await E.cloudSave(1, true);
+    ok('覆盖保存保留上一代 .bak', r8.ok === true && fs.existsSync(bakPath), bakPath);
+    const r9 = await E.cloudDelete(1);
+    ok('删除保留 .bak 防误删', r9.ok === true && fs.existsSync(bakPath), bakPath);
+    const slots3 = await E.refreshSlots();
+    ok('删除后槽位仍为空（.bak 不影响列表）', slots3[0].empty === true, JSON.stringify(slots3[0]));
     await E.cloudLogout();
   } else {
     console.log('  SKIP  后端未启动，跳过云存档用例');
