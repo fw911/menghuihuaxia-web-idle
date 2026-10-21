@@ -2226,6 +2226,20 @@ function ok(name, cond, extra) {
     ok('CN_STAT 表覆盖充分（>20 键）', Object.keys(C).length > 20, Object.keys(C).length + '');
   }
 
+  // ---------- 云同步可见性门控（仅页面可见时才打云端 API，显著降低资源消耗） ----------
+  {
+    console.log('-- 云同步可见性门控 --');
+    const d = global.document;
+    const bakH = d.hidden, bakV = d.visibilityState;
+    d.hidden = false; d.visibilityState = 'visible';
+    ok('页面可见时 pageVisible()=true', E.pageVisible() === true);
+    d.hidden = true; d.visibilityState = 'hidden';
+    ok('页面隐藏(后台标签页)时 pageVisible()=false', E.pageVisible() === false);
+    d.hidden = false; d.visibilityState = 'visible';
+    ok('恢复可见后 pageVisible()=true', E.pageVisible() === true);
+    d.hidden = bakH; d.visibilityState = bakV;   // 还原，避免影响后续/重复运行
+  }
+
   // ---------- 装备门控：等级不足 / 职业不符（原版 character/equipment.py equip_item L195-202 反汇编） ----------
   {
     console.log('-- 装备门控（等级/职业）--');

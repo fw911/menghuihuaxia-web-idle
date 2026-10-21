@@ -4,7 +4,7 @@
  */
 import { loadAuto, state } from './state.js';
 import { apiCall, apiProbe, cloudLoad, cloudLogin, cloudLogout, cloudRank, cloudRegister, cloudSave, persistCloud, probeSummary, refreshSlots, restoreCloud } from './api.js';
-import { DATA, loadData } from './core.js';
+import { DATA, loadData, pageVisible } from './core.js';
 import { syncSkills } from './player.js';
 import { refreshStats } from './smtree.js';
 import { genEquip } from './equip.js';
@@ -190,15 +190,26 @@ export async function boot(){
     mineTick(1*(state.speed||1));
     if(state.selTab==='life') renderTab();
   }, 1000);
-  // P0：自动存档（30 秒）+ 云同步（内部再节流 45 秒）+ 统计上报（60 秒）+ 排行榜（3 分钟）
+  // 本地存档 + 会话采样：30 秒（纯本地，无云端消耗；页面隐藏也照常，保证本地不丢进度）
   setInterval(()=>{
     if(!state.player) return;
     sessSample();                                   // 本局趋势采样（折线图数据）
     if(state.auto.save){ save(true); if(state.selTab==='cloud') renderTab(); }
-    if(state.auto.save) cloudSave();
   }, 30000);
-  setInterval(()=>{ if(state.auto.stats) reportStats(false); }, 60000);
-  setInterval(()=>{ if(state.auto.rank && state.idle) cloudRank(); }, 180000);
+  // 云端同步：仅页面【可见】时执行，间隔拉长到 2 分钟
+  // （原 30s/60s/3min 三路并行 → 合并节流；后台标签页不再打云端 API，显著降低资源消耗）
+  setInterval(()=>{
+    if(!state.player || !pageVisible()) return;
+    if(state.auto.save) cloudSave();
+    if(state.auto.stats) reportStats(false);
+    if(state.auto.rank && state.idle) cloudRank();
+  }, 120000);
+  // 关页/切走（hidden）前做一次最后上云，避免丢失最近一段进度（仅登录态、且每个标签页生命周期仅有限几次）
+  if(typeof document!=='undefined' && document.addEventListener){
+    document.addEventListener('visibilitychange', ()=>{
+      if(document.visibilityState==='hidden' && state.player && state.auto.save && state.cloud.user) cloudSave();
+    });
+  }
   // 关页/刷新前强制存档
   if(typeof window!=='undefined' && window.addEventListener){
     window.addEventListener('beforeunload', ()=>{ try{ save(true); }catch(e){} });

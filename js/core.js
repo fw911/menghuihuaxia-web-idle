@@ -23,6 +23,12 @@ export const WUHUN_TYPE_KEYS = ['qinglong','baihu','zhuque','xuanwu'];
 export const SANHUN_KEYS = ['sanhun_tian','sanhun_di','sanhun_ren'];
 export const QIPO_KEYS = ['qipo_xi','qipo_nu','qipo_ai_sorrow','qipo_ju','qipo_ai_love','qipo_wu','qipo_yu'];
 
+// 页面是否对用户可见（后台标签页/最小化时为 false，可据此跳过云端同步以省资源）
+export function pageVisible(){
+  if(typeof document==='undefined') return true;            // 测试/SSR 环境视为可见
+  return document.visibilityState!=='hidden' && !document.hidden;
+}
+
 // 日志显示条数：本命日志已合并到中间战斗日志，统一显示 10 条
 export const EVENT_SHOW = 10;  // 保留，供事件查询/外部引用使用
 export const EVENT_KEEP = 20;  // 本命日志保留上限

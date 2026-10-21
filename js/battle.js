@@ -4,7 +4,7 @@
  */
 import { state } from './state.js';
 import { cloudRank } from './api.js';
-import { DATA, MON_SKILLS, SUMMON_SKILLS, clamp, getMonster, pick, ri, rnd, uid } from './core.js';
+import { DATA, MON_SKILLS, SUMMON_SKILLS, clamp, getMonster, pageVisible, pick, ri, rnd, uid } from './core.js';
 import { castBattleStartBuffs, castHeal, damageMonster, expToNext, genWuhun, isXianzhiNow, monsterDef, monsterExp, paySkill, pickAttackSkill, pickHealSkill, skillDamage, smAppendHit, smGain, smXianzhiTick, syncSkills, tickSkillCd, whName, whReqLevel, wuhunAbsorb } from './player.js';
 import { xyTrialOnKill } from './quest.js';
 import { refreshStats, smActiveCast, smAggCached } from './smtree.js';
@@ -398,7 +398,7 @@ export function gainExp(n){
     sessLevelUp(p.level);      // 升级时间线
     gainExpCheck();
     autoZoneOnLevelUp();
-    if(state.auto.rank) cloudRank();
+    if(state.auto.rank && pageVisible()) cloudRank();   // 仅页面可见时上排行（后台标签页跳过快照，2 分钟同步会补）
   }
 }
 

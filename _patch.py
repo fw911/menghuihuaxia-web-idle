@@ -9,7 +9,7 @@ import io, os
 DST = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_test_entry.mjs')
 
 EXPORTS = [
-    'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LS','CN_STAT',
+    'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LS','CN_STAT','pageVisible',
     'loadData','newPlayer','refreshStats','computeStats',
     'spawnMonster','tick','onMonsterDead','rollLoot','genEquip','buildEquip',
     'mineStart','mineTick','mineSettle','mineConf','compassDef','mineExpNeed','mineProgress',
