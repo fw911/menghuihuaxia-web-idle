@@ -3,20 +3,20 @@
  * 数据全部来自 data/*.json（由 config_enc 解密而来）
  *
  * —— 分区索引（行号为近似值，改动后以 `// ----------` 横幅搜索为准）——
- *   L74   后端 API 层                            L3445 云存档/账号/排行/统计
- *   L179  武魂系统参数                           L2528 武魂面板
- *   L266  数据加载（DATA_FILES = 57 份，勿重复）  L404  经验/属性
- *   L1044 修验任务/导师考验                      L1084 神魔修验技能树
- *   L1363 装备生成                               L1502 掉落
- *   L1552 战斗引擎                               L1604 召唤兽
- *   L1935 背包/装备                              L2074 生活技能：精炼/镶嵌
- *   L3105 宝石镶嵌                               L3855 生活技能：打造/百炼/提取/炼制/乾坤炉
- *   L2177 地图/导航/副本/区域探索                L3727 商店      L3788 任务
- *   L3891 信使传送   L3943 探矿   L4035 副本兑换
- *   L4094 成就       L4097 称号系统  L4195 宝石/药水炼制
- *   L2307 渲染（Header/Map/Battle/Hero/各面板）   L2847 右侧页签子菜单
- *   L4581 主循环   L4599 存档   L4639 本地导入导出   L4727 离线收益
- *   L4770 自动挂机 L4820 自动换区 L4924 统计上报   L4968 启动/强制登录
+ *   L74   后端 API 层                            L3537 云存档/账号/排行/统计
+ *   L180  武魂系统参数                           L2617 武魂面板
+ *   L267  数据加载（DATA_FILES = 57 份，勿重复）  L430  经验/属性
+ *   L928  修验任务/导师考验                      L1110 神魔修验技能树
+ *   L1389 装备生成（buildEquip：耐久 roll + 双手标记）  L1556 掉落
+ *   L1606 战斗引擎                              L1658 召唤兽
+ *   L1989 背包/装备                             L2152 生活技能：精炼/镶嵌（耐久 ×1.04/级）
+ *   L3197 宝石镶嵌                              L3947 生活技能：打造/百炼/提取/炼制/乾坤炉
+ *   L2260 地图/导航/副本/区域探索                L3819 商店      L3880 任务
+ *   L3983 信使传送   L4035 探矿   L4127 副本兑换
+ *   L4186 成就       L4189 称号系统  L4287 宝石/药水炼制
+ *   L2390 渲染（Header/Map/Battle/Hero/各面板）   L2936 右侧页签子菜单
+ *   L4673 主循环   L4691 存档   L4732 本地导入导出   L4820 离线收益
+ *   L4863 自动挂机 L4913 自动换区 L5017 统计上报   L5061 启动/强制登录
  */
 (function(){
 'use strict';
@@ -1447,9 +1447,46 @@ function buildEquip(base, job, tier, slot, mode){
   return {
     type:'equip', uid: uid(), slot, job, tier, name: base.name, reqLevel: base.req_level||1,
     hand: base.hand || '',   // 单手/双手（战士 7 把双手武器；原版 is_two_hand 判定源）
+    durability: baseDurability(base, slot),   // 耐久（null=该部位无耐久；原版打造 roll + 精炼 ×1.04/级；无消耗）
     stats, perks, quality, refine:0, sockets: base.sockets||0, bailian:0,
     gems: new Array(base.sockets||0).fill(null), baseKey: base.key
   };
+}
+// 耐久（原版 craft.py：打造时 stat_roller.roll_durability(base) 产出标量；
+// 解密数据 292 个基底 durability 全部为 [n,n] 等值对 → roll_lo~roll_hi 区间退化为单点，结果恒为 n，
+// 直接取 [0] 即零随机零臆造；原版无耐久消耗/修理/损坏机制，精炼按 refine_durability_pct 每级复合提升）
+// 部位门控（slots.json#has_durability）：项链/戒指为 false → 无耐久。原版存档序列化对无耐久装备
+// 回落 [0,0]（battle.py L2505 it.get('durability',[0,0])），本 port 以「不设字段」等价表达
+function slotHasDurability(slot){
+  const raw=(DATA.slots||{}).slots;
+  const arr=Array.isArray(raw)? raw : (raw? Object.keys(raw).map(k=>raw[k]) : []);
+  const d=arr.find(x=>x && x.key===slot);
+  return !!(d && d.has_durability);
+}
+function baseDurability(base, slot){
+  if(!slotHasDurability(slot)) return null;      // 首饰无耐久（slots.json 门控）
+  const du=base&&base.durability;
+  if(Array.isArray(du)&&du.length) return du[0]|0;
+  if(typeof du==='number') return du|0;
+  return 25;   // 原版默认区间 [25,35] 的下限（实际数据无缺失，仅兜底）
+}
+// 旧存档装备补 durability（2026-10-21 接入）：原版 craft.py roll 产出，本 port 此前未接。
+// 已精炼过的旧装备按原版口径补回精炼增益（每级 int(d×(1+pct)) 复合），保证与后续精炼连续
+function backfillDurability(){
+  const p=state.player; if(!p) return 0;
+  const pct=(DATA.refine&&DATA.refine.refine_durability_pct)||0;
+  let n=0;
+  const fix=(it)=>{
+    if(!it || it.type!=='equip' || it.durability!=null) return;
+    if(!slotHasDurability(it.slot)) return;      // 首饰无耐久（slots.json 门控），不补
+    const b=it.baseKey&&BASE_BY_KEY[it.baseKey];
+    let d=b? baseDurability(b, it.slot) : 25;
+    for(let i=0;i<(it.refine||0);i++) d=Math.floor(d*(1+pct));
+    it.durability=d; n++;
+  };
+  for(const sl in p.equip) fix(p.equip[sl]);
+  for(const it of (p.bag||[])) fix(it);
+  return n;
 }
 // 按「需求等级最接近参考等级」挑基底；部位无基底时回退到该职业能生成的部位，保证一定出货
 function pickBase(slot, job, refLevel, maxReq){
@@ -2144,6 +2181,12 @@ function refineKeys(it){
 function refineApplyOne(it){
   const d=refineStep(it);
   for(const k of refineKeys(it)) it.stats[k]+= d;
+  // 耐久每级 ×(1+refine_durability_pct)（原版 _apply_refine_one_level L115：
+  //   equip.durability = int(equip.durability*(1+REFINE_DURABILITY_PCT))，逐级复合、int 截断）
+  // 门控：slots.json#has_durability 为假的部位（项链/戒指）无耐久，不提升。
+  // 注意：_revert_refine_stats 只回退四维攻防【不回退耐久】—— 精炼失败降级/归零时耐久增益保留（原版口径）
+  const pct=(DATA.refine&&DATA.refine.refine_durability_pct)||0;
+  if(pct>0 && it.durability!=null) it.durability=Math.floor(it.durability*(1+pct));
   return d;
 }
 function refineRevert(it, levels){
@@ -3122,6 +3165,7 @@ function statLine(it){
   for(const s in it.stats) parts.push(s+':'+it.stats[s]);
   for(const pk of it.perks) parts.push(pk.name+'+'+pk.value+(pk.suffix||''));
   for(const g of it.gems) if(g) parts.push(gemSeriesName(g.series)+'(+'+g.value+')');
+  if(it.durability!=null) parts.push('耐久:'+it.durability);   // 原版耐久：打造 roll + 精炼 ×1.04/级，无消耗机制
   return parts.join('  ');
 }
 function renderStat(){
@@ -4681,6 +4725,7 @@ function applySavePayload(d){
   state._loadedTs = d.ts||null;       // 离线收益：读取上次存档时间
   state._loadedRate = d.rate||null;   // 离线收益：读取上次挂机速率
   if(state.player.shenmo){ state.player.shenmo.nodes=state.player.shenmo.nodes||{}; state.player.shenmo.cd=state.player.shenmo.cd||{}; }
+  backfillDurability(); // 兼容旧存档：装备补 durability 字段（精炼过的按 ×1.04/级 补回增益）
   consolidateBag(); // 兼容旧存档：合并同类可叠加物品（装备不合并）
   refreshStats();
   state.player.hp=Math.min(state.player.hp, state.player._s.max_hp);

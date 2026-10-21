@@ -245,6 +245,96 @@ function ok(name, cond, extra) {
       'refine=' + rb.refine + ' atk=' + rb.stats.phys_atk);
   }
 
+  // ---- 耐久系统（原版 craft.py roll_durability + refine.py L115 ×1.04/级；无消耗/修理）----
+  console.log('-- 耐久系统（打造 roll / 精炼复合 / 失败不回退 / 旧档迁移）--');
+  {
+    // 数据口径：解密 JSON 全部基底 durability 均为 [n,n] 等值对 → roll_lo~roll_hi 区间退化为单点
+    let allEqPair = true, nBase = 0;
+    for (const f of ['bases_warrior', 'bases_mage', 'bases_shaman', 'bases_darkwitch', 'bases_accessory']) {
+      const obj = E.DATA[f]; if (!obj) continue;
+      for (const cat in obj) {
+        if (!Array.isArray(obj[cat])) continue;
+        for (const b of obj[cat]) {
+          if (!b || !b.key) continue;
+          nBase++;
+          if (!Array.isArray(b.durability) || b.durability[0] !== b.durability[1]) allEqPair = false;
+        }
+      }
+    }
+    ok('全部 ' + nBase + ' 个基底耐久均为 [n,n] 等值对（roll 退化为单点，取 n 零臆造）', allEqPair && nBase === 292, 'nBase=' + nBase);
+    ok('baseDurability 取等值对的 n', E.baseDurability({ durability: [14, 14] }, 'helmet') === 14 && E.baseDurability({}, 'helmet') === 25,
+      JSON.stringify([E.baseDurability({ durability: [14, 14] }, 'helmet'), E.baseDurability({}, 'helmet')]));
+
+    // 部位门控（slots.json#has_durability）：武器/盔甲 true，项链/戒指 false
+    ok('部位门控：武器/盔甲有耐久，项链/戒指无耐久',
+      E.slotHasDurability('weapon') && E.slotHasDurability('armor') && !E.slotHasDurability('necklace') && !E.slotHasDurability('ring1'),
+      JSON.stringify(['weapon', 'armor', 'necklace', 'ring1'].map(E.slotHasDurability)));
+    ok('baseDurability 对无耐久部位返回 null', E.baseDurability({ durability: [14, 14] }, 'necklace') === null,
+      '' + E.baseDurability({ durability: [14, 14] }, 'necklace'));
+
+    // buildEquip 携带耐久
+    const dw = E.genEquip('weapon', p.job, 7, 100);
+    ok('buildEquip 携带基底耐久', typeof dw.durability === 'number' && dw.durability > 0, 'durability=' + dw.durability);
+
+    // 首饰无耐久字段
+    const dn = E.genEquip('necklace', p.job, 7, 100);
+    ok('首饰（项链/戒指）无耐久字段', dn && dn.durability === null && E.statLine(dn).indexOf('耐久') < 0,
+      'durability=' + JSON.stringify(dn && dn.durability));
+    if (dn) { E.applyRefineLevels(dn, 3); ok('精炼不给首饰造耐久字段', dn.durability === null, 'durability=' + JSON.stringify(dn.durability)); }
+
+    // 精炼复合：每级 int(d×1.04)，+7 后 = floor(n×1.04^7)（逐步 int 截断）
+    const dw2 = E.genEquip('weapon', p.job, 7, 100);
+    dw2.tier = 7; dw2.stats = { phys_atk: 300, magic_atk: 0 }; dw2.refine = 0; dw2.perks = [];
+    const d0 = dw2.durability;
+    let expect = d0;
+    for (let i = 0; i < 7; i++) expect = Math.floor(expect * 1.04);
+    E.applyRefineLevels(dw2, 7);
+    ok('精炼每级耐久 ×1.04 复合（+7 = floor(n×1.04^7)，int 截断）', dw2.durability === expect,
+      'got=' + dw2.durability + ' expect=' + expect + ' base=' + d0);
+    ok('statLine 展示耐久', E.statLine(dw2).indexOf('耐久:' + dw2.durability) >= 0, E.statLine(dw2));
+
+    // 失败不回退耐久：+5 后 drop / zero，四维回退但耐久增益保留（原版 _revert_refine_stats 只回退四维）
+    const dw3 = E.genEquip('weapon', p.job, 7, 100);
+    dw3.tier = 7; dw3.stats = { phys_atk: 300, magic_atk: 0 }; dw3.refine = 0; dw3.perks = [];
+    E.applyRefineLevels(dw3, 5);
+    E.addToBag(dw3); E.addCrystalStone(E.crystalForTier(7), 5); p.gold = 9999999;
+    const dur5 = dw3.durability;
+    const origRnd2 = Math.random;
+    const rollOnce2 = (v) => { let once = true; Math.random = () => { if (once) { once = false; return v; } return origRnd2(); }; };
+    rollOnce2(0.10); E.doRefine(dw3); Math.random = origRnd2;      // → drop
+    ok('精炼失败降级不回退耐久（原版口径：_revert_refine_stats 只回退四维）',
+      dw3.refine === 4 && dw3.durability === dur5, 'refine=' + dw3.refine + ' dur=' + dw3.durability + '(应 ' + dur5 + ')');
+    rollOnce2(0.015); E.doRefine(dw3); Math.random = origRnd2;     // → zero
+    ok('精炼失败归零不回退耐久', dw3.refine === 0 && dw3.durability === dur5,
+      'refine=' + dw3.refine + ' dur=' + dw3.durability + '(应 ' + dur5 + ')');
+    // 归零后再成功一级：耐久从保留值继续复合（不重置）
+    const beforeUp = dw3.durability;
+    p.gold = 9999999;
+    let guardD = 0;
+    while (dw3.refine < 1 && guardD++ < 60) { p.gold = 9999999; E.doRefine(dw3); }
+    ok('归零后再精炼：耐久自保留值继续复合（不重置为基底）', dw3.refine >= 1 && dw3.durability === Math.floor(beforeUp * 1.04),
+      'refine=' + dw3.refine + ' dur=' + dw3.durability + ' before=' + beforeUp);
+
+    // 旧档迁移：无 durability 字段的装备读档后补值（精炼过的按 ×1.04/级 补回增益）
+    const oldEq = E.genEquip('weapon', p.job, 7, 100);
+    const oldBase = oldEq.durability;
+    oldEq.refine = 3;
+    delete oldEq.durability;                       // 模拟 2026-10-21 之前的旧存档装备
+    p.bag.push(oldEq);
+    const oldNk = E.genEquip('necklace', p.job, 7, 100);
+    delete oldNk.durability;                       // 旧档首饰同样无字段
+    p.bag.push(oldNk);
+    const fixed = E.backfillDurability();
+    const expectOld = Math.floor(Math.floor(Math.floor(oldBase * 1.04) * 1.04) * 1.04);
+    ok('旧档装备补 durability（含精炼 ×1.04/级 补偿）', oldEq.durability === expectOld,
+      'got=' + oldEq.durability + ' expect=' + expectOld + ' base=' + oldBase);
+    ok('backfillDurability 返回补值数量（只补缺字段的，首饰跳过）', fixed === 1, 'fixed=' + fixed);
+    ok('旧档首饰不被补耐久（slots.json 门控）', oldNk.durability === undefined, 'durability=' + JSON.stringify(oldNk.durability));
+    ok('已有 durability 的装备不被迁移触碰', dw2.durability === expect, 'dw2=' + dw2.durability);
+    p.bag.splice(p.bag.indexOf(oldEq), 1);
+    p.bag.splice(p.bag.indexOf(oldNk), 1);
+  }
+
   // ---- 宝石镶嵌（gems.json#gem_series[].slots 是「本系列只能镶哪些部位」的白名单）----
   console.log('-- 宝石镶嵌（系列限定部位）--');
   {

@@ -37,6 +37,8 @@ EXPORTS = [
     # 精炼（按原版口径还原）：档位取表 / 逐级增量 / 回退 / 隐藏词条 / 下拉
     'applyRefineLevels','refineFlatOf','refineStep','refineKeys','refineApplyOne',
     'refineRevert','refineAddHidden','refineEquipOpts',
+    # 耐久系统（原版 craft.py roll + refine.py ×1.04/级；slots.json#has_durability 门控）
+    'baseDurability','backfillDurability','slotHasDurability','statLine',
     'courierRoutes','courierTravel','travelTo','rollPerks','buildEquip','PERK_CAP',
     'setIdle','startZone','save','load','gainExp','expToNext','monsterExp','typeExpMul','loop','maybeAutoZone','syncSkills',
     # 经验口径（按原版 battle/encounter.py:scale_monster_exp 还原）
