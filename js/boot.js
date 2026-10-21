@@ -3,7 +3,7 @@
  * 导出 11 个顶层名；import 由 AST 跨模块引用自动计算。
  */
 import { loadAuto, state } from './state.js';
-import { apiCall, apiProbe, cloudLoad, cloudLogin, cloudLogout, cloudRank, cloudRegister, cloudSave, persistCloud, refreshSlots, restoreCloud } from './api.js';
+import { apiCall, apiProbe, cloudLoad, cloudLogin, cloudLogout, cloudRank, cloudRegister, cloudSave, persistCloud, probeSummary, refreshSlots, restoreCloud } from './api.js';
 import { DATA, loadData } from './core.js';
 import { syncSkills } from './player.js';
 import { refreshStats } from './smtree.js';
@@ -44,12 +44,13 @@ export function showJobPicker(){
     d.className='job';
     d.innerHTML='<h4>'+j.name+'</h4><small>'+j.desc+'</small>';
     d.onclick=()=>{
-      if(!state.cloud.user){ alert('请先注册 / 登录账号，再创建角色。'); return; }   // 强制登录
+      // 强制登录；但服务端不可用时允许本地存档游玩（state.cloud.local）
+      if(!state.cloud.user && !state.cloud.local){ alert('请先注册 / 登录账号，再创建角色。'); return; }
       const name=($('name-input').value||'').trim()||'游侠';
       $('overlay').style.display='none';
       newPlayer(name, j.key);
       renderHeader(); renderMap(); renderTab();
-      cloudSave(state.cloud.slot||1, true);                                          // 新号立即上云
+      if(state.cloud.user) cloudSave(state.cloud.slot||1, true);   // 新号立即上云（本地模式跳过）
     };
     el.appendChild(d);
   }
@@ -73,10 +74,20 @@ export function wireAuthUI(){
   const bl=$('btn-login'), br=$('btn-register');
   if(bl) bl.onclick=()=>submit('login');
   if(br) br.onclick=()=>submit('register');
+  const bo=$('btn-local');
+  if(bo) bo.onclick=()=>startLocalPlay();
   for(const id of ['acc-user','acc-pass']){
     const el=$(id);
     if(el) el.addEventListener('keydown', e=>{ if(e.key==='Enter') submit('login'); });
   }
+}
+// 本地存档模式：服务端不可用（云函数停服 / 本地未起后端）时的兜底，进度只存本浏览器
+export function startLocalPlay(){
+  state.cloud.local=true;
+  const ov=$('overlay'); if(ov) ov.style.display='none';
+  renderAll();
+  log('<span class="sys">已进入本地存档模式：进度保存在本浏览器，云存档 / 排行榜暂不可用。</span>');
+  setAuthMsg('● 本地存档模式');
 }
 export function renderCloudResume(){
   const box=$('cloud-resume'); if(!box) return;
@@ -111,17 +122,27 @@ export async function afterLogin(){
 export async function startAuthFlow(){
   const ok = await apiProbe();
   const f=$('f-cloud');
-  if(f){ f.textContent = ok? '● 后端已连接' : '● 后端未启动'; f.className = ok? 'ok' : ''; }
+  if(f){ f.textContent = ok? '● 服务已连接' : '● 服务不可用'; f.className = ok? 'ok' : ''; }
+  const localBtn=$('btn-local');
   if(!ok){
-    setAuthMsg('后端未启动：请在项目目录执行 <b>node server/server.js</b>（端口 8014），然后刷新本页面。', true);
+    if(localBtn) localBtn.style.display='';
+    // 本机跑静态服务：提示起后端；线上站点：只能说云端不可用（曾误报「运行 node server/server.js」）
+    const host=(typeof location!=='undefined' && location.hostname)||'';
+    const isLocal = host==='localhost' || host==='127.0.0.1' || host==='' || host==='::1';
+    if(isLocal){
+      setAuthMsg('后端未启动：请在项目目录执行 <b>node server/server.js</b>（端口 8014）后刷新本页；也可点下方「本地存档开始」游玩。', true);
+    }else{
+      setAuthMsg('云端服务暂不可用（'+probeSummary()+'）：账号 / 云存档 / 排行榜暂时无法使用。<br>可直接点下方「<b>本地存档开始</b>」游玩，进度保存在本浏览器；服务恢复后再登录即可同步云端。', true);
+    }
     return;
   }
+  if(localBtn) localBtn.style.display='none';
   if(state.cloud.token){                              // 有旧令牌 → 直接恢复登录
     const me = await apiCall('/api/me');
     if(me && me.ok){ state.cloud.user=me.user; persistCloud(); setAuthMsg('● 已恢复登录…'); await afterLogin(); return; }
     state.cloud.token=null; state.cloud.user=null; persistCloud();
   }
-  setAuthMsg('● 后端已连接，请注册或登录账号');
+  setAuthMsg('● 服务已连接，请注册或登录账号');
 }
 
 export async function boot(){

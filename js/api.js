@@ -18,20 +18,39 @@ export function apiCall(path, opts){
     .then(r=> r.json().catch(()=>({ok:false,msg:'bad json'})));
 }
 // 探测后端：优先同源 /api，其次云端 API（CloudBase 部署），最后本机 8014（旧静态服务端口）
+// 探测结果连同每个候选的失败原因记到 state.cloud.probeInfo，便于 UI 给出准确排障提示
+// （线上曾出现云函数 410 Gone：账号资源点耗尽/欠费时 SCF 停服，此时不能再提示用户「运行 node server/server.js」）
 export async function apiProbe(){
   if(state.cloud.checked) return state.cloud.ok;
   // 候选为「源」而非路径：同源 ''（后端托管静态时）、云端网关域、或独立端口 8014
   const CLOUD_API='https://fw911-d0gy6gkq41d1f6d5a-1512169574.ap-shanghai.app.tcloudbase.com';
   const cands=['', CLOUD_API, 'http://localhost:8014'];
+  const info=[];
   for(const b of cands){
+    const rec={ base:b||'(同源)', status:0, err:'' };
     try{
-      const r = await fetch(b+'/api/health');
-      const j = await r.json();
-      if(j && j.ok){ state.cloud.base=b; state.cloud.ok=true; break; }
-    }catch(e){}
+      // 6 秒超时：云端不可用时不要让登录页长时间卡在「正在检测后端…」
+      const ctl = (typeof AbortController!=='undefined')? new AbortController() : null;
+      const timer = ctl? setTimeout(()=>{ try{ ctl.abort(); }catch(e){} }, 6000) : 0;
+      const r = await fetch(b+'/api/health', ctl? {signal:ctl.signal} : undefined);
+      rec.status = (r && r.status)||0;
+      const j = await r.json().catch(()=>null);
+      if(timer) clearTimeout(timer);
+      if(j && j.ok){ state.cloud.base=b; state.cloud.ok=true; info.push(rec); break; }
+    }catch(e){ rec.err = String((e && e.message) || e); }
+    info.push(rec);
   }
+  state.cloud.probeInfo = info;
   state.cloud.checked=true;
   return state.cloud.ok;
+}
+// 探测失败时的人话摘要（供登录页显示），例：云端 API 返回 410（服务不可用）
+export function probeSummary(){
+  const info = state.cloud.probeInfo || [];
+  const cloud = info.find(x=> x.base.indexOf('tcloudbase.com')>=0);
+  if(cloud && cloud.status) return '云端 API 返回 '+cloud.status;
+  if(cloud && cloud.err) return '云端 API 无法访问';
+  return '服务端未就绪';
 }
 export function cloudUser(){ return state.cloud.user; }
 export async function cloudRegister(u, pw){
