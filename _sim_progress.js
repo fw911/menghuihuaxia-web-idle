@@ -39,7 +39,7 @@ const MAXLOOP = parseInt(process.argv[2] || '400000', 10);
 const JOB = process.argv[3] || 'warrior';
 const SEC_PER_LOOP = 0.7;
 
-require('./_test_game.js');
+require('./_test_entry.mjs');
 const E = global.__exp;
 
 function fmtSec(s) {

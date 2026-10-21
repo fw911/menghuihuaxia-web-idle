@@ -18,7 +18,7 @@ global.document = { getElementById: () => el(), querySelectorAll: () => [], crea
 global.setInterval = () => 0; global.clearInterval = () => {};
 global.confirm = () => true; global.setTimeout = () => 0;
 
-require('./_test_game.js');
+require('./_test_entry.mjs');
 const E = global.__exp;
 
 (async function main() {

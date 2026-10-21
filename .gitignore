@@ -20,6 +20,7 @@ _shot_*.js
 
 # 生成的测试副本 / 备份
 _test_game.js
+_test_entry.mjs
 *.bak
 
 # 截图 / 存档样本

@@ -20,15 +20,20 @@ python -m http.server 8014
 
 | 路径 | 说明 |
 | --- | --- |
-| `index.html` | 页面结构与样式（三列布局） |
-| `game.js` | 全部游戏逻辑（战斗、掉落、打造、精炼、镶嵌、生活技能、神魔、武魂、副本、云存档） |
+| `index.html` | 页面结构与样式（三列布局）；以 `<script type="module" src="js/start.js">` 启动 |
+| `js/` | 全部游戏逻辑（ES Modules，21 个域模块 + `main.js` 总装 + `start.js` 入口，模块地图见 `js/main.js` 头注） |
 | `data/` | 解密后的配置数据（怪物 / 地图 / 装备基底 / 掉落表 / 商店 / 配方 …） |
 | `server/server.js` | 零依赖静态服务 + 云存档后端（端口 8014） |
 | `cloudfunctions/api/` | 云端部署用 HTTP 云函数（由 server.js 移植，存储切换为 CloudBase NoSQL） |
-| `_patch.py` | 生成测试副本 `_test_game.js`（注入 `global.__exp` 导出钩子） |
+| `_patch.py` | 生成测试入口 `_test_entry.mjs`（从 `js/main.js` 桶导出 `global.__exp`） |
 | `_run_test.js` | 全量回归测试（断言战斗模型、掉落、精炼、称号、物品名等） |
 | `_sim_progress.js` / `_sim_boss.js` / `_sim_zoneboss.js` | 数值模拟：推进曲线 / 副本首领 / 野外首领区 |
 | `_uicdp.js` | 无头 Chrome 截图 + 布局量化报告 |
+
+> 2026-10-21 起 `game.js`（单文件 IIFE，5253 行）已模块化为 `js/*.js`。切分内容逐字节保留
+> （生成时做过等价校验），仅 3 处为跨模块语义必需的微调：`_uid` 计数器改 `_ids` 对象、
+> `SKILLS/PASSIVES` 声明随 `loadData` 落到 core、`boot()` 的定时器赋值改走 `setGameTimer()`
+> （ES Module 的 imported 绑定只读，跨模块赋值会直接抛错）。回滚点：git tag `pre-modular`。
 
 ## 云端部署（腾讯云 CloudBase）
 
@@ -36,13 +41,14 @@ python -m http.server 8014
 
 | 层 | 资源 | 地址 |
 | --- | --- | --- |
-| 静态站点 | CloudBase 静态托管（`index.html` + `game.js` + `data/`） | `https://fw911-d0gy6gkq41d1f6d5a-1512169574.tcloudbaseapp.com/` |
+| 静态站点 | CloudBase 静态托管（`index.html` + `js/` + `data/`） | `https://fw911-d0gy6gkq41d1f6d5a-1512169574.tcloudbaseapp.com/` |
 | API | HTTP 云函数 `api`（Nodejs18.15，网关路由 `/api`） | `https://fw911-d0gy6gkq41d1f6d5a-1512169574.ap-shanghai.app.tcloudbase.com/api` |
 | 数据 | NoSQL 集合：`users` / `tokens` / `saves` / `leaderboard` / `stats` / `stats_byJob` / `stats_byBand` / `stats_drops` / `ratelimit` | 环境 `fw911-d0gy6gkq41d1f6d5a` |
 
-- **前端如何找到后端**：`game.js` 的 `apiProbe()` 按顺序探测 同源 `''` → 云端 API 域 → `localhost:8014`，
-  任一候选返回 `{"ok":true}` 即采用，因此本地与线上共用同一份 `game.js`。
-- **重新部署前端**：把 `index.html` / `game.js` / `data/` 上传到静态托管（MCP `manageHosting action=upload`）。
+- **前端如何找到后端**：`js/` 的 `apiProbe()` 按顺序探测 同源 `''` → 云端 API 域 → `localhost:8014`，
+  任一候选返回 `{"ok":true}` 即采用，因此本地与线上共用同一份 `js/`。
+- **重新部署前端**：把 `index.html` / `js/`（24 个文件，含 `package.json`）/ `data/` 上传到静态托管
+  （MCP `manageHosting action=upload`）。注意 `.js` 需以 `text/javascript` 提供（模块脚本 MIME 错误会被浏览器拒绝执行）。
 - **重新部署后端**：改 `cloudfunctions/api/index.js` 后 `node --check`，再部署函数代码
   （MCP `manageFunctions action=updateFunctionCode`，`functionRootPath=cloudfunctions`）。
   注意：`scf_bootstrap` 必须存在且 LF 行尾；凭证走函数环境变量 `CLOUDBASE_APIKEY` + `TCB_ENV`，不进代码。
@@ -76,11 +82,16 @@ python -m http.server 8014
 ## 回归验证
 
 ```bash
-node --check game.js        # 语法检查
-python _patch.py            # 生成 _test_game.js
+python _patch.py            # 生成 _test_entry.mjs（从 js/main.js 桶导出）
 node _run_test.js           # 全量断言（596 项），期望 ALL PASS
 node _sim_progress.js       # 长模拟（推进曲线 / 成就 / 区域探索）
 ```
+
+> 测试管线说明：`_test_entry.mjs` 以 ESM 从 `js/main.js` 再导出全部内部名（`global.__exp`），
+> 由 `_run_test.js` 先桩好 DOM/localStorage/fetch 再 `require()`（Node ≥22.12 支持 require(esm)）。
+> `js/package.json` 的 `{"type":"module"}` 是给 Node 看的（浏览器不需要），勿删。
+> 注意：跑全量回归前先起后端 `node server/server.js`（532 项断言含云存档段，
+> 后端不在时「后端探测」按设计 FAIL 并 SKIP 云存档用例，非 bug）。
 
 ## 装备耐久（口径备忘）
 

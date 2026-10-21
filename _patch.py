@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-"""生成 _test_game.js：复制 game.js 并在 IIFE 内注入导出钩子，供 Node 无头测试用。
-绝不修改 game.js 本体。
+"""生成 _test_entry.mjs：从 js/main.js 桶导出全部内部名，供 Node 无头测试用。
+
+2026-10-21 起 game.js 已模块化为 js/*.js（ES Modules，见 js/main.js 模块地图），
+本脚本不再注入 IIFE 钩子，只生成测试入口；绝不修改 js/ 下任何源文件。
 """
-import io, os, sys
+import io, os
 
-SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'game.js')
-DST = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_test_game.js')
-
-s = io.open(SRC, encoding='utf-8').read()
+DST = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_test_entry.mjs')
 
 EXPORTS = [
     'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LS',
@@ -87,13 +86,15 @@ EXPORTS = [
     'bossMinionTarget', 'minionKillCount', 'bossZoneCleared', 'noteZoneKill', 'noteMinionKill',
 ]
 
-hook = "\nglobal.__exp = {" + ", ".join("get %s(){return %s}" % (n, n) for n in EXPORTS) + "};\n"
+lines = [
+    '// 由 _patch.py 自动生成，勿手改：从 js/main.js 桶导出内部名，供 Node 无头测试用。',
+    "import * as G from './js/main.js';",
+    'global.__exp = {',
+]
+for n in EXPORTS:
+    lines.append('  get %s(){ return G.%s; },' % (n, n))
+lines.append('};')
+lines.append('global.__boot = G.boot;')
 
-# 在末尾 boot(); 之前插入导出，并去掉 boot 自动调用（测试自行引导）
-idx = s.rfind('boot();')
-assert idx > 0, 'boot() not found'
-s = s[:idx] + hook + 'global.__boot = boot;\n' + s[idx:]
-s = s.replace('boot();', '/* boot disabled in test */', 1)
-
-io.open(DST, 'w', encoding='utf-8').write(s)
-print('written', DST, len(s))
+io.open(DST, 'w', encoding='utf-8', newline='\n').write('\n'.join(lines) + '\n')
+print('written', DST, '(%d exports)' % len(EXPORTS))

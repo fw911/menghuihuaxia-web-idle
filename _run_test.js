@@ -29,7 +29,7 @@ global.document = { getElementById: () => el(), querySelectorAll: () => [], crea
 global.setInterval = () => 0; global.clearInterval = () => {};
 global.confirm = () => true;
 
-require('./_test_game.js');
+require('./_test_entry.mjs');
 const E = global.__exp;
 
 let fails = 0;
