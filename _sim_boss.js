@@ -24,7 +24,7 @@ global.confirm = () => true;
 global.setTimeout = () => 0;
 
 const MAXROUNDS = parseInt(process.argv[2] || '4000', 10);
-require('./_test_game.js');
+require('./_test_entry.mjs');   // 当前模块化代码入口（由 python _patch.py 从 js/main.js 生成）
 const E = global.__exp;
 
 // 按等级给一套齐装（模拟玩家正常配装）

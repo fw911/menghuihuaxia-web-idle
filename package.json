@@ -1,0 +1,11 @@
+{
+  "name": "menghuihuaxia-web-idle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "梦回华夏网页挂机版 —— 纯前端挂机游戏（Node 测试/模拟管线）",
+  "scripts": {
+    "patch": "python _patch.py",
+    "test": "python _patch.py && node _run_test.js",
+    "sim": "python _patch.py && node _sim_progress.js 400000 warrior && node _sim_boss.js 4000 && node _sim_zoneboss.js 6000"
+  }
+}

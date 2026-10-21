@@ -18,6 +18,9 @@ _test_out.txt
 _server.log
 _shot_*.js
 
+# 模拟/报告原始日志（体积大，仅保留汇总 md 入仓）
+_reports/*.txt
+
 # 生成的测试副本 / 备份
 _test_game.js
 _test_entry.mjs

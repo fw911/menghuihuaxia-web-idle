@@ -25,7 +25,7 @@ global.confirm = () => true;
 global.setTimeout = () => 0;
 
 const MAXROUNDS = parseInt(process.argv[2] || '6000', 10);
-require('./_test_game.js');
+require('./_test_entry.mjs');   // 当前模块化代码入口（由 python _patch.py 从 js/main.js 生成）
 const E = global.__exp;
 const pad = (s, n) => { s = String(s); return s + ' '.repeat(Math.max(0, n - s.length)); };
 
