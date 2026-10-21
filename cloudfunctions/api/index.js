@@ -5,6 +5,9 @@
  *   - 密码口径不变（PBKDF2-SHA256，12 万次迭代，16 字节盐）；
  *   - 令牌 30 天有效期、存档 3 槽位 / 单槽 4MB 上限不变；
  *   - 唯一变化：存储层从本地文件切换为 NoSQL 文档数据库集合。
+ *   - IP 限流：固定窗口计数（auth 10/min · save 30/min · stats 20/min · rank 120/min ·
+ *     health 300/min · 其余 120/min），命中返回 429 + Retry-After；
+ *     实例重启即重置，属基础防爆破/防 hammer 防护。
  *
  * 集合：
  *   users        _id=用户名        {salt,hash,createdAt,lastLogin}
@@ -29,6 +32,36 @@ const MAX_SAVE_BYTES = 4 * 1024 * 1024;
 const PBKDF2_ITER = 120000;
 const TOKEN_MAX_AGE = 30 * 24 * 3600 * 1000;
 const USER_RE = /^[\w一-龥]{2,16}$/;
+
+// ---------- IP 限流 ----------
+// 背景：① /login /register 每次跑 PBKDF2 12 万迭代，无限流等于放任在线爆破；
+//       ② /save /stats 走 NoSQL 读-改-写，脚本 hammer 会打爆配额。
+// 口径：固定窗口计数（个人部署并发极低，边界 2 倍 burst 可接受）；
+//       函数实例冷启动/重启即重置（SCF 内存不共享）—— 属基础防护，非硬隔离。
+// 客户端正常节奏远低于限额：存档 30s/次、统计 60s/次、排行 3min/次、登录 1 次/会话。
+const RATE_RULES = [
+  { name: 'auth',  re: /^\/(register|login)$/, windowMs: 60000, max: 10  },
+  { name: 'save',  re: /^\/save$/,             windowMs: 60000, max: 30  },
+  { name: 'stats', re: /^\/stats$/,            windowMs: 60000, max: 20  },
+  { name: 'rank',  re: /^\/rank$/,             windowMs: 60000, max: 120 },
+  { name: 'probe', re: /^\/health$/,           windowMs: 60000, max: 300 },
+];
+const RATE_DEFAULT = { name: 'default', windowMs: 60000, max: 120 };
+const rateBuckets = new Map();   // ip|rule -> {t0, n}
+function clientIp(req) {
+  const fwd = req.headers['x-forwarded-for'] || req.headers['x-real-ip'];
+  if (fwd) return String(fwd).split(',')[0].trim();
+  return (req.socket && req.socket.remoteAddress) || 'unknown';
+}
+function rateAllow(ip, rule) {
+  const now = Date.now();
+  const key = ip + '|' + rule.name;
+  let b = rateBuckets.get(key);
+  if (!b || now - b.t0 > rule.windowMs) { b = { t0: now, n: 0 }; rateBuckets.set(key, b); }
+  b.n++;
+  if (rateBuckets.size > 20000) rateBuckets.clear();   // 兜底防内存膨胀
+  return b.n <= rule.max;
+}
 
 // ---------- 存储层 ----------
 let db = null; // @cloudbase/node-sdk database()
@@ -243,6 +276,13 @@ async function handleAPI(req, res, url) {
   if (p === '/api') p = '/';
   else if (p.startsWith('/api/')) p = p.slice(4) || '/';
   if (req.method === 'OPTIONS') return send(res, 204, '');
+
+  // IP 限流（OPTIONS 预检不计数；命中返回 429 + Retry-After）
+  const rule = RATE_RULES.find(r => r.re.test(p)) || RATE_DEFAULT;
+  if (!rateAllow(clientIp(req), rule)) {
+    res.setHeader('Retry-After', String(Math.ceil(rule.windowMs / 1000)));
+    return send(res, 429, { ok: false, msg: '请求过于频繁，请稍后再试' });
+  }
 
   if (p === '/health') return send(res, 200, { ok: true, version: 1, slots: MAX_SLOTS });
 
