@@ -38,7 +38,7 @@ python -m http.server 8014
 | --- | --- | --- |
 | 静态站点 | CloudBase 静态托管（`index.html` + `game.js` + `data/`） | `https://fw911-d0gy6gkq41d1f6d5a-1512169574.tcloudbaseapp.com/` |
 | API | HTTP 云函数 `api`（Nodejs18.15，网关路由 `/api`） | `https://fw911-d0gy6gkq41d1f6d5a-1512169574.ap-shanghai.app.tcloudbase.com/api` |
-| 数据 | NoSQL 集合：`users` / `tokens` / `saves` / `leaderboard` / `stats` / `stats_byJob` / `stats_byBand` / `stats_drops` | 环境 `fw911-d0gy6gkq41d1f6d5a` |
+| 数据 | NoSQL 集合：`users` / `tokens` / `saves` / `leaderboard` / `stats` / `stats_byJob` / `stats_byBand` / `stats_drops` / `ratelimit` | 环境 `fw911-d0gy6gkq41d1f6d5a` |
 
 - **前端如何找到后端**：`game.js` 的 `apiProbe()` 按顺序探测 同源 `''` → 云端 API 域 → `localhost:8014`，
   任一候选返回 `{"ok":true}` 即采用，因此本地与线上共用同一份 `game.js`。
@@ -46,12 +46,20 @@ python -m http.server 8014
 - **重新部署后端**：改 `cloudfunctions/api/index.js` 后 `node --check`，再部署函数代码
   （MCP `manageFunctions action=updateFunctionCode`，`functionRootPath=cloudfunctions`）。
   注意：`scf_bootstrap` 必须存在且 LF 行尾；凭证走函数环境变量 `CLOUDBASE_APIKEY` + `TCB_ENV`，不进代码。
+- **IP 限流（双层，防 PBKDF2 爆破 / 防 hammer）**：
+  - 实例内固定窗口（内存 Map，全路径）：auth 10/min · save 30/min · stats 20/min · rank 120/min · health 300/min · 其余 120/min；
+  - auth 路径（`/register` `/login`）额外走 NoSQL 全局窗口（`ratelimit` 集合，_id=`rl_<ip>_auth`）——
+    SCF 多实例内存不共享，纯内存层拦不住顺序爆破，全局层专治这个；DB 异常时放行并打日志；
+  - 命中返回 429 + `Retry-After: 60`；`OPTIONS` 预检不计数；客户端 IP 取 `X-Forwarded-For` 首段；
+  - `ratelimit` 集合由函数引导时幂等创建（NoSQL 不会自动建集合）。
 - **已知平台行为（踩坑记录）**：
   - 静态托管默认域（`*.tcloudbaseapp.com`）是系统保留域，不能挂 `/api` 函数路由，故 API 与静态站不同源；
   - 网关会把请求 Origin 追加到上游 `Access-Control-Allow-Origin` 之后，函数设任何值都会翻倍成非法值，
     因此函数**不设** ACAO，只保留网关的单值回显（CORS 合法）；
   - 该版本 SDK：`doc(id).get()` 对不存在文档返回 `{data: []}`（须归一化为 null）；
-    `update()` 对不存在文档是静默无操作；`set()` 不允许带 `_id`——存储层已按这三点处理。
+    `update()` 对不存在文档是静默无操作；`set()` 不允许带 `_id`——存储层已按这三点处理；
+  - SCF 顺序请求多命中新实例（内存态不保留），并发才会复用热实例——限流必须按这个形态设计；
+  - NoSQL 集合不会随 `doc().set()` 自动创建，写不存在的集合会抛错。
 - **本地自测函数**：不设 `CLOUDBASE_APIKEY` 启动会自动切内存存储（DEV_MEMORY），
   `node cloudfunctions/api/index.js` 后访问 `http://127.0.0.1:9000/api/health`。
 
@@ -70,8 +78,19 @@ python -m http.server 8014
 ```bash
 node --check game.js        # 语法检查
 python _patch.py            # 生成 _test_game.js
-node _run_test.js           # 全量断言，期望 ALL PASS
+node _run_test.js           # 全量断言（596 项），期望 ALL PASS
+node _sim_progress.js       # 长模拟（推进曲线 / 成就 / 区域探索）
 ```
+
+## 装备耐久（口径备忘）
+
+- 基底数据 `bases_*.json` 每件带 `durability:[n,n]`（等值对，10~45）；原版打造时由
+  `stat_roller.roll_durability` 产出，等值对使 roll 结果恒为 n，直接取 `[0]`。
+- 部位门控 `slots.json#has_durability`：项链/戒指/武魂为 false → 无耐久字段。
+- 精炼每级 `int(d×1.04)` 复合（`refine.json#refine_durability_pct=0.04`）；
+  精炼失败降级/归零**不回退**耐久（原版 `_revert_refine_stats` 只回退四维攻防）。
+- 原版无耐久消耗/修理/损坏机制——耐久是随精炼成长的静态值，UI 在装备详情行展示。
+- 旧存档读档时自动补 `durability`（精炼过的按 ×1.04/级 补回增益，首饰跳过）。
 
 ## 说明
 
