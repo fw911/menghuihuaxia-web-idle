@@ -5,9 +5,10 @@
  *   - 密码口径不变（PBKDF2-SHA256，12 万次迭代，16 字节盐）；
  *   - 令牌 30 天有效期、存档 3 槽位 / 单槽 4MB 上限不变；
  *   - 唯一变化：存储层从本地文件切换为 NoSQL 文档数据库集合。
- *   - IP 限流：固定窗口计数（auth 10/min · save 30/min · stats 20/min · rank 120/min ·
- *     health 300/min · 其余 120/min），命中返回 429 + Retry-After；
- *     实例重启即重置，属基础防爆破/防 hammer 防护。
+ *   - IP 限流双层：① 实例内固定窗口（内存 Map，全路径）② auth 路径额外走 NoSQL
+ *     全局窗口（ratelimit 集合，治 SCF 多实例下顺序爆破）。限额：auth 10/min ·
+ *     save 30/min · stats 20/min · rank 120/min · health 300/min · 其余 120/min；
+ *     命中返回 429 + Retry-After。OPTIONS 预检不计数。
  *
  * 集合：
  *   users        _id=用户名        {salt,hash,createdAt,lastLogin}
@@ -18,6 +19,7 @@
  *   stats_byJob  _id=职业          分职业计数（读-改-写）
  *   stats_byBand _id=等级段        分等级段计数（读-改-写）
  *   stats_drops  _id=物品          掉落计数（读-改-写）
+ *   ratelimit    _id=rl_<ip>_<rule> IP 限流全局窗口 {t0,n}（仅 auth 路径）
  *
  * 本地自测：不设置 CLOUDBASE_APIKEY 时自动切换内存存储（DEV_MEMORY），
  * 仅用于本机验证 HTTP 契约；云上运行时必须配置 CLOUDBASE_APIKEY + TCB_ENV。
@@ -34,20 +36,24 @@ const TOKEN_MAX_AGE = 30 * 24 * 3600 * 1000;
 const USER_RE = /^[\w一-龥]{2,16}$/;
 
 // ---------- IP 限流 ----------
-// 背景：① /login /register 每次跑 PBKDF2 12 万迭代，无限流等于放任在线爆破；
-//       ② /save /stats 走 NoSQL 读-改-写，脚本 hammer 会打爆配额。
-// 口径：固定窗口计数（个人部署并发极低，边界 2 倍 burst 可接受）；
-//       函数实例冷启动/重启即重置（SCF 内存不共享）—— 属基础防护，非硬隔离。
+// 双层防护（背景：① /login /register 每次跑 PBKDF2 12 万迭代，无限流等于放任在线爆破；
+//          ② /save /stats 走 NoSQL 读-改-写，脚本 hammer 会打爆配额）：
+//   ① 实例内固定窗口（内存 Map）：全路径生效、零成本。但 SCF 多实例且内存不共享——
+//      实测顺序请求多命中新实例（内存桶形同虚设），仅并发同实例时能拦住；
+//   ② 全局窗口（NoSQL ratelimit 集合）：仅 auth 路径额外走这一层，花 2 次文档读写
+//      换跨实例一致计数，专治顺序爆破（最常见攻击模式）。DB 异常时放行并打日志
+//      （限流器不该因存储故障把正常用户锁在门外）。
+// 口径：固定窗口计数（个人部署并发极低，边界 2 倍 burst 可接受）。
 // 客户端正常节奏远低于限额：存档 30s/次、统计 60s/次、排行 3min/次、登录 1 次/会话。
 const RATE_RULES = [
-  { name: 'auth',  re: /^\/(register|login)$/, windowMs: 60000, max: 10  },
-  { name: 'save',  re: /^\/save$/,             windowMs: 60000, max: 30  },
-  { name: 'stats', re: /^\/stats$/,            windowMs: 60000, max: 20  },
-  { name: 'rank',  re: /^\/rank$/,             windowMs: 60000, max: 120 },
-  { name: 'probe', re: /^\/health$/,           windowMs: 60000, max: 300 },
+  { name: 'auth',  re: /^\/(register|login)$/, windowMs: 60000, max: 10, global: true  },
+  { name: 'save',  re: /^\/save$/,             windowMs: 60000, max: 30, global: false },
+  { name: 'stats', re: /^\/stats$/,            windowMs: 60000, max: 20, global: false },
+  { name: 'rank',  re: /^\/rank$/,             windowMs: 60000, max: 120, global: false },
+  { name: 'probe', re: /^\/health$/,           windowMs: 60000, max: 300, global: false },
 ];
-const RATE_DEFAULT = { name: 'default', windowMs: 60000, max: 120 };
-const rateBuckets = new Map();   // ip|rule -> {t0, n}
+const RATE_DEFAULT = { name: 'default', windowMs: 60000, max: 120, global: false };
+const rateBuckets = new Map();   // ip|rule -> {t0, n}（实例内）
 function clientIp(req) {
   const fwd = req.headers['x-forwarded-for'] || req.headers['x-real-ip'];
   if (fwd) return String(fwd).split(',')[0].trim();
@@ -62,6 +68,17 @@ function rateAllow(ip, rule) {
   if (rateBuckets.size > 20000) rateBuckets.clear();   // 兜底防内存膨胀
   return b.n <= rule.max;
 }
+// 全局窗口：ratelimit 集合 _id=rl_<ip>_<rule>，文档 {t0,n}；过期窗口整体复用同一文档
+// （桶数 = 见过的 IP 数 × 规则数，个人部署规模下可接受；不再需要额外清理任务）
+async function rateAllowGlobal(ip, rule) {
+  const id = 'rl_' + safeId(ip) + '_' + rule.name;
+  const now = Date.now();
+  const cur = await docGet('ratelimit', id);
+  let b = (cur && typeof cur === 'object' && now - (cur.t0 || 0) <= rule.windowMs) ? cur : { t0: now, n: 0 };
+  b.n = (Number(b.n) || 0) + 1;
+  await docSet('ratelimit', id, { t0: b.t0, n: b.n });
+  return b.n <= rule.max;
+}
 
 // ---------- 存储层 ----------
 let db = null; // @cloudbase/node-sdk database()
@@ -69,7 +86,7 @@ const DEV = !process.env.CLOUDBASE_APIKEY;
 // 内存键名与集合名严格一致
 const mem = {
   users: {}, tokens: {}, saves: {}, leaderboard: {}, stats: {},
-  stats_byJob: {}, stats_byBand: {}, stats_drops: {}
+  stats_byJob: {}, stats_byBand: {}, stats_drops: {}, ratelimit: {}
 };
 if (!DEV) {
   const tcb = require('@cloudbase/node-sdk');
@@ -277,11 +294,20 @@ async function handleAPI(req, res, url) {
   else if (p.startsWith('/api/')) p = p.slice(4) || '/';
   if (req.method === 'OPTIONS') return send(res, 204, '');
 
-  // IP 限流（OPTIONS 预检不计数；命中返回 429 + Retry-After）
+  // IP 限流：① 实例内窗口（内存，全路径）② auth 路径全局窗口（NoSQL，治顺序爆破）
   const rule = RATE_RULES.find(r => r.re.test(p)) || RATE_DEFAULT;
   if (!rateAllow(clientIp(req), rule)) {
     res.setHeader('Retry-After', String(Math.ceil(rule.windowMs / 1000)));
     return send(res, 429, { ok: false, msg: '请求过于频繁，请稍后再试' });
+  }
+  if (rule.global) {
+    let allow = true;
+    try { allow = await rateAllowGlobal(clientIp(req), rule); }
+    catch (e) { console.error('[ratelimit] 全局检查失败，本次放行', e && e.message || e); }
+    if (!allow) {
+      res.setHeader('Retry-After', String(Math.ceil(rule.windowMs / 1000)));
+      return send(res, 429, { ok: false, msg: '请求过于频繁，请稍后再试' });
+    }
   }
 
   if (p === '/health') return send(res, 200, { ok: true, version: 1, slots: MAX_SLOTS });
