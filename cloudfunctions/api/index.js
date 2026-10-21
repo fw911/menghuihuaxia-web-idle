@@ -92,6 +92,14 @@ if (!DEV) {
   const tcb = require('@cloudbase/node-sdk');
   const app = tcb.init({ env: process.env.TCB_ENV, accessKey: process.env.CLOUDBASE_APIKEY });
   db = app.database();
+  // ratelimit 集合必须存在才能 doc().set()（NoSQL 不自动建集合）；
+  // 幂等创建——已存在时报错即目标态，忽略。失败不影响主流程（全局限流会走放行分支）。
+  Promise.resolve(db.createCollection('ratelimit')).then(() => {
+    console.log('[api] ratelimit 集合就绪');
+  }).catch(e => {
+    const msg = String((e && e.message) || e);
+    if (!/exist|已存在/i.test(msg)) console.error('[api] createCollection(ratelimit) 失败：', msg);
+  });
 }
 if (DEV) console.warn('[api] DEV_MEMORY 模式：未检测到 CLOUDBASE_APIKEY，使用内存存储（仅限本地自测）');
 
