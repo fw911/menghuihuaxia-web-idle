@@ -409,6 +409,8 @@ function ok(name, cond, extra) {
     await E.cloudLogout();
     const r2 = await E.cloudLogin(uname, 'pwd123456');
     ok('登录成功', r2.ok === true, r2.msg || '');
+    // 归一化：清掉历史残留槽位，保证后续「空槽」类断言不受上次运行/中断影响
+    for (let i = 1; i <= 3; i++) { try { await E.cloudDelete(i); } catch (e) {} }
     const r3 = await E.cloudSave(1, true);
     ok('云保存成功', r3.ok === true, r3.msg || JSON.stringify(r3));
     const slots = await E.refreshSlots();
@@ -1987,6 +1989,67 @@ function ok(name, cond, extra) {
     ok('P2-3 idleRate 返回数值 exp/秒', typeof rate.exp === 'number' && rate.exp >= 0);
     ok('P2-3 离线净经验 = rate.exp × 秒 × 0.0875',
       Math.floor(rate.exp * 3600 * E.OFFLINE_EFF) === Math.floor(rate.exp * 3600 * 0.0875));
+  }
+
+  // ---------- 双手武器互斥规则（原版 character/equipment.py 反汇编还原） ----------
+  // is_two_hand: getattr(equip,'hand','') in ('double','双手')
+  // equip_item: 装备盾牌时若已持双手武器→自动卸下武器回背包；
+  //             装备双手武器时若已持盾牌→自动卸下盾牌回背包（自动卸下，非硬拦截）
+  {
+    console.log('-- 双手武器互斥规则 --');
+    const is2h = h => E.isTwoHand({ hand: h });
+    const war2h = E.DATA.bases_warrior.weapons.filter(w => is2h(w.hand));
+    ok('战士双手武器 7 把（数据口径）', war2h.length === 7, war2h.length + '');
+    ok('其他职业无双手武器', ['mage','shaman','darkwitch'].every(
+      j => E.DATA['bases_'+j].weapons.every(w => !is2h(w.hand))));
+
+    ok('isTwoHand 识别「双手」', E.isTwoHand({hand:'双手'}) === true);
+    ok('isTwoHand 识别 double', E.isTwoHand({hand:'double'}) === true);
+    ok('isTwoHand 单手/空/缺省/null 均 false',
+      !E.isTwoHand({hand:'单手'}) && !E.isTwoHand({hand:''}) && !E.isTwoHand({}) && !E.isTwoHand(null));
+
+    E.newPlayer('双手', 'warrior');
+    const p2 = E.state.player;
+    p2.level = 60; E.refreshStats();
+
+    const base2h = E.DATA.bases_warrior.weapons.find(w => w.hand === '双手');
+    const baseSh = E.DATA.bases_warrior.shields[0];
+    const base1h = E.DATA.bases_warrior.weapons.find(w => w.hand !== '双手');
+    const w2h = E.buildEquip(base2h, 'warrior', 3, 'weapon');
+    const sh1 = E.buildEquip(baseSh, 'warrior', 3, 'shield');
+    ok('buildEquip 保留 hand 字段（双手）', w2h.hand === '双手', w2h.hand);
+    ok('buildEquip 保留 hand 字段（盾牌非双手）', !E.isTwoHand(sh1), sh1.hand);
+
+    // ① 先盾后双手武器 → 盾牌自动卸下回背包
+    E.equipItem(sh1);
+    ok('盾牌可单独装备', !!p2.equip.shield);
+    E.equipItem(w2h);
+    ok('装备双手武器后盾牌自动卸下', !p2.equip.shield && !!p2.equip.weapon);
+    ok('卸下的盾牌回背包', p2.bag.some(b => b.uid === sh1.uid));
+    ok('weaponIsTwoHand 为真', E.weaponIsTwoHand() === true);
+
+    // ② 持双手武器时装备盾牌 → 武器自动卸下回背包
+    const sh2 = E.buildEquip(baseSh, 'warrior', 3, 'shield');
+    E.equipItem(sh2);
+    ok('持双手武器时装备盾牌 → 武器自动卸下', !!p2.equip.shield && !p2.equip.weapon);
+    ok('卸下的双手武器回背包', p2.bag.some(b => b.uid === w2h.uid));
+    ok('weaponIsTwoHand 恢复为假', E.weaponIsTwoHand() === false);
+
+    // ③ 单手武器与盾牌共存，不触发互斥
+    const w1h = E.buildEquip(base1h, 'warrior', 3, 'weapon');
+    E.equipItem(w1h);
+    ok('单手武器与盾牌共存', !!p2.equip.weapon && !!p2.equip.shield);
+    ok('单手武器 weaponIsTwoHand 为假', E.weaponIsTwoHand() === false);
+
+    // ④ 互斥不变量：任意时刻盾牌与双手武器不同时在装备栏
+    E.equipItem(E.buildEquip(base2h, 'warrior', 3, 'weapon'));
+    ok('互斥不变量：双手武器就位时盾牌必空', !!p2.equip.weapon && !p2.equip.shield);
+
+    // ⑤ 旧存档兼容：无 hand 字段按单手处理
+    const legacy = E.buildEquip(baseSh, 'warrior', 3, 'shield');
+    delete legacy.hand;
+    E.equipItem(legacy);
+    ok('旧存档装备（无 hand 字段）可正常使用', !!p2.equip.shield);
   }
 
   // 恢复默认页签，避免影响后续/重复运行

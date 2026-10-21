@@ -19,6 +19,8 @@ EXPORTS = [
     'achList','achValue','achDone','checkAchievements','grantAchievement',
     'summonDef','summonTier','summonAvailable','summonAttack',
     'addToBag','consolidateBag','equipItem','doForge','doRefine',
+    # 双手武器互斥规则（原版 character/equipment.py is_two_hand + equip_item 反汇编）
+    'isTwoHand','weaponIsTwoHand',
     # 宝石镶嵌（gems.json：系列限定部位）
     'doInlay','gemSeriesDef','gemSeriesName','gemSeriesLabel','gemCanInlay','inlayGemList',
     'inlayEquipList','inlayGemOpts','inlayEquipOpts','doInlaySelected','selGemForInlay',

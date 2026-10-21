@@ -1446,6 +1446,7 @@ function buildEquip(base, job, tier, slot, mode){
   const quality = qualityFromPerks(perks.length);
   return {
     type:'equip', uid: uid(), slot, job, tier, name: base.name, reqLevel: base.req_level||1,
+    hand: base.hand || '',   // 单手/双手（战士 7 把双手武器；原版 is_two_hand 判定源）
     stats, perks, quality, refine:0, sockets: base.sockets||0, bailian:0,
     gems: new Array(base.sockets||0).fill(null), baseKey: base.key
   };
@@ -2083,12 +2084,36 @@ function tryAutoEquip(item){
     eventLog('自动换装 <span class="q-'+item.quality+'">'+item.name+'</span>（'+SLOT_NAME[item.slot]+'）');
   }
 }
+// 是否双手武器（原版 character/equipment.py is_two_hand 反汇编：
+//   getattr(equip,'hand','') in ('double','双手') —— 双手武器占用武器+盾牌两个槽位）
+function isTwoHand(it){ return !!it && (it.hand === 'double' || it.hand === '双手'); }
+// 当前武器是否双手（原版 char.js weaponIsTwoHand）
+function weaponIsTwoHand(){
+  const p = state.player;
+  return !!p && isTwoHand(p.equip && p.equip.weapon);
+}
 function equipItem(item){
   const p = state.player;
   // 找空位（戒指有两个）
   let slot = item.slot;
   if(slot==='ring'){ slot = p.equip.ring1? (p.equip.ring2?'ring1':(p.equip.ring1?'ring2':'ring1')) : 'ring1'; }
   if(item.slot!==slot) item.slot = slot;
+  // 双手武器互斥规则（原版 equip_item 反汇编，自动卸下放回背包而非硬拦截）：
+  //   装备盾牌时若已持双手武器 → 自动卸下武器（已自动卸下双手武器 [name] 放回背包）
+  //   装备双手武器时若已持盾牌 → 自动卸下盾牌（已自动卸下盾牌 [name] 放回背包）
+  if(slot==='shield' && weaponIsTwoHand()){
+    const w = p.equip.weapon;
+    delete p.equip.weapon;
+    if(w) p.bag.push(w);
+    log('已自动卸下双手武器 ['+(w&&w.name)+'] 放回背包');
+  }else if(slot==='weapon' && isTwoHand(item)){
+    const sh = p.equip.shield;
+    if(sh){
+      delete p.equip.shield;
+      p.bag.push(sh);
+      log('已自动卸下盾牌 ['+sh.name+'] 放回背包');
+    }
+  }
   const old = p.equip[slot];
   p.equip[slot] = item;
   p.bag = p.bag.filter(b=>b.uid!==item.uid);
@@ -2520,10 +2545,16 @@ function renderHero(){
     const it=p.equip[sl];
     if(it){
       const tag = it.bailian>0 ? ('百炼+'+it.bailian) : (it.refine>0 ? ('+'+it.refine) : '');
+      // 双手武器徽标（原版 char.js：武器格戴「双手」角标）
+      const twoH = (sl==='weapon' && isTwoHand(it)) ? ' <span class="pill">双手</span>' : '';
       const tip = SLOT_NAME[sl]+'·'+it.name+'\n'+statLine(it);
       html+='<div class="eqslot q-'+it.quality+'" data-unequip="'+sl+'" title="'+tip+'">'
-        +'<span class="sl">'+SLOT_NAME[sl]+(tag?' '+tag:'')+'</span>'
+        +'<span class="sl">'+SLOT_NAME[sl]+(tag?' '+tag:'')+twoH+'</span>'
         +'<span class="nm">'+it.name+'</span></div>';
+    }else if(sl==='shield' && weaponIsTwoHand()){
+      // 双手武器占用盾牌格（原版 char.js occupied-2h：不可穿戴/卸下）
+      html+='<div class="eqslot empty" title="已装备双手武器，盾牌格被占用；请先卸下武器">'
+        +'<span class="sl">盾牌</span><span class="nm">双手占用</span></div>';
     }else{
       html+='<div class="eqslot empty"><span class="sl">'+SLOT_NAME[sl]+'</span><span class="nm">—</span></div>';
     }
@@ -3064,8 +3095,9 @@ function renderBag(sub){
     html+='<h3 class="sec">装备（'+eqs.length+' 件 · 词条各不相同，逐件显示）</h3>';
     for(const it of eqs){
       const lt = it.bailian>0 ? ('百炼+'+it.bailian) : ('精炼+'+it.refine);
+      const twoH = isTwoHand(it) ? ' <span class="pill">双手</span>' : '';
       html+='<div class="item q-'+it.quality+'" data-item="'+it.uid+'">'
-        +'['+QNAME[it.quality]+'] '+SLOT_NAME[it.slot]+'·'+it.name+' <span class="pill">'+lt+'</span>'
+        +'['+QNAME[it.quality]+'] '+SLOT_NAME[it.slot]+'·'+it.name+' <span class="pill">'+lt+'</span>'+twoH
         +'<br><span class="muted">需求'+it.reqLevel+'级 · '+statLine(it)+'</span></div>';
     }
   }
@@ -3079,7 +3111,8 @@ function renderEquip(){
   for(const slot in p.equip){
     const it=p.equip[slot];
     if(!it){ html+='<div class="item" style="opacity:.5">'+SLOT_NAME[slot]+'：空</div>'; continue; }
-    html+='<div class="item equipped q-'+it.quality+'">['+QNAME[it.quality]+'] '+SLOT_NAME[slot]+'·'+it.name+' <span class="pill">+'+it.refine+'</span></div>';
+    const twoH = isTwoHand(it) ? ' <span class="pill">双手</span>' : '';
+    html+='<div class="item equipped q-'+it.quality+'">['+QNAME[it.quality]+'] '+SLOT_NAME[slot]+'·'+it.name+' <span class="pill">+'+it.refine+'</span>'+twoH+'</div>';
     html+='<div class="muted" style="margin:-4px 0 6px 4px">'+statLine(it)+'</div>';
   }
   return html;
