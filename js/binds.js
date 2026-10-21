@@ -18,7 +18,7 @@ import { doInlaySelected } from './inlay.js';
 import { loadCloudUI } from './panels.js';
 import { acceptQuest, buyShopItem, useConsumable } from './shop.js';
 import { addCrystalStone, buyMaterial, courierTravel, crystalName, doBailianCraft, doBailianUse, doExtract, doForge, doFurnace, doGemRefine, doInstanceExchange, doOreRefine, doPotionRefine, equipTitle, mineStart, titleByKey } from './life.js';
-import { copySaveText, exportSaveFile, importSaveFile, importSaveText } from './loop.js';
+import { copySaveText, exportSaveFile, importSaveFile, importSaveText, save } from './loop.js';
 import { autoZone } from './idle.js';
 import { renderAll } from './boot.js';
 
@@ -29,7 +29,7 @@ export function bindTabClicks(){
     if(it.type==='consumable'){ useConsumable(it); return; }
     if(it.type==='equip'){
       if(window._pendingGem){ doInlay(it, window._pendingGem); window._pendingGem=null; const t=$('inlay-target'); if(t) t.textContent='已镶嵌'; return; }
-      equipItem(it); log('装备了 '+it.name);
+      if(equipItem(it)) log('装备了 '+it.name);   // 等级/职业不符时 equipItem 已log原因并返回 false
     }
   });
   // 注：原先这里绑过 [data-refine] / [data-gem]，但这两个属性【从未被渲染】，
@@ -141,7 +141,7 @@ export function bindTabClicks(){
     else if(a==='save'){ const slot=parseInt(d.getAttribute('data-slot'),10); const r=await cloudSave(slot, true);
       log(r.ok? ('<span class="loot">已保存到云端槽位 '+slot+'</span>') : ('<span class="dmg">保存失败：'+r.msg+'</span>')); state.cloud.slot=slot; persistCloud(); renderTab(); }
     else if(a==='load'){ const slot=parseInt(d.getAttribute('data-slot'),10); const r=await cloudLoad(slot);
-      if(r.ok){ state.cloud.slot=slot; persistCloud(); refreshStats(); renderAll(); log('<span class="loot">'+r.msg+'</span>'); }
+      if(r.ok){ state.cloud.slot=slot; persistCloud(); refreshStats(); save(true); renderAll(); log('<span class="loot">'+r.msg+'</span>'); }
       else log('<span class="dmg">'+r.msg+'</span>'); }
     else if(a==='del'){ const slot=parseInt(d.getAttribute('data-slot'),10); const dr=await cloudDelete(slot); log(dr&&dr.ok? ('<span class="sys">已删除云端槽位 '+slot+'</span>') : ('<span class="dmg">删除失败：'+((dr&&dr.msg)||'未知错误')+'</span>')); renderTab(); }
     else if(a==='rank-up'){ const r=await cloudRank(); log(r&&r.ok? ('<span class="loot">战力已上传，当前排名 '+r.rank+'/'+r.total+'</span>') : '<span class="dmg">上传失败</span>'); loadCloudUI(); }

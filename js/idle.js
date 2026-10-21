@@ -16,7 +16,11 @@ import { fmtNum } from './life.js';
 
 
 // ---------- 离线收益（离线挂机也能赚） ----------
-export const OFFLINE_MAX_SEC = 12*3600;   // 最多补算 12 小时
+// 原口径（battle/autopilot.py _tick_realtime L211-218 反汇编）：
+//   if dt > OFFLINE_EXP_MIN_GAP(30s): whole_min=min(int(dt//60),1440); exp=int(rate_per_min*whole_min*0.5*REWARD_EXTRA_FACTOR)
+// 即上限 1440 分钟 = 24 小时；本 port 另按 OFFLINE_EFF 净倍率同步结算金币。
+export const OFFLINE_MAX_SEC = 24*3600;   // 最多补算 24 小时（原版 min(int(dt//60),1440) 分钟）
+export const OFFLINE_MIN_GAP = 30;        // 离开不足 30 秒不补算（原版 OFFLINE_EXP_MIN_GAP=30）
 export const OFFLINE_EFF = 0.0875;       // 离线净倍率 = 原版 0.35(在线效率) × 0.5(离线系数) × 0.5(奖励额外) = 0.0875
 // 当前（或最优）区域的每秒收益：经验/秒来自 zoneEval，金币/秒按平均金币 ÷ 击杀耗时
 export function idleRate(){
@@ -38,7 +42,7 @@ export function applyOfflineEarnings(){
   if(!p || !state._loadedTs) return;
   const away = (Date.now() - state._loadedTs)/1000;
   state._loadedTs = null;
-  if(away < 60) return;                  // 离开不足 1 分钟不算
+  if(away < OFFLINE_MIN_GAP) return;      // 离开不足 30 秒不算（原版 OFFLINE_EXP_MIN_GAP）
   const earnSec = Math.min(away, OFFLINE_MAX_SEC);
   const rate = state._loadedRate || idleRate();
   const expGain = Math.floor((rate.exp||0) * earnSec * OFFLINE_EFF);

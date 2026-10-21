@@ -3,7 +3,7 @@
  * 导出 23 个顶层名；import 由 AST 跨模块引用自动计算。
  */
 import { state } from './state.js';
-import { DATA, SLOT_NAME } from './core.js';
+import { DATA, SLOT_NAME, CN_STAT } from './core.js';
 import { expToNext, whName } from './player.js';
 import { smNodeTiers, smTierDef } from './smtree.js';
 import { QNAME } from './equip.js';
@@ -233,7 +233,7 @@ export function renderEquip(){
 }
 export function statLine(it){
   const parts=[];
-  for(const s in it.stats) parts.push(s+':'+it.stats[s]);
+  for(const s in it.stats) parts.push((CN_STAT[s]||s)+':'+it.stats[s]);   // 中文属性名（原版 bag.js RANGE_LABELS 口径）
   for(const pk of it.perks) parts.push(pk.name+'+'+pk.value+(pk.suffix||''));
   for(const g of it.gems) if(g) parts.push(gemSeriesName(g.series)+'(+'+g.value+')');
   if(it.durability!=null) parts.push('耐久:'+it.durability);   // 原版耐久：打造 roll + 精炼 ×1.04/级，无消耗机制
@@ -243,11 +243,11 @@ export function renderStat(){
   const p=state.player, s=p._s;
   const a=s.attr;
   let html='<h3>基础属性 (Lv.'+p.level+')</h3><div class="muted">';
-  for(const k in a) html+=k+'：'+Math.round(a[k])+'<br>';
+  for(const k in a) html+=(CN_STAT[k]||k)+'：'+Math.round(a[k])+'<br>';
   html+='</div><h3>战斗属性</h3><div class="muted">';
   const c=s.combat;
   const order=['phys_atk','magic_atk','phys_def','magic_def','max_hp','max_mp','phys_crit','dodge'];
-  for(const k of order) if(c[k]!=null) html+=k+'：'+fmtNum(c[k])+'<br>';
+  for(const k of order) if(c[k]!=null) html+=(CN_STAT[k]||k)+'：'+fmtNum(c[k])+'<br>';
   html+='</div><h3>状态</h3><div class="bar hp"><i style="width:'+(p.hp/s.max_hp*100)+'%"></i></div>'+
         '<div class="muted">HP '+fmtNum(Math.round(p.hp))+'/'+fmtNum(s.max_hp)+'</div>'+
         '<div class="bar exp" style="margin-top:6px"><i style="width:'+expPct()+'%"></i></div>'+

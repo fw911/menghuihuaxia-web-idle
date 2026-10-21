@@ -37,6 +37,21 @@ for (const d of [DATA_DIR, SAVE_DIR]) {
 // ---------- 存储工具 ----------
 function dataFile(name) { return path.join(DATA_DIR, name); }
 
+// 同一目标文件的操作串行化（写锁）：
+// ① Windows 上两个并发 writeFile 抢同一 .tmp 句柄会 EPERM（排行榜 3 分钟定时上传
+//    与升级即时上传、双端同时保存同一槽位都会并发）；
+// ② persist 之间交错会丢更新（read-modify-write 非原子）。
+// 队列中前一个失败不阻塞后一个（then(fn, fn)），但失败会透传给当前调用方。
+const _fileChain = new Map();
+function fileLock(key, fn) {
+  const prev = _fileChain.get(key) || Promise.resolve();
+  const cur = prev.then(fn, fn);
+  _fileChain.set(key, cur);
+  const done = () => { if (_fileChain.get(key) === cur) _fileChain.delete(key); };
+  cur.then(done, done);
+  return cur;
+}
+
 async function readJSON(name, fallback) {
   try {
     const buf = await fsp.readFile(dataFile(name), 'utf-8');
@@ -48,8 +63,10 @@ async function readJSON(name, fallback) {
 async function writeJSON(name, obj) {
   const p = dataFile(name);
   const tmp = p + '.tmp';
-  await fsp.writeFile(tmp, JSON.stringify(obj), 'utf-8');
-  await fsp.rename(tmp, p);
+  return fileLock(p, async () => {
+    await fsp.writeFile(tmp, JSON.stringify(obj), 'utf-8');
+    await fsp.rename(tmp, p);
+  });
 }
 
 const cache = {
@@ -222,11 +239,14 @@ async function handleAPI(req, res, url) {
     b.payload.savedAt = Date.now();
     const f = saveFile(a.user, slot);
     const tmp = f + '.tmp';
-    await fsp.writeFile(tmp, JSON.stringify(b.payload), 'utf-8');
-    // 覆盖前保留上一代存档（.bak，单代）：防误操作/坏档丢档；首存（无上一代）时跳过
-    try { await fsp.copyFile(f, f + '.bak'); }
-    catch (e) { if (!e || e.code !== 'ENOENT') { console.error('[save] 备份上一代失败', f, e && e.code); } }
-    await fsp.rename(tmp, f);
+    // 写锁串行化：并发保存同一槽位时，.tmp 句柄竞争会 EPERM；.bak 拷贝与落盘也须原子
+    await fileLock(f, async () => {
+      await fsp.writeFile(tmp, JSON.stringify(b.payload), 'utf-8');
+      // 覆盖前保留上一代存档（.bak，单代）：防误操作/坏档丢档；首存（无上一代）时跳过
+      try { await fsp.copyFile(f, f + '.bak'); }
+      catch (e) { if (!e || e.code !== 'ENOENT') { console.error('[save] 备份上一代失败', f, e && e.code); } }
+      await fsp.rename(tmp, f);
+    });
     return send(res, 200, { ok: true, slot, savedAt: b.payload.savedAt, bytes: Buffer.byteLength(raw, 'utf-8') });
   }
 
@@ -248,14 +268,21 @@ async function handleAPI(req, res, url) {
     const slot = Math.min(MAX_SLOTS, Math.max(1, Number(url.searchParams.get('slot') || 1)));
     const df = saveFile(a.user, slot);
     // 删除前保留一代 .bak（可手动恢复：改回 .json 即可）；槽位列表不认 .bak
-    try { await fsp.copyFile(df, df + '.bak'); }
-    catch (e) { if (!e || e.code !== 'ENOENT') { console.error('[delete] 备份失败', df, e && e.code); } }
-    try { await fsp.unlink(df); }
-    catch (e) {
-      if (e && e.code !== 'ENOENT') {
-        console.error('[delete] unlink 失败', df, e && e.code, e && e.message);
-        return send(res, 500, { ok: false, slot, msg: '删除失败：' + (e.code || e.message), file: df });
-      }
+    // 与并发保存互斥：避免「备份了已删除文件」或「保存后立刻被删」的交错
+    try {
+      await fileLock(df, async () => {
+        try { await fsp.copyFile(df, df + '.bak'); }
+        catch (e) { if (!e || e.code !== 'ENOENT') { console.error('[delete] 备份失败', df, e && e.code); } }
+        try { await fsp.unlink(df); }
+        catch (e) {
+          if (e && e.code !== 'ENOENT') {
+            console.error('[delete] unlink 失败', df, e && e.code, e && e.message);
+            throw e;
+          }
+        }
+      });
+    } catch (e) {
+      return send(res, 500, { ok: false, slot, msg: '删除失败：' + (e.code || e.message), file: df });
     }
     return send(res, 200, { ok: true, slot });
   }

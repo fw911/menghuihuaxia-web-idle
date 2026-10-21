@@ -4,6 +4,7 @@
  */
 import { state } from './state.js';
 import { applySavePayload, buildSavePayload } from './loop.js';
+import { applyOfflineEarnings } from './idle.js';
 
 // ---------- 后端 API 层 ----------
 export function apiCall(path, opts){
@@ -77,7 +78,13 @@ export async function cloudSave(slot, force){
 export async function cloudLoad(slot){
   if(!state.cloud.ok || !state.cloud.token) return {ok:false,msg:'未登录'};
   const r=await apiCall('/api/load?slot='+(slot||state.cloud.slot));
-  if(r.ok && r.payload){ applySavePayload(r.payload); return {ok:true,msg:'已从云端读取 '+((slot||state.cloud.slot))+' 号槽位'}; }
+  if(r.ok && r.payload){
+    applySavePayload(r.payload);
+    // 云端读档同样按离开时长补算离线收益（原版 _tick_realtime 读档即结算）；
+    // applySavePayload 已置 state._loadedTs=payload.ts，此处直接补算
+    applyOfflineEarnings();
+    return {ok:true,msg:'已从云端读取 '+((slot||state.cloud.slot))+' 号槽位'};
+  }
   return r;
 }
 export async function cloudDelete(slot){

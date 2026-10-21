@@ -510,8 +510,26 @@ function ok(name, cond, extra) {
     E.state.player.level = 7;
     const r4 = await E.cloudLoad(1);
     ok('云读取成功并还原', r4.ok === true && E.state.player.level === lvBefore, r4.msg + ' lv=' + E.state.player.level);
+    // ---- 云端读档同样补算离线收益（问题4：cloudLoad 路径此前不补算）----
+    {
+      const f = path.join(__dirname, 'server', 'data', 'saves', uname + '__1.json');
+      const sv = JSON.parse(fs.readFileSync(f, 'utf-8'));
+      sv.ts = Date.now() - 3600 * 1000;          // 存档时间改为 1 小时前
+      sv.rate = { exp: 100, gold: 50 };
+      fs.writeFileSync(f, JSON.stringify(sv));
+      const bGold = E.state.player.gold;
+      const r4b = await E.cloudLoad(1);
+      const goldGain = E.state.player.gold - bGold;
+      // 容差 1：floor(50×3600×0.0875) 浮点截断为 15749，而读档经过文件 I/O + HTTP，
+      // away 略大于 3600s → 实结算 15750（原版 int() 同为截断，行为一致）
+      const goldExpect = Math.floor(50*3600*E.OFFLINE_EFF);
+      ok('云端读档补算离线收益（1小时）', r4b.ok === true && Math.abs(goldGain - goldExpect) <= 1, 'goldGain=' + goldGain + ' expect~' + goldExpect);
+    }
     const r5 = await E.cloudRank();
     ok('战力上传', !!r5 && r5.ok === true, JSON.stringify(r5));
+    // 并发排行榜上传不得因 .tmp 写竞争失败（Windows EPERM；server fileLock 串行化）
+    const [ra, rb] = await Promise.all([E.cloudRank(), E.cloudRank()]);
+    ok('并发排行榜上传均成功（.tmp 写竞争已串行化）', !!ra && ra.ok === true && !!rb && rb.ok === true, JSON.stringify(ra) + ' / ' + JSON.stringify(rb));
     const rk = await E.cloudRankList('');
     ok('排行榜可读', !!rk && !!rk.list && rk.list.length > 0, rk && rk.list ? rk.list.length + '' : 'null');
     const sm = await E.cloudStatsSummary();
@@ -538,12 +556,12 @@ function ok(name, cond, extra) {
 
   // ---- 离线收益 ----
   console.log('-- 离线收益 --');
+  // 累计经验（含已升入等级的部分），用于精确校验离线经验 gross
+  const cumExp = p => { let c = 0; for (let L = 1; L < p.level; L++) c += E.expToNext(L); return c + p.exp; };
   {
-    // 累计经验（含已升入等级的部分），用于精确校验离线经验 gross
-    const cumExp = p => { let c = 0; for (let L = 1; L < p.level; L++) c += E.expToNext(L); return c + p.exp; };
     E.newPlayer('离线', 'mage');
     const pl = E.state.player;
-    pl.level = 40; E.refreshStats(); pl.hp = pl._s.max_hp;
+    pl.level = 500; E.refreshStats(); pl.hp = pl._s.max_hp;
     const beforeExp = cumExp(pl), beforeGold = pl.gold;
     // 模拟离开 1 小时（3600s），给定挂机速率 经验 100/s、金币 50/s，效率 = OFFLINE_EFF（严格还原 0.0875）
     E.state._loadedTs = Date.now() - 3600 * 1000;
@@ -561,10 +579,38 @@ function ok(name, cond, extra) {
     E.newPlayer('瞬时', 'warrior');
     const pl = E.state.player;
     const before = pl.gold;
-    E.state._loadedTs = Date.now() - 5 * 1000;     // 仅离开 5 秒，不足 1 分钟
+    E.state._loadedTs = Date.now() - 5 * 1000;     // 仅离开 5 秒，不足 30 秒（原版 OFFLINE_EXP_MIN_GAP=30）
     E.state._loadedRate = { exp: 1000, gold: 1000 };
     E.applyOfflineEarnings();
-    ok('离开不足1分钟不补算', pl.gold === before && E.state._loadedTs === null);
+    ok('离开不足30秒不补算', pl.gold === before && E.state._loadedTs === null);
+  }
+  {
+    // 用户场景：离线挂机 10 小时应全额补算（< 24h 帽）
+    E.newPlayer('十小时', 'mage');
+    const pl2 = E.state.player;
+    pl2.level = 500; E.refreshStats(); pl2.hp = pl2._s.max_hp;
+    const bExp2 = cumExp(pl2), bGold2 = pl2.gold;
+    E.state._loadedTs = Date.now() - 10 * 3600 * 1000;
+    E.state._loadedRate = { exp: 100, gold: 50 };
+    E.applyOfflineEarnings();
+    const gExp2 = cumExp(pl2) - bExp2, gGold2 = pl2.gold - bGold2;
+    ok('离线10小时经验全额 = floor(100×36000×OFFLINE_EFF)', Math.abs(gExp2 - Math.floor(100*36000*E.OFFLINE_EFF)) < 1, gExp2 + ' vs ' + Math.floor(100*36000*E.OFFLINE_EFF));
+    ok('离线10小时金币全额 = floor(50×36000×OFFLINE_EFF)', Math.abs(gGold2 - Math.floor(50*36000*E.OFFLINE_EFF)) < 1, gGold2 + ' vs ' + Math.floor(50*36000*E.OFFLINE_EFF));
+  }
+  {
+    // 超过 24 小时按 24 小时帽结算（原版 min(int(dt//60),1440) 分钟）
+    E.newPlayer('超帽', 'mage');
+    const pl3 = E.state.player;
+    pl3.level = 500; E.refreshStats(); pl3.hp = pl3._s.max_hp;
+    const bExp3 = cumExp(pl3), bGold3 = pl3.gold;
+    E.state._loadedTs = Date.now() - 30 * 3600 * 1000;   // 离开 30 小时
+    E.state._loadedRate = { exp: 100, gold: 50 };
+    E.applyOfflineEarnings();
+    const capExp = Math.floor(100 * E.OFFLINE_MAX_SEC * E.OFFLINE_EFF);
+    const capGold = Math.floor(50 * E.OFFLINE_MAX_SEC * E.OFFLINE_EFF);
+    ok('OFFLINE_MAX_SEC=24小时（对齐原版1440分钟）', E.OFFLINE_MAX_SEC === 24*3600, E.OFFLINE_MAX_SEC + '');
+    ok('超24小时经验按帽结算', Math.abs((cumExp(pl3)-bExp3) - capExp) < 1 && capExp < Math.floor(100*30*3600*E.OFFLINE_EFF), (cumExp(pl3)-bExp3) + ' vs cap ' + capExp);
+    ok('超24小时金币按帽结算', Math.abs((pl3.gold-bGold3) - capGold) < 1, (pl3.gold-bGold3) + ' vs cap ' + capGold);
   }
 
   // ---- 大数字格式化 ----
@@ -2140,6 +2186,76 @@ function ok(name, cond, extra) {
     delete legacy.hand;
     E.equipItem(legacy);
     ok('旧存档装备（无 hand 字段）可正常使用', !!p2.equip.shield);
+  }
+
+  // ---------- 地图探索进度实时刷新（问题2：挂机推进时进度不刷新；loop 内节流重渲染） ----------
+  {
+    console.log('-- 地图进度实时刷新 --');
+    E.newPlayer('地图', 'warrior');
+    const pm = E.state.player;
+    pm.map = 'beijun';
+    const map0 = E.DATA.maps.maps.find(m => m.key === 'beijun');
+    const z0 = (map0.zones || [])[0];
+    E.state.zone = { mapKey: 'beijun', zoneKey: z0.key, isBoss: false };
+    // 观测桩：#map-pane 返回持久元素，记录 innerHTML 变化
+    const pane = el();
+    const origGet = global.document.getElementById;
+    global.document.getElementById = id => (id === 'map-pane' ? pane : origGet(id));
+    E.refreshMapProgress();
+    const h1 = pane.innerHTML;
+    pm.stats.zoneKills = pm.stats.zoneKills || {};
+    const _zk = pm.stats.zoneKills['beijun'] || (pm.stats.zoneKills['beijun'] = {});
+    _zk[z0.key] = (_zk[z0.key] || 0) + 1;   // 推进 1 次探索进度（结构：zoneKills[mapKey][zoneKey]）
+    E.refreshMapProgress();
+    const h2 = pane.innerHTML;
+    global.document.getElementById = origGet;
+    ok('refreshMapProgress 重渲染地图面板', h1.length > 0 && h1 !== h2, 'same=' + (h1 === h2));
+  }
+
+  // ---------- 中文属性名（问题3：清理残留英文名；原版 char.js 五围 + bag.js RANGE_LABELS 口径） ----------
+  {
+    console.log('-- 中文属性名 --');
+    const C = E.CN_STAT;
+    ok('五围中文名（原版 char.js 口径）',
+      C.strength === '力量' && C.constitution === '体质' && C.intelligence === '智力'
+      && C.spirit === '精神' && C.agility === '敏捷',
+      JSON.stringify({ s: C.strength, c: C.constitution, i: C.intelligence, sp: C.spirit, a: C.agility }));
+    ok('装备四维中文名（原版 bag.js RANGE_LABELS 口径）',
+      C.phys_atk === '物理攻击' && C.magic_atk === '法术攻击'
+      && C.phys_def === '物理防御' && C.magic_def === '法术防御');
+    ok('CN_STAT 表覆盖充分（>20 键）', Object.keys(C).length > 20, Object.keys(C).length + '');
+  }
+
+  // ---------- 装备门控：等级不足 / 职业不符（原版 character/equipment.py equip_item L195-202 反汇编） ----------
+  {
+    console.log('-- 装备门控（等级/职业）--');
+    E.newPlayer('门控', 'warrior');
+    const pg = E.state.player;
+    pg.level = 20; E.refreshStats();
+    // ① 等级不足：璞玉斧（req 25）在 20 级被拒，且无任何副作用（装备栏/背包都不动）
+    const b25 = E.DATA.bases_warrior.weapons.find(w => w.req_level === 25);
+    const it25 = E.buildEquip(b25, 'warrior', 3, 'weapon');
+    const rLv = E.equipItem(it25);
+    ok('等级不足被拒（需25级·角色20级）', rLv === false && !!pg.equip.weapon && pg.equip.weapon.uid !== it25.uid);
+    ok('被拒装备不落入背包', !pg.bag.some(b => b.uid === it25.uid));
+    // ② 达到需求等级后可穿
+    pg.level = 25; E.refreshStats();
+    ok('达到需求等级可装备', E.equipItem(it25) !== false && !!pg.equip.weapon && pg.equip.weapon.uid === it25.uid);
+    // ③ 职业不符：法师武器（角犀杖 req 24）给战士被拒
+    const bMage = E.DATA.bases_mage.weapons.find(w => w.req_level === 24);
+    const itMage = E.buildEquip(bMage, 'mage', 3, 'weapon');
+    ok('职业不符被拒（法师武器→战士）', E.equipItem(itMage) === false && pg.equip.weapon.uid !== itMage.uid);
+    // ④ 首饰豁免职业门控（原版 _JEWELRY_SLOT_NAMES={'戒指','项链'}）
+    // 项链基底需求等级均 >25，先抬到 100 级仅隔离等级门控，专测职业豁免
+    pg.level = 100; E.refreshStats();
+    const itNeck = E.buildEquip(E.DATA.bases_accessory.necklaces[0], 'mage', 2, 'necklace');
+    ok('法师项链战士可戴（首饰豁免）', E.equipItem(itNeck) !== false && !!pg.equip.necklace);
+    const itRing = E.buildEquip(E.DATA.bases_accessory.rings[0], 'mage', 2, 'ring');
+    ok('法师戒指战士可戴（首饰豁免）', E.equipItem(itRing) !== false && (!!pg.equip.ring1 || !!pg.equip.ring2));
+    // ⑤ 边界：需求等级恰等于角色等级可穿
+    const it10 = E.buildEquip(E.DATA.bases_warrior.weapons.find(w => w.req_level === 10), 'warrior', 3, 'weapon');
+    pg.level = 10; E.refreshStats();
+    ok('需求等级=角色等级可穿（边界）', E.equipItem(it10) !== false && pg.equip.weapon.uid === it10.uid);
   }
 
   // 恢复默认页签，避免影响后续/重复运行

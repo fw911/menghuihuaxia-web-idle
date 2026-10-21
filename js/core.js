@@ -93,6 +93,30 @@ export const SLOT_NAME = {
   necklace:'项链', ring1:'戒指', ring2:'戒指', soul1:'武魂', soul2:'武魂'
 };
 
+// 属性/战斗属性中文名（原版口径：char.js fiveRows 五围标签 + bag.js RANGE_LABELS 装备区间标签）。
+// 装备 statLine / 武魂 whStatLine / 角色面板共用；装备 stats 实测只出 phys/magic_atk/def 四键，
+// 其余键为防御性收录（五围/百分比/元素系），避免新增数据时再漏中文。
+export const CN_STAT = {
+  // 五围（原版 char.js: strength→力量 / constitution→体质 / intelligence→智力 / spirit→精神 / agility→敏捷）
+  strength:'力量', constitution:'体质', intelligence:'智力', spirit:'精神', agility:'敏捷',
+  // 装备白板四维（原版 bag.js RANGE_LABELS: phys_atk→物理攻击 / magic_atk→法术攻击 / phys_def→物理防御 / magic_def→法术防御）
+  phys_atk:'物理攻击', magic_atk:'法术攻击', phys_def:'物理防御', magic_def:'法术防御',
+  // 百分比派生
+  phys_atk_pct:'物攻%', magic_atk_pct:'法攻%', phys_def_pct:'物防%', magic_def_pct:'法防%',
+  max_hp_pct:'生命%', dmg_reduce_pct:'减伤%',
+  // 血蓝/暴击闪避
+  max_hp:'生命上限', max_mp:'法力上限', hp:'生命值', mp:'法力值',
+  phys_crit:'物暴', magic_crit:'法暴', crit:'暴击', dodge:'闪避', hit:'命中', crit_resist:'抗暴',
+  // 元素攻防
+  fire_atk:'火攻', ice_atk:'冰攻', elec_atk:'电攻', dark_atk:'暗攻',
+  fire_def:'火防', ice_def:'冰防', elec_def:'电防', dark_def:'暗防',
+  // 攻击区间（原版存档序列化 min/max_phys_atk 等）
+  min_phys_atk:'最小物理攻击', max_phys_atk:'最大物理攻击',
+  min_magic_atk:'最小法术攻击', max_magic_atk:'最大法术攻击',
+  min_phys_def:'最小物理防御', max_phys_def:'最大物理防御',
+  min_magic_def:'最小法术防御', max_magic_def:'最大法术防御'
+};
+
 // ---------- 数据加载 ----------
 // 并行加载全部配置：CDN 部署下 57 个文件串行 await 实测 13.3s，Promise.all 并行 0.96s（13.9 倍）。
 // 单文件失败自动重试一次；仍失败则抛出带文件名的错误由 boot() 展示重试入口——

@@ -144,6 +144,26 @@ export function weaponIsTwoHand(){
 }
 export function equipItem(item){
   const p = state.player;
+  // 等级门控（原版 character/equipment.py equip_item L195-196 反汇编：
+  //   character.level < getattr(equip,'level_required',0)
+  //     → {'success':False,'msg':f'等级不足，需要 {equip.level_required} 级才能穿戴'}
+  //   原版前端 char.js wearSlot 亦按 (!it.level_required || charData.level>=it.level_required) 过滤候选；
+  //   自动换装 tryAutoEquip 早有同口径判断，此处补上手动装备路径）
+  if((item.reqLevel||0) > p.level){
+    log('<span class="dmg">等级不足，需要 '+(item.reqLevel||0)+' 级才能穿戴</span>');
+    return false;
+  }
+  // 职业门控（原版 L200-202：job_key 不符且非首饰 → '职业不符，该装备需要 X'；
+  //   _JEWELRY_SLOT_NAMES={'戒指','项链'} 豁免；job_key 缺失默认 'warrior'）
+  const ejob = item.job || 'warrior';
+  // 首饰（项链 / 戒指任意槽）豁免职业门控：原版 _JEWELRY_SLOT_NAMES={'戒指','项链'}，
+  // 背包内戒指 slot 为 'ring'，装备后才落到 ring1/ring2，故两种 key 都豁免
+  const isJewelry = item.slot==='necklace' || item.slot==='ring' || item.slot==='ring1' || item.slot==='ring2';
+  if(ejob && ejob!==p.job && !isJewelry){
+    const jn=(DATA.jobs.jobs.find(j=>j.key===ejob)||{}).name||ejob;
+    log('<span class="dmg">职业不符，该装备需要 '+jn+'</span>');
+    return false;
+  }
   // 找空位（戒指有两个）
   let slot = item.slot;
   if(slot==='ring'){ slot = p.equip.ring1? (p.equip.ring2?'ring1':(p.equip.ring1?'ring2':'ring1')) : 'ring1'; }

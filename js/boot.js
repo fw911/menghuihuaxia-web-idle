@@ -88,7 +88,7 @@ export function renderCloudResume(){
     const slot=parseInt(b.getAttribute('data-resume'),10);
     const r=await cloudLoad(slot);
     if(r.ok){ state.cloud.slot=slot; persistCloud(); const ov=$('overlay'); if(ov) ov.style.display='none';
-      renderAll(); log('<span class="loot">'+r.msg+'</span>'); }
+      save(true); renderAll(); log('<span class="loot">'+r.msg+'</span>'); }
     else log('<span class="dmg">'+(r.msg||'读取失败')+'</span>');
   });
 }

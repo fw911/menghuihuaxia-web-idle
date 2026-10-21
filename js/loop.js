@@ -42,10 +42,20 @@ export function startZone(mapKey, zoneKey, isBoss, bossKey){
 // ---------- 主循环 ----------
 export let timer=null;
 export function setGameTimer(t){ timer = t; }   // 供 boot.js 跨模块设置主循环定时器（imported 绑定只读）
+let _lastMapTick = -999;   // 地图进度刷新节流（见 loop()）
 export function setIdle(on){
   state.idle=on;
   $('btn-toggle').textContent = on?'暂停挂机':'开始挂机';
   $('btn-toggle').classList.toggle('primary', !on);
+}
+// 地图探索进度实时刷新：原版 world.js renderProgress 每 tick 重渲染整块进度面板
+// （并保留 .zone-loot 滚动位置）。本 port 的 #map-pane 内容短、无内嵌滚动列表，
+// 全量重渲染 + 节流（每 3 轮 ≈2.1s）即可；pane 自身若溢出则保留 scrollTop。
+export function refreshMapProgress(){
+  const el=$('map-pane'); if(!el) return;
+  const sc = el.scrollTop;
+  renderMap();
+  if(sc>0) el.scrollTop = sc;
 }
 export function loop(){
   if(!state.idle) return;
@@ -56,6 +66,8 @@ export function loop(){
   maybeAutoSalvage();     // 包裹将满时自动分解白/绿装（回收矿石/宝石，避免被静默丢弃）
   // 头部与角色面板刷新（HP/MP/EXP）每轮
   renderHeader(); renderHero();
+  // 地图探索进度实时刷新（击杀数/探索度/完成态）——节流到每 3 轮，避免 700ms 全量重渲染抖动
+  if(state.ticks - _lastMapTick >= 3){ _lastMapTick = state.ticks; refreshMapProgress(); }
 }
 
 // ---------- 存档 ----------
@@ -85,6 +97,10 @@ export function applySavePayload(d){
   state._loadedRate = d.rate||null;   // 离线收益：读取上次挂机速率
   if(state.player.shenmo){ state.player.shenmo.nodes=state.player.shenmo.nodes||{}; state.player.shenmo.cd=state.player.shenmo.cd||{}; }
   backfillDurability(); // 兼容旧存档：装备补 durability 字段（精炼过的按 ×1.04/级 补回增益）
+  // 兼容旧存档：装备补 job 字段（本 port buildEquip 自初始版本即带 job，此处仅兜底；
+  // 缺省时按存档角色职业回填——能进该玩家背包的装备按例可穿，避免职业门控误伤）
+  for(const it of state.player.bag){ if(it&&it.type==='equip'&&it.job==null) it.job=d.job; }
+  for(const sl in state.player.equip){ const it=state.player.equip[sl]; if(it&&it.type==='equip'&&it.job==null) it.job=d.job; }
   consolidateBag(); // 兼容旧存档：合并同类可叠加物品（装备不合并）
   refreshStats();
   state.player.hp=Math.min(state.player.hp, state.player._s.max_hp);

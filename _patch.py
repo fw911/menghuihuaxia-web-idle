@@ -9,7 +9,7 @@ import io, os
 DST = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_test_entry.mjs')
 
 EXPORTS = [
-    'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LS',
+    'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LS','CN_STAT',
     'loadData','newPlayer','refreshStats','computeStats',
     'spawnMonster','tick','onMonsterDead','rollLoot','genEquip','buildEquip',
     'mineStart','mineTick','mineSettle','mineConf','compassDef','mineExpNeed','mineProgress',
@@ -40,6 +40,7 @@ EXPORTS = [
     'baseDurability','backfillDurability','slotHasDurability','statLine',
     'courierRoutes','courierTravel','travelTo','rollPerks','buildEquip','PERK_CAP',
     'setIdle','startZone','save','load','gainExp','expToNext','monsterExp','typeExpMul','loop','maybeAutoZone','syncSkills',
+    'refreshMapProgress',
     # 经验口径（按原版 battle/encounter.py:scale_monster_exp 还原）
     'expScale','zoneKeys','zoneYield',
     # 后端 / 云存档 / P0 自动挂机
@@ -50,7 +51,7 @@ EXPORTS = [
     'cloudRank','cloudRankList','cloudStatsSummary','apiProbe','apiCall','loadCloudUI','renderCloud',
     'HP_POTIONS','MP_POTIONS','playerDps',
     # 离线收益
-    'idleRate','applyOfflineEarnings','OFFLINE_MAX_SEC','OFFLINE_EFF',
+    'idleRate','applyOfflineEarnings','OFFLINE_MAX_SEC','OFFLINE_EFF','OFFLINE_MIN_GAP',
     # 大数字格式化
     'fmtNum',
     # 挂机自动分解白/绿装
