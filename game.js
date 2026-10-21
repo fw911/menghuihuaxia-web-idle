@@ -82,11 +82,12 @@ function apiCall(path, opts){
   return fetch(base+path, { method:opts.method||'GET', headers, body: opts.body? JSON.stringify(opts.body):undefined })
     .then(r=> r.json().catch(()=>({ok:false,msg:'bad json'})));
 }
-// 探测后端：优先同源 /api，其次 8014（旧静态服务端口）
+// 探测后端：优先同源 /api，其次云端 API（CloudBase 部署），最后本机 8014（旧静态服务端口）
 async function apiProbe(){
   if(state.cloud.checked) return state.cloud.ok;
-  // 候选为「源」而非路径：同源 ''（后端托管静态时），或独立端口 8014
-  const cands=['', 'http://localhost:8014'];
+  // 候选为「源」而非路径：同源 ''（后端托管静态时）、云端网关域、或独立端口 8014
+  const CLOUD_API='https://fw911-d0gy6gkq41d1f6d5a-1512169574.ap-shanghai.app.tcloudbase.com';
+  const cands=['', CLOUD_API, 'http://localhost:8014'];
   for(const b of cands){
     try{
       const r = await fetch(b+'/api/health');
@@ -264,13 +265,38 @@ const SLOT_NAME = {
 };
 
 // ---------- 数据加载 ----------
+// 并行加载全部配置：CDN 部署下 57 个文件串行 await 实测 13.3s，Promise.all 并行 0.96s（13.9 倍）。
+// 单文件失败自动重试一次；仍失败则抛出带文件名的错误由 boot() 展示重试入口——
+// 绝不静默缺数据启动（旧实现串行 + 静默 catch，缺文件会带着半份 DATA 进游戏）。
 async function loadData(){
-  for(const f of DATA_FILES){
-    try{
-      const r = await fetch('data/'+f+'.json');
-      DATA[f] = await r.json();
-    }catch(e){ /* 部分文件可能不存在，忽略 */ }
+  const bar = (typeof document!=='undefined') && document.getElementById('load-bar-fill');
+  const msg = (typeof document!=='undefined') && document.getElementById('load-msg');
+  let done = 0;
+  const bump = ()=>{
+    done++;
+    if(bar) bar.style.width = Math.round(done/DATA_FILES.length*100)+'%';
+    if(msg) msg.textContent = '正在加载游戏数据 '+done+'/'+DATA_FILES.length;
+  };
+  const one = async (f)=>{
+    let lastErr = null;
+    for(let attempt=0; attempt<2; attempt++){           // 失败重试一次（网络抖动/冷启动）
+      try{
+        const r = await fetch('data/'+f+'.json');
+        if(r.ok === false) throw new Error('HTTP '+(r.status || '?'));   // 显式 false 才判失败，兼容精简响应桩
+        DATA[f] = await r.json();                        // 404 页是 HTML，解析即抛，不会静默吞掉
+        return;
+      }catch(e){ lastErr = e; }
+    }
+    throw new Error(f+'.json（'+(lastErr && lastErr.message || lastErr)+'）');
+  };
+  const settled = await Promise.allSettled(DATA_FILES.map(f => one(f).then(bump)));
+  const failed = settled.filter(s => s.status==='rejected').map(s => s.reason.message);
+  if(failed.length){
+    throw new Error('数据加载失败 '+failed.length+'/'+DATA_FILES.length+' 个文件：'
+      + failed.slice(0,5).join('；') + (failed.length>5 ? ' 等' : ''));
   }
+  if(bar) bar.style.width = '100%';
+  if(msg) msg.textContent = '数据加载完成';
   MONSTERS = {};
   (DATA.monsters.monsters||[]).forEach(m=> MONSTERS[m.key]=m);
   // 职业基础装备：武器/防具按职业，戒指项链用 accessory（战士等无戒指基底时）
@@ -5074,7 +5100,20 @@ async function startAuthFlow(){
 }
 
 async function boot(){
-  await loadData();
+  try{
+    await loadData();
+  }catch(e){
+    // 数据没拉全：显示错误 + 重试按钮，绝不带着半份 DATA 启动
+    const lb=$('load-box'), ab=$('auth-box'), le=$('load-err'), lm=$('load-err-msg'), rl=$('btn-load-retry');
+    if(lb) lb.style.display='none';
+    if(ab) ab.style.display='none';
+    if(le) le.style.display='';
+    if(lm) lm.textContent='● '+(e && e.message || e)+' —— 请检查网络后重试（本地运行需先在项目目录起静态服务）';
+    if(rl) rl.onclick=()=>location.reload();
+    return;
+  }
+  { const lb=$('load-box'); if(lb) lb.style.display='none'; }
+  { const ab=$('auth-box'); if(ab) ab.style.display=''; }
   loadAuto(); restoreCloud();
   showJobPicker();
   wireAuthUI();

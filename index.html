@@ -145,6 +145,8 @@
   #overlay .box{background:var(--panel);border:1px solid var(--line2);border-radius:6px;padding:24px;width:560px;max-width:92vw;}
   #overlay h2{margin:0 0 4px;color:var(--gold);letter-spacing:2px;}
   #overlay p{color:var(--dim);font-size:13px;}
+  .load-track{height:6px;background:var(--line);border-radius:3px;margin-top:8px;overflow:hidden;}
+  .load-fill{height:100%;width:0;background:var(--gold);transition:width .12s ease-out;}
   .jobs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
   .job{border:1px solid var(--line);border-radius:4px;padding:10px;cursor:pointer;background:var(--panel2);}
   .job:hover{border-color:var(--gold);}
@@ -283,7 +285,15 @@
     <p>基于解密后的真实游戏数据（地图 / 怪物 / 装备 / 经验公式 / 掉落 / 精炼）复刻的纯文字挂机游戏。选择你的职业，开始挂机征战华夏。</p>
 
     <!-- ① 账号：启动先登录（存档存服务器，换设备可续） -->
-    <div id="auth-box">
+    <div id="load-box">
+      <div class="hint" id="load-msg">正在加载游戏数据…</div>
+      <div class="load-track"><div class="load-fill" id="load-bar-fill"></div></div>
+    </div>
+    <div id="load-err" style="display:none">
+      <div class="hint" id="load-err-msg" style="color:var(--red)"></div>
+      <div class="row"><button class="mini primary" id="btn-load-retry" style="margin-left:0">重新加载</button></div>
+    </div>
+    <div id="auth-box" style="display:none">
       <div class="hint" id="auth-msg">● 正在检测后端…</div>
       <div class="row">
         <input class="name" id="acc-user" placeholder="账号（2~16 位中英文/数字/下划线）" style="flex:1;min-width:160px"/>

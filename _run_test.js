@@ -11,7 +11,9 @@ global.fetch = async (u, opts) => {
     return realFetch(API_ORIGIN + url, opts);
   }
   const f = path.join(__dirname, url.replace(/^\//, ''));
-  return { json: async () => JSON.parse(fs.readFileSync(f, 'utf-8')) };
+  const txt = fs.readFileSync(f, 'utf-8');
+  // 符合规范的 Response 形态（ok/status/json），供 loadData 的并行加载与校验使用
+  return { ok: true, status: 200, json: async () => JSON.parse(txt) };
 };
 const store = {};
 global.localStorage = { getItem: k => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = v; }, removeItem: k => { delete store[k]; } };

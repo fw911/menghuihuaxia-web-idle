@@ -24,10 +24,36 @@ python -m http.server 8014
 | `game.js` | 全部游戏逻辑（战斗、掉落、打造、精炼、镶嵌、生活技能、神魔、武魂、副本、云存档） |
 | `data/` | 解密后的配置数据（怪物 / 地图 / 装备基底 / 掉落表 / 商店 / 配方 …） |
 | `server/server.js` | 零依赖静态服务 + 云存档后端（端口 8014） |
+| `cloudfunctions/api/` | 云端部署用 HTTP 云函数（由 server.js 移植，存储切换为 CloudBase NoSQL） |
 | `_patch.py` | 生成测试副本 `_test_game.js`（注入 `global.__exp` 导出钩子） |
 | `_run_test.js` | 全量回归测试（断言战斗模型、掉落、精炼、称号、物品名等） |
 | `_sim_progress.js` / `_sim_boss.js` / `_sim_zoneboss.js` | 数值模拟：推进曲线 / 副本首领 / 野外首领区 |
 | `_uicdp.js` | 无头 Chrome 截图 + 布局量化报告 |
+
+## 云端部署（腾讯云 CloudBase）
+
+线上版与本地版**同一套前端**，仅后端从 Node 文件存储换成云函数 + NoSQL 文档库：
+
+| 层 | 资源 | 地址 |
+| --- | --- | --- |
+| 静态站点 | CloudBase 静态托管（`index.html` + `game.js` + `data/`） | `https://fw911-d0gy6gkq41d1f6d5a-1512169574.tcloudbaseapp.com/` |
+| API | HTTP 云函数 `api`（Nodejs18.15，网关路由 `/api`） | `https://fw911-d0gy6gkq41d1f6d5a-1512169574.ap-shanghai.app.tcloudbase.com/api` |
+| 数据 | NoSQL 集合：`users` / `tokens` / `saves` / `leaderboard` / `stats` / `stats_byJob` / `stats_byBand` / `stats_drops` | 环境 `fw911-d0gy6gkq41d1f6d5a` |
+
+- **前端如何找到后端**：`game.js` 的 `apiProbe()` 按顺序探测 同源 `''` → 云端 API 域 → `localhost:8014`，
+  任一候选返回 `{"ok":true}` 即采用，因此本地与线上共用同一份 `game.js`。
+- **重新部署前端**：把 `index.html` / `game.js` / `data/` 上传到静态托管（MCP `manageHosting action=upload`）。
+- **重新部署后端**：改 `cloudfunctions/api/index.js` 后 `node --check`，再部署函数代码
+  （MCP `manageFunctions action=updateFunctionCode`，`functionRootPath=cloudfunctions`）。
+  注意：`scf_bootstrap` 必须存在且 LF 行尾；凭证走函数环境变量 `CLOUDBASE_APIKEY` + `TCB_ENV`，不进代码。
+- **已知平台行为（踩坑记录）**：
+  - 静态托管默认域（`*.tcloudbaseapp.com`）是系统保留域，不能挂 `/api` 函数路由，故 API 与静态站不同源；
+  - 网关会把请求 Origin 追加到上游 `Access-Control-Allow-Origin` 之后，函数设任何值都会翻倍成非法值，
+    因此函数**不设** ACAO，只保留网关的单值回显（CORS 合法）；
+  - 该版本 SDK：`doc(id).get()` 对不存在文档返回 `{data: []}`（须归一化为 null）；
+    `update()` 对不存在文档是静默无操作；`set()` 不允许带 `_id`——存储层已按这三点处理。
+- **本地自测函数**：不设 `CLOUDBASE_APIKEY` 启动会自动切内存存储（DEV_MEMORY），
+  `node cloudfunctions/api/index.js` 后访问 `http://127.0.0.1:9000/api/health`。
 
 ## 数据与备份
 

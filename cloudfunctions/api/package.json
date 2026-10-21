@@ -1,0 +1,10 @@
+{
+  "name": "menghuihuaxia-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "梦回华夏网页挂机版 · CloudBase 云函数 API（由 server/server.js 移植，存储切换为 NoSQL）",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^3.0.0"
+  }
+}
