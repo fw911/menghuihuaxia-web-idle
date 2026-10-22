@@ -3,7 +3,7 @@
  * 导出 13 个顶层名；import 由 AST 跨模块引用自动计算。
  */
 import { state } from './state.js';
-import { cloudRankList, cloudStatsSummary, powerScore } from './api.js';
+import { backendHint, cloudRankList, cloudStatsSummary, powerScore } from './api.js';
 import { DATA, SLOT_NAME, TITLES } from './core.js';
 import { sm } from './player.js';
 import { QNAME } from './equip.js';
@@ -233,13 +233,13 @@ export function renderCloud(sub){
   let html='';
   if(on('save')) html+='<h3>后端服务</h3>';
   html+='<div class="muted">状态：'+(C.ok? '<span style="color:var(--green)">已连接 '+C.base+'</span>'
-    : '<span style="color:var(--red)">未连接</span>（本地仍可存档；启动后端：node server/server.js，端口 8014）')+'</div>';
+    : '<span style="color:var(--red)">未连接</span>（本地仍可存档；'+backendHint()+'）')+'</div>';
 
   // 账号
   if(on('save')) html+='<hr><h3>账号'+(C.user? '（已登录）':'')+'</h3>';
   if(on('save')){
   if(!C.ok){
-    html+='<div class="muted">后端未启动，云存档不可用。启动后端（node server/server.js）后<b style="color:var(--gold)">刷新页面重新登录</b>。</div>';
+    html+='<div class="muted">'+backendHint()+'。云存档暂不可用，恢复后请<b style="color:var(--gold)">刷新页面重新登录</b>。</div>';
   }else if(C.user){
     html+='<div class="muted">账号 <b style="color:var(--gold)">'+C.user+'</b>　当前槽位：'+C.slot+'</div>';
     html+='<div class="bag-tools"><button class="mini" data-cloudact="logout">退出登录</button>'

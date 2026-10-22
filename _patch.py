@@ -24,6 +24,8 @@ EXPORTS = [
     'doInlay','gemSeriesDef','gemSeriesName','gemSeriesLabel','gemCanInlay','inlayGemList',
     'inlayEquipList','inlayGemOpts','inlayEquipOpts','doInlaySelected','selGemForInlay',
     'renderTab','renderLife','renderInstance','renderAch','renderSkill','renderShenmo','renderMap',
+    # 地图进度：快照（单一数据源）+ 增量刷新（不重建 DOM，保住点击/hover）
+    'mapProgressSnapshot','updateMapProgress',
     # 右列二级菜单（子菜单）
     'renderBag','renderShop','renderWuhun','renderQuest',
     # 启动登录（强制登录流程）
@@ -49,9 +51,13 @@ EXPORTS = [
     'findPotion','buyPotion','loadAuto','saveAuto','persistCloud','restoreCloud','refreshSlots',
     'cloudRegister','cloudLogin','cloudLogout','cloudSave','cloudLoad','cloudDelete',
     'cloudRank','cloudRankList','cloudStatsSummary','apiProbe','apiCall','loadCloudUI','renderCloud',
+    # 后端不可用时的统一排障提示（本地 vs 线上分流）+ 本地存档模式偏好持久化
+    'backendHint','isLocalHost','probeSummary','persistLocalMode','restoreLocalMode',
+    'startLocalPlay',
     'HP_POTIONS','MP_POTIONS','playerDps',
     # 离线收益
     'idleRate','applyOfflineEarnings','OFFLINE_MAX_SEC','OFFLINE_EFF','OFFLINE_MIN_GAP',
+    'showOfflineModal',
     # 大数字格式化
     'fmtNum',
     # 挂机自动分解白/绿装

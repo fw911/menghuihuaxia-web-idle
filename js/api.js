@@ -52,6 +52,18 @@ export function probeSummary(){
   if(cloud && cloud.err) return '云端 API 无法访问';
   return '服务端未就绪';
 }
+// 当前是否跑在本机（本机才有「启动本地后端」这条排障路径）
+export function isLocalHost(){
+  const host=(typeof location!=='undefined' && location.hostname)||'';
+  return host==='localhost' || host==='127.0.0.1' || host==='' || host==='::1';
+}
+// 后端不可用时的正确指引（单一出处）
+// 线上（静态托管域名）= 云端服务故障，绝不能提示「运行 node server/server.js」——那对线上用户毫无意义；
+// 本机 = 才是「去项目目录起后端」。
+export function backendHint(){
+  if(isLocalHost()) return '后端未启动：请在项目目录执行 <b>node server/server.js</b>（端口 8014）后刷新本页面';
+  return '云端服务暂不可用（'+probeSummary()+'）：账号 / 云存档 / 排行榜暂时无法使用';
+}
 export function cloudUser(){ return state.cloud.user; }
 export async function cloudRegister(u, pw){
   if(!await apiProbe()) return {ok:false,msg:'后端未启动（运行 node server/server.js）'};
@@ -76,6 +88,15 @@ export function restoreCloud(){
   try{ const c=JSON.parse(localStorage.getItem('menghuihuaxia_cloud_v1')||'null');
     if(c){ state.cloud.user=c.user||null; state.cloud.token=c.token||null; state.cloud.slot=c.slot||1; if(c.base) state.cloud.base=c.base; }
   }catch(e){}
+}
+// 本地存档模式偏好（独立于云端令牌）：记住玩家选择过「本地存档开始」，
+// 刷新页面后自动沿用，不必每次重新点按钮（云端恢复并登录后会自动清除）。
+const LOCAL_MODE_KEY='menghuihuaxia_local_mode_v1';
+export function persistLocalMode(on){
+  try{ if(on) localStorage.setItem(LOCAL_MODE_KEY,'1'); else localStorage.removeItem(LOCAL_MODE_KEY); }catch(e){}
+}
+export function restoreLocalMode(){
+  try{ return localStorage.getItem(LOCAL_MODE_KEY)==='1'; }catch(e){ return false; }
 }
 export async function refreshSlots(){
   if(!state.cloud.ok || !state.cloud.token) return [];

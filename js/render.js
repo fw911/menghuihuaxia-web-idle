@@ -68,21 +68,99 @@ export function zoneName(z){
   const zone = map.zones.find(zz=>zz.key===z.zoneKey);
   return map.name+'·'+(zone?zone.name:'');
 }
+// ---------- 地图进度快照（renderMap 全量渲染与增量刷新共用同一口径） ----------
+// 为什么要快照：挂机时探索进度要「实时显示」，但原实现每 2 秒整体重建 #map-pane 的
+// innerHTML —— 重建会替换掉用户正要点击的节点（点击落空）、清掉 hover 态。
+// 改为：全量渲染与增量刷新都读同一份快照，增量刷新只改文本节点，不动 DOM 结构。
+export function mapProgressSnapshot(){
+  const p=state.player; if(!p) return null;
+  const map=DATA.maps.maps.find(m=>m.key===p.map); if(!map) return null;
+  const zones={};
+  for(const z of (map.zones||[])){
+    const t=zoneTarget(map,z), n=zoneKillCount(map.key,z.key), done=t>0 && n>=t;
+    zones[z.key]={ target:t, count:n, done,
+      text: t>0 ? (done?'✔':(Math.min(n,t)+'/'+t)) : '' };
+  }
+  let boss=null;
+  const mt=bossMinionTarget(map);
+  if(mt){
+    const normal=Math.min(minionKillCount(map.key,'normal'),mt.normal);
+    const elite=Math.min(minionKillCount(map.key,'elite'),mt.elite);
+    boss={ normal, elite, nt:mt.normal, et:mt.elite, cleared:bossZoneCleared(map),
+           text: normal+'/'+mt.normal+' · '+elite+'/'+mt.elite };
+  }
+  const db=dungeonBosses(map);
+  return {
+    explore: mapExplorePct(map), explored: zoneExploredCount(map), totalZones:(map.zones||[]).length,
+    zoneCount:(map.zones||[]).length, zones, boss,
+    dbossKilled: dungeonKilledCount(map), dbossTotal: db.length
+  };
+}
+// 增量刷新地图进度：只更新文本节点，不重建 DOM（保住点击与 hover）。
+// 返回 false 表示「结构发生变化」（如首领现身/清剿完成、通关态翻转），需调用方全量重渲染。
+export function updateMapProgress(){
+  const snap=mapProgressSnapshot(); if(!snap) return false;
+  const el=$('map-pane'); if(!el) return false;
+  if(typeof el.querySelector!=='function') return false;
+  let changed=false;
+  // 地图探索度
+  const ex=el.querySelector('[data-mapexp]');
+  if(ex){
+    const txt=' · 探索度 '+snap.explore+'%（'+snap.explored+'/'+snap.totalZones+'）';
+    if(ex.textContent!==txt){ ex.textContent=txt; changed=true; }
+  }
+  // 各区域探索进度
+  for(const key in snap.zones){
+    const sp=el.querySelector('[data-zp="'+key+'"]'); if(!sp) continue;
+    const z=snap.zones[key];
+    if(sp.textContent!==z.text){ sp.textContent=z.text; changed=true; }
+    const row=sp.parentElement;
+    if(!row || !row.classList || typeof row.classList.toggle!=='function') continue;
+    // 完成态（class done）
+    if(row.classList.contains('done')!==z.done){ row.classList.toggle('done', z.done); changed=true; }
+    // title 里的探索进度文本（悬停提示）
+    if(z.target>0 && typeof row.getAttribute==='function'){
+      const base=(row.getAttribute('data-ztitle')||'');
+      if(base){
+        const tip=base+' · 探索进度 '+Math.min(z.count,z.target)+'/'+z.target+(z.done?'（已完成）':'');
+        if(row.getAttribute('title')!==tip){ row.setAttribute('title', tip); changed=true; }
+      }
+    }
+  }
+  // 首领区清剿进度：清剿完成 → 按钮形态要变（清剿计数 → 首通奖励），结构变化 → 交回全量重渲染
+  const bm=el.querySelector('[data-bmp]');
+  if(bm){
+    if(snap.boss && !snap.boss.cleared){
+      if(bm.textContent!==snap.boss.text){ bm.textContent=snap.boss.text; changed=true; }
+    } else return false;                       // 已清剿 → 形态变了，需全量重渲染
+  } else if(snap.boss && !snap.boss.cleared) return false;   // 首领刚现身 → 需全量重渲染
+  // 副本首领击败计数
+  const dc=el.querySelector('[data-dbtot]');
+  if(dc){
+    const txt=snap.dbossKilled+'/'+snap.dbossTotal;
+    if(dc.textContent!==txt){ dc.textContent=txt; changed=true; }
+  }
+  return true;
+}
 export function renderMap(){
   const p=state.player; if(!p) return;
   const el=$('map-pane'); if(!el) return;
   const map = DATA.maps.maps.find(m=>m.key===p.map);
+  const snap = mapProgressSnapshot();
   let html = '<div class="map-name">'+map.name+'</div>';
-  html += '<div class="muted" style="margin-bottom:6px">'+(map.safe_zone?('安全区：'+map.safe_zone.name):'危险区域')+((map.zones||[]).length? ' · 探索度 '+mapExplorePct(map)+'%（'+zoneExploredCount(map)+'/'+map.zones.length+'）':'')+'</div>';
+  html += '<div class="muted" style="margin-bottom:6px">'+(map.safe_zone?('安全区：'+map.safe_zone.name):'危险区域')
+    + (snap && snap.totalZones? '<span data-mapexp> · 探索度 '+snap.explore+'%（'+snap.explored+'/'+snap.totalZones+'）</span>' : '')+'</div>';
   html += '<h3>练级区域（点击挂机）</h3><div class="zone-wrap">';
   for(const z of map.zones){
     const isCur = state.zone && !state.zone.isBoss && state.zone.zoneKey===z.key;
     const _t=zoneTarget(map,z), _n=zoneKillCount(map.key,z.key), _done=_t>0 && _n>=_t;
+    const _zp = snap ? snap.zones[z.key] : null;
+    const _titleBase='怪物等级 '+z.monster_level+(z.elite_monsters&&z.elite_monsters.length?' · 含精英':'');
     html += '<div class="zone'+(isCur?' active':'')+(_done?' done':'')+'" data-zone="'+z.key+'" '
-            +'title="怪物等级 '+z.monster_level+(z.elite_monsters&&z.elite_monsters.length?' · 含精英':'')
-            +(_t? ' · 探索进度 '+Math.min(_n,_t)+'/'+_t+(_done?'（已完成）':''):'')+'">'+
+            +'data-ztitle="'+_titleBase+'" '
+            +'title="'+_titleBase+(_t? ' · 探索进度 '+Math.min(_n,_t)+'/'+_t+(_done?'（已完成）':''):'')+'">'+
             z.name+'<span class="zlv">Lv.'+z.monster_level+'</span>'
-            +(_t? '<span class="zex">'+(_done?'✔':(Math.min(_n,_t)+'/'+_t))+'</span>':'')+'</div>';
+            +(_t? '<span class="zex" data-zp="'+z.key+'">'+(_zp? _zp.text : (_done?'✔':(Math.min(_n,_t)+'/'+_t)))+'</span>':'')+'</div>';
   }
   html += '</div>';
   if(map.boss_zone){
@@ -102,15 +180,15 @@ export function renderMap(){
     const _showRw = (!_done && _cleared && _rwTxt);
     html += '<h3>首领区'+(_done?' · 已通关':(_cleared?'':' · 清剿中'))+'</h3><div class="zone-wrap"><div class="zone boss'+(isCur?' active':'')+(_cleared && !_done?' ready':'')+(_done?' done':'')+'" data-boss="1" '+
             'title="'+_tip+'">'+(_done?'✔ ':(_cleared?'☠ ':'⚔ '))+bz.name+'<span class="zlv">Lv.'+bz.unlock_level+'</span>'+
-            ((!_cleared && _mt)? '<span class="zex">'+Math.min(minionKillCount(map.key,'normal'),_mt.normal)+'/'+_mt.normal
-              +' · '+Math.min(minionKillCount(map.key,'elite'),_mt.elite)+'/'+_mt.elite+'</span>'
+            ((!_cleared && _mt)? '<span class="zex" data-bmp>'+(snap&&snap.boss? snap.boss.text : (Math.min(minionKillCount(map.key,'normal'),_mt.normal)+'/'+_mt.normal
+              +' · '+Math.min(minionKillCount(map.key,'elite'),_mt.elite)+'/'+_mt.elite))+'</span>'
               : (_showRw? '<span class="zex rw">首通 '+fmtNum(_rw.coins)+'金</span>':''))+'</div></div>';
   }
   const _dboss=dungeonBosses(map);
   if(_dboss.length){
     const lim=map.daily_enter_limit||0, left=dungeonEntryLeft(map), lvOk=p.level>=(map.enter_level_min||0);
     const _ddone=mapCleared(map.key), _drw=mapClearReward(map.key), _drwTxt=rewardText(_drw);
-    html += '<h3>副本首领（'+dungeonKilledCount(map)+'/'+_dboss.length+
+    html += '<h3>副本首领（<span data-dbtot>'+dungeonKilledCount(map)+'/'+_dboss.length+'</span>'+
             (lim? ' · 今日剩 '+left+'/'+lim+' 次':'')+(_ddone?' · 已通关':'')+'）</h3>';
     if(_drwTxt) html += '<div class="rwline">首次通关奖励：'+_drwTxt+(_ddone?'（已领取）':'')+'</div>';
     html += '<div class="zone-wrap">';

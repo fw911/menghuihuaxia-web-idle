@@ -22,10 +22,16 @@ function el() {
     innerHTML: '', textContent: '', value: '', style: {}, onclick: null, onchange: null,
     classList: { add() {}, remove() {}, toggle() {}, contains() { return false; } },
     querySelectorAll: () => [], appendChild() {}, getAttribute: () => null, setAttribute() {}, children: [],
+    querySelector: () => null, parentElement: null,
   };
   return o;
 }
-global.document = { getElementById: () => el(), querySelectorAll: () => [], createElement: () => el(), body: el() };
+// 按 id 缓存元素：同一 id 返回同一对象，才能读到「渲染进 innerHTML 的内容」这类断言
+const _els = new Map();
+global.document = {
+  getElementById: (id) => { if (!_els.has(id)) _els.set(id, el()); return _els.get(id); },
+  querySelectorAll: () => [], createElement: () => el(), body: el(),
+};
 global.setInterval = () => 0; global.clearInterval = () => {};
 global.confirm = () => true;
 
@@ -2238,6 +2244,68 @@ function ok(name, cond, extra) {
     d.hidden = false; d.visibilityState = 'visible';
     ok('恢复可见后 pageVisible()=true', E.pageVisible() === true);
     d.hidden = bakH; d.visibilityState = bakV;   // 还原，避免影响后续/重复运行
+  }
+
+  // ---------- 地图进度：快照单一数据源 + 增量刷新（不重建 DOM） ----------
+  {
+    console.log('-- 地图进度快照 / 增量刷新 --');
+    E.newPlayer('地图', 'warrior');
+    const pm = E.state.player;
+    const bj = E.DATA.maps.maps.find(m => m.key === 'beijun');
+    const z0 = bj.zones.find(z => z.explore_target > 0);
+    ok('存在带探索目标的区域', !!z0, z0 && z0.key);
+    pm.stats.zoneKills = pm.stats.zoneKills || {};
+    pm.stats.zoneKills[bj.key] = pm.stats.zoneKills[bj.key] || {};
+    pm.stats.zoneKills[bj.key][z0.key] = 0;
+    const s0 = E.mapProgressSnapshot();
+    ok('快照含探索度/区域进度', !!s0 && typeof s0.explore === 'number' && !!s0.zones[z0.key],
+      JSON.stringify(s0 && { e: s0.explore, z: s0.zones[z0.key] }));
+    ok('区域进度文本为 0/目标', s0.zones[z0.key].text === '0/' + s0.zones[z0.key].target,
+      s0.zones[z0.key].text);
+    pm.stats.zoneKills[bj.key][z0.key] = 5;
+    const s1 = E.mapProgressSnapshot();
+    ok('击杀后快照进度实时变化', s1.zones[z0.key].text === '5/' + s1.zones[z0.key].target,
+      s1.zones[z0.key].text);
+    ok('未完成时 done=false', s1.zones[z0.key].done === false);
+    pm.stats.zoneKills[bj.key][z0.key] = s1.zones[z0.key].target;
+    const s2 = E.mapProgressSnapshot();
+    ok('达成目标后 done=true 且文本为 ✔', s2.zones[z0.key].done === true && s2.zones[z0.key].text === '✔',
+      s2.zones[z0.key].text);
+    ok('快照与 renderMap 口径一致（探索度数值相同）',
+      E.renderMap().indexOf('探索度 ' + s2.explore + '%') >= 0, s2.explore + '%');
+  }
+
+  // ---------- 离线收益弹窗文案（效率精度 / 24h 封顶 / 升级提示） ----------
+  {
+    console.log('-- 离线收益弹窗文案 --');
+    const sum = global.document.getElementById('offline-summary');
+    E.showOfflineModal(3600, 3600, 12345, 678, 30, 30);
+    ok('效率显示精确值 8.75%（不四舍五入成 9%）',
+      sum.innerHTML.indexOf('8.75%') >= 0 && sum.innerHTML.indexOf('>9%') < 0,
+      sum.innerHTML.slice(0, 120));
+    ok('未封顶时不显示上限提示', sum.innerHTML.indexOf('离线收益最多结算') < 0);
+    E.showOfflineModal(3600*30, 3600*24, 999, 111, 30, 33);
+    ok('超 24 小时明说上限', sum.innerHTML.indexOf('离线收益最多结算') >= 0
+      && sum.innerHTML.indexOf('24 小时') >= 0, sum.innerHTML.slice(0, 160));
+    ok('离线期间升级提示（Lv.30 → Lv.33）',
+      sum.innerHTML.indexOf('Lv.30') >= 0 && sum.innerHTML.indexOf('Lv.33') >= 0
+      && sum.innerHTML.indexOf('提升') >= 0, sum.innerHTML.slice(0, 200));
+    ok('OFFLINE_MAX_SEC = 24 小时（对齐原版 1440 分钟）', E.OFFLINE_MAX_SEC === 24*3600, '' + E.OFFLINE_MAX_SEC);
+  }
+
+  // ---------- 本地存档模式边界（不隐藏遮罩 / 偏好持久化 / 提示分流） ----------
+  {
+    console.log('-- 本地存档模式边界 --');
+    ok('本地模式偏好可持久化', typeof E.persistLocalMode === 'function' && typeof E.restoreLocalMode === 'function');
+    E.persistLocalMode(true);
+    ok('偏好写入后可读回', E.restoreLocalMode() === true);
+    E.persistLocalMode(false);
+    ok('偏好清除后为 false', E.restoreLocalMode() === false);
+    ok('backendHint 按环境分流（线上不提 node server）',
+      typeof E.backendHint === 'function' && typeof E.backendHint() === 'string'
+      && E.backendHint().length > 0, E.backendHint());
+    ok('云端页签不再硬写「启动后端：node server/server.js」',
+      E.renderCloud('').indexOf('启动后端：node server/server.js') < 0);
   }
 
   // ---------- 装备门控：等级不足 / 职业不符（原版 character/equipment.py equip_item L195-202 反汇编） ----------

@@ -10,7 +10,7 @@ import { backfillDurability } from './equip.js';
 import { tick } from './battle.js';
 import { consolidateBag, maybeAutoSalvage } from './bag.js';
 import { consumeDungeonEntry, dungeonBosses } from './world.js';
-import { $, log, renderHeader, renderHero, renderMap, zoneName } from './render.js';
+import { $, log, renderHeader, renderHero, renderMap, updateMapProgress, zoneName } from './render.js';
 import { jobCn } from './panels.js';
 import { fmtNum } from './life.js';
 import { idleRate, maybeAutoZone } from './idle.js';
@@ -49,10 +49,14 @@ export function setIdle(on){
   $('btn-toggle').classList.toggle('primary', !on);
 }
 // 地图探索进度实时刷新：原版 world.js renderProgress 每 tick 重渲染整块进度面板
-// （并保留 .zone-loot 滚动位置）。本 port 的 #map-pane 内容短、无内嵌滚动列表，
-// 全量重渲染 + 节流（每 3 轮 ≈2.1s）即可；pane 自身若溢出则保留 scrollTop。
+// （并保留 .zone-loot 滚动位置）。本 port 的 #map-pane 内容短、无内嵌滚动列表。
+// 2026-10-22 优化：原实现每 2 秒整体重建 #map-pane 的 innerHTML —— 重建会替换掉
+// 用户正要点击的节点（点击落空）、清掉 hover 态，看起来像「点了没反应」。
+// 改为：优先增量更新进度文本（不动 DOM 结构）；仅当结构变化（首领现身/清剿完成/
+// 通关态翻转）才回退全量重渲染。
 export function refreshMapProgress(){
   const el=$('map-pane'); if(!el) return;
+  if(updateMapProgress()) return;          // 增量成功 → 完事
   const sc = el.scrollTop;
   renderMap();
   if(sc>0) el.scrollTop = sc;

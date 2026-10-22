@@ -47,17 +47,27 @@ export function applyOfflineEarnings(){
   const rate = state._loadedRate || idleRate();
   const expGain = Math.floor((rate.exp||0) * earnSec * OFFLINE_EFF);
   const goldGain = Math.floor((rate.gold||0) * earnSec * OFFLINE_EFF);
+  const lvBefore = p.level;
   if(expGain>0) gainExp(expGain);
   if(goldGain>0) p.gold += goldGain;
+  const lvAfter = state.player ? state.player.level : lvBefore;   // 离线收益可能连升多级
   renderHeader(); renderHero(); renderTab();
-  if(expGain>0 || goldGain>0) showOfflineModal(away, earnSec, expGain, goldGain);
+  if(expGain>0 || goldGain>0) showOfflineModal(away, earnSec, expGain, goldGain, lvBefore, lvAfter);
 }
-export function showOfflineModal(awaySec, earnSec, exp, gold){
+export function showOfflineModal(awaySec, earnSec, exp, gold, lvBefore, lvAfter){
   const el=$('offline-modal'); if(!el) return;
   const fmtTime = s=>{ const h=Math.floor(s/3600), m=Math.floor((s%3600)/60), ss=Math.floor(s%60);
     if(h>0) return h+' 小时 '+m+' 分'; if(m>0) return m+' 分 '+ss+' 秒'; return ss+' 秒'; };
-  $('offline-summary').innerHTML = '你离开了 <b>'+fmtTime(awaySec)+'</b>（按 '+Math.round(OFFLINE_EFF*100)+'% 效率结算 '+fmtTime(earnSec)+'）<br>'+
-    '离线挂机收益：经验 <b style="color:var(--gold)">'+fmtNum(exp)+'</b> · 金币 <b style="color:var(--gold)">'+fmtNum(gold)+'</b>';
+  // 效率精确到 0.01%（原版净倍率 0.0875 = 8.75%，取整成 9% 会夸大收益）
+  const effTxt = (OFFLINE_EFF*100).toFixed(2).replace(/\.?0+$/,'')+'%';
+  const capped = earnSec < awaySec - 1;      // 实际结算时长 < 离开时长 → 撞到 24h 上限
+  let html = '你离开了 <b>'+fmtTime(awaySec)+'</b>';
+  html += capped
+    ? '，离线收益最多结算 <b>'+fmtTime(OFFLINE_MAX_SEC)+'</b>（按 '+effTxt+' 效率结算 '+fmtTime(earnSec)+'）'
+    : '（按 '+effTxt+' 效率结算 '+fmtTime(earnSec)+'）';
+  html += '<br>离线挂机收益：经验 <b style="color:var(--gold)">'+fmtNum(exp)+'</b> · 金币 <b style="color:var(--gold)">'+fmtNum(gold)+'</b>';
+  if(lvAfter>lvBefore) html += '<br>离线期间提升 <b style="color:var(--gold)">'+(lvAfter-lvBefore)+'</b> 级（Lv.'+lvBefore+' → <b style="color:var(--gold)">Lv.'+lvAfter+'</b>）';
+  $('offline-summary').innerHTML = html;
   el.style.display='flex';
   const btn=$('offline-close'); if(btn) btn.onclick=()=>{ el.style.display='none'; renderHeader(); renderHero(); renderTab(); };
 }

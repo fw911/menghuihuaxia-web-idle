@@ -3,7 +3,7 @@
  * 导出 11 个顶层名；import 由 AST 跨模块引用自动计算。
  */
 import { loadAuto, state } from './state.js';
-import { apiCall, apiProbe, cloudLoad, cloudLogin, cloudLogout, cloudRank, cloudRegister, cloudSave, persistCloud, probeSummary, refreshSlots, restoreCloud } from './api.js';
+import { apiCall, apiProbe, backendHint, cloudLoad, cloudLogin, cloudLogout, cloudRank, cloudRegister, cloudSave, persistCloud, persistLocalMode, refreshSlots, restoreCloud, restoreLocalMode } from './api.js';
 import { DATA, loadData, pageVisible } from './core.js';
 import { syncSkills } from './player.js';
 import { refreshStats } from './smtree.js';
@@ -82,11 +82,22 @@ export function wireAuthUI(){
   }
 }
 // 本地存档模式：服务端不可用（云函数停服 / 本地未起后端）时的兜底，进度只存本浏览器
+// 注意：不能直接隐藏 #overlay —— 职业选择器（#char-box）也在 overlay 里，
+// 隐藏后新用户将永远无法创建角色（2026-10-22 修复的卡死 bug）。
 export function startLocalPlay(){
   state.cloud.local=true;
-  const ov=$('overlay'); if(ov) ov.style.display='none';
-  renderAll();
-  log('<span class="sys">已进入本地存档模式：进度保存在本浏览器，云存档 / 排行榜暂不可用。</span>');
+  persistLocalMode(true);                          // 记住偏好：刷新后自动沿用本地存档模式
+  const authBox=$('auth-box'), charBox=$('char-box');
+  if(authBox) authBox.style.display='none';
+  if(charBox) charBox.style.display='';         // 展示职业选择（遮罩保留）
+  const ov=$('overlay');
+  if(state.player){                              // 已有本地存档 → 直接进游戏
+    if(ov) ov.style.display='none';
+    renderAll();
+    log('<span class="sys">已进入本地存档模式：进度保存在本浏览器，云存档 / 排行榜暂不可用。</span>');
+  } else {
+    log('<span class="sys">已进入本地存档模式：请选择职业创建角色，进度保存在本浏览器（云存档 / 排行榜暂不可用）。</span>');
+  }
   setAuthMsg('● 本地存档模式');
 }
 export function renderCloudResume(){
@@ -127,16 +138,13 @@ export async function startAuthFlow(){
   if(!ok){
     if(localBtn) localBtn.style.display='';
     // 本机跑静态服务：提示起后端；线上站点：只能说云端不可用（曾误报「运行 node server/server.js」）
-    const host=(typeof location!=='undefined' && location.hostname)||'';
-    const isLocal = host==='localhost' || host==='127.0.0.1' || host==='' || host==='::1';
-    if(isLocal){
-      setAuthMsg('后端未启动：请在项目目录执行 <b>node server/server.js</b>（端口 8014）后刷新本页；也可点下方「本地存档开始」游玩。', true);
-    }else{
-      setAuthMsg('云端服务暂不可用（'+probeSummary()+'）：账号 / 云存档 / 排行榜暂时无法使用。<br>可直接点下方「<b>本地存档开始</b>」游玩，进度保存在本浏览器；服务恢复后再登录即可同步云端。', true);
-    }
+    setAuthMsg(backendHint()+'；也可点下方「<b>本地存档开始</b>」游玩，进度保存在本浏览器。', true);
+    // 上次选过本地存档模式 → 自动沿用，不必每次刷新都重新点按钮
+    if(restoreLocalMode()) startLocalPlay();
     return;
   }
   if(localBtn) localBtn.style.display='none';
+  persistLocalMode(false);                        // 云端可用 → 清除本地模式偏好
   if(state.cloud.token){                              // 有旧令牌 → 直接恢复登录
     const me = await apiCall('/api/me');
     if(me && me.ok){ state.cloud.user=me.user; persistCloud(); setAuthMsg('● 已恢复登录…'); await afterLogin(); return; }
