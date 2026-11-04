@@ -3,7 +3,7 @@
  * 导出 59 个顶层名；import 由 AST 跨模块引用自动计算。
  */
 import { state } from './state.js';
-import { DATA, PASSIVES, SKILLS, WUHUN_ATTR_CAT, WUHUN_EXP_MULT, WUHUN_TYPE_KEYS, clamp, pick, ri, rnd, uid } from './core.js';
+import { DATA, PASSIVES, SKILLS, WUHUN_ATTR_CAT, WUHUN_EXP_MULT, WUHUN_TYPE_KEYS, BATTLE_ORIG, clamp, pick, ri, rnd, uid } from './core.js';
 import { refreshStats, smAggCached } from './smtree.js';
 import { todayKey } from './world.js';
 import { eventLog, log } from './render.js';
@@ -194,12 +194,20 @@ export function skillDamage(s, lv){
   const p=state.player, s0=p._s;
   const L=skillLvData(s, lv);
   const main=s0.main||0;
-  // 基础伤害 + 主属性 30% 加成；但至少为普攻的 1.1 倍（技能有 MP/CD 成本，应强于普攻）
-  let dmg = Math.max((L.damage||0) + Math.round(main*0.3), Math.round(main*1.1));
   const ag = smAggCached();
-  if(ag.dmgBonus) dmg = Math.round(dmg*(1+ag.dmgBonus/100));
-  if(ag.skillDmg[s.name]!=null) dmg = Math.round(dmg*(1+ag.skillDmg[s.name]/100));
-  return dmg;
+  if(BATTLE_ORIG==='legacy'){
+    // 改造前口径：技能伤害值 + 主属性 30%，且至少为普攻的 1.1 倍
+    let dmg = Math.max((L.damage||0) + Math.round(main*0.3), Math.round(main*1.1));
+    if(ag.dmgBonus) dmg = Math.round(dmg*(1+ag.dmgBonus/100));
+    if(ag.skillDmg[s.name]!=null) dmg = Math.round(dmg*(1+ag.skillDmg[s.name]/100));
+    return dmg;
+  }
+  // 原版口径：返回技能附加点数 sd，最终 raw = (atk + sd) * atk / df
+  //   （原版 skill_damage：battle\engine.py:495 取 skill.damage，:515 计算 raw）
+  let sd = (L.damage||0);
+  if(ag.dmgBonus) sd = Math.round(sd*(1+ag.dmgBonus/100));
+  if(ag.skillDmg[s.name]!=null) sd = Math.round(sd*(1+ag.skillDmg[s.name]/100));
+  return sd;
 }
 // 对怪物应用一次伤害（含防御减伤与暴击）
 // 神魔：命中追加攻击（on_hit_append），普攻与技能命中均触发
@@ -223,16 +231,50 @@ export function monsterDef(m, type){
   const hi = isMagic ? (m.max_magic_def||0) : (m.max_phys_def||0);
   return lo + (hi-lo)/2;
 }
+// 原版 _roll_def(battle\engine.py:414)：区间随机 × (1+def_pct%)
+//   base = random.randint(max(lo,1), max(lo+1,hi))  （lo<=hi 时）
+//   return max(base,1) * (1 + def_pct/100)
+export function rollDef(m, type){
+  const isMagic = type==='magic_def' || type==='magic';
+  const lo = isMagic ? (m.min_magic_def||0) : (m.min_phys_def||0);
+  const hi = isMagic ? (m.max_magic_def||0) : (m.max_phys_def||0);
+  const base = (lo<=hi) ? ri(Math.max(lo,1), Math.max(lo+1,hi)) : lo;
+  const pct = isMagic ? (m.magic_def_pct||0) : (m.phys_def_pct||0);
+  return Math.max(1, Math.round(base * (1 + pct/100)));
+}
+// 原版 _phys_atk_range(battle\engine.py:369)：[min_atk,max_atk] × (1+atk_pct/100) 取整
+// 玩家只有单一主属性值（lo=hi），故结果为确定值，无随机浮动。
+export function playerAtk(s){
+  const base = s && (s.main||0) || 0;
+  const pct  = (s && s.combat && (s.combat.phys_atk_pct||0)) || 0;
+  return Math.max(1, Math.round(base * (1 + pct/100)));
+}
+// 原版暴击倍率（battle\engine.py:448）：dmg *= (2 + crit_dmg_pct/100)
+export function critMult(s){
+  const ag = smAggCached();
+  const extra = ((ag&&ag.critDmg)||0) + ((s&&s.combat&&(s.combat.crit_dmg_pct||0))||0);
+  return (BATTLE_ORIG==='legacy' ? 1.8 : 2) + extra/100;
+}
 export function damageMonster(m, raw){
   const p=state.player, s0=p._s;
-  const v=raw*rnd(0.85,1.15);
-  const def=monsterDef(m, s0.defType);
-  // 原版伤害公式：max(1, round(atk²/def))；怪物完全闪避则 0 伤害
   const dodged = Math.random()*100 < (m.dodge||0);
-  let dmg = dodged ? 0 : Math.max(1, Math.round((v*v/def)*titleDmgMult(m)));
+  let dmg, def;
+  if(BATTLE_ORIG==='legacy'){
+    const v=raw*rnd(0.85,1.15);
+    def=monsterDef(m, s0.defType);
+    // 改造前口径：max(1, round(atk²/def))
+    dmg = dodged ? 0 : Math.max(1, Math.round((v*v/def)*titleDmgMult(m)));
+  }else{
+    // 原版口径：atk 取整数（无 ±% 浮动）、df 取防御区间随机、
+    //           技能 raw = (atk + sd) * atk / df（battle\engine.py:515）
+    const atk = playerAtk(s0);
+    def = rollDef(m, s0.defType);
+    const r = (atk + (raw||0)) * atk / Math.max(1, def);
+    dmg = dodged ? 0 : Math.max(1, Math.round(r*titleDmgMult(m)));
+  }
   const crit = !dodged && Math.random() < (s0.combat.phys_crit||0)/100;
-  const critMult=1.8 + (smAggCached().critDmg||0)/100;
-  if(crit) dmg=Math.round(dmg*critMult);
+  const cm = critMult(s0);
+  if(crit) dmg=Math.round(dmg*cm);
   if(!dodged) m.curHp-=dmg;
   state.pendingAppend = (state.pendingAppend||0) + (dodged?0:smAppendHit(m, def));
   return {dmg, crit, dodged};

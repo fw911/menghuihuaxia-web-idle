@@ -74,6 +74,25 @@ export const PERK_STAT_MAP = {
 };
 
 // ---------- 工具 ----------
+// ── 战斗公式口径开关 ────────────────────────────────────────────────
+// 'orig'   = 原版 v0.91 口径（默认）
+//            依据原版 exe 反汇编取证（battle\engine.py）：
+//              445  玩家普攻  dmg = atk * atk / df            （atk 取整数，无 ±% 浮动）
+//              448  暴击倍率  dmg *= (2 + crit_dmg_pct / 100)  （基数 2）
+//              515  玩家技能  raw = (atk + sd) * atk / df      （sd=技能等级表 damage 点数）
+//              414  _roll_def df = randint(max(lo,1), max(lo+1,hi)) × (1+def_pct%)
+// 'legacy' = 改造前口径（atk×rnd(0.85,1.15) → 平方除防、暴击基数 1.8、
+//            技能 = max(damage+main*0.3, main*1.1)、防御取区间中值）
+// 可在控制台用 setBattleOrig('legacy'|'orig') 临时切换对比。
+export const BATTLE_ORIG = (()=>{
+  try{
+    const v = String((typeof localStorage!=='undefined' && localStorage.getItem('battle_orig')) || '').trim();
+    if(v==='orig' || v==='legacy') return v;
+  }catch(e){}
+  return 'orig';
+})();
+export function setBattleOrig(v){ try{ localStorage.setItem('battle_orig', v); }catch(e){} }
+
 export const rnd = (a,b)=> a + Math.random()*(b-a);
 export const ri  = (a,b)=> Math.floor(a + Math.random()*(b-a+1));
 export const pick = arr => arr[Math.floor(Math.random()*arr.length)];

@@ -4,8 +4,8 @@
  */
 import { state } from './state.js';
 import { cloudRank } from './api.js';
-import { DATA, MON_SKILLS, SUMMON_SKILLS, clamp, getMonster, pageVisible, pick, ri, rnd, uid } from './core.js';
-import { castBattleStartBuffs, castHeal, damageMonster, expToNext, genWuhun, isXianzhiNow, monsterDef, monsterExp, paySkill, pickAttackSkill, pickHealSkill, skillDamage, smAppendHit, smGain, smXianzhiTick, syncSkills, tickSkillCd, whName, whReqLevel, wuhunAbsorb } from './player.js';
+import { DATA, MON_SKILLS, SUMMON_SKILLS, BATTLE_ORIG, clamp, getMonster, pageVisible, pick, ri, rnd, uid } from './core.js';
+import { castBattleStartBuffs, castHeal, critMult, damageMonster, expToNext, genWuhun, isXianzhiNow, monsterDef, monsterExp, paySkill, pickAttackSkill, pickHealSkill, playerAtk, rollDef, skillDamage, smAppendHit, smGain, smXianzhiTick, syncSkills, tickSkillCd, whName, whReqLevel, wuhunAbsorb } from './player.js';
 import { xyTrialOnKill } from './quest.js';
 import { refreshStats, smActiveCast, smAggCached } from './smtree.js';
 import { QNAME, rollLoot } from './equip.js';
@@ -132,15 +132,27 @@ export function summonAttack(m){
 export function playerHit(m){
   const p = state.player, s = p._s;
   const ag = smAggCached();
-  const atk = s.main + ((state.buff&&state.buff.atk)||0);
-  const raw = atk * rnd(0.85,1.15);
-  let def = monsterDef(m, s.defType);
-  if(ag.ignoreDef) def = Math.round(def*(1-ag.ignoreDef/100));
   const dodged = Math.random()*100 < (m.dodge||0);
-  let dmg = dodged ? 0 : Math.max(1, Math.round((raw*raw/def)*titleDmgMult(m)));
+  let dmg, def;
+  if(BATTLE_ORIG==='legacy'){
+    const atk = s.main + ((state.buff&&state.buff.atk)||0);
+    const raw = atk * rnd(0.85,1.15);
+    def = monsterDef(m, s.defType);
+    if(ag.ignoreDef) def = Math.round(def*(1-ag.ignoreDef/100));
+    dmg = dodged ? 0 : Math.max(1, Math.round((raw*raw/def)*titleDmgMult(m)));
+  }else{
+    // 原版 compute_phys_damage（battle\engine.py:434）
+    //   443 atk = random.randint(atk_lo, atk_hi)   玩家为单一主属性 → 取整确定值
+    //   444 df  = _roll_def(...)                    防御区间随机
+    //   445 dmg = atk * atk / df
+    const atk = playerAtk(s) + ((state.buff&&state.buff.atk)||0);
+    def = rollDef(m, s.defType);
+    if(ag.ignoreDef) def = Math.round(def*(1-ag.ignoreDef/100));
+    dmg = dodged ? 0 : Math.max(1, Math.round((atk*atk/Math.max(1,def))*titleDmgMult(m)));
+  }
   let crit = !dodged && Math.random() < (s.combat.phys_crit||0)/100;
-  const critMult = 1.8 + (ag.critDmg||0)/100;
-  if(crit) dmg = Math.round(dmg*critMult);
+  const cm = critMult(s);
+  if(crit) dmg = Math.round(dmg*cm);
   if(!dodged) m.curHp -= dmg;
   state.pendingAppend = (state.pendingAppend||0) + (dodged?0:smAppendHit(m, def));
   return {dmg, crit, dodged};
