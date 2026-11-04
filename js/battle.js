@@ -71,6 +71,31 @@ export function spawnMonster(){
   return m;
 }
 
+// 每次遇怪的怪物组：普通练级区 / 首领区小怪阶段生成 2~6 只；首领本尊、副本首领单只。
+// 这样既满足「每次遇怪 2~6 个」的需求，又不破坏首领/副本的单体战斗体验。
+export function spawnMonsterGroup(){
+  const z = state.zone;
+  if(!z) return [];
+  // 群体规模：普通练级区 / 首领区小怪按设置生成（默认随机 2~6）；首领本尊 / 副本首领始终单只
+  const gs = state.auto.groupSize;
+  const grpN = (gs && gs!=='rand') ? Math.max(1, Math.min(6, parseInt(gs,10)||2)) : ri(2,6);
+  // 补齐到目标数量：spawnMonster 偶发返回 null（个别怪物数据缺失）时循环重试，保证「每波遇怪数量」
+  const fill = (n) => {
+    const arr = [];
+    let guard = 0;
+    while(arr.length < n && guard++ < n*4 + 8){ const m = spawnMonster(); if(m) arr.push(m); }
+    return arr;
+  };
+  if(z.isBoss){
+    const _bm = DATA.maps.maps.find(m=>m.key===z.mapKey);
+    if(_bm && _bm.boss_zone && !bossZoneCleared(_bm)){
+      return fill(grpN);   // 首领区小怪阶段：按规模成群
+    }
+    const m = spawnMonster(); return m? [m] : [];   // 首领本尊 / 副本首领：单只
+  }
+  return fill(grpN);
+}
+
 // ---------- 召唤兽 ----------
 export function summonDef(key){ return (DATA.summons||{})[key] || null; }
 export function summonAvailable(){
@@ -179,17 +204,26 @@ export function tick(){
   }
   // 仙之境：安全区被动修验（无战斗），按滞留 tick 结算后直接返回（避免进入下方战斗分支）
   if(isXianzhiNow()){ smXianzhiTick(); renderHeader(); return; }
-  if(!state.combat){
-    const m = spawnMonster();
-    if(!m){ return; }
-    state.combat = m;
-    state.atbP = 0; state.atbM = 0;   // 速度条（ATB）累加器
-    // 召唤兽出场：按角色等级取阶段属性
-    if(p.summon){ const t=summonTier(p.summon, p.level); state.summonHp = t? (t.data.hp||0) : 0; }
-    castBattleStartBuffs();   // 战斗开始先放增益/防御技能
-    log((m.isBoss?'<span class="boss">【首领】':'<span class="sys">') + (m.isElite?'【精英】':'') + m.name + ' (Lv.'+m.level+') 出现了'+(m.isBoss?'</span>':'</span>'), m.isBoss?'boss':'sys');
+  // ---------- 群体战斗：普通练级区每次遇 2~6 只，首领/副本单只 ----------
+  if(!state.combat || !state.combatGroup || !state.combatGroup.length){
+    if(!state.combat){
+      const grp = spawnMonsterGroup();
+      if(!grp.length){ return; }
+      state.combatGroup = grp;
+      state.combat = grp[0];
+      state.atbP = 0; state.atbM = 0;   // 速度条（ATB）累加器
+      if(p.summon){ const t=summonTier(p.summon, p.level); state.summonHp = t? (t.data.hp||0) : 0; }
+      castBattleStartBuffs();   // 战斗开始先放增益/防御技能
+      const _m=grp[0];
+      log((_m.isBoss?'<span class="boss">【首领】':'<span class="sys">')+(_m.isElite?'【精英】':'')+_m.name+' (Lv.'+_m.level+') 出现了'+(grp.length>1?(' ×'+grp.length):'')+(_m.isBoss?'</span>':'</span>'), _m.isBoss?'boss':'sys');
+    } else {
+      // 兼容：外部已构造单体战斗（测试/特殊场景），退化为单体，不影响现有逻辑
+      state.combatGroup = [state.combat];
+      if(state.atbP==null) state.atbP=0;
+      if(state.atbM==null) state.atbM=0;
+    }
   }
-  const m = state.combat;
+  const grp = state.combatGroup;
   // 速度条累加器（外部直接构造战斗时可能没有，兜底为 0）
   if(state.atbP==null) state.atbP=0;
   if(state.atbM==null) state.atbM=0;
@@ -201,13 +235,39 @@ export function tick(){
       log('施放 <span class="skill">'+hs.name+'</span>，回复 <span class="loot">'+fmtNum(r.heal)+'</span> 生命（HP '+fmtNum(Math.round(p.hp))+'/'+fmtNum(p._s.max_hp)+'）');
     }
   }
-  // 速度条推进：双方按敏捷派生速度累加，跑满 100 各出手一次（原版战斗模型）
+  // 速度条推进：玩家按敏捷派生速度累加；群体怪物每满 ATB 随机一只出手（避免被齐射秒杀，难度可控）
   state.atbP += p._s.combat.speed;
-  state.atbM += (m.speed||4);
+  state.atbM += (grp[0].speed||4);
   let guard = 0;
   while((state.atbP>=100 || state.atbM>=100) && guard++<30){
-    if(state.atbP>=100){ state.atbP-=100; playerTurn(m); if(m.curHp<=0){ onMonsterDead(m); return; } }
-    if(state.atbM>=100){ state.atbM-=100; monsterTurn(m); if(p.hp<=0){ onPlayerDead(); return; } }
+    if(state.atbP>=100){
+      state.atbP-=100;
+      // 当前目标失效（被清/异常）时，从本波存活怪补选；无则结束战斗（防御性，避免 null 进入 playerTurn）
+      if(!state.combat || state.combat.curHp<=0){
+        const _alive=(state.combatGroup||[]).filter(x=>x && x.curHp>0);
+        state.combat = _alive.length? _alive[0] : null;
+      }
+      if(!state.combat){ state.combatGroup=[]; renderBattle(); renderHeader(); renderTab(); return; }
+      // 群体横扫（AOE）：开启且本波不止一只时一次横扫整群；首领/副本单只不受影响，走单体逻辑
+      if(state.auto.aoe && state.combatGroup.length>1){
+        if(playerSweep()){ renderBattle(); renderHeader(); renderTab(); return; }
+      } else {
+        const cur = state.combat;
+        playerTurn(cur);
+        if(cur.curHp<=0){
+          onMonsterDead(cur);   // 结算这只的经验/掉落/探索进度
+          // 从本波移除，自动切下一个目标；本波清空则结束战斗
+          state.combatGroup = (state.combatGroup||[]).filter(x=> x!==cur && x.curHp>0);
+          if(!state.combatGroup.length){ state.combat=null; renderBattle(); renderHeader(); renderTab(); return; }
+          state.combat = state.combatGroup[0];
+        }
+      }
+    }
+    if(state.atbM>=100){
+      state.atbM-=100;
+      const alive = (state.combatGroup||[]).filter(x=>x && x.curHp>0);
+      if(alive.length){ const m = alive[ri(0, alive.length-1)]; monsterTurn(m); if(p.hp<=0){ onPlayerDead(); return; } }
+    }
   }
   renderBattle();
 }
@@ -249,6 +309,60 @@ export function playerTurn(m){
       if(m.curHp<=0) return;
     }
   }
+}
+
+// 群体横扫（AOE）：玩家一次出手对整波存活怪造成主伤害（技能/普攻），神魔追击/主动与召唤兽追加于首个存活目标
+// 返回 true 表示本波已被清空（战斗结束），false 表示仍有存活怪
+export function playerSweep(){
+  const p = state.player;
+  const grp = (state.combatGroup||[]).filter(x=>x && x.curHp>0);
+  if(!grp.length) return true;
+  state.pendingAppend = 0;
+  const sk = pickAttackSkill();
+  if(sk){
+    const lv = p.skills[sk.key]||1;
+    paySkill(sk);
+    const dmg0 = skillDamage(sk, lv);
+    for(const m of grp){
+      const h = damageMonster(m, dmg0);
+      if(h.dodged) { log(m.name+' 闪避了你的 <span class="skill">'+sk.name+'</span>'); continue; }
+      log('施放 <span class="skill">'+sk.name+'</span>，对 '+m.name+' 造成 <span class="dmg">'+fmtNum(h.dmg)+'</span>'+(h.crit?' 暴击!':'')+' 伤害（剩余'+fmtNum(Math.max(0,m.curHp))+'/'+fmtNum(m.hp)+'）');
+      if(m.curHp<=0) onMonsterDead(m);
+    }
+  } else {
+    for(const m of grp){
+      const h = playerHit(m);
+      if(h.dodged) { log(m.name+' 闪避了你的攻击'); continue; }
+      log('你对 '+m.name+' 造成 <span class="dmg">'+fmtNum(h.dmg)+'</span>'+(h.crit?' 暴击!':'')+' 伤害（剩余'+fmtNum(Math.max(0,m.curHp))+'/'+fmtNum(m.hp)+'）');
+      if(m.curHp<=0) onMonsterDead(m);
+    }
+  }
+  // 神魔追击 / 神魔主动 / 召唤兽：作用于首个存活目标（整波的神魔追击伤害一次性结算）
+  const cur = (state.combatGroup||[]).find(x=>x && x.curHp>0);
+  if(cur){
+    if(state.pendingAppend>0){ log('<span class="skill">神魔追击</span> 追加 <span class="dmg">'+state.pendingAppend+'</span> 伤害'); state.pendingAppend=0; }
+    if(p.shenmo && p.shenmo.faction){
+      const sc = smActiveCast(cur);
+      if(sc){
+        if(sc.kind==='attack') log('神魔技 <span class="skill">'+sc.name+'</span> 造成 <span class="dmg">'+fmtNum(sc.dmg)+'</span> 伤害（剩余'+fmtNum(Math.max(0,cur.curHp))+'/'+fmtNum(cur.hp)+'）');
+        else log('神魔技 <span class="skill">'+sc.name+'</span> 发动');
+        if(cur.curHp<=0) onMonsterDead(cur);
+      }
+    }
+    if(p.summon && state.summonHp>0){
+      const sh = summonAttack(cur);
+      if(sh){
+        if(sh.dodged) log('<span class="skill">'+summonDef(p.summon).name+'</span> 的 '+sh.name+' 被 '+cur.name+' 闪避');
+        else log('<span class="skill">'+summonDef(p.summon).name+'</span> 施放 '+sh.name+'，造成 <span class="dmg">'+fmtNum(sh.dmg)+'</span> 伤害（剩余'+fmtNum(Math.max(0,cur.curHp))+'/'+fmtNum(cur.hp)+'）');
+        if(cur.curHp<=0) onMonsterDead(cur);
+      }
+    }
+  }
+  // 重整本波：移除死亡，更新当前目标
+  state.combatGroup = (state.combatGroup||[]).filter(x=>x && x.curHp>0);
+  if(!state.combatGroup.length){ state.combat=null; return true; }
+  state.combat = state.combatGroup[0];
+  return false;
 }
 
 // 怪物一次出手（含技能/普攻，玩家可完全闪避）
@@ -375,7 +489,7 @@ export function onPlayerDead(){
   p.hp = p._s.max_hp; p.mp = p._s.max_mp;
   eventLog('<span class="dmg">被击败，损失经验 '+fmtNum(lose)+'，已传送回安全区</span>');
   // 回到当前地图安全区
-  state.combat=null;
+  state.combat=null; state.combatGroup=null;
   renderAll();
 }
 

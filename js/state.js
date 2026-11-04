@@ -20,7 +20,8 @@ export const DATA_FILES = [
 export const state = {
   loaded:false,
   player:null,
-  combat:null,    // 当前战斗中的怪物实例
+  combat:null,    // 当前战斗中的怪物实例（单体目标，指向 combatGroup 中第一个存活怪）
+  combatGroup:null,   // 当前波次的怪物数组（普通练级区 2~6 只；首领/副本单只）；null 表示无战斗
   idle:false,
   speed:1,
   zone:null,      // {mapKey, zoneKey, isBoss}
@@ -37,7 +38,7 @@ export const state = {
   // 后端 / 云存档
   cloud:{ ok:false, base:null, user:null, token:null, slot:1, slots:[], checked:false, lastSync:0 },
   // 自动挂机设置（AUTO 持久化到 localStorage）
-  auto:{ hp:60, mp:30, potion:true, buy:true, zone:false, save:true, stats:true, rank:true, junk:true },
+  auto:{ hp:60, mp:30, potion:true, buy:true, zone:false, campaign:false, save:true, stats:true, rank:true, junk:true, groupSize:'rand', aoe:true },
   // 云存档页签的异步数据缓存
   cloudUI:{ rank:null, summary:null, job:'', loading:false },
   // 挂机统计（用于后端上报与面板展示）

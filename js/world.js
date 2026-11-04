@@ -19,7 +19,7 @@ export function travelTo(mapKey){
     log('<span class="dmg">需先入神魔道（角色 Lv.'+((sm().entry||{}).min_char_level||101)+'）才能进入'+map.name+'</span>'); return;
   }
   p.map = mapKey; p.unlocked[mapKey]=true;
-  state.zone=null; state.combat=null;
+  state.zone=null; state.combat=null; state.combatGroup=null;
   log('<span class="sys">来到 '+map.name+'（安全区：'+(map.safe_zone?map.safe_zone.name:'无')+'）</span>');
   renderMap();
 }

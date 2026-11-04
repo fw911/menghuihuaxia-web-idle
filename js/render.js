@@ -16,6 +16,7 @@ import { itemName } from './shop.js';
 import { courierRoutes, courierTravel, fmtNum } from './life.js';
 import { startZone } from './loop.js';
 import { renderAll } from './boot.js';
+import { campaignProgressInfo } from './idle.js';
 
 // ---------- 渲染 ----------
 export function $(id){return document.getElementById(id);}
@@ -231,7 +232,35 @@ export function renderMap(){
     log(r.ok? ('<span class="loot">'+r.msg+'</span>') : ('<span class="dmg">'+r.msg+'</span>'));
     renderMap(); renderHeader();
   });
+  renderCampaignStatus();   // 地图重渲染后同步战役推进进度条
   return html;      // 返回渲染结果，便于无头测试断言
+}
+// 战役推进进度条（世界地图面板上方常驻；未开启/无角色时隐藏）
+export function renderCampaignStatus(){
+  const el=$('campaign-status'); if(!el) return;
+  const info = state.player ? campaignProgressInfo() : null;
+  if(!info || !info.enabled){ el.style.display='none'; el.innerHTML=''; return; }
+  el.style.display='block';
+  if(info.done){
+    el.innerHTML='<div class="camp-status done">★ 战役推进完成：所有地图练级区均已探索完成（'+info.doneCount+'/'+info.total+' 图）</div>';
+    return;
+  }
+  const m=info.map;
+  let html='<div class="camp-head"><span class="camp-title">⚔ 战役推进</span>'
+    +'<span class="camp-map">'+m.name+'</span>'
+    +'<span class="camp-count">练级区 '+info.explored+'/'+info.totalReg+'</span>'
+    +'<span class="camp-pct">全局 '+info.doneCount+'/'+info.total+' 图</span></div>';
+  html+='<div class="bar camp-bar"><i style="width:'+(info.mapPct||0)+'%"></i></div>';
+  const detail=[];
+  if(info.currentZone) detail.push('刷：'+info.currentZone.name);
+  if(info.inDungeon) detail.push('副本：'+info.inDungeon);
+  if(info.dbTotal>0){
+    if(info.dungeonWait) detail.push('副本首领待补（今日次数用完，等刷新）');
+    else detail.push('副本首领 '+info.dbKilled+'/'+info.dbTotal+(info.dungeonLimit?(' · 今日剩 '+info.dungeonLeft+'/'+info.dungeonLimit+' 次'):''));
+  }
+  if(info.nextMap) detail.push('下一张：'+info.nextMap.name);
+  if(detail.length) html+='<div class="camp-detail">'+detail.join('　·　')+'</div>';
+  el.innerHTML=html;
 }
 // ---------- 战斗状态面板（中间栏：当前怪物卡片 + 血条） ----------
 export function renderBattle(){
@@ -242,9 +271,13 @@ export function renderBattle(){
     return;
   }
   const tag = m.isBoss?'<span class="btag tag-boss">【首领】</span>':(m.isElite?'<span class="btag tag-elite">【精英】</span>':'');
+  const grp = state.combatGroup;
+  const cnt = grp ? grp.filter(x=>x && x.curHp>0).length : 1;
+  const groupTip = cnt>1 ? '<div class="bar-label camp-group">当前目标（共 '+cnt+' 只怪）</div>' : '';
   el.innerHTML='<div class="battle-card"><span class="bname">'+m.name+'</span><span class="blv">Lv.'+m.level+'</span>'+tag+
     '<div class="bar hp"><i style="width:'+clamp(m.curHp/m.hp*100,0,100)+'%"></i></div>'+
     '<div class="bar-label">怪物 HP '+fmtNum(Math.max(0,m.curHp))+' / '+fmtNum(m.hp)+'</div>'+
+    groupTip+
     '<div class="bar mp"><i style="width:'+clamp(p.hp/p._s.max_hp*100,0,100)+'%"></i></div>'+
     '<div class="bar-label">我的 HP '+fmtNum(Math.max(0,Math.round(p.hp)))+' / '+fmtNum(p._s.max_hp)+' · MP '+fmtNum(Math.round(p.mp))+' / '+fmtNum(p._s.max_mp)+'</div></div>';
 }

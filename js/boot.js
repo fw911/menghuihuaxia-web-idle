@@ -176,7 +176,7 @@ export async function boot(){
   // 按钮
   $('btn-toggle').onclick=()=> setIdle(!state.idle);
   $('btn-speed').onclick=()=>{ state.speed = state.speed===1?2:(state.speed===2?4:1); $('btn-speed').textContent='速度 '+state.speed+'x'; };
-  $('btn-home').onclick=()=>{ state.combat=null; state.player.hp=state.player._s.max_hp; state.player.mp=state.player._s.max_mp; log('<span class="sys">已返回安全区</span>'); renderAll(); };
+  $('btn-home').onclick=()=>{ state.combat=null; state.combatGroup=null; state.player.hp=state.player._s.max_hp; state.player.mp=state.player._s.max_mp; log('<span class="sys">已返回安全区</span>'); renderAll(); };
   $('btn-save').onclick=save;
   $('btn-reset').onclick=()=>{ if(confirm('确定重置角色？')){ localStorage.removeItem(SAVE_KEY); location.reload(); } };
   document.querySelectorAll('#tabs button').forEach(b=> b.onclick=()=>{

@@ -12,14 +12,14 @@ import { summonDef } from './battle.js';
 import { autoExtractJunk, consolidateBag, equipItem } from './bag.js';
 import { doInlay, doRefine } from './refine.js';
 import { travelTo } from './world.js';
-import { $, eventLog, log, renderHeader, renderHero, renderMap, whCraft } from './render.js';
+import { $, eventLog, log, renderCampaignStatus, renderHeader, renderHero, renderMap, whCraft } from './render.js';
 import { renderTab } from './tabs.js';
 import { doInlaySelected } from './inlay.js';
 import { loadCloudUI } from './panels.js';
 import { acceptQuest, buyShopItem, useConsumable } from './shop.js';
 import { addCrystalStone, buyMaterial, courierTravel, crystalName, doBailianCraft, doBailianUse, doExtract, doForge, doFurnace, doGemRefine, doInstanceExchange, doOreRefine, doPotionRefine, equipTitle, mineStart, titleByKey } from './life.js';
-import { copySaveText, exportSaveFile, importSaveFile, importSaveText, save } from './loop.js';
-import { autoZone } from './idle.js';
+import { copySaveText, exportSaveFile, importSaveFile, importSaveText, save, setIdle } from './loop.js';
+import { autoZone, maybeCampaign } from './idle.js';
 import { renderAll } from './boot.js';
 
 export function bindTabClicks(){
@@ -162,9 +162,16 @@ export function bindTabClicks(){
   el.querySelectorAll('[data-autochk]').forEach(d=> d.onchange=()=>{
     const k=d.getAttribute('data-autochk'); state.auto[k]=d.checked; saveAuto();
     log('<span class="sys">'+(d.checked?'已开启':'已关闭')+'：'+k+'</span>');
+    // 开启战役推进即自动开始挂机，并立即跑一次选区（无需手动点「开始挂机」）
+    if(k==='campaign' && d.checked){
+      if(!state.idle) setIdle(true);
+      maybeCampaign();
+    }
+    renderCampaignStatus();   // 开关变化后即时同步战役进度条（显/隐）
   });
   const ah=$('auto-hp'); if(ah) ah.onchange=()=>{ state.auto.hp=parseInt(ah.value,10); saveAuto(); };
   const am=$('auto-mp'); if(am) am.onchange=()=>{ state.auto.mp=parseInt(am.value,10); saveAuto(); };
+  const ags=$('auto-groupsize'); if(ags) ags.onchange=()=>{ state.auto.groupSize=ags.value||'rand'; saveAuto(); log('<span class="sys">每波遇怪数量：'+(ags.value==='rand'?'随机 2~6':('固定 '+ags.value))+'</span>'); };
   const rj=$('rank-job'); if(rj) rj.onchange=()=>{ state.cloudUI.job=rj.value; state.cloudUI.rank=null; loadCloudUI(); };
   // 神秘商人部位选择
   const ms=$('mystic-slot'); if(ms) ms.onchange=()=>{ window._mysticSlot=ms.value; };

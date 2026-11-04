@@ -162,7 +162,7 @@ export function renderTab(){
   if(tab==='life') el.innerHTML = renderLife(sub);
   else if(tab==='instance') el.innerHTML = renderInstance(sub);
   else if(tab==='ach') el.innerHTML = renderAch(sub);
-  else if(tab==='cloud'){ el.innerHTML = renderCloud(sub); loadCloudUI(); }
+  else if(tab==='cloud'){ renderCloudPane(); loadCloudUI(); }
   else if(tab==='skill') el.innerHTML = renderSkill(sub);
   else if(tab==='wuhun') el.innerHTML = renderWuhun(sub);
   else if(tab==='shenmo') el.innerHTML = renderShenmo(sub);
@@ -171,6 +171,18 @@ export function renderTab(){
   else el.innerHTML = renderBag(sub);
   bindTabClicks();
   renderHero();                      // 装备/属性变动时同步角色面板
+}
+// 仅渲染云存档子页内容（含事件绑定），不触发 loadCloudUI —— 供 renderTab 初次渲染、
+// 以及 loadCloudUI 异步拿到后端数据后刷新共用，打断「renderTab→loadCloudUI→renderTab」
+// 的无限重渲染循环（连后端时必现：每次异步返回都会再次整页重渲染云存档面板）。
+export function renderCloudPane(){
+  const el=$('tab-pane'); if(!el) return;
+  const subs=subTabs('cloud');
+  const sub = subs.length>1 ? subKey('cloud') : '';
+  renderSubBar('cloud', subs, sub);
+  el.innerHTML = renderCloud(sub);
+  bindTabClicks();
+  renderHero();
 }
 export function renderBag(sub){
   const p=state.player;

@@ -88,6 +88,17 @@
 .rwline{font-size:11px;color:#c8a34a;margin:2px 0 6px;}
   .zone .zlv{color:var(--dim);font-size:11px;margin-left:3px;}
   .zone.boss .zlv{color:var(--purple);}
+  /* ===== 战役推进进度条（世界地图面板上方常驻） ===== */
+  .campaign-status{padding:6px 12px;border-bottom:1px solid var(--line);background:var(--panel2);font-size:12px;}
+  .camp-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .camp-title{color:var(--gold);font-weight:bold;letter-spacing:1px;}
+  .camp-map{color:var(--gold2);font-weight:bold;}
+  .camp-count{color:var(--dim);}
+  .camp-pct{color:var(--dim);margin-left:auto;}
+  .camp-bar{height:8px;background:#120d07;border:1px solid var(--line);border-radius:2px;overflow:hidden;margin:5px 0 3px;}
+  .camp-bar > i{display:block;height:100%;background:linear-gradient(90deg,#8a6a2a,#e8c76f);}
+  .camp-detail{color:var(--dim);font-size:11.5px;line-height:1.5;word-break:break-all;}
+  .camp-status.done{color:var(--green);font-weight:bold;}
   .neighbor{display:inline-block;border:1px dashed var(--line2);border-radius:3px;padding:3px 10px;margin:0 6px 6px 0;
     cursor:pointer;font-size:12px;color:var(--blue);background:var(--panel2);}
   .neighbor:hover{border-color:var(--blue);}
@@ -247,6 +258,7 @@
     </div>
     <div class="col center">
       <div class="pane-head">世界地图</div>
+      <div id="campaign-status" class="campaign-status" style="display:none"></div>
       <div class="pane" id="map-pane" style="flex:0 0 auto;max-height:46%;"></div>
       <div class="pane-head">战斗日志 · 本命日志</div>
       <div class="pane" id="battle-pane"></div>

@@ -1054,23 +1054,23 @@ function ok(name, cond, extra) {
     const bj = E.mapByKey('beijun');
     const z0 = bj.zones[0];
     const T = E.zoneTarget(bj, z0);
-    ok('区域带 explore_target = 35', T === 35, String(T));
+    ok('区域带 explore_target = 100（普通地图）', T === 100, String(T));
     ok('新号该区域未探索', !E.zoneExplored(bj.key, z0.key));
     ok('新号该区域击杀数为 0', E.zoneKillCount(bj.key, z0.key) === 0);
     ok('新号已探索区域数 0', E.zoneExploredCount(bj) === 0);
     ok('新号地图探索度 0%', E.mapExplorePct(bj) === 0, E.mapExplorePct(bj) + '%');
 
     for (let i = 0; i < T - 1; i++) E.noteZoneKill(bj.key, z0.key);
-    ok('34/35 还未完成', !E.zoneExplored(bj.key, z0.key), E.zoneKillCount(bj.key, z0.key) + '');
+    ok((T-1)+'/'+T+' 还未完成', !E.zoneExplored(bj.key, z0.key), E.zoneKillCount(bj.key, z0.key) + '');
     E.noteZoneKill(bj.key, z0.key);
-    ok('35/35 完成探索', E.zoneExplored(bj.key, z0.key));
+    ok(T+'/'+T+' 完成探索', E.zoneExplored(bj.key, z0.key));
     ok('已探索区域数 1', E.zoneExploredCount(bj) === 1, E.zoneExploredCount(bj) + '');
     ok('探索度落在 (0,100) 之间', E.mapExplorePct(bj) > 0 && E.mapExplorePct(bj) < 100, E.mapExplorePct(bj) + '%');
 
     // 其余区域不共享进度
     ok('其他区域仍为 0', E.zoneKillCount(bj.key, bj.zones[1].key) === 0);
 
-    for (const z of bj.zones) { for (let i = 0; i < 40; i++) E.noteZoneKill(bj.key, z.key); }
+    for (const z of bj.zones) { for (let i = 0; i < T; i++) E.noteZoneKill(bj.key, z.key); }
     ok('全区域打满后探索度 100%', E.mapExplorePct(bj) === 100, E.mapExplorePct(bj) + '%');
     ok('已探索区域数 = 总区域数', E.zoneExploredCount(bj) === bj.zones.length,
       E.zoneExploredCount(bj) + '/' + bj.zones.length);

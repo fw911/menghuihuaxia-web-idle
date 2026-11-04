@@ -11,7 +11,7 @@ DST = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_test_entry.mjs'
 EXPORTS = [
     'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LS','CN_STAT','pageVisible',
     'loadData','newPlayer','refreshStats','computeStats',
-    'spawnMonster','tick','onMonsterDead','rollLoot','genEquip','buildEquip',
+    'spawnMonster','spawnMonsterGroup','playerSweep','tick','onMonsterDead','rollLoot','genEquip','buildEquip',
     'mineStart','mineTick','mineSettle','mineConf','compassDef','mineExpNeed','mineProgress',
     'gemRecipeFor','doGemRefine','doPotionRefine','itemCount','itemConsume','itemName','gemCount',
     'instEntries','instSpec','doInstanceExchange','buildExchangeEquip','perkMidValue',
@@ -23,7 +23,7 @@ EXPORTS = [
     # 宝石镶嵌（gems.json：系列限定部位）
     'doInlay','gemSeriesDef','gemSeriesName','gemSeriesLabel','gemCanInlay','inlayGemList',
     'inlayEquipList','inlayGemOpts','inlayEquipOpts','doInlaySelected','selGemForInlay',
-    'renderTab','renderLife','renderInstance','renderAch','renderSkill','renderShenmo','renderMap',
+    'renderTab','renderCloudPane','renderLife','renderInstance','renderAch','renderSkill','renderShenmo','renderMap',
     # 地图进度：快照（单一数据源）+ 增量刷新（不重建 DOM，保住点击/hover）
     'mapProgressSnapshot','updateMapProgress',
     # 右列二级菜单（子菜单）
@@ -91,6 +91,9 @@ EXPORTS = [
     'zoneTarget', 'zoneKillCount', 'zoneExplored', 'zoneExploredCount', 'mapExplorePct',
     'mapClearReward', 'mapCleared', 'rewardText',
     'bossMinionTarget', 'minionKillCount', 'bossZoneCleared', 'noteZoneKill', 'noteMinionKill',
+    # 战役推进（自动推进地图）
+    'maybeCampaign', 'campaignTargetMap', 'campaignRegularZones', 'allRegularExplored',
+    'campaignIncompleteZone', 'campaignDungeonTarget', 'campaignProgressInfo', 'renderCampaignStatus',
 ]
 
 lines = [

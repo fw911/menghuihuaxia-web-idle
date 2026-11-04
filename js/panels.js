@@ -8,7 +8,7 @@ import { DATA, SLOT_NAME, TITLES } from './core.js';
 import { sm } from './player.js';
 import { QNAME } from './equip.js';
 import { AUTO_SALVAGE_AT } from './bag.js';
-import { achSubOf, achSubs, renderTab } from './tabs.js';
+import { achSubOf, achSubs, renderTab, renderCloudPane } from './tabs.js';
 import { itemName } from './shop.js';
 import { achCats, achDone, achList, achValue, fmtNum, instEntries, instMapName, instName, instSpec, itemCount, titleProgress, titleTarget, titleUnlocked } from './life.js';
 import { localSaveStamp } from './loop.js';
@@ -106,7 +106,7 @@ export async function loadCloudUI(){
     state.cloudUI.rank=rk; state.cloudUI.summary=sm;
   }catch(e){}
   state.cloudUI.loading=false;
-  if(state.selTab==='cloud') renderTab();
+  if(state.selTab==='cloud') renderCloudPane();   // 只重渲染云存档内容，不再调 renderTab → 打断无限重渲染循环
 }
 // ---------- 零依赖 SVG 图表（统计可视化） ----------
 export function svgTrend(history){
@@ -298,9 +298,14 @@ export function renderCloud(sub){
   const A=state.auto;
   const chk=(k,label)=>'<label class="muted" style="margin-right:12px;cursor:pointer"><input type="checkbox" data-autochk="'+k+'"'
     +(A[k]?' checked':'')+'/> '+label+'</label>';
-  html+='<div>'+chk('potion','自动喝药')+chk('buy','药水不足自动购买')+chk('zone','自动换区')+'</div>';
+  html+='<div>'+chk('potion','自动喝药')+chk('buy','药水不足自动购买')+chk('zone','自动换区')+chk('campaign','战役推进(自动推图)')+chk('aoe','群体攻击(AOE)')+'</div>';
   html+='<div>'+chk('save','自动存档+云同步')+chk('stats','上报挂机统计')+chk('rank','上传战力排行')+'</div>';
+  html+='<div class="row"><span class="muted">每波遇怪数量　<select id="auto-groupsize">'
+    +[['rand','随机 2~6'],['2','固定 2'],['3','固定 3'],['4','固定 4'],['5','固定 5'],['6','固定 6']].map(o=>'<option value="'+o[0]+'"'+(A.groupSize===o[0]?' selected':'')+'>'+o[1]+'</option>').join('')
+    +'</select></span></div>';
   html+='<div>'+chk('junk','包裹将满自动分解白/绿装')+'</div>';
+  html+='<div class="muted">战役推进：开启后按地图顺序逐图刷满「练级区」怪物数量再自动前往下一张图；'
+    +'野外首领区不计入门槛（BOSS图除外），副本首领收尾清理，当日次数用尽则原地等待次日刷新。</div>';
   html+='<div class="row"><span class="muted">喝药阈值　HP <select id="auto-hp">'
     +[30,40,50,60,70,80].map(v=>'<option value="'+v+'"'+(A.hp===v?' selected':'')+'>'+v+'%</option>').join('')
     +'</select>　MP <select id="auto-mp">'

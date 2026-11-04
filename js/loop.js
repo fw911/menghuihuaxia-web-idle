@@ -10,10 +10,10 @@ import { backfillDurability } from './equip.js';
 import { tick } from './battle.js';
 import { consolidateBag, maybeAutoSalvage } from './bag.js';
 import { consumeDungeonEntry, dungeonBosses } from './world.js';
-import { $, log, renderHeader, renderHero, renderMap, updateMapProgress, zoneName } from './render.js';
+import { $, log, renderHeader, renderHero, renderMap, renderCampaignStatus, updateMapProgress, zoneName } from './render.js';
 import { jobCn } from './panels.js';
 import { fmtNum } from './life.js';
-import { idleRate, maybeAutoZone } from './idle.js';
+import { idleRate, maybeAutoZone, maybeCampaign } from './idle.js';
 import { renderAll } from './boot.js';
 
 export function startZone(mapKey, zoneKey, isBoss, bossKey){
@@ -32,7 +32,7 @@ export function startZone(mapKey, zoneKey, isBoss, bossKey){
     }
   }
   state.zone={mapKey, zoneKey, isBoss, bossKey};
-  state.combat=null;
+  state.combat=null; state.combatGroup=null;
   log('<span class="sys">开始挂机：'+zoneName(state.zone)+'</span>');
   setIdle(true);
   renderMap(); renderHeader();
@@ -56,17 +56,22 @@ export function setIdle(on){
 // 通关态翻转）才回退全量重渲染。
 export function refreshMapProgress(){
   const el=$('map-pane'); if(!el) return;
-  if(updateMapProgress()) return;          // 增量成功 → 完事
+  if(updateMapProgress()){ renderCampaignStatus(); return; }          // 增量成功 → 同步战役条后完事
   const sc = el.scrollTop;
-  renderMap();
+  renderMap();                 // renderMap 末尾已调用 renderCampaignStatus
   if(sc>0) el.scrollTop = sc;
 }
 export function loop(){
   if(!state.idle) return;
-  if(!state.zone){ setIdle(false); log('<span class="danger">请先在左侧选择一个区域开始挂机。</span>'); return; }
+  // 战役模式：先用战役逻辑确保有目标区域（刚启动 / 切换地图时 bootstrap），再进入战斗 tick
+  if(state.auto.campaign) maybeCampaign();
+  if(!state.zone){
+    if(!state.auto.campaign){ setIdle(false); log('<span class="danger">请先在左侧选择一个区域开始挂机。</span>'); }
+    return;
+  }
   const steps = state.speed;
   for(let i=0;i<steps;i++) tick();
-  maybeAutoZone();        // P0：定期按经验/秒自动换区
+  if(state.auto.campaign) maybeCampaign(); else maybeAutoZone();   // P0：战役推进 / 按经验·秒自动换区
   maybeAutoSalvage();     // 包裹将满时自动分解白/绿装（回收矿石/宝石，避免被静默丢弃）
   // 头部与角色面板刷新（HP/MP/EXP）每轮
   renderHeader(); renderHero();
@@ -190,7 +195,7 @@ export function importSaveText(txt){
   }
   applySavePayload(d);
   state._loadedTs=null; state._loadedRate=null;   // 导入后不触发离线补算
-  state.zone=null; state.combat=null; state.idle=false;
+  state.zone=null; state.combat=null; state.combatGroup=null; state.idle=false;
   save(true);
   const ov=$('overlay'); if(ov) ov.style.display='none';
   renderAll();

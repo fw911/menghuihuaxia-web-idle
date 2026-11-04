@@ -8,11 +8,12 @@ import { DATA, getMonster } from './core.js';
 import { isXianzhiNow, monsterExp } from './player.js';
 import { gainExp } from './battle.js';
 import { addToBag } from './bag.js';
-import { bossZoneCleared, mapCleared, travelTo } from './world.js';
+import { bossZoneCleared, dungeonBosses, dungeonBossKilled, dungeonEntryLeft, mapCleared, todayKey, travelTo, zoneExplored } from './world.js';
 import { $, log, renderHeader, renderHero, renderMap, zoneName } from './render.js';
 import { renderTab } from './tabs.js';
 import { itemName, useConsumable } from './shop.js';
 import { fmtNum } from './life.js';
+import { startZone } from './loop.js';
 
 
 // ---------- 离线收益（离线挂机也能赚） ----------
@@ -210,12 +211,12 @@ export function autoZone(force){
   if(same && !force) return;
   if(p.map!==b.mapKey){ travelTo(b.mapKey); }
   state.zone={mapKey:b.mapKey, zoneKey:b.zoneKey, isBoss:b.isBoss};
-  state.combat=null;
+  state.combat=null; state.combatGroup=null;
   log('<span class="sys">自动换区 → '+zoneName(state.zone)+'（预估 '+b.score.toFixed(1)+' 经验/秒）</span>');
   renderMap(); renderHeader();
 }
-// 升到新等级时重新评估区域（异步，避免打断当前结算）
-export function autoZoneOnLevelUp(){ if(state.auto.zone) setTimeout(()=>autoZone(false), 0); }
+// 升到新等级时重新评估区域（异步，避免打断当前结算）；战役模式优先，不抢选区
+export function autoZoneOnLevelUp(){ if(state.auto.zone && !state.auto.campaign) setTimeout(()=>autoZone(false), 0); }
 // 挂机中定期评估：每 30 tick 一次、且只在非战斗中切换，避免打断战斗
 export let _lastZoneTick = -999;
 export function maybeAutoZone(){
@@ -224,6 +225,157 @@ export function maybeAutoZone(){
   if(state.ticks - _lastZoneTick < 30) return;
   _lastZoneTick = state.ticks;
   autoZone(false);
+}
+
+// ---------- 战役推进（自动推进地图）----------
+// 规则（按用户需求）：按 maps.json 数组顺序逐图推进；当前图所有「练级区」(explore_target)
+// 的怪物数量都刷满后，才自动前往下一张图。野外首领区(boss_zone)不计入推进门槛（BOSS图除外）；
+// 副本首领(dungeon_bosses)作为每图收尾一并清理——当日进入次数用尽则「卡住等刷新」，
+// 原地刷练级区攒金币/材料，次日次数刷新后自动回头补打，不打断、不报错、不丢进度。
+let _lastCampaignTick = -999;
+let _campaignDoneLogged = false;
+let _campaignWaitLogged = false;
+let _campaignWaitDay = '';
+// 一张图里「计入推进门槛」的普通练级区（即有探索目标的区域）
+export function campaignRegularZones(map){ return (map.zones||[]).filter(z=> (z.explore_target||0)>0); }
+export function allRegularExplored(map){ return campaignRegularZones(map).every(z=> zoneExplored(map.key, z.key)); }
+// 战役目标图：数组顺序中第一张「普通练级区未全部探索」的图；无则 null（全部完成）
+export function campaignTargetMap(){
+  const p=state.player;
+  for(const map of (DATA.maps.maps||[])){
+    if(isXianzhiNow() && map.key!=='xianzhijing') continue;   // 仙之境静修时不推进
+    if(campaignRegularZones(map).length===0) continue;          // 无练级区的图（如仙之境）视为已完成
+    if(!allRegularExplored(map)) return map;                    // 第一张未完成的 → 当前目标
+  }
+  return null;
+}
+// 目标图里第一个未完成的练级区
+export function campaignIncompleteZone(map){
+  for(const z of campaignRegularZones(map)) if(!zoneExplored(map.key, z.key)) return z.key;
+  return null;
+}
+// 当前图副本首领：返回第一个「未击杀 + 等级够 + 今日有次数」的首领；
+// 全部击杀 → null；仍有未杀但今日次数用尽 → {wait:true}
+export function campaignDungeonTarget(map){
+  const bs=(map.dungeon_bosses||[]); if(!bs.length) return null;
+  const p=state.player;
+  if(p.level < (map.enter_level_min||0)) return null;   // 等级不够 → 跳过副本，随等级自然解锁
+  let anyLeft=false;
+  for(const b of bs){
+    if(dungeonBossKilled(map.key, b.key)) continue;
+    anyLeft=true;
+    if(dungeonEntryLeft(map)>0) return {bossKey:b.key, wait:false};
+  }
+  return anyLeft? {wait:true} : null;
+}
+// 战役主调度（由 loop() 在 idle 时定期调用）；combat/仙之境时让出
+export function maybeCampaign(){
+  if(!state.auto.campaign || !state.player) return;
+  if(isXianzhiNow()) return;
+  if(state.combat) return;
+  const p=state.player;
+  const map = campaignTargetMap();
+  if(!map){
+    if(!_campaignDoneLogged){
+      _campaignDoneLogged=true; state.zone=null; state.combat=null; state.combatGroup=null;
+      log('<span class="lv">★ 战役推进完成：所有地图练级区均已探索完成！</span>');
+    }
+    return;
+  }
+  _campaignDoneLogged=false;
+  // 当前练级区若刚完成 → 立即推进下一区（不受节流限制，保证刷满一张图即走）
+  const curZoneDone = state.zone && !state.zone.isBoss && state.zone.mapKey===map.key
+    && zoneExplored(map.key, state.zone.zoneKey);
+  if(!curZoneDone && state.ticks - _lastCampaignTick < 15) return;
+  _lastCampaignTick = state.ticks;
+
+  // 不在目标图 → 前往（travelTo 自带解锁链检查；数组顺序保证前序图已解锁）
+  if(p.map !== map.key){
+    travelTo(map.key);
+    if(p.map !== map.key){
+      const need=(DATA.maps.maps.find(m=>m.key===map.unlock_map)||{}).name||map.unlock_map||'未知';
+      log('<span class="dmg">战役推进受阻：'+map.name+' 尚未解锁（需先探索 '+need+'），已回退自动换区</span>');
+      autoZone(true); return;
+    }
+    log('<span class="sys">战役推进：前往 '+map.name+'</span>');
+    return;   // 下一 tick 再选区内区域
+  }
+  // 1) 优先把当前图练级区刷完
+  const zk = campaignIncompleteZone(map);
+  if(zk){
+    const cur = state.zone && !state.zone.isBoss && state.zone.zoneKey===zk && state.zone.mapKey===map.key;
+    if(!cur) startZone(map.key, zk, false);
+    return;
+  }
+  // 2) 练级区全清 → 副本首领收尾
+  const dt = campaignDungeonTarget(map);
+  if(dt===null){
+    log('<span class="lv">✔ 战役推进：'+map.name+' 练级区+副本首领已全部完成，前往下一张图</span>');
+    return;   // 下一 tick campaignTargetMap 会选到下一张图
+  }
+  if(dt.wait){
+    // 卡住等刷新：原地刷练级区攒金币/材料，等待次日次数刷新
+    if(!_campaignWaitLogged || _campaignWaitDay!==todayKey()){
+      _campaignWaitLogged=true; _campaignWaitDay=todayKey();
+      log('<span class="dmg">战役推进：'+map.name+' 副本首领今日次数已用完，原地刷练级区等待明日刷新</span>');
+    }
+    if(!state.zone || state.zone.isBoss){
+      const any=campaignRegularZones(map)[0];
+      if(any) startZone(map.key, any.key, false);
+    }
+    return;
+  }
+  // dt.bossKey：打这个副本首领
+  const curB = state.zone && state.zone.isBoss && state.zone.bossKey===dt.bossKey && state.zone.mapKey===map.key;
+  if(!curB) startZone(map.key, null, true, dt.bossKey);
+}
+
+// 战役进度快照（供 UI 显示）：返回结构化的推进进度，渲染层只负责展示
+export function campaignProgressInfo(){
+  const p=state.player;
+  if(!state.auto.campaign) return { enabled:false };
+  const maps=(DATA.maps.maps||[]);
+  const withReg = maps.filter(m=>campaignRegularZones(m).length>0);
+  const total = withReg.length;
+  const doneCount = withReg.filter(m=>allRegularExplored(m)).length;
+  const map = campaignTargetMap();
+  if(!map) return { enabled:true, done:true, doneCount, total, overallPct: total?100:100 };
+  const reg = campaignRegularZones(map);
+  const explored = reg.filter(z=>zoneExplored(map.key, z.key)).length;
+  // 当前正在推进的区域（用于状态行展示）
+  let currentZone=null, inDungeon=null;
+  if(state.zone && state.zone.mapKey===map.key){
+    if(!state.zone.isBoss){
+      const z=reg.find(zz=>zz.key===state.zone.zoneKey);
+      if(z) currentZone={key:z.key, name:z.name};
+    } else {
+      const db=(map.dungeon_bosses||[]).find(b=>b.key===state.zone.bossKey);
+      if(db) inDungeon=db.name; else if(map.boss_zone) inDungeon=map.boss_zone.name;
+    }
+  }
+  // 副本首领进度（收尾阶段）
+  const dbs=dungeonBosses(map);
+  const dbKilled=dbs.filter(b=>dungeonBossKilled(map.key,b.key)).length;
+  const lim=map.daily_enter_limit||0;
+  const left=dungeonEntryLeft(map);
+  const dt=campaignDungeonTarget(map);
+  const dungeonWait=!!(dt&&dt.wait);
+  // 下一张图：目标图之后、第一张含练级区的图
+  let nextMap=null;
+  const idx=maps.findIndex(m=>m.key===map.key);
+  for(let i=idx+1;i<maps.length;i++){
+    if(campaignRegularZones(maps[i]).length>0){ nextMap={key:maps[i].key, name:maps[i].name}; break; }
+  }
+  return {
+    enabled:true, done:false, doneCount, total,
+    map:{key:map.key, name:map.name},
+    explored, totalReg:reg.length,
+    currentZone, inDungeon,
+    dbKilled, dbTotal:dbs.length, dungeonLeft:left, dungeonLimit:lim, dungeonWait,
+    nextMap,
+    mapPct: reg.length? Math.round(explored/reg.length*100):100,
+    overallPct: total? Math.round(doneCount/total*100):100
+  };
 }
 
 // ---------- 挂机统计与后端上报 ----------
