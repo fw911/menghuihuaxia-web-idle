@@ -10,6 +10,53 @@ import { eventLog, log } from './render.js';
 import { fmtNum, titleDmgMult } from './life.js';
 
 // ---------- 经验/属性 ----------
+// ── 五维加点（原版口径）───────────────────────────────────────────────
+// 原版 jobs.json#per_level_points：每级可自由分配的点数（4 职业均为 6）。
+// 原版 five = base_stats + growth×(level-1) + **玩家手动分配**的点数。
+// 早期版本把这点数自动加到全部 5 个维度（见 smtree.computeStats 旧实现），
+// 属于自研简化：属性因此为原版的 3.1~3.4 倍，且「加点」这条成长主线缺失。
+// 现按原版改为玩家手动分配。
+export function attrPerLevel(job){
+  const jc=(DATA.jobs.jobs||[]).find(j=>j.key===job);
+  return jc ? (jc.per_level_points||0) : 0;
+}
+export function attrAllocOf(p){
+  if(!p.attr) p.attr={};
+  return p.attr;
+}
+export function attrPointsUsed(p){
+  const a=(p&&p.attr)||{}; let n=0;
+  for(const k in a) n += Math.max(0, Math.trunc(a[k]||0));
+  return n;
+}
+export function attrPointsTotal(p){
+  if(!p) return 0;
+  return attrPerLevel(p.job) * Math.max(0, (p.level||1)-1);
+}
+export function attrPointsFree(p){
+  return Math.max(0, attrPointsTotal(p) - attrPointsUsed(p));
+}
+// 分配 n 点到 dim（n<0 即减点/洗点）；返回 {ok,msg}
+export function allocAttr(p, dim, n){
+  if(!p) return {ok:false,msg:'无角色'};
+  const per=attrPerLevel(p.job);
+  if(!per) return {ok:false,msg:'该职业没有可分配的属性点'};
+  const a=attrAllocOf(p);
+  const cur=Math.trunc(a[dim]||0);
+  const want=cur+(n||0);
+  if(want<0) return {ok:false,msg:'不能减到负数'};
+  if(attrPointsUsed(p)-cur+want > attrPointsTotal(p)) return {ok:false,msg:'可用点数不足'};
+  a[dim]=want;
+  refreshStats();
+  return {ok:true,msg:'属性点已分配'};
+}
+// 全量洗点
+export function resetAttr(p){
+  if(!p) return {ok:false,msg:'无角色'};
+  p.attr={};
+  refreshStats();
+  return {ok:true,msg:'已洗点'};
+}
 export function expToNext(level){
   const ef = DATA.character.exp_formula;
   // exp_formula(15*L^3) 是「升到该等级的累计经验」曲线，单级需求取差分。

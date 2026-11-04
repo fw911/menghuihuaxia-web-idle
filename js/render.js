@@ -4,7 +4,7 @@
  */
 import { state } from './state.js';
 import { DATA, EVENT_KEEP, LOG_KEEP, LOG_SHOW, PASSIVES, QIPO_KEYS, SANHUN_KEYS, SLOT_NAME, clamp } from './core.js';
-import { expToNext, isXianzhiNow, jobSkills, passiveLevel, skillLvData, skillUpgradeReq, sm, smExpNeed, smMaxLevel, smTier, smTitle, smTransform, whItemName, whMaxLevel, whName, whReqLevel, wuhunExpNeed, wuhunStats, xzCapMin, xzRatePerMin } from './player.js';
+import { attrPointsFree, expToNext, isXianzhiNow, jobSkills, passiveLevel, skillLvData, skillUpgradeReq, sm, smExpNeed, smMaxLevel, smTier, smTitle, smTransform, whItemName, whMaxLevel, whName, whReqLevel, wuhunExpNeed, wuhunStats, xzCapMin, xzRatePerMin } from './player.js';
 import { xyCfg, xyDailyCap, xyGradeDef, xyGrades, xyMatRequirement, xyQuestState, xyRecipeName, xyRecipeTypes, xyStrCap, xyTrialCap } from './quest.js';
 import { refreshStats, smEquipOk, smFmt, smNodeLv, smNodes, smPrereqOk, smSpent, smTierDef } from './smtree.js';
 import { summonTier } from './battle.js';
@@ -308,9 +308,19 @@ export function renderHero(){
   for(const k in s.combat){ if(shown[k]) continue;
     html+='<div class="st"><span>'+(CN_COMBAT[k]||k)+'</span><b>'+fmtNum(s.combat[k])+'</b></div>'; }
   html+='</div>';
-  // 基础属性
-  html+='<h3>基础属性</h3><div class="stat-grid">';
-  for(const k in s.attr) html+='<div class="st"><span>'+(CN_ATTR[k]||k)+'</span><b>'+fmtNum(Math.round(s.attr[k]))+'</b></div>';
+  // 基础属性（五维 + 手动加点）
+  const _free = attrPointsFree(p);
+  const _alloc = p.attr || {};
+  html+='<h3>基础属性</h3>';
+  if(_free>0) html+='<div class="muted">可分配点数：<b>'+_free+'</b>'
+    +'<button class="mini" data-attr="reset">洗点</button></div>';
+  html+='<div class="stat-grid">';
+  for(const k in s.attr){
+    const _ad=Math.trunc(_alloc[k]||0);
+    html+='<div class="st"><span>'+(CN_ATTR[k]||k)+'</span><b>'+fmtNum(Math.round(s.attr[k]))
+      +(_ad?'<span class="muted">（手动+'+_ad+'）</span>':'')
+      +'</b>'+(_free>0?'<button class="mini" data-attr="add" data-dim="'+k+'">+</button>':'')+'</div>';
+  }
   html+='</div>';
   // 装备栏
   html+='<h3>装备（点击卸下）</h3><div class="eqgrid">';

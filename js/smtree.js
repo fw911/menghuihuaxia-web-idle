@@ -198,12 +198,23 @@ export function smActiveCast(m){
 
 export function computeStats(p){
   const job = DATA.jobs.jobs.find(j=>j.key===p.job);
-  // 基础属性
+  // 基础属性（原版口径）：base_stats + growth×(level-1)
   const attr = {};
   for(const k in job.base_stats) attr[k]=0;
   for(const k in job.base_stats){
-    attr[k] = job.base_stats[k] + job.growth[k]*(p.level-1) + job.per_level_points*(p.level-1);
+    attr[k] = job.base_stats[k] + job.growth[k]*(p.level-1);
   }
+  // 五维加点：原版每级 per_level_points 个点数由玩家**手动分配**（jobs.json#per_level_points）。
+  // 旧实现把这点数自动加到全部 5 个维度 → 属性为原版的 3.1~3.4 倍，且没有加点系统。
+  // 旧存档迁移：把原先自动加的量等量转入玩家加点，保证老角色强度不变（可再自行重分配）。
+  if(p && !p.attr_migrated){
+    const _legacy = (job.per_level_points||0) * Math.max(0, (p.level||1)-1);
+    p.attr = {};
+    for(const k in job.base_stats) p.attr[k] = _legacy;
+    p.attr_migrated = true;
+  }
+  const _alloc = (p && p.attr) || {};
+  for(const k in attr) attr[k] += Math.trunc(_alloc[k]||0);
   // 神魔技能树：体质百分比（需在属性→战斗属性转换前生效）
   const _smAg = (p.shenmo && p.shenmo.faction) ? smAggCached() : null;
   if(_smAg && _smAg.constitutionPct) attr.constitution = Math.round(attr.constitution*(1+_smAg.constitutionPct/100));

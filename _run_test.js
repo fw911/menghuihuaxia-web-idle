@@ -1027,6 +1027,23 @@ function ok(name, cond, extra) {
         const it = E.genEquip(slot, q.job, E.tierFromLevel(L), L);
         if (it) { it.job = q.job; q.equip[slot] = it; }
       }
+      // 原版口径：每级 per_level_points(6) 个点数由玩家手动分配五维。
+      // 属性回归原版零加点基线后，「配装玩家」不再自带 3.2 倍属性，
+      // 这里模拟正常玩家把点数按成长最高的维度分配出去。
+      (function(){
+        const per = E.attrPerLevel ? E.attrPerLevel(q.job) : 6;
+        const jc = E.DATA.jobs.jobs.find(j => j.key === q.job) || {};
+        const g = jc.growth || {};
+        // 理性玩家不会把点全加力量（体质不加点→血量不足→被首领打死）：
+        // 输出 50% / 生存 30% / 敏捷 20%
+        const mix = [['strength', 0.5], ['constitution', 0.3], ['agility', 0.2]];
+        const total = per * Math.max(0, L - 1);
+        q.attr = q.attr || {};
+        for (const [dim, ratio] of mix) {
+          q.attr[dim] = (q.attr[dim] || 0) + Math.round(total * ratio);
+        }
+        q.attr_migrated = true;
+      })();
       E.refreshStats();
       Object.assign(E.state.auto, { potion: true, buy: true, zone: false, junk: true, stats: false, rank: false });
       E.state.speed = 4;
@@ -1034,7 +1051,10 @@ function ok(name, cond, extra) {
       const d0 = E.state.sess.deaths || 0;
       E.state.combat = null; E.setIdle(true);
       let won = false, rounds = 0;
-      for (; rounds < 1500; rounds++) {
+      // 轮数上限：属性回归原版零加点基线后，副本首领战变长
+      //   （实测 轩辕台Lv40 约 1400~1600 轮、幽芷冢Lv65 约 2000~2200 轮），
+      //   1500 上限不够；3000 轮可稳定通过。
+      for (; rounds < 3000; rounds++) {
         E.loop();
         const mb = q.stats.mapBoss && q.stats.mapBoss[map.key];
         if (mb && mb[b.key]) { won = true; break; }

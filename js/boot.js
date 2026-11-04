@@ -8,6 +8,7 @@ import { DATA, loadData, pageVisible } from './core.js';
 import { syncSkills } from './player.js';
 import { refreshStats } from './smtree.js';
 import { genEquip } from './equip.js';
+import { bindAttrClicks } from './binds.js';
 import { equipItem } from './bag.js';
 import { $, log, renderBattle, renderHeader, renderMap } from './render.js';
 import { renderTab } from './tabs.js';
@@ -24,6 +25,7 @@ export function newPlayer(name, job){
   state.player={ name:name||'游侠', job, level:1, exp:0, gold:50, hp:1, mp:1, crystal:0,
     map:'beijun', unlocked:{beijun:true}, equip:{}, bag:[], quests:{}, ores:ores0, materials:materials0,
     wuhunSlots:[null,null], shenmo:null, skills:{}, passives:{}, skillCd:{}, _s:null,
+    attr:{}, attr_migrated:true,   // 五维手动加点（原版口径）：attr=已分配点数
     summon:null, mining:{level:1, exp:0}, stats:{kills:0, killType:{}, mapKills:{}, mapClear:[], mapBoss:{}, dungeonEnter:{}, zoneKills:{}, minionKills:{}, refine7:0, craftCount:0, crystalTotal:0}, ach:{}, titles:{}, equippedTitle:null, crystals:{} };
   syncSkills();   // 已达到学习等级的技能/被动自动学会
   refreshStats();
@@ -171,6 +173,7 @@ export async function boot(){
   loadAuto(); restoreCloud();
   showJobPicker();
   wireAuthUI();
+  bindAttrClicks();          // 五维加点：容器委托（renderHero 重绘 pane 也不丢事件）
   load();                       // 读取本地存档（不再直接进游戏，先过登录）
   applyOfflineEarnings();   // 离线收益：按离开时长补算经验/金币
   // 按钮

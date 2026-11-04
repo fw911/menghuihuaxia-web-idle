@@ -5,7 +5,7 @@
 import { saveAuto, state } from './state.js';
 import { cloudDelete, cloudLoad, cloudLogin, cloudLogout, cloudRank, cloudRegister, cloudSave, persistCloud } from './api.js';
 import { LS, uid } from './core.js';
-import { equipWuhun, smJoin, unequipWuhun, upgradeSkill, whName, wuhunActivate, wuhunAnnihilate, wuhunEvolve, wuhunFuse, wuhunRecycle } from './player.js';
+import { allocAttr, equipWuhun, resetAttr, smJoin, unequipWuhun, upgradeSkill, whName, wuhunActivate, wuhunAnnihilate, wuhunEvolve, wuhunFuse, wuhunRecycle } from './player.js';
 import { xyAccept, xyHandIn, xyRefine, xyRefresh, xyStrengthen, xySubmitMaterials, xyTrialStart } from './quest.js';
 import { refreshStats, smAddPoint, smResetPoints } from './smtree.js';
 import { summonDef } from './battle.js';
@@ -22,8 +22,32 @@ import { copySaveText, exportSaveFile, importSaveFile, importSaveText, save, set
 import { autoZone, maybeCampaign } from './idle.js';
 import { renderAll } from './boot.js';
 
+// ── 五维加点（原版口径）───────────────────────────────────────────────
+// 原版每级 per_level_points（6）个点数由玩家在五维间自由分配。
+// 委托绑在 hero-pane 容器上：renderHero 每次重绘其 innerHTML，
+// 绑在子元素上会丢，绑在容器上才稳。
+export function bindAttrClicks(){
+  const el=$('hero-pane'); if(!el) return;
+  if(el.__attrBound) return;
+  el.__attrBound=true;
+  el.onclick=(ev)=>{
+    const btn = (ev.target && ev.target.closest) ? ev.target.closest('[data-attr]') : null;
+    if(!btn) return;
+    if(ev.stopPropagation) ev.stopPropagation();
+    const p=state.player; if(!p) return;
+    const a=btn.getAttribute('data-attr');
+    const r = (a==='add') ? allocAttr(p, btn.getAttribute('data-dim'), 1)
+             : (a==='reset') ? resetAttr(p)
+             : {ok:false,msg:'未知操作'};
+    log(r.ok? ('<span class="loot">'+r.msg+'</span>') : ('<span class="dmg">'+r.msg+'</span>'));
+    if(r.ok) saveAuto();
+    renderHero();
+  };
+}
+
 export function bindTabClicks(){
   const el=$('tab-pane');
+  bindAttrClicks();          // 五维加点：容器委托（renderHero 会重绘 pane，需绑在容器上）
   el.querySelectorAll('[data-item]').forEach(d=> d.onclick=()=>{
     const it=findItem(d.getAttribute('data-item')); if(!it) return;
     if(it.type==='consumable'){ useConsumable(it); return; }
