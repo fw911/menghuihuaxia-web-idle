@@ -194,8 +194,89 @@ web-idle **完全没有**以下 v0.91 功能域。对照我们另一套项目
 web-idle 标注为"原版伤害公式"且作者有反汇编取证材料；我方那版 README 自述为
 「**比率型**伤害公式（避免高防御直接归零）」= **自研变体**。
 
-→ 若以"100% 真实复刻"为目标，战斗公式应向 **`raw²/def` + 暴击 1.8 + reflect** 口径靠拢，
-**但建议先在反汇编产物中核实原版常量，再改**（不宜直接照搬注释）。
+→ 结论：**已核实原版字节码，铁证如下**（并已在我方 FastAPI 版落地改造，见下）。
+
+---
+
+## 六之二、原版公式铁证（已从原版 exe 字节码逐条还原）
+
+### 证据来源
+`F:\梦回华夏\_archive\web_idle_disassembly_20261020.zip` → `_dis_battle.txt`
+（原版 exe 的反汇编取证导出，当年正是用它裁定战斗公式/经验曲线/挖矿倍率）
+
+原版为 **Python 3.14 冻结打包**（`BACKHX_v0.91.exe`，73MB，Cython/自研归档），
+逻辑在 `battle/engine.py`，字节码可直接读出常量与运算。
+
+### `compute_phys_damage`（battle\engine.py:434）逐条还原
+```python
+440  if _roll_dodge(d_stats): return (0, False)          # 闪避 → 0 伤害
+442  atk_lo, atk_hi = _phys_atk_range(a_stats)
+443  atk = random.randint(atk_lo, atk_hi)                  # 整数区间随机
+444  df  = _roll_def(d_stats, 'phys_def', 'phys_def_pct')
+445  dmg = atk * atk / df                                   # ★ 平方除防御（无 +atk 项）
+446  is_crit = random.random() < a_stats.phys_crit / 100
+448  dmg *= (2 + attacker.state._crit_dmg_bonus_pct / 100)  # ★ 暴击基数 2
+449  dmg = apply_multi_reduce(dmg, defender)                # 多来源减伤逐个乘算
+```
+### `skill_damage`（battle\engine.py:482）
+```python
+495  sd    = skill.get('damage', 0)
+499  pierce= bool(skill.get('pierce'))
+500  if not pierce and _roll_dodge(...): return (0, False)
+502  atk   = roll_attack(a_stats, elem)
+512  ignore_def = skill.get('ignore_def')
+514  df = df * (1 - ignore_def/100)          # 破防
+515  raw = (atk + sd) * atk / df              # ★ 技能伤害：技能点数加算攻击力后再平方除防
+519  is_crit = attacker.state._force_crit or random.random() < crit/100
+520  raw *= (2 + _crit_dmg_bonus_pct/100)
+```
+### `_phys_atk_range`（:369）/ `_roll_def`（:414）/ `apply_multi_reduce`（:469）
+```python
+_phys_atk_range: lo,hi = min/max_phys_atk or phys_atk; hi=max(hi,lo)
+                  mult = 1 + phys_atk_pct/100;  return int(lo*mult), int(hi*mult)
+_roll_def      : base = random.randint(max(lo,1), max(lo+1,hi))   # lo<=hi 时
+                  return max(base,1) * (1 + def_pct/100)
+apply_multi_reduce: for r in sources: if r and r>0: dmg *= (1 - r/100)   # 多来源乘算
+```
+
+### 三方口径对照（最终裁定）
+| 环节 | **原版 v0.91（铁证）** | web-idle | 我方 FastAPI（改前） |
+|---|---|---|---|
+| 玩家普攻 | `atk²/df` | `raw²/def` ✅ | `atk²/(atk+def)` ❌ |
+| 技能伤害 | `(atk+sd)·atk/df` | `base²/def`（近似） | `raw²/(raw+def)` ❌ |
+| **暴击倍率** | **`2 + bonus%`** | **`1.8 + bonus%`** ❌ 基数 | **`1.6`** ❌ |
+| 攻击力取值 | `randint(min×(1+pct%), max×(1+pct%))` | `atk×rnd(0.85,1.15)` 近似 | `atk×rnd(0.9,1.1)` 近似 |
+| 防御取值 | `randint(min_def, max_def)` | 单一 def | 单一 min_def |
+| 减伤 | 多来源列表逐个乘算 | 单次 clamp 80% | 单值 |
+| 强制暴击 | `state._force_crit` | ❌ 无 | ❌ 无 |
+| 伤害转移 | `damage_transfer`→炎灵兽 | ❌ 无 | ❌ 无 |
+| 反击 | `_counter_on_crit` / `_counter_all_pct` | ❌ 无 | ❌ 无 |
+| 反弹 | `reflect`/`reflect_skill`/`reflect_chance` | ✅ 有 | ❌ 无 |
+
+### 已在我方 FastAPI 版落地（commit 见 game_server 仓库）
+`engine.py` 新增 `BATTLE_FORMULA` 开关（`orig` 默认 / `legacy` 保留对比），并按铁证改造：
+- 新增 `_phys_atk_range` / `_roll_def` / `_target_def` / `_apply_multi_reduce` / `_crit_mult` / `_skill_raw` / `_hit`
+- 玩家普攻、技能伤害、怪物普攻、怪物技能 → 全部走原版口径（`atk²/df`、`(atk+sd)·atk/df`、暴击基数 2、防御区间随机）
+- 神魔主动技 / 战魂 / 召唤助战 → 暂保留 legacy 口径（**这几条路径尚未取得原版取证，不在无据情况下改动数值**），已加注释标注
+- 回归：57 / 90 / 135 / 134 / **190** 项 + 契约校验 **全部通过，零回归**
+
+**伤害数值影响（实测，同一玩家 Lv30 战士 vs 鬣狗）**：
+| 场景 | orig（原版） | legacy（旧自研） | 倍数 |
+|---|---|---|---|
+| 玩家普攻平均伤害 | **20019** | 520 | **38.5×** |
+| 技能·凛光斩Lv10 平均伤害 | **24024** | 3185 | **7.5×** |
+| 怪物普攻(atk=100)打玩家 | **14.7** | 3.2 | **4.6×** |
+| 确定性 atk=100 def=50 普攻 | **200** | 66.7 | 3.0× |
+
+> 结论：旧的自研公式 `atk²/(atk+def)` 在高防御区把伤害压缩了 3~38 倍，
+> 这就是我们那版「战斗偏慢、越级难打」的根因。改用原版口径后与原版手感对齐。
+
+### 对 web-idle 的影响（未擅自改动，需你确认）
+web-idle 有两处与铁证不符，**我未改动它**（非本仓库主线，且其平衡已按现值调过）：
+1. **暴击基数 1.8 → 应为 2.0**（`js/battle.js` 的 `critMult = 1.8 + ag.critDmg/100`）
+2. **技能伤害近似**：`base = (lo+hi)/2 * (pct/100)` 后 `base²/def`，与原版 `(atk+sd)·atk/df` 不同源
+   （建议改法：`atk = randint(min_atk×(1+pct%), max_atk×(1+pct%))`，`sd = 技能等级 damage`，
+   `raw = (atk+sd)×atk/def`）
 
 ---
 
