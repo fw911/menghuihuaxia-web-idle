@@ -1,0 +1,204 @@
+{
+  "comment": "效果引擎词表登记表（D9，03 §D9）：只登记「引擎资产」——动作 / 触发原语 / merge 策略 / 时机 / scope / 排序键。本文件是引擎契约，红线 #12 要求**游戏中立**：键名与说明一律不得出现本作专属系统名（内容效果行无论属于哪个内容系统，一律留在各自内容表，不进本文件——内容可插拔北极星）。变更 = 引擎契约变更，须同步 core/combat_timings.py、core/effect_actions.py、core/trigger_primitives.py 与 config/schemas/effects_manifest.schema.json。",
+  "timings": [
+    "on_stat_compile",
+    "on_spend_resource",
+    "on_hit_judgment",
+    "on_calc_damage",
+    "on_after_hit",
+    "on_heal",
+    "on_apply_effect",
+    "on_phase_begin",
+    "on_phase_end"
+  ],
+  "scopes": [
+    "attacker",
+    "defender",
+    "all_allies",
+    "all_enemies",
+    "all_units",
+    "caster_party"
+  ],
+  "order_keys": [
+    "equipment",
+    "artifact",
+    "title",
+    "transformation",
+    "content_system",
+    "skill_effect",
+    "buff",
+    "debuff"
+  ],
+  "merge_policies": [
+    "max",
+    "stack",
+    "add",
+    "replace"
+  ],
+  "op_zones": [
+    "add",
+    "increase",
+    "mult",
+    "post_add"
+  ],
+  "intent_kinds": [
+    "heal",
+    "damage",
+    "grant_buff",
+    "remove_effect",
+    "revive",
+    "extra_action",
+    "spend_resource",
+    "log"
+  ],
+  "actions": {
+    "damage_mult": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "damage_reduce": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "armor_pierce": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "crit_rate": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "crit_dmg": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "heal_mult": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "resource_cost_mult": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "guarantee_hit": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "guarantee_crit": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "final_damage_mult": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "phase_recover": {
+      "merge_default": "max",
+      "value_kind": "none"
+    },
+    "lifesteal": {
+      "merge_default": "max",
+      "value_kind": "percent"
+    },
+    "mp_leech": {
+      "merge_default": "max",
+      "value_kind": "percent"
+    },
+    "on_kill_heal": {
+      "merge_default": "max",
+      "value_kind": "percent"
+    },
+    "grant_buff": {
+      "merge_default": "max",
+      "value_kind": "none"
+    },
+    "cleanse": {
+      "merge_default": "max",
+      "value_kind": "none"
+    },
+    "revive": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "extra_action": {
+      "merge_default": "max",
+      "value_kind": "none"
+    },
+    "reflect": {
+      "merge_default": "max",
+      "value_kind": "percent"
+    },
+    "shield": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "invuln": {
+      "merge_default": "max",
+      "value_kind": "none"
+    },
+    "spend_resource": {
+      "merge_default": "max",
+      "value_kind": "number"
+    },
+    "log": {
+      "merge_default": "max",
+      "value_kind": "none"
+    }
+  },
+  "triggers": {
+    "always": {
+      "param_type": "none"
+    },
+    "hp_below": {
+      "param_type": "number"
+    },
+    "hp_above": {
+      "param_type": "number"
+    },
+    "target_hp_below": {
+      "param_type": "number"
+    },
+    "is_crit": {
+      "param_type": "none"
+    },
+    "is_kill": {
+      "param_type": "none"
+    },
+    "is_dodge": {
+      "param_type": "none"
+    },
+    "is_counter": {
+      "param_type": "none"
+    },
+    "is_combo": {
+      "param_type": "none"
+    },
+    "skill_kind": {
+      "param_type": "string"
+    },
+    "element_is": {
+      "param_type": "string"
+    },
+    "unit_kind_is": {
+      "param_type": "string"
+    },
+    "name_contains": {
+      "param_type": "string"
+    },
+    "map_is": {
+      "param_type": "string"
+    },
+    "resource_cost_ge": {
+      "param_type": "number"
+    },
+    "has_buff": {
+      "param_type": "string"
+    },
+    "has_shield": {
+      "param_type": "none"
+    },
+    "shield_broken": {
+      "param_type": "none"
+    }
+  }
+}

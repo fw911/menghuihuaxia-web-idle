@@ -1,0 +1,240 @@
+{
+  "farm": {
+    "version": "1.0",
+    "area": {
+      "map": "beijun",
+      "safe_only": true
+    },
+    "crops": [
+      {
+        "key": "xiaomai",
+        "name": "小麦",
+        "unlock_level": 1,
+        "grow_minutes": 10,
+        "seed_key": "zz_xiaomai",
+        "seed_cost": 10,
+        "yield": [
+          20,
+          25
+        ],
+        "fertilizer_key": "feiliao",
+        "exp": 8
+      },
+      {
+        "key": "bima",
+        "name": "蓖麻",
+        "unlock_level": 5,
+        "grow_minutes": 20,
+        "seed_key": "zz_bima",
+        "seed_cost": 25,
+        "yield": [
+          18,
+          22
+        ],
+        "fertilizer_key": "feiliao",
+        "exp": 10
+      },
+      {
+        "key": "gaoliang",
+        "name": "高粱",
+        "unlock_level": 10,
+        "grow_minutes": 30,
+        "seed_key": "zz_gaoliang",
+        "seed_cost": 40,
+        "yield": [
+          15,
+          20
+        ],
+        "fertilizer_key": "feiliao",
+        "exp": 13
+      },
+      {
+        "key": "dadou",
+        "name": "大豆",
+        "unlock_level": 15,
+        "grow_minutes": 45,
+        "seed_key": "zz_dadou",
+        "seed_cost": 60,
+        "yield": [
+          13,
+          17
+        ],
+        "fertilizer_key": "feiliao",
+        "exp": 15
+      }
+    ],
+    "animals": [
+      {
+        "key": "yang",
+        "name": "羊",
+        "unlock_level": 3,
+        "grow_minutes": 20,
+        "cub_key": "yc_yang",
+        "cub_cost": 50,
+        "feed_consumption": 1,
+        "exp": 10,
+        "outputs": [
+          {
+            "item": "yangmao",
+            "count": [
+              1,
+              3
+            ]
+          }
+        ],
+        "health_bonus": 0.8,
+        "quality_bonus": 0.9
+      },
+      {
+        "key": "niu",
+        "name": "牛",
+        "unlock_level": 8,
+        "grow_minutes": 35,
+        "cub_key": "yc_niu",
+        "cub_cost": 100,
+        "feed_consumption": 2,
+        "exp": 13,
+        "outputs": [
+          {
+            "item": "niunai",
+            "count": [
+              1,
+              2
+            ]
+          },
+          {
+            "item": "niupi",
+            "count": [
+              1,
+              1
+            ]
+          }
+        ],
+        "health_bonus": 0.8,
+        "quality_bonus": 0.9
+      },
+      {
+        "key": "ma",
+        "name": "马",
+        "unlock_level": 12,
+        "grow_minutes": 50,
+        "cub_key": "yc_ma",
+        "cub_cost": 200,
+        "feed_consumption": 3,
+        "exp": 15,
+        "outputs": [
+          {
+            "item": "mamao",
+            "count": [
+              1,
+              1
+            ]
+          },
+          {
+            "item": "marou",
+            "count": [
+              1,
+              1
+            ]
+          }
+        ],
+        "health_bonus": 0.8,
+        "quality_bonus": 0.9
+      }
+    ],
+    "levels": {
+      "base_exp": 50,
+      "growth": 1.25,
+      "max_level": 20,
+      "plots": {
+        "1": 4,
+        "8": 6,
+        "15": 8
+      },
+      "pen": {
+        "1": 4,
+        "8": 6,
+        "15": 8
+      }
+    },
+    "daily": {
+      "seeds": 120,
+      "animals": 40
+    },
+    "plant_batch": 4,
+    "stock_per_plot": 30,
+    "jingpo": {
+      "key": "jingpo_lv",
+      "name": "绿精魄",
+      "feed_key": "caoliao"
+    },
+    "jinghua": {
+      "key": "jiahe_jingcui",
+      "name": "嘉禾精萃",
+      "cap_per_level": 5,
+      "cap_max": 20
+    },
+    "gift_box": {
+      "key": "fengrang_lihe",
+      "cost_key": "jiahe_jingcui",
+      "cost_count": 10,
+      "npc": {
+        "name": "田翁",
+        "map": "beijun",
+        "pos": [
+          16,
+          16
+        ]
+      },
+      "rewards": {
+        "gold": {
+          "weight": 38,
+          "range": [
+            30,
+            80
+          ]
+        },
+        "coupon_item": {
+          "weight": 20,
+          "pool": [
+            "xishuashua",
+            "ziling_hua",
+            "lucky_box"
+          ]
+        },
+        "jingpo": {
+          "weight": 40,
+          "key": "jingpo_lv",
+          "count": 1
+        },
+        "recipe": {
+          "weight": 2,
+          "key": "ronglian_cangmu",
+          "count": 1
+        }
+      }
+    },
+    "price_wave": {
+      "min": 0.88,
+      "max": 1.12
+    },
+    "care": {
+      "auto_steps": 3,
+      "step_bonus": 0.05,
+      "fertilizer_bonus": 0.05,
+      "max_bonus": 0.2,
+      "random_float": 0.1,
+      "crop_steps": [
+        "浇水",
+        "除草",
+        "除虫",
+        "施肥"
+      ],
+      "animal_steps": [
+        "喂养",
+        "清洁",
+        "防疫"
+      ]
+    }
+  }
+}

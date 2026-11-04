@@ -1,0 +1,598 @@
+{
+  "npc": {
+    "name": "铸岳",
+    "map": "xuanyuan",
+    "title": "神匠"
+  },
+  "forge": {
+    "success_rate": 1.0,
+    "perk_count_weights": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 100
+    },
+    "hole_weights": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 100
+    },
+    "perk_value_tier": 7
+  },
+  "fees_gold": {
+    "forge": 50,
+    "refine": 20,
+    "merge": 100,
+    "socket": 30,
+    "extract_alloy": 20,
+    "extract_crystal": 30
+  },
+  "merge_ladder": {
+    "perk_cum": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 1.0,
+      "9": 1.0
+    },
+    "hole_cum": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    }
+  },
+  "refine_materials": {
+    "1": [
+      {
+        "key": "gaoji_hejin",
+        "count": 1
+      },
+      {
+        "key": "jingtie_kuang",
+        "count": 1
+      }
+    ],
+    "2": [
+      {
+        "key": "gaoji_hejin",
+        "count": 1
+      },
+      {
+        "key": "jingtie_kuang",
+        "count": 1
+      }
+    ],
+    "3": [
+      {
+        "key": "gaoji_hejin",
+        "count": 2
+      },
+      {
+        "key": "jingtie_kuang",
+        "count": 1
+      }
+    ],
+    "4": [
+      {
+        "key": "gaoji_hejin",
+        "count": 2
+      },
+      {
+        "key": "jingtie_kuang",
+        "count": 1
+      }
+    ],
+    "5": [
+      {
+        "key": "gaoji_hejing",
+        "count": 2
+      },
+      {
+        "key": "jingtie_kuang",
+        "count": 1
+      }
+    ],
+    "6": [
+      {
+        "key": "gaoji_hejing",
+        "count": 2
+      },
+      {
+        "key": "jingtie_kuang",
+        "count": 1
+      }
+    ],
+    "7": [
+      {
+        "key": "gaoji_hejing",
+        "count": 3
+      },
+      {
+        "key": "jinggang_shi",
+        "count": 1
+      },
+      {
+        "key": "jingtie_kuang",
+        "count": 2
+      }
+    ]
+  },
+  "t8_refine_perk": {
+    "slot_kind": {
+      "weapon": "attack",
+      "ring1": "attack",
+      "ring2": "attack",
+      "shield": "defense",
+      "necklace": "defense",
+      "helmet": "defense7",
+      "shoulder_l": "defense7",
+      "armor": "defense7",
+      "pants": "defense7",
+      "cloak": "defense7",
+      "belt": "defense7",
+      "gloves": "defense7",
+      "shoes": "defense7"
+    },
+    "attack": {
+      "v5": "致命一击概率 +1%",
+      "v7": "致命一击概率 +2%"
+    },
+    "defense": {
+      "v5": "受到伤害 -1%",
+      "v7": "受到伤害 -2%"
+    },
+    "defense7": {
+      "v7": "受到伤害 -1%"
+    }
+  },
+  "extract": {
+    "gaoji_hejin": {
+      "gold": 20,
+      "materials": [
+        {
+          "key": "haihun",
+          "count": 1,
+          "kind": "ore"
+        },
+        {
+          "key": "lihuo",
+          "count": 3,
+          "kind": "ore"
+        }
+      ]
+    },
+    "gaoji_hejing": {
+      "gold": 30,
+      "materials": [
+        {
+          "key": "lingnian",
+          "count": 1,
+          "kind": "crystal"
+        },
+        {
+          "key": "jufa",
+          "count": 1,
+          "kind": "crystal"
+        },
+        {
+          "key": "huanshen",
+          "count": 1,
+          "kind": "crystal"
+        }
+      ]
+    }
+  },
+  "innate_perks": {},
+  "recipes": {
+    "base_warrior_weapons_8_1": {
+      "recipe_item": "peifang_duanhunfu",
+      "materials": [
+        {
+          "key": "fengling_zhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "yu_lingzhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "beidou_神石",
+          "count": 2,
+          "kind": "gem"
+        },
+        {
+          "key": "sanhun_tian",
+          "count": 20,
+          "kind": "consumable"
+        },
+        {
+          "key": "tiangang_zhanqi",
+          "count": 5,
+          "kind": "consumable"
+        },
+        {
+          "key": "sanmei_zhenhuo",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xuantie_shi",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xiaomai",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "bima",
+          "count": 80,
+          "kind": "consumable"
+        }
+      ]
+    },
+    "base_warrior_weapons_8_2": {
+      "recipe_item": "peifang_pojundao",
+      "materials": [
+        {
+          "key": "fengling_zhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "lei_lingzhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "tianxing_神石",
+          "count": 2,
+          "kind": "gem"
+        },
+        {
+          "key": "sanhun_di",
+          "count": 20,
+          "kind": "consumable"
+        },
+        {
+          "key": "tiangang_zhanqi",
+          "count": 5,
+          "kind": "consumable"
+        },
+        {
+          "key": "sanmei_zhenhuo",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xuantie_shi",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "bima",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "dadou",
+          "count": 80,
+          "kind": "consumable"
+        }
+      ]
+    },
+    "base_mage_weapons_8_1": {
+      "recipe_item": "peifang_ziyuzhang",
+      "materials": [
+        {
+          "key": "fengling_zhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "dian_lingzhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "wangyue_神石",
+          "count": 2,
+          "kind": "gem"
+        },
+        {
+          "key": "sanhun_ren",
+          "count": 20,
+          "kind": "consumable"
+        },
+        {
+          "key": "tiangang_zhanqi",
+          "count": 5,
+          "kind": "consumable"
+        },
+        {
+          "key": "sanmei_zhenhuo",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xuantie_shi",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "gaoliang",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "xiaomai",
+          "count": 80,
+          "kind": "consumable"
+        }
+      ]
+    },
+    "base_shaman_weapons_8_1": {
+      "recipe_item": "peifang_shiechui",
+      "materials": [
+        {
+          "key": "fengling_zhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "yu_lingzhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "wuxiang_神石",
+          "count": 2,
+          "kind": "gem"
+        },
+        {
+          "key": "sanhun_tian",
+          "count": 20,
+          "kind": "consumable"
+        },
+        {
+          "key": "tiangang_zhanqi",
+          "count": 5,
+          "kind": "consumable"
+        },
+        {
+          "key": "sanmei_zhenhuo",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xuantie_shi",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "dadou",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "bima",
+          "count": 80,
+          "kind": "consumable"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_8_1": {
+      "recipe_item": "peifang_xiuluozhui",
+      "materials": [
+        {
+          "key": "fengling_zhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "lei_lingzhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "yuanru_神石",
+          "count": 2,
+          "kind": "gem"
+        },
+        {
+          "key": "sanhun_di",
+          "count": 20,
+          "kind": "consumable"
+        },
+        {
+          "key": "tiangang_zhanqi",
+          "count": 5,
+          "kind": "consumable"
+        },
+        {
+          "key": "sanmei_zhenhuo",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xuantie_shi",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xiaomai",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "dadou",
+          "count": 80,
+          "kind": "consumable"
+        }
+      ]
+    },
+    "base_accessory_rings_8_1": {
+      "recipe_item": "peifang_liumangjie",
+      "materials": [
+        {
+          "key": "fengling_zhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "lei_lingzhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "yuanru_神石",
+          "count": 2,
+          "kind": "gem"
+        },
+        {
+          "key": "sanhun_tian",
+          "count": 20,
+          "kind": "consumable"
+        },
+        {
+          "key": "tiangang_zhanqi",
+          "count": 5,
+          "kind": "consumable"
+        },
+        {
+          "key": "sanmei_zhenhuo",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xuantie_shi",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "gaoliang",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "bima",
+          "count": 80,
+          "kind": "consumable"
+        }
+      ]
+    },
+    "base_accessory_necklaces_8_1": {
+      "recipe_item": "peifang_wuyalian",
+      "materials": [
+        {
+          "key": "fengling_zhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "dian_lingzhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "wuxiang_神石",
+          "count": 2,
+          "kind": "gem"
+        },
+        {
+          "key": "sanhun_di",
+          "count": 20,
+          "kind": "consumable"
+        },
+        {
+          "key": "tiangang_zhanqi",
+          "count": 5,
+          "kind": "consumable"
+        },
+        {
+          "key": "sanmei_zhenhuo",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xuantie_shi",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "dadou",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "gaoliang",
+          "count": 80,
+          "kind": "consumable"
+        }
+      ]
+    },
+    "base_warrior_shields_8_1": {
+      "recipe_item": "peifang_jingangdun",
+      "materials": [
+        {
+          "key": "fengling_zhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "dian_lingzhu",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "wuxiang_神石",
+          "count": 2,
+          "kind": "gem"
+        },
+        {
+          "key": "sanhun_ren",
+          "count": 20,
+          "kind": "consumable"
+        },
+        {
+          "key": "tiangang_zhanqi",
+          "count": 5,
+          "kind": "consumable"
+        },
+        {
+          "key": "sanmei_zhenhuo",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "xuantie_shi",
+          "count": 10,
+          "kind": "consumable"
+        },
+        {
+          "key": "bima",
+          "count": 80,
+          "kind": "consumable"
+        },
+        {
+          "key": "xiaomai",
+          "count": 80,
+          "kind": "consumable"
+        }
+      ]
+    }
+  }
+}

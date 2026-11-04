@@ -1,0 +1,394 @@
+{
+  "version": "1.8",
+  "comment": "附灵系统内容表（docs/已过时/重构-P3设计-附灵施工.md v1.8 数值权威源；七档八档概率源 docs/待做的新系统/7档8档附灵概率.md 数据集A/B）。v1.8（2026-09-07 用户拍板，依据 docs/职业平衡分析报告.md §6B.3 铭刻+32~59% 为第一大模块）：① levels 整表 ×0.5——满12阶灵韵 ≈ 白板 ×1.0（原2.0过高）；② 生命类 hp_base 整表 ×2 对冲系数减半（灵韵 max_hp 结果不变，确保生命加成不因压系数缩水）。v1.7（2026-09-04）：防御类同攻击类择向（默认物理，首灌 up 定死 fuling_side），不再双写。v1.6：costs 为 8 档基准量，低档按 tier_cost_scale 线性打折（1档×0.5 → 8档×1.0，取整≥1）。content 表：灵阶系数/材料消耗/五结果掷骰/共振/涌动/部位分类/守护符。非效果引擎词表。",
+  "min_player_level": 20,
+  "levels": [
+    0,
+    0.08,
+    0.168,
+    0.264,
+    0.36,
+    0.46,
+    0.56,
+    0.66,
+    0.76,
+    0.84,
+    0.9,
+    0.96,
+    1.0
+  ],
+  "cost_keys": [
+    "fuling_chijing",
+    "fuling_shuangning",
+    "fuling_xuanlei"
+  ],
+  "tier_cost_scale": {
+    "min_tier": 1,
+    "max_tier": 8,
+    "coef_min": 0.5,
+    "coef_max": 1.0
+  },
+  "costs": {
+    "1": [
+      1,
+      1,
+      0
+    ],
+    "2": [
+      2,
+      2,
+      0
+    ],
+    "3": [
+      3,
+      3,
+      1
+    ],
+    "4": [
+      5,
+      5,
+      2
+    ],
+    "5": [
+      9,
+      9,
+      4
+    ],
+    "6": [
+      14,
+      14,
+      7
+    ],
+    "7": [
+      20,
+      20,
+      10
+    ],
+    "8": [
+      28,
+      28,
+      15
+    ],
+    "9": [
+      40,
+      40,
+      22
+    ],
+    "10": [
+      55,
+      55,
+      30
+    ],
+    "11": [
+      75,
+      75,
+      42
+    ],
+    "12": [
+      100,
+      100,
+      60
+    ]
+  },
+  "hp_base": {
+    "1": 24,
+    "2": 36,
+    "3": 46,
+    "4": 56,
+    "5": 68,
+    "6": 76,
+    "7": 82,
+    "8": 92
+  },
+  "outcomes": {
+    "7d": {
+      "0": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 0,
+        "keep": 0,
+        "up": 100
+      },
+      "1": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 13,
+        "keep": 7,
+        "up": 80
+      },
+      "2": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 17,
+        "keep": 8,
+        "up": 75
+      },
+      "3": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 27,
+        "keep": 13,
+        "up": 60
+      },
+      "4": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 33,
+        "keep": 17,
+        "up": 50
+      },
+      "5": {
+        "destroy": 0.1,
+        "zero": 0,
+        "drop": 43,
+        "keep": 21.9,
+        "up": 35
+      },
+      "6": {
+        "destroy": 0.3,
+        "zero": 0,
+        "drop": 28,
+        "keep": 56.7,
+        "up": 15
+      },
+      "7": {
+        "destroy": 0.5,
+        "zero": 0,
+        "drop": 29,
+        "keep": 57.2,
+        "up": 13.3
+      },
+      "8": {
+        "destroy": 0.5,
+        "zero": 0,
+        "drop": 29,
+        "keep": 58.8,
+        "up": 11.7
+      },
+      "9": {
+        "destroy": 1,
+        "zero": 0.5,
+        "drop": 28.5,
+        "keep": 59.8,
+        "up": 10.2
+      },
+      "10": {
+        "destroy": 2,
+        "zero": 1,
+        "drop": 28,
+        "keep": 61,
+        "up": 8
+      },
+      "11": {
+        "destroy": 3,
+        "zero": 1,
+        "drop": 29,
+        "keep": 61,
+        "up": 6
+      },
+      "12": {
+        "destroy": 3,
+        "zero": 1,
+        "drop": 29,
+        "keep": 62.5,
+        "up": 3.5
+      }
+    },
+    "8d": {
+      "0": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 0,
+        "keep": 0,
+        "up": 100
+      },
+      "1": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 13,
+        "keep": 7,
+        "up": 80
+      },
+      "2": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 17,
+        "keep": 8,
+        "up": 75
+      },
+      "3": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 30,
+        "keep": 15,
+        "up": 55
+      },
+      "4": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 37,
+        "keep": 18,
+        "up": 45
+      },
+      "5": {
+        "destroy": 0,
+        "zero": 0,
+        "drop": 43,
+        "keep": 22,
+        "up": 35
+      },
+      "6": {
+        "destroy": 0.5,
+        "zero": 0,
+        "drop": 56,
+        "keep": 28.5,
+        "up": 15
+      },
+      "7": {
+        "destroy": 0.5,
+        "zero": 0,
+        "drop": 57,
+        "keep": 29.2,
+        "up": 13.3
+      },
+      "8": {
+        "destroy": 0.5,
+        "zero": 0,
+        "drop": 58,
+        "keep": 29.8,
+        "up": 11.7
+      },
+      "9": {
+        "destroy": 1,
+        "zero": 0,
+        "drop": 59,
+        "keep": 31.5,
+        "up": 8.5
+      },
+      "10": {
+        "destroy": 1,
+        "zero": 0.5,
+        "drop": 60.5,
+        "keep": 31.6,
+        "up": 6.4
+      },
+      "11": {
+        "destroy": 2,
+        "zero": 1,
+        "drop": 61,
+        "keep": 32.75,
+        "up": 3.75
+      },
+      "12": {
+        "destroy": 2,
+        "zero": 1,
+        "drop": 61,
+        "keep": 32.4,
+        "up": 2.1
+      }
+    }
+  },
+  "resonance": [
+    {
+      "min_lv": 3,
+      "pct": 2
+    },
+    {
+      "min_lv": 5,
+      "pct": 3
+    },
+    {
+      "min_lv": 7,
+      "pct": 4
+    },
+    {
+      "min_lv": 9,
+      "pct": 5,
+      "crit": 1
+    },
+    {
+      "min_lv": 11,
+      "pct": 6,
+      "crit": 1,
+      "dmg_reduce": 1
+    },
+    {
+      "min_lv": 12,
+      "pct": 7,
+      "crit": 2,
+      "dmg_reduce": 2
+    }
+  ],
+  "surge": {
+    "trigger_fails": 3,
+    "mult": 1.5,
+    "cap_mult": 32.0,
+    "cap_rounds": 1
+  },
+  "part_class": {
+    "atk": [
+      "weapon"
+    ],
+    "life": [
+      "ring1",
+      "ring2",
+      "necklace",
+      "cloak",
+      "shoulder_l"
+    ],
+    "def": [
+      "helmet",
+      "armor",
+      "pants",
+      "belt",
+      "gloves",
+      "shoes",
+      "shield"
+    ]
+  },
+  "guard_items": {
+    "yufu": "shouhu_yufu",
+    "hufu": "xuanling_hufu",
+    "zengfu": "lingli_zengfu"
+  },
+  "loot_supplement": {
+    "boss": [
+      "附灵材料_boss"
+    ],
+    "boss_s0": [],
+    "boss_s1": [
+      "附灵材料_boss_s1"
+    ],
+    "boss_s2": [
+      "附灵材料_boss_s2"
+    ],
+    "boss_s3": [
+      "附灵材料_boss_s3"
+    ],
+    "boss_s4": [
+      "附灵材料_boss_s4"
+    ],
+    "jubao": [
+      "附灵材料_jubao"
+    ],
+    "dungeon_boss": [
+      "附灵材料_dungeon_boss"
+    ],
+    "elite": [
+      "附灵材料_elite"
+    ],
+    "elite_s0": [],
+    "elite_s1": [
+      "附灵材料_elite_s1"
+    ],
+    "elite_s2": [
+      "附灵材料_elite_s2"
+    ],
+    "elite_s3": [
+      "附灵材料_elite_s3"
+    ],
+    "elite_s4": [
+      "附灵材料_elite_s4"
+    ]
+  }
+}

@@ -1,0 +1,2819 @@
+{
+  "dir": "paperdoll",
+  "frame": {
+    "width": 320,
+    "height": 256,
+    "frames": 8,
+    "fps": 8,
+    "offset_x": 23,
+    "char": {
+      "m": [
+        127,
+        77,
+        201,
+        221
+      ],
+      "f": [
+        130,
+        85,
+        197,
+        218
+      ]
+    }
+  },
+  "crop": {
+    "x": 74,
+    "y": 19,
+    "w": 180,
+    "h": 221
+  },
+  "parts": [
+    {
+      "part_id": 24,
+      "slot": "body",
+      "z_index": 1,
+      "cn": "身体"
+    },
+    {
+      "part_id": 4,
+      "slot": "pants",
+      "z_index": 2,
+      "cn": "护腿"
+    },
+    {
+      "part_id": 2,
+      "slot": "armor",
+      "z_index": 3,
+      "cn": "衣甲"
+    },
+    {
+      "part_id": 6,
+      "slot": "belt",
+      "z_index": 4,
+      "cn": "腰带"
+    },
+    {
+      "part_id": 12,
+      "slot": "gloves",
+      "z_index": 5,
+      "cn": "护腕"
+    },
+    {
+      "part_id": 14,
+      "slot": "gloves",
+      "z_index": 5,
+      "cn": "护腕"
+    },
+    {
+      "part_id": 8,
+      "slot": "shoulder",
+      "z_index": 6,
+      "cn": "护肩"
+    },
+    {
+      "part_id": 10,
+      "slot": "shoulder",
+      "z_index": 6,
+      "cn": "护肩"
+    },
+    {
+      "part_id": 0,
+      "slot": "helmet",
+      "z_index": 7,
+      "cn": "头盔"
+    },
+    {
+      "part_id": 18,
+      "slot": "weapon",
+      "z_index": 8,
+      "cn": "武器"
+    },
+    {
+      "part_id": 20,
+      "slot": "weapon",
+      "z_index": 8,
+      "cn": "武器"
+    },
+    {
+      "part_id": 16,
+      "slot": "shield",
+      "z_index": 8,
+      "cn": "盾牌"
+    },
+    {
+      "part_id": 22,
+      "slot": "cloak",
+      "z_index": 0,
+      "cn": "披风"
+    }
+  ],
+  "base": {
+    "warrior": "body",
+    "mage": "body",
+    "shaman": "body",
+    "darkwitch": "body"
+  },
+  "equip_appearance": {
+    "base_darkwitch_helmets_1_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_1"
+        }
+      ]
+    },
+    "base_darkwitch_helmets_2_2": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_2"
+        }
+      ]
+    },
+    "base_darkwitch_helmets_3_3": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_3"
+        }
+      ]
+    },
+    "base_darkwitch_helmets_4_4": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_4"
+        }
+      ]
+    },
+    "base_darkwitch_helmets_5_5": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_5"
+        }
+      ]
+    },
+    "base_darkwitch_helmets_6_6": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_6"
+        }
+      ]
+    },
+    "base_darkwitch_helmets_7_7": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_7"
+        }
+      ]
+    },
+    "base_darkwitch_helmets_8_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_8"
+        }
+      ]
+    },
+    "base_darkwitch_helmets_8_2": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_8"
+        }
+      ]
+    },
+    "base_darkwitch_shoulders_2_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_2_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_2_r"
+        }
+      ]
+    },
+    "base_darkwitch_shoulders_3_2": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_2_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_2_r"
+        }
+      ]
+    },
+    "base_darkwitch_shoulders_4_3": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_4_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_4_r"
+        }
+      ]
+    },
+    "base_darkwitch_shoulders_5_4": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_5_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_5_r"
+        }
+      ]
+    },
+    "base_darkwitch_shoulders_6_5": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_6_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_6_r"
+        }
+      ]
+    },
+    "base_darkwitch_shoulders_7_6": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_7_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_7_r"
+        }
+      ]
+    },
+    "base_darkwitch_shoulders_8_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_8_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_8_r"
+        }
+      ]
+    },
+    "base_darkwitch_shoulders_8_2": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_8_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_8_r"
+        }
+      ]
+    },
+    "base_darkwitch_armors_1_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1"
+        }
+      ]
+    },
+    "base_darkwitch_armors_2_2": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_2"
+        }
+      ]
+    },
+    "base_darkwitch_armors_3_3": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_3"
+        }
+      ]
+    },
+    "base_darkwitch_armors_4_4": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_4"
+        }
+      ]
+    },
+    "base_darkwitch_armors_5_5": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_5"
+        }
+      ]
+    },
+    "base_darkwitch_armors_6_6": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_6"
+        }
+      ]
+    },
+    "base_darkwitch_armors_7_7": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_7"
+        }
+      ]
+    },
+    "base_darkwitch_armors_1_8": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1"
+        }
+      ]
+    },
+    "base_darkwitch_armors_8_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_8"
+        }
+      ]
+    },
+    "base_darkwitch_armors_8_2": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_8"
+        }
+      ]
+    },
+    "base_darkwitch_pants_1_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_1"
+        }
+      ]
+    },
+    "base_darkwitch_pants_2_2": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_2"
+        }
+      ]
+    },
+    "base_darkwitch_pants_3_3": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_3"
+        }
+      ]
+    },
+    "base_darkwitch_pants_4_4": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_4"
+        }
+      ]
+    },
+    "base_darkwitch_pants_5_5": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_5"
+        }
+      ]
+    },
+    "base_darkwitch_pants_6_6": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_6"
+        }
+      ]
+    },
+    "base_darkwitch_pants_7_7": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_7"
+        }
+      ]
+    },
+    "base_darkwitch_pants_1_8": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_1"
+        }
+      ]
+    },
+    "base_darkwitch_pants_8_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_8"
+        }
+      ]
+    },
+    "base_darkwitch_pants_8_2": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_8"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_1_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_1_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_1_r"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_2_2": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_2_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_2_r"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_3_3": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_3_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_3_r"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_4_4": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_4_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_4_r"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_5_5": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_5_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_5_r"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_6_6": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_6_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_6_r"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_7_7": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_7_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_7_r"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_8_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_8_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_8_r"
+        }
+      ]
+    },
+    "base_darkwitch_gloves_8_2": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_8_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_8_r"
+        }
+      ]
+    },
+    "base_darkwitch_belts_1_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_1"
+        }
+      ]
+    },
+    "base_darkwitch_belts_2_2": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_2"
+        }
+      ]
+    },
+    "base_darkwitch_belts_3_3": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_3"
+        }
+      ]
+    },
+    "base_darkwitch_belts_4_4": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_4"
+        }
+      ]
+    },
+    "base_darkwitch_belts_5_5": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_5"
+        }
+      ]
+    },
+    "base_darkwitch_belts_6_6": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_6"
+        }
+      ]
+    },
+    "base_darkwitch_belts_7_7": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_7"
+        }
+      ]
+    },
+    "base_darkwitch_belts_8_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_8"
+        }
+      ]
+    },
+    "base_darkwitch_belts_8_2": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_8"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_1_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_1"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_2_2": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_2"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_3_3": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_3"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_4_4": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_4"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_5_5": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_5"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_6_6": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_4"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_7_7": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_7"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_8_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_8"
+        }
+      ]
+    },
+    "base_darkwitch_cloaks_8_2": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_8"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_1_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_2_2": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_2"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_3_3": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_3"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_4_4": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_4"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_5_5": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_5"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_6_6": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_6"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_7_7": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_6"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_1_8": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1"
+        }
+      ]
+    },
+    "base_mage_helmets_1_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_1"
+        }
+      ]
+    },
+    "base_mage_helmets_2_2": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_2"
+        }
+      ]
+    },
+    "base_mage_helmets_3_3": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_3"
+        }
+      ]
+    },
+    "base_mage_helmets_4_4": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_4"
+        }
+      ]
+    },
+    "base_mage_helmets_5_5": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_5"
+        }
+      ]
+    },
+    "base_mage_helmets_6_6": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_6"
+        }
+      ]
+    },
+    "base_mage_helmets_7_7": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_7"
+        }
+      ]
+    },
+    "base_mage_helmets_8_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_8"
+        }
+      ]
+    },
+    "base_mage_helmets_8_2": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_8"
+        }
+      ]
+    },
+    "base_mage_shoulders_2_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_2_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_2_r"
+        }
+      ]
+    },
+    "base_mage_shoulders_3_2": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_2_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_2_r"
+        }
+      ]
+    },
+    "base_mage_shoulders_4_3": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_4_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_4_r"
+        }
+      ]
+    },
+    "base_mage_shoulders_5_4": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_5_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_5_r"
+        }
+      ]
+    },
+    "base_mage_shoulders_6_5": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_6_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_6_r"
+        }
+      ]
+    },
+    "base_mage_shoulders_7_6": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_7_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_7_r"
+        }
+      ]
+    },
+    "base_mage_shoulders_8_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_8_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_8_r"
+        }
+      ]
+    },
+    "base_mage_shoulders_8_2": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_8_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_8_r"
+        }
+      ]
+    },
+    "base_mage_armors_1_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1"
+        }
+      ]
+    },
+    "base_mage_armors_2_2": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_2"
+        }
+      ]
+    },
+    "base_mage_armors_3_3": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_3"
+        }
+      ]
+    },
+    "base_mage_armors_4_4": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_4"
+        }
+      ]
+    },
+    "base_mage_armors_5_5": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_5"
+        }
+      ]
+    },
+    "base_mage_armors_6_6": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_6"
+        }
+      ]
+    },
+    "base_mage_armors_7_7": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_7"
+        }
+      ]
+    },
+    "base_mage_armors_8_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_8"
+        }
+      ]
+    },
+    "base_mage_armors_8_2": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_8"
+        }
+      ]
+    },
+    "base_mage_pants_1_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_1"
+        }
+      ]
+    },
+    "base_mage_pants_2_2": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_2"
+        }
+      ]
+    },
+    "base_mage_pants_3_3": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_3"
+        }
+      ]
+    },
+    "base_mage_pants_4_4": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_4"
+        }
+      ]
+    },
+    "base_mage_pants_5_5": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_5"
+        }
+      ]
+    },
+    "base_mage_pants_6_6": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_6"
+        }
+      ]
+    },
+    "base_mage_pants_7_7": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_7"
+        }
+      ]
+    },
+    "base_mage_pants_8_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_8"
+        }
+      ]
+    },
+    "base_mage_pants_8_2": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_8"
+        }
+      ]
+    },
+    "base_mage_gloves_1_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_1_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_1_r"
+        }
+      ]
+    },
+    "base_mage_gloves_2_2": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_2_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_2_r"
+        }
+      ]
+    },
+    "base_mage_gloves_3_3": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_3_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_3_r"
+        }
+      ]
+    },
+    "base_mage_gloves_4_4": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_4_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_4_r"
+        }
+      ]
+    },
+    "base_mage_gloves_5_5": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_5_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_5_r"
+        }
+      ]
+    },
+    "base_mage_gloves_6_6": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_6_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_6_r"
+        }
+      ]
+    },
+    "base_mage_gloves_7_7": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_7_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_7_r"
+        }
+      ]
+    },
+    "base_mage_gloves_8_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_8_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_8_r"
+        }
+      ]
+    },
+    "base_mage_gloves_8_2": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_8_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_8_r"
+        }
+      ]
+    },
+    "base_mage_belts_1_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_1"
+        }
+      ]
+    },
+    "base_mage_belts_2_2": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_2"
+        }
+      ]
+    },
+    "base_mage_belts_3_3": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_3"
+        }
+      ]
+    },
+    "base_mage_belts_4_4": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_4"
+        }
+      ]
+    },
+    "base_mage_belts_5_5": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_5"
+        }
+      ]
+    },
+    "base_mage_belts_6_6": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_6"
+        }
+      ]
+    },
+    "base_mage_belts_7_7": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_7"
+        }
+      ]
+    },
+    "base_mage_belts_8_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_8"
+        }
+      ]
+    },
+    "base_mage_belts_8_2": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_8"
+        }
+      ]
+    },
+    "base_mage_cloaks_2_2": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_2"
+        }
+      ]
+    },
+    "base_mage_cloaks_3_3": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_3"
+        }
+      ]
+    },
+    "base_mage_cloaks_4_4": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_4"
+        }
+      ]
+    },
+    "base_mage_cloaks_5_5": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_5"
+        }
+      ]
+    },
+    "base_mage_cloaks_6_6": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_4"
+        }
+      ]
+    },
+    "base_mage_cloaks_7_7": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_7"
+        }
+      ]
+    },
+    "base_mage_cloaks_8_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_8"
+        }
+      ]
+    },
+    "base_mage_cloaks_8_2": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_8"
+        }
+      ]
+    },
+    "base_mage_weapons_1_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1"
+        }
+      ]
+    },
+    "base_mage_weapons_2_2": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_2"
+        }
+      ]
+    },
+    "base_mage_weapons_3_3": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_3"
+        }
+      ]
+    },
+    "base_mage_weapons_4_4": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_4"
+        }
+      ]
+    },
+    "base_mage_weapons_5_5": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_5"
+        }
+      ]
+    },
+    "base_mage_weapons_6_6": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_6"
+        }
+      ]
+    },
+    "base_mage_weapons_7_7": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_7"
+        }
+      ]
+    },
+    "base_mage_weapons_1_8": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1_2"
+        }
+      ]
+    },
+    "base_shaman_helmets_1_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_1"
+        }
+      ]
+    },
+    "base_shaman_helmets_2_2": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_2"
+        }
+      ]
+    },
+    "base_shaman_helmets_3_3": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_3"
+        }
+      ]
+    },
+    "base_shaman_helmets_4_4": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_4"
+        }
+      ]
+    },
+    "base_shaman_helmets_5_5": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_5"
+        }
+      ]
+    },
+    "base_shaman_helmets_6_6": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_6"
+        }
+      ]
+    },
+    "base_shaman_helmets_7_7": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_7"
+        }
+      ]
+    },
+    "base_shaman_helmets_8_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_8"
+        }
+      ]
+    },
+    "base_shaman_helmets_8_2": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_8"
+        }
+      ]
+    },
+    "base_shaman_shoulders_2_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_2"
+        }
+      ]
+    },
+    "base_shaman_shoulders_3_2": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_3"
+        }
+      ]
+    },
+    "base_shaman_shoulders_4_3": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_4"
+        }
+      ]
+    },
+    "base_shaman_shoulders_5_4": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_5"
+        }
+      ]
+    },
+    "base_shaman_shoulders_6_5": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_6"
+        }
+      ]
+    },
+    "base_shaman_shoulders_7_6": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_7_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_7_r"
+        }
+      ]
+    },
+    "base_shaman_shoulders_8_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_8_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_8_r"
+        }
+      ]
+    },
+    "base_shaman_shoulders_8_2": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_8_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_8_r"
+        }
+      ]
+    },
+    "base_shaman_armors_1_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1"
+        }
+      ]
+    },
+    "base_shaman_armors_2_2": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_2"
+        }
+      ]
+    },
+    "base_shaman_armors_3_3": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_3"
+        }
+      ]
+    },
+    "base_shaman_armors_4_4": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_4"
+        }
+      ]
+    },
+    "base_shaman_armors_5_5": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_5"
+        }
+      ]
+    },
+    "base_shaman_armors_6_6": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_6"
+        }
+      ]
+    },
+    "base_shaman_armors_7_7": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_7"
+        }
+      ]
+    },
+    "base_shaman_armors_1_8": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1"
+        }
+      ]
+    },
+    "base_shaman_armors_8_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_8"
+        }
+      ]
+    },
+    "base_shaman_armors_8_2": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_8"
+        }
+      ]
+    },
+    "base_shaman_pants_1_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_1"
+        }
+      ]
+    },
+    "base_shaman_pants_2_2": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_2"
+        }
+      ]
+    },
+    "base_shaman_pants_3_3": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_3"
+        }
+      ]
+    },
+    "base_shaman_pants_4_4": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_4"
+        }
+      ]
+    },
+    "base_shaman_pants_5_5": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_5"
+        }
+      ]
+    },
+    "base_shaman_pants_6_6": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_6"
+        }
+      ]
+    },
+    "base_shaman_pants_7_7": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_7"
+        }
+      ]
+    },
+    "base_shaman_pants_1_8": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_1"
+        }
+      ]
+    },
+    "base_shaman_pants_8_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_8"
+        }
+      ]
+    },
+    "base_shaman_pants_8_2": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_8"
+        }
+      ]
+    },
+    "base_shaman_gloves_1_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_1_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_1_r"
+        }
+      ]
+    },
+    "base_shaman_gloves_2_2": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_2_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_2_r"
+        }
+      ]
+    },
+    "base_shaman_gloves_3_3": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_3_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_3_r"
+        }
+      ]
+    },
+    "base_shaman_gloves_4_4": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_4_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_4_r"
+        }
+      ]
+    },
+    "base_shaman_gloves_5_5": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_5_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_5_r"
+        }
+      ]
+    },
+    "base_shaman_gloves_6_6": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_6_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_6_r"
+        }
+      ]
+    },
+    "base_shaman_gloves_7_7": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_7_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_7_r"
+        }
+      ]
+    },
+    "base_shaman_gloves_8_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_8_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_8_r"
+        }
+      ]
+    },
+    "base_shaman_gloves_8_2": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_8_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_8_r"
+        }
+      ]
+    },
+    "base_shaman_belts_1_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_1"
+        }
+      ]
+    },
+    "base_shaman_belts_2_2": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_2"
+        }
+      ]
+    },
+    "base_shaman_belts_3_3": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_3"
+        }
+      ]
+    },
+    "base_shaman_belts_4_4": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_4"
+        }
+      ]
+    },
+    "base_shaman_belts_5_5": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_5"
+        }
+      ]
+    },
+    "base_shaman_belts_6_6": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_6"
+        }
+      ]
+    },
+    "base_shaman_belts_7_7": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_7"
+        }
+      ]
+    },
+    "base_shaman_belts_8_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_8"
+        }
+      ]
+    },
+    "base_shaman_belts_8_2": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_8"
+        }
+      ]
+    },
+    "base_shaman_cloaks_1_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_1"
+        }
+      ]
+    },
+    "base_shaman_cloaks_2_2": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_2"
+        }
+      ]
+    },
+    "base_shaman_cloaks_3_3": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_3"
+        }
+      ]
+    },
+    "base_shaman_cloaks_4_4": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_4"
+        }
+      ]
+    },
+    "base_shaman_cloaks_5_5": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_5"
+        }
+      ]
+    },
+    "base_shaman_cloaks_6_6": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_4"
+        }
+      ]
+    },
+    "base_shaman_cloaks_7_7": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_7"
+        }
+      ]
+    },
+    "base_shaman_cloaks_8_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_8"
+        }
+      ]
+    },
+    "base_shaman_cloaks_8_2": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_8"
+        }
+      ]
+    },
+    "base_shaman_weapons_1_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1"
+        }
+      ]
+    },
+    "base_shaman_weapons_2_2": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_2"
+        }
+      ]
+    },
+    "base_shaman_weapons_3_3": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_3"
+        }
+      ]
+    },
+    "base_shaman_weapons_4_4": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_4"
+        }
+      ]
+    },
+    "base_shaman_weapons_5_5": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_5"
+        }
+      ]
+    },
+    "base_shaman_weapons_6_6": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_6"
+        }
+      ]
+    },
+    "base_shaman_weapons_7_7": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_7"
+        }
+      ]
+    },
+    "base_shaman_weapons_1_8": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1_2"
+        }
+      ]
+    },
+    "base_warrior_helmets_1_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_1"
+        }
+      ]
+    },
+    "base_warrior_helmets_2_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_2"
+        }
+      ]
+    },
+    "base_warrior_helmets_3_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_3"
+        }
+      ]
+    },
+    "base_warrior_helmets_4_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_4"
+        }
+      ]
+    },
+    "base_warrior_helmets_5_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_5"
+        }
+      ]
+    },
+    "base_warrior_helmets_6_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_6"
+        }
+      ]
+    },
+    "base_warrior_helmets_7_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_7"
+        }
+      ]
+    },
+    "base_warrior_helmets_8_1": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_8"
+        }
+      ]
+    },
+    "base_warrior_helmets_8_2": {
+      "layers": [
+        {
+          "part_id": 0,
+          "asset": "helmet_8"
+        }
+      ]
+    },
+    "base_warrior_shoulders_2_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_2_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_2_r"
+        }
+      ]
+    },
+    "base_warrior_shoulders_3_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_3_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_3_r"
+        }
+      ]
+    },
+    "base_warrior_shoulders_4_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_4_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_4_r"
+        }
+      ]
+    },
+    "base_warrior_shoulders_5_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_5_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_5_r"
+        }
+      ]
+    },
+    "base_warrior_shoulders_6_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_6_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_6_r"
+        }
+      ]
+    },
+    "base_warrior_shoulders_7_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_7_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_7_r"
+        }
+      ]
+    },
+    "base_warrior_shoulders_8_1": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_8_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_8_r"
+        }
+      ]
+    },
+    "base_warrior_shoulders_8_2": {
+      "layers": [
+        {
+          "part_id": 8,
+          "asset": "shoulder_8_l"
+        },
+        {
+          "part_id": 10,
+          "asset": "shoulder_8_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_1_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_1_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_1_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_2_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_2_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_2_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_3_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_3_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_3_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_4_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_4_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_4_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_5_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_5_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_5_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_6_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_6_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_6_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_7_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_7_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_7_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_8_1": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_8_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_8_r"
+        }
+      ]
+    },
+    "base_warrior_gloves_8_2": {
+      "layers": [
+        {
+          "part_id": 12,
+          "asset": "gloves_8_l"
+        },
+        {
+          "part_id": 14,
+          "asset": "gloves_8_r"
+        }
+      ]
+    },
+    "base_warrior_pants_1_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_1"
+        }
+      ]
+    },
+    "base_warrior_pants_1_2": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_1"
+        }
+      ]
+    },
+    "base_warrior_pants_2_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_2"
+        }
+      ]
+    },
+    "base_warrior_pants_3_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_3"
+        }
+      ]
+    },
+    "base_warrior_pants_4_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_4"
+        }
+      ]
+    },
+    "base_warrior_pants_5_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_5"
+        }
+      ]
+    },
+    "base_warrior_pants_6_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_6"
+        }
+      ]
+    },
+    "base_warrior_pants_7_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_7"
+        }
+      ]
+    },
+    "base_warrior_pants_8_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_8"
+        }
+      ]
+    },
+    "base_warrior_pants_8_2": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_8"
+        }
+      ]
+    },
+    "base_warrior_cloaks_2_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_2"
+        }
+      ]
+    },
+    "base_warrior_cloaks_3_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_3"
+        }
+      ]
+    },
+    "base_warrior_cloaks_4_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_4"
+        }
+      ]
+    },
+    "base_warrior_cloaks_5_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_5"
+        }
+      ]
+    },
+    "base_warrior_cloaks_6_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_4"
+        }
+      ]
+    },
+    "base_warrior_cloaks_7_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_7"
+        }
+      ]
+    },
+    "base_warrior_cloaks_8_1": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_8"
+        }
+      ]
+    },
+    "base_warrior_cloaks_8_2": {
+      "layers": [
+        {
+          "part_id": 22,
+          "asset": "cloak_8"
+        }
+      ]
+    },
+    "base_warrior_armors_1_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1"
+        }
+      ]
+    },
+    "base_warrior_armors_2_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1",
+          "asset_f": "armor_2"
+        }
+      ]
+    },
+    "base_warrior_armors_3_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_3"
+        }
+      ]
+    },
+    "base_warrior_armors_4_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_4"
+        }
+      ]
+    },
+    "base_warrior_armors_5_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_5"
+        }
+      ]
+    },
+    "base_warrior_armors_6_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_6"
+        }
+      ]
+    },
+    "base_warrior_armors_7_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_7"
+        }
+      ]
+    },
+    "base_warrior_armors_8_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_8"
+        }
+      ]
+    },
+    "base_warrior_armors_8_2": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_8"
+        }
+      ]
+    },
+    "base_warrior_weapons_1_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1"
+        }
+      ]
+    },
+    "base_warrior_weapons_1_2": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1"
+        }
+      ]
+    },
+    "base_warrior_weapons_2_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_2"
+        }
+      ]
+    },
+    "base_warrior_weapons_3_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_3"
+        }
+      ]
+    },
+    "base_warrior_weapons_4_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_4"
+        }
+      ]
+    },
+    "base_warrior_weapons_5_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_5"
+        }
+      ]
+    },
+    "base_warrior_weapons_6_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_6"
+        }
+      ]
+    },
+    "base_warrior_weapons_7_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_6"
+        }
+      ]
+    },
+    "base_warrior_weapons_1_3": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_1_2"
+        }
+      ]
+    },
+    "base_warrior_weapons_2_2": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_2_2"
+        }
+      ]
+    },
+    "base_warrior_weapons_3_2": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_3_2"
+        }
+      ]
+    },
+    "base_warrior_weapons_4_2": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_4_2"
+        }
+      ]
+    },
+    "base_warrior_weapons_5_2": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_5_2"
+        }
+      ]
+    },
+    "base_warrior_weapons_6_2": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_6_2"
+        }
+      ]
+    },
+    "base_warrior_weapons_7_2": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_7"
+        }
+      ]
+    },
+    "base_warrior_shields_1_1": {
+      "layers": [
+        {
+          "part_id": 16,
+          "asset": "shield_1"
+        }
+      ]
+    },
+    "base_warrior_shields_2_1": {
+      "layers": [
+        {
+          "part_id": 16,
+          "asset": "shield_2"
+        }
+      ]
+    },
+    "base_warrior_shields_3_1": {
+      "layers": [
+        {
+          "part_id": 16,
+          "asset": "shield_3"
+        }
+      ]
+    },
+    "base_warrior_shields_4_1": {
+      "layers": [
+        {
+          "part_id": 16,
+          "asset": "shield_4"
+        }
+      ]
+    },
+    "base_warrior_shields_5_1": {
+      "layers": [
+        {
+          "part_id": 16,
+          "asset": "shield_5"
+        }
+      ]
+    },
+    "base_warrior_shields_6_1": {
+      "layers": [
+        {
+          "part_id": 16,
+          "asset": "shield_6"
+        }
+      ]
+    },
+    "base_warrior_shields_7_1": {
+      "layers": [
+        {
+          "part_id": 16,
+          "asset": "shield_7"
+        }
+      ]
+    },
+    "base_warrior_belts_1_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_1"
+        }
+      ]
+    },
+    "base_warrior_belts_2_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_2"
+        }
+      ]
+    },
+    "base_warrior_belts_3_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_3"
+        }
+      ]
+    },
+    "base_warrior_belts_4_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_4"
+        }
+      ]
+    },
+    "base_warrior_belts_5_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_5"
+        }
+      ]
+    },
+    "base_warrior_belts_6_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_6"
+        }
+      ]
+    },
+    "base_warrior_belts_7_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_7"
+        }
+      ]
+    },
+    "base_warrior_belts_8_1": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_8"
+        }
+      ]
+    },
+    "base_warrior_belts_8_2": {
+      "layers": [
+        {
+          "part_id": 6,
+          "asset": "belt_8"
+        }
+      ]
+    },
+    "base_warrior_weapons_8_1": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_8"
+        }
+      ]
+    },
+    "base_warrior_weapons_8_2": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_8_2"
+        }
+      ]
+    },
+    "base_warrior_shields_8_1": {
+      "layers": [
+        {
+          "part_id": 16,
+          "asset": "shield_8"
+        }
+      ]
+    },
+    "base_mage_weapons_8_1": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_8"
+        }
+      ]
+    },
+    "base_shaman_weapons_8_1": {
+      "layers": [
+        {
+          "part_id": 20,
+          "asset": "weapon_8"
+        }
+      ]
+    },
+    "base_darkwitch_weapons_8_1": {
+      "layers": [
+        {
+          "part_id": 18,
+          "asset": "weapon_8"
+        }
+      ]
+    },
+    "base_warrior_armors_0_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1"
+        }
+      ]
+    },
+    "base_mage_armors_0_1": {
+      "layers": [
+        {
+          "part_id": 2,
+          "asset": "armor_1"
+        }
+      ]
+    },
+    "base_mage_pants_0_1": {
+      "layers": [
+        {
+          "part_id": 4,
+          "asset": "pants_1"
+        }
+      ]
+    }
+  }
+}

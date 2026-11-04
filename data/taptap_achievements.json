@@ -1,0 +1,966 @@
+{
+  "version": 1,
+  "note": "生成器产出，勿手改。改成就表后重跑 build 即同步。",
+  "items": [
+    {
+      "openid": "level_5",
+      "game_key": "level_5",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "初出茅庐"
+    },
+    {
+      "openid": "level_10",
+      "game_key": "level_10",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "小有所成"
+    },
+    {
+      "openid": "level_15",
+      "game_key": "level_15",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "崭露头角"
+    },
+    {
+      "openid": "level_20",
+      "game_key": "level_20",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "声名鹊起"
+    },
+    {
+      "openid": "level_25",
+      "game_key": "level_25",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "锋芒初露"
+    },
+    {
+      "openid": "level_30",
+      "game_key": "level_30",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "侠名远播"
+    },
+    {
+      "openid": "level_35",
+      "game_key": "level_35",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "名动一方"
+    },
+    {
+      "openid": "level_40",
+      "game_key": "level_40",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "一方豪杰"
+    },
+    {
+      "openid": "level_45",
+      "game_key": "level_45",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "名震一方"
+    },
+    {
+      "openid": "level_50",
+      "game_key": "level_50",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "纵横江湖"
+    },
+    {
+      "openid": "level_55",
+      "game_key": "level_55",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "声威赫赫"
+    },
+    {
+      "openid": "level_60",
+      "game_key": "level_60",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "炼虚合道"
+    },
+    {
+      "openid": "level_65",
+      "game_key": "level_65",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "道骨仙风"
+    },
+    {
+      "openid": "level_70",
+      "game_key": "level_70",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "御兽乘云"
+    },
+    {
+      "openid": "level_75",
+      "game_key": "level_75",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "白日飞升"
+    },
+    {
+      "openid": "level_80",
+      "game_key": "level_80",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "昆仑问道"
+    },
+    {
+      "openid": "level_85",
+      "game_key": "level_85",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "蓬莱访仙"
+    },
+    {
+      "openid": "level_90",
+      "game_key": "level_90",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "瑶池赴会"
+    },
+    {
+      "openid": "level_95",
+      "game_key": "level_95",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "大荒纵横"
+    },
+    {
+      "openid": "level_100",
+      "game_key": "level_100",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "封神列位"
+    },
+    {
+      "openid": "level_105",
+      "game_key": "level_105",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "混元归一"
+    },
+    {
+      "openid": "level_110",
+      "game_key": "level_110",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "鸿蒙初开"
+    },
+    {
+      "openid": "level_115",
+      "game_key": "level_115",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "齐天不朽"
+    },
+    {
+      "openid": "level_120",
+      "game_key": "level_120",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "开天辟地"
+    },
+    {
+      "openid": "kill_100",
+      "game_key": "kill_100",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 100,
+      "title": "杀伐决断·1"
+    },
+    {
+      "openid": "kill_500",
+      "game_key": "kill_500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 500,
+      "title": "杀伐决断·2"
+    },
+    {
+      "openid": "kill_1000",
+      "game_key": "kill_1000",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1000,
+      "title": "杀伐决断·3"
+    },
+    {
+      "openid": "kill_5000",
+      "game_key": "kill_5000",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 5000,
+      "title": "杀伐决断·4"
+    },
+    {
+      "openid": "kill_10000",
+      "game_key": "kill_10000",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 10000,
+      "title": "杀伐决断·5"
+    },
+    {
+      "openid": "kill_30000",
+      "game_key": "kill_30000",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 30000,
+      "title": "杀伐决断·6"
+    },
+    {
+      "openid": "kill_50000",
+      "game_key": "kill_50000",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 50000,
+      "title": "杀伐决断·7"
+    },
+    {
+      "openid": "jubao_1",
+      "game_key": "jubao_1",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "聚宝寻踪·1"
+    },
+    {
+      "openid": "jubao_3",
+      "game_key": "jubao_3",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 3,
+      "title": "聚宝寻踪·2"
+    },
+    {
+      "openid": "jubao_5",
+      "game_key": "jubao_5",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 5,
+      "title": "聚宝寻踪·3"
+    },
+    {
+      "openid": "jubao_10",
+      "game_key": "jubao_10",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 10,
+      "title": "聚宝寻踪·4"
+    },
+    {
+      "openid": "jubao_20",
+      "game_key": "jubao_20",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 20,
+      "title": "聚宝寻踪·5"
+    },
+    {
+      "openid": "jubao_40",
+      "game_key": "jubao_40",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 40,
+      "title": "聚宝寻踪·6"
+    },
+    {
+      "openid": "jubao_60",
+      "game_key": "jubao_60",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 60,
+      "title": "聚宝寻踪·7"
+    },
+    {
+      "openid": "map_1",
+      "game_key": "map_1",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "行万里路·1"
+    },
+    {
+      "openid": "map_5",
+      "game_key": "map_5",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 5,
+      "title": "行万里路·2"
+    },
+    {
+      "openid": "map_10",
+      "game_key": "map_10",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 10,
+      "title": "行万里路·3"
+    },
+    {
+      "openid": "map_15",
+      "game_key": "map_15",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 15,
+      "title": "行万里路·4"
+    },
+    {
+      "openid": "map_20",
+      "game_key": "map_20",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 20,
+      "title": "行万里路·5"
+    },
+    {
+      "openid": "map_30",
+      "game_key": "map_30",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 30,
+      "title": "行万里路·6"
+    },
+    {
+      "openid": "map_40",
+      "game_key": "map_40",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 40,
+      "title": "行万里路·7"
+    },
+    {
+      "openid": "msingle_beijun",
+      "game_key": "msingle_beijun",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "青丘通关"
+    },
+    {
+      "openid": "msingle_tianshengyuan",
+      "game_key": "msingle_tianshengyuan",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "凤鸣原通关"
+    },
+    {
+      "openid": "msingle_banquan",
+      "game_key": "msingle_banquan",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "龙脊通关"
+    },
+    {
+      "openid": "msingle_nanjun",
+      "game_key": "msingle_nanjun",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "澜溪通关"
+    },
+    {
+      "openid": "msingle_qiufengyuan",
+      "game_key": "msingle_qiufengyuan",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "烽烟原通关"
+    },
+    {
+      "openid": "msingle_kunlun",
+      "game_key": "msingle_kunlun",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "玉轮通关"
+    },
+    {
+      "openid": "msingle_muxiuyulin",
+      "game_key": "msingle_muxiuyulin",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "雾隐雨林通关"
+    },
+    {
+      "openid": "msingle_jurenye",
+      "game_key": "msingle_jurenye",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "擎苍野通关"
+    },
+    {
+      "openid": "msingle_chishui",
+      "game_key": "msingle_chishui",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "落雁通关"
+    },
+    {
+      "openid": "msingle_congyuzhaoze",
+      "game_key": "msingle_congyuzhaoze",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "雁回沼泽通关"
+    },
+    {
+      "openid": "msingle_duanbigu",
+      "game_key": "msingle_duanbigu",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "寒戍谷通关"
+    },
+    {
+      "openid": "msingle_linhai",
+      "game_key": "msingle_linhai",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "青萝通关"
+    },
+    {
+      "openid": "msingle_xuanyuan",
+      "game_key": "msingle_xuanyuan",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "逐日通关"
+    },
+    {
+      "openid": "msingle_donglicao",
+      "game_key": "msingle_donglicao",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "牧云草原通关"
+    },
+    {
+      "openid": "msingle_langyapendi",
+      "game_key": "msingle_langyapendi",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "望岳盆地通关"
+    },
+    {
+      "openid": "msingle_ninghaizhou",
+      "game_key": "msingle_ninghaizhou",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "海岱州通关"
+    },
+    {
+      "openid": "msingle_xilie",
+      "game_key": "msingle_xilie",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "朔风荒原通关"
+    },
+    {
+      "openid": "msingle_guimu",
+      "game_key": "msingle_guimu",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "蛊雕墓通关"
+    },
+    {
+      "openid": "refine7_1",
+      "game_key": "refine7_1",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "百炼成钢·1"
+    },
+    {
+      "openid": "refine7_3",
+      "game_key": "refine7_3",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 3,
+      "title": "百炼成钢·2"
+    },
+    {
+      "openid": "refine7_5",
+      "game_key": "refine7_5",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 5,
+      "title": "百炼成钢·3"
+    },
+    {
+      "openid": "refine7_10",
+      "game_key": "refine7_10",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 10,
+      "title": "百炼成钢·4"
+    },
+    {
+      "openid": "refine7_20",
+      "game_key": "refine7_20",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 20,
+      "title": "百炼成钢·5"
+    },
+    {
+      "openid": "refine7_40",
+      "game_key": "refine7_40",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 40,
+      "title": "百炼成钢·6"
+    },
+    {
+      "openid": "refine7_60",
+      "game_key": "refine7_60",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 60,
+      "title": "百炼成钢·7"
+    },
+    {
+      "openid": "craft53_1",
+      "game_key": "craft53_1",
+      "source": "achievement",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "匠心独运·1"
+    },
+    {
+      "openid": "craft53_3",
+      "game_key": "craft53_3",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 3,
+      "title": "匠心独运·2"
+    },
+    {
+      "openid": "craft53_5",
+      "game_key": "craft53_5",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 5,
+      "title": "匠心独运·3"
+    },
+    {
+      "openid": "craft53_10",
+      "game_key": "craft53_10",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 10,
+      "title": "匠心独运·4"
+    },
+    {
+      "openid": "craft53_20",
+      "game_key": "craft53_20",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 20,
+      "title": "匠心独运·5"
+    },
+    {
+      "openid": "craft53_40",
+      "game_key": "craft53_40",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 40,
+      "title": "匠心独运·6"
+    },
+    {
+      "openid": "craft53_60",
+      "game_key": "craft53_60",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 60,
+      "title": "匠心独运·7"
+    },
+    {
+      "openid": "ktype_zhizhu_1500",
+      "game_key": "ktype_蜘蛛_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "蜘蛛克星"
+    },
+    {
+      "openid": "ktype_xiong_1500",
+      "game_key": "ktype_熊_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "猎熊克星"
+    },
+    {
+      "openid": "ktype_hu_1500",
+      "game_key": "ktype_虎_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "伏虎克星"
+    },
+    {
+      "openid": "ktype_xie_1500",
+      "game_key": "ktype_蝎_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "灭蝎克星"
+    },
+    {
+      "openid": "ktype_gui_1500",
+      "game_key": "ktype_鬼_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "驱鬼克星"
+    },
+    {
+      "openid": "ktype_zhengya_1500",
+      "game_key": "ktype_狰牙_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "破狰牙克星"
+    },
+    {
+      "openid": "ktype_shuangshou_1500",
+      "game_key": "ktype_双首_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "斩双首克星"
+    },
+    {
+      "openid": "ktype_qingyi_1500",
+      "game_key": "ktype_青依_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "诛翠裳克星"
+    },
+    {
+      "openid": "ktype_chishe_1500",
+      "game_key": "ktype_赤社_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "荡玄盟克星"
+    },
+    {
+      "openid": "ktype_mangling_1500",
+      "game_key": "ktype_莽岭_1500",
+      "source": "achievement",
+      "kind": "step",
+      "total_step": 1500,
+      "title": "镇莽岭克星"
+    },
+    {
+      "openid": "title_my_beijun",
+      "game_key": "my_beijun",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "青丘勇者"
+    },
+    {
+      "openid": "title_my_tianshengyuan",
+      "game_key": "my_tianshengyuan",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "凤鸣原勇者"
+    },
+    {
+      "openid": "title_my_banquan",
+      "game_key": "my_banquan",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "龙脊勇者"
+    },
+    {
+      "openid": "title_my_nanjun",
+      "game_key": "my_nanjun",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "澜溪勇者"
+    },
+    {
+      "openid": "title_my_qiufengyuan",
+      "game_key": "my_qiufengyuan",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "烽烟原勇者"
+    },
+    {
+      "openid": "title_my_kunlun",
+      "game_key": "my_kunlun",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "玉轮勇者"
+    },
+    {
+      "openid": "title_my_muxiuyulin",
+      "game_key": "my_muxiuyulin",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "雾隐雨林勇者"
+    },
+    {
+      "openid": "title_my_jurenye",
+      "game_key": "my_jurenye",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "擎苍野勇者"
+    },
+    {
+      "openid": "title_my_chishui",
+      "game_key": "my_chishui",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "落雁勇者"
+    },
+    {
+      "openid": "title_my_congyuzhaoze",
+      "game_key": "my_congyuzhaoze",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "雁回沼泽勇者"
+    },
+    {
+      "openid": "title_my_duanbigu",
+      "game_key": "my_duanbigu",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "寒戍谷勇者"
+    },
+    {
+      "openid": "title_my_linhai",
+      "game_key": "my_linhai",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "青萝勇者"
+    },
+    {
+      "openid": "title_my_xuanyuan",
+      "game_key": "my_xuanyuan",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "逐日勇者"
+    },
+    {
+      "openid": "title_my_donglicao",
+      "game_key": "my_donglicao",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "牧云草原勇者"
+    },
+    {
+      "openid": "title_my_langyapendi",
+      "game_key": "my_langyapendi",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "望岳盆地勇者"
+    },
+    {
+      "openid": "title_my_ninghaizhou",
+      "game_key": "my_ninghaizhou",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "海岱州勇者"
+    },
+    {
+      "openid": "title_my_xilie",
+      "game_key": "my_xilie",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "朔风荒原勇者"
+    },
+    {
+      "openid": "title_my_guimu",
+      "game_key": "my_guimu",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "蛊雕墓勇者"
+    },
+    {
+      "openid": "title_ms_20",
+      "game_key": "ms_20",
+      "source": "title",
+      "kind": "step",
+      "total_step": 20,
+      "title": "小有名声"
+    },
+    {
+      "openid": "title_ms_35",
+      "game_key": "ms_35",
+      "source": "title",
+      "kind": "step",
+      "total_step": 35,
+      "title": "一代宗师"
+    },
+    {
+      "openid": "title_ms_50",
+      "game_key": "ms_50",
+      "source": "title",
+      "kind": "step",
+      "total_step": 50,
+      "title": "武林传说"
+    },
+    {
+      "openid": "title_cz_1",
+      "game_key": "cz_1",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "神佑守护"
+    },
+    {
+      "openid": "title_cz_2",
+      "game_key": "cz_2",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "睿鉴八方"
+    },
+    {
+      "openid": "title_cz_3",
+      "game_key": "cz_3",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "侠行八方"
+    },
+    {
+      "openid": "title_cz_4",
+      "game_key": "cz_4",
+      "source": "title",
+      "kind": "step",
+      "total_step": 30000,
+      "title": "通天武圣"
+    },
+    {
+      "openid": "title_cz_5",
+      "game_key": "cz_5",
+      "source": "title",
+      "kind": "step",
+      "total_step": 45,
+      "title": "御极之风"
+    },
+    {
+      "openid": "title_cz_6",
+      "game_key": "cz_6",
+      "source": "title",
+      "kind": "step",
+      "total_step": 50,
+      "title": "九黎战魂"
+    },
+    {
+      "openid": "title_cz_7",
+      "game_key": "cz_7",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "蓬莱遗王"
+    },
+    {
+      "openid": "title_cz_8",
+      "game_key": "cz_8",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "望渊裁决者"
+    },
+    {
+      "openid": "title_hc_xuanwu",
+      "game_key": "hc_xuanwu",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "玄武勇者"
+    },
+    {
+      "openid": "title_hc_qinglin",
+      "game_key": "hc_qinglin",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "青麟勇者"
+    },
+    {
+      "openid": "title_hc_huofeng",
+      "game_key": "hc_huofeng",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "火凤勇者"
+    },
+    {
+      "openid": "title_hc_huanglong",
+      "game_key": "hc_huanglong",
+      "source": "title",
+      "kind": "instant",
+      "total_step": 1,
+      "title": "黄龙勇者"
+    }
+  ]
+}

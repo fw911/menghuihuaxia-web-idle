@@ -1,0 +1,2393 @@
+{
+  "level_segments": [
+    {
+      "key": "s0",
+      "max_level": 19,
+      "supplement": true
+    },
+    {
+      "key": "s1",
+      "min_level": 20,
+      "max_level": 49
+    },
+    {
+      "key": "s2",
+      "min_level": 50,
+      "max_level": 79
+    },
+    {
+      "key": "s3",
+      "min_level": 80,
+      "max_level": 99
+    },
+    {
+      "key": "s4",
+      "min_level": 100
+    }
+  ],
+  "chest": {
+    "types": [
+      "normal",
+      "elite"
+    ],
+    "tier_tables": {
+      "1": "宝匣_玄龟",
+      "2": "宝匣_青鸾",
+      "3": "宝匣_白泽",
+      "4": "宝匣_麒麟",
+      "5": "宝匣_九尾",
+      "6": "宝匣_应龙",
+      "7": "宝匣_烛龙"
+    },
+    "elite_tier_cap": 7,
+    "elite_prob_mult": 2
+  },
+  "lingpai": {
+    "types": [
+      "jubao"
+    ],
+    "level_map": [
+      {
+        "min_level": 110,
+        "table": "令牌_黄金_110"
+      },
+      {
+        "min_level": 100,
+        "table": "令牌_黄金_100"
+      },
+      {
+        "min_level": 80,
+        "table": "令牌_黄金"
+      },
+      {
+        "min_level": 60,
+        "table": "令牌_绿玉"
+      },
+      {
+        "min_level": 0,
+        "table": "令牌_白玉"
+      }
+    ]
+  },
+  "jubao_potion": {
+    "types": [
+      "jubao"
+    ],
+    "bands": [
+      {
+        "min_level": 80,
+        "prob": 0.02,
+        "mode": "fixed",
+        "pool": [
+          "jiuzhuan_box"
+        ]
+      },
+      {
+        "min_level": 60,
+        "max_level": 79,
+        "prob": 0.1,
+        "mode": "fixed",
+        "pool": [
+          "yuquan_box",
+          "sanhua_box"
+        ]
+      },
+      {
+        "min_level": 0,
+        "max_level": 59,
+        "prob": 0.1,
+        "mode": "potion_table",
+        "table": "药水_瞬间"
+      }
+    ]
+  },
+  "ore_recipe": {
+    "types": [
+      "boss",
+      "dungeon_boss",
+      "jubao"
+    ],
+    "prob": 0.03,
+    "level_map": [
+      {
+        "min_level": 95,
+        "key": "recipe_ore_7"
+      },
+      {
+        "min_level": 80,
+        "key": "recipe_ore_6"
+      },
+      {
+        "min_level": 65,
+        "key": "recipe_ore_5"
+      },
+      {
+        "min_level": 50,
+        "key": "recipe_ore_4"
+      }
+    ]
+  },
+  "gem_recipe": {
+    "types": [
+      "boss",
+      "dungeon_boss",
+      "jubao"
+    ],
+    "prob": 0.02,
+    "min_level": 40,
+    "grade_step": 20,
+    "grade_pairs": [
+      [
+        "碎石",
+        "石"
+      ],
+      [
+        "石",
+        "灵石"
+      ],
+      [
+        "灵石",
+        "神石"
+      ]
+    ],
+    "series": [
+      "beidou",
+      "tianxing",
+      "wangyue",
+      "wuxiang",
+      "yuanru"
+    ],
+    "high_level": {
+      "min_level": 100,
+      "chance": 0.5,
+      "key": "recipe_crystal_7"
+    }
+  },
+  "potion_recipe": {
+    "types": [
+      "jubao"
+    ],
+    "prob": 0.05,
+    "level_map": [
+      {
+        "min_level": 80,
+        "key": "recipe_potion_t5"
+      },
+      {
+        "min_level": 60,
+        "key": "recipe_potion_t4"
+      },
+      {
+        "min_level": 40,
+        "key": "recipe_potion_t3"
+      }
+    ]
+  },
+  "lucky_box": {
+    "types": [
+      "normal",
+      "elite"
+    ],
+    "min_level": 90,
+    "prob": 0.0025,
+    "elite_prob_mult": 2,
+    "key": "lucky_box",
+    "name": "幸运盒"
+  },
+  "jubao_new": {
+    "types": [
+      "jubao"
+    ],
+    "min_level": 100,
+    "drops": [
+      {
+        "key": "xishuashua_box",
+        "prob": 0.1,
+        "name": "涤尘符宝箱（内含涤尘符×100）"
+      },
+      {
+        "key": "recipe_bailian_4",
+        "prob": 0.1,
+        "name": "淬锋丹升级配方·肆"
+      },
+      {
+        "key": "recipe_bailian_5",
+        "prob": 0.1,
+        "name": "淬锋丹升级配方·伍"
+      }
+    ]
+  },
+  "item_level_gate": {
+    "min_item_level": 100,
+    "monster_level": 100,
+    "ancient_monster_level": 90
+  },
+  "random_gem_series": [
+    "beidou",
+    "tianxing",
+    "wangyue",
+    "wuxiang",
+    "yuanru"
+  ],
+  "chest_open": {
+    "slots": [
+      "weapon",
+      "helmet",
+      "shoulder_l",
+      "armor",
+      "pants",
+      "cloak",
+      "belt",
+      "gloves",
+      "shoes",
+      "shield",
+      "ring1"
+    ],
+    "gem_series": [
+      "beidou",
+      "tianxing",
+      "wangyue",
+      "wuxiang",
+      "yuanru"
+    ],
+    "soul_pool_prefix": [
+      "sanhun_",
+      "qipo_"
+    ],
+    "tiers": {
+      "1": {
+        "exp": 1200,
+        "copper": [
+          400,
+          800
+        ],
+        "equip_p": 0,
+        "gems": [
+          [
+            "碎石",
+            0.25
+          ]
+        ],
+        "souls": 0.15,
+        "pans": [],
+        "mystic_n": 1,
+        "materials": [
+          [
+            "fuling_chijing",
+            1,
+            0.02
+          ],
+          [
+            "fuling_shuangning",
+            1,
+            0.02
+          ],
+          [
+            "fuling_xuanlei",
+            1,
+            0.004
+          ]
+        ],
+        "pool": [
+          [
+            "sanhun_tian",
+            0.0083333333
+          ],
+          [
+            "sanhun_di",
+            0.0083333333
+          ],
+          [
+            "sanhun_ren",
+            0.0083333333
+          ],
+          [
+            "qipo_xi",
+            0.0083333333
+          ],
+          [
+            "qipo_nu",
+            0.0083333333
+          ],
+          [
+            "qipo_ai_sorrow",
+            0.0083333333
+          ],
+          [
+            "qipo_ju",
+            0.0083333333
+          ],
+          [
+            "qipo_ai_love",
+            0.0083333333
+          ],
+          [
+            "qipo_wu",
+            0.0083333333
+          ],
+          [
+            "qipo_yu",
+            0.0083333333
+          ],
+          [
+            "yuquan_box",
+            0.0027777778
+          ],
+          [
+            "xingyun_zhu",
+            0.0013888889
+          ],
+          [
+            "tiangong_shi",
+            0.0008333333
+          ],
+          [
+            "gaoji_xingyun",
+            0.0008333333
+          ],
+          [
+            "baiyu_lingpai",
+            0.0008333333
+          ],
+          [
+            "qhk_wangyou_san",
+            0.0008333333
+          ],
+          [
+            "niepan_1",
+            0.0008333333
+          ],
+          [
+            "yanmie",
+            0.0008333333
+          ],
+          [
+            "erpin_pack10",
+            0.0007575758
+          ],
+          [
+            "xiangrui_zhu",
+            0.0006944444
+          ],
+          [
+            "lingyin_0",
+            0.0005555556
+          ],
+          [
+            "mingqi_1",
+            0.0005555556
+          ],
+          [
+            "sanhua_box",
+            0.0005555556
+          ],
+          [
+            "jiuzhuan_box",
+            0.0005208333
+          ],
+          [
+            "qhk_ninglu_gao",
+            0.0004166667
+          ],
+          [
+            "gaoji_xiangrui",
+            0.0003787879
+          ],
+          [
+            "lvyu_lingpai",
+            0.0003333333
+          ],
+          [
+            "sanpin_pack10",
+            0.0003205128
+          ],
+          [
+            "tiangong_shenshi",
+            0.0002777778
+          ],
+          [
+            "lunhui_shi",
+            0.0002777778
+          ],
+          [
+            "lingyun_zhu",
+            0.0002777778
+          ],
+          [
+            "huangjin_lingpai",
+            0.0002083333
+          ],
+          [
+            "wuhun_0",
+            0.0001666667
+          ],
+          [
+            "shouhu_yufu",
+            0.0001041667
+          ],
+          [
+            "lunhui_shenshi",
+            9.25926e-05
+          ],
+          [
+            "qiyuan_shi",
+            5.55556e-05
+          ],
+          [
+            "lingli_zengfu",
+            4.16667e-05
+          ],
+          [
+            "xuanling_hufu",
+            4.16667e-05
+          ]
+        ],
+        "charm": [
+          [
+            "wuhun_3",
+            0.000125
+          ],
+          [
+            "qiling_chihuo_divine",
+            4.1667e-06
+          ],
+          [
+            "qiling_qinglan_divine",
+            4.1667e-06
+          ],
+          [
+            "qiling_hanyue_divine",
+            4.1667e-06
+          ],
+          [
+            "qiling_xiaoying_divine",
+            4.1667e-06
+          ],
+          [
+            "qiling_chihuo_spirit",
+            3.125e-05
+          ],
+          [
+            "qiling_qinglan_spirit",
+            3.125e-05
+          ],
+          [
+            "qiling_hanyue_spirit",
+            3.125e-05
+          ],
+          [
+            "qiling_xiaoying_spirit",
+            3.125e-05
+          ]
+        ]
+      },
+      "2": {
+        "exp": 2400,
+        "copper": [
+          800,
+          1600
+        ],
+        "equip_p": 0,
+        "gems": [
+          [
+            "石",
+            0.25
+          ]
+        ],
+        "souls": 0.15,
+        "pans": [],
+        "mystic_n": 2,
+        "materials": [
+          [
+            "fuling_chijing",
+            2,
+            0.02
+          ],
+          [
+            "fuling_shuangning",
+            2,
+            0.02
+          ],
+          [
+            "fuling_xuanlei",
+            2,
+            0.004
+          ]
+        ],
+        "pool": [
+          [
+            "sanhun_tian",
+            0.0166666667
+          ],
+          [
+            "sanhun_di",
+            0.0166666667
+          ],
+          [
+            "sanhun_ren",
+            0.0166666667
+          ],
+          [
+            "qipo_xi",
+            0.0166666667
+          ],
+          [
+            "qipo_nu",
+            0.0166666667
+          ],
+          [
+            "qipo_ai_sorrow",
+            0.0166666667
+          ],
+          [
+            "qipo_ju",
+            0.0166666667
+          ],
+          [
+            "qipo_ai_love",
+            0.0166666667
+          ],
+          [
+            "qipo_wu",
+            0.0166666667
+          ],
+          [
+            "qipo_yu",
+            0.0166666667
+          ],
+          [
+            "yuquan_box",
+            0.0055555556
+          ],
+          [
+            "xingyun_zhu",
+            0.0027777778
+          ],
+          [
+            "tiangong_shi",
+            0.0016666667
+          ],
+          [
+            "gaoji_xingyun",
+            0.0016666667
+          ],
+          [
+            "baiyu_lingpai",
+            0.0016666667
+          ],
+          [
+            "qhk_wangyou_san",
+            0.0016666667
+          ],
+          [
+            "niepan_1",
+            0.0016666667
+          ],
+          [
+            "yanmie",
+            0.0016666667
+          ],
+          [
+            "erpin_pack10",
+            0.0015151515
+          ],
+          [
+            "xiangrui_zhu",
+            0.0013888889
+          ],
+          [
+            "lingyin_0",
+            0.0011111111
+          ],
+          [
+            "mingqi_1",
+            0.0011111111
+          ],
+          [
+            "sanhua_box",
+            0.0011111111
+          ],
+          [
+            "jiuzhuan_box",
+            0.0010416667
+          ],
+          [
+            "qhk_ninglu_gao",
+            0.0008333333
+          ],
+          [
+            "gaoji_xiangrui",
+            0.0007575758
+          ],
+          [
+            "lvyu_lingpai",
+            0.0006666667
+          ],
+          [
+            "sanpin_pack10",
+            0.0006410256
+          ],
+          [
+            "tiangong_shenshi",
+            0.0005555556
+          ],
+          [
+            "lunhui_shi",
+            0.0005555556
+          ],
+          [
+            "lingyun_zhu",
+            0.0005555556
+          ],
+          [
+            "huangjin_lingpai",
+            0.0004166667
+          ],
+          [
+            "wuhun_0",
+            0.0003333333
+          ],
+          [
+            "shouhu_yufu",
+            0.0002083333
+          ],
+          [
+            "lunhui_shenshi",
+            0.0001851852
+          ],
+          [
+            "qiyuan_shi",
+            0.0001111111
+          ],
+          [
+            "lingli_zengfu",
+            8.33333e-05
+          ],
+          [
+            "xuanling_hufu",
+            8.33333e-05
+          ]
+        ],
+        "charm": [
+          [
+            "wuhun_3",
+            0.0003
+          ],
+          [
+            "qiling_chihuo_divine",
+            1e-05
+          ],
+          [
+            "qiling_qinglan_divine",
+            1e-05
+          ],
+          [
+            "qiling_hanyue_divine",
+            1e-05
+          ],
+          [
+            "qiling_xiaoying_divine",
+            1e-05
+          ],
+          [
+            "qiling_chihuo_spirit",
+            7.5e-05
+          ],
+          [
+            "qiling_qinglan_spirit",
+            7.5e-05
+          ],
+          [
+            "qiling_hanyue_spirit",
+            7.5e-05
+          ],
+          [
+            "qiling_xiaoying_spirit",
+            7.5e-05
+          ]
+        ]
+      },
+      "3": {
+        "exp": 4800,
+        "copper": [
+          1200,
+          2400
+        ],
+        "equip_p": 0,
+        "gems": [
+          [
+            "灵石",
+            0.25
+          ]
+        ],
+        "souls": 0.15,
+        "pans": [
+          [
+            "erpin_luopan",
+            0.15
+          ]
+        ],
+        "mystic_n": 3,
+        "materials": [
+          [
+            "fuling_chijing",
+            3,
+            0.02
+          ],
+          [
+            "fuling_shuangning",
+            3,
+            0.02
+          ],
+          [
+            "fuling_xuanlei",
+            3,
+            0.004
+          ]
+        ],
+        "pool": [
+          [
+            "sanhun_tian",
+            0.025
+          ],
+          [
+            "sanhun_di",
+            0.025
+          ],
+          [
+            "sanhun_ren",
+            0.025
+          ],
+          [
+            "qipo_xi",
+            0.025
+          ],
+          [
+            "qipo_nu",
+            0.025
+          ],
+          [
+            "qipo_ai_sorrow",
+            0.025
+          ],
+          [
+            "qipo_ju",
+            0.025
+          ],
+          [
+            "qipo_ai_love",
+            0.025
+          ],
+          [
+            "qipo_wu",
+            0.025
+          ],
+          [
+            "qipo_yu",
+            0.025
+          ],
+          [
+            "yuquan_box",
+            0.0083333333
+          ],
+          [
+            "xingyun_zhu",
+            0.0041666667
+          ],
+          [
+            "tiangong_shi",
+            0.0025
+          ],
+          [
+            "gaoji_xingyun",
+            0.0025
+          ],
+          [
+            "baiyu_lingpai",
+            0.0025
+          ],
+          [
+            "qhk_wangyou_san",
+            0.0025
+          ],
+          [
+            "niepan_1",
+            0.0025
+          ],
+          [
+            "yanmie",
+            0.0025
+          ],
+          [
+            "erpin_pack10",
+            0.0022727273
+          ],
+          [
+            "xiangrui_zhu",
+            0.0020833333
+          ],
+          [
+            "lingyin_0",
+            0.0016666667
+          ],
+          [
+            "mingqi_1",
+            0.0016666667
+          ],
+          [
+            "sanhua_box",
+            0.0016666667
+          ],
+          [
+            "jiuzhuan_box",
+            0.0015625
+          ],
+          [
+            "qhk_ninglu_gao",
+            0.00125
+          ],
+          [
+            "gaoji_xiangrui",
+            0.0011363636
+          ],
+          [
+            "lvyu_lingpai",
+            0.001
+          ],
+          [
+            "sanpin_pack10",
+            0.0009615385
+          ],
+          [
+            "tiangong_shenshi",
+            0.0008333333
+          ],
+          [
+            "lunhui_shi",
+            0.0008333333
+          ],
+          [
+            "lingyun_zhu",
+            0.0008333333
+          ],
+          [
+            "huangjin_lingpai",
+            0.000625
+          ],
+          [
+            "wuhun_0",
+            0.0005
+          ],
+          [
+            "shouhu_yufu",
+            0.0003125
+          ],
+          [
+            "lunhui_shenshi",
+            0.0002777778
+          ],
+          [
+            "qiyuan_shi",
+            0.0001666667
+          ],
+          [
+            "lingli_zengfu",
+            0.000125
+          ],
+          [
+            "xuanling_hufu",
+            0.000125
+          ]
+        ],
+        "charm": [
+          [
+            "wuhun_3",
+            0.000525
+          ],
+          [
+            "qiling_chihuo_divine",
+            1.75e-05
+          ],
+          [
+            "qiling_qinglan_divine",
+            1.75e-05
+          ],
+          [
+            "qiling_hanyue_divine",
+            1.75e-05
+          ],
+          [
+            "qiling_xiaoying_divine",
+            1.75e-05
+          ],
+          [
+            "qiling_chihuo_spirit",
+            0.00013125
+          ],
+          [
+            "qiling_qinglan_spirit",
+            0.00013125
+          ],
+          [
+            "qiling_hanyue_spirit",
+            0.00013125
+          ],
+          [
+            "qiling_xiaoying_spirit",
+            0.00013125
+          ]
+        ]
+      },
+      "4": {
+        "exp": 12000,
+        "copper": [
+          1600,
+          3200
+        ],
+        "equip_p": 0,
+        "gems": [
+          [
+            "神石",
+            0.2
+          ]
+        ],
+        "souls": 0.25,
+        "pans": [],
+        "mystic_n": 4,
+        "materials": [
+          [
+            "fuling_chijing",
+            4,
+            0.02
+          ],
+          [
+            "fuling_shuangning",
+            4,
+            0.02
+          ],
+          [
+            "fuling_xuanlei",
+            4,
+            0.004
+          ]
+        ],
+        "pool": [
+          [
+            "sanhun_tian",
+            0.0333333333
+          ],
+          [
+            "sanhun_di",
+            0.0333333333
+          ],
+          [
+            "sanhun_ren",
+            0.0333333333
+          ],
+          [
+            "qipo_xi",
+            0.0333333333
+          ],
+          [
+            "qipo_nu",
+            0.0333333333
+          ],
+          [
+            "qipo_ai_sorrow",
+            0.0333333333
+          ],
+          [
+            "qipo_ju",
+            0.0333333333
+          ],
+          [
+            "qipo_ai_love",
+            0.0333333333
+          ],
+          [
+            "qipo_wu",
+            0.0333333333
+          ],
+          [
+            "qipo_yu",
+            0.0333333333
+          ],
+          [
+            "yuquan_box",
+            0.0111111111
+          ],
+          [
+            "xingyun_zhu",
+            0.0055555556
+          ],
+          [
+            "tiangong_shi",
+            0.0033333333
+          ],
+          [
+            "gaoji_xingyun",
+            0.0033333333
+          ],
+          [
+            "baiyu_lingpai",
+            0.0033333333
+          ],
+          [
+            "qhk_wangyou_san",
+            0.0033333333
+          ],
+          [
+            "niepan_1",
+            0.0033333333
+          ],
+          [
+            "yanmie",
+            0.0033333333
+          ],
+          [
+            "erpin_pack10",
+            0.003030303
+          ],
+          [
+            "xiangrui_zhu",
+            0.0027777778
+          ],
+          [
+            "lingyin_0",
+            0.0022222222
+          ],
+          [
+            "mingqi_1",
+            0.0022222222
+          ],
+          [
+            "sanhua_box",
+            0.0022222222
+          ],
+          [
+            "jiuzhuan_box",
+            0.0020833333
+          ],
+          [
+            "qhk_ninglu_gao",
+            0.0016666667
+          ],
+          [
+            "gaoji_xiangrui",
+            0.0015151515
+          ],
+          [
+            "lvyu_lingpai",
+            0.0013333333
+          ],
+          [
+            "sanpin_pack10",
+            0.0012820513
+          ],
+          [
+            "tiangong_shenshi",
+            0.0011111111
+          ],
+          [
+            "lunhui_shi",
+            0.0011111111
+          ],
+          [
+            "lingyun_zhu",
+            0.0011111111
+          ],
+          [
+            "huangjin_lingpai",
+            0.0008333333
+          ],
+          [
+            "wuhun_0",
+            0.0006666667
+          ],
+          [
+            "shouhu_yufu",
+            0.0004166667
+          ],
+          [
+            "lunhui_shenshi",
+            0.0003703704
+          ],
+          [
+            "qiyuan_shi",
+            0.0002222222
+          ],
+          [
+            "lingli_zengfu",
+            0.0001666667
+          ],
+          [
+            "xuanling_hufu",
+            0.0001666667
+          ]
+        ],
+        "charm": [
+          [
+            "wuhun_3",
+            0.0008
+          ],
+          [
+            "qiling_chihuo_divine",
+            2.66667e-05
+          ],
+          [
+            "qiling_qinglan_divine",
+            2.66667e-05
+          ],
+          [
+            "qiling_hanyue_divine",
+            2.66667e-05
+          ],
+          [
+            "qiling_xiaoying_divine",
+            2.66667e-05
+          ],
+          [
+            "qiling_chihuo_spirit",
+            0.0002
+          ],
+          [
+            "qiling_qinglan_spirit",
+            0.0002
+          ],
+          [
+            "qiling_hanyue_spirit",
+            0.0002
+          ],
+          [
+            "qiling_xiaoying_spirit",
+            0.0002
+          ]
+        ]
+      },
+      "5": {
+        "exp": 24000,
+        "copper": [
+          2400,
+          4800
+        ],
+        "equip_p": 0,
+        "gems": [],
+        "souls": 0.3,
+        "pans": [],
+        "mystic_n": 6,
+        "materials": [
+          [
+            "fuling_chijing",
+            6,
+            0.02
+          ],
+          [
+            "fuling_shuangning",
+            6,
+            0.02
+          ],
+          [
+            "fuling_xuanlei",
+            6,
+            0.004
+          ]
+        ],
+        "pool": [
+          [
+            "sanhun_tian",
+            0.05
+          ],
+          [
+            "sanhun_di",
+            0.05
+          ],
+          [
+            "sanhun_ren",
+            0.05
+          ],
+          [
+            "qipo_xi",
+            0.05
+          ],
+          [
+            "qipo_nu",
+            0.05
+          ],
+          [
+            "qipo_ai_sorrow",
+            0.05
+          ],
+          [
+            "qipo_ju",
+            0.05
+          ],
+          [
+            "qipo_ai_love",
+            0.05
+          ],
+          [
+            "qipo_wu",
+            0.05
+          ],
+          [
+            "qipo_yu",
+            0.05
+          ],
+          [
+            "yuquan_box",
+            0.0166666667
+          ],
+          [
+            "xingyun_zhu",
+            0.0083333333
+          ],
+          [
+            "tiangong_shi",
+            0.005
+          ],
+          [
+            "gaoji_xingyun",
+            0.005
+          ],
+          [
+            "baiyu_lingpai",
+            0.005
+          ],
+          [
+            "qhk_wangyou_san",
+            0.005
+          ],
+          [
+            "niepan_1",
+            0.005
+          ],
+          [
+            "yanmie",
+            0.005
+          ],
+          [
+            "erpin_pack10",
+            0.0045454545
+          ],
+          [
+            "xiangrui_zhu",
+            0.0041666667
+          ],
+          [
+            "lingyin_0",
+            0.0033333333
+          ],
+          [
+            "mingqi_1",
+            0.0033333333
+          ],
+          [
+            "sanhua_box",
+            0.0033333333
+          ],
+          [
+            "jiuzhuan_box",
+            0.003125
+          ],
+          [
+            "qhk_ninglu_gao",
+            0.0025
+          ],
+          [
+            "gaoji_xiangrui",
+            0.0022727273
+          ],
+          [
+            "lvyu_lingpai",
+            0.002
+          ],
+          [
+            "sanpin_pack10",
+            0.0019230769
+          ],
+          [
+            "tiangong_shenshi",
+            0.0016666667
+          ],
+          [
+            "lunhui_shi",
+            0.0016666667
+          ],
+          [
+            "lingyun_zhu",
+            0.0016666667
+          ],
+          [
+            "huangjin_lingpai",
+            0.00125
+          ],
+          [
+            "wuhun_0",
+            0.001
+          ],
+          [
+            "shouhu_yufu",
+            0.000625
+          ],
+          [
+            "lunhui_shenshi",
+            0.0005555556
+          ],
+          [
+            "qiyuan_shi",
+            0.0003333333
+          ],
+          [
+            "lingli_zengfu",
+            0.00025
+          ],
+          [
+            "xuanling_hufu",
+            0.00025
+          ]
+        ],
+        "charm": [
+          [
+            "wuhun_3",
+            0.00135
+          ],
+          [
+            "qiling_chihuo_divine",
+            4.5e-05
+          ],
+          [
+            "qiling_qinglan_divine",
+            4.5e-05
+          ],
+          [
+            "qiling_hanyue_divine",
+            4.5e-05
+          ],
+          [
+            "qiling_xiaoying_divine",
+            4.5e-05
+          ],
+          [
+            "qiling_chihuo_spirit",
+            0.0003375
+          ],
+          [
+            "qiling_qinglan_spirit",
+            0.0003375
+          ],
+          [
+            "qiling_hanyue_spirit",
+            0.0003375
+          ],
+          [
+            "qiling_xiaoying_spirit",
+            0.0003375
+          ]
+        ]
+      },
+      "6": {
+        "exp": 48000,
+        "copper": [
+          3200,
+          6400
+        ],
+        "equip_p": 0,
+        "gems": [],
+        "souls": 0.3,
+        "pans": [
+          [
+            "erpin_luopan",
+            0.1
+          ]
+        ],
+        "mystic_n": 8,
+        "materials": [
+          [
+            "fuling_chijing",
+            2,
+            0.12
+          ],
+          [
+            "fuling_shuangning",
+            2,
+            0.12
+          ],
+          [
+            "fuling_xuanlei",
+            2,
+            0.024
+          ],
+          [
+            "haihun",
+            1,
+            0.06
+          ]
+        ],
+        "pool": [
+          [
+            "sanhun_tian",
+            0.05
+          ],
+          [
+            "sanhun_di",
+            0.05
+          ],
+          [
+            "sanhun_ren",
+            0.05
+          ],
+          [
+            "qipo_xi",
+            0.05
+          ],
+          [
+            "qipo_nu",
+            0.05
+          ],
+          [
+            "qipo_ai_sorrow",
+            0.05
+          ],
+          [
+            "qipo_ju",
+            0.05
+          ],
+          [
+            "qipo_ai_love",
+            0.05
+          ],
+          [
+            "qipo_wu",
+            0.05
+          ],
+          [
+            "qipo_yu",
+            0.05
+          ],
+          [
+            "yuquan_box",
+            0.0222222222
+          ],
+          [
+            "xingyun_zhu",
+            0.0111111111
+          ],
+          [
+            "tiangong_shi",
+            0.0066666667
+          ],
+          [
+            "gaoji_xingyun",
+            0.0066666667
+          ],
+          [
+            "baiyu_lingpai",
+            0.0066666667
+          ],
+          [
+            "qhk_wangyou_san",
+            0.0066666667
+          ],
+          [
+            "niepan_1",
+            0.0066666667
+          ],
+          [
+            "yanmie",
+            0.0066666667
+          ],
+          [
+            "erpin_pack10",
+            0.0060606061
+          ],
+          [
+            "xiangrui_zhu",
+            0.0055555556
+          ],
+          [
+            "lingyin_0",
+            0.0044444444
+          ],
+          [
+            "mingqi_1",
+            0.0044444444
+          ],
+          [
+            "sanhua_box",
+            0.0044444444
+          ],
+          [
+            "jiuzhuan_box",
+            0.0041666667
+          ],
+          [
+            "qhk_ninglu_gao",
+            0.0033333333
+          ],
+          [
+            "gaoji_xiangrui",
+            0.003030303
+          ],
+          [
+            "lvyu_lingpai",
+            0.0026666667
+          ],
+          [
+            "sanpin_pack10",
+            0.0025641026
+          ],
+          [
+            "tiangong_shenshi",
+            0.0022222222
+          ],
+          [
+            "lunhui_shi",
+            0.0022222222
+          ],
+          [
+            "lingyun_zhu",
+            0.0022222222
+          ],
+          [
+            "huangjin_lingpai",
+            0.0016666667
+          ],
+          [
+            "wuhun_0",
+            0.0013333333
+          ],
+          [
+            "shouhu_yufu",
+            0.0008333333
+          ],
+          [
+            "lunhui_shenshi",
+            0.0007407407
+          ],
+          [
+            "qiyuan_shi",
+            0.0004444444
+          ],
+          [
+            "lingli_zengfu",
+            0.0003333333
+          ],
+          [
+            "xuanling_hufu",
+            0.0003333333
+          ]
+        ],
+        "charm": [
+          [
+            "wuhun_3",
+            0.002
+          ],
+          [
+            "qiling_chihuo_divine",
+            6.66667e-05
+          ],
+          [
+            "qiling_qinglan_divine",
+            6.66667e-05
+          ],
+          [
+            "qiling_hanyue_divine",
+            6.66667e-05
+          ],
+          [
+            "qiling_xiaoying_divine",
+            6.66667e-05
+          ],
+          [
+            "qiling_chihuo_spirit",
+            0.0005
+          ],
+          [
+            "qiling_qinglan_spirit",
+            0.0005
+          ],
+          [
+            "qiling_hanyue_spirit",
+            0.0005
+          ],
+          [
+            "qiling_xiaoying_spirit",
+            0.0005
+          ]
+        ]
+      },
+      "7": {
+        "exp": 96000,
+        "copper": [
+          4800,
+          9600
+        ],
+        "equip_p": 0,
+        "gems": [],
+        "souls": 0.32,
+        "pans": [
+          [
+            "sanpin_luopan",
+            0.08
+          ]
+        ],
+        "mystic_n": 12,
+        "materials": [
+          [
+            "fuling_chijing",
+            3,
+            0.12
+          ],
+          [
+            "fuling_shuangning",
+            3,
+            0.12
+          ],
+          [
+            "fuling_xuanlei",
+            3,
+            0.024
+          ],
+          [
+            "haihun",
+            1,
+            0.1
+          ]
+        ],
+        "pool": [
+          [
+            "sanhun_tian",
+            0.05
+          ],
+          [
+            "sanhun_di",
+            0.05
+          ],
+          [
+            "sanhun_ren",
+            0.05
+          ],
+          [
+            "qipo_xi",
+            0.05
+          ],
+          [
+            "qipo_nu",
+            0.05
+          ],
+          [
+            "qipo_ai_sorrow",
+            0.05
+          ],
+          [
+            "qipo_ju",
+            0.05
+          ],
+          [
+            "qipo_ai_love",
+            0.05
+          ],
+          [
+            "qipo_wu",
+            0.05
+          ],
+          [
+            "qipo_yu",
+            0.05
+          ],
+          [
+            "yuquan_box",
+            0.0333333333
+          ],
+          [
+            "xingyun_zhu",
+            0.0166666667
+          ],
+          [
+            "tiangong_shi",
+            0.01
+          ],
+          [
+            "gaoji_xingyun",
+            0.01
+          ],
+          [
+            "baiyu_lingpai",
+            0.01
+          ],
+          [
+            "qhk_wangyou_san",
+            0.01
+          ],
+          [
+            "niepan_1",
+            0.01
+          ],
+          [
+            "yanmie",
+            0.01
+          ],
+          [
+            "erpin_pack10",
+            0.0090909091
+          ],
+          [
+            "xiangrui_zhu",
+            0.0083333333
+          ],
+          [
+            "lingyin_0",
+            0.0066666667
+          ],
+          [
+            "mingqi_1",
+            0.0066666667
+          ],
+          [
+            "sanhua_box",
+            0.0066666667
+          ],
+          [
+            "jiuzhuan_box",
+            0.00625
+          ],
+          [
+            "qhk_ninglu_gao",
+            0.005
+          ],
+          [
+            "gaoji_xiangrui",
+            0.0045454545
+          ],
+          [
+            "lvyu_lingpai",
+            0.004
+          ],
+          [
+            "sanpin_pack10",
+            0.0038461538
+          ],
+          [
+            "tiangong_shenshi",
+            0.0033333333
+          ],
+          [
+            "lunhui_shi",
+            0.0033333333
+          ],
+          [
+            "lingyun_zhu",
+            0.0033333333
+          ],
+          [
+            "huangjin_lingpai",
+            0.0025
+          ],
+          [
+            "wuhun_0",
+            0.002
+          ],
+          [
+            "shouhu_yufu",
+            0.00125
+          ],
+          [
+            "lunhui_shenshi",
+            0.0011111111
+          ],
+          [
+            "qiyuan_shi",
+            0.0006666667
+          ],
+          [
+            "lingli_zengfu",
+            0.0005
+          ],
+          [
+            "xuanling_hufu",
+            0.0005
+          ]
+        ],
+        "charm": [
+          [
+            "wuhun_3",
+            0.003375
+          ],
+          [
+            "qiling_chihuo_divine",
+            0.0001125
+          ],
+          [
+            "qiling_qinglan_divine",
+            0.0001125
+          ],
+          [
+            "qiling_hanyue_divine",
+            0.0001125
+          ],
+          [
+            "qiling_xiaoying_divine",
+            0.0001125
+          ],
+          [
+            "qiling_chihuo_spirit",
+            0.00084375
+          ],
+          [
+            "qiling_qinglan_spirit",
+            0.00084375
+          ],
+          [
+            "qiling_hanyue_spirit",
+            0.00084375
+          ],
+          [
+            "qiling_xiaoying_spirit",
+            0.00084375
+          ]
+        ],
+        "extras": [
+          [
+            "recipe_ore_7",
+            0.005
+          ]
+        ]
+      }
+    }
+  },
+  "chest_pity": {
+    "1": {
+      "10": {
+        "materials": [
+          [
+            "fuling_chijing",
+            2
+          ]
+        ],
+        "signature": [
+          [
+            "wuxingfu",
+            25
+          ]
+        ]
+      },
+      "30": {
+        "materials": [
+          [
+            "fuling_shuangning",
+            2
+          ]
+        ],
+        "signature": [
+          [
+            "erpin_luopan",
+            5
+          ]
+        ]
+      },
+      "50": {
+        "materials": [
+          [
+            "fuling_xuanlei",
+            1
+          ]
+        ],
+        "signature": [
+          [
+            "baiyu_lingpai",
+            1
+          ]
+        ]
+      }
+    },
+    "2": {
+      "10": {
+        "materials": [
+          [
+            "fuling_chijing",
+            3
+          ]
+        ],
+        "signature": [
+          [
+            "xuntian_double_ling",
+            1
+          ]
+        ]
+      },
+      "30": {
+        "materials": [
+          [
+            "fuling_shuangning",
+            3
+          ]
+        ],
+        "signature": [
+          [
+            "erpin_pack20",
+            1
+          ]
+        ]
+      },
+      "50": {
+        "materials": [
+          [
+            "fuling_xuanlei",
+            2
+          ]
+        ],
+        "signature": [
+          [
+            "lunhui_shi",
+            1
+          ]
+        ]
+      }
+    },
+    "3": {
+      "10": {
+        "materials": [
+          [
+            "fuling_chijing",
+            5
+          ]
+        ],
+        "signature": [
+          [
+            "sanhua_box",
+            1
+          ]
+        ]
+      },
+      "30": {
+        "materials": [
+          [
+            "fuling_shuangning",
+            5
+          ]
+        ],
+        "signature": [
+          [
+            "lvyu_lingpai",
+            1
+          ]
+        ]
+      },
+      "50": {
+        "materials": [
+          [
+            "fuling_xuanlei",
+            3
+          ]
+        ],
+        "signature": [
+          [
+            "sanpin_pack10",
+            1
+          ]
+        ]
+      }
+    },
+    "4": {
+      "10": {
+        "materials": [
+          [
+            "fuling_chijing",
+            7
+          ]
+        ],
+        "signature": [
+          [
+            "yanmie",
+            1
+          ]
+        ]
+      },
+      "30": {
+        "materials": [
+          [
+            "fuling_shuangning",
+            7
+          ]
+        ],
+        "signature": [
+          [
+            "lingyin_0",
+            1
+          ]
+        ]
+      },
+      "50": {
+        "materials": [
+          [
+            "fuling_xuanlei",
+            4
+          ]
+        ],
+        "signature": [
+          [
+            "shouhu_yufu",
+            1
+          ]
+        ]
+      }
+    },
+    "5": {
+      "10": {
+        "materials": [
+          [
+            "fuling_chijing",
+            10
+          ]
+        ],
+        "signature": [
+          [
+            "tiangong_shi",
+            1
+          ]
+        ]
+      },
+      "30": {
+        "materials": [
+          [
+            "fuling_shuangning",
+            10
+          ]
+        ],
+        "signature": [
+          [
+            "huangjin_lingpai",
+            1
+          ]
+        ]
+      },
+      "50": {
+        "materials": [
+          [
+            "fuling_xuanlei",
+            6
+          ]
+        ],
+        "signature": [
+          [
+            "qiyuan_shi",
+            1
+          ]
+        ]
+      }
+    },
+    "6": {
+      "10": {
+        "materials": [
+          [
+            "fuling_chijing",
+            15
+          ]
+        ],
+        "signature": [
+          [
+            "niepan_1",
+            1
+          ]
+        ]
+      },
+      "30": {
+        "materials": [
+          [
+            "fuling_shuangning",
+            15
+          ]
+        ],
+        "signature": [
+          [
+            "mingqi_1",
+            1
+          ]
+        ]
+      },
+      "50": {
+        "materials": [
+          [
+            "fuling_xuanlei",
+            8
+          ]
+        ],
+        "signature": [
+          [
+            "lingli_zengfu",
+            1
+          ]
+        ]
+      }
+    },
+    "7": {
+      "10": {
+        "materials": [
+          [
+            "fuling_chijing",
+            22
+          ]
+        ],
+        "signature": [
+          [
+            "tiangong_shenshi",
+            1
+          ]
+        ]
+      },
+      "30": {
+        "materials": [
+          [
+            "fuling_shuangning",
+            22
+          ]
+        ],
+        "signature": [
+          [
+            "lunhui_shenshi",
+            1
+          ]
+        ]
+      },
+      "50": {
+        "materials": [
+          [
+            "fuling_xuanlei",
+            12
+          ]
+        ],
+        "signature": [
+          [
+            "xuanling_hufu",
+            1
+          ]
+        ]
+      }
+    }
+  },
+  "lucky_box_open": {
+    "outputs": [
+      {
+        "key": "xishuashua",
+        "name": "涤尘符",
+        "bands": [
+          [
+            [
+              1,
+              8
+            ],
+            0.95
+          ],
+          [
+            [
+              9,
+              15
+            ],
+            0.03
+          ],
+          [
+            [
+              16,
+              35
+            ],
+            0.017
+          ],
+          [
+            [
+              36,
+              70
+            ],
+            0.003
+          ]
+        ]
+      },
+      {
+        "key": "ziling_hua",
+        "name": "丹蕊花",
+        "bands": [
+          [
+            [
+              1,
+              1
+            ],
+            0.85
+          ],
+          [
+            [
+              2,
+              2
+            ],
+            0.08
+          ],
+          [
+            [
+              3,
+              3
+            ],
+            0.04
+          ],
+          [
+            [
+              4,
+              4
+            ],
+            0.02
+          ],
+          [
+            [
+              5,
+              5
+            ],
+            0.01
+          ]
+        ]
+      },
+      {
+        "key": "fengling_zhu",
+        "name": "劲风珠",
+        "bands": [
+          [
+            [
+              3,
+              3
+            ],
+            0.25
+          ],
+          [
+            [
+              4,
+              4
+            ],
+            0.55
+          ],
+          [
+            [
+              5,
+              5
+            ],
+            0.15
+          ],
+          [
+            [
+              6,
+              6
+            ],
+            0.05
+          ]
+        ]
+      },
+      {
+        "key": "shenmo_xiulian_fu",
+        "name": "修验令",
+        "bands": [
+          [
+            [
+              1,
+              1
+            ],
+            0.96
+          ],
+          [
+            [
+              2,
+              2
+            ],
+            0.03
+          ],
+          [
+            [
+              3,
+              3
+            ],
+            0.01
+          ]
+        ]
+      },
+      {
+        "key": "bailian_shi",
+        "name": "淬锋石",
+        "bands": [
+          [
+            [
+              1,
+              1
+            ],
+            0.6
+          ],
+          [
+            [
+              2,
+              2
+            ],
+            0.25
+          ],
+          [
+            [
+              3,
+              3
+            ],
+            0.08
+          ],
+          [
+            [
+              4,
+              4
+            ],
+            0.05
+          ],
+          [
+            [
+              5,
+              5
+            ],
+            0.02
+          ]
+        ]
+      }
+    ]
+  },
+  "jingyuan_recipe": {
+    "types": [
+      "boss",
+      "dungeon_boss",
+      "jubao"
+    ],
+    "min_level": 109,
+    "prob_by_type": {
+      "boss": 0.03,
+      "dungeon_boss": 0.1,
+      "jubao": 0.1
+    },
+    "pool": [
+      "ronglian_cangmu",
+      "ronglian_chiyan",
+      "ronglian_houtu",
+      "ronglian_hansui",
+      "ronglian_liujin"
+    ]
+  },
+  "gold": {
+    "hp_coef_by_type": {
+      "normal": 0,
+      "elite": 0.02,
+      "boss": 0.03,
+      "dungeon_boss": 0.03,
+      "jubao": 0.05
+    },
+    "legacy_by_type": {
+      "normal": [
+        2,
+        1.5
+      ],
+      "elite": [
+        6,
+        3
+      ],
+      "boss": [
+        20,
+        6
+      ]
+    },
+    "max_mult": 2
+  }
+}

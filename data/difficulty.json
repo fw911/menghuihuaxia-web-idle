@@ -1,0 +1,40 @@
+{
+  "monster_speed_mult": {
+    "default": 0.8,
+    "bands": [
+      {
+        "min_level": 70,
+        "mult": 0.85
+      },
+      {
+        "min_level": 80,
+        "mult": 0.9
+      },
+      {
+        "min_level": 90,
+        "mult": 0.95
+      },
+      {
+        "min_level": 100,
+        "mult": 1.0
+      }
+    ]
+  },
+  "elite_cap_per_encounter": 3,
+  "elite_rate": 0.4,
+  "lifesteal_aoe_decay": 0.5,
+  "batch_size": {
+    "dungeon": [
+      3,
+      6
+    ],
+    "instance": [
+      3,
+      6
+    ],
+    "field": [
+      1,
+      6
+    ]
+  }
+}

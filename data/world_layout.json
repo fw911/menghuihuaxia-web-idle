@@ -1,0 +1,169 @@
+{
+  "_note": "大地图（平面导航图）的版面坐标。本表是我方**原创版面数据**（原版无坐标字段），只描述节点画在平面上的位置，不含任何名称/数值；地图名走 maps.json 的 name（MOD 双切）。改版面只改本表数字即可。坐标 = 节点中心点，画布左上为 (0,0)，x 向东、y 向南。",
+  "canvas": {
+    "w": 1680,
+    "h": 790
+  },
+  "nodes": {
+    "xianzhijing": [
+      556,
+      49
+    ],
+    "beijun": [
+      556,
+      123
+    ],
+    "banquan": [
+      880,
+      79
+    ],
+    "chaoshan_l1": [
+      1130,
+      156
+    ],
+    "ninghaizhou": [
+      1280,
+      200
+    ],
+    "huanhai_l1": [
+      1560,
+      49
+    ],
+    "langyapendi": [
+      1480,
+      123
+    ],
+    "qimidong_l1": [
+      1560,
+      250
+    ],
+    "xilie": [
+      430,
+      205
+    ],
+    "fuxiling_mudao": [
+      216,
+      205
+    ],
+    "tianshengyuan": [
+      880,
+      255
+    ],
+    "baishougu": [
+      700,
+      260
+    ],
+    "qixingling": [
+      700,
+      140
+    ],
+    "guihuidaze": [
+      1280,
+      100
+    ],
+    "xuanyuantai": [
+      1352,
+      320
+    ],
+    "wuxingzhen": [
+      1430,
+      250
+    ],
+    "kunlun": [
+      140,
+      350
+    ],
+    "qingyunzhai_l1": [
+      620,
+      385
+    ],
+    "nanjun": [
+      856,
+      385
+    ],
+    "xuanyuan": [
+      1130,
+      385
+    ],
+    "xuanyuantai_mh": [
+      1352,
+      400
+    ],
+    "shihundian": [
+      1352,
+      480
+    ],
+    "congyuzhaoze": [
+      860,
+      500
+    ],
+    "linhai": [
+      1180,
+      525
+    ],
+    "qiufengyuan": [
+      560,
+      570
+    ],
+    "guimu": [
+      720,
+      560
+    ],
+    "xianghunzhong_instance": [
+      1010,
+      574
+    ],
+    "duanbigu": [
+      1440,
+      570
+    ],
+    "chishui": [
+      330,
+      623
+    ],
+    "dongfu_tianzun": [
+      150,
+      623
+    ],
+    "guimu_mh": [
+      720,
+      640
+    ],
+    "xianghunzhong_mh": [
+      1010,
+      648
+    ],
+    "donglicao": [
+      1400,
+      660
+    ],
+    "muxiuyulin": [
+      520,
+      681
+    ],
+    "jurenye": [
+      860,
+      700
+    ],
+    "haishishenlou_l1": [
+      1560,
+      700
+    ],
+    "lianguku_l1": [
+      1020,
+      740
+    ],
+    "dongfu_yaowang_1": [
+      330,
+      745
+    ],
+    "qibingdong_l1": [
+      260,
+      460
+    ],
+    "qiufengyuan_midao": [
+      420,
+      460
+    ]
+  }
+}

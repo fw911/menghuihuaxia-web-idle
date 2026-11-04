@@ -1,0 +1,1859 @@
+{
+  "version": "3.0",
+  "comment": "v3.2（2026-10-16）：新增被动灵契·汲法（qiling_manasteal，effect_type=dmg_mp_pct）——造成伤害的 X% 转化为自身法力回复，为「饮血」的法力版、数值阶梯沿用饮血；效果行 on_after_hit → 动作 mp_leech（heal 意图带 resource=mp，见 engine/effects/effect_actions.py）。历史：v3.0（2026-10-13 升星分解改造，设计/施工图 docs/骑灵升星分解改造{设计方案,施工图}-2026-10-13.md）：① skills[].value/divine_value/step 废止 → star_values（品阶3×星级6，武魂式单调不减、品阶首尾相接）；② 新增 max_star / star_slots / star_stats / star_cost / star_rate / star_boost / decompose / star_material；③ items.dandinghong 改 star_down（忘忧散：降 1 星级，数值按新档下调）。历史：骑灵系统内容表 v2.4（2026-09-24 数值分布改版；设计/施工图 docs/骑灵灵契数值分布{设计方案,施工图}-2026-09-24.md）：① 数值随机由均匀 randint 改为三档锚点插值权重（skill_value_anchor [50,30,20]，数值越高越难抽；N=3 时精确等于 50/30/20，且任意 N 单调不增）；② 每条新增 divine_value 独立区间：神品不再乘 stat_mult（carriers.stat_mult 全置 1.0，改用 divine: true 标记走哪套区间）；③ 新增 step 控取值步进（缺省 1；饮血/财气/金刚不灭 5、迅捷 10）；④ 数值调整：会心 1~3、饮血 10~30、回春 2~4（**全整数**，不出现 4.5 这类值；防群杀叠加：on_after_hit 每命中目标各触发一次，群清 5~6 只会叠 5~6 次）、疾影 1~3、迅捷改 effect_type 为 speed_pct（+25~75%，生效点数 = SPEED_BASE × pct/100，并入 12 点总封顶）、财气 15~30、金刚不灭 5~20 秒；⑤ 四条主动技 cooldown_rounds→60，战吼/圣护/游龙 turns→8。v2.5（2026-09-24 同日 ⑥）：原「甘霖·开战再生」改为「游龙·开战闪避提升」（buff_kind/effect_type=dodge_up，区间 [8,15]/[12,22]，持续 8 秒）——原回血与圣护护盾同质（都是按最大生命的开战防御收益）；**key 仍为 qiling_regen 以兼容存量存档**。v2.3（2026-09-23：骑术单杀经验 2→1；怪等级低于角色超过 kill_exp_under_diff(10) 级不发放骑术经验，高于角色不设上限也不加成）。v2.2：经验丹逐丹各自每日上限、传送统一 min_tier、骑术取消阶名称谓只留 Lv.1~5。v2.0 基线=技能池扩容：被动12+主动4，档位上限=技能上限 凡2/灵5/神8，领悟时区间随机定格+载体倍率。非效果引擎词表——manifest 只登记引擎词表（D9），本表是内容效果行/玩法数据。v2.6（2026-10-02 ⑦）：饮血区间 10~30/20~40 → 3~7/6~10（step 5→1，池规模仍 5 档）；新增忘尘丹（qhk_wangchen_dan，指定废除 1 条灵契、亲密降到「显示档−1」门槛）。v2.7（2026-10-06 ⑧）：饮血结算改**同次出手逐只折半**（首个有效目标全额，之后依次 ×0.5^(k-1)；系数=difficulty.json#lifesteal_aoe_decay，1.0=关闭；回春与血蚀内联不在口径内）；desc 同步。v2.8（2026-10-06 ⑨）：金刚不灭持续区间 2.5~10（神品 5~12.5）/step 2.5 → **2~6（神品 3~7）/step 1，池各 5 档**；改全整数是为避开引擎 `int(定格值)×1000` 截断（原 2.5 秒实际只生效 2 秒）。注：③④ 条历史文本里的「金刚不灭 5~20」是**回合**口径（tick=2 秒时代），v2.4 落地值即 2.5~10 秒。v3.1（2026-10-13 升星消耗改档，用户拍板推翻 v3.0 §3.4「指数曲线、不分品阶」）：steps / blood_steps 由「5 档不分品阶」改为「按品阶 3×5=15 档等差」——兽魂 20→860（步长 60，凡 20~260 / 灵 320~560 / 神 620~860，15 档合计 6600）、兽血 = 兽魂÷5（4→172，步长 12，合计 1320）；**总量对齐旧口径**（旧全程 6330 兽魂 / 1272 兽血 ⇒ 新 6600 / 1320，用户「多一点没关系」）；用户 2026-10-13 二次纠偏「等差 20 搞这么平滑」⇒ 定形 = 一条线、每档 +60（跳得明显）；promote_cost 沿用 1×/3× 凡品单轮（凡→灵 700、灵→神 2100）；decompose.body 维持 5/20/120（refund_rate 20% 不变）。",
+  "skill_value_anchor": [
+    50,
+    30,
+    20
+  ],
+  "ridemanship": {
+    "kill_exp": 1,
+    "kill_exp_under_diff": 10,
+    "levels": [
+      {
+        "level": 1,
+        "exp_required": 40000
+      },
+      {
+        "level": 2,
+        "exp_required": 100000
+      },
+      {
+        "level": 3,
+        "exp_required": 180000
+      },
+      {
+        "level": 4,
+        "exp_required": 300000
+      },
+      {
+        "level": 5,
+        "exp_required": null
+      }
+    ]
+  },
+  "intimacy": {
+    "per_minutes": 1,
+    "tiers": [
+      {
+        "tier": 1,
+        "threshold": 500
+      },
+      {
+        "tier": 2,
+        "threshold": 2000
+      },
+      {
+        "tier": 3,
+        "threshold": 5000
+      },
+      {
+        "tier": 4,
+        "threshold": 12000
+      },
+      {
+        "tier": 5,
+        "threshold": 18000
+      },
+      {
+        "tier": 6,
+        "threshold": 25000
+      },
+      {
+        "tier": 7,
+        "threshold": 33000
+      },
+      {
+        "tier": 8,
+        "threshold": 42000
+      }
+    ],
+    "cap": 42000
+  },
+  "skills": [
+    {
+      "key": "qiling_atk",
+      "name": "灵契·强攻",
+      "kind": "passive",
+      "effect_type": "atk_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            2
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            2,
+            3
+          ],
+          "1": [
+            2,
+            3
+          ],
+          "2": [
+            2,
+            3
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            4
+          ],
+          "5": [
+            3,
+            4
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            3,
+            4
+          ],
+          "1": [
+            3,
+            4
+          ],
+          "2": [
+            4,
+            5
+          ],
+          "3": [
+            4,
+            5
+          ],
+          "4": [
+            4,
+            5
+          ],
+          "5": [
+            4,
+            5
+          ]
+        }
+      },
+      "desc": "物理与法术攻击 +{value}%"
+    },
+    {
+      "key": "qiling_hp",
+      "name": "灵契·生机",
+      "kind": "passive",
+      "effect_type": "max_hp_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            2,
+            3
+          ],
+          "1": [
+            2,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            5
+          ],
+          "5": [
+            4,
+            5
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            5
+          ],
+          "2": [
+            4,
+            6
+          ],
+          "3": [
+            5,
+            6
+          ],
+          "4": [
+            5,
+            6
+          ],
+          "5": [
+            5,
+            6
+          ]
+        }
+      },
+      "desc": "生命上限 +{value}%"
+    },
+    {
+      "key": "qiling_def",
+      "name": "灵契·坚毅",
+      "kind": "passive",
+      "effect_type": "dmg_reduce_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            2
+          ],
+          "4": [
+            1,
+            2
+          ],
+          "5": [
+            1,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            1,
+            3
+          ],
+          "1": [
+            2,
+            3
+          ],
+          "2": [
+            2,
+            3
+          ],
+          "3": [
+            2,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            4
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            2,
+            4
+          ],
+          "1": [
+            3,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            4
+          ],
+          "5": [
+            3,
+            4
+          ]
+        }
+      },
+      "desc": "受到伤害降低 {value}%"
+    },
+    {
+      "key": "qiling_crit",
+      "name": "灵契·会心",
+      "kind": "passive",
+      "effect_type": "crit_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            2
+          ],
+          "4": [
+            1,
+            2
+          ],
+          "5": [
+            1,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            1,
+            3
+          ],
+          "1": [
+            2,
+            3
+          ],
+          "2": [
+            2,
+            3
+          ],
+          "3": [
+            2,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            4
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            2,
+            4
+          ],
+          "1": [
+            3,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            4
+          ],
+          "5": [
+            3,
+            4
+          ]
+        }
+      },
+      "desc": "物理与法术暴击率 +{value}%"
+    },
+    {
+      "key": "qiling_lifesteal",
+      "name": "灵契·饮血",
+      "kind": "passive",
+      "effect_type": "dmg_heal_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            2,
+            3
+          ],
+          "1": [
+            2,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            5
+          ],
+          "5": [
+            4,
+            5
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            5
+          ],
+          "2": [
+            4,
+            6
+          ],
+          "3": [
+            5,
+            6
+          ],
+          "4": [
+            5,
+            6
+          ],
+          "5": [
+            5,
+            6
+          ]
+        }
+      },
+      "desc": "造成伤害的 {value}% 转化为生命回复（群攻时首个目标全额，之后逐个减半）"
+    },
+    {
+      "key": "qiling_manasteal",
+      "name": "灵契·汲法",
+      "kind": "passive",
+      "effect_type": "dmg_mp_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            2,
+            3
+          ],
+          "1": [
+            2,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            5
+          ],
+          "5": [
+            4,
+            5
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            5
+          ],
+          "2": [
+            4,
+            6
+          ],
+          "3": [
+            5,
+            6
+          ],
+          "4": [
+            5,
+            6
+          ],
+          "5": [
+            5,
+            6
+          ]
+        }
+      },
+      "desc": "造成伤害的 {value}% 转化为法力回复（群攻时首个目标全额，之后逐个减半）"
+    },
+    {
+      "key": "qiling_heal_kill",
+      "name": "灵契·回春",
+      "kind": "passive",
+      "effect_type": "kill_heal_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            2
+          ],
+          "4": [
+            1,
+            2
+          ],
+          "5": [
+            1,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            1,
+            3
+          ],
+          "1": [
+            2,
+            3
+          ],
+          "2": [
+            2,
+            3
+          ],
+          "3": [
+            2,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            4
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            2,
+            4
+          ],
+          "1": [
+            3,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            4
+          ],
+          "5": [
+            3,
+            4
+          ]
+        }
+      },
+      "desc": "击杀敌人后回复 {value}% 生命"
+    },
+    {
+      "key": "qiling_exp",
+      "name": "灵契·专注",
+      "kind": "passive",
+      "effect_type": "hang_exp_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            2,
+            3
+          ],
+          "1": [
+            2,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            5
+          ],
+          "5": [
+            4,
+            5
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            5
+          ],
+          "2": [
+            4,
+            6
+          ],
+          "3": [
+            5,
+            6
+          ],
+          "4": [
+            5,
+            6
+          ],
+          "5": [
+            5,
+            6
+          ]
+        }
+      },
+      "desc": "挂机经验获取 +{value}%"
+    },
+    {
+      "key": "qiling_boss",
+      "name": "灵契·屠戮",
+      "kind": "passive",
+      "effect_type": "boss_dmg_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            2,
+            3
+          ],
+          "1": [
+            2,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            5
+          ],
+          "5": [
+            4,
+            5
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            5
+          ],
+          "2": [
+            4,
+            6
+          ],
+          "3": [
+            5,
+            6
+          ],
+          "4": [
+            5,
+            6
+          ],
+          "5": [
+            5,
+            6
+          ]
+        }
+      },
+      "desc": "对BOSS、聚宝造成伤害 +{value}%"
+    },
+    {
+      "key": "qiling_dodge",
+      "name": "灵契·疾影",
+      "kind": "passive",
+      "effect_type": "dodge",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            2
+          ],
+          "4": [
+            1,
+            2
+          ],
+          "5": [
+            1,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            1,
+            3
+          ],
+          "1": [
+            2,
+            3
+          ],
+          "2": [
+            2,
+            3
+          ],
+          "3": [
+            2,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            4
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            2,
+            4
+          ],
+          "1": [
+            3,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            4
+          ],
+          "5": [
+            3,
+            4
+          ]
+        }
+      },
+      "desc": "闪避率 +{value}%"
+    },
+    {
+      "key": "qiling_speed",
+      "name": "灵契·迅捷",
+      "kind": "passive",
+      "effect_type": "speed_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            10,
+            14
+          ],
+          "1": [
+            13,
+            17
+          ],
+          "2": [
+            16,
+            20
+          ],
+          "3": [
+            19,
+            23
+          ],
+          "4": [
+            22,
+            26
+          ],
+          "5": [
+            25,
+            29
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            25,
+            29
+          ],
+          "1": [
+            28,
+            32
+          ],
+          "2": [
+            31,
+            35
+          ],
+          "3": [
+            35,
+            39
+          ],
+          "4": [
+            38,
+            42
+          ],
+          "5": [
+            41,
+            45
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            41,
+            45
+          ],
+          "1": [
+            44,
+            48
+          ],
+          "2": [
+            47,
+            51
+          ],
+          "3": [
+            50,
+            54
+          ],
+          "4": [
+            53,
+            57
+          ],
+          "5": [
+            56,
+            60
+          ]
+        }
+      },
+      "desc": "出手速度 +{value}%"
+    },
+    {
+      "key": "qiling_mp",
+      "name": "灵契·灵蕴",
+      "kind": "passive",
+      "effect_type": "max_mp_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            3
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            2,
+            3
+          ],
+          "1": [
+            2,
+            4
+          ],
+          "2": [
+            3,
+            4
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            5
+          ],
+          "5": [
+            4,
+            5
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            5
+          ],
+          "2": [
+            4,
+            6
+          ],
+          "3": [
+            5,
+            6
+          ],
+          "4": [
+            5,
+            6
+          ],
+          "5": [
+            5,
+            6
+          ]
+        }
+      },
+      "desc": "法力上限 +{value}%"
+    },
+    {
+      "key": "qiling_gold",
+      "name": "灵契·财气",
+      "kind": "passive",
+      "effect_type": "hang_gold_pct",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            5,
+            7
+          ],
+          "1": [
+            6,
+            9
+          ],
+          "2": [
+            8,
+            10
+          ],
+          "3": [
+            9,
+            12
+          ],
+          "4": [
+            11,
+            13
+          ],
+          "5": [
+            12,
+            15
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            12,
+            15
+          ],
+          "1": [
+            14,
+            16
+          ],
+          "2": [
+            15,
+            18
+          ],
+          "3": [
+            17,
+            20
+          ],
+          "4": [
+            19,
+            21
+          ],
+          "5": [
+            20,
+            23
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            20,
+            23
+          ],
+          "1": [
+            22,
+            24
+          ],
+          "2": [
+            23,
+            26
+          ],
+          "3": [
+            25,
+            27
+          ],
+          "4": [
+            26,
+            29
+          ],
+          "5": [
+            28,
+            30
+          ]
+        }
+      },
+      "desc": "挂机铜钱获取 +{value}%"
+    },
+    {
+      "key": "qiling_invincible",
+      "name": "灵契·金刚不灭",
+      "kind": "active",
+      "buff_kind": "invincible",
+      "effect_type": "invincible",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            1,
+            2
+          ],
+          "1": [
+            1,
+            2
+          ],
+          "2": [
+            1,
+            2
+          ],
+          "3": [
+            1,
+            2
+          ],
+          "4": [
+            2,
+            3
+          ],
+          "5": [
+            2,
+            3
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            2,
+            3
+          ],
+          "1": [
+            2,
+            3
+          ],
+          "2": [
+            2,
+            3
+          ],
+          "3": [
+            3,
+            4
+          ],
+          "4": [
+            3,
+            4
+          ],
+          "5": [
+            3,
+            4
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            3,
+            4
+          ],
+          "1": [
+            3,
+            4
+          ],
+          "2": [
+            4,
+            5
+          ],
+          "3": [
+            4,
+            5
+          ],
+          "4": [
+            4,
+            5
+          ],
+          "5": [
+            4,
+            5
+          ]
+        }
+      },
+      "desc": "生命低于30%时立刻触发，无敌 {value} 秒（冷却30秒）",
+      "turns_ms": "value",
+      "trigger": "hp_below",
+      "trigger_value": 0.3,
+      "cooldown_ms": 30000
+    },
+    {
+      "key": "qiling_war_cry",
+      "name": "灵契·战吼",
+      "kind": "active",
+      "buff_kind": "atk_up",
+      "effect_type": "atk_up",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            6
+          ],
+          "2": [
+            5,
+            6
+          ],
+          "3": [
+            5,
+            7
+          ],
+          "4": [
+            6,
+            7
+          ],
+          "5": [
+            6,
+            8
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            6,
+            8
+          ],
+          "1": [
+            7,
+            8
+          ],
+          "2": [
+            7,
+            9
+          ],
+          "3": [
+            8,
+            10
+          ],
+          "4": [
+            9,
+            10
+          ],
+          "5": [
+            9,
+            11
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            9,
+            11
+          ],
+          "1": [
+            10,
+            11
+          ],
+          "2": [
+            10,
+            12
+          ],
+          "3": [
+            11,
+            12
+          ],
+          "4": [
+            11,
+            13
+          ],
+          "5": [
+            12,
+            13
+          ]
+        }
+      },
+      "desc": "开战时攻击提升 {value}%，持续4秒（冷却30秒）",
+      "turns_ms": 4000,
+      "trigger": "battle_start",
+      "cooldown_ms": 30000
+    },
+    {
+      "key": "qiling_holy_shield",
+      "name": "灵契·圣护",
+      "kind": "active",
+      "buff_kind": "shield",
+      "effect_type": "shield",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            6
+          ],
+          "2": [
+            5,
+            6
+          ],
+          "3": [
+            5,
+            7
+          ],
+          "4": [
+            6,
+            7
+          ],
+          "5": [
+            6,
+            8
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            6,
+            8
+          ],
+          "1": [
+            7,
+            8
+          ],
+          "2": [
+            7,
+            9
+          ],
+          "3": [
+            8,
+            10
+          ],
+          "4": [
+            9,
+            10
+          ],
+          "5": [
+            9,
+            11
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            9,
+            11
+          ],
+          "1": [
+            10,
+            11
+          ],
+          "2": [
+            10,
+            12
+          ],
+          "3": [
+            11,
+            12
+          ],
+          "4": [
+            11,
+            13
+          ],
+          "5": [
+            12,
+            13
+          ]
+        }
+      },
+      "desc": "开战时获得最大生命 {value}% 的护盾，持续4秒（冷却30秒）",
+      "turns_ms": 4000,
+      "trigger": "battle_start",
+      "cooldown_ms": 30000
+    },
+    {
+      "key": "qiling_regen",
+      "name": "灵契·游龙",
+      "kind": "active",
+      "buff_kind": "dodge_up",
+      "effect_type": "dodge_up",
+      "star_values": {
+        "qiling_normal": {
+          "0": [
+            4,
+            5
+          ],
+          "1": [
+            4,
+            6
+          ],
+          "2": [
+            5,
+            6
+          ],
+          "3": [
+            5,
+            7
+          ],
+          "4": [
+            6,
+            7
+          ],
+          "5": [
+            6,
+            8
+          ]
+        },
+        "qiling_spirit": {
+          "0": [
+            6,
+            8
+          ],
+          "1": [
+            7,
+            8
+          ],
+          "2": [
+            7,
+            9
+          ],
+          "3": [
+            8,
+            10
+          ],
+          "4": [
+            9,
+            10
+          ],
+          "5": [
+            9,
+            11
+          ]
+        },
+        "qiling_divine": {
+          "0": [
+            9,
+            11
+          ],
+          "1": [
+            10,
+            11
+          ],
+          "2": [
+            10,
+            12
+          ],
+          "3": [
+            11,
+            12
+          ],
+          "4": [
+            11,
+            13
+          ],
+          "5": [
+            12,
+            13
+          ]
+        }
+      },
+      "desc": "开战时闪避提升 {value}%，持续4秒（冷却30秒）",
+      "turns_ms": 4000,
+      "trigger": "battle_start",
+      "cooldown_ms": 30000
+    }
+  ],
+  "carriers": [
+    {
+      "key": "qiling_normal",
+      "name": "凡品骑灵珠",
+      "max_tier": 2,
+      "active_slots": 0,
+      "stat_mult": 1.0,
+      "divine": false,
+      "teleport_charges": 999,
+      "beast_suffix": "兽"
+    },
+    {
+      "key": "qiling_spirit",
+      "name": "灵品骑灵珠",
+      "max_tier": 5,
+      "active_slots": 1,
+      "stat_mult": 1.0,
+      "divine": false,
+      "teleport_charges": 999,
+      "beast_suffix": "灵兽"
+    },
+    {
+      "key": "qiling_divine",
+      "name": "神品骑灵珠",
+      "max_tier": 8,
+      "active_slots": 2,
+      "stat_mult": 1.0,
+      "divine": true,
+      "teleport_charges": 999,
+      "beast_suffix": "神兽"
+    }
+  ],
+  "species": [
+    {
+      "key": "chihuo",
+      "name": "赤焰",
+      "job": "warrior",
+      "job_name": "战士"
+    },
+    {
+      "key": "qinglan",
+      "name": "青岚",
+      "job": "shaman",
+      "job_name": "医师"
+    },
+    {
+      "key": "hanyue",
+      "name": "瀚月",
+      "job": "mage",
+      "job_name": "法师"
+    },
+    {
+      "key": "xiaoying",
+      "name": "宵影",
+      "job": "darkwitch",
+      "job_name": "巫师"
+    }
+  ],
+  "items": {
+    "hunyuan_dan": {
+      "item_key": "qhk_qiling_cao",
+      "exp": 100,
+      "daily_limit": 5
+    },
+    "huiming_dan": {
+      "item_key": "qhk_qiling_chao",
+      "exp": 30,
+      "daily_limit": 5
+    },
+    "guihuagao": {
+      "item_key": "qhk_ninglu_gao",
+      "intimacy": 200,
+      "daily_limit": 5
+    },
+    "dandinghong": {
+      "item_key": "qhk_wangyou_san",
+      "star_down": 1
+    },
+    "wangchen_dan": {
+      "item_key": "qhk_wangchen_dan"
+    }
+  },
+  "teleport": {
+    "low": {
+      "ridemanship": 3,
+      "min_tier": 3
+    },
+    "high": {
+      "ridemanship": 5,
+      "min_tier": 5
+    },
+    "cooldown_minutes": 1
+  },
+  "loot_supplement": {
+    "jubao": [
+      "骑宠丹_jubao"
+    ]
+  },
+  "bind_quest": "qiling_jichu",
+  "min_player_level": 40,
+  "shop_coupon_category": "qiling",
+  "max_star": 5,
+  "star_slots": {
+    "qiling_normal": [
+      2,
+      2,
+      3,
+      3,
+      4,
+      4
+    ],
+    "qiling_spirit": [
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "qiling_divine": [
+      6,
+      6,
+      7,
+      7,
+      8,
+      8
+    ]
+  },
+  "star_stats": {
+    "totals": {
+      "qiling_normal": [
+        5,
+        10,
+        10,
+        15,
+        15,
+        20
+      ],
+      "qiling_spirit": [
+        20,
+        25,
+        25,
+        30,
+        35,
+        40
+      ],
+      "qiling_divine": [
+        40,
+        50,
+        55,
+        65,
+        70,
+        80
+      ]
+    },
+    "weights": {
+      "chihuo": {
+        "strength": 42,
+        "agility": 25,
+        "constitution": 17,
+        "intelligence": 0,
+        "spirit": 16
+      },
+      "qinglan": {
+        "strength": 0,
+        "agility": 33,
+        "constitution": 17,
+        "intelligence": 33,
+        "spirit": 17
+      },
+      "hanyue": {
+        "strength": 0,
+        "agility": 17,
+        "constitution": 25,
+        "intelligence": 42,
+        "spirit": 16
+      },
+      "xiaoying": {
+        "strength": 0,
+        "agility": 17,
+        "constitution": 17,
+        "intelligence": 33,
+        "spirit": 33
+      }
+    }
+  },
+  "star_cost": {
+    "huajiedan_key": "qhk_huajiedan",
+    "steps": {
+      "qiling_normal": [
+        20,
+        80,
+        140,
+        200,
+        260
+      ],
+      "qiling_spirit": [
+        320,
+        380,
+        440,
+        500,
+        560
+      ],
+      "qiling_divine": [
+        620,
+        680,
+        740,
+        800,
+        860
+      ]
+    },
+    "blood_steps": {
+      "qiling_normal": [
+        4,
+        16,
+        28,
+        40,
+        52
+      ],
+      "qiling_spirit": [
+        64,
+        76,
+        88,
+        100,
+        112
+      ],
+      "qiling_divine": [
+        124,
+        136,
+        148,
+        160,
+        172
+      ]
+    },
+    "promote_cost": {
+      "qiling_normal": {
+        "shouhun": 700,
+        "huajiedan": 1,
+        "subs": 3
+      },
+      "qiling_spirit": {
+        "shouhun": 2100,
+        "huajiedan": 3,
+        "subs": 3
+      }
+    }
+  },
+  "star_rate": {
+    "qiling_normal": [
+      85,
+      75,
+      65,
+      55,
+      45
+    ],
+    "qiling_spirit": [
+      75,
+      65,
+      55,
+      45,
+      35
+    ],
+    "qiling_divine": [
+      65,
+      55,
+      45,
+      35,
+      25
+    ]
+  },
+  "star_boost": {
+    "item_key": "qhk_juxingfu",
+    "per_item": 15,
+    "max_items": 4,
+    "cap": 100
+  },
+  "decompose": {
+    "refund_rate": 0.2,
+    "body": {
+      "qiling_normal": 5,
+      "qiling_spirit": 20,
+      "qiling_divine": 120
+    }
+  },
+  "star_material": {
+    "item_key": "qhk_shouhun",
+    "blood_key": "qhk_shouxue"
+  }
+}

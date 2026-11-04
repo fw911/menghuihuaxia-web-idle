@@ -1,0 +1,188 @@
+{
+  "suits": [
+    {
+      "key": "suit_warrior_1",
+      "job": "warrior",
+      "side": 1,
+      "name": "噬日吞天",
+      "bonus": {
+        "3": {
+          "strength": 14,
+          "constitution": 20
+        },
+        "5": {
+          "strength": 25,
+          "constitution": 25,
+          "phys_atk": 56
+        },
+        "8": {
+          "strength": 30,
+          "constitution": 30,
+          "phys_atk": 70,
+          "phys_crit": 2
+        }
+      }
+    },
+    {
+      "key": "suit_warrior_2",
+      "job": "warrior",
+      "side": 2,
+      "name": "岳镇山河",
+      "bonus": {
+        "3": {
+          "strength": 12,
+          "constitution": 30
+        },
+        "5": {
+          "strength": 16,
+          "constitution": 40,
+          "max_hp_pct": 12
+        },
+        "8": {
+          "strength": 20,
+          "constitution": 55,
+          "max_hp_pct": 14,
+          "dmg_reduce_pct": 5
+        }
+      }
+    },
+    {
+      "key": "suit_mage_1",
+      "job": "mage",
+      "side": 1,
+      "name": "离火焚霄",
+      "bonus": {
+        "3": {
+          "intelligence": 14,
+          "constitution": 16
+        },
+        "5": {
+          "intelligence": 20,
+          "constitution": 20,
+          "fire_atk": 45
+        },
+        "8": {
+          "intelligence": 25,
+          "constitution": 20,
+          "fire_atk": 60,
+          "magic_crit": 2
+        }
+      }
+    },
+    {
+      "key": "suit_mage_2",
+      "job": "mage",
+      "side": 2,
+      "name": "玄霜覆海",
+      "bonus": {
+        "3": {
+          "intelligence": 14,
+          "max_hp": 280
+        },
+        "5": {
+          "intelligence": 18,
+          "max_hp": 360,
+          "ice_atk": 50
+        },
+        "8": {
+          "intelligence": 20,
+          "max_hp": 450,
+          "ice_atk": 70,
+          "magic_atk_pct": 8
+        }
+      }
+    },
+    {
+      "key": "suit_shaman_1",
+      "job": "shaman",
+      "side": 1,
+      "name": "青鸾振羽",
+      "bonus": {
+        "3": {
+          "agility": 14,
+          "constitution": 16
+        },
+        "5": {
+          "agility": 20,
+          "constitution": 20,
+          "phys_atk": 42
+        },
+        "8": {
+          "agility": 25,
+          "constitution": 25,
+          "phys_atk": 70,
+          "phys_atk_pct": 8
+        }
+      }
+    },
+    {
+      "key": "suit_shaman_2",
+      "job": "shaman",
+      "side": 2,
+      "name": "雷动千山",
+      "bonus": {
+        "3": {
+          "intelligence": 14,
+          "max_hp": 360
+        },
+        "5": {
+          "intelligence": 20,
+          "max_hp": 450,
+          "magic_def_pct": 12
+        },
+        "8": {
+          "intelligence": 25,
+          "max_hp": 550,
+          "magic_def_pct": 15,
+          "dmg_reduce_pct": 5
+        }
+      }
+    },
+    {
+      "key": "suit_darkwitch_1",
+      "job": "darkwitch",
+      "side": 1,
+      "name": "万蛊噬心",
+      "bonus": {
+        "3": {
+          "intelligence": 14,
+          "constitution": 16
+        },
+        "5": {
+          "intelligence": 20,
+          "constitution": 20,
+          "dark_atk": 42
+        },
+        "8": {
+          "intelligence": 25,
+          "constitution": 20,
+          "dark_atk": 60,
+          "magic_crit": 2
+        }
+      }
+    },
+    {
+      "key": "suit_darkwitch_2",
+      "job": "darkwitch",
+      "side": 2,
+      "name": "冥河夜渡",
+      "bonus": {
+        "3": {
+          "intelligence": 14,
+          "spirit": 14
+        },
+        "5": {
+          "intelligence": 20,
+          "spirit": 20,
+          "phys_def_pct": 12
+        },
+        "8": {
+          "intelligence": 25,
+          "spirit": 30,
+          "phys_def_pct": 15,
+          "magic_atk": 80
+        }
+      }
+    }
+  ]
+}

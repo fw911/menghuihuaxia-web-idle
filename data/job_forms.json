@@ -1,0 +1,53 @@
+{
+  "_comment": "职业形态名（2026-09-17 立）。每个形态一条独立记录 ⇒ 可被 MOD 层按「表本名 key」覆盖（MODS/official/overrides.json 的 `job_forms:<job>_<form>`），实现形态名双切：MOD 开=原版名（蓄势/磐石/独行/诅咒/治疗/幻化），MOD 关=核心原创名（陷阵/金汤/绝尘/蚀月/悬壶/换骨）。本表是形态名**唯一数据源**，jobs.json 不再自带 forms_cn；消费链 = config.JOB_FORMS → 回填 jobs[].forms_cn（保持前端契约）→ /api/skills → 前端 char.js::formName()。",
+  "forms": [
+    {
+      "key": "warrior_xu",
+      "job": "warrior",
+      "form": "xu",
+      "name": "陷阵形态"
+    },
+    {
+      "key": "warrior_pan",
+      "job": "warrior",
+      "form": "pan",
+      "name": "金汤形态"
+    },
+    {
+      "key": "mage_du",
+      "job": "mage",
+      "form": "du",
+      "name": "绝尘形态"
+    },
+    {
+      "key": "mage_qun",
+      "job": "mage",
+      "form": "qun",
+      "name": "群攻形态"
+    },
+    {
+      "key": "darkwitch_zhao",
+      "job": "darkwitch",
+      "form": "zhao",
+      "name": "召唤形态"
+    },
+    {
+      "key": "darkwitch_zu",
+      "job": "darkwitch",
+      "form": "zu",
+      "name": "蚀月形态"
+    },
+    {
+      "key": "shaman_zhi",
+      "job": "shaman",
+      "form": "zhi",
+      "name": "悬壶形态"
+    },
+    {
+      "key": "shaman_huan",
+      "job": "shaman",
+      "form": "huan",
+      "name": "换骨形态"
+    }
+  ]
+}

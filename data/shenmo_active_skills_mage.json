@@ -1,0 +1,296 @@
+{
+  "_comment": "法师神魔主动技能条（设计文档 v2.0 §6，5 条）。无顶层 cd（sm_skill 豁免）。",
+  "active_skills": [
+    {
+      "key": "sm_mage_shen_mifa_hudun",
+      "name": "紫府玄罩",
+      "form": "qun",
+      "element": "physical",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/mage_008.gif",
+      "desc": "神魔·紫府玄罩：护体法盾减免伤害",
+      "sm_skill": true,
+      "jobs": [
+        "mage"
+      ],
+      "levels": [
+        {
+          "damage": 0,
+          "mp": 70,
+          "cd_ms": 20000,
+          "desc": "获得护体法盾，减免1%伤害并抵消3300点伤害，持续180秒",
+          "effects": [
+            {
+              "type": "dmg_reduce",
+              "value": 1,
+              "duration_ms": 180000,
+              "target": "self"
+            },
+            {
+              "type": "shield",
+              "value": 3300,
+              "duration_ms": 180000,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 70,
+          "cd_ms": 20000,
+          "desc": "获得护体法盾，减免2%伤害并抵消3600点伤害，持续180秒",
+          "effects": [
+            {
+              "type": "dmg_reduce",
+              "value": 2,
+              "duration_ms": 180000,
+              "target": "self"
+            },
+            {
+              "type": "shield",
+              "value": 3600,
+              "duration_ms": 180000,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 70,
+          "cd_ms": 20000,
+          "desc": "获得护体法盾，减免3%伤害并抵消3900点伤害，持续180秒",
+          "effects": [
+            {
+              "type": "dmg_reduce",
+              "value": 3,
+              "duration_ms": 180000,
+              "target": "self"
+            },
+            {
+              "type": "shield",
+              "value": 3900,
+              "duration_ms": 180000,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 70,
+          "cd_ms": 20000,
+          "desc": "获得护体法盾，减免4%伤害并抵消4200点伤害，持续180秒",
+          "effects": [
+            {
+              "type": "dmg_reduce",
+              "value": 4,
+              "duration_ms": 180000,
+              "target": "self"
+            },
+            {
+              "type": "shield",
+              "value": 4200,
+              "duration_ms": 180000,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 70,
+          "cd_ms": 20000,
+          "desc": "获得护体法盾，减免5%伤害并抵消4500点伤害，持续180秒",
+          "effects": [
+            {
+              "type": "dmg_reduce",
+              "value": 5,
+              "duration_ms": 180000,
+              "target": "self"
+            },
+            {
+              "type": "shield",
+              "value": 4500,
+              "duration_ms": 180000,
+              "target": "self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sm_mage_shen_jisulengque",
+      "name": "凝神速诀",
+      "form": "qun",
+      "element": "physical",
+      "skill_type": "buff",
+      "target_rule": "self",
+      "max_level": 5,
+      "icon": "static/icons/skills/mage_010.gif",
+      "desc": "神魔·凝神速诀：立即清空本方全部技能冷却（reset_cds 直结算，N12）",
+      "sm_skill": true,
+      "jobs": [
+        "mage"
+      ],
+      "levels": [
+        {
+          "damage": 0,
+          "mp": 80,
+          "cd_ms": 60000,
+          "desc": "立即结束所有技能的冷却",
+          "effects": [
+            {
+              "type": "reset_cds",
+              "value": 0,
+              "duration_ms": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 80,
+          "cd_ms": 50000,
+          "desc": "立即结束所有技能的冷却",
+          "effects": [
+            {
+              "type": "reset_cds",
+              "value": 0,
+              "duration_ms": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 80,
+          "cd_ms": 40000,
+          "desc": "立即结束所有技能的冷却",
+          "effects": [
+            {
+              "type": "reset_cds",
+              "value": 0,
+              "duration_ms": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 80,
+          "cd_ms": 30000,
+          "desc": "立即结束所有技能的冷却",
+          "effects": [
+            {
+              "type": "reset_cds",
+              "value": 0,
+              "duration_ms": 0,
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 80,
+          "cd_ms": 20000,
+          "desc": "立即结束所有技能的冷却",
+          "effects": [
+            {
+              "type": "reset_cds",
+              "value": 0,
+              "duration_ms": 0,
+              "target": "self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sm_mage_mo_huanman",
+      "name": "缓慢",
+      "form": "du",
+      "element": "ice",
+      "skill_type": "control",
+      "target_rule": "single",
+      "max_level": 5,
+      "icon": "static/icons/skills/mage_011.gif",
+      "desc": "神魔·缓慢：大幅降低目标攻速",
+      "sm_skill": true,
+      "jobs": [
+        "mage"
+      ],
+      "levels": [
+        {
+          "damage": 0,
+          "mp": 45,
+          "cd_ms": 20000,
+          "desc": "使目标的攻速降低到正常的60%，持续2秒",
+          "effects": [
+            {
+              "type": "speed_down",
+              "value": 60,
+              "duration_ms": 2000,
+              "target": "enemy"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 45,
+          "cd_ms": 20000,
+          "desc": "使目标的攻速降低到正常的60%，持续2.5秒",
+          "effects": [
+            {
+              "type": "speed_down",
+              "value": 60,
+              "duration_ms": 2500,
+              "target": "enemy"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 45,
+          "cd_ms": 20000,
+          "desc": "使目标的攻速降低到正常的60%，持续3秒",
+          "effects": [
+            {
+              "type": "speed_down",
+              "value": 60,
+              "duration_ms": 3000,
+              "target": "enemy"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 45,
+          "cd_ms": 20000,
+          "desc": "使目标的攻速降低到正常的60%，持续3.5秒",
+          "effects": [
+            {
+              "type": "speed_down",
+              "value": 60,
+              "duration_ms": 3500,
+              "target": "enemy"
+            }
+          ]
+        },
+        {
+          "damage": 0,
+          "mp": 45,
+          "cd_ms": 20000,
+          "desc": "使目标的攻速降低到正常的60%，持续4秒",
+          "effects": [
+            {
+              "type": "speed_down",
+              "value": 60,
+              "duration_ms": 4000,
+              "target": "enemy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

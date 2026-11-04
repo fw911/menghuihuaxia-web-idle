@@ -1,0 +1,169 @@
+{
+  "duration_sec": 480,
+  "max_slots": 10,
+  "success_upgrade_base": 0.75,
+  "success_upgrade_guard": 0.9,
+  "guard_stone": "hubaoshi",
+  "reroll_stone": "zhuanlun_shi",
+  "reroll_limit": 3,
+  "side_base": [
+    0.5,
+    0.5
+  ],
+  "side_stone": [
+    0.8,
+    0.2
+  ],
+  "yang_stone": "liangyi_yang",
+  "yin_stone": "liangyi_yin",
+  "recipes": {
+    "ronglian_cangmu": {
+      "name": "熔炼·苍木",
+      "recipe_item": "ronglian_cangmu",
+      "materials": [
+        {
+          "key": "jingpo_lv",
+          "count": 1,
+          "kind": "consumable",
+          "source": "丰穰礼匣开出"
+        },
+        {
+          "key": "baicaogao",
+          "count": 1,
+          "kind": "consumable",
+          "source": "100 级以上精英、BOSS、副本、聚宝掉落"
+        }
+      ],
+      "result": "jingyuan_cangmu"
+    },
+    "ronglian_chiyan": {
+      "name": "熔炼·赤岩",
+      "recipe_item": "ronglian_chiyan",
+      "materials": [
+        {
+          "key": "jingpo_chi",
+          "count": 1,
+          "kind": "consumable",
+          "source": "100 级以上 BOSS、副本、聚宝掉落"
+        },
+        {
+          "key": "chixuejing",
+          "count": 1,
+          "kind": "consumable",
+          "source": "100 级以上精英、BOSS、副本、聚宝掉落"
+        }
+      ],
+      "result": "jingyuan_chiyan"
+    },
+    "ronglian_houtu": {
+      "name": "熔炼·厚土",
+      "recipe_item": "ronglian_houtu",
+      "materials": [
+        {
+          "key": "jingpo_huang",
+          "count": 1,
+          "kind": "consumable",
+          "source": "100 级以上 BOSS、副本、聚宝掉落"
+        },
+        {
+          "key": "lingjinghe",
+          "count": 1,
+          "kind": "consumable",
+          "source": "100 级以上精英、BOSS、副本、聚宝掉落"
+        }
+      ],
+      "result": "jingyuan_houtu"
+    },
+    "ronglian_hansui": {
+      "name": "熔炼·寒髓",
+      "recipe_item": "ronglian_hansui",
+      "materials": [
+        {
+          "key": "jingpo_lan",
+          "count": 1,
+          "kind": "consumable",
+          "source": "100 级以上 BOSS、副本、聚宝掉落"
+        },
+        {
+          "key": "miyinsha",
+          "count": 1,
+          "kind": "consumable",
+          "source": "三品矿脉探矿副产"
+        }
+      ],
+      "result": "jingyuan_hansui"
+    },
+    "ronglian_liujin": {
+      "name": "熔炼·鎏金",
+      "recipe_item": "ronglian_liujin",
+      "materials": [
+        {
+          "key": "jingpo_zi",
+          "count": 1,
+          "kind": "consumable",
+          "source": "100 级以上 BOSS、副本、聚宝掉落"
+        }
+      ],
+      "result": "jingyuan_liujin"
+    }
+  },
+  "upgrade_matrix_comment": "2026-09-24 用户拍板：部位需求混淆重排并扩至 68 颗（原 63 照原稿件数表 v1.6）。保留零色模式（头盔/肩无厚土、衣服/裤无赤岩、披风/腰无寒髓、手套/鞋无苍木），鎏金恒 9 颗。",
+  "upgrade_matrix": {
+    "helmet": {
+      "cangmu": 3,
+      "chiyan": 2,
+      "houtu": 0,
+      "hansui": 2,
+      "liujin": 1
+    },
+    "shoulder_l": {
+      "cangmu": 1,
+      "chiyan": 1,
+      "houtu": 0,
+      "hansui": 3,
+      "liujin": 1
+    },
+    "armor": {
+      "cangmu": 4,
+      "chiyan": 0,
+      "houtu": 3,
+      "hansui": 3,
+      "liujin": 2
+    },
+    "pants": {
+      "cangmu": 2,
+      "chiyan": 0,
+      "houtu": 4,
+      "hansui": 4,
+      "liujin": 1
+    },
+    "cloak": {
+      "cangmu": 2,
+      "chiyan": 3,
+      "houtu": 1,
+      "hansui": 0,
+      "liujin": 1
+    },
+    "belt": {
+      "cangmu": 1,
+      "chiyan": 2,
+      "houtu": 2,
+      "hansui": 0,
+      "liujin": 1
+    },
+    "gloves": {
+      "cangmu": 0,
+      "chiyan": 4,
+      "houtu": 3,
+      "hansui": 3,
+      "liujin": 1
+    },
+    "shoes": {
+      "cangmu": 0,
+      "chiyan": 2,
+      "houtu": 3,
+      "hansui": 1,
+      "liujin": 1
+    }
+  }
+}

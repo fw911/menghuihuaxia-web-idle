@@ -46,3 +46,6 @@ _patch_subtabs_html.py
 _run_tiers_ab.sh
 _uiprobe.py
 _try_compact.css
+
+# 升级前数据备份（本地回滚用，不入库）
+_data_backup_before_upgrade/

@@ -1,0 +1,1394 @@
+{
+  "version": 1,
+  "_comment": "新手引导主线（40 阶段 / 5 章）。由 scripts/build_guide_chain_v1.py 幂等生成，勿手改；改数值请改脚本后重跑。奖励为象征性（exp=5%、currency=10%×exp_to_next，单位＝铜）。desc 中 {map:key}/{zone:key}/{item:key} 为 MOD 双切占位符，禁止写字面中文名。",
+  "chapters": [
+    {
+      "key": "ch1",
+      "name": "初入青丘",
+      "level_range": [
+        1,
+        20
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "name": "鸿福石开双倍",
+          "anchor": 2,
+          "desc": "在背包右键开启{item:zhufu_shi}——打怪前先开，双倍只按在线时间扣、下线冻结。",
+          "goal": {
+            "type": "action",
+            "action": "double_on",
+            "count": 1
+          },
+          "reward": {
+            "exp": 6,
+            "currency": 12
+          }
+        },
+        {
+          "stage": 2,
+          "name": "时光宝葫芦",
+          "anchor": 3,
+          "desc": "在背包右键激活{item:huangjin_hulu}，开始累计在线时长奖励——不激活则永远领不了。",
+          "goal": {
+            "type": "action",
+            "action": "online_activate",
+            "count": 1
+          },
+          "reward": {
+            "exp": 20,
+            "currency": 40
+          }
+        },
+        {
+          "stage": 3,
+          "name": "曜灵珠",
+          "anchor": 4,
+          "desc": "在背包右键激活曜灵珠，下线也能累积离线经验——下线前记得确认已激活。",
+          "goal": {
+            "type": "action",
+            "action": "offline_activate",
+            "count": 1
+          },
+          "reward": {
+            "exp": 48,
+            "currency": 96
+          }
+        },
+        {
+          "stage": 4,
+          "name": "初入江湖",
+          "anchor": 5,
+          "desc": "进入野外{zone:beijun/central}——进入即自动开战，无需点开始。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "beijun",
+            "zone_key": "central"
+          },
+          "reward": {
+            "exp": 94,
+            "currency": 188
+          }
+        },
+        {
+          "stage": 5,
+          "name": "突破之机",
+          "anchor": 7,
+          "desc": "升到 5 级——经验攒满 3 级会自动升 1 级，接着打怪攒经验就行。",
+          "goal": {
+            "type": "level",
+            "level": 5
+          },
+          "reward": {
+            "exp": 257,
+            "currency": 514
+          }
+        },
+        {
+          "stage": 6,
+          "name": "初见宝匣",
+          "anchor": 9,
+          "desc": "小怪会掉落宝匣，在背包右键开启 1 个，可得神秘结晶（结晶可去神秘商人处换物）——开不动多半是缺对应钥匙。",
+          "goal": {
+            "type": "action",
+            "action": "box_open",
+            "count": 1
+          },
+          "reward": {
+            "exp": 547,
+            "currency": 1094
+          }
+        },
+        {
+          "stage": 7,
+          "name": "披甲上阵",
+          "anchor": 11,
+          "desc": "打开背包，把一件装备拖到角色面板对应部位穿上——装备是主要战力来源。",
+          "goal": {
+            "type": "action",
+            "action": "equip_wear",
+            "count": 1
+          },
+          "reward": {
+            "exp": 998,
+            "currency": 1996
+          }
+        },
+        {
+          "stage": 8,
+          "name": "补充药剂",
+          "anchor": 13,
+          "desc": "在安全区店铺面板点开「杂货店」，购买 1 次{item:xumingdan}——站得住才挂得久。",
+          "goal": {
+            "type": "action",
+            "action": "shop_buy_potion",
+            "count": 1
+          },
+          "reward": {
+            "exp": 1648,
+            "currency": 3296,
+            "items": {
+              "xumingdan": 10
+            }
+          }
+        },
+        {
+          "stage": 9,
+          "name": "以药续命",
+          "anchor": 15,
+          "desc": "在挂机面板的「回复设置」页里配一次自动喝药，血量见底自动补——挂机续航全靠它。",
+          "goal": {
+            "type": "action",
+            "action": "idle_autodrink_set",
+            "count": 1
+          },
+          "reward": {
+            "exp": 2531,
+            "currency": 5062
+          }
+        },
+        {
+          "stage": 10,
+          "name": "习武",
+          "anchor": 16,
+          "desc": "打开技能面板，学习或升级 1 次主动技能——等级越高伤害越高。",
+          "goal": {
+            "type": "action",
+            "action": "skill_learn",
+            "count": 1
+          },
+          "reward": {
+            "exp": 3072,
+            "currency": 6144
+          }
+        },
+        {
+          "stage": 11,
+          "name": "运筹帷幄",
+          "anchor": 17,
+          "desc": "在挂机面板的「技能设置」页里配置起手技能与血量阈值——学了技能还得告诉它怎么用。",
+          "goal": {
+            "type": "action",
+            "action": "idle_ai_settings",
+            "count": 1
+          },
+          "reward": {
+            "exp": 3685,
+            "currency": 7370
+          }
+        },
+        {
+          "stage": 12,
+          "name": "转战凤鸣",
+          "anchor": 18,
+          "desc": "到 13 级，转去{zone:tianshengyuan/tian_sheng_hu}继续练级。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "tianshengyuan",
+            "zone_key": "tian_sheng_hu"
+          },
+          "reward": {
+            "exp": 4374,
+            "currency": 8748
+          }
+        },
+        {
+          "stage": 13,
+          "name": "神秘商人",
+          "anchor": 19,
+          "desc": "在{map:tianshengyuan}的店铺面板找神秘商人，用神秘结晶兑换 1 次（钥匙 / 材料 / 装备）。",
+          "goal": {
+            "type": "action",
+            "action": "mystic_exchange",
+            "count": 1
+          },
+          "reward": {
+            "exp": 5144,
+            "currency": 10288
+          }
+        },
+        {
+          "stage": 14,
+          "name": "灵力觉醒",
+          "anchor": 20,
+          "desc": "到 20 级，去【{map:nanjun}】的店铺面板点「附灵」，祝融子会为你开启附灵法阵——给装备注入灵韵、永久加属性的核心玩法。把一件装备拖进附灵槽（或面板打开时右键背包装备），消耗{item:fuling_chijing}/{item:fuling_shuangning}/{item:fuling_xuanlei}等灵材灌注：结果有 提升/不变/掉一级/归零/破碎消失 五种，越往上风险越高；连败 3 次触发灵力涌动保底抬升。怕碎先垫守护符。背包已备好{item:fuling_chijing}/{item:fuling_shuangning}，去试一次即可。",
+          "goal": {
+            "type": "action",
+            "action": "fuling_enchant",
+            "count": 1,
+            "require_level": 20
+          },
+          "reward": {
+            "exp": 6000,
+            "currency": 12000,
+            "items": {
+              "fuling_chijing": 1,
+              "fuling_shuangning": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "ch2",
+      "name": "百工初通",
+      "level_range": [
+        21,
+        40
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "name": "北上龙脊",
+          "anchor": 22,
+          "desc": "到 21 级，转去{zone:banquan/fei_ying_ya}继续练级。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "banquan",
+            "zone_key": "fei_ying_ya"
+          },
+          "reward": {
+            "exp": 7986,
+            "currency": 15972
+          }
+        },
+        {
+          "stage": 2,
+          "name": "探矿",
+          "anchor": 25,
+          "desc": "回安全区把挂机面板切到「探矿」页签，进野外区域后点「开始探矿」——矿石是精炼与合成的唯一来源，打怪不掉矿石；页签切不动说明人还在野外，先回安全区。",
+          "goal": {
+            "type": "action",
+            "action": "mine_start",
+            "count": 1
+          },
+          "reward": {
+            "exp": 11719,
+            "currency": 23438,
+            "items": {
+              "yipin_luopan": 5
+            }
+          }
+        },
+        {
+          "stage": 3,
+          "name": "精炼",
+          "anchor": 28,
+          "desc": "按 E 打开「生活技能」面板→「精炼」页签，把矿石炼成合成用的坯料——打怪不掉坯料，材料得自己炼；按钮按不动就是矿石没放进槽（拖入或点选放置）。",
+          "goal": {
+            "type": "action",
+            "action": "refine_do",
+            "count": 1
+          },
+          "reward": {
+            "exp": 16464,
+            "currency": 32928
+          }
+        },
+        {
+          "stage": 4,
+          "name": "合成",
+          "anchor": 31,
+          "desc": "按 E 打开「生活技能」面板→「合成」页签，选【底材 + 材料】合成装备（可勾{item:zhuanlun_shi}重铸属性）——好装备打怪不掉、得自己造；材料不够先探矿、精炼补，按钮按不动就是底材/材料没放进槽。",
+          "goal": {
+            "type": "action",
+            "action": "craft_equip",
+            "count": 1
+          },
+          "reward": {
+            "exp": 22343,
+            "currency": 44686
+          }
+        },
+        {
+          "stage": 5,
+          "name": "镶嵌",
+          "anchor": 34,
+          "desc": "按 E 打开「生活技能」面板→「镶嵌」页签，给装备镶 1 颗宝石——宝石是固定属性加成，性价比很高；孔位是装备自带的（0~3 孔、3 孔最稀有），0 孔的装备镶不了，得换一件带孔的。",
+          "goal": {
+            "type": "action",
+            "action": "socket_do",
+            "count": 1
+          },
+          "reward": {
+            "exp": 29478,
+            "currency": 58956
+          }
+        },
+        {
+          "stage": 6,
+          "name": "提炼",
+          "anchor": 36,
+          "desc": "按 E 打开「生活技能」面板→「提炼」页签，把不要的装备拆成晶石（晶石是附灵/合成的高级材料），顺手清背包；白装也能提，按钮按不动就是装备没放进槽。",
+          "goal": {
+            "type": "action",
+            "action": "extract_do",
+            "count": 1
+          },
+          "reward": {
+            "exp": 34992,
+            "currency": 69984
+          }
+        },
+        {
+          "stage": 7,
+          "name": "开荒种地",
+          "anchor": 38,
+          "desc": "在安全区把挂机面板切到「农场」页签，种下 1 茬作物（1 级解锁）——农场只能在安全区务农、作物按现实时间生长；页签切不动说明人还在野外，先回安全区。",
+          "goal": {
+            "type": "action",
+            "action": "farm_plant",
+            "count": 1
+          },
+          "reward": {
+            "exp": 41154,
+            "currency": 82308,
+            "items": {
+              "zz_xiaomai": 5
+            }
+          }
+        },
+        {
+          "stage": 8,
+          "name": "乾坤炉",
+          "anchor": 40,
+          "desc": "去{map:nanjun}的店铺面板点「乾坤炉」，做 1 次瞬间合成（重铸石 / 罗盘 / 宝匣 / 令牌 / 药水盒 / 矿石 / 元宝）；看不到「乾坤炉」按钮说明人不在{map:nanjun}。",
+          "goal": {
+            "type": "action",
+            "action": "furnace_craft",
+            "count": 1
+          },
+          "reward": {
+            "exp": 48000,
+            "currency": 96000
+          }
+        }
+      ]
+    },
+    {
+      "key": "ch3",
+      "name": "烽烟万里",
+      "level_range": [
+        41,
+        60
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "name": "转战烽烟",
+          "anchor": 43,
+          "desc": "到 41 级，转去{zone:qiufengyuan/luo_ye_yu_lin}继续练级。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "qiufengyuan",
+            "zone_key": "luo_ye_yu_lin"
+          },
+          "reward": {
+            "exp": 59630,
+            "currency": 119260
+          }
+        },
+        {
+          "stage": 2,
+          "name": "个人仓库",
+          "anchor": 46,
+          "desc": "在安全区店铺面板点「仓库」，往个人仓库存入 1 次（800 格）——背包满了有地方放；看不到「仓库」按钮说明人不在安全区。",
+          "goal": {
+            "type": "action",
+            "action": "depot_use",
+            "count": 1
+          },
+          "reward": {
+            "exp": 73002,
+            "currency": 146004
+          }
+        },
+        {
+          "stage": 3,
+          "name": "掉落过滤",
+          "anchor": 49,
+          "desc": "在挂机面板的「掉落过滤」页里配置自动提炼 / 自动出售——挂久了背包才不会爆。",
+          "goal": {
+            "type": "action",
+            "action": "idle_drop_filter",
+            "count": 1
+          },
+          "reward": {
+            "exp": 88237,
+            "currency": 176474
+          }
+        },
+        {
+          "stage": 4,
+          "name": "深入地下城",
+          "anchor": 52,
+          "desc": "到 51 级，转去地下城{zone:qibingdong_l1/xia_ceng_ru_kou}。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "qibingdong_l1",
+            "zone_key": "xia_ceng_ru_kou"
+          },
+          "reward": {
+            "exp": 105456,
+            "currency": 210912
+          }
+        },
+        {
+          "stage": 5,
+          "name": "首领挑战",
+          "anchor": 56,
+          "desc": "在地下城或野外击败 1 只 BOSS——BOSS 掉落远好于小怪，别错过。",
+          "goal": {
+            "type": "boss_kill",
+            "count": 1
+          },
+          "reward": {
+            "exp": 131712,
+            "currency": 263424
+          }
+        },
+        {
+          "stage": 6,
+          "name": "花甲",
+          "anchor": 60,
+          "desc": "升到 60 级。",
+          "goal": {
+            "type": "level",
+            "level": 60
+          },
+          "reward": {
+            "exp": 162000,
+            "currency": 324000
+          }
+        }
+      ]
+    },
+    {
+      "key": "ch4",
+      "name": "魂印初醒",
+      "level_range": [
+        61,
+        80
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "name": "移师幽都",
+          "anchor": 63,
+          "desc": "到 61 级，转去{zone:fuxiling_shangceng/bei_bu}继续练级。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "fuxiling_shangceng",
+            "zone_key": "bei_bu"
+          },
+          "reward": {
+            "exp": 194337,
+            "currency": 388674
+          }
+        },
+        {
+          "stage": 2,
+          "name": "魂印入手",
+          "anchor": 67,
+          "desc": "怪 ≥60 级才掉魂印；拿到后打开背包，把它穿到角色面板的魂印格上。一直不掉，多半是打的怪不到 60 级。",
+          "goal": {
+            "type": "action",
+            "action": "wuhun_equip",
+            "count": 1
+          },
+          "reward": {
+            "exp": 245632,
+            "currency": 491264,
+            "items": {
+              "fuling_chijing": 3,
+              "fuling_shuangning": 3
+            }
+          }
+        },
+        {
+          "stage": 3,
+          "name": "附灵进阶",
+          "anchor": 70,
+          "desc": "附灵是长线养成：仍在【{map:nanjun}】店铺面板的附灵法阵操作。每件装备可一路灌到 12 灵阶，13 个可附灵部位的最小灵阶还会触发【灵韵共振】，按百分比抬升攻防血蓝。把这章的{item:fuling_chijing}/{item:fuling_shuangning}用上，再灌一件装备，把共振等级往上推。",
+          "goal": {
+            "type": "action",
+            "action": "fuling_enchant",
+            "count": 1
+          },
+          "reward": {
+            "exp": 291226,
+            "currency": 582453
+          }
+        },
+        {
+          "stage": 4,
+          "name": "转战玉轮",
+          "anchor": 73,
+          "desc": "到 66 级，转去{zone:kunlun/ju_bing_yuan}继续练级。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "kunlun",
+            "zone_key": "ju_bing_yuan"
+          },
+          "reward": {
+            "exp": 343925,
+            "currency": 687849
+          }
+        },
+        {
+          "stage": 5,
+          "name": "聚宝之争",
+          "anchor": 76,
+          "desc": "击败 1 只聚宝怪——聚宝怪掉落丰厚，遇到别放过。",
+          "goal": {
+            "type": "jubao_kill",
+            "count": 1
+          },
+          "reward": {
+            "exp": 404793,
+            "currency": 809587
+          }
+        },
+        {
+          "stage": 6,
+          "name": "耄耋",
+          "anchor": 80,
+          "desc": "升到 80 级。",
+          "goal": {
+            "type": "level",
+            "level": 80
+          },
+          "reward": {
+            "exp": 500870,
+            "currency": 1001739
+          }
+        }
+      ]
+    },
+    {
+      "key": "ch5",
+      "name": "登临绝顶",
+      "level_range": [
+        81,
+        115
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "name": "深入险地",
+          "anchor": 86,
+          "desc": "到 86 级，转去{zone:donglicao/bingpogudao}继续练级。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "donglicao",
+            "zone_key": "bingpogudao"
+          },
+          "reward": {
+            "exp": 684749,
+            "currency": 1369499
+          }
+        },
+        {
+          "stage": 2,
+          "name": "玄溟探幽",
+          "anchor": 91,
+          "desc": "到 91 级，转去{zone:haishishenlou_l1/shen_qi_tan}。",
+          "goal": {
+            "type": "enter_map",
+            "map_key": "haishishenlou_l1",
+            "zone_key": "shen_qi_tan"
+          },
+          "reward": {
+            "exp": 885397,
+            "currency": 1770794
+          }
+        },
+        {
+          "stage": 3,
+          "name": "结晶换神装",
+          "anchor": 96,
+          "desc": "到 96 级，去{map:tianshengyuan}的店铺面板找神秘商人，用神秘结晶兑换 1 件 7 档装备；换不了多半是神秘结晶不够。",
+          "goal": {
+            "type": "action",
+            "action": "mystic_exchange",
+            "count": 1,
+            "require_level": 96
+          },
+          "reward": {
+            "exp": 1144055,
+            "currency": 2288110
+          }
+        },
+        {
+          "stage": 4,
+          "name": "神魔入门",
+          "anchor": 101,
+          "desc": "到 101 级，去{map:tianshengyuan}的店铺面板与神魔导师对话，拜入神道或魔道。",
+          "goal": {
+            "type": "action",
+            "action": "shenmo_join",
+            "count": 1,
+            "require_level": 101
+          },
+          "reward": {
+            "exp": 1481263,
+            "currency": 2962527
+          }
+        },
+        {
+          "stage": 5,
+          "name": "仙之境静修",
+          "anchor": 103,
+          "desc": "在{map:beijun}的安全区找壶隐进入{map:xianzhijing}静修 1 次——按滞留分钟给修验值，每日上限 60 分钟；进不去说明还没入门神魔，或今日 60 分钟已满。",
+          "goal": {
+            "type": "action",
+            "action": "xianjing_enter",
+            "count": 1
+          },
+          "reward": {
+            "exp": 1644572,
+            "currency": 3289145
+          }
+        },
+        {
+          "stage": 6,
+          "name": "神兵初铸",
+          "anchor": 115,
+          "desc": "到 115 级，去{map:xuanyuan}找神匠·铸岳做 1 次 8 档制作（8 档不走普通合成）；做不了多是等级或材料没齐。",
+          "goal": {
+            "type": "action",
+            "action": "tier8_forge",
+            "count": 1,
+            "require_level": 115
+          },
+          "reward": {
+            "exp": 3183227,
+            "currency": 6366454
+          }
+        }
+      ]
+    }
+  ],
+  "spots": [
+    {
+      "level": 1,
+      "map_key": "beijun",
+      "zone_key": "central",
+      "monster_level": 5
+    },
+    {
+      "level": 2,
+      "map_key": "beijun",
+      "zone_key": "ronglin",
+      "monster_level": 7
+    },
+    {
+      "level": 3,
+      "map_key": "beijun",
+      "zone_key": "ronglin",
+      "monster_level": 7
+    },
+    {
+      "level": 4,
+      "map_key": "beijun",
+      "zone_key": "ronglin",
+      "monster_level": 7
+    },
+    {
+      "level": 5,
+      "map_key": "beijun",
+      "zone_key": "ronglin",
+      "monster_level": 7
+    },
+    {
+      "level": 6,
+      "map_key": "beijun",
+      "zone_key": "ronglin",
+      "monster_level": 7
+    },
+    {
+      "level": 7,
+      "map_key": "beijun",
+      "zone_key": "ronglin",
+      "monster_level": 7
+    },
+    {
+      "level": 8,
+      "map_key": "congyuzhaoze",
+      "zone_key": "hongnizhaoze",
+      "monster_level": 13
+    },
+    {
+      "level": 9,
+      "map_key": "tianshengyuan",
+      "zone_key": "hua_xia_jun_ying",
+      "monster_level": 14
+    },
+    {
+      "level": 10,
+      "map_key": "congyuzhaoze",
+      "zone_key": "luanfengang",
+      "monster_level": 15
+    },
+    {
+      "level": 11,
+      "map_key": "tianshengyuan",
+      "zone_key": "tian_sheng_hu",
+      "monster_level": 16
+    },
+    {
+      "level": 12,
+      "map_key": "tianshengyuan",
+      "zone_key": "ji_chang",
+      "monster_level": 17
+    },
+    {
+      "level": 13,
+      "map_key": "chaoshan_l1",
+      "zone_key": "dong_nan_qu_yu",
+      "monster_level": 18
+    },
+    {
+      "level": 14,
+      "map_key": "tianshengyuan",
+      "zone_key": "bei_shan_da_lao",
+      "monster_level": 19
+    },
+    {
+      "level": 15,
+      "map_key": "chaoshan_l1",
+      "zone_key": "nan_bu_qu_yu",
+      "monster_level": 20
+    },
+    {
+      "level": 16,
+      "map_key": "congyuzhaoze",
+      "zone_key": "huangnigang",
+      "monster_level": 21
+    },
+    {
+      "level": 17,
+      "map_key": "banquan",
+      "zone_key": "bai_zhang_gu_fu_jin",
+      "monster_level": 22
+    },
+    {
+      "level": 18,
+      "map_key": "chaoshan_l1",
+      "zone_key": "zhong_bei_bu_qu_yu",
+      "monster_level": 23
+    },
+    {
+      "level": 19,
+      "map_key": "congyuzhaoze",
+      "zone_key": "guohunnizhao",
+      "monster_level": 24
+    },
+    {
+      "level": 20,
+      "map_key": "banquan",
+      "zone_key": "fei_ying_ya",
+      "monster_level": 25
+    },
+    {
+      "level": 21,
+      "map_key": "banquan",
+      "zone_key": "fei_ying_ya",
+      "monster_level": 25
+    },
+    {
+      "level": 22,
+      "map_key": "nanjun",
+      "zone_key": "cun_yao_sen_lin",
+      "monster_level": 27
+    },
+    {
+      "level": 23,
+      "map_key": "nanjun",
+      "zone_key": "man_zhang_yu_lin",
+      "monster_level": 28
+    },
+    {
+      "level": 24,
+      "map_key": "nanjun",
+      "zone_key": "man_zhang_yu_lin",
+      "monster_level": 28
+    },
+    {
+      "level": 25,
+      "map_key": "banquan",
+      "zone_key": "ban_quan_jun_ying_ji_zhong_bei_bu",
+      "monster_level": 30
+    },
+    {
+      "level": 26,
+      "map_key": "banquan",
+      "zone_key": "xi_xian_jun_ying",
+      "monster_level": 31
+    },
+    {
+      "level": 27,
+      "map_key": "banquan",
+      "zone_key": "xi_xian_jun_ying",
+      "monster_level": 31
+    },
+    {
+      "level": 28,
+      "map_key": "banquan",
+      "zone_key": "yu_chi_zhou_bian",
+      "monster_level": 33
+    },
+    {
+      "level": 29,
+      "map_key": "banquan",
+      "zone_key": "hu_mao_zhai",
+      "monster_level": 34
+    },
+    {
+      "level": 30,
+      "map_key": "banquan",
+      "zone_key": "hua_xia_yi_zhi",
+      "monster_level": 35
+    },
+    {
+      "level": 31,
+      "map_key": "banquan",
+      "zone_key": "hua_xia_yi_zhi",
+      "monster_level": 35
+    },
+    {
+      "level": 32,
+      "map_key": "qingyunzhai_l1",
+      "zone_key": "zuo_xia_jiao",
+      "monster_level": 37
+    },
+    {
+      "level": 33,
+      "map_key": "xuanyuan",
+      "zone_key": "yinmingshan",
+      "monster_level": 38
+    },
+    {
+      "level": 34,
+      "map_key": "xuanyuan",
+      "zone_key": "dongtaobei",
+      "monster_level": 39
+    },
+    {
+      "level": 35,
+      "map_key": "xuanyuan",
+      "zone_key": "dongtaobei",
+      "monster_level": 39
+    },
+    {
+      "level": 36,
+      "map_key": "xuanyuan",
+      "zone_key": "manniuye",
+      "monster_level": 41
+    },
+    {
+      "level": 37,
+      "map_key": "qiufengyuan",
+      "zone_key": "xun_lie_shan",
+      "monster_level": 42
+    },
+    {
+      "level": 38,
+      "map_key": "qiufengyuan",
+      "zone_key": "qiu_feng_gu",
+      "monster_level": 43
+    },
+    {
+      "level": 39,
+      "map_key": "qiufengyuan",
+      "zone_key": "jiao_mu_gu",
+      "monster_level": 44
+    },
+    {
+      "level": 40,
+      "map_key": "xuanyuan",
+      "zone_key": "bingleihu",
+      "monster_level": 45
+    },
+    {
+      "level": 41,
+      "map_key": "qiufengyuan",
+      "zone_key": "luo_ye_yu_lin",
+      "monster_level": 46
+    },
+    {
+      "level": 42,
+      "map_key": "ninghaizhou",
+      "zone_key": "qing_yun_ling",
+      "monster_level": 47
+    },
+    {
+      "level": 43,
+      "map_key": "qiufengyuan",
+      "zone_key": "xi_hun_shi",
+      "monster_level": 48
+    },
+    {
+      "level": 44,
+      "map_key": "qiufengyuan",
+      "zone_key": "zhu_mo_zhen",
+      "monster_level": 49
+    },
+    {
+      "level": 45,
+      "map_key": "qibingdong_l1",
+      "zone_key": "zuo_yi_tong_dao",
+      "monster_level": 50
+    },
+    {
+      "level": 46,
+      "map_key": "ninghaizhou",
+      "zone_key": "ning_hai_zhou_ye_wai",
+      "monster_level": 51
+    },
+    {
+      "level": 47,
+      "map_key": "qiufengyuan",
+      "zone_key": "duan_jian_xia",
+      "monster_level": 52
+    },
+    {
+      "level": 48,
+      "map_key": "fuxiling_mudao",
+      "zone_key": "bei_ce_mu_dao",
+      "monster_level": 53
+    },
+    {
+      "level": 49,
+      "map_key": "qiufengyuan_midao",
+      "zone_key": "mi_dao_jin_tou",
+      "monster_level": 54
+    },
+    {
+      "level": 50,
+      "map_key": "jurenye",
+      "zone_key": "mang_han_ling",
+      "monster_level": 55
+    },
+    {
+      "level": 51,
+      "map_key": "qibingdong_l1",
+      "zone_key": "xia_ceng_ru_kou",
+      "monster_level": 56
+    },
+    {
+      "level": 52,
+      "map_key": "qibingdong_l1",
+      "zone_key": "dong_nan_pian_ting",
+      "monster_level": 57
+    },
+    {
+      "level": 53,
+      "map_key": "xilie",
+      "zone_key": "huang_sha_ling",
+      "monster_level": 58
+    },
+    {
+      "level": 54,
+      "map_key": "jurenye",
+      "zone_key": "huang_ji_lin",
+      "monster_level": 59
+    },
+    {
+      "level": 55,
+      "map_key": "qingyunzhai_l3",
+      "zone_key": "dong_bei_jiao",
+      "monster_level": 60
+    },
+    {
+      "level": 56,
+      "map_key": "fuxiling_shangceng",
+      "zone_key": "bei_bu",
+      "monster_level": 61
+    },
+    {
+      "level": 57,
+      "map_key": "xilie",
+      "zone_key": "chi_yi_ling",
+      "monster_level": 62
+    },
+    {
+      "level": 58,
+      "map_key": "xilie",
+      "zone_key": "chi_yi_ling",
+      "monster_level": 62
+    },
+    {
+      "level": 59,
+      "map_key": "qibingdong_l2",
+      "zone_key": "qibingdong_l2_dongnantongdao",
+      "monster_level": 64
+    },
+    {
+      "level": 60,
+      "map_key": "linhai",
+      "zone_key": "shiluosenlin",
+      "monster_level": 65
+    },
+    {
+      "level": 61,
+      "map_key": "qibingdong_l2",
+      "zone_key": "qibingdong_l2_zhongbeibu",
+      "monster_level": 66
+    },
+    {
+      "level": 62,
+      "map_key": "lianguku_l1",
+      "zone_key": "zuo_yi",
+      "monster_level": 67
+    },
+    {
+      "level": 63,
+      "map_key": "muxiuyulin",
+      "zone_key": "danchí",
+      "monster_level": 68
+    },
+    {
+      "level": 64,
+      "map_key": "qibingdong_l2",
+      "zone_key": "qibingdong_l2_xibeijiao",
+      "monster_level": 69
+    },
+    {
+      "level": 65,
+      "map_key": "muxiuyulin",
+      "zone_key": "changwucun",
+      "monster_level": 70
+    },
+    {
+      "level": 66,
+      "map_key": "kunlun",
+      "zone_key": "ju_bing_yuan",
+      "monster_level": 71
+    },
+    {
+      "level": 67,
+      "map_key": "lianguku_l2",
+      "zone_key": "xue_chi",
+      "monster_level": 72
+    },
+    {
+      "level": 68,
+      "map_key": "lianguku_l2",
+      "zone_key": "zuo_shang_jiao",
+      "monster_level": 73
+    },
+    {
+      "level": 69,
+      "map_key": "kunlun",
+      "zone_key": "gu_mu_lin",
+      "monster_level": 74
+    },
+    {
+      "level": 70,
+      "map_key": "muxiuyulin",
+      "zone_key": "yuhushan",
+      "monster_level": 75
+    },
+    {
+      "level": 71,
+      "map_key": "duanbigu",
+      "zone_key": "wang_xia_cun",
+      "monster_level": 76
+    },
+    {
+      "level": 72,
+      "map_key": "kunlun",
+      "zone_key": "guo_yun_ti",
+      "monster_level": 77
+    },
+    {
+      "level": 73,
+      "map_key": "muxiuyulin",
+      "zone_key": "wangyueyuan",
+      "monster_level": 78
+    },
+    {
+      "level": 74,
+      "map_key": "lianguku_l3",
+      "zone_key": "zhong_shu_di_dai",
+      "monster_level": 79
+    },
+    {
+      "level": 75,
+      "map_key": "lianguku_l3",
+      "zone_key": "you_ce",
+      "monster_level": 80
+    },
+    {
+      "level": 76,
+      "map_key": "duanbigu",
+      "zone_key": "jue_ling_guan",
+      "monster_level": 81
+    },
+    {
+      "level": 77,
+      "map_key": "kunlun",
+      "zone_key": "yao_chi",
+      "monster_level": 82
+    },
+    {
+      "level": 78,
+      "map_key": "kunlun",
+      "zone_key": "fu_xiao_shan",
+      "monster_level": 83
+    },
+    {
+      "level": 79,
+      "map_key": "kunlun",
+      "zone_key": "bu_zhou_shan",
+      "monster_level": 84
+    },
+    {
+      "level": 80,
+      "map_key": "kunlun",
+      "zone_key": "kun_lun_xu_wai",
+      "monster_level": 85
+    },
+    {
+      "level": 81,
+      "map_key": "qimidong_l2",
+      "zone_key": "bei_ce_hui_lang",
+      "monster_level": 86
+    },
+    {
+      "level": 82,
+      "map_key": "donglicao",
+      "zone_key": "yuluhu",
+      "monster_level": 87
+    },
+    {
+      "level": 83,
+      "map_key": "chishui",
+      "zone_key": "luo_ri_yuan",
+      "monster_level": 88
+    },
+    {
+      "level": 84,
+      "map_key": "chishui",
+      "zone_key": "luo_ri_yuan",
+      "monster_level": 88
+    },
+    {
+      "level": 85,
+      "map_key": "donglicao",
+      "zone_key": "lvyijunying",
+      "monster_level": 90
+    },
+    {
+      "level": 86,
+      "map_key": "donglicao",
+      "zone_key": "bingpogudao",
+      "monster_level": 91
+    },
+    {
+      "level": 87,
+      "map_key": "dongfu_tianzun",
+      "zone_key": "zhong_xin_qu_yu",
+      "monster_level": 92
+    },
+    {
+      "level": 88,
+      "map_key": "chishui",
+      "zone_key": "cang_wu_shan",
+      "monster_level": 93
+    },
+    {
+      "level": 89,
+      "map_key": "chishui",
+      "zone_key": "chi_shui_cheng",
+      "monster_level": 94
+    },
+    {
+      "level": 90,
+      "map_key": "huanhai_l1",
+      "zone_key": "hai_di_wei_suo",
+      "monster_level": 95
+    },
+    {
+      "level": 91,
+      "map_key": "haishishenlou_l1",
+      "zone_key": "shen_qi_tan",
+      "monster_level": 96
+    },
+    {
+      "level": 92,
+      "map_key": "huanhai_l1",
+      "zone_key": "you_du_hai_kou",
+      "monster_level": 97
+    },
+    {
+      "level": 93,
+      "map_key": "haishishenlou_l1",
+      "zone_key": "duan_hong_qiao",
+      "monster_level": 98
+    },
+    {
+      "level": 94,
+      "map_key": "haishishenlou_l1",
+      "zone_key": "chao_xi_tai",
+      "monster_level": 99
+    },
+    {
+      "level": 95,
+      "map_key": "haishishenlou_l1",
+      "zone_key": "chao_xi_tai",
+      "monster_level": 99
+    },
+    {
+      "level": 96,
+      "map_key": "haishishenlou_l1",
+      "zone_key": "chao_xi_tai",
+      "monster_level": 99
+    },
+    {
+      "level": 97,
+      "map_key": "huanhai_l2",
+      "zone_key": "zuo_yi_shui_yu",
+      "monster_level": 102
+    },
+    {
+      "level": 98,
+      "map_key": "huanhai_l2",
+      "zone_key": "bei_bu_hai_yu",
+      "monster_level": 103
+    },
+    {
+      "level": 99,
+      "map_key": "huanhai_l2",
+      "zone_key": "xuan_gui_hai_yu",
+      "monster_level": 104
+    },
+    {
+      "level": 100,
+      "map_key": "huanhai_l2",
+      "zone_key": "jiao_yi_ju_dian",
+      "monster_level": 105
+    },
+    {
+      "level": 101,
+      "map_key": "huanhai_l2",
+      "zone_key": "you_yi_shui_yu",
+      "monster_level": 106
+    },
+    {
+      "level": 102,
+      "map_key": "huanhai_l2",
+      "zone_key": "han_mo_bao_lei",
+      "monster_level": 107
+    },
+    {
+      "level": 103,
+      "map_key": "huanhai_l2",
+      "zone_key": "han_mo_bao_lei",
+      "monster_level": 107
+    },
+    {
+      "level": 104,
+      "map_key": "huanhai_l2",
+      "zone_key": "han_mo_bao_lei",
+      "monster_level": 107
+    },
+    {
+      "level": 105,
+      "map_key": "huanhai_l3",
+      "zone_key": "bei_bu_qian_tan",
+      "monster_level": 110
+    },
+    {
+      "level": 106,
+      "map_key": "huanhai_l3",
+      "zone_key": "bei_bu_qian_tan",
+      "monster_level": 110
+    },
+    {
+      "level": 107,
+      "map_key": "huanhai_l3",
+      "zone_key": "bei_bu_qian_tan",
+      "monster_level": 110
+    },
+    {
+      "level": 108,
+      "map_key": "huanhai_l3",
+      "zone_key": "hai_di_fei_xu",
+      "monster_level": 113
+    },
+    {
+      "level": 109,
+      "map_key": "huanhai_l3",
+      "zone_key": "xi_nan_jiao",
+      "monster_level": 114
+    },
+    {
+      "level": 110,
+      "map_key": "huanhai_l3",
+      "zone_key": "zhong_yang_shui_yu",
+      "monster_level": 115
+    },
+    {
+      "level": 111,
+      "map_key": "huanhai_l3",
+      "zone_key": "xiong_yu_hai_gu",
+      "monster_level": 116
+    },
+    {
+      "level": 112,
+      "map_key": "haishishenlou_l3",
+      "zone_key": "tian_ti_que",
+      "monster_level": 117
+    },
+    {
+      "level": 113,
+      "map_key": "huanhai_l3",
+      "zone_key": "shui_fu",
+      "monster_level": 118
+    },
+    {
+      "level": 114,
+      "map_key": "huanhai_l4",
+      "zone_key": "dong_nan_hai_yu",
+      "monster_level": 119
+    },
+    {
+      "level": 115,
+      "map_key": "huanhai_l4",
+      "zone_key": "bei_bu_hai_yu",
+      "monster_level": 120
+    },
+    {
+      "level": 116,
+      "map_key": "huanhai_l4",
+      "zone_key": "bei_bu_hai_yu",
+      "monster_level": 120
+    },
+    {
+      "level": 117,
+      "map_key": "huanhai_l4",
+      "zone_key": "bei_bu_hai_yu",
+      "monster_level": 120
+    },
+    {
+      "level": 118,
+      "map_key": "huanhai_l4",
+      "zone_key": "bei_bu_hai_yu",
+      "monster_level": 120
+    },
+    {
+      "level": 119,
+      "map_key": "huanhai_l4",
+      "zone_key": "bei_bu_hai_yu",
+      "monster_level": 120
+    },
+    {
+      "level": 120,
+      "map_key": "huanhai_l4",
+      "zone_key": "bei_bu_hai_yu",
+      "monster_level": 120
+    }
+  ]
+}

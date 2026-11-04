@@ -1,0 +1,178 @@
+{
+ "files": [
+  {
+   "file": "items",
+   "items": 98,
+   "matched": 98,
+   "unmatched": 0,
+   "added": 24,
+   "fields": {
+    "duration_ms": 12,
+    "cd_ms": 12
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "maps",
+   "items": 44,
+   "matched": 44,
+   "unmatched": 0,
+   "added": 81,
+   "fields": {
+    "theme": 40,
+    "jubao_zone": 36,
+    "instance_group": 3,
+    "is_main_city": 1,
+    "unlock_map": 1
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "monster_skills",
+   "items": 1997,
+   "matched": 1997,
+   "unmatched": 0,
+   "added": 5992,
+   "fields": {
+    "cd_ms": 1997,
+    "target_rule": 1997,
+    "skill_type": 1997,
+    "max_casts": 1
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "monsters",
+   "items": 1208,
+   "matched": 1208,
+   "unmatched": 0,
+   "added": 68,
+   "fields": {
+    "phases": 42,
+    "immune_effects": 26
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "shops",
+   "items": 6,
+   "matched": 3,
+   "unmatched": 3,
+   "added": 3,
+   "fields": {
+    "group": 3
+   },
+   "unmatched_sample": [
+    "wuqidian",
+    "fangjidian",
+    "shoushidian"
+   ]
+  },
+  {
+   "file": "skills_active_darkwitch",
+   "items": 18,
+   "matched": 18,
+   "unmatched": 0,
+   "added": 61,
+   "fields": {
+    "cd_ms": 18,
+    "jobs": 18,
+    "cast_ms": 8,
+    "cast_mode": 8,
+    "damage": 5,
+    "summon_duration_ms": 2,
+    "ai_rule": 1,
+    "persist_minutes": 1
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "skills_active_mage",
+   "items": 18,
+   "matched": 18,
+   "unmatched": 0,
+   "added": 62,
+   "fields": {
+    "cd_ms": 18,
+    "jobs": 18,
+    "damage": 9,
+    "cast_ms": 7,
+    "cast_mode": 7,
+    "persist_minutes": 1,
+    "effects": 1,
+    "dot_anchor": 1
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "skills_active_shaman",
+   "items": 18,
+   "matched": 18,
+   "unmatched": 0,
+   "added": 58,
+   "fields": {
+    "cd_ms": 18,
+    "jobs": 18,
+    "damage": 7,
+    "ai_rule": 3,
+    "cast_ms": 3,
+    "cast_mode": 3,
+    "persist_minutes": 2,
+    "dot_anchor": 2,
+    "interrupt": 1,
+    "chain_max": 1
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "skills_active_summon",
+   "items": 2,
+   "matched": 2,
+   "unmatched": 0,
+   "added": 6,
+   "fields": {
+    "summon_damage_map": 2,
+    "cd_ms": 2,
+    "jobs": 2
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "skills_active_warrior",
+   "items": 18,
+   "matched": 18,
+   "unmatched": 0,
+   "added": 50,
+   "fields": {
+    "cd_ms": 18,
+    "jobs": 18,
+    "damage": 10,
+    "persist_minutes": 2,
+    "cast_ms": 1,
+    "cast_mode": 1
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "skills_passive",
+   "items": 5,
+   "matched": 5,
+   "unmatched": 0,
+   "added": 5,
+   "fields": {
+    "effects": 5
+   },
+   "unmatched_sample": []
+  },
+  {
+   "file": "slots",
+   "items": 15,
+   "matched": 15,
+   "unmatched": 0,
+   "added": 0,
+   "fields": {},
+   "unmatched_sample": []
+  }
+ ],
+ "skipped": []
+}
