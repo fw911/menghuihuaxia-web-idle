@@ -3,7 +3,7 @@
  * 导出 16 个顶层名；import 由 AST 跨模块引用自动计算。
  */
 import { state } from './state.js';
-import { BASE_BY_KEY, CAT_SLOT, DATA, JOB_BASES, LOOT, SLOT_CAT, clamp, pick, ri, uid } from './core.js';
+import { BASE_BY_KEY, CAT_SLOT, DATA, DROP_ITEM_OK, JOB_BASES, LOOT, LOOT_BUILT, SLOT_CAT, clamp, pick, ri, uid } from './core.js';
 import { weightedPick } from './life.js';
 
 // ---------- 装备生成 ----------
@@ -184,18 +184,131 @@ export function jobFromBaseKey(k){
 }
 
 // ---------- 掉落 ----------
-export function rollLoot(m, p){
-  const drops = [];
-  // 金币（怪物固定区间，gold 类型的掉落表项跳过以避免重复）
-  const gold = ri(m.gold_min||0, m.gold_max||0);
-  if(gold>0) drops.push({type:'gold', value:gold});
+// 原版 v0.91 掉落分层：L1 monster_loot_built（逐怪预编译）为权威；
+// 本仓库既有 split loot（loot_tables / loot_equip / loot_probs …）只作为无 L1 条目时的兜底。
+// 所有数值口径均来自 data/monster_loot_built.json 与 data/loot_rules.json，不改旧经济数值。
+
+// 概率判定：prob<=0 恒不掉，prob>=1 必掉（必掉组）
+export function lootDropHit(prob, rand){
+  const p = Number(prob);
+  if(!(p > 0)) return false;
+  if(p >= 1) return true;
+  return (rand || Math.random)() < p;
+}
+// 数量：count 可为数字或 [lo,hi] 区间（本表 912 条为区间，其余为固定值/缺失）
+export function lootCountOf(v, rand){
+  if(Array.isArray(v)){
+    const vals = v.map(Number).filter(x=>isFinite(x));
+    if(!vals.length) return 1;
+    const lo = Math.max(0, Math.min.apply(null, vals));
+    const hi = Math.max(0, Math.max.apply(null, vals));
+    const r = (rand || Math.random)();
+    return Math.floor(lo + r*(hi-lo+1));
+  }
+  const n = Number(v);
+  return isFinite(n) && n >= 1 ? Math.floor(n) : 1;
+}
+// 池抽取：条目只有 items 列表时，按 pick 数量等权无放回抽（表内无权重字段）
+export function lootPoolPick(list, pickN, rand){
+  const pool = (list || []).slice();
+  const out = [];
+  const r = rand || Math.random;
+  const n = Math.max(0, Math.min(pickN == null ? 1 : pickN, pool.length));
+  for(let i=0;i<n;i++){ const idx = Math.floor(r()*pool.length); out.push(pool.splice(idx,1)[0]); }
+  return out;
+}
+// 可直接入包的掉落 key（items.json 主表 + 武魂材料）；其余原版物品本 port 无消费系统
+export function dropKeyKnown(key){ return DROP_ITEM_OK.has(key); }
+
+// 宝石 key：本表为「系列_品阶」，系列为 "*" 时按 loot_rules.random_gem_series 抽取
+function gemFromKey(key){
+  const gems = DATA.gems || {};
+  const gradeKeys = gems.gem_grades || [];
+  const seriesKeys = (gems.gem_series || []).map(s=>s.key);
+  const parts = String(key || '').split('_');
+  const grade = parts.pop();
+  let series = parts.join('_');
+  if(!grade || gradeKeys.indexOf(grade) < 0) return null;
+  if(series === '*' || !series){
+    const allowed = ((DATA.loot_rules || {}).random_gem_series || seriesKeys).filter(k=>seriesKeys.indexOf(k) >= 0);
+    if(!allowed.length) return null;
+    series = pick(allowed);
+  }
+  if(seriesKeys.indexOf(series) < 0) return null;
+  return {series, grade};
+}
+
+// 装备部位来源：优先原版 loot_tables 中与怪物 key 同名的表（按 prob 加权），
+// 无同名表时按职业可用部位随机（等价原版 equip_slots_for_job）。
+function directEquipEntries(m){
+  const t = LOOT[m.key];
+  return ((t && t.drops) || []).filter(d=>d.item==='equip' && d.slot);
+}
+function pickEquipEntryByWeight(entries){
+  const w = entries.map(d=>Math.max(0, Number(d.prob)) || 0.0001);
+  let sum = 0; for(const x of w) sum += x;
+  let r = Math.random()*sum;
+  for(let i=0;i<entries.length;i++){ r -= w[i]; if(r <= 0) return entries[i]; }
+  return entries[entries.length-1];
+}
+function jobEquipSlots(job){
+  const src = JOB_BASES[job] || DATA.bases_warrior || {};
+  const out = [];
+  for(const cat in src){
+    const slot = CAT_SLOT[cat];
+    if(Array.isArray(src[cat]) && src[cat].length && slot && out.indexOf(slot)<0) out.push(slot);
+  }
+  for(const cat of ['rings','necklaces']){
+    const a = (DATA.bases_accessory||{})[cat];
+    const slot = CAT_SLOT[cat];
+    if(Array.isArray(a) && a.length && slot && out.indexOf(slot)<0) out.push(slot);
+  }
+  return out;
+}
+function pushEquipDrop(m, p, drops){
+  const ents = directEquipEntries(m);
+  let slot = null;
+  if(ents.length) slot = pickEquipEntryByWeight(ents).slot;
+  else { const js = jobEquipSlots(p.job); if(js.length) slot = pick(js); }
+  if(!slot) return false;
+  const it = genEquipWithFallback(slot, p.job, m, p);
+  if(!it) return false;
+  drops.push({type:'equip', item:it});
+  return true;
+}
+
+// L1：monster_loot_built 逐条独立掷骰（独立几率 / 数量区间 / 必掉组 / 池抽取）
+function rollBuiltDrops(list, m, p, drops){
+  for(const d of list){
+    if(!lootDropHit(d.prob)) continue;
+    const cnt = lootCountOf(d.count);
+    const kind = d.item;
+    if(kind === 'equip'){
+      for(let i=0;i<cnt;i++) pushEquipDrop(m, p, drops);
+    } else if(kind === 'gem'){
+      const g = gemFromKey(d.key);
+      if(g) drops.push({type:'gem', series:g.series, grade:g.grade, count:cnt});
+    } else if(kind === 'wuhun'){
+      drops.push({type:'wuhun', stars:0, count:cnt});
+    } else if(kind === 'consumable'){
+      if(dropKeyKnown(d.key)) drops.push({type:'consumable', key:d.key, count:cnt});
+    } else if(d.items && d.items.length){
+      const picked = lootPoolPick(d.items, d.pick == null ? 1 : d.pick);
+      for(const k of picked) if(dropKeyKnown(k)) drops.push({type:'consumable', key:k, count:cnt});
+    }
+    // 其余 item 类型（原版存在、本 port 无消费系统）跳过
+  }
+}
+
+// 旧 split loot 兜底（保持逐字节等价，仅在怪物无 L1 条目时执行）
+function rollLegacyDrops(m, p, drops){
   // 装备：按怪物类型多次掷骰（loot_probs）
   const lp = DATA.loot_probs[m.type] || DATA.loot_probs.normal;
   const equipTables = [];
   for(const key of (m.loot_table||[])){
     const t = LOOT[key];
     if(!t) continue;
-    for(const d of (t.drops||[])) if(d.item==='equip') equipTables.push(d);
+    for(const d of (t.drops||[])) if(d.item==='equip' && d.slot) equipTables.push(d);
   }
   for(let i=0;i<(lp.rolls||1);i++){
     const prob = (lp.probs&&lp.probs[i]!=null)?lp.probs[i]:0.01;
@@ -222,7 +335,76 @@ export function rollLoot(m, p){
       }
     }
   }
-  // 矿石掉落（生活技能材料来源）：按权重随机一种，数量随怪物等级提升
+}
+
+// 等级段选行：取 min_level <= level 的最高档（用于 L3 规则型掉落）
+function pickRowByLevel(levelMap, level){
+  const rows = (levelMap || []).slice().sort((a,b)=>(Number(a.min_level)||0)-(Number(b.min_level)||0));
+  let hit = null;
+  for(const r of rows) if(level >= (Number(r.min_level)||0)) hit = r;
+  return hit;
+}
+// L2 池表：优先 loot_pools；本仓库「令牌」池位于合并 LOOT（loot_item）
+function poolDrops(tableName){
+  const t = (DATA.loot_pools||{})[tableName] || LOOT[tableName];
+  return (t && t.drops) || [];
+}
+
+// L3：loot_rules 规则型掉落（原版每次击杀追加）
+// 已接：gem_recipe / lucky_box / jubao_new / lingpai
+// 未接：ore_recipe / potion_recipe / jingyuan_recipe（目标 key 在 items.json 缺失，不臆造）；
+//        gold（会覆盖 monsters.json 既有金币区间，按需求不改经济）。
+function rollRuleDrops(m, p, drops){
+  const R = DATA.loot_rules || {};
+  const type = m.type || 'normal';
+  const level = Number(m.level) || 0;
+  const applies = (cfg)=> !!(cfg && Array.isArray(cfg.types) && cfg.types.indexOf(type) >= 0);
+
+  // 宝石配方：boss / 副本boss / 聚宝，等级≥40，2%
+  const gr = R.gem_recipe;
+  if(applies(gr) && level >= (Number(gr.min_level)||0) && lootDropHit(gr.prob)){
+    const hl = gr.high_level || {};
+    if(level >= (Number(hl.min_level)||999) && lootDropHit(hl.chance)){
+      if(dropKeyKnown(hl.key)) drops.push({type:'consumable', key:hl.key, count:1});
+    } else {
+      const step = Math.max(1, Number(gr.grade_step)||20);
+      const pairs = gr.grade_pairs || [];
+      const idx = pairs.length ? Math.min(pairs.length-1, Math.floor(level/step)) : 0;
+      const grade = pick(pairs[idx] || ['碎石']);
+      const seriesPool = (gr.series && gr.series.length) ? gr.series : (R.random_gem_series || []);
+      const series = pick(seriesPool);
+      if(series && grade) drops.push({type:'gem', series, grade, count:1});
+    }
+  }
+  // 幸运盒：普通/精英，等级≥90，0.25%（精英 ×2）
+  const lb = R.lucky_box;
+  if(applies(lb) && level >= (Number(lb.min_level)||0)){
+    let prob = Number(lb.prob) || 0;
+    if(type === 'elite') prob *= Number(lb.elite_prob_mult) || 1;
+    if(lootDropHit(prob) && dropKeyKnown(lb.key)) drops.push({type:'consumable', key:lb.key, count:1});
+  }
+  // 洗刷刷宝箱 / 百炼配方：聚宝怪，等级≥100，三条独立 10%
+  const jn = R.jubao_new;
+  if(applies(jn) && level >= (Number(jn.min_level)||0)){
+    for(const d of (jn.drops||[])){
+      if(lootDropHit(d.prob) && dropKeyKnown(d.key)) drops.push({type:'consumable', key:d.key, count:1});
+    }
+  }
+  // 灵牌：聚宝怪按等级段投池（≥100/110 的表在 data/loot_pools 中缺失，自然无掉落）
+  const lp = R.lingpai;
+  if(applies(lp)){
+    const row = pickRowByLevel(lp.level_map, level);
+    const list = row ? poolDrops(row.table) : [];
+    for(const d of list){
+      if(!lootDropHit(d.prob)) continue;
+      const cnt = lootCountOf(d.count);
+      if(d.key && dropKeyKnown(d.key)) drops.push({type:'consumable', key:d.key, count:cnt});
+    }
+  }
+}
+
+// 矿石掉落（生活技能材料来源，沿用既有 ores.json 权重，不属原版三件套）
+function rollOreDrop(m, p, drops){
   const ow = DATA.ores && DATA.ores.ore_gen_weights;
   if(ow && Math.random()<0.6){
     const rk = weightedPick(Object.keys(ow), ow);
@@ -230,6 +412,18 @@ export function rollLoot(m, p){
     p.ores[rk]=(p.ores[rk]||0)+amt;
     drops.push({type:'ore', key:rk, count:amt});
   }
+}
+
+export function rollLoot(m, p){
+  const drops = [];
+  // 金币（怪物固定区间，gold 类型的掉落表项跳过以避免重复）
+  const gold = ri(m.gold_min||0, m.gold_max||0);
+  if(gold>0) drops.push({type:'gold', value:gold});
+  const built = LOOT_BUILT[m.key];
+  if(built && built.drops && built.drops.length) rollBuiltDrops(built.drops, m, p, drops);
+  else rollLegacyDrops(m, p, drops);
+  rollRuleDrops(m, p, drops);   // L3 规则层（原版每次击杀追加）
+  rollOreDrop(m, p, drops);     // 既有矿石产出保持不变
   return drops;
 }
 

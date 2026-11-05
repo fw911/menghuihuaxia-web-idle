@@ -726,6 +726,120 @@ function ok(name, cond, extra) {
     ok('普通区怪物不被加成', same);
   }
 
+  console.log('-- 掉落体系（monster_loot_built / loot_pools / loot_rules）--');
+  {
+    // ① 加载与覆盖
+    const builtN = Object.keys(E.DATA.monster_loot_built || {}).length;
+    ok('monster_loot_built 已加载', builtN > 0, builtN + ' 条');
+    ok('loot_pools 已加载', Object.keys(E.DATA.loot_pools || {}).filter(k => k !== '_meta').length > 0,
+      Object.keys(E.DATA.loot_pools || {}).filter(k => k !== '_meta').length + ' 池');
+    ok('loot_rules 已加载', !!(E.DATA.loot_rules && E.DATA.loot_rules.gem_recipe),
+      Object.keys(E.DATA.loot_rules || {}).join(','));
+    const allMons = E.DATA.monsters.monsters;
+    let covered = 0;
+    for (const m of allMons) if (E.LOOT_BUILT[m.key] && E.LOOT_BUILT[m.key].drops) covered++;
+    ok('全部怪物接入 L1 掉落', covered === allMons.length, covered + '/' + allMons.length);
+
+    // ② 几率边界：0 恒不掉 / 1 必掉 / 50% 边界
+    ok('几率 0 永不掉落', E.lootDropHit(0, () => 0) === false);
+    ok('几率 0 极小随机数仍不掉', E.lootDropHit(0, () => 0.0000001) === false);
+    ok('几率 100% 必掉', E.lootDropHit(1, () => 0.999999) === true);
+    ok('几率 50% 边界判定', E.lootDropHit(0.5, () => 0.4999) === true && E.lootDropHit(0.5, () => 0.5) === false);
+
+    // ③ 数量区间（表内 count 为 [lo,hi]）
+    let cMin = 99, cMax = 0;
+    for (let i = 0; i < 5000; i++) { const c = E.lootCountOf([5, 50]); cMin = Math.min(cMin, c); cMax = Math.max(cMax, c); }
+    ok('数量区间 [5,50] 不越界', cMin >= 5 && cMax <= 50, cMin + '~' + cMax);
+    ok('数量区间 [5,50] 能覆盖两端', cMin === 5 && cMax === 50, cMin + '~' + cMax);
+    ok('固定数量/缺省按 1', E.lootCountOf(1) === 1 && E.lootCountOf(undefined) === 1);
+
+    // ④ 池抽取：无放回 + 等权
+    let poolBad = false;
+    for (let i = 0; i < 500; i++) {
+      const got = E.lootPoolPick(['a', 'b', 'c'], 2);
+      if (got.length !== 2 || new Set(got).size !== 2) poolBad = true;
+    }
+    ok('池抽取 pick=2 无重复', !poolBad);
+    const pickN = { a: 0, b: 0, c: 0 };
+    for (let i = 0; i < 3000; i++) pickN[E.lootPoolPick(['a', 'b', 'c'], 1)[0]]++;
+    ok('池抽取 3 项各约占 1/3', Math.abs(pickN.a - 1000) < 250 && Math.abs(pickN.b - 1000) < 250 && Math.abs(pickN.c - 1000) < 250,
+      JSON.stringify(pickN));
+
+    // ⑤ 实打实结算：残血刀客（L1 built，含必掉 + 五珠池）
+    E.newPlayer('掉落', 'warrior');
+    const pl = E.state.player; pl.level = 70; E.refreshStats();
+    const lmon = E.getMonster('canxuedaoke38');
+    const beadKeys = ['xiangrui_zhu', 'xingyun_zhu', 'gaoji_xiangrui', 'gaoji_xingyun', 'lingyun_zhu'];
+    const beadCnt = {}; beadKeys.forEach(k => beadCnt[k] = 0);
+    let guaranteed = 0, unknownConsumable = 0, EQUIP = 0, GEM = 0;
+    for (let i = 0; i < 3000; i++) {
+      const ds = E.rollLoot(lmon, pl);
+      for (const d of ds) {
+        if (d.type === 'consumable') {
+          if (d.key === 'tong_ban') guaranteed++;
+          if (beadKeys.indexOf(d.key) >= 0) beadCnt[d.key]++;
+          if (!E.dropKeyKnown(d.key)) unknownConsumable++;
+        } else if (d.type === 'equip') EQUIP++;
+        else if (d.type === 'gem') GEM++;
+      }
+    }
+    ok('必掉组每次必出（3000/3000）', guaranteed === 3000, guaranteed + '');
+    const beadTotal = beadKeys.reduce((a, k) => a + beadCnt[k], 0);
+    ok('五珠池权重分布均匀', beadTotal > 200 && beadKeys.every(k => Math.abs(beadCnt[k] - beadTotal / 5) < beadTotal / 5 * 0.4),
+      beadTotal + ' 件 ' + JSON.stringify(beadCnt));
+    ok('未接入物品不会入包', unknownConsumable === 0, unknownConsumable + ' 件未知');
+    ok('装备/宝石按表产出', EQUIP > 200 && GEM > 100, 'equip=' + EQUIP + ' gem=' + GEM);
+  }
+
+  console.log('-- 难度系统（difficulty.json）--');
+  {
+    ok('difficulty 已加载', !!(E.DATA.difficulty && Array.isArray(E.DATA.difficulty.monster_speed_mult.bands)));
+    ok('速度系数 1 级=0.8', E.monsterSpeedMult(1) === 0.8, E.monsterSpeedMult(1) + '');
+    ok('速度系数 70 级=0.85', E.monsterSpeedMult(70) === 0.85, E.monsterSpeedMult(70) + '');
+    ok('速度系数 80 级=0.9', E.monsterSpeedMult(80) === 0.9, E.monsterSpeedMult(80) + '');
+    ok('速度系数 100 级=1.0', E.monsterSpeedMult(100) === 1.0, E.monsterSpeedMult(100) + '');
+    ok('遭遇规模表 field=[1,6]', E.mapBatchSize({ region_type: 'field' }).join(',') === '1,6', E.mapBatchSize({ region_type: 'field' }).join(','));
+    ok('遭遇规模表 dungeon=[3,6]', E.mapBatchSize({ region_type: 'dungeon' }).join(',') === '3,6');
+    ok('副本按 instance=[3,6]', E.mapBatchSize({ region_type: '副本' }).join(',') === '3,6');
+    ok('精英率/上限来自表', E.eliteChance() === 0.4 && E.eliteCap() === 3, E.eliteChance() + '/' + E.eliteCap());
+
+    // 实测：怪物速度随玩家等级缩放（普通区）
+    E.newPlayer('难度', 'warrior');
+    const pl = E.state.player;
+    E.state.zone = { mapKey: 'beijun', zoneKey: 'central', isBoss: false };
+    E.state.auto.groupSize = 'rand';
+    pl.level = 1; E.refreshStats();
+    const m1 = E.spawnMonster('normal'); const b1 = E.getMonster(m1.key);
+    const bs1 = (b1.speed == null ? 4 : b1.speed);
+    ok('1 级怪物速度=基础×0.8', Math.abs(m1.speed - bs1 * 0.8) < 1e-9, m1.speed + ' vs ' + bs1);
+    pl.level = 100; E.refreshStats();
+    const m2 = E.spawnMonster('normal'); const b2 = E.getMonster(m2.key);
+    const bs2 = (b2.speed == null ? 4 : b2.speed);
+    ok('100 级怪物速度=基础×1.0', Math.abs(m2.speed - bs2 * 1.0) < 1e-9, m2.speed + ' vs ' + bs2);
+
+    // 实测：遭遇规模 / 精英率 / 精英上限（普通区 400 次）
+    const sizeCnt = {}; let enc = 0, eliteEnc = 0, maxElite = 0, overCap = 0;
+    for (let i = 0; i < 400; i++) {
+      const g = E.spawnMonsterGroup();
+      sizeCnt[g.length] = (sizeCnt[g.length] || 0) + 1; enc++;
+      const ne = g.filter(x => x.isElite).length;
+      if (ne > 0) eliteEnc++;
+      if (ne > maxElite) maxElite = ne;
+      if (ne > 3) overCap++;
+    }
+    ok('普通区遭遇规模落在 [1,6]', Object.keys(sizeCnt).every(k => +k >= 1 && +k <= 6), JSON.stringify(sizeCnt));
+    ok('普通区能出 1 只遭遇', (sizeCnt[1] || 0) > 0);
+    ok('精英遭遇率≈0.4', Math.abs(eliteEnc / enc - 0.4) < 0.08, (eliteEnc / enc).toFixed(3));
+    ok('单次遭遇精英数≤3', overCap === 0 && maxElite <= 3, 'max=' + maxElite);
+
+    // 实测：dungeon 地图规模 [3,6]
+    E.state.zone = { mapKey: 'chaoshan_l1', zoneKey: 'xi_ce_qu_yu', isBoss: false };
+    const dSize = {};
+    for (let i = 0; i < 200; i++) { const g = E.spawnMonsterGroup(); dSize[g.length] = (dSize[g.length] || 0) + 1; }
+    ok('dungeon 遭遇规模落在 [3,6]', Object.keys(dSize).every(k => +k >= 3 && +k <= 6), JSON.stringify(dSize));
+    E.state.auto.groupSize = 'rand';
+  }
+
   console.log('-- 本地存档 导入 / 导出 --');
   {
     // ① 校验器：坏档必须被拦（坏档不许覆盖好档）

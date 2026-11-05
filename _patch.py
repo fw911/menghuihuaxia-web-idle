@@ -9,8 +9,11 @@ import io, os
 DST = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_test_entry.mjs')
 
 EXPORTS = [
-    'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LS','CN_STAT','pageVisible',
+    'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LOOT_BUILT','DROP_ITEM_OK','LS','CN_STAT','pageVisible',
     'loadData','newPlayer','refreshStats','computeStats',
+    # 掉落体系（monster_loot_built / loot_rules）：概率/数量/池抽取 + 难度系数
+    'lootDropHit','lootCountOf','lootPoolPick','dropKeyKnown',
+    'monsterSpeedMult','mapBatchSize','eliteChance','eliteCap',
     # 五维手动加点（C 方案）：发放/分配/上限/迁移/洗点
     'attrPerLevel','attrDims','attrPointsTotal','attrPointsUsed','attrPointsFree','allocAttr','resetAttr',
     'renderHero',

@@ -6,6 +6,10 @@
 export const DATA_FILES = [
   'maps','monsters','character','jobs','slots','stats','quality',
   'loot_tables','loot_equip','loot_probs','loot_gem','loot_item','loot_potion','loot_chest','loot_wuhun',
+  // 原版掉落三件套（此前未加载）：L1 逐怪预编译掉落 / L2 掉落池 / L3 规则型掉落
+  'loot_pools','loot_rules','monster_loot_built',
+  // 难度系统（等级段怪物速度系数 / 遭遇规模 / 精英率 / 精英上限）
+  'difficulty',
   'bases_warrior','bases_mage','bases_shaman','bases_darkwitch','bases_accessory',
   'perk_pool','gems','refine','items','extract','craft','ores','bailian_recipes','furnace_recipes','ore_recipes',
   'modes','shops','quests',
