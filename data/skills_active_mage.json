@@ -9,159 +9,165 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 25,
+   "max_level": 26,
    "icon": "static/icons/skills/mage_001.gif",
    "desc": "凝聚五行火气，化作疾飞火珠轰向敌身",
    "levels": [
     {
      "damage": 19,
      "mp": 4,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 19 点火伤害"
     },
     {
      "damage": 47,
      "mp": 11,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 47 点火伤害"
     },
     {
      "damage": 72,
      "mp": 19,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 72 点火伤害"
     },
     {
      "damage": 97,
      "mp": 26,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 97 点火伤害"
     },
     {
      "damage": 125,
      "mp": 36,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 125 点火伤害"
     },
     {
      "damage": 152,
      "mp": 45,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 152 点火伤害"
     },
     {
      "damage": 181,
      "mp": 54,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 181 点火伤害"
     },
     {
      "damage": 210,
      "mp": 62,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 210 点火伤害"
     },
     {
      "damage": 244,
      "mp": 71,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 244 点火伤害"
     },
     {
      "damage": 272,
      "mp": 82,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 272 点火伤害"
     },
     {
      "damage": 312,
      "mp": 94,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 312 点火伤害"
     },
     {
      "damage": 360,
      "mp": 107,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 360 点火伤害"
     },
     {
      "damage": 411,
      "mp": 122,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 411 点火伤害"
     },
     {
      "damage": 453,
      "mp": 137,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 453 点火伤害"
     },
     {
      "damage": 519,
      "mp": 152,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 519 点火伤害"
     },
     {
      "damage": 570,
      "mp": 170,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 570 点火伤害"
     },
     {
      "damage": 617,
      "mp": 188,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 617 点火伤害"
     },
     {
      "damage": 684,
      "mp": 207,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 684 点火伤害"
     },
     {
      "damage": 745,
      "mp": 228,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 745 点火伤害"
     },
     {
      "damage": 834,
      "mp": 249,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 834 点火伤害"
     },
     {
      "damage": 905,
      "mp": 273,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 905 点火伤害"
     },
     {
      "damage": 987,
      "mp": 298,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 987 点火伤害"
     },
     {
      "damage": 1058,
      "mp": 323,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 1058 点火伤害"
     },
     {
      "damage": 1110,
      "mp": 348,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 1110 点火伤害"
     },
     {
      "damage": 1212,
      "mp": 374,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 1212 点火伤害"
+    },
+    {
+     "damage": 1313,
+     "mp": 400,
+     "cd": 0,
+     "desc": "对单体造成约 1313 点火伤害"
     }
    ],
    "requirements": [
@@ -289,6 +295,11 @@
      "level": 112,
      "money": 767400,
      "exp": 877638
+    },
+    {
+     "level": 117,
+     "money": 875400,
+     "exp": 1405138
     }
    ],
    "learn_level": 0,
@@ -308,14 +319,14 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 23,
+   "max_level": 25,
    "icon": "static/icons/skills/mage_002.gif",
    "desc": "烈火焚敌，火势附骨灼烧不止",
    "levels": [
     {
      "damage": 36,
      "mp": 11,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 36 点火伤害；并使敌人持续流血，在6秒内受到约24点伤害",
      "effects": [
       {
@@ -328,7 +339,7 @@
     {
      "damage": 58,
      "mp": 19,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 58 点火伤害；并使敌人持续流血，在6秒内受到约36点伤害",
      "effects": [
       {
@@ -341,7 +352,7 @@
     {
      "damage": 84,
      "mp": 29,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 84 点火伤害；并使敌人持续流血，在6秒内受到约48点伤害",
      "effects": [
       {
@@ -354,7 +365,7 @@
     {
      "damage": 109,
      "mp": 41,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 109 点火伤害；并使敌人持续流血，在6秒内受到约72点伤害",
      "effects": [
       {
@@ -367,7 +378,7 @@
     {
      "damage": 137,
      "mp": 54,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 137 点火伤害；并使敌人持续流血，在6秒内受到约84点伤害",
      "effects": [
       {
@@ -380,7 +391,7 @@
     {
      "damage": 162,
      "mp": 65,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 162 点火伤害；并使敌人持续流血，在6秒内受到约96点伤害",
      "effects": [
       {
@@ -393,7 +404,7 @@
     {
      "damage": 197,
      "mp": 75,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 197 点火伤害；并使敌人持续流血，在6秒内受到约120点伤害",
      "effects": [
       {
@@ -406,7 +417,7 @@
     {
      "damage": 224,
      "mp": 87,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 224 点火伤害；并使敌人持续流血，在6秒内受到约144点伤害",
      "effects": [
       {
@@ -419,7 +430,7 @@
     {
      "damage": 257,
      "mp": 99,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 257 点火伤害；并使敌人持续流血，在6秒内受到约156点伤害",
      "effects": [
       {
@@ -432,7 +443,7 @@
     {
      "damage": 293,
      "mp": 112,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 293 点火伤害；并使敌人持续流血，在6秒内受到约168点伤害",
      "effects": [
       {
@@ -445,7 +456,7 @@
     {
      "damage": 334,
      "mp": 129,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 334 点火伤害；并使敌人持续流血，在6秒内受到约192点伤害",
      "effects": [
       {
@@ -458,7 +469,7 @@
     {
      "damage": 384,
      "mp": 147,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 384 点火伤害；并使敌人持续流血，在6秒内受到约216点伤害",
      "effects": [
       {
@@ -471,7 +482,7 @@
     {
      "damage": 430,
      "mp": 165,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 430 点火伤害；并使敌人持续流血，在6秒内受到约240点伤害",
      "effects": [
       {
@@ -484,7 +495,7 @@
     {
      "damage": 477,
      "mp": 185,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 477 点火伤害；并使敌人持续流血，在6秒内受到约264点伤害",
      "effects": [
       {
@@ -497,7 +508,7 @@
     {
      "damage": 536,
      "mp": 207,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 536 点火伤害；并使敌人持续流血，在6秒内受到约300点伤害",
      "effects": [
       {
@@ -510,7 +521,7 @@
     {
      "damage": 584,
      "mp": 230,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 584 点火伤害；并使敌人持续流血，在6秒内受到约324点伤害",
      "effects": [
       {
@@ -523,7 +534,7 @@
     {
      "damage": 650,
      "mp": 254,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 650 点火伤害；并使敌人持续流血，在6秒内受到约360点伤害",
      "effects": [
       {
@@ -536,7 +547,7 @@
     {
      "damage": 704,
      "mp": 280,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 704 点火伤害；并使敌人持续流血，在6秒内受到约384点伤害",
      "effects": [
       {
@@ -549,7 +560,7 @@
     {
      "damage": 771,
      "mp": 308,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 771 点火伤害；并使敌人持续流血，在6秒内受到约408点伤害",
      "effects": [
       {
@@ -562,7 +573,7 @@
     {
      "damage": 852,
      "mp": 336,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 852 点火伤害；并使敌人持续流血，在6秒内受到约444点伤害",
      "effects": [
       {
@@ -575,7 +586,7 @@
     {
      "damage": 934,
      "mp": 367,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 934 点火伤害；并使敌人持续流血，在6秒内受到约480点伤害",
      "effects": [
       {
@@ -588,7 +599,7 @@
     {
      "damage": 1006,
      "mp": 400,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 1006 点火伤害；并使敌人持续流血，在6秒内受到约948点伤害",
      "effects": [
       {
@@ -601,13 +612,39 @@
     {
      "damage": 1068,
      "mp": 433,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 1068 点火伤害；并使敌人持续流血，在6秒内受到约948点伤害",
      "effects": [
       {
        "type": "bleed",
        "value": 79,
        "duration": 12
+      }
+     ]
+    },
+    {
+     "damage": 1140,
+     "mp": 466,
+     "cd": 6,
+     "desc": "对单体造成约 1140 点火伤害；并使敌人持续流血，持续 6 秒造成约 1068 点总伤害",
+     "effects": [
+      {
+       "type": "fire_dot",
+       "value": 178,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 1263,
+     "mp": 499,
+     "cd": 6,
+     "desc": "对单体造成约 1263 点火伤害；并使敌人持续流血，持续 6 秒造成约 1128 点总伤害",
+     "effects": [
+      {
+       "type": "fire_dot",
+       "value": 188,
+       "duration": 6
       }
      ]
     }
@@ -727,6 +764,16 @@
      "level": 104,
      "money": 641400,
      "exp": 423638
+    },
+    {
+     "level": 109,
+     "money": 713400,
+     "exp": 651138
+    },
+    {
+     "level": 114,
+     "money": 807900,
+     "exp": 1066138
     }
    ],
    "learn_level": 3,
@@ -746,293 +793,306 @@
    "type": "active",
    "skill_type": "control",
    "target_rule": "single",
-   "max_level": 22,
+   "max_level": 23,
    "icon": "static/icons/skills/mage_003.gif",
    "desc": "凝水成冰为箭，寒气入体令敌僵滞",
    "levels": [
     {
      "damage": 125,
      "mp": 31,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 125 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 165,
      "mp": 44,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 165 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 206,
      "mp": 60,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 206 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 254,
      "mp": 73,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 254 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 303,
      "mp": 87,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 303 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 350,
      "mp": 101,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 350 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 407,
      "mp": 119,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 407 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 472,
      "mp": 138,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 472 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 543,
      "mp": 158,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 543 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 631,
      "mp": 181,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 631 点冰伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 700,
      "mp": 203,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 700 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 782,
      "mp": 228,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 782 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 873,
      "mp": 254,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 873 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 959,
      "mp": 281,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 959 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 1045,
      "mp": 311,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 1045 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 5
       }
      ]
     },
     {
      "damage": 1150,
      "mp": 343,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 1150 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
       }
      ]
     },
     {
      "damage": 1265,
      "mp": 376,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 1265 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
       }
      ]
     },
     {
      "damage": 1408,
      "mp": 411,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 1408 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
       }
      ]
     },
     {
      "damage": 1477,
      "mp": 448,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 1477 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
       }
      ]
     },
     {
      "damage": 1610,
      "mp": 448,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 1610 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
       }
      ]
     },
     {
      "damage": 1733,
      "mp": 448,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 1733 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
       }
      ]
     },
     {
      "damage": 1911,
      "mp": 448,
-     "cd": 3,
+     "cd": 0,
      "desc": "对单体造成约 1911 点冰伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 1994,
+     "mp": 448,
+     "cd": 0,
+     "desc": "对单体造成约 1994 点冰伤害；攻速降低 60%",
+     "effects": [
+      {
+       "type": "speed_down",
+       "value": 60,
+       "duration": 6
       }
      ]
     }
@@ -1147,6 +1207,11 @@
      "level": 111,
      "money": 748500,
      "exp": 794638
+    },
+    {
+     "level": 116,
+     "money": 852000,
+     "exp": 1284638
     }
    ],
    "learn_level": 10,
@@ -1169,24 +1234,24 @@
    "type": "active",
    "skill_type": "defense",
    "target_rule": "self",
-   "max_level": 11,
+   "max_level": 13,
    "icon": "static/icons/skills/mage_004.gif",
    "desc": "相传为寂月城主所创，流光绕身护体",
    "levels": [
     {
      "damage": 0,
      "mp": 118,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 43 点；防御增加 43 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 43,
+       "value": 58,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 43,
+       "value": 57,
        "duration": 0
       }
      ]
@@ -1194,17 +1259,17 @@
     {
      "damage": 0,
      "mp": 181,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 62 点；防御增加 62 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 62,
+       "value": 84,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 62,
+       "value": 84,
        "duration": 0
       }
      ]
@@ -1212,17 +1277,17 @@
     {
      "damage": 0,
      "mp": 245,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 82 点；防御增加 82 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 82,
+       "value": 109,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 82,
+       "value": 111,
        "duration": 0
       }
      ]
@@ -1230,17 +1295,17 @@
     {
      "damage": 0,
      "mp": 312,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 104 点；防御增加 104 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 104,
+       "value": 139,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 104,
+       "value": 141,
        "duration": 0
       }
      ]
@@ -1248,17 +1313,17 @@
     {
      "damage": 0,
      "mp": 387,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 126 点；防御增加 126 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 126,
+       "value": 170,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 126,
+       "value": 167,
        "duration": 0
       }
      ]
@@ -1266,17 +1331,17 @@
     {
      "damage": 0,
      "mp": 471,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 149 点；防御增加 149 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 149,
+       "value": 201,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 149,
+       "value": 199,
        "duration": 0
       }
      ]
@@ -1284,17 +1349,17 @@
     {
      "damage": 0,
      "mp": 562,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 174 点；防御增加 174 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 174,
+       "value": 230,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 174,
+       "value": 233,
        "duration": 0
       }
      ]
@@ -1302,17 +1367,17 @@
     {
      "damage": 0,
      "mp": 663,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 199 点；防御增加 199 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 199,
+       "value": 265,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 199,
+       "value": 269,
        "duration": 0
       }
      ]
@@ -1320,17 +1385,17 @@
     {
      "damage": 0,
      "mp": 775,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 226 点；防御增加 226 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 226,
+       "value": 303,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 226,
+       "value": 302,
        "duration": 0
       }
      ]
@@ -1338,17 +1403,17 @@
     {
      "damage": 0,
      "mp": 896,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 254 点；防御增加 254 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 254,
+       "value": 342,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 254,
+       "value": 338,
        "duration": 0
       }
      ]
@@ -1356,17 +1421,51 @@
     {
      "damage": 0,
      "mp": 1030,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 284 点；防御增加 284 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 284,
+       "value": 375,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 284,
+       "value": 377,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 1069,
+     "cd": 0,
+     "desc": "物理防御增加 420 点；法术防御增加 428 点",
+     "effects": [
+      {
+       "type": "phys_def_flat",
+       "value": 420,
+       "duration": 0
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 428,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 1110,
+     "cd": 0,
+     "desc": "物理防御增加 476 点；法术防御增加 467 点",
+     "effects": [
+      {
+       "type": "phys_def_flat",
+       "value": 476,
+       "duration": 0
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 467,
        "duration": 0
       }
      ]
@@ -1427,6 +1526,16 @@
      "level": 96,
      "money": 491000,
      "exp": 352800
+    },
+    {
+     "level": 104,
+     "money": 641400,
+     "exp": 423638
+    },
+    {
+     "level": 112,
+     "money": 767400,
+     "exp": 877638
     }
    ],
    "learn_level": 16,
@@ -1453,19 +1562,19 @@
     {
      "damage": 0,
      "mp": 70,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 153,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 275,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体"
     }
    ],
@@ -1510,7 +1619,7 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 7,
+   "max_level": 9,
    "icon": "static/icons/skills/mage_006.gif",
    "desc": "冰瀑倾泻而下，连绵不绝令敌难防",
    "levels": [
@@ -1555,6 +1664,18 @@
      "mp": 1488,
      "cd": 30,
      "desc": "对单体造成连续 5 次伤害，每次约造成 824 点冰伤害"
+    },
+    {
+     "damage": 1340,
+     "mp": 1640,
+     "cd": 30,
+     "desc": "对单体造成连续 5 次伤害，每次约造成 1340 点冰伤害"
+    },
+    {
+     "damage": 1428,
+     "mp": 1793,
+     "cd": 30,
+     "desc": "对单体造成连续 5 次伤害，每次约造成 1428 点冰伤害"
     }
    ],
    "requirements": [
@@ -1592,6 +1713,16 @@
      "level": 97,
      "money": 502000,
      "exp": 361200
+    },
+    {
+     "level": 105,
+     "money": 654000,
+     "exp": 454138
+    },
+    {
+     "level": 113,
+     "money": 787200,
+     "exp": 968138
     }
    ],
    "learn_level": 61,
@@ -1622,7 +1753,7 @@
     {
      "damage": 1166,
      "mp": 450,
-     "cd": 20,
+     "cd": 10,
      "desc": "对单体造成约 1166 点冰伤害；移动速度减低 40%"
     }
    ],
@@ -1665,7 +1796,7 @@
     {
      "damage": 1318,
      "mp": 536,
-     "cd": 20,
+     "cd": 10,
      "desc": "对单体造成约 1318 点火伤害；法术防御下降 20%"
     }
    ],
@@ -1703,21 +1834,21 @@
    "type": "active",
    "skill_type": "heal",
    "target_rule": "self",
-   "max_level": 16,
+   "max_level": 20,
    "icon": "static/icons/skills/mage_009.gif",
    "desc": "寂月城代代相传的救命之术",
    "levels": [
     {
      "damage": 0,
      "mp": 76,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 160 点生命值；在16秒内持续回复约256点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 160,
+       "value": 44,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1732,14 +1863,14 @@
     {
      "damage": 0,
      "mp": 92,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 193 点生命值；在16秒内持续回复约320点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 193,
+       "value": 52,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1754,14 +1885,14 @@
     {
      "damage": 0,
      "mp": 109,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 228 点生命值；在16秒内持续回复约384点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 228,
+       "value": 64,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1776,14 +1907,14 @@
     {
      "damage": 0,
      "mp": 128,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 263 点生命值；在16秒内持续回复约416点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 263,
+       "value": 76,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1798,14 +1929,14 @@
     {
      "damage": 0,
      "mp": 147,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 299 点生命值；在16秒内持续回复约480点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 299,
+       "value": 80,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1820,14 +1951,14 @@
     {
      "damage": 0,
      "mp": 168,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 337 点生命值；在16秒内持续回复约544点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 337,
+       "value": 96,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1842,14 +1973,14 @@
     {
      "damage": 0,
      "mp": 191,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 376 点生命值；在16秒内持续回复约608点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 376,
+       "value": 104,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1864,14 +1995,14 @@
     {
      "damage": 0,
      "mp": 213,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 416 点生命值；在16秒内持续回复约672点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 416,
+       "value": 116,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1886,14 +2017,14 @@
     {
      "damage": 0,
      "mp": 238,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 457 点生命值；在16秒内持续回复约736点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 457,
+       "value": 128,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1908,14 +2039,14 @@
     {
      "damage": 0,
      "mp": 264,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 499 点生命值；在16秒内持续回复约800点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 499,
+       "value": 140,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1930,14 +2061,14 @@
     {
      "damage": 0,
      "mp": 293,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 543 点生命值；在16秒内持续回复约864点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 543,
+       "value": 152,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1952,14 +2083,14 @@
     {
      "damage": 0,
      "mp": 323,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 587 点生命值；在16秒内持续回复约960点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 587,
+       "value": 164,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1974,14 +2105,14 @@
     {
      "damage": 0,
      "mp": 355,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 634 点生命值；在16秒内持续回复约1024点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 634,
+       "value": 180,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -1996,14 +2127,14 @@
     {
      "damage": 0,
      "mp": 388,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 681 点生命值；在16秒内持续回复约1088点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 681,
+       "value": 192,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -2018,14 +2149,14 @@
     {
      "damage": 0,
      "mp": 425,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 731 点生命值；在16秒内持续回复约1152点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 731,
+       "value": 204,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -2040,14 +2171,14 @@
     {
      "damage": 0,
      "mp": 463,
-     "cd": 16,
+     "cd": 8,
      "desc": "回复一个友方目标约 781 点生命值；在16秒内持续回复约1856点生命值",
      "effects": [
       {
        "type": "heal",
-       "value": 781,
+       "value": 212,
        "fixed": true,
-       "duration": 0,
+       "duration": 16,
        "target": "self"
       },
       {
@@ -2055,6 +2186,110 @@
        "value": 58,
        "fixed": true,
        "duration": 32,
+       "target": "self"
+      }
+     ]
+    },
+    {
+     "mp": 503,
+     "cd": 8,
+     "desc": "回复一个友方目标约 904 点生命值；在 16 秒内持续回复约 1824 点生命值；回复 27%法力",
+     "effects": [
+      {
+       "type": "heal",
+       "value": 904,
+       "fixed": true,
+       "duration": 0,
+       "target": "self"
+      },
+      {
+       "type": "heal",
+       "value": 228,
+       "fixed": true,
+       "duration": 16,
+       "target": "self"
+      },
+      {
+       "type": "mp_restore",
+       "value": 27,
+       "target": "self"
+      }
+     ]
+    },
+    {
+     "mp": 543,
+     "cd": 8,
+     "desc": "回复一个友方目标约 964 点生命值；在 16 秒内持续回复约 1952 点生命值；回复 28%法力",
+     "effects": [
+      {
+       "type": "heal",
+       "value": 964,
+       "fixed": true,
+       "duration": 0,
+       "target": "self"
+      },
+      {
+       "type": "heal",
+       "value": 244,
+       "fixed": true,
+       "duration": 16,
+       "target": "self"
+      },
+      {
+       "type": "mp_restore",
+       "value": 28,
+       "target": "self"
+      }
+     ]
+    },
+    {
+     "mp": 583,
+     "cd": 8,
+     "desc": "回复一个友方目标约 979 点生命值；在 16 秒内持续回复约 1984 点生命值；回复 29%法力",
+     "effects": [
+      {
+       "type": "heal",
+       "value": 979,
+       "fixed": true,
+       "duration": 0,
+       "target": "self"
+      },
+      {
+       "type": "heal",
+       "value": 248,
+       "fixed": true,
+       "duration": 16,
+       "target": "self"
+      },
+      {
+       "type": "mp_restore",
+       "value": 29,
+       "target": "self"
+      }
+     ]
+    },
+    {
+     "mp": 623,
+     "cd": 8,
+     "desc": "回复一个友方目标约 1056 点生命值；在 16 秒内持续回复约 2144 点生命值；回复 30%法力",
+     "effects": [
+      {
+       "type": "heal",
+       "value": 1056,
+       "fixed": true,
+       "duration": 0,
+       "target": "self"
+      },
+      {
+       "type": "heal",
+       "value": 268,
+       "fixed": true,
+       "duration": 16,
+       "target": "self"
+      },
+      {
+       "type": "mp_restore",
+       "value": 30,
        "target": "self"
       }
      ]
@@ -2140,6 +2375,26 @@
      "level": 98,
      "money": 514000,
      "exp": 369600
+    },
+    {
+     "level": 103,
+     "money": 629700,
+     "exp": 400638
+    },
+    {
+     "level": 108,
+     "money": 697200,
+     "exp": 590638
+    },
+    {
+     "level": 113,
+     "money": 787200,
+     "exp": 968138
+    },
+    {
+     "level": 118,
+     "money": 899700,
+     "exp": 1533138
     }
    ],
    "learn_level": 23,
@@ -2165,47 +2420,86 @@
     {
      "damage": 294,
      "mp": 120,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 294 点火伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 362,
      "mp": 146,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 362 点火伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 442,
      "mp": 174,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 442 点火伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 522,
      "mp": 205,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 522 点火伤害；使敌人定身 2 秒",
+     "effects": [
+      {
+       "type": "stun",
+       "value": 0,
+       "duration": 2
+      }
+     ]
+    },
+    {
+     "damage": 601,
+     "mp": 239,
+     "cd": 25,
+     "desc": "对单体造成约 601 点火伤害；使敌人定身 3 秒",
+     "effects": [
+      {
+       "type": "stun",
+       "value": 0,
+       "duration": 3
+      }
+     ]
+    },
+    {
+     "damage": 676,
+     "mp": 276,
+     "cd": 25,
+     "desc": "对单体造成约 676 点火伤害；使敌人定身 3 秒",
+     "effects": [
+      {
+       "type": "stun",
+       "value": 0,
+       "duration": 3
+      }
+     ]
+    },
+    {
+     "damage": 774,
+     "mp": 317,
+     "cd": 25,
+     "desc": "对单体造成约 774 点火伤害；使敌人定身 3 秒",
      "effects": [
       {
        "type": "stun",
@@ -2215,106 +2509,67 @@
      ]
     },
     {
-     "damage": 601,
-     "mp": 239,
-     "cd": 36,
-     "desc": "对单体造成约 601 点火伤害；使敌人定身 3 秒",
-     "effects": [
-      {
-       "type": "stun",
-       "value": 0,
-       "duration": 6
-      }
-     ]
-    },
-    {
-     "damage": 676,
-     "mp": 276,
-     "cd": 36,
-     "desc": "对单体造成约 676 点火伤害；使敌人定身 3 秒",
-     "effects": [
-      {
-       "type": "stun",
-       "value": 0,
-       "duration": 6
-      }
-     ]
-    },
-    {
-     "damage": 774,
-     "mp": 317,
-     "cd": 36,
-     "desc": "对单体造成约 774 点火伤害；使敌人定身 3 秒",
-     "effects": [
-      {
-       "type": "stun",
-       "value": 0,
-       "duration": 6
-      }
-     ]
-    },
-    {
      "damage": 880,
      "mp": 360,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 880 点火伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 997,
      "mp": 408,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 997 点火伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 1103,
      "mp": 408,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 1103 点火伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 1218,
      "mp": 408,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 1218 点火伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 1318,
      "mp": 408,
-     "cd": 36,
+     "cd": 25,
      "desc": "对单体造成约 1318 点火伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 4
       }
      ]
     }
@@ -2408,49 +2663,49 @@
     {
      "damage": 0,
      "mp": 143,
-     "cd": 90,
+     "cd": 60,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 171,
-     "cd": 90,
+     "cd": 60,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 201,
-     "cd": 90,
+     "cd": 60,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 235,
-     "cd": 90,
+     "cd": 60,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 271,
-     "cd": 90,
+     "cd": 60,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 310,
-     "cd": 90,
+     "cd": 60,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 352,
-     "cd": 90,
+     "cd": 60,
      "desc": "对单体"
     },
     {
      "damage": 0,
      "mp": 399,
-     "cd": 90,
+     "cd": 60,
      "desc": "对单体"
     }
    ],
@@ -2525,7 +2780,7 @@
       {
        "type": "stun",
        "value": 0,
-       "duration": 8,
+       "duration": 4,
        "break_on_damage": true
       }
      ]
@@ -2539,7 +2794,7 @@
       {
        "type": "stun",
        "value": 0,
-       "duration": 10,
+       "duration": 5,
        "break_on_damage": true
       }
      ]
@@ -2553,7 +2808,7 @@
       {
        "type": "stun",
        "value": 0,
-       "duration": 12,
+       "duration": 6,
        "break_on_damage": true
       }
      ]
@@ -2595,59 +2850,83 @@
    "type": "active",
    "skill_type": "buff",
    "target_rule": "single",
-   "max_level": 4,
+   "max_level": 6,
    "icon": "static/icons/skills/mage_013.gif",
    "desc": "怒意引动雷霆，法力攀升至顶，风云为之色变",
    "levels": [
     {
      "damage": 0,
      "mp": 561,
-     "cd": 240,
+     "cd": 180,
      "desc": "攻击力增加 300 点",
      "effects": [
       {
        "type": "magic_atk_flat",
-       "value": 300,
-       "duration": 0
+       "value": 312,
+       "duration": 12
       }
      ]
     },
     {
      "damage": 0,
      "mp": 684,
-     "cd": 240,
+     "cd": 180,
      "desc": "攻击力增加 350 点",
      "effects": [
       {
        "type": "magic_atk_flat",
-       "value": 350,
-       "duration": 0
+       "value": 367,
+       "duration": 13
       }
      ]
     },
     {
      "damage": 0,
      "mp": 821,
-     "cd": 240,
+     "cd": 180,
      "desc": "攻击力增加 405 点",
      "effects": [
       {
        "type": "magic_atk_flat",
-       "value": 405,
-       "duration": 0
+       "value": 423,
+       "duration": 14
       }
      ]
     },
     {
      "damage": 0,
      "mp": 977,
-     "cd": 240,
+     "cd": 180,
      "desc": "攻击力增加 465 点",
      "effects": [
       {
        "type": "magic_atk_flat",
-       "value": 465,
-       "duration": 0
+       "value": 472,
+       "duration": 15
+      }
+     ]
+    },
+    {
+     "mp": 977,
+     "cd": 180,
+     "desc": "在 15 秒内攻击力增加 521 点",
+     "effects": [
+      {
+       "type": "magic_atk_flat",
+       "value": 521,
+       "duration": 15
+      }
+     ]
+    },
+    {
+     "mp": 977,
+     "cd": 180,
+     "desc": "在 15 秒内攻击力增加 591 点",
+     "effects": [
+      {
+       "type": "magic_atk_flat",
+       "value": 591,
+       "duration": 15
       }
      ]
     }
@@ -2672,6 +2951,16 @@
      "level": 99,
      "money": 525000,
      "exp": 376800
+    },
+    {
+     "level": 109,
+     "money": 713400,
+     "exp": 651138
+    },
+    {
+     "level": 119,
+     "money": 924900,
+     "exp": 1668638
     }
    ],
    "learn_level": 69,
@@ -2690,14 +2979,14 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "all",
-   "max_level": 16,
+   "max_level": 18,
    "icon": "static/icons/skills/mage_014.gif",
    "desc": "层层火环向身外蔓延，如红裳起舞",
    "levels": [
     {
      "damage": 124,
      "mp": 83,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 124 点火伤害；并使敌人持续流血，在6秒内受到约120点伤害",
      "effects": [
       {
@@ -2710,7 +2999,7 @@
     {
      "damage": 159,
      "mp": 106,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 159 点火伤害；并使敌人持续流血，在6秒内受到约168点伤害",
      "effects": [
       {
@@ -2723,7 +3012,7 @@
     {
      "damage": 186,
      "mp": 123,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 186 点火伤害；并使敌人持续流血，在6秒内受到约180点伤害",
      "effects": [
       {
@@ -2736,7 +3025,7 @@
     {
      "damage": 206,
      "mp": 141,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 206 点火伤害；并使敌人持续流血，在6秒内受到约204点伤害",
      "effects": [
       {
@@ -2749,7 +3038,7 @@
     {
      "damage": 238,
      "mp": 160,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 238 点火伤害；并使敌人持续流血，在6秒内受到约228点伤害",
      "effects": [
       {
@@ -2762,7 +3051,7 @@
     {
      "damage": 272,
      "mp": 180,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 272 点火伤害；并使敌人持续流血，在6秒内受到约264点伤害",
      "effects": [
       {
@@ -2775,7 +3064,7 @@
     {
      "damage": 303,
      "mp": 201,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 303 点火伤害；并使敌人持续流血，在6秒内受到约288点伤害",
      "effects": [
       {
@@ -2788,7 +3077,7 @@
     {
      "damage": 337,
      "mp": 224,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 337 点火伤害；并使敌人持续流血，在6秒内受到约312点伤害",
      "effects": [
       {
@@ -2801,7 +3090,7 @@
     {
      "damage": 372,
      "mp": 248,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 372 点火伤害；并使敌人持续流血，在6秒内受到约336点伤害",
      "effects": [
       {
@@ -2814,7 +3103,7 @@
     {
      "damage": 405,
      "mp": 275,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 405 点火伤害；并使敌人持续流血，在6秒内受到约360点伤害",
      "effects": [
       {
@@ -2827,7 +3116,7 @@
     {
      "damage": 439,
      "mp": 302,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 439 点火伤害；并使敌人持续流血，在6秒内受到约396点伤害",
      "effects": [
       {
@@ -2840,7 +3129,7 @@
     {
      "damage": 485,
      "mp": 331,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 485 点火伤害；并使敌人持续流血，在6秒内受到约432点伤害",
      "effects": [
       {
@@ -2853,7 +3142,7 @@
     {
      "damage": 525,
      "mp": 361,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 525 点火伤害；并使敌人持续流血，在6秒内受到约456点伤害",
      "effects": [
       {
@@ -2866,7 +3155,7 @@
     {
      "damage": 579,
      "mp": 394,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 579 点火伤害；并使敌人持续流血，在6秒内受到约960点伤害",
      "effects": [
       {
@@ -2879,7 +3168,7 @@
     {
      "damage": 620,
      "mp": 394,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 620 点火伤害；并使敌人持续流血，在6秒内受到约960点伤害",
      "effects": [
       {
@@ -2892,13 +3181,39 @@
     {
      "damage": 656,
      "mp": 394,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 656 点火伤害；并使敌人持续流血，在6秒内受到约960点伤害",
      "effects": [
       {
        "type": "bleed",
        "value": 80,
        "duration": 12
+      }
+     ]
+    },
+    {
+     "damage": 713,
+     "mp": 394,
+     "cd": 6,
+     "desc": "对全体敌人造成约 713 点火伤害；并使敌人持续流血，持续 6 秒造成约 1068 点总伤害",
+     "effects": [
+      {
+       "type": "fire_dot",
+       "value": 178,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 766,
+     "mp": 394,
+     "cd": 6,
+     "desc": "对全体敌人造成约 766 点火伤害；并使敌人持续流血，持续 6 秒造成约 1116 点总伤害",
+     "effects": [
+      {
+       "type": "fire_dot",
+       "value": 186,
+       "duration": 6
       }
      ]
     }
@@ -2983,6 +3298,16 @@
      "level": 106,
      "money": 667500,
      "exp": 492138
+    },
+    {
+     "level": 111,
+     "money": 748500,
+     "exp": 794638
+    },
+    {
+     "level": 116,
+     "money": 852000,
+     "exp": 1284638
     }
    ],
    "learn_level": 29,
@@ -3215,7 +3540,7 @@
     {
      "damage": 266,
      "mp": 272,
-     "cd": 8,
+     "cd": 4,
      "desc": "对单体造成约 266 点冰伤害",
      "effects": [
       {
@@ -3228,7 +3553,7 @@
     {
      "damage": 309,
      "mp": 322,
-     "cd": 8,
+     "cd": 4,
      "desc": "对单体造成约 309 点冰伤害",
      "effects": [
       {
@@ -3241,7 +3566,7 @@
     {
      "damage": 369,
      "mp": 375,
-     "cd": 8,
+     "cd": 4,
      "desc": "对单体造成约 369 点冰伤害",
      "effects": [
       {
@@ -3254,7 +3579,7 @@
     {
      "damage": 422,
      "mp": 435,
-     "cd": 8,
+     "cd": 4,
      "desc": "对单体造成约 422 点冰伤害",
      "effects": [
       {
@@ -3267,7 +3592,7 @@
     {
      "damage": 482,
      "mp": 500,
-     "cd": 8,
+     "cd": 4,
      "desc": "对单体造成约 482 点冰伤害",
      "effects": [
       {
@@ -3280,7 +3605,7 @@
     {
      "damage": 546,
      "mp": 570,
-     "cd": 8,
+     "cd": 4,
      "desc": "对单体造成约 546 点冰伤害",
      "effects": [
       {
@@ -3293,7 +3618,7 @@
     {
      "damage": 620,
      "mp": 645,
-     "cd": 8,
+     "cd": 4,
      "desc": "对单体造成约 620 点冰伤害",
      "effects": [
       {
@@ -3306,7 +3631,7 @@
     {
      "damage": 702,
      "mp": 730,
-     "cd": 8,
+     "cd": 4,
      "desc": "对单体造成约 702 点冰伤害",
      "effects": [
       {
@@ -3386,8 +3711,21 @@
     {
      "damage": 0,
      "mp": 97,
-     "cd": 360,
+     "cd": 180,
      "desc": "无敌 4 秒",
+     "effects": [
+      {
+       "type": "invuln",
+       "value": 0,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 0,
+     "mp": 149,
+     "cd": 180,
+     "desc": "无敌 6 秒",
      "effects": [
       {
        "type": "invuln",
@@ -3398,27 +3736,14 @@
     },
     {
      "damage": 0,
-     "mp": 149,
-     "cd": 360,
-     "desc": "无敌 6 秒",
-     "effects": [
-      {
-       "type": "invuln",
-       "value": 0,
-       "duration": 12
-      }
-     ]
-    },
-    {
-     "damage": 0,
      "mp": 217,
-     "cd": 360,
+     "cd": 180,
      "desc": "无敌 8 秒",
      "effects": [
       {
        "type": "invuln",
        "value": 0,
-       "duration": 16
+       "duration": 10
       }
      ]
     }
@@ -3457,14 +3782,14 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "all",
-   "max_level": 5,
+   "max_level": 8,
    "icon": "static/icons/skills/mage_018.gif",
    "desc": "大地崩裂熔岩喷涌，灼烧其上之敌",
    "levels": [
     {
      "damage": 0,
      "mp": 215,
-     "cd": 6,
+     "cd": 3,
      "desc": "对单体造成约 0 点火伤害；并使敌人持续流血，在10秒内受到约760点伤害",
      "effects": [
       {
@@ -3477,7 +3802,7 @@
     {
      "damage": 0,
      "mp": 249,
-     "cd": 6,
+     "cd": 3,
      "desc": "对单体造成约 0 点火伤害；并使敌人持续流血，在10秒内受到约840点伤害",
      "effects": [
       {
@@ -3490,7 +3815,7 @@
     {
      "damage": 0,
      "mp": 285,
-     "cd": 6,
+     "cd": 3,
      "desc": "对单体造成约 0 点火伤害；并使敌人持续流血，在10秒内受到约960点伤害",
      "effects": [
       {
@@ -3503,7 +3828,7 @@
     {
      "damage": 0,
      "mp": 324,
-     "cd": 6,
+     "cd": 3,
      "desc": "对单体造成约 0 点火伤害；并使敌人持续流血，在10秒内受到约1060点伤害",
      "effects": [
       {
@@ -3516,13 +3841,52 @@
     {
      "damage": 0,
      "mp": 367,
-     "cd": 6,
+     "cd": 3,
      "desc": "对单体造成约 0 点火伤害；并使敌人持续流血，在10秒内受到约1160点伤害",
      "effects": [
       {
        "type": "bleed",
        "value": 58,
        "duration": 20
+      }
+     ]
+    },
+    {
+     "damage": 0,
+     "mp": 408,
+     "cd": 3,
+     "desc": "大地崩裂熔岩喷涌，灼烧区域内的全体敌人，每秒受到约 522 点火焰伤害，持续 5 秒造成约 2610 点总伤害",
+     "effects": [
+      {
+       "type": "fire_dot",
+       "value": 522,
+       "duration": 5
+      }
+     ]
+    },
+    {
+     "damage": 0,
+     "mp": 449,
+     "cd": 3,
+     "desc": "大地崩裂熔岩喷涌，灼烧区域内的全体敌人，每秒受到约 604 点火焰伤害，持续 5 秒造成约 3020 点总伤害",
+     "effects": [
+      {
+       "type": "fire_dot",
+       "value": 604,
+       "duration": 5
+      }
+     ]
+    },
+    {
+     "damage": 0,
+     "mp": 490,
+     "cd": 3,
+     "desc": "大地崩裂熔岩喷涌，灼烧区域内的全体敌人，每秒受到约 686 点火焰伤害，持续 5 秒造成约 3430 点总伤害",
+     "effects": [
+      {
+       "type": "fire_dot",
+       "value": 686,
+       "duration": 5
       }
      ]
     }
@@ -3552,6 +3916,21 @@
      "level": 93,
      "money": 456000,
      "exp": 328800
+    },
+    {
+     "level": 100,
+     "money": 609000,
+     "exp": 377138
+    },
+    {
+     "level": 107,
+     "money": 681900,
+     "exp": 537638
+    },
+    {
+     "level": 114,
+     "money": 807900,
+     "exp": 1066138
     }
    ],
    "learn_level": 65,

@@ -9,141 +9,165 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 22,
+   "max_level": 26,
    "icon": "static/icons/skills/darkwitch_001.gif",
    "desc": "巫门秘术，出手时暗光缭绕，如影随形",
    "levels": [
     {
      "damage": 27,
      "mp": 8,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约27点伤害"
     },
     {
      "damage": 68,
      "mp": 19,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约68点伤害"
     },
     {
      "damage": 103,
      "mp": 32,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约103点伤害"
     },
     {
      "damage": 138,
      "mp": 45,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约138点伤害"
     },
     {
      "damage": 175,
      "mp": 63,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约175点伤害"
     },
     {
      "damage": 212,
      "mp": 78,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约212点伤害"
     },
     {
      "damage": 251,
      "mp": 92,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约251点伤害"
     },
     {
      "damage": 289,
      "mp": 108,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约289点伤害"
     },
     {
      "damage": 330,
      "mp": 123,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约330点伤害"
     },
     {
      "damage": 370,
      "mp": 140,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约370点伤害"
     },
     {
      "damage": 421,
      "mp": 162,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约421点伤害"
     },
     {
      "damage": 475,
      "mp": 184,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约475点伤害"
     },
     {
      "damage": 529,
      "mp": 208,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约529点伤害"
     },
     {
      "damage": 585,
      "mp": 235,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约585点伤害"
     },
     {
      "damage": 642,
      "mp": 262,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约642点伤害"
     },
     {
      "damage": 701,
      "mp": 292,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约701点伤害"
     },
     {
      "damage": 761,
      "mp": 324,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约761点伤害"
     },
     {
      "damage": 823,
      "mp": 356,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约823点伤害"
     },
     {
      "damage": 886,
      "mp": 391,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约886点伤害"
     },
     {
      "damage": 950,
      "mp": 429,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约950点伤害"
     },
     {
      "damage": 1016,
      "mp": 469,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约1016点伤害"
     },
     {
      "damage": 1084,
      "mp": 512,
-     "cd": 1,
+     "cd": 0,
      "desc": "飞出暗影球攻击敌人单体，造成约1084点伤害"
+    },
+    {
+     "damage": 1159,
+     "mp": 562,
+     "cd": 0,
+     "desc": "飞出暗影球攻击敌人单体，造成约 1159 点伤害"
+    },
+    {
+     "damage": 1240,
+     "mp": 612,
+     "cd": 0,
+     "desc": "飞出暗影球攻击敌人单体，造成约 1240 点伤害"
+    },
+    {
+     "damage": 1329,
+     "mp": 662,
+     "cd": 0,
+     "desc": "飞出暗影球攻击敌人单体，造成约 1329 点伤害"
+    },
+    {
+     "damage": 1426,
+     "mp": 712,
+     "cd": 0,
+     "desc": "飞出暗影球攻击敌人单体，造成约 1426 点伤害"
     }
    ],
    "requirements": [
@@ -256,6 +280,26 @@
      "level": 97,
      "money": 502000,
      "exp": 361200
+    },
+    {
+     "level": 102,
+     "money": 618900,
+     "exp": 385138
+    },
+    {
+     "level": 107,
+     "money": 681900,
+     "exp": 537638
+    },
+    {
+     "level": 112,
+     "money": 767400,
+     "exp": 877638
+    },
+    {
+     "level": 117,
+     "money": 875400,
+     "exp": 1405138
     }
    ],
    "learn_level": 0,
@@ -277,293 +321,345 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 22,
+   "max_level": 26,
    "icon": "static/icons/skills/darkwitch_002.gif",
    "desc": "以诡异巫法，令敌遭持续不断的精神侵蚀",
    "levels": [
     {
      "damage": 16,
      "mp": 10,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约16点暗伤害，再在8秒内造成约176点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 11,
-       "duration": 16
+       "value": 10,
+       "duration": 8
       }
      ]
     },
     {
      "damage": 42,
      "mp": 17,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约42点暗伤害，再在8秒内造成约288点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 18,
-       "duration": 16
+       "value": 14,
+       "duration": 8
       }
      ]
     },
     {
      "damage": 64,
      "mp": 26,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约64点暗伤害，再在8秒内造成约400点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 25,
-       "duration": 16
+       "value": 20,
+       "duration": 8
       }
      ]
     },
     {
      "damage": 85,
      "mp": 36,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约85点暗伤害，再在8秒内造成约496点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 31,
-       "duration": 16
+       "value": 26,
+       "duration": 8
       }
      ]
     },
     {
      "damage": 106,
      "mp": 47,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约106点暗伤害，再在8秒内造成约592点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 37,
-       "duration": 16
+       "value": 32,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 130,
      "mp": 57,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约130点暗伤害，再在8秒内造成约672点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 42,
-       "duration": 16
+       "value": 40,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 152,
      "mp": 67,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约152点暗伤害，再在8秒内造成约736点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 46,
-       "duration": 16
+       "value": 48,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 177,
      "mp": 77,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约177点暗伤害，再在8秒内造成约816点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 51,
-       "duration": 16
+       "value": 54,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 201,
      "mp": 88,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约201点暗伤害，再在8秒内造成约880点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 55,
-       "duration": 16
+       "value": 58,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 226,
      "mp": 99,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约226点暗伤害，再在8秒内造成约960点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 60,
-       "duration": 16
+       "value": 66,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 258,
      "mp": 114,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约258点暗伤害，再在8秒内造成约1040点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 65,
-       "duration": 16
+       "value": 76,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 291,
      "mp": 130,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约291点暗伤害，再在8秒内造成约1120点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 70,
-       "duration": 16
+       "value": 86,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 325,
      "mp": 146,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约325点暗伤害，再在8秒内造成约1216点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 76,
-       "duration": 16
+       "value": 94,
+       "duration": 9
       }
      ]
     },
     {
      "damage": 360,
      "mp": 164,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约360点暗伤害，再在8秒内造成约1328点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 83,
-       "duration": 16
+       "value": 106,
+       "duration": 10
       }
      ]
     },
     {
      "damage": 396,
      "mp": 182,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约396点暗伤害，再在8秒内造成约1408点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 88,
-       "duration": 16
+       "value": 116,
+       "duration": 10
       }
      ]
     },
     {
      "damage": 434,
      "mp": 202,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约434点暗伤害，再在8秒内造成约1520点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 95,
-       "duration": 16
+       "value": 124,
+       "duration": 10
       }
      ]
     },
     {
      "damage": 472,
      "mp": 224,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约472点暗伤害，再在8秒内造成约1616点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 101,
-       "duration": 16
+       "value": 138,
+       "duration": 10
       }
      ]
     },
     {
      "damage": 511,
      "mp": 247,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约511点暗伤害，再在8秒内造成约1712点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 107,
-       "duration": 16
+       "value": 144,
+       "duration": 10
       }
      ]
     },
     {
      "damage": 552,
      "mp": 271,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约552点暗伤害，再在8秒内造成约1808点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 113,
-       "duration": 16
+       "value": 154,
+       "duration": 10
       }
      ]
     },
     {
      "damage": 594,
      "mp": 296,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约594点暗伤害，再在8秒内造成约1888点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 118,
-       "duration": 16
+       "value": 168,
+       "duration": 10
       }
      ]
     },
     {
      "damage": 636,
      "mp": 324,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约636点暗伤害，再在8秒内造成约1984点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 124,
-       "duration": 16
+       "value": 180,
+       "duration": 10
       }
      ]
     },
     {
      "damage": 681,
      "mp": 353,
-     "cd": 8,
+     "cd": 3,
      "desc": "腐蚀敌人的灵魂，先造成约681点暗伤害，再在8秒内造成约2064点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 129,
-       "duration": 16
+       "value": 190,
+       "duration": 10
+      }
+     ]
+    },
+    {
+     "damage": 721,
+     "mp": 381,
+     "cd": 3,
+     "desc": "腐蚀敌人的灵魂，先造成约 721 点暗伤害，再持续 10 秒造成约 2020 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 202,
+       "duration": 10
+      }
+     ]
+    },
+    {
+     "damage": 762,
+     "mp": 409,
+     "cd": 3,
+     "desc": "腐蚀敌人的灵魂，先造成约 762 点暗伤害，再持续 10 秒造成约 2140 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 214,
+       "duration": 10
+      }
+     ]
+    },
+    {
+     "damage": 804,
+     "mp": 437,
+     "cd": 3,
+     "desc": "腐蚀敌人的灵魂，先造成约 804 点暗伤害，再持续 10 秒造成约 2220 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 222,
+       "duration": 10
+      }
+     ]
+    },
+    {
+     "damage": 846,
+     "mp": 465,
+     "cd": 3,
+     "desc": "腐蚀敌人的灵魂，先造成约 846 点暗伤害，再持续 10 秒造成约 2400 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 240,
+       "duration": 10
       }
      ]
     }
@@ -678,6 +774,26 @@
      "level": 99,
      "money": 525000,
      "exp": 376800
+    },
+    {
+     "level": 104,
+     "money": 641400,
+     "exp": 423638
+    },
+    {
+     "level": 109,
+     "money": 713400,
+     "exp": 651138
+    },
+    {
+     "level": 114,
+     "money": 807900,
+     "exp": 1066138
+    },
+    {
+     "level": 119,
+     "money": 924900,
+     "exp": 1668638
     }
    ],
    "learn_level": 3,
@@ -704,7 +820,7 @@
    "type": "active",
    "skill_type": "summon",
    "target_rule": "self",
-   "max_level": 19,
+   "max_level": 23,
    "summon_level_map": {
     "1": 11,
     "2": 15,
@@ -732,116 +848,136 @@
     {
      "damage": 0,
      "mp": 96,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出11级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 134,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出15级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 178,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出19级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 217,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出23级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 258,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出27级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 297,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出31级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 350,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出36级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 408,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出41级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 466,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出46级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 530,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出51级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 597,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出56级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 671,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出61级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 746,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出66级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 827,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出71级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 914,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出76级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 1008,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出81级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 1103,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出86级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 1207,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出91级的炎灵兽"
     },
     {
      "damage": 0,
      "mp": 1317,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出96级的炎灵兽"
+    },
+    {
+     "mp": 1414,
+     "cd": 0,
+     "desc": "从魔界召唤出 101 级的焰鬃兽"
+    },
+    {
+     "mp": 1511,
+     "cd": 0,
+     "desc": "从魔界召唤出 106 级的焰鬃兽"
+    },
+    {
+     "mp": 1608,
+     "cd": 0,
+     "desc": "从魔界召唤出 111 级的焰鬃兽"
+    },
+    {
+     "mp": 1705,
+     "cd": 0,
+     "desc": "从魔界召唤出 116 级的焰鬃兽"
     }
    ],
    "summon": "yanling",
@@ -941,6 +1077,26 @@
      "level": 95,
      "money": 480000,
      "exp": 345600
+    },
+    {
+     "level": 100,
+     "money": 609000,
+     "exp": 377138
+    },
+    {
+     "level": 105,
+     "money": 654000,
+     "exp": 454138
+    },
+    {
+     "level": 110,
+     "money": 730500,
+     "exp": 719138
+    },
+    {
+     "level": 115,
+     "money": 829500,
+     "exp": 1171638
     }
    ],
    "learn_level": 10,
@@ -963,331 +1119,399 @@
    "type": "active",
    "skill_type": "control",
    "target_rule": "single",
-   "max_level": 18,
+   "max_level": 22,
    "icon": "static/icons/skills/darkwitch_004.gif",
    "desc": "布下无形陷阱，令敌寸步难行",
    "levels": [
     {
      "damage": 0,
      "mp": 46,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在4秒内持续受到32点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       },
       {
        "type": "poison",
-       "value": 4,
-       "duration": 8
+       "value": 30,
+       "duration": 4
       }
      ]
     },
     {
      "damage": 0,
      "mp": 59,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在4秒内持续受到40点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       },
       {
        "type": "poison",
-       "value": 5,
-       "duration": 8
+       "value": 34,
+       "duration": 4
       }
      ]
     },
     {
      "damage": 0,
      "mp": 71,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在4秒内持续受到48点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       },
       {
        "type": "poison",
-       "value": 6,
-       "duration": 8
+       "value": 40,
+       "duration": 4
       }
      ]
     },
     {
      "damage": 0,
      "mp": 83,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在4秒内持续受到56点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 4
       },
       {
        "type": "poison",
-       "value": 7,
-       "duration": 8
+       "value": 48,
+       "duration": 4
       }
      ]
     },
     {
      "damage": 0,
      "mp": 96,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在5秒内持续受到80点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       },
       {
        "type": "poison",
-       "value": 8,
-       "duration": 10
+       "value": 46,
+       "duration": 5
       }
      ]
     },
     {
      "damage": 0,
      "mp": 109,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在5秒内持续受到90点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       },
       {
        "type": "poison",
-       "value": 9,
-       "duration": 10
+       "value": 52,
+       "duration": 5
       }
      ]
     },
     {
      "damage": 0,
      "mp": 125,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在5秒内持续受到100点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       },
       {
        "type": "poison",
-       "value": 10,
-       "duration": 10
+       "value": 58,
+       "duration": 5
       }
      ]
     },
     {
      "damage": 0,
      "mp": 144,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在5秒内持续受到100点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 5
       },
       {
        "type": "poison",
-       "value": 10,
-       "duration": 10
+       "value": 64,
+       "duration": 5
       }
      ]
     },
     {
      "damage": 0,
      "mp": 163,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在6秒内持续受到144点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 12
+       "duration": 6
       },
       {
        "type": "poison",
-       "value": 12,
-       "duration": 12
+       "value": 60,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 0,
      "mp": 184,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低40%，并在6秒内持续受到144点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 12
+       "duration": 6
       },
       {
        "type": "poison",
-       "value": 12,
-       "duration": 12
+       "value": 66,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 0,
      "mp": 205,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低60%，并在6秒内持续受到156点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
       },
       {
        "type": "poison",
-       "value": 13,
-       "duration": 12
+       "value": 72,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 0,
      "mp": 229,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低60%，并在6秒内持续受到168点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 6
       },
       {
        "type": "poison",
-       "value": 14,
-       "duration": 12
+       "value": 82,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 0,
      "mp": 254,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低60%，并在7秒内持续受到210点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 14
+       "duration": 7
       },
       {
        "type": "poison",
-       "value": 15,
-       "duration": 14
+       "value": 74,
+       "duration": 7
       }
      ]
     },
     {
      "damage": 0,
      "mp": 280,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低60%，并在7秒内持续受到224点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 14
+       "duration": 7
       },
       {
        "type": "poison",
-       "value": 16,
-       "duration": 14
+       "value": 80,
+       "duration": 7
       }
      ]
     },
     {
      "damage": 0,
      "mp": 307,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低60%，并在7秒内持续受到238点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 14
+       "duration": 7
       },
       {
        "type": "poison",
-       "value": 17,
-       "duration": 14
+       "value": 86,
+       "duration": 7
       }
      ]
     },
     {
      "damage": 0,
      "mp": 337,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低60%，并在7秒内持续受到252点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 14
+       "duration": 7
       },
       {
        "type": "poison",
-       "value": 18,
-       "duration": 14
+       "value": 92,
+       "duration": 7
       }
      ]
     },
     {
      "damage": 0,
      "mp": 369,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低60%，并在8秒内持续受到304点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 16
+       "duration": 8
       },
       {
        "type": "poison",
-       "value": 19,
-       "duration": 16
+       "value": 86,
+       "duration": 8
       }
      ]
     },
     {
      "damage": 0,
      "mp": 403,
-     "cd": 3,
+     "cd": 4,
      "desc": "使敌人移动速度降低60%，并在8秒内持续受到320点伤害",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 16
+       "duration": 8
       },
       {
        "type": "poison",
-       "value": 20,
-       "duration": 16
+       "value": 94,
+       "duration": 8
+      }
+     ]
+    },
+    {
+     "mp": 442,
+     "cd": 4,
+     "desc": "使敌人攻速降低 60%，并在 8 秒内持续受到 320 点伤害",
+     "effects": [
+      {
+       "type": "speed_down",
+       "value": 60,
+       "duration": 8
+      },
+      {
+       "type": "poison",
+       "value": 102,
+       "duration": 8
+      }
+     ]
+    },
+    {
+     "mp": 481,
+     "cd": 4,
+     "desc": "使敌人攻速降低 60%，并在 8 秒内持续受到 320 点伤害",
+     "effects": [
+      {
+       "type": "speed_down",
+       "value": 60,
+       "duration": 8
+      },
+      {
+       "type": "poison",
+       "value": 112,
+       "duration": 8
+      }
+     ]
+    },
+    {
+     "mp": 520,
+     "cd": 4,
+     "desc": "使敌人攻速降低 60%，并在 10 秒内持续受到 320 点伤害",
+     "effects": [
+      {
+       "type": "speed_down",
+       "value": 60,
+       "duration": 10
+      },
+      {
+       "type": "poison",
+       "value": 128,
+       "duration": 10
+      }
+     ]
+    },
+    {
+     "mp": 559,
+     "cd": 4,
+     "desc": "使敌人攻速降低 60%，并在 10 秒内造成约 1360 点总伤害",
+     "effects": [
+      {
+       "type": "speed_down",
+       "value": 60,
+       "duration": 10
+      },
+      {
+       "type": "poison",
+       "value": 136,
+       "duration": 10
       }
      ]
     }
@@ -1382,6 +1606,26 @@
      "level": 96,
      "money": 491000,
      "exp": 352800
+    },
+    {
+     "level": 101,
+     "money": 609000,
+     "exp": 377138
+    },
+    {
+     "level": 106,
+     "money": 667500,
+     "exp": 492138
+    },
+    {
+     "level": 111,
+     "money": 748500,
+     "exp": 794638
+    },
+    {
+     "level": 116,
+     "money": 852000,
+     "exp": 1284638
     }
    ],
    "learn_level": 16,
@@ -1419,7 +1663,7 @@
     {
      "damage": 0,
      "mp": 115,
-     "cd": 50,
+     "cd": 30,
      "desc": "惊吓敌人使其四处乱跑，持续2秒",
      "effects": [
       {
@@ -1431,36 +1675,36 @@
     {
      "damage": 0,
      "mp": 205,
-     "cd": 50,
+     "cd": 30,
      "desc": "惊吓敌人使其四处乱跑，持续3秒",
      "effects": [
       {
        "type": "fear",
-       "duration": 6
+       "duration": 4
       }
      ]
     },
     {
      "damage": 0,
      "mp": 320,
-     "cd": 50,
+     "cd": 30,
      "desc": "惊吓敌人使其四处乱跑，持续3.5秒",
      "effects": [
       {
        "type": "fear",
-       "duration": 7
+       "duration": 5
       }
      ]
     },
     {
      "damage": 0,
      "mp": 470,
-     "cd": 50,
+     "cd": 30,
      "desc": "惊吓敌人使其四处乱跑，持续4秒",
      "effects": [
       {
        "type": "fear",
-       "duration": 8
+       "duration": 6
       }
      ]
     }
@@ -1512,69 +1756,87 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 10,
+   "max_level": 13,
    "icon": "static/icons/skills/darkwitch_006.gif",
    "desc": "阴狠毒辣，化敌之血以为己用",
    "levels": [
     {
      "damage": 369,
      "mp": 178,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人439点生命值，为自己所用"
     },
     {
      "damage": 407,
      "mp": 200,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人476点生命值，为自己所用"
     },
     {
      "damage": 443,
      "mp": 224,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人513点生命值，为自己所用"
     },
     {
      "damage": 494,
      "mp": 248,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人547点生命值，为自己所用"
     },
     {
      "damage": 529,
      "mp": 274,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人585点生命值，为自己所用"
     },
     {
      "damage": 570,
      "mp": 303,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人618点生命值，为自己所用"
     },
     {
      "damage": 622,
      "mp": 332,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人653点生命值，为自己所用"
     },
     {
      "damage": 671,
      "mp": 364,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人685点生命值，为自己所用"
     },
     {
      "damage": 712,
      "mp": 398,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人719点生命值，为自己所用"
     },
     {
      "damage": 753,
      "mp": 434,
-     "cd": 16,
+     "cd": 10,
      "desc": "吸取敌人751点生命值，为自己所用"
+    },
+    {
+     "damage": 810,
+     "mp": 479,
+     "cd": 10,
+     "desc": "吸取敌人 810 点生命值，为自己所用"
+    },
+    {
+     "damage": 870,
+     "mp": 524,
+     "cd": 10,
+     "desc": "吸取敌人 870 点生命值，为自己所用"
+    },
+    {
+     "damage": 954,
+     "mp": 569,
+     "cd": 10,
+     "desc": "吸取敌人 954 点生命值，为自己所用"
     }
    ],
    "requirements": [
@@ -1627,6 +1889,21 @@
      "level": 98,
      "money": 514000,
      "exp": 369600
+    },
+    {
+     "level": 104,
+     "money": 641400,
+     "exp": 423638
+    },
+    {
+     "level": 110,
+     "money": 730500,
+     "exp": 719138
+    },
+    {
+     "level": 116,
+     "money": 852000,
+     "exp": 1284638
     }
    ],
    "learn_level": 53,
@@ -1654,7 +1931,7 @@
     {
      "damage": 0,
      "mp": 780,
-     "cd": 360,
+     "cd": 300,
      "desc": "惊吓自己周围的敌人使其四处乱跑，持续4秒"
     }
    ],
@@ -1695,7 +1972,7 @@
     {
      "damage": 2980,
      "mp": 486,
-     "cd": 20,
+     "cd": 15,
      "desc": "放出一团毒雾，1秒内触碰到敌对目标瞬间爆炸，使区域内的敌人受到约2980点伤害，若无目标1秒后自动爆炸"
     }
    ],
@@ -1729,7 +2006,7 @@
    "type": "active",
    "skill_type": "summon",
    "target_rule": "self",
-   "max_level": 15,
+   "max_level": 19,
    "summon_level_map": {
     "1": 30,
     "2": 35,
@@ -1753,92 +2030,112 @@
     {
      "damage": 0,
      "mp": 288,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出30级的魅影"
     },
     {
      "damage": 0,
      "mp": 341,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出35级的魅影"
     },
     {
      "damage": 0,
      "mp": 386,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出39级的魅影"
     },
     {
      "damage": 0,
      "mp": 442,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出44级的魅影"
     },
     {
      "damage": 0,
      "mp": 504,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出49级的魅影"
     },
     {
      "damage": 0,
      "mp": 570,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出54级的魅影"
     },
     {
      "damage": 0,
      "mp": 640,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出59级的魅影"
     },
     {
      "damage": 0,
      "mp": 716,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出64级的魅影"
     },
     {
      "damage": 0,
      "mp": 793,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出69级的魅影"
     },
     {
      "damage": 0,
      "mp": 877,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出74级的魅影"
     },
     {
      "damage": 0,
      "mp": 969,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出79级的魅影"
     },
     {
      "damage": 0,
      "mp": 1063,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出84级的魅影"
     },
     {
      "damage": 0,
      "mp": 1165,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出89级的魅影"
     },
     {
      "damage": 0,
      "mp": 1272,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出94级的魅影"
     },
     {
      "damage": 0,
      "mp": 1389,
-     "cd": 4,
+     "cd": 0,
      "desc": "从魔界召唤出99级的魅影"
+    },
+    {
+     "mp": 1511,
+     "cd": 0,
+     "desc": "从魔界召唤出 104 级的幽蝶"
+    },
+    {
+     "mp": 1633,
+     "cd": 0,
+     "desc": "从魔界召唤出 109 级的幽蝶"
+    },
+    {
+     "mp": 1755,
+     "cd": 0,
+     "desc": "从魔界召唤出 114 级的幽蝶"
+    },
+    {
+     "mp": 1877,
+     "cd": 0,
+     "desc": "从魔界召唤出 119 级的幽蝶"
     }
    ],
    "summon": "meiying",
@@ -1918,6 +2215,26 @@
      "level": 98,
      "money": 514000,
      "exp": 369600
+    },
+    {
+     "level": 103,
+     "money": 629700,
+     "exp": 400638
+    },
+    {
+     "level": 108,
+     "money": 697200,
+     "exp": 590638
+    },
+    {
+     "level": 113,
+     "money": 787200,
+     "exp": 968138
+    },
+    {
+     "level": 118,
+     "money": 899700,
+     "exp": 1533138
     }
    ],
    "learn_level": 29,
@@ -1947,13 +2264,13 @@
     {
      "damage": 0,
      "mp": 140,
-     "cd": 10,
+     "cd": 12,
      "desc": "治疗目标宠物4181点生命值，只能治疗自己的宠物，在4秒内逐回合恢复",
      "effects": [
       {
        "type": "hp_heal",
-       "value": 4181,
-       "duration": 8,
+       "value": 1398,
+       "duration": 4,
        "target": "pet"
       }
      ]
@@ -1961,13 +2278,13 @@
     {
      "damage": 0,
      "mp": 175,
-     "cd": 10,
+     "cd": 12,
      "desc": "治疗目标宠物5137点生命值，只能治疗自己的宠物，在4秒内逐回合恢复",
      "effects": [
       {
        "type": "hp_heal",
-       "value": 5137,
-       "duration": 8,
+       "value": 1722,
+       "duration": 4,
        "target": "pet"
       }
      ]
@@ -1975,13 +2292,13 @@
     {
      "damage": 0,
      "mp": 214,
-     "cd": 10,
+     "cd": 12,
      "desc": "治疗目标宠物6143点生命值，只能治疗自己的宠物，在4秒内逐回合恢复",
      "effects": [
       {
        "type": "hp_heal",
-       "value": 6143,
-       "duration": 8,
+       "value": 2088,
+       "duration": 4,
        "target": "pet"
       }
      ]
@@ -1989,13 +2306,13 @@
     {
      "damage": 0,
      "mp": 256,
-     "cd": 10,
+     "cd": 12,
      "desc": "治疗目标宠物7193点生命值，只能治疗自己的宠物，在4秒内逐回合恢复",
      "effects": [
       {
        "type": "hp_heal",
-       "value": 7193,
-       "duration": 8,
+       "value": 2394,
+       "duration": 4,
        "target": "pet"
       }
      ]
@@ -2003,13 +2320,13 @@
     {
      "damage": 0,
      "mp": 304,
-     "cd": 10,
+     "cd": 12,
      "desc": "治疗目标宠物8302点生命值，只能治疗自己的宠物，在4秒内逐回合恢复",
      "effects": [
       {
        "type": "hp_heal",
-       "value": 8302,
-       "duration": 8,
+       "value": 2834,
+       "duration": 4,
        "target": "pet"
       }
      ]
@@ -2017,13 +2334,13 @@
     {
      "damage": 0,
      "mp": 356,
-     "cd": 10,
+     "cd": 12,
      "desc": "治疗目标宠物9455点生命值，只能治疗自己的宠物，在4秒内逐回合恢复",
      "effects": [
       {
        "type": "hp_heal",
-       "value": 9455,
-       "duration": 8,
+       "value": 3230,
+       "duration": 4,
        "target": "pet"
       }
      ]
@@ -2031,13 +2348,13 @@
     {
      "damage": 0,
      "mp": 414,
-     "cd": 10,
+     "cd": 12,
      "desc": "治疗目标宠物10672点生命值，只能治疗自己的宠物，在4秒内逐回合恢复",
      "effects": [
       {
        "type": "hp_heal",
-       "value": 10672,
-       "duration": 8,
+       "value": 3550,
+       "duration": 4,
        "target": "pet"
       }
      ]
@@ -2045,13 +2362,13 @@
     {
      "damage": 0,
      "mp": 477,
-     "cd": 10,
+     "cd": 12,
      "desc": "治疗目标宠物11948点生命值，只能治疗自己的宠物，在4秒内逐回合恢复",
      "effects": [
       {
        "type": "hp_heal",
-       "value": 11948,
-       "duration": 8,
+       "value": 4010,
+       "duration": 4,
        "target": "pet"
       }
      ]
@@ -2125,33 +2442,33 @@
    "type": "active",
    "skill_type": "buff",
    "target_rule": "self",
-   "max_level": 8,
+   "max_level": 11,
    "icon": "static/icons/skills/darkwitch_011.gif",
    "desc": "不惜以妖兽魅影性命，换取自身平安",
    "levels": [
     {
      "damage": 0,
      "mp": 233,
-     "cd": 3,
+     "cd": 0,
      "desc": "物理防御和法术防御增加106点，并将受到伤害的17%转移给炎灵兽，持续7分钟；60%的几率免疫驱散",
      "effects": [
       {
        "type": "damage_transfer",
-       "value": 17,
-       "duration": 840,
+       "value": 16,
+       "duration": 0,
        "target": "yanling",
        "dispel_resist": 60
       },
       {
        "type": "phys_def_flat",
-       "value": 106,
-       "duration": 840,
+       "value": 110,
+       "duration": 0,
        "target": "self"
       },
       {
        "type": "magic_def_flat",
-       "value": 106,
-       "duration": 840,
+       "value": 111,
+       "duration": 0,
        "target": "self"
       }
      ]
@@ -2159,26 +2476,26 @@
     {
      "damage": 0,
      "mp": 278,
-     "cd": 3,
+     "cd": 0,
      "desc": "物理防御和法术防御增加124点，并将受到伤害的19%转移给炎灵兽，持续7分钟；60%的几率免疫驱散",
      "effects": [
       {
        "type": "damage_transfer",
        "value": 19,
-       "duration": 840,
+       "duration": 0,
        "target": "yanling",
        "dispel_resist": 60
       },
       {
        "type": "phys_def_flat",
-       "value": 124,
-       "duration": 840,
+       "value": 127,
+       "duration": 0,
        "target": "self"
       },
       {
        "type": "magic_def_flat",
-       "value": 124,
-       "duration": 840,
+       "value": 130,
+       "duration": 0,
        "target": "self"
       }
      ]
@@ -2186,26 +2503,26 @@
     {
      "damage": 0,
      "mp": 328,
-     "cd": 3,
+     "cd": 0,
      "desc": "物理防御和法术防御增加142点，并将受到伤害的21%转移给炎灵兽，持续7分钟；60%的几率免疫驱散",
      "effects": [
       {
        "type": "damage_transfer",
        "value": 21,
-       "duration": 840,
+       "duration": 0,
        "target": "yanling",
        "dispel_resist": 60
       },
       {
        "type": "phys_def_flat",
-       "value": 142,
-       "duration": 840,
+       "value": 146,
+       "duration": 0,
        "target": "self"
       },
       {
        "type": "magic_def_flat",
-       "value": 142,
-       "duration": 840,
+       "value": 144,
+       "duration": 0,
        "target": "self"
       }
      ]
@@ -2213,26 +2530,26 @@
     {
      "damage": 0,
      "mp": 381,
-     "cd": 3,
+     "cd": 0,
      "desc": "物理防御和法术防御增加162点，并将受到伤害的23%转移给炎灵兽，持续7分钟；60%的几率免疫驱散",
      "effects": [
       {
        "type": "damage_transfer",
        "value": 23,
-       "duration": 840,
+       "duration": 0,
        "target": "yanling",
        "dispel_resist": 60
       },
       {
        "type": "phys_def_flat",
-       "value": 162,
-       "duration": 840,
+       "value": 167,
+       "duration": 0,
        "target": "self"
       },
       {
        "type": "magic_def_flat",
-       "value": 162,
-       "duration": 840,
+       "value": 167,
+       "duration": 0,
        "target": "self"
       }
      ]
@@ -2240,26 +2557,26 @@
     {
      "damage": 0,
      "mp": 439,
-     "cd": 3,
+     "cd": 0,
      "desc": "物理防御和法术防御增加182点，并将受到伤害的25%转移给炎灵兽，持续7分钟；60%的几率免疫驱散",
      "effects": [
       {
        "type": "damage_transfer",
        "value": 25,
-       "duration": 840,
+       "duration": 0,
        "target": "yanling",
        "dispel_resist": 60
       },
       {
        "type": "phys_def_flat",
-       "value": 182,
-       "duration": 840,
+       "value": 187,
+       "duration": 0,
        "target": "self"
       },
       {
        "type": "magic_def_flat",
-       "value": 182,
-       "duration": 840,
+       "value": 188,
+       "duration": 0,
        "target": "self"
       }
      ]
@@ -2267,26 +2584,26 @@
     {
      "damage": 0,
      "mp": 504,
-     "cd": 3,
+     "cd": 0,
      "desc": "物理防御和法术防御增加204点，并将受到伤害的28%转移给炎灵兽，持续7分钟；60%的几率免疫驱散",
      "effects": [
       {
        "type": "damage_transfer",
-       "value": 28,
-       "duration": 840,
+       "value": 27,
+       "duration": 0,
        "target": "yanling",
        "dispel_resist": 60
       },
       {
        "type": "phys_def_flat",
-       "value": 204,
-       "duration": 840,
+       "value": 208,
+       "duration": 0,
        "target": "self"
       },
       {
        "type": "magic_def_flat",
-       "value": 204,
-       "duration": 840,
+       "value": 212,
+       "duration": 0,
        "target": "self"
       }
      ]
@@ -2294,26 +2611,26 @@
     {
      "damage": 0,
      "mp": 572,
-     "cd": 3,
+     "cd": 0,
      "desc": "物理防御和法术防御增加226点，并将受到伤害的30%转移给炎灵兽，持续7分钟；60%的几率免疫驱散",
      "effects": [
       {
        "type": "damage_transfer",
-       "value": 30,
-       "duration": 840,
+       "value": 29,
+       "duration": 0,
        "target": "yanling",
        "dispel_resist": 60
       },
       {
        "type": "phys_def_flat",
-       "value": 226,
-       "duration": 840,
+       "value": 228,
+       "duration": 0,
        "target": "self"
       },
       {
        "type": "magic_def_flat",
-       "value": 226,
-       "duration": 840,
+       "value": 231,
+       "duration": 0,
        "target": "self"
       }
      ]
@@ -2321,26 +2638,104 @@
     {
      "damage": 0,
      "mp": 647,
-     "cd": 3,
+     "cd": 0,
      "desc": "物理防御和法术防御增加249点，并将受到伤害的32%转移给炎灵兽，持续7分钟；60%的几率免疫驱散",
      "effects": [
       {
        "type": "damage_transfer",
-       "value": 32,
-       "duration": 840,
+       "value": 31,
+       "duration": 0,
        "target": "yanling",
        "dispel_resist": 60
       },
       {
        "type": "phys_def_flat",
-       "value": 249,
-       "duration": 840,
+       "value": 259,
+       "duration": 0,
        "target": "self"
       },
       {
        "type": "magic_def_flat",
-       "value": 249,
-       "duration": 840,
+       "value": 261,
+       "duration": 0,
+       "target": "self"
+      }
+     ]
+    },
+    {
+     "mp": 719,
+     "cd": 0,
+     "desc": "物理防御和法术防御增加 249 点，并将受到伤害的 32%转移给焰鬃兽，持续 5 分钟；60%的几率免疫驱散",
+     "effects": [
+      {
+       "type": "damage_transfer",
+       "value": 31,
+       "duration": 0,
+       "target": "yanling",
+       "dispel_resist": 60
+      },
+      {
+       "type": "phys_def_flat",
+       "value": 278,
+       "duration": 0,
+       "target": "self"
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 284,
+       "duration": 0,
+       "target": "self"
+      }
+     ]
+    },
+    {
+     "mp": 791,
+     "cd": 0,
+     "desc": "物理防御和法术防御增加 249 点，并将受到伤害的 32%转移给焰鬃兽，持续 5 分钟；60%的几率免疫驱散",
+     "effects": [
+      {
+       "type": "damage_transfer",
+       "value": 31,
+       "duration": 0,
+       "target": "yanling",
+       "dispel_resist": 60
+      },
+      {
+       "type": "phys_def_flat",
+       "value": 307,
+       "duration": 0,
+       "target": "self"
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 307,
+       "duration": 0,
+       "target": "self"
+      }
+     ]
+    },
+    {
+     "mp": 863,
+     "cd": 0,
+     "desc": "物理防御和法术防御增加 249 点，并将受到伤害的 32%转移给焰鬃兽，持续 5 分钟；60%的几率免疫驱散",
+     "effects": [
+      {
+       "type": "damage_transfer",
+       "value": 31,
+       "duration": 0,
+       "target": "yanling",
+       "dispel_resist": 60
+      },
+      {
+       "type": "phys_def_flat",
+       "value": 340,
+       "duration": 0,
+       "target": "self"
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 337,
+       "duration": 0,
        "target": "self"
       }
      ]
@@ -2407,6 +2802,21 @@
      "level": 94,
      "money": 468000,
      "exp": 337200
+    },
+    {
+     "level": 101,
+     "money": 609000,
+     "exp": 377138
+    },
+    {
+     "level": 108,
+     "money": 697200,
+     "exp": 590638
+    },
+    {
+     "level": 115,
+     "money": 829500,
+     "exp": 1171638
     }
    ],
    "learn_level": 45,
@@ -2438,8 +2848,8 @@
      "effects": [
       {
        "type": "reflect",
-       "value": 406,
-       "duration": 30,
+       "value": 299,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2452,8 +2862,8 @@
      "effects": [
       {
        "type": "reflect",
-       "value": 457,
-       "duration": 30,
+       "value": 355,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2466,8 +2876,8 @@
      "effects": [
       {
        "type": "reflect",
-       "value": 509,
-       "duration": 30,
+       "value": 404,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2480,8 +2890,8 @@
      "effects": [
       {
        "type": "reflect",
-       "value": 558,
-       "duration": 30,
+       "value": 455,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2494,8 +2904,8 @@
      "effects": [
       {
        "type": "reflect",
-       "value": 605,
-       "duration": 30,
+       "value": 528,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2559,7 +2969,7 @@
     {
      "damage": 0,
      "mp": 364,
-     "cd": 240,
+     "cd": 180,
      "desc": "使两个宠物的致命一击概率提高65%，受到的伤害减少30%，持续12秒",
      "effects": [
       {
@@ -2570,7 +2980,7 @@
       {
        "type": "ally_dmg_reduce",
        "value": 30,
-       "duration": 24,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2578,7 +2988,7 @@
     {
      "damage": 0,
      "mp": 445,
-     "cd": 240,
+     "cd": 180,
      "desc": "使两个宠物的致命一击概率提高75%，受到的伤害减少36%，持续12秒",
      "effects": [
       {
@@ -2589,7 +2999,7 @@
       {
        "type": "ally_dmg_reduce",
        "value": 36,
-       "duration": 24,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2597,7 +3007,7 @@
     {
      "damage": 0,
      "mp": 534,
-     "cd": 240,
+     "cd": 180,
      "desc": "使两个宠物的致命一击概率提高85%，受到的伤害减少43%，持续12秒",
      "effects": [
       {
@@ -2608,7 +3018,7 @@
       {
        "type": "ally_dmg_reduce",
        "value": 43,
-       "duration": 24,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2616,7 +3026,7 @@
     {
      "damage": 0,
      "mp": 635,
-     "cd": 240,
+     "cd": 180,
      "desc": "使两个宠物的致命一击概率提高95%，受到的伤害减少50%，持续12秒",
      "effects": [
       {
@@ -2627,7 +3037,7 @@
       {
        "type": "ally_dmg_reduce",
        "value": 50,
-       "duration": 24,
+       "duration": 12,
        "target": "pets"
       }
      ]
@@ -2684,14 +3094,14 @@
    "type": "active",
    "skill_type": "control",
    "target_rule": "single",
-   "max_level": 5,
+   "max_level": 7,
    "icon": "static/icons/skills/darkwitch_014.gif",
    "desc": "暗中施毒，使敌攻势化于无形",
    "levels": [
     {
      "damage": 0,
      "mp": 69,
-     "cd": 3,
+     "cd": 15,
      "desc": "使目标的基础物理攻击力和基础法术攻击力减低10%，持续1分钟",
      "effects": [
       {
@@ -2704,7 +3114,7 @@
     {
      "damage": 0,
      "mp": 125,
-     "cd": 3,
+     "cd": 15,
      "desc": "使目标的基础物理攻击力和基础法术攻击力减低12%，持续1分钟",
      "effects": [
       {
@@ -2717,7 +3127,7 @@
     {
      "damage": 0,
      "mp": 197,
-     "cd": 3,
+     "cd": 15,
      "desc": "使目标的基础物理攻击力和基础法术攻击力减低15%，持续1分钟",
      "effects": [
       {
@@ -2730,7 +3140,7 @@
     {
      "damage": 0,
      "mp": 285,
-     "cd": 3,
+     "cd": 15,
      "desc": "使目标的基础物理攻击力和基础法术攻击力减低17%，持续1分钟",
      "effects": [
       {
@@ -2743,13 +3153,47 @@
     {
      "damage": 0,
      "mp": 395,
-     "cd": 3,
+     "cd": 15,
      "desc": "使目标的基础物理攻击力和基础法术攻击力减低20%，持续1分钟",
      "effects": [
       {
        "type": "atk_down",
        "value": 20,
        "duration": 120
+      }
+     ]
+    },
+    {
+     "mp": 532,
+     "cd": 15,
+     "desc": "使目标的物理攻击力和法术攻击力减低 514 点，持续 1 分钟",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": -514,
+       "duration": 60
+      },
+      {
+       "type": "magic_atk_flat",
+       "value": -507,
+       "duration": 60
+      }
+     ]
+    },
+    {
+     "mp": 674,
+     "cd": 15,
+     "desc": "使目标的物理攻击力和法术攻击力减低 616 点，持续 1 分钟",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": -616,
+       "duration": 60
+      },
+      {
+       "type": "magic_atk_flat",
+       "value": -604,
+       "duration": 60
       }
      ]
     }
@@ -2779,6 +3223,16 @@
      "level": 95,
      "money": 480000,
      "exp": 345600
+    },
+    {
+     "level": 106,
+     "money": 667500,
+     "exp": 492138
+    },
+    {
+     "level": 117,
+     "money": 875400,
+     "exp": 1405138
     }
    ],
    "learn_level": 23,
@@ -2804,111 +3258,189 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "all",
-   "max_level": 8,
+   "max_level": 14,
    "icon": "static/icons/skills/darkwitch_015.gif",
    "desc": "毒雾弥漫，中者无不深受其害",
    "levels": [
     {
      "damage": 18,
      "mp": 173,
-     "cd": 18,
+     "cd": 4,
      "desc": "使目标区域内的敌人中毒，先造成约18点暗伤害，再在4秒内造成约240点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 30,
-       "duration": 8
+       "value": 116,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 48,
      "mp": 202,
-     "cd": 18,
+     "cd": 4,
      "desc": "使目标区域内的敌人中毒，先造成约48点暗伤害，再在4秒内造成约352点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 44,
-       "duration": 8
+       "value": 138,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 72,
      "mp": 235,
-     "cd": 18,
+     "cd": 4,
      "desc": "使目标区域内的敌人中毒，先造成约72点暗伤害，再在4秒内造成约392点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 49,
-       "duration": 8
+       "value": 156,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 95,
      "mp": 270,
-     "cd": 18,
+     "cd": 4,
      "desc": "使目标区域内的敌人中毒，先造成约95点暗伤害，再在4秒内造成约432点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 54,
-       "duration": 8
+       "value": 170,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 120,
      "mp": 308,
-     "cd": 18,
+     "cd": 4,
      "desc": "使目标区域内的敌人中毒，先造成约120点暗伤害，再在4秒内造成约464点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 58,
-       "duration": 8
+       "value": 190,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 146,
      "mp": 349,
-     "cd": 18,
+     "cd": 4,
      "desc": "使目标区域内的敌人中毒，先造成约146点暗伤害，再在4秒内造成约496点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 62,
-       "duration": 8
+       "value": 212,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 172,
      "mp": 392,
-     "cd": 18,
+     "cd": 4,
      "desc": "使目标区域内的敌人中毒，先造成约172点暗伤害，再在4秒内造成约536点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 67,
-       "duration": 8
+       "value": 232,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 199,
      "mp": 438,
-     "cd": 18,
+     "cd": 4,
      "desc": "使目标区域内的敌人中毒，先造成约199点暗伤害，再在4秒内造成约576点伤害",
      "effects": [
       {
        "type": "poison",
-       "value": 72,
-       "duration": 8
+       "value": 258,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 223,
+     "mp": 489,
+     "cd": 4,
+     "desc": "使目标区域内的敌人中毒，先造成约 223 点暗伤害，再持续 6 秒造成约 1680 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 280,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 249,
+     "mp": 543,
+     "cd": 4,
+     "desc": "使目标区域内的敌人中毒，先造成约 249 点暗伤害，再持续 6 秒造成约 1788 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 298,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 274,
+     "mp": 596,
+     "cd": 4,
+     "desc": "使目标区域内的敌人中毒，先造成约 274 点暗伤害，再持续 6 秒造成约 1932 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 322,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 300,
+     "mp": 649,
+     "cd": 4,
+     "desc": "使目标区域内的敌人中毒，先造成约 300 点暗伤害，再持续 6 秒造成约 2112 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 352,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 325,
+     "mp": 702,
+     "cd": 4,
+     "desc": "使目标区域内的敌人中毒，先造成约 325 点暗伤害，再持续 6 秒造成约 2232 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 372,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 351,
+     "mp": 755,
+     "cd": 4,
+     "desc": "使目标区域内的敌人中毒，先造成约 351 点暗伤害，再持续 6 秒造成约 2316 点总伤害",
+     "effects": [
+      {
+       "type": "poison",
+       "value": 386,
+       "duration": 6
       }
      ]
     }
@@ -2953,6 +3485,36 @@
      "level": 83,
      "money": 343000,
      "exp": 247200
+    },
+    {
+     "level": 89,
+     "money": 410000,
+     "exp": 295200
+    },
+    {
+     "level": 95,
+     "money": 480000,
+     "exp": 345600
+    },
+    {
+     "level": 101,
+     "money": 609000,
+     "exp": 377138
+    },
+    {
+     "level": 107,
+     "money": 681900,
+     "exp": 537638
+    },
+    {
+     "level": 113,
+     "money": 787200,
+     "exp": 968138
+    },
+    {
+     "level": 119,
+     "money": 924900,
+     "exp": 1668638
     }
    ],
    "learn_level": 41,
@@ -2986,48 +3548,48 @@
     {
      "damage": 0,
      "mp": 208,
-     "cd": 120,
+     "cd": 60,
      "desc": "用法力禁锢敌人单体6秒，该敌人在期间不会受到任何伤害和状态影响，但也不能采取任何行动",
      "effects": [
       {
        "type": "no_action",
-       "duration": 12
+       "duration": 6
       },
       {
        "type": "invuln",
-       "duration": 12
+       "duration": 6
       }
      ]
     },
     {
      "damage": 0,
      "mp": 351,
-     "cd": 120,
+     "cd": 60,
      "desc": "用法力禁锢敌人单体8秒，该敌人在期间不会受到任何伤害和状态影响，但也不能采取任何行动",
      "effects": [
       {
        "type": "no_action",
-       "duration": 16
+       "duration": 8
       },
       {
        "type": "invuln",
-       "duration": 16
+       "duration": 8
       }
      ]
     },
     {
      "damage": 0,
      "mp": 546,
-     "cd": 120,
+     "cd": 60,
      "desc": "用法力禁锢敌人单体10秒，该敌人在期间不会受到任何伤害和状态影响，但也不能采取任何行动",
      "effects": [
       {
        "type": "no_action",
-       "duration": 20
+       "duration": 10
       },
       {
        "type": "invuln",
-       "duration": 20
+       "duration": 10
       }
      ]
     }
@@ -3085,36 +3647,36 @@
     {
      "damage": 0,
      "mp": 94,
-     "cd": 90,
+     "cd": 180,
      "desc": "使指定区域内的多个敌人无法移动，持续5.5秒",
      "effects": [
       {
        "type": "root",
-       "duration": 11
+       "duration": 4
       }
      ]
     },
     {
      "damage": 0,
      "mp": 145,
-     "cd": 90,
+     "cd": 180,
      "desc": "使指定区域内的多个敌人无法移动，持续7秒",
      "effects": [
       {
        "type": "root",
-       "duration": 14
+       "duration": 5
       }
      ]
     },
     {
      "damage": 0,
      "mp": 212,
-     "cd": 90,
+     "cd": 180,
      "desc": "使指定区域内的多个敌人无法移动，持续8秒",
      "effects": [
       {
        "type": "root",
-       "duration": 16
+       "duration": 6
       }
      ]
     }
@@ -3172,13 +3734,13 @@
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": -91,
-       "duration": 10
+       "value": -269,
+       "duration": 15
       },
       {
        "type": "magic_def_flat",
-       "value": -91,
-       "duration": 10
+       "value": -267,
+       "duration": 15
       },
       {
        "type": "atk_flat",
@@ -3200,13 +3762,13 @@
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": -113,
-       "duration": 10
+       "value": -357,
+       "duration": 15
       },
       {
        "type": "magic_def_flat",
-       "value": -113,
-       "duration": 10
+       "value": -366,
+       "duration": 15
       },
       {
        "type": "atk_flat",
@@ -3228,13 +3790,13 @@
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": -137,
-       "duration": 10
+       "value": -472,
+       "duration": 15
       },
       {
        "type": "magic_def_flat",
-       "value": -137,
-       "duration": 10
+       "value": -462,
+       "duration": 15
       },
       {
        "type": "atk_flat",
@@ -3256,13 +3818,13 @@
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": -161,
-       "duration": 10
+       "value": -571,
+       "duration": 15
       },
       {
        "type": "magic_def_flat",
-       "value": -161,
-       "duration": 10
+       "value": -588,
+       "duration": 15
       },
       {
        "type": "atk_flat",
@@ -3284,13 +3846,13 @@
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": -186,
-       "duration": 10
+       "value": -699,
+       "duration": 15
       },
       {
        "type": "magic_def_flat",
-       "value": -186,
-       "duration": 10
+       "value": -677,
+       "duration": 15
       },
       {
        "type": "atk_flat",
@@ -3312,13 +3874,13 @@
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": -212,
-       "duration": 10
+       "value": -839,
+       "duration": 15
       },
       {
        "type": "magic_def_flat",
-       "value": -212,
-       "duration": 10
+       "value": -838,
+       "duration": 15
       },
       {
        "type": "atk_flat",
@@ -3340,13 +3902,13 @@
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": -240,
-       "duration": 10
+       "value": -962,
+       "duration": 15
       },
       {
        "type": "magic_def_flat",
-       "value": -240,
-       "duration": 10
+       "value": -945,
+       "duration": 15
       },
       {
        "type": "atk_flat",
@@ -3368,13 +3930,13 @@
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": -268,
-       "duration": 10
+       "value": -1053,
+       "duration": 15
       },
       {
        "type": "magic_def_flat",
-       "value": -268,
-       "duration": 10
+       "value": -1041,
+       "duration": 15
       },
       {
        "type": "atk_flat",

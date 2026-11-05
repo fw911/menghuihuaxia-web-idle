@@ -9,7 +9,7 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 24,
+   "max_level": 26,
    "cd": 1,
    "icon": "static/icons/skills/warrior_001.gif",
    "desc": "挥刀疾斩，凛冽刃光随势而落",
@@ -17,146 +17,158 @@
     {
      "damage": 15,
      "mp": 3,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 15 点物理伤害"
     },
     {
      "damage": 39,
      "mp": 7,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 39 点物理伤害"
     },
     {
      "damage": 59,
      "mp": 12,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 59 点物理伤害"
     },
     {
      "damage": 81,
      "mp": 17,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 81 点物理伤害"
     },
     {
      "damage": 100,
      "mp": 23,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 100 点物理伤害"
     },
     {
      "damage": 127,
      "mp": 29,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 127 点物理伤害"
     },
     {
      "damage": 147,
      "mp": 35,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 147 点物理伤害"
     },
     {
      "damage": 174,
      "mp": 40,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 174 点物理伤害"
     },
     {
      "damage": 206,
      "mp": 45,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 206 点物理伤害"
     },
     {
      "damage": 229,
      "mp": 51,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 229 点物理伤害"
     },
     {
      "damage": 266,
      "mp": 58,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 266 点物理伤害"
     },
     {
      "damage": 304,
      "mp": 66,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 304 点物理伤害"
     },
     {
      "damage": 342,
      "mp": 74,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 342 点物理伤害"
     },
     {
      "damage": 389,
      "mp": 84,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 389 点物理伤害"
     },
     {
      "damage": 428,
      "mp": 92,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 428 点物理伤害"
     },
     {
      "damage": 483,
      "mp": 102,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 483 点物理伤害"
     },
     {
      "damage": 532,
      "mp": 112,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 532 点物理伤害"
     },
     {
      "damage": 579,
      "mp": 123,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 579 点物理伤害"
     },
     {
      "damage": 653,
      "mp": 134,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 653 点物理伤害"
     },
     {
      "damage": 703,
      "mp": 146,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 703 点物理伤害"
     },
     {
      "damage": 772,
      "mp": 159,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 772 点物理伤害"
     },
     {
      "damage": 847,
      "mp": 172,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 847 点物理伤害"
     },
     {
      "damage": 926,
      "mp": 190,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 926 点物理伤害"
     },
     {
      "damage": 986,
      "mp": 208,
-     "cd": 1,
+     "cd": 0,
      "desc": "对单体造成约 986 点物理伤害"
+    },
+    {
+     "damage": 1049,
+     "mp": 226,
+     "cd": 0,
+     "desc": "对单体造成约 1049 点物理伤害"
+    },
+    {
+     "damage": 1152,
+     "mp": 244,
+     "cd": 0,
+     "desc": "对单体造成约 1152 点物理伤害"
     }
    ],
    "requirements": [
@@ -279,6 +291,16 @@
      "level": 107,
      "money": 681900,
      "exp": 537638
+    },
+    {
+     "level": 112,
+     "money": 767400,
+     "exp": 877638
+    },
+    {
+     "level": 117,
+     "money": 875400,
+     "exp": 1405138
     }
    ],
    "learn_level": 0,
@@ -298,306 +320,345 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 23,
+   "max_level": 26,
    "icon": "static/icons/skills/warrior_002.gif",
    "desc": "刀芒裂空，重创敌身并使伤口血流不止",
    "levels": [
     {
      "damage": 18,
      "mp": 6,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 18 点物理伤害；并使敌人持续流血，在6秒内受到约48点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 4,
-       "duration": 12
+       "value": 8,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 30,
      "mp": 12,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 30 点物理伤害；并使敌人持续流血，在6秒内受到约72点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 6,
-       "duration": 12
+       "value": 14,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 41,
      "mp": 18,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 41 点物理伤害；并使敌人持续流血，在6秒内受到约96点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 8,
-       "duration": 12
+       "value": 20,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 54,
      "mp": 24,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 54 点物理伤害；并使敌人持续流血，在6秒内受到约120点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 10,
-       "duration": 12
+       "value": 30,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 69,
      "mp": 32,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 69 点物理伤害；并使敌人持续流血，在6秒内受到约144点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 12,
-       "duration": 12
+       "value": 34,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 83,
      "mp": 39,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 83 点物理伤害；并使敌人持续流血，在6秒内受到约180点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 15,
-       "duration": 12
+       "value": 40,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 98,
      "mp": 45,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 98 点物理伤害；并使敌人持续流血，在6秒内受到约216点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 18,
-       "duration": 12
+       "value": 48,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 112,
      "mp": 51,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 112 点物理伤害；并使敌人持续流血，在6秒内受到约240点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 20,
-       "duration": 12
+       "value": 58,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 127,
      "mp": 58,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 127 点物理伤害；并使敌人持续流血，在6秒内受到约264点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 22,
-       "duration": 12
+       "value": 66,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 143,
      "mp": 64,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 143 点物理伤害；并使敌人持续流血，在6秒内受到约312点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 26,
-       "duration": 12
+       "value": 74,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 167,
      "mp": 73,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 167 点物理伤害；并使敌人持续流血，在6秒内受到约348点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 29,
-       "duration": 12
+       "value": 86,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 195,
      "mp": 84,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 195 点物理伤害；并使敌人持续流血，在6秒内受到约384点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 32,
-       "duration": 12
+       "value": 98,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 216,
      "mp": 94,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 216 点物理伤害；并使敌人持续流血，在6秒内受到约432点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 36,
-       "duration": 12
+       "value": 110,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 240,
      "mp": 104,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 240 点物理伤害；并使敌人持续流血，在6秒内受到约480点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 40,
-       "duration": 12
+       "value": 120,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 267,
      "mp": 115,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 267 点物理伤害；并使敌人持续流血，在6秒内受到约528点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 44,
-       "duration": 12
+       "value": 138,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 298,
      "mp": 127,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 298 点物理伤害；并使敌人持续流血，在6秒内受到约576点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 48,
-       "duration": 12
+       "value": 148,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 330,
      "mp": 139,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 330 点物理伤害；并使敌人持续流血，在6秒内受到约624点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 52,
-       "duration": 12
+       "value": 166,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 365,
      "mp": 153,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 365 点物理伤害；并使敌人持续流血，在6秒内受到约672点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 56,
-       "duration": 12
+       "value": 184,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 396,
      "mp": 167,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 396 点物理伤害；并使敌人持续流血，在6秒内受到约720点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 60,
-       "duration": 12
+       "value": 202,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 437,
      "mp": 182,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 437 点物理伤害；并使敌人持续流血，在6秒内受到约780点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 65,
-       "duration": 12
+       "value": 220,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 471,
      "mp": 197,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 471 点物理伤害；并使敌人持续流血，在6秒内受到约840点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 70,
-       "duration": 12
+       "value": 242,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 519,
      "mp": 214,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 519 点物理伤害；并使敌人持续流血，在6秒内受到约1512点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 126,
-       "duration": 12
+       "value": 264,
+       "duration": 6
       }
      ]
     },
     {
      "damage": 553,
      "mp": 231,
-     "cd": 2,
+     "cd": 3,
      "desc": "对单体造成约 553 点物理伤害；并使敌人持续流血，在6秒内受到约1512点伤害",
      "effects": [
       {
        "type": "bleed",
-       "value": 126,
-       "duration": 12
+       "value": 278,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 605,
+     "mp": 248,
+     "cd": 3,
+     "desc": "对单体造成约 605 点物理伤害；并使敌人持续流血，持续 6 秒造成约 1800 点总伤害",
+     "effects": [
+      {
+       "type": "bleed",
+       "value": 300,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 648,
+     "mp": 265,
+     "cd": 3,
+     "desc": "对单体造成约 648 点物理伤害；并使敌人持续流血，持续 6 秒造成约 1992 点总伤害",
+     "effects": [
+      {
+       "type": "bleed",
+       "value": 332,
+       "duration": 6
+      }
+     ]
+    },
+    {
+     "damage": 720,
+     "mp": 282,
+     "cd": 3,
+     "desc": "对单体造成约 720 点物理伤害；并使敌人持续流血，持续 6 秒造成约 2112 点总伤害",
+     "effects": [
+      {
+       "type": "bleed",
+       "value": 352,
+       "duration": 6
       }
      ]
     }
@@ -717,6 +778,21 @@
      "level": 104,
      "money": 641400,
      "exp": 423638
+    },
+    {
+     "level": 109,
+     "money": 713400,
+     "exp": 651138
+    },
+    {
+     "level": 114,
+     "money": 807900,
+     "exp": 1066138
+    },
+    {
+     "level": 119,
+     "money": 924900,
+     "exp": 1668638
     }
    ],
    "learn_level": 3,
@@ -744,247 +820,247 @@
     {
      "damage": 45,
      "mp": 17,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 45 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 5
       }
      ]
     },
     {
      "damage": 60,
      "mp": 23,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 60 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 5
       }
      ]
     },
     {
      "damage": 77,
      "mp": 31,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 77 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 5
       }
      ]
     },
     {
      "damage": 91,
      "mp": 37,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 91 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 5
       }
      ]
     },
     {
      "damage": 107,
      "mp": 43,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 107 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 8
+       "duration": 5
       }
      ]
     },
     {
      "damage": 129,
      "mp": 49,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 129 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 149,
      "mp": 58,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 149 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 177,
      "mp": 66,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 177 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 202,
      "mp": 76,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 202 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 227,
      "mp": 85,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 227 点物理伤害；移动速度减低 40%",
      "effects": [
       {
        "type": "speed_down",
        "value": 40,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 258,
      "mp": 95,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 258 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 286,
      "mp": 107,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 286 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 318,
      "mp": 118,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 318 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 359,
      "mp": 130,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 359 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 394,
      "mp": 142,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 394 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 10
+       "duration": 6
       }
      ]
     },
     {
      "damage": 432,
      "mp": 156,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 432 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 7
       }
      ]
     },
     {
      "damage": 476,
      "mp": 170,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 476 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 7
       }
      ]
     },
     {
      "damage": 531,
      "mp": 185,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 531 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 7
       }
      ]
     },
     {
      "damage": 570,
      "mp": 201,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 570 点物理伤害；移动速度减低 60%",
      "effects": [
       {
        "type": "speed_down",
        "value": 60,
-       "duration": 12
+       "duration": 7
       }
      ]
     }
@@ -1104,28 +1180,15 @@
    "type": "active",
    "skill_type": "buff",
    "target_rule": "self",
-   "max_level": 18,
+   "max_level": 22,
    "icon": "static/icons/skills/warrior_004.gif",
    "desc": "仰天怒啸，体内潜劲奔涌，攻击力随之大涨",
    "levels": [
     {
      "damage": 0,
      "mp": 45,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 13 点",
-     "effects": [
-      {
-       "type": "atk_flat",
-       "value": 13,
-       "duration": 0
-      }
-     ]
-    },
-    {
-     "damage": 0,
-     "mp": 57,
-     "cd": 3,
-     "desc": "攻击力增加 16 点",
      "effects": [
       {
        "type": "atk_flat",
@@ -1136,13 +1199,26 @@
     },
     {
      "damage": 0,
+     "mp": 57,
+     "cd": 0,
+     "desc": "攻击力增加 16 点",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": 19,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "damage": 0,
      "mp": 67,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 20 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 20,
+       "value": 22,
        "duration": 0
       }
      ]
@@ -1150,21 +1226,8 @@
     {
      "damage": 0,
      "mp": 77,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 23 点",
-     "effects": [
-      {
-       "type": "atk_flat",
-       "value": 23,
-       "duration": 0
-      }
-     ]
-    },
-    {
-     "damage": 0,
-     "mp": 87,
-     "cd": 3,
-     "desc": "攻击力增加 26 点",
      "effects": [
       {
        "type": "atk_flat",
@@ -1175,9 +1238,9 @@
     },
     {
      "damage": 0,
-     "mp": 100,
-     "cd": 3,
-     "desc": "攻击力增加 29 点",
+     "mp": 87,
+     "cd": 0,
+     "desc": "攻击力增加 26 点",
      "effects": [
       {
        "type": "atk_flat",
@@ -1188,9 +1251,9 @@
     },
     {
      "damage": 0,
-     "mp": 114,
-     "cd": 3,
-     "desc": "攻击力增加 33 点",
+     "mp": 100,
+     "cd": 0,
+     "desc": "攻击力增加 29 点",
      "effects": [
       {
        "type": "atk_flat",
@@ -1201,9 +1264,9 @@
     },
     {
      "damage": 0,
-     "mp": 130,
-     "cd": 3,
-     "desc": "攻击力增加 38 点",
+     "mp": 114,
+     "cd": 0,
+     "desc": "攻击力增加 33 点",
      "effects": [
       {
        "type": "atk_flat",
@@ -1214,22 +1277,22 @@
     },
     {
      "damage": 0,
-     "mp": 146,
-     "cd": 3,
-     "desc": "攻击力增加 42 点",
+     "mp": 130,
+     "cd": 0,
+     "desc": "攻击力增加 38 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 42,
+       "value": 43,
        "duration": 0
       }
      ]
     },
     {
      "damage": 0,
-     "mp": 163,
-     "cd": 3,
-     "desc": "攻击力增加 47 点",
+     "mp": 146,
+     "cd": 0,
+     "desc": "攻击力增加 42 点",
      "effects": [
       {
        "type": "atk_flat",
@@ -1240,13 +1303,26 @@
     },
     {
      "damage": 0,
+     "mp": 163,
+     "cd": 0,
+     "desc": "攻击力增加 47 点",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": 53,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "damage": 0,
      "mp": 180,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 52 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 52,
+       "value": 58,
        "duration": 0
       }
      ]
@@ -1254,12 +1330,12 @@
     {
      "damage": 0,
      "mp": 201,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 57 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 57,
+       "value": 63,
        "duration": 0
       }
      ]
@@ -1267,12 +1343,12 @@
     {
      "damage": 0,
      "mp": 220,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 62 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 62,
+       "value": 71,
        "duration": 0
       }
      ]
@@ -1280,12 +1356,12 @@
     {
      "damage": 0,
      "mp": 242,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 67 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 67,
+       "value": 74,
        "duration": 0
       }
      ]
@@ -1293,12 +1369,12 @@
     {
      "damage": 0,
      "mp": 265,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 72 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 72,
+       "value": 81,
        "duration": 0
       }
      ]
@@ -1306,12 +1382,12 @@
     {
      "damage": 0,
      "mp": 287,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 78 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 78,
+       "value": 89,
        "duration": 0
       }
      ]
@@ -1319,12 +1395,12 @@
     {
      "damage": 0,
      "mp": 312,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 83 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 83,
+       "value": 96,
        "duration": 0
       }
      ]
@@ -1332,12 +1408,60 @@
     {
      "damage": 0,
      "mp": 340,
-     "cd": 3,
+     "cd": 0,
      "desc": "攻击力增加 89 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 89,
+       "value": 102,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 370,
+     "cd": 0,
+     "desc": "攻击力增加 108 点",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": 108,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 400,
+     "cd": 0,
+     "desc": "攻击力增加 117 点",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": 117,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 430,
+     "cd": 0,
+     "desc": "攻击力增加 126 点",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": 126,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 460,
+     "cd": 0,
+     "desc": "攻击力增加 133 点",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": 133,
        "duration": 0
       }
      ]
@@ -1433,6 +1557,26 @@
      "level": 96,
      "money": 491000,
      "exp": 352800
+    },
+    {
+     "level": 101,
+     "money": 609000,
+     "exp": 377138
+    },
+    {
+     "level": 106,
+     "money": 667500,
+     "exp": 492138
+    },
+    {
+     "level": 111,
+     "money": 748500,
+     "exp": 794638
+    },
+    {
+     "level": 116,
+     "money": 852000,
+     "exp": 1284638
     }
    ],
    "learn_level": 16,
@@ -1459,7 +1603,7 @@
     {
      "damage": 0,
      "mp": 36,
-     "cd": 24,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 3 秒",
      "effects": [
       {
@@ -1472,7 +1616,7 @@
     {
      "damage": 0,
      "mp": 48,
-     "cd": 24,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 4 秒",
      "effects": [
       {
@@ -1485,7 +1629,7 @@
     {
      "damage": 0,
      "mp": 61,
-     "cd": 24,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 4 秒",
      "effects": [
       {
@@ -1498,7 +1642,7 @@
     {
      "damage": 0,
      "mp": 76,
-     "cd": 24,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 4 秒",
      "effects": [
       {
@@ -1511,7 +1655,7 @@
     {
      "damage": 0,
      "mp": 92,
-     "cd": 24,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 5 秒",
      "effects": [
       {
@@ -1524,7 +1668,7 @@
     {
      "damage": 0,
      "mp": 109,
-     "cd": 24,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 6 秒",
      "effects": [
       {
@@ -1537,7 +1681,7 @@
     {
      "damage": 0,
      "mp": 129,
-     "cd": 24,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 6 秒",
      "effects": [
       {
@@ -1601,87 +1745,93 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "all",
-   "max_level": 13,
+   "max_level": 14,
    "icon": "static/icons/skills/warrior_006.gif",
    "desc": "挥刃横扫四方，当者披靡",
    "levels": [
     {
      "damage": 195,
      "mp": 68,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 195 点物理伤害"
     },
     {
      "damage": 230,
      "mp": 81,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 230 点物理伤害"
     },
     {
      "damage": 276,
      "mp": 94,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 276 点物理伤害"
     },
     {
      "damage": 311,
      "mp": 107,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 311 点物理伤害"
     },
     {
      "damage": 363,
      "mp": 122,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 363 点物理伤害"
     },
     {
      "damage": 413,
      "mp": 137,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 413 点物理伤害"
     },
     {
      "damage": 461,
      "mp": 155,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 461 点物理伤害"
     },
     {
      "damage": 512,
      "mp": 172,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 512 点物理伤害"
     },
     {
      "damage": 569,
      "mp": 191,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 569 点物理伤害"
     },
     {
      "damage": 641,
      "mp": 211,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 641 点物理伤害"
     },
     {
      "damage": 709,
      "mp": 232,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 709 点物理伤害"
     },
     {
      "damage": 774,
      "mp": 257,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 774 点物理伤害"
     },
     {
      "damage": 836,
      "mp": 282,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 836 点物理伤害"
+    },
+    {
+     "damage": 937,
+     "mp": 307,
+     "cd": 0,
+     "desc": "对全体敌人造成约 937 点物理伤害"
     }
    ],
    "requirements": [
@@ -1749,6 +1899,11 @@
      "level": 109,
      "money": 713400,
      "exp": 651138
+    },
+    {
+     "level": 115,
+     "money": 829500,
+     "exp": 1171638
     }
    ],
    "learn_level": 37,
@@ -1776,7 +1931,7 @@
     {
      "damage": 0,
      "mp": 310,
-     "cd": 50,
+     "cd": 30,
      "desc": "使敌人定身 2 秒"
     }
    ],
@@ -1817,7 +1972,7 @@
     {
      "damage": 915,
      "mp": 350,
-     "cd": 20,
+     "cd": 10,
      "desc": "对单体造成约 915 点物理伤害；并使敌人持续流血，在3秒内受到约2748点伤害"
     }
    ],
@@ -1858,137 +2013,161 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 10,
+   "max_level": 12,
    "icon": "static/icons/skills/warrior_009.gif",
    "desc": "身如疾风突进，近身猛斩并使敌人晕眩",
    "levels": [
     {
      "damage": 111,
      "mp": 39,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 111 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 148,
      "mp": 51,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 148 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 195,
      "mp": 64,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 195 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 238,
      "mp": 79,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 238 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 302,
      "mp": 95,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 302 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 359,
      "mp": 113,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 359 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 412,
      "mp": 132,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 412 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 484,
      "mp": 153,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 484 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 565,
      "mp": 175,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 565 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
       }
      ]
     },
     {
      "damage": 650,
      "mp": 201,
-     "cd": 17,
+     "cd": 10,
      "desc": "对单体造成约 650 点物理伤害；使敌人定身 2 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 4
+       "duration": 2
+      }
+     ]
+    },
+    {
+     "damage": 750,
+     "mp": 229,
+     "cd": 10,
+     "desc": "对单体造成约 750 点物理伤害；使敌人定身 2 秒",
+     "effects": [
+      {
+       "type": "stun",
+       "duration": 2
+      }
+     ]
+    },
+    {
+     "damage": 852,
+     "mp": 259,
+     "cd": 10,
+     "desc": "对单体造成约 852 点物理伤害；使敌人定身 2 秒",
+     "effects": [
+      {
+       "type": "stun",
+       "duration": 2
       }
      ]
     }
@@ -2043,6 +2222,16 @@
      "level": 95,
      "money": 480000,
      "exp": 345600
+    },
+    {
+     "level": 104,
+     "money": 641400,
+     "exp": 423638
+    },
+    {
+     "level": 113,
+     "money": 787200,
+     "exp": 968138
     }
    ],
    "learn_level": 23,
@@ -2070,104 +2259,104 @@
     {
      "damage": 170,
      "mp": 88,
-     "cd": 40,
+     "cd": 30,
      "desc": "对单体造成约 170 点物理伤害；使敌人定身 3 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 6
+       "duration": 2
       }
      ]
     },
     {
      "damage": 206,
      "mp": 104,
-     "cd": 40,
+     "cd": 30,
      "desc": "对单体造成约 206 点物理伤害；使敌人定身 3 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 6
+       "duration": 2
       }
      ]
     },
     {
      "damage": 246,
      "mp": 122,
-     "cd": 40,
+     "cd": 30,
      "desc": "对单体造成约 246 点物理伤害；使敌人定身 3 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 6
+       "duration": 2
       }
      ]
     },
     {
      "damage": 281,
      "mp": 140,
-     "cd": 40,
+     "cd": 30,
      "desc": "对单体造成约 281 点物理伤害；使敌人定身 3 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 6
+       "duration": 3
       }
      ]
     },
     {
      "damage": 323,
      "mp": 160,
-     "cd": 40,
+     "cd": 30,
      "desc": "对单体造成约 323 点物理伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 3
       }
      ]
     },
     {
      "damage": 371,
      "mp": 182,
-     "cd": 40,
+     "cd": 30,
      "desc": "对单体造成约 371 点物理伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 431,
      "mp": 205,
-     "cd": 40,
+     "cd": 30,
      "desc": "对单体造成约 431 点物理伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 4
       }
      ]
     },
     {
      "damage": 485,
      "mp": 230,
-     "cd": 40,
+     "cd": 30,
      "desc": "对单体造成约 485 点物理伤害；使敌人定身 4 秒",
      "effects": [
       {
        "type": "stun",
        "value": 0,
-       "duration": 8
+       "duration": 4
       }
      ]
     }
@@ -2232,57 +2421,63 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 8,
+   "max_level": 9,
    "icon": "static/icons/skills/warrior_011.gif",
    "desc": "东黎族祖传高深武技，一击可定生死",
    "levels": [
     {
      "damage": 243,
      "mp": 107,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 243 点物理伤害"
     },
     {
      "damage": 299,
      "mp": 126,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 299 点物理伤害"
     },
     {
      "damage": 345,
      "mp": 149,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 345 点物理伤害"
     },
     {
      "damage": 405,
      "mp": 173,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 405 点物理伤害"
     },
     {
      "damage": 472,
      "mp": 199,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 472 点物理伤害"
     },
     {
      "damage": 548,
      "mp": 226,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 548 点物理伤害"
     },
     {
      "damage": 620,
      "mp": 256,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 620 点物理伤害"
     },
     {
      "damage": 697,
      "mp": 286,
-     "cd": 12,
+     "cd": 6,
      "desc": "对单体造成约 697 点物理伤害"
+    },
+    {
+     "damage": 791,
+     "mp": 316,
+     "cd": 6,
+     "desc": "对单体造成约 791 点物理伤害；对生命值低于 30%的敌人造成 3 倍伤害"
     }
    ],
    "requirements": [
@@ -2325,6 +2520,11 @@
      "level": 109,
      "money": 713400,
      "exp": 651138
+    },
+    {
+     "level": 117,
+     "money": 875400,
+     "exp": 1405138
     }
    ],
    "learn_level": 53,
@@ -2349,57 +2549,63 @@
    "type": "active",
    "skill_type": "attack",
    "target_rule": "single",
-   "max_level": 8,
+   "max_level": 9,
    "icon": "static/icons/skills/warrior_012.gif",
    "desc": "出手便是石破天惊，挡无可挡避无可避",
    "levels": [
     {
      "damage": 430,
      "mp": 113,
-     "cd": 6,
+     "cd": 4,
      "desc": "对单体造成约 430 点物理伤害"
     },
     {
      "damage": 502,
      "mp": 130,
-     "cd": 6,
+     "cd": 4,
      "desc": "对单体造成约 502 点物理伤害"
     },
     {
      "damage": 560,
      "mp": 148,
-     "cd": 6,
+     "cd": 4,
      "desc": "对单体造成约 560 点物理伤害"
     },
     {
      "damage": 640,
      "mp": 168,
-     "cd": 6,
+     "cd": 4,
      "desc": "对单体造成约 640 点物理伤害"
     },
     {
      "damage": 725,
      "mp": 189,
-     "cd": 6,
+     "cd": 4,
      "desc": "对单体造成约 725 点物理伤害"
     },
     {
      "damage": 836,
      "mp": 213,
-     "cd": 6,
+     "cd": 4,
      "desc": "对单体造成约 836 点物理伤害"
     },
     {
      "damage": 949,
      "mp": 238,
-     "cd": 6,
+     "cd": 4,
      "desc": "对单体造成约 949 点物理伤害"
     },
     {
      "damage": 1025,
      "mp": 263,
-     "cd": 6,
+     "cd": 4,
      "desc": "对单体造成约 1025 点物理伤害"
+    },
+    {
+     "damage": 1142,
+     "mp": 288,
+     "cd": 4,
+     "desc": "对单体造成约 1142 点物理伤害，无视目标 50%防御，必定命中，并打断施法"
     }
    ],
    "requirements": [
@@ -2442,6 +2648,11 @@
      "level": 110,
      "money": 730500,
      "exp": 719138
+    },
+    {
+     "level": 117,
+     "money": 875400,
+     "exp": 1405138
     }
    ],
    "learn_level": 61,
@@ -2465,99 +2676,143 @@
    "type": "active",
    "skill_type": "buff",
    "target_rule": "self",
-   "max_level": 4,
+   "max_level": 6,
    "icon": "static/icons/skills/warrior_013.gif",
    "desc": "胸中战意沸腾，舍命抢攻以攻对攻",
    "levels": [
     {
      "damage": 0,
      "mp": 191,
-     "cd": 240,
+     "cd": 180,
      "desc": "攻击力增加 270 点；防御增加 -216 点；防御增加 -216 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 270,
-       "duration": 0
+       "value": 282,
+       "duration": 12
       },
       {
        "type": "phys_def_flat",
-       "value": -216,
-       "duration": 0
+       "value": -210,
+       "duration": 12
       },
       {
        "type": "magic_def_flat",
-       "value": -216,
-       "duration": 0
+       "value": -212,
+       "duration": 12
       }
      ]
     },
     {
      "damage": 0,
      "mp": 229,
-     "cd": 240,
+     "cd": 180,
      "desc": "攻击力增加 320 点；防御增加 -254 点；防御增加 -254 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 320,
-       "duration": 0
+       "value": 328,
+       "duration": 12
       },
       {
        "type": "phys_def_flat",
-       "value": -254,
-       "duration": 0
+       "value": -241,
+       "duration": 12
       },
       {
        "type": "magic_def_flat",
-       "value": -254,
-       "duration": 0
+       "value": -247,
+       "duration": 12
       }
      ]
     },
     {
      "damage": 0,
      "mp": 273,
-     "cd": 240,
+     "cd": 180,
      "desc": "攻击力增加 370 点；防御增加 -296 点；防御增加 -296 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 370,
-       "duration": 0
+       "value": 386,
+       "duration": 12
       },
       {
        "type": "phys_def_flat",
-       "value": -296,
-       "duration": 0
+       "value": -292,
+       "duration": 12
       },
       {
        "type": "magic_def_flat",
-       "value": -296,
-       "duration": 0
+       "value": -286,
+       "duration": 12
       }
      ]
     },
     {
      "damage": 0,
      "mp": 320,
-     "cd": 240,
+     "cd": 180,
      "desc": "攻击力增加 420 点；防御增加 -338 点；防御增加 -338 点",
      "effects": [
       {
        "type": "atk_flat",
-       "value": 420,
-       "duration": 0
+       "value": 428,
+       "duration": 12
       },
       {
        "type": "phys_def_flat",
-       "value": -338,
-       "duration": 0
+       "value": -329,
+       "duration": 12
       },
       {
        "type": "magic_def_flat",
-       "value": -338,
-       "duration": 0
+       "value": -324,
+       "duration": 12
+      }
+     ]
+    },
+    {
+     "mp": 370,
+     "cd": 180,
+     "desc": "攻击力增加 467 点；物理防御和法术防御各降低 410 点（持续 12 秒）",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": 467,
+       "duration": 12
+      },
+      {
+       "type": "phys_def_flat",
+       "value": -410,
+       "duration": 12
+      },
+      {
+       "type": "magic_def_flat",
+       "value": -410,
+       "duration": 12
+      }
+     ]
+    },
+    {
+     "mp": 425,
+     "cd": 180,
+     "desc": "攻击力增加 517 点；物理防御和法术防御各降低 512 点（持续 12 秒）",
+     "effects": [
+      {
+       "type": "atk_flat",
+       "value": 517,
+       "duration": 12
+      },
+      {
+       "type": "phys_def_flat",
+       "value": -512,
+       "duration": 12
+      },
+      {
+       "type": "magic_def_flat",
+       "value": -532,
+       "duration": 12
       }
      ]
     }
@@ -2582,6 +2837,16 @@
      "level": 99,
      "money": 525000,
      "exp": 376800
+    },
+    {
+     "level": 109,
+     "money": 713400,
+     "exp": 651138
+    },
+    {
+     "level": 119,
+     "money": 924900,
+     "exp": 1668638
     }
    ],
    "learn_level": 69,
@@ -2601,24 +2866,24 @@
    "skill_type": "defense",
    "require_shield": true,
    "target_rule": "self",
-   "max_level": 15,
+   "max_level": 19,
    "icon": "static/icons/skills/warrior_014.gif",
    "desc": "盾法已入化境坚如磐石，物防法防大幅提升",
    "levels": [
     {
      "damage": 0,
      "mp": 80,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 192 点；防御增加 192 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 192,
+       "value": 255,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 192,
+       "value": 256,
        "duration": 0
       }
      ]
@@ -2626,17 +2891,17 @@
     {
      "damage": 0,
      "mp": 94,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 225 点；防御增加 225 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 225,
+       "value": 302,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 225,
+       "value": 294,
        "duration": 0
       }
      ]
@@ -2644,17 +2909,17 @@
     {
      "damage": 0,
      "mp": 105,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 252 点；防御增加 252 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 252,
+       "value": 327,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 252,
+       "value": 330,
        "duration": 0
       }
      ]
@@ -2662,17 +2927,17 @@
     {
      "damage": 0,
      "mp": 120,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 287 点；防御增加 287 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 287,
+       "value": 387,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 287,
+       "value": 378,
        "duration": 0
       }
      ]
@@ -2680,17 +2945,17 @@
     {
      "damage": 0,
      "mp": 136,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 323 点；防御增加 323 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 323,
+       "value": 423,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 323,
+       "value": 423,
        "duration": 0
       }
      ]
@@ -2698,17 +2963,17 @@
     {
      "damage": 0,
      "mp": 152,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 360 点；防御增加 360 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 360,
+       "value": 478,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 360,
+       "value": 468,
        "duration": 0
       }
      ]
@@ -2716,17 +2981,17 @@
     {
      "damage": 0,
      "mp": 169,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 399 点；防御增加 399 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 399,
+       "value": 531,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 399,
+       "value": 517,
        "duration": 0
       }
      ]
@@ -2734,17 +2999,17 @@
     {
      "damage": 0,
      "mp": 189,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 438 点；防御增加 438 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 438,
+       "value": 587,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 438,
+       "value": 571,
        "duration": 0
       }
      ]
@@ -2752,17 +3017,17 @@
     {
      "damage": 0,
      "mp": 208,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 479 点；防御增加 479 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 479,
+       "value": 623,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 479,
+       "value": 631,
        "duration": 0
       }
      ]
@@ -2770,17 +3035,17 @@
     {
      "damage": 0,
      "mp": 229,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 521 点；防御增加 521 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 521,
+       "value": 672,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 521,
+       "value": 675,
        "duration": 0
       }
      ]
@@ -2788,17 +3053,17 @@
     {
      "damage": 0,
      "mp": 250,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 564 点；防御增加 564 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 564,
+       "value": 734,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 564,
+       "value": 748,
        "duration": 0
       }
      ]
@@ -2806,17 +3071,17 @@
     {
      "damage": 0,
      "mp": 273,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 608 点；防御增加 608 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 608,
+       "value": 797,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 608,
+       "value": 787,
        "duration": 0
       }
      ]
@@ -2824,17 +3089,17 @@
     {
      "damage": 0,
      "mp": 298,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 654 点；防御增加 654 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 654,
+       "value": 876,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 654,
+       "value": 875,
        "duration": 0
       }
      ]
@@ -2842,17 +3107,17 @@
     {
      "damage": 0,
      "mp": 323,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 701 点；防御增加 701 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 701,
+       "value": 913,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 701,
+       "value": 914,
        "duration": 0
       }
      ]
@@ -2860,17 +3125,85 @@
     {
      "damage": 0,
      "mp": 350,
-     "cd": 3,
+     "cd": 0,
      "desc": "防御增加 750 点；防御增加 750 点",
      "effects": [
       {
        "type": "phys_def_flat",
-       "value": 750,
+       "value": 976,
        "duration": 0
       },
       {
        "type": "magic_def_flat",
-       "value": 750,
+       "value": 1007,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 350,
+     "cd": 0,
+     "desc": "物理防御和法术防御各增加 1065 点",
+     "effects": [
+      {
+       "type": "phys_def_flat",
+       "value": 1065,
+       "duration": 0
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 1083,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 350,
+     "cd": 0,
+     "desc": "物理防御和法术防御各增加 1136 点",
+     "effects": [
+      {
+       "type": "phys_def_flat",
+       "value": 1136,
+       "duration": 0
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 1175,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 350,
+     "cd": 0,
+     "desc": "物理防御和法术防御各增加 1256 点",
+     "effects": [
+      {
+       "type": "phys_def_flat",
+       "value": 1256,
+       "duration": 0
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 1242,
+       "duration": 0
+      }
+     ]
+    },
+    {
+     "mp": 350,
+     "cd": 0,
+     "desc": "物理防御和法术防御各增加 1321 点",
+     "effects": [
+      {
+       "type": "phys_def_flat",
+       "value": 1321,
+       "duration": 0
+      },
+      {
+       "type": "magic_def_flat",
+       "value": 1337,
        "duration": 0
       }
      ]
@@ -2951,6 +3284,26 @@
      "level": 98,
      "money": 514000,
      "exp": 369600
+    },
+    {
+     "level": 103,
+     "money": 629700,
+     "exp": 400638
+    },
+    {
+     "level": 108,
+     "money": 697200,
+     "exp": 590638
+    },
+    {
+     "level": 113,
+     "money": 787200,
+     "exp": 968138
+    },
+    {
+     "level": 118,
+     "money": 899700,
+     "exp": 1533138
     }
    ],
    "learn_level": 29,
@@ -2977,7 +3330,7 @@
     {
      "damage": 0,
      "mp": 77,
-     "cd": 40,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 3 秒",
      "effects": [
       {
@@ -2990,7 +3343,7 @@
     {
      "damage": 0,
      "mp": 117,
-     "cd": 40,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 4 秒",
      "effects": [
       {
@@ -3003,7 +3356,7 @@
     {
      "damage": 0,
      "mp": 167,
-     "cd": 40,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 5 秒",
      "effects": [
       {
@@ -3016,7 +3369,7 @@
     {
      "damage": 0,
      "mp": 226,
-     "cd": 40,
+     "cd": 8,
      "desc": "吸引敌人攻击，持续 6 秒",
      "effects": [
       {
@@ -3073,39 +3426,39 @@
     {
      "damage": 0,
      "mp": 42,
-     "cd": 360,
+     "cd": 180,
      "desc": "受到的所有伤害减低 50%",
      "effects": [
       {
        "type": "dmg_reduce",
        "value": 50,
-       "duration": 30
+       "duration": 15
       }
      ]
     },
     {
      "damage": 0,
      "mp": 70,
-     "cd": 360,
+     "cd": 180,
      "desc": "受到的所有伤害减低 60%",
      "effects": [
       {
        "type": "dmg_reduce",
        "value": 60,
-       "duration": 30
+       "duration": 15
       }
      ]
     },
     {
      "damage": 0,
      "mp": 107,
-     "cd": 360,
+     "cd": 180,
      "desc": "受到的所有伤害减低 70%",
      "effects": [
       {
        "type": "dmg_reduce",
        "value": 70,
-       "duration": 30
+       "duration": 15
       }
      ]
     }
@@ -3150,12 +3503,12 @@
     {
      "damage": 840,
      "mp": 124,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 840 点物理伤害",
      "effects": [
       {
        "type": "counter_on_crit",
-       "value": 799,
+       "value": 843,
        "stun": 3
       }
      ]
@@ -3163,12 +3516,12 @@
     {
      "damage": 964,
      "mp": 142,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 964 点物理伤害",
      "effects": [
       {
        "type": "counter_on_crit",
-       "value": 902,
+       "value": 964,
        "stun": 3
       }
      ]
@@ -3176,12 +3529,12 @@
     {
      "damage": 1091,
      "mp": 161,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 1091 点物理伤害",
      "effects": [
       {
        "type": "counter_on_crit",
-       "value": 1008,
+       "value": 1120,
        "stun": 3
       }
      ]
@@ -3189,12 +3542,12 @@
     {
      "damage": 1261,
      "mp": 182,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 1261 点物理伤害",
      "effects": [
       {
        "type": "counter_on_crit",
-       "value": 1118,
+       "value": 1234,
        "stun": 4
       }
      ]
@@ -3202,12 +3555,12 @@
     {
      "damage": 1424,
      "mp": 205,
-     "cd": 10,
+     "cd": 6,
      "desc": "对单体造成约 1424 点物理伤害",
      "effects": [
       {
        "type": "counter_on_crit",
-       "value": 1233,
+       "value": 1429,
        "stun": 4
       }
      ]
@@ -3265,13 +3618,13 @@
     {
      "damage": 355,
      "mp": 96,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 355 点物理伤害",
      "effects": [
       {
        "type": "vuln",
-       "value": 27,
-       "duration": 0,
+       "value": 26,
+       "duration": 10,
        "target": "enemy"
       }
      ]
@@ -3279,13 +3632,13 @@
     {
      "damage": 418,
      "mp": 113,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 418 点物理伤害",
      "effects": [
       {
        "type": "vuln",
        "value": 32,
-       "duration": 0,
+       "duration": 10,
        "target": "enemy"
       }
      ]
@@ -3293,13 +3646,13 @@
     {
      "damage": 488,
      "mp": 132,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 488 点物理伤害",
      "effects": [
       {
        "type": "vuln",
-       "value": 36,
-       "duration": 0,
+       "value": 38,
+       "duration": 10,
        "target": "enemy"
       }
      ]
@@ -3307,13 +3660,13 @@
     {
      "damage": 574,
      "mp": 152,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 574 点物理伤害",
      "effects": [
       {
        "type": "vuln",
-       "value": 41,
-       "duration": 0,
+       "value": 42,
+       "duration": 10,
        "target": "enemy"
       }
      ]
@@ -3321,13 +3674,13 @@
     {
      "damage": 665,
      "mp": 174,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 665 点物理伤害",
      "effects": [
       {
        "type": "vuln",
-       "value": 46,
-       "duration": 0,
+       "value": 48,
+       "duration": 10,
        "target": "enemy"
       }
      ]
@@ -3335,13 +3688,13 @@
     {
      "damage": 743,
      "mp": 198,
-     "cd": 2,
+     "cd": 0,
      "desc": "对单体造成约 743 点物理伤害",
      "effects": [
       {
        "type": "vuln",
-       "value": 51,
-       "duration": 0,
+       "value": 53,
+       "duration": 10,
        "target": "enemy"
       }
      ]
