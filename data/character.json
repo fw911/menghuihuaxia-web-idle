@@ -1,26 +1,60 @@
-{
-  "exp_formula": {
-    "coefficient": 15,
-    "power": 3
-  },
-  "monster_exp_scale": {
-    "over_low_factor": 0.2,
-    "over_high_factor": 1.2,
-    "max_cap": 2.5,
-    "online_eff_factor": 0.35,
-    "reward_extra_factor": 0.5
-  },
-  "type_exp_multiplier": {
-    "normal": 1.0,
-    "elite": 2.9,
-    "boss": 6.0,
-    "jubao": 15.0,
-    "dungeon_boss": 15.0
-  },
-  "type_exp_tiers": {
-    "elite": [2.9, 3.4, 3.9, 4.4, 4.9, 5.4],
-    "boss": [6.0, 7.0, 8.0, 9.0, 10.0, 11.0],
-    "jubao": [15.0, 17.0, 19.0, 21.0, 23.0, 25.0],
-    "dungeon_boss": [15.0, 17.0, 19.0, 21.0, 23.0, 25.0]
-  }
-}
+{
+  "exp_formula": {
+    "coefficient": 15,
+    "power": 3
+  },
+  "monster_exp_scale": {
+    "over_low_factor": 0.2,
+    "over_high_factor": 1.2,
+    "max_cap": 2.5,
+    "online_eff_factor": 0.35,
+    "reward_extra_factor": 0.5
+  },
+  "type_exp_multiplier": {
+    "normal": 1.0,
+    "elite": 2.9,
+    "boss": 6.0,
+    "jubao": 15.0,
+    "dungeon_boss": 15.0
+  },
+  "type_exp_tiers": {
+    "elite": [
+      2.9,
+      3.4,
+      3.9,
+      4.4,
+      4.9,
+      5.4
+    ],
+    "boss": [
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      11.0
+    ],
+    "jubao": [
+      15.0,
+      17.0,
+      19.0,
+      21.0,
+      23.0,
+      25.0
+    ],
+    "dungeon_boss": [
+      15.0,
+      17.0,
+      19.0,
+      21.0,
+      23.0,
+      25.0
+    ]
+  },
+  "exp_curve": {
+    "comment": "升级经验曲线（2026-10-03）。基础式 exp_to_next = 15 × L³：L ≤ free_until_level 逐值不变（当前玩家最高 60 级，必须零感知）；L > free_until_level 乘「需求放大系数」scale(L) = 1 / f(L)，f(L) 自 1.0 线性降到 min_factor。⚠ 选 1/f（双曲线）而不是线性放大，是为了让「每级耗时增幅」恒定在 4.6%~3.5%（见 docs/魂印经验阶梯与挂机经验效率分档-设计方案-2026-10-03.md §6）。⚠ 本方案只动需求端、产出端一行不动 —— 玩家每小时经验照常增长，不会看出经验被削。",
+    "free_until_level": 60,
+    "cap_level": 120,
+    "min_factor": 0.3
+  }
+}

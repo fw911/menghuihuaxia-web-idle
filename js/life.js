@@ -202,7 +202,7 @@ export function instEntries(){
   return out;
 }
 export function instSpec(){ return (DATA.instance_exchange||{})._exchange_spec || {}; }
-export function instName(key){ const n={xianghunzhong_instance:'香魂冢', xuanyuantai:'轩辕台', guimu:'古墓'}; return n[key]||key; }
+export function instName(key){ const n={xianghunzhong_instance:'香魂冢', xuanyuantai:'轩辕台', guimu:'古墓', wuxingzhen:'五曜阵台'}; return n[key]||key; }
 export function instMapName(mapKey){ const m=(DATA.maps.maps||[]).find(x=>x.key===mapKey); return m? m.name : mapKey; }
 export function instGroup(mapKey){ return instEntries().filter(e=> e.npc_map===mapKey); }
 // 逐级套用精炼加成（与手动精炼到同级结果一致，不判定成败）

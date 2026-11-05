@@ -1,102 +1,128 @@
 {
- "active_skills": [
-  {
-   "key": "ys_jg",
-   "name": "炽炎爪",
-   "job": "summon",
-   "form": "common",
-   "element": "physical",
-   "type": "active",
-   "skill_type": "attack",
-   "target_rule": "single",
-   "max_level": 1,
-   "icon": "static/icons/skills/darkwitch_001.gif",
-   "desc": "炎灵兽以利爪撕裂敌人",
-   "levels": [
+  "active_skills": [
     {
-     "damage": 60,
-     "mp": 0,
-     "cd": 2,
-     "desc": "对单体造成物理伤害"
-    }
-   ],
-   "cd": 2,
-   "summon_damage_map": {
-    "11": 49,
-    "15": 49,
-    "19": 49,
-    "23": 49,
-    "27": 49,
-    "31": 49,
-    "36": 56,
-    "41": 64,
-    "46": 78,
-    "51": 87,
-    "56": 99,
-    "61": 113,
-    "66": 124,
-    "71": 137,
-    "76": 155,
-    "81": 167,
-    "86": 183,
-    "91": 202,
-    "96": 216,
-    "101": 234,
-    "106": 247,
-    "111": 260,
-    "116": 273
-   },
-   "cd_ms": 1000,
-   "jobs": [
-    "summon"
-   ]
-  },
-  {
-   "key": "my_jg",
-   "name": "幽电击",
-   "job": "summon",
-   "form": "common",
-   "element": "elec",
-   "type": "active",
-   "skill_type": "attack",
-   "target_rule": "single",
-   "max_level": 1,
-   "icon": "static/icons/skills/darkwitch_001.gif",
-   "desc": "魅影施展电系法术攻击敌人",
-   "levels": [
+      "key": "ys_jg",
+      "name": "炽炎爪",
+      "job": "summon",
+      "form": "common",
+      "element": "physical",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 1,
+      "icon": "static/icons/skills/darkwitch_001.gif",
+      "desc": "炎灵兽以利爪撕裂敌人",
+      "levels": [
+        {
+          "damage": 60,
+          "mp": 0,
+          "cd": 2,
+          "desc": "对单体造成物理伤害"
+        }
+      ],
+      "cd": 2,
+      "summon_damage_map": {
+        "11": 49,
+        "15": 49,
+        "19": 49,
+        "23": 49,
+        "27": 49,
+        "31": 49,
+        "36": 56,
+        "41": 64,
+        "46": 78,
+        "51": 87,
+        "56": 99,
+        "61": 113,
+        "66": 124,
+        "71": 137,
+        "76": 155,
+        "81": 167,
+        "86": 183,
+        "91": 202,
+        "96": 216,
+        "101": 234,
+        "106": 247,
+        "111": 260,
+        "116": 273
+      },
+      "cd_ms": 1000,
+      "jobs": [
+        "summon"
+      ]
+    },
     {
-     "damage": 60,
-     "mp": 0,
-     "cd": 2,
-     "desc": "对单体造成电系伤害"
+      "key": "my_jg",
+      "name": "幽电击",
+      "job": "summon",
+      "form": "common",
+      "element": "elec",
+      "type": "active",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 1,
+      "icon": "static/icons/skills/darkwitch_001.gif",
+      "desc": "魅影施展电系法术攻击敌人",
+      "levels": [
+        {
+          "damage": 60,
+          "mp": 0,
+          "cd": 2,
+          "desc": "对单体造成电系伤害"
+        }
+      ],
+      "cd": 2,
+      "summon_damage_map": {
+        "30": 244,
+        "35": 283,
+        "39": 322,
+        "44": 392,
+        "49": 436,
+        "54": 496,
+        "59": 568,
+        "64": 620,
+        "69": 684,
+        "74": 777,
+        "79": 838,
+        "84": 917,
+        "89": 1012,
+        "94": 1082,
+        "99": 1171,
+        "104": 1235,
+        "109": 1300,
+        "114": 1364,
+        "119": 1429
+      },
+      "cd_ms": 1000,
+      "jobs": [
+        "summon"
+      ]
+    },
+    {
+      "key": "zz_jg",
+      "name": "破阵斩",
+      "form": "common",
+      "element": "physical",
+      "skill_type": "attack",
+      "target_rule": "single",
+      "max_level": 1,
+      "icon": "static/icons/skills/darkwitch_001.gif",
+      "desc": "阵卒挥刃斩向敌人",
+      "summon_damage_map": {
+        "108": 2798
+      },
+      "levels": [
+        {
+          "damage": 60,
+          "mp": 0,
+          "cd_ms": 1000,
+          "desc": "对单体造成物理伤害"
+        }
+      ],
+      "cd_ms": 1000,
+      "jobs": [
+        "summon"
+      ]
     }
-   ],
-   "cd": 2,
-   "summon_damage_map": {
-    "30": 244,
-    "35": 283,
-    "39": 322,
-    "44": 392,
-    "49": 436,
-    "54": 496,
-    "59": 568,
-    "64": 620,
-    "69": 684,
-    "74": 777,
-    "79": 838,
-    "84": 917,
-    "89": 1012,
-    "94": 1082,
-    "99": 1171,
-    "104": 1235,
-    "109": 1300,
-    "114": 1364,
-    "119": 1429
-   },
-   "cd_ms": 1000,
-   "jobs": [
-    "summon"
-   ]
-  }
- ]
+  ]
 }
