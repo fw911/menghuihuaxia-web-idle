@@ -42,7 +42,7 @@ def process(prof):
     wi = load(wf)
     v0 = load(vf)
     v0map = {s['key']: s for s in v0['active_skills']}
-    st = {'dmg': 0, 'desc': 0, 'skills': [], 'skip_type': [], 'no_dmg_field': 0}
+    st = {'dmg': 0, 'desc': 0, 'mp': 0, 'cd': 0, 'skills': [], 'skip_type': [], 'no_dmg_field': 0}
     for s in wi['active_skills']:
         v = v0map.get(s['key'])
         if not v:
@@ -54,25 +54,35 @@ def process(prof):
         vl = v.get('levels', [])
         sk = 0
         for i in range(min(len(wl), len(vl))):
-            if 'damage' not in wl[i] or 'damage' not in vl[i]:
+            # 伤害：仅当两侧该等级都有 damage 字段
+            if 'damage' in wl[i] and 'damage' in vl[i]:
+                old = wl[i]['damage']
+                new = vl[i]['damage']
+                if old != new:
+                    wl[i]['damage'] = new
+                    st['dmg'] += 1
+                    sk += 1
+                    nd, dch = fix_desc(wl[i].get('desc'), old, new)
+                    if dch:
+                        wl[i]['desc'] = nd
+                        st['desc'] += 1
+            else:
                 st['no_dmg_field'] += 1
-                continue
-            old = wl[i]['damage']
-            new = vl[i]['damage']
-            if old == new:
-                continue
-            wl[i]['damage'] = new
-            st['dmg'] += 1
-            sk += 1
-            nd, dch = fix_desc(wl[i].get('desc'), old, new)
-            if dch:
-                wl[i]['desc'] = nd
-                st['desc'] += 1
+            # 蓝耗/冷却：与 damage 同为「同名字段同量纲」，可安全对齐，且不依赖 damage 字段存在
+            # （effects[].value 不可对齐：v0.91 用 duration_ms 毫秒 + fire_dot/elec_dot 类型，
+            #   web-idle 用 duration 回合 + hot/taunt 等自研类型，两套效果体系不同量纲）
+            for f in ('mp', 'cd'):
+                if f in wl[i] and f in vl[i] and wl[i][f] != vl[i][f]:
+                    wl[i][f] = vl[i][f]
+                    st[f] += 1
+                    sk += 1
         if sk:
             st['skills'].append('%s(%d级)' % (s.get('name'), sk))
     out = json.dumps(wi, indent=1, ensure_ascii=False)
-    with io.open(wf, 'w', encoding='utf-8', newline='') as f:
-        f.write(out.replace('\n', '\r\n'))
+    # 保留原文件行尾约定（.gitattributes: eol=lf）
+    crlf = b'\r\n' in open(wf, 'rb').read()
+    with io.open(wf, 'wb') as f:
+        f.write((out.replace('\n', '\r\n') if crlf else out).encode('utf-8'))
 
     # 回读校验：同 key + 同 type + 两侧都有 damage 的等级必须完全一致
     back = load(wf)
@@ -85,10 +95,12 @@ def process(prof):
         wl = s.get('levels', [])
         vl = v.get('levels', [])
         for i in range(min(len(wl), len(vl))):
-            if 'damage' in wl[i] and 'damage' in vl[i] and wl[i]['damage'] != vl[i]['damage']:
-                bad.append('%s L%d' % (s['key'], i + 1))
-    print('%-9s 改动技能=%d 伤害点=%d desc同步=%d | 类型不同跳过=%d %s'
-          % (prof, len(st['skills']), st['dmg'], st['desc'], len(st['skip_type']), st['skip_type'] or ''))
+            for f in ('damage', 'mp', 'cd'):
+                if f in wl[i] and f in vl[i] and wl[i][f] != vl[i][f]:
+                    bad.append('%s L%d.%s' % (s['key'], i + 1, f))
+    print('%-9s 改动技能=%d 伤害点=%d desc同步=%d mp=%d cd=%d | 类型不同跳过=%d %s'
+          % (prof, len(st['skills']), st['dmg'], st['desc'], st['mp'], st['cd'],
+             len(st['skip_type']), st['skip_type'] or ''))
     print('          改动技能明细: %s' % (', '.join(st['skills']) or '无'))
     return bad
 

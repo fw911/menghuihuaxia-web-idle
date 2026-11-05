@@ -15,11 +15,11 @@ import json, re, sys
 SRC = 'data/monsters.json'
 
 PATCH = {
-    'mh_guimu_30020': {'hp': 491803, 'min_phys_def': 4780, 'max_phys_def': 5844},
-    'mh_xyt_30212':   {'hp': 597015, 'min_phys_def': 5498, 'max_phys_def': 6720},
-    'mh_xhz_30807':   {'hp': 483871, 'min_phys_def': 6619, 'max_phys_def': 8091},
-    'shd_boss115':    {'hp': 560748, 'min_phys_def': 6354, 'max_phys_def': 7767},
-    'wxz_33164':      {'hp': 434782, 'min_phys_def': 5009, 'max_phys_def': 6121,
+    'mh_guimu_30020': {'hp': 466926, 'min_phys_def': 4780, 'max_phys_def': 5844},
+    'mh_xyt_30212':   {'hp': 538117, 'min_phys_def': 5498, 'max_phys_def': 6720},
+    'mh_xhz_30807':   {'hp': 481928, 'min_phys_def': 6619, 'max_phys_def': 8091},
+    'shd_boss115':    {'hp': 606061, 'min_phys_def': 6354, 'max_phys_def': 7767},
+    'wxz_33164':      {'hp': 442805, 'min_phys_def': 5009, 'max_phys_def': 6121,
                        'max_phys_atk': 2754, 'min_phys_atk': 2035},
 }
 
