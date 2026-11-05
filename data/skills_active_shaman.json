@@ -323,7 +323,7 @@
      ]
     }
    ],
-   "learn_level": 4,
+   "learn_level": 3,
    "requirements": [
     {
      "level": 3,
@@ -899,7 +899,7 @@
      ]
     }
    ],
-   "learn_level": 11,
+   "learn_level": 10,
    "requirements": [
     {
      "level": 10,
@@ -1378,7 +1378,7 @@
      ]
     }
    ],
-   "learn_level": 1,
+   "learn_level": 0,
    "requirements": [
     {
      "level": 0,
@@ -1552,7 +1552,7 @@
      ]
     }
    ],
-   "learn_level": 46,
+   "learn_level": 45,
    "requirements": [
     {
      "level": 45,
@@ -1714,7 +1714,7 @@
      ]
     }
    ],
-   "learn_level": 38,
+   "learn_level": 37,
    "requirements": [
     {
      "level": 37,
@@ -1812,7 +1812,7 @@
      ]
     }
    ],
-   "learn_level": 62,
+   "learn_level": 61,
    "requirements": [
     {
      "level": 61,
@@ -2005,7 +2005,7 @@
      "effects": []
     }
    ],
-   "learn_level": 17,
+   "learn_level": 16,
    "requirements": [
     {
      "level": 16,
@@ -2238,7 +2238,7 @@
      "effects": []
     }
    ],
-   "learn_level": 34,
+   "learn_level": 33,
    "requirements": [
     {
      "level": 33,
@@ -2418,7 +2418,7 @@
      ]
     }
    ],
-   "learn_level": 54,
+   "learn_level": 53,
    "requirements": [
     {
      "level": 53,
@@ -2578,7 +2578,7 @@
      "effects": []
     }
    ],
-   "learn_level": 42,
+   "learn_level": 41,
    "requirements": [
     {
      "level": 41,
@@ -2741,7 +2741,7 @@
      ]
     }
    ],
-   "learn_level": 70,
+   "learn_level": 69,
    "requirements": [
     {
      "level": 69,
@@ -2978,7 +2978,7 @@
      ]
     }
    ],
-   "learn_level": 31,
+   "learn_level": 30,
    "requirements": [
     {
      "level": 30,
@@ -3512,7 +3512,7 @@
      ]
     }
    ],
-   "learn_level": 58,
+   "learn_level": 57,
    "requirements": [
     {
      "level": 57,
@@ -3691,7 +3691,7 @@
      ]
     }
    ],
-   "learn_level": 50,
+   "learn_level": 49,
    "requirements": [
     {
      "level": 49,
@@ -3757,7 +3757,7 @@
      "exp": 500000
     }
    ],
-   "learn_level": 100,
+   "learn_level": 99,
    "effects": [
     {
      "type": "bleed",
@@ -3811,7 +3811,7 @@
      "exp": 500000
     }
    ],
-   "learn_level": 100,
+   "learn_level": 99,
    "cd": 60,
    "cd_ms": 60000,
    "jobs": [

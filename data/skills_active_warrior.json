@@ -281,7 +281,7 @@
      "exp": 537638
     }
    ],
-   "learn_level": 1,
+   "learn_level": 0,
    "require_weapon": true,
    "cd_ms": 0,
    "jobs": [
@@ -719,7 +719,7 @@
      "exp": 423638
     }
    ],
-   "learn_level": 4,
+   "learn_level": 3,
    "cd": 2,
    "require_weapon": true,
    "cd_ms": 3000,
@@ -1086,7 +1086,7 @@
      "exp": 345600
     }
    ],
-   "learn_level": 11,
+   "learn_level": 10,
    "cd": 12,
    "require_weapon": true,
    "cd_ms": 6000,
@@ -1435,7 +1435,7 @@
      "exp": 352800
     }
    ],
-   "learn_level": 17,
+   "learn_level": 16,
    "cd": 3,
    "persist_minutes": 3,
    "cd_ms": 0,
@@ -1585,7 +1585,7 @@
      "exp": 328800
     }
    ],
-   "learn_level": 34,
+   "learn_level": 33,
    "cd": 24,
    "cd_ms": 8000,
    "jobs": [
@@ -1751,7 +1751,7 @@
      "exp": 651138
     }
    ],
-   "learn_level": 38,
+   "learn_level": 37,
    "cd": 2,
    "require_weapon": true,
    "cd_ms": 0,
@@ -1794,7 +1794,7 @@
      "exp": 500000
     }
    ],
-   "learn_level": 100,
+   "learn_level": 99,
    "cd": 50,
    "cd_ms": 30000,
    "jobs": [
@@ -1828,7 +1828,7 @@
      "exp": 500000
     }
    ],
-   "learn_level": 100,
+   "learn_level": 99,
    "damage": 0,
    "effects": [
     {
@@ -2045,7 +2045,7 @@
      "exp": 345600
     }
    ],
-   "learn_level": 24,
+   "learn_level": 23,
    "cd": 17,
    "require_weapon": true,
    "cd_ms": 10000,
@@ -2214,7 +2214,7 @@
      "exp": 337200
     }
    ],
-   "learn_level": 46,
+   "learn_level": 45,
    "cd": 40,
    "require_weapon": true,
    "cd_ms": 30000,
@@ -2327,7 +2327,7 @@
      "exp": 651138
     }
    ],
-   "learn_level": 54,
+   "learn_level": 53,
    "execute": {
     "threshold": 30,
     "multiplier": 3
@@ -2444,7 +2444,7 @@
      "exp": 719138
     }
    ],
-   "learn_level": 62,
+   "learn_level": 61,
    "ignore_def": 50,
    "pierce": true,
    "interrupt": true,
@@ -2584,7 +2584,7 @@
      "exp": 376800
     }
    ],
-   "learn_level": 70,
+   "learn_level": 69,
    "cd": 240,
    "cd_ms": 180000,
    "jobs": [
@@ -2953,7 +2953,7 @@
      "exp": 369600
     }
    ],
-   "learn_level": 30,
+   "learn_level": 29,
    "cd": 3,
    "persist_minutes": 5,
    "cd_ms": 0,
@@ -3049,7 +3049,7 @@
      "exp": 345600
     }
    ],
-   "learn_level": 42,
+   "learn_level": 41,
    "cd": 40,
    "cd_ms": 8000,
    "jobs": [
@@ -3127,7 +3127,7 @@
      "exp": 376800
     }
    ],
-   "learn_level": 50,
+   "learn_level": 49,
    "cd": 360,
    "cd_ms": 180000,
    "jobs": [
@@ -3240,7 +3240,7 @@
      "exp": 328800
     }
    ],
-   "learn_level": 66,
+   "learn_level": 65,
    "cd": 10,
    "require_weapon": true,
    "cd_ms": 6000,
@@ -3379,7 +3379,7 @@
      "exp": 361200
     }
    ],
-   "learn_level": 58,
+   "learn_level": 57,
    "cd": 2,
    "require_weapon": true,
    "cd_ms": 0,

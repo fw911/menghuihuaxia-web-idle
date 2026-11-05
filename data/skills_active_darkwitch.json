@@ -258,7 +258,7 @@
      "exp": 361200
     }
    ],
-   "learn_level": 1,
+   "learn_level": 0,
    "cd": 2,
    "cd_ms": 0,
    "jobs": [
@@ -680,7 +680,7 @@
      "exp": 376800
     }
    ],
-   "learn_level": 4,
+   "learn_level": 3,
    "cd": 8,
    "effects": [
     {
@@ -943,7 +943,7 @@
      "exp": 345600
     }
    ],
-   "learn_level": 11,
+   "learn_level": 10,
    "cd": 4,
    "cast_time": 3,
    "summon_duration_ms": 12500,
@@ -1384,7 +1384,7 @@
      "exp": 352800
     }
    ],
-   "learn_level": 17,
+   "learn_level": 16,
    "cd": 6,
    "effects": [
     {
@@ -1493,7 +1493,7 @@
      "exp": 352800
     }
    ],
-   "learn_level": 34,
+   "learn_level": 33,
    "cd": 50,
    "cast_time": 2,
    "cd_ms": 30000,
@@ -1629,7 +1629,7 @@
      "exp": 369600
     }
    ],
-   "learn_level": 54,
+   "learn_level": 53,
    "lifesteal": 100,
    "cd": 16,
    "cd_ms": 10000,
@@ -1672,7 +1672,7 @@
      "exp": 500000
     }
    ],
-   "learn_level": 100,
+   "learn_level": 99,
    "cd": 360,
    "cd_ms": 300000,
    "jobs": [
@@ -1706,7 +1706,7 @@
      "exp": 500000
     }
    ],
-   "learn_level": 100,
+   "learn_level": 99,
    "cd": 20,
    "ai_rule": {
     "kind": "enemy_count_ge",
@@ -1920,7 +1920,7 @@
      "exp": 369600
     }
    ],
-   "learn_level": 30,
+   "learn_level": 29,
    "cd": 4,
    "cast_time": 3,
    "summon_duration_ms": 10000,
@@ -2107,7 +2107,7 @@
      "exp": 328800
     }
    ],
-   "learn_level": 38,
+   "learn_level": 37,
    "cd": 10,
    "cd_ms": 12000,
    "jobs": [
@@ -2536,7 +2536,7 @@
      "exp": 361200
     }
    ],
-   "learn_level": 62,
+   "learn_level": 61,
    "cd": 60,
    "cd_ms": 60000,
    "jobs": [
@@ -2668,7 +2668,7 @@
      "exp": 376800
     }
    ],
-   "learn_level": 70,
+   "learn_level": 69,
    "cd": 240,
    "cd_ms": 180000,
    "jobs": [
@@ -2781,7 +2781,7 @@
      "exp": 345600
     }
    ],
-   "learn_level": 24,
+   "learn_level": 23,
    "cd": 3,
    "effects": [
     {
@@ -2955,7 +2955,7 @@
      "exp": 247200
     }
    ],
-   "learn_level": 42,
+   "learn_level": 41,
    "cd": 18,
    "effects": [
     {
@@ -3059,7 +3059,7 @@
      "exp": 361200
     }
    ],
-   "learn_level": 50,
+   "learn_level": 49,
    "cd": 120,
    "cast_time": 4,
    "cd_ms": 60000,
@@ -3136,7 +3136,7 @@
      "exp": 376800
     }
    ],
-   "learn_level": 58,
+   "learn_level": 57,
    "cd": 90,
    "effects": [
     {
@@ -3596,7 +3596,7 @@
      "exp": 413636
     }
    ],
-   "learn_level": 36,
+   "learn_level": 35,
    "cd": 3,
    "effects": [
     {

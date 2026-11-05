@@ -9,7 +9,7 @@
     "darkwitch",
     "shaman"
    ],
-   "learn_level": 18,
+   "learn_level": 17,
    "max_level": 18,
    "icon": "static/icons/skills/image073.png",
    "desc": "通用被动，永久提升物理攻击。",
@@ -179,7 +179,7 @@
     "darkwitch",
     "shaman"
    ],
-   "learn_level": 16,
+   "learn_level": 15,
    "max_level": 18,
    "icon": "static/icons/skills/image074.png",
    "desc": "通用被动，永久提升物理防御。",
@@ -349,7 +349,7 @@
     "darkwitch",
     "shaman"
    ],
-   "learn_level": 18,
+   "learn_level": 17,
    "max_level": 18,
    "icon": "static/icons/skills/image075.png",
    "desc": "通用被动，永久提升五行法术攻击。",
@@ -519,7 +519,7 @@
     "darkwitch",
     "shaman"
    ],
-   "learn_level": 17,
+   "learn_level": 16,
    "max_level": 18,
    "icon": "static/icons/skills/image076.png",
    "desc": "通用被动，永久提升法术防御。",
@@ -689,7 +689,7 @@
     "darkwitch",
     "shaman"
    ],
-   "learn_level": 15,
+   "learn_level": 14,
    "max_level": 18,
    "icon": "static/icons/skills/image077.png",
    "desc": "通用被动，永久提升生命与法术值上限。",

@@ -282,7 +282,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 80,
+      "coupon_price": 1,
       "effect": {
         "reward": "jiuzhuan_shengshui",
         "count": 10
@@ -299,7 +299,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 50,
+      "coupon_price": 1,
       "effect": {
         "reward": "sanhua_yuye",
         "count": 10
@@ -316,7 +316,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 30,
+      "coupon_price": 1,
       "effect": {
         "reward": "yuquan_qiongjiang",
         "count": 10
@@ -347,7 +347,7 @@
       "type": "consumable",
       "effect_type": "luopan",
       "price": 0,
-      "coupon_price": 15,
+      "coupon_price": 1,
       "effect": {
         "grade": "erpin"
       },
@@ -362,7 +362,7 @@
       "type": "consumable",
       "effect_type": "luopan",
       "price": 0,
-      "coupon_price": 30,
+      "coupon_price": 1,
       "effect": {
         "grade": "sanpin"
       },
@@ -378,7 +378,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 110,
+      "coupon_price": 1,
       "effect": {
         "reward": "erpin_luopan",
         "count": 10
@@ -395,7 +395,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 200,
+      "coupon_price": 1,
       "effect": {
         "reward": "erpin_luopan",
         "count": 20
@@ -412,7 +412,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 260,
+      "coupon_price": 1,
       "effect": {
         "reward": "sanpin_luopan",
         "count": 10
@@ -429,7 +429,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 500,
+      "coupon_price": 1,
       "effect": {
         "reward": "sanpin_luopan",
         "count": 20
@@ -460,7 +460,7 @@
       "type": "consumable",
       "effect_type": "refine_protect",
       "price": 0,
-      "coupon_price": 300,
+      "coupon_price": 1,
       "effect": {
         "tier_max": 7
       },
@@ -475,7 +475,7 @@
       "type": "consumable",
       "effect_type": "craft_reroll",
       "price": 0,
-      "coupon_price": 300,
+      "coupon_price": 1,
       "effect": {
         "rerolls": 1,
         "tier_min": 1,
@@ -492,7 +492,7 @@
       "type": "consumable",
       "effect_type": "craft_reroll",
       "price": 0,
-      "coupon_price": 900,
+      "coupon_price": 1,
       "effect": {
         "rerolls": 1,
         "tier_min": 7,
@@ -509,7 +509,7 @@
       "type": "consumable",
       "effect_type": "craft_reroll_adv",
       "price": 0,
-      "coupon_price": 2000,
+      "coupon_price": 1,
       "effect": {
         "rerolls": 2,
         "tier_min": 6,
@@ -526,7 +526,7 @@
       "type": "consumable",
       "effect_type": "summon_souls",
       "price": 888,
-      "coupon_price": 50,
+      "coupon_price": 1,
       "level_required": 1,
       "icon": "static/icons/items/soul_flag_001.png",
       "desc": "使用后随机获取5个魂魄（三魂七魄皆可，可重复）。",
@@ -541,7 +541,7 @@
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 5000,
-      "coupon_price": 100,
+      "coupon_price": 1,
       "effect": {
         "exp": 200000
       },
@@ -557,7 +557,7 @@
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 20000,
-      "coupon_price": 250,
+      "coupon_price": 1,
       "effect": {
         "exp": 1000000
       },
@@ -573,7 +573,7 @@
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 80000,
-      "coupon_price": 400,
+      "coupon_price": 1,
       "effect": {
         "exp": 1500000
       },
@@ -589,7 +589,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 10000,
-      "coupon_price": 120,
+      "coupon_price": 1,
       "effect": {
         "bonus": 1.0
       },
@@ -606,7 +606,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 40000,
-      "coupon_price": 60,
+      "coupon_price": 1,
       "effect": {
         "bonus": 0.5
       },
@@ -623,7 +623,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 0,
-      "coupon_price": 220,
+      "coupon_price": 1,
       "effect": {
         "bonus": 1.0
       },
@@ -640,7 +640,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 0,
-      "coupon_price": 100,
+      "coupon_price": 1,
       "effect": {
         "bonus": 0.5
       },
@@ -657,7 +657,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 0,
-      "coupon_price": 300,
+      "coupon_price": 1,
       "effect": {
         "bonus": 1.5
       },
@@ -674,7 +674,7 @@
       "type": "consumable",
       "effect_type": "bless_recharge",
       "price": 0,
-      "coupon_price": 1500,
+      "coupon_price": 1,
       "effect": {
         "hours": 10
       },
@@ -704,7 +704,7 @@
       "type": "consumable",
       "effect_type": "online_reward",
       "price": 0,
-      "coupon_price": 350,
+      "coupon_price": 1,
       "effect": {},
       "level_required": 1,
       "tier": 3,
@@ -718,7 +718,7 @@
       "type": "consumable",
       "effect_type": "offline_exp",
       "price": 0,
-      "coupon_price": 220,
+      "coupon_price": 1,
       "effect": {},
       "level_required": 40,
       "tier": 4,
@@ -796,7 +796,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1314,
+      "coupon_price": 1,
       "effect": {
         "reward_equip_key": "base_accessory_rings_7_2",
         "count": 1
@@ -932,7 +932,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 5,
+      "coupon_price": 1,
       "effect": {
         "chest_tier": 1
       },
@@ -948,7 +948,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 10,
+      "coupon_price": 1,
       "effect": {
         "chest_tier": 2
       },
@@ -964,7 +964,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 15,
+      "coupon_price": 1,
       "effect": {
         "chest_tier": 3
       },
@@ -980,7 +980,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 20,
+      "coupon_price": 1,
       "effect": {
         "chest_tier": 4
       },
@@ -996,7 +996,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 30,
+      "coupon_price": 1,
       "effect": {
         "chest_tier": 5
       },
@@ -1012,7 +1012,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 40,
+      "coupon_price": 1,
       "effect": {
         "chest_tier": 6
       },
@@ -1028,7 +1028,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 60,
+      "coupon_price": 1,
       "effect": {
         "chest_tier": 7
       },
@@ -1060,7 +1060,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 50,
+      "coupon_price": 1,
       "effect": {
         "reset_star": 1
       },
@@ -1076,7 +1076,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 80,
+      "coupon_price": 1,
       "effect": {
         "reset_star": 2
       },
@@ -1092,7 +1092,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 150,
+      "coupon_price": 1,
       "effect": {
         "reset_star": 3
       },
@@ -1108,7 +1108,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 300,
+      "coupon_price": 1,
       "effect": {
         "reset_star": 4
       },
@@ -1124,7 +1124,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 600,
+      "coupon_price": 1,
       "effect": {
         "reset_star": 5
       },
@@ -1235,7 +1235,7 @@
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 5,
-      "coupon_price": 5,
+      "coupon_price": 1,
       "effect": {
         "material": true
       },
@@ -1251,7 +1251,7 @@
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 0,
-      "coupon_price": 15,
+      "coupon_price": 1,
       "effect": {
         "material": true
       },
@@ -1267,7 +1267,7 @@
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 0,
-      "coupon_price": 15,
+      "coupon_price": 1,
       "effect": {
         "material": true
       },
@@ -1299,7 +1299,7 @@
       "type": "consumable",
       "effect_type": "shenmo_talisman",
       "price": 0,
-      "coupon_price": 10,
+      "coupon_price": 1,
       "effect": {
         "pill_bonus_pct": 20
       },
@@ -1315,7 +1315,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 150,
+      "coupon_price": 1,
       "effect": {
         "reward": "dichuan_chuansongjuan",
         "count": 10
@@ -1401,7 +1401,7 @@
       "type": "consumable",
       "effect_type": "lucky_box",
       "price": 0,
-      "coupon_price": 20,
+      "coupon_price": 1,
       "effect": {
         "requires_key": "jiefeng_fu"
       },
@@ -1418,7 +1418,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 20,
+      "coupon_price": 1,
       "effect": {
         "unlock": "lucky_box"
       },

@@ -291,7 +291,7 @@
      "exp": 877638
     }
    ],
-   "learn_level": 1,
+   "learn_level": 0,
    "cd": 1,
    "cd_ms": 0,
    "jobs": [
@@ -729,7 +729,7 @@
      "exp": 423638
     }
    ],
-   "learn_level": 4,
+   "learn_level": 3,
    "cd": 10,
    "cd_ms": 6000,
    "jobs": [
@@ -1149,7 +1149,7 @@
      "exp": 794638
     }
    ],
-   "learn_level": 11,
+   "learn_level": 10,
    "cd": 3,
    "cast_time": 2,
    "cd_ms": 0,
@@ -1429,7 +1429,7 @@
      "exp": 352800
     }
    ],
-   "learn_level": 17,
+   "learn_level": 16,
    "cd": 3,
    "persist_minutes": 10,
    "cd_ms": 0,
@@ -1486,7 +1486,7 @@
      "exp": 352800
     }
    ],
-   "learn_level": 35,
+   "learn_level": 34,
    "cd": 12,
    "cd_ms": 6000,
    "jobs": [
@@ -1594,7 +1594,7 @@
      "exp": 361200
     }
    ],
-   "learn_level": 62,
+   "learn_level": 61,
    "hits": 5,
    "cd": 30,
    "cast_time": 6,
@@ -1641,7 +1641,7 @@
      "exp": 500000
     }
    ],
-   "learn_level": 100,
+   "learn_level": 99,
    "cd": 20,
    "cd_ms": 10000,
    "jobs": [
@@ -1684,7 +1684,7 @@
      "exp": 500000
     }
    ],
-   "learn_level": 100,
+   "learn_level": 99,
    "cd": 20,
    "cd_ms": 10000,
    "jobs": [
@@ -2142,7 +2142,7 @@
      "exp": 369600
     }
    ],
-   "learn_level": 24,
+   "learn_level": 23,
    "cd": 16,
    "cd_ms": 8000,
    "jobs": [
@@ -2381,7 +2381,7 @@
      "exp": 1066138
     }
    ],
-   "learn_level": 38,
+   "learn_level": 37,
    "cd": 36,
    "cast_time": 1,
    "cd_ms": 25000,
@@ -2496,7 +2496,7 @@
      "exp": 337200
     }
    ],
-   "learn_level": 46,
+   "learn_level": 45,
    "cd": 90,
    "cd_ms": 60000,
    "jobs": [
@@ -2576,7 +2576,7 @@
      "exp": 361200
     }
    ],
-   "learn_level": 54,
+   "learn_level": 53,
    "cd": 60,
    "cast_time": 4,
    "cd_ms": 60000,
@@ -2674,7 +2674,7 @@
      "exp": 376800
     }
    ],
-   "learn_level": 70,
+   "learn_level": 69,
    "cd": 240,
    "cd_ms": 180000,
    "jobs": [
@@ -2985,7 +2985,7 @@
      "exp": 492138
     }
    ],
-   "learn_level": 30,
+   "learn_level": 29,
    "cd": 12,
    "cd_ms": 6000,
    "jobs": [
@@ -3359,7 +3359,7 @@
      "exp": 369600
     }
    ],
-   "learn_level": 50,
+   "learn_level": 49,
    "cd": 8,
    "cast_time": 2,
    "cd_ms": 4000,
@@ -3440,7 +3440,7 @@
      "exp": 376800
     }
    ],
-   "learn_level": 58,
+   "learn_level": 57,
    "invuln": true,
    "cd": 360,
    "cd_ms": 180000,
@@ -3554,7 +3554,7 @@
      "exp": 328800
     }
    ],
-   "learn_level": 66,
+   "learn_level": 65,
    "cd": 6,
    "cd_ms": 3000,
    "jobs": [

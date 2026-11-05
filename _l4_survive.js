@@ -14,7 +14,7 @@ require('./_test_entry.mjs');
 const E = global.__exp;
 
 const MIX = [['strength', 0.5], ['constitution', 0.3], ['agility', 0.2]];
-const ROUNDS = 400;   // 短程测量：避免探针内升级导致等级差衰减变化，污染产出速率对比
+const ROUNDS = 2500;   // 挂机生存测量（长程，看死亡次数）
 
 function allocPlayer(q, L) {
   for (const slot of E.HERO_SLOTS) {
