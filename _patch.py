@@ -11,6 +11,9 @@ DST = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_test_entry.mjs'
 EXPORTS = [
     'state','DATA','MONSTERS','MON_SKILLS','GEM_ORDER','LOOT','LS','CN_STAT','pageVisible',
     'loadData','newPlayer','refreshStats','computeStats',
+    # 五维手动加点（C 方案）：发放/分配/上限/迁移/洗点
+    'attrPerLevel','attrDims','attrPointsTotal','attrPointsUsed','attrPointsFree','allocAttr','resetAttr',
+    'renderHero',
     'spawnMonster','spawnMonsterGroup','playerSweep','tick','onMonsterDead','rollLoot','genEquip','buildEquip',
     'mineStart','mineTick','mineSettle','mineConf','compassDef','mineExpNeed','mineProgress',
     'gemRecipeFor','doGemRefine','doPotionRefine','itemCount','itemConsume','itemName','gemCount',

@@ -11,7 +11,8 @@ import { fmtNum, titleDmgMult } from './life.js';
 
 // ---------- 经验/属性 ----------
 // ── 五维加点（原版口径）───────────────────────────────────────────────
-// 原版 jobs.json#per_level_points：每级可自由分配的点数（4 职业均为 6）。
+// 原版 jobs.json#per_level_points：每级可自由分配的点数（4 职业均为 5，
+// 报告正文误写 6；Lv30 实测 145 点 = 5×29 也印证数据口径为 5）。
 // 原版 five = base_stats + growth×(level-1) + **玩家手动分配**的点数。
 // 早期版本把这点数自动加到全部 5 个维度（见 smtree.computeStats 旧实现），
 // 属于自研简化：属性因此为原版的 3.1~3.4 倍，且「加点」这条成长主线缺失。
@@ -20,13 +21,19 @@ export function attrPerLevel(job){
   const jc=(DATA.jobs.jobs||[]).find(j=>j.key===job);
   return jc ? (jc.per_level_points||0) : 0;
 }
+// 该职业的五个基础维度（以 jobs.json#base_stats 为唯一来源）
+export function attrDims(p){
+  const jc=(DATA.jobs.jobs||[]).find(j=>j.key===(p&&p.job));
+  return jc ? Object.keys(jc.base_stats||{}) : [];
+}
 export function attrAllocOf(p){
   if(!p.attr) p.attr={};
   return p.attr;
 }
+// 只统计本职业五维上的已用点数，忽略旧档/脏数据里的未知键
 export function attrPointsUsed(p){
   const a=(p&&p.attr)||{}; let n=0;
-  for(const k in a) n += Math.max(0, Math.trunc(a[k]||0));
+  for(const k of attrDims(p)) n += Math.max(0, Math.trunc(a[k]||0));
   return n;
 }
 export function attrPointsTotal(p){
@@ -37,23 +44,29 @@ export function attrPointsFree(p){
   return Math.max(0, attrPointsTotal(p) - attrPointsUsed(p));
 }
 // 分配 n 点到 dim（n<0 即减点/洗点）；返回 {ok,msg}
+// 校验：维度必须属于本职业五维、n 取整后非 0、不得为负、
+// 总量不得超过 per_level_points×(level−1)（上限以数据表为唯一来源）
 export function allocAttr(p, dim, n){
   if(!p) return {ok:false,msg:'无角色'};
   const per=attrPerLevel(p.job);
   if(!per) return {ok:false,msg:'该职业没有可分配的属性点'};
+  if(attrDims(p).indexOf(dim)<0) return {ok:false,msg:'未知的属性维度'};
+  const step=Math.trunc(n||0);
+  if(!step) return {ok:false,msg:'分配点数必须为整数'};
   const a=attrAllocOf(p);
   const cur=Math.trunc(a[dim]||0);
-  const want=cur+(n||0);
+  const want=cur+step;
   if(want<0) return {ok:false,msg:'不能减到负数'};
   if(attrPointsUsed(p)-cur+want > attrPointsTotal(p)) return {ok:false,msg:'可用点数不足'};
   a[dim]=want;
   refreshStats();
   return {ok:true,msg:'属性点已分配'};
 }
-// 全量洗点
+// 全量洗点（保留迁移标记，避免读档后又被当成旧档二次迁移）
 export function resetAttr(p){
   if(!p) return {ok:false,msg:'无角色'};
   p.attr={};
+  p.attr_migrated=true;
   refreshStats();
   return {ok:true,msg:'已洗点'};
 }

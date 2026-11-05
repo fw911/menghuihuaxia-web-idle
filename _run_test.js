@@ -2360,6 +2360,89 @@ function ok(name, cond, extra) {
     ok('需求等级=角色等级可穿（边界）', E.equipItem(it10) !== false && pg.equip.weapon.uid === it10.uid);
   }
 
+  // ---------- 五维加点（C 方案：per_level_points 发放 + 手动分配） ----------
+  {
+    console.log('-- 五维加点（C 方案）--');
+    E.newPlayer('加点', 'warrior');
+    const pa = E.state.player;
+    const jobW = E.DATA.jobs.jobs.find(j => j.key === 'warrior');
+    const per = E.attrPerLevel('warrior');
+    // 报告正文写「每级 6 点」，但 jobs.json#per_level_points=5，且报告自证 Lv30=145=5×29
+    ok('per_level_points 取自 jobs.json = 5（报告正文的 6 为笔误）', per === 5, String(per));
+    ok('维度以 job.base_stats 为唯一来源（五维）', E.attrDims(pa).length === 5, JSON.stringify(E.attrDims(pa)));
+
+    // ① 发放：升级后总点数按公式增长（gainExp 触发，不需要额外结算代码）
+    pa.level = 1; pa.exp = 0; E.refreshStats();
+    E.gainExp(E.expToNext(1));
+    ok('升级 Lv1→2 后自动结算 5 点', pa.level === 2 && E.attrPointsTotal(pa) === 5 && E.attrPointsFree(pa) === 5,
+      'lv=' + pa.level + ' total=' + E.attrPointsTotal(pa) + ' free=' + E.attrPointsFree(pa));
+
+    // ② 基线：Lv30 未加点时属性 = base + growth×(level−1)，不含任何自动加点
+    pa.level = 30; E.refreshStats();
+    const baseStr = jobW.base_stats.strength + jobW.growth.strength * 29;
+    ok('Lv30 总点数 = 5×29 = 145', E.attrPointsTotal(pa) === 145, String(E.attrPointsTotal(pa)));
+    ok('未加点属性 = base+growth×29（无自动加点）', Math.abs(pa._s.attr.strength - baseStr) < 1e-9,
+      pa._s.attr.strength + ' vs ' + baseStr);
+
+    // ③ 加点：写回 + 立即重算派生属性
+    const s0 = pa._s.attr.strength;
+    const r1 = E.allocAttr(pa, 'strength', 1);
+    ok('加点成功且派生属性立即 +1', r1.ok && pa._s.attr.strength === s0 + 1 && pa.attr.strength === 1,
+      r1.msg + ' str=' + pa._s.attr.strength);
+    ok('可用点数同步扣减（145→144）', E.attrPointsFree(pa) === 144, String(E.attrPointsFree(pa)));
+    const rOver = E.allocAttr(pa, 'strength', 145);
+    ok('超出可用点数被拒且不写回', !rOver.ok && pa.attr.strength === 1, rOver.msg);
+    const rBad = E.allocAttr(pa, 'not_a_dim', 1);
+    ok('未知维度被拒', !rBad.ok, rBad.msg);
+    const rFrac = E.allocAttr(pa, 'strength', 1.5);
+    ok('小数按 1 点结算（不产生半点）', rFrac.ok && pa.attr.strength === 2, 'str=' + pa.attr.strength);
+    const rNeg = E.allocAttr(pa, 'strength', -5);
+    ok('减点不能为负', !rNeg.ok && pa.attr.strength === 2, rNeg.msg);
+
+    // ④ 用尽 + 洗点
+    E.allocAttr(pa, 'constitution', E.attrPointsFree(pa));
+    ok('点数用尽后 free=0', E.attrPointsFree(pa) === 0, String(E.attrPointsFree(pa)));
+    ok('用尽后再 +1 被拒', E.allocAttr(pa, 'agility', 1).ok === false);
+    E.renderHero();
+    const heroFull = global.document.getElementById('hero-pane').innerHTML;
+    ok('用尽时 UI 仍显示洗点入口（否则无法重分配）', heroFull.indexOf('data-attr="reset"') >= 0);
+    const rReset = E.resetAttr(pa);
+    ok('洗点归还全部 145 点且派生属性回到基线',
+      rReset.ok && E.attrPointsUsed(pa) === 0 && E.attrPointsFree(pa) === 145
+      && Math.abs(pa._s.attr.strength - baseStr) < 1e-9, rReset.msg);
+
+    // ⑤ 存档往返：attr / attr_migrated 必须落盘并可还原
+    E.allocAttr(pa, 'agility', 7);
+    const pay = E.buildSavePayload();
+    ok('存档包含 attr 与 attr_migrated',
+      pay.attr && pay.attr.agility === 7 && pay.attr_migrated === true, JSON.stringify(pay.attr));
+    E.applySavePayload(JSON.parse(JSON.stringify(pay)));
+    ok('读档还原手动加点（不被迁移覆盖）',
+      E.state.player.attr.agility === 7 && E.attrPointsFree(E.state.player) === 138,
+      'agi=' + E.state.player.attr.agility + ' free=' + E.attrPointsFree(E.state.player));
+
+    // ⑥ 旧档迁移：缺 attr/attr_migrated → 等量转入加点，强度不变
+    const old = JSON.parse(JSON.stringify(pay));
+    delete old.attr; delete old.attr_migrated;
+    E.applySavePayload(old);
+    const po = E.state.player;
+    const baseStr30 = baseStr;   // 同一职业/等级
+    ok('旧档迁移标记置位', po.attr_migrated === true);
+    ok('旧档迁移为每维 145 点（等于旧自动加点总量）',
+      E.attrPointsUsed(po) === 725 && po.attr.strength === 145, 'used=' + E.attrPointsUsed(po));
+    ok('迁移后强度不变（base+growth×29+145）',
+      Math.abs(po._s.attr.strength - (baseStr30 + 145)) < 1e-9,
+      po._s.attr.strength + ' vs ' + (baseStr30 + 145));
+
+    // ⑦ 迁移不清零既有加点：有 attr 但漏了 attr_migrated
+    const mid = JSON.parse(JSON.stringify(pay));
+    delete mid.attr_migrated; mid.attr = { strength: 3 };
+    E.applySavePayload(mid);
+    ok('有手动加点但缺标记 → 保留原值仅补标记（不清零）',
+      E.state.player.attr.strength === 3 && E.state.player.attr_migrated === true,
+      JSON.stringify(E.state.player.attr));
+  }
+
   // 恢复默认页签，避免影响后续/重复运行
   E.state.selTab = 'bag'; E.state.subSel = {};
 

@@ -4,7 +4,7 @@
  */
 import { state } from './state.js';
 import { DATA, EVENT_KEEP, LOG_KEEP, LOG_SHOW, PASSIVES, QIPO_KEYS, SANHUN_KEYS, SLOT_NAME, clamp } from './core.js';
-import { attrPointsFree, expToNext, isXianzhiNow, jobSkills, passiveLevel, skillLvData, skillUpgradeReq, sm, smExpNeed, smMaxLevel, smTier, smTitle, smTransform, whItemName, whMaxLevel, whName, whReqLevel, wuhunExpNeed, wuhunStats, xzCapMin, xzRatePerMin } from './player.js';
+import { attrPointsFree, attrPointsUsed, expToNext, isXianzhiNow, jobSkills, passiveLevel, skillLvData, skillUpgradeReq, sm, smExpNeed, smMaxLevel, smTier, smTitle, smTransform, whItemName, whMaxLevel, whName, whReqLevel, wuhunExpNeed, wuhunStats, xzCapMin, xzRatePerMin } from './player.js';
 import { xyCfg, xyDailyCap, xyGradeDef, xyGrades, xyMatRequirement, xyQuestState, xyRecipeName, xyRecipeTypes, xyStrCap, xyTrialCap } from './quest.js';
 import { refreshStats, smEquipOk, smFmt, smNodeLv, smNodes, smPrereqOk, smSpent, smTierDef } from './smtree.js';
 import { summonTier } from './battle.js';
@@ -310,10 +310,11 @@ export function renderHero(){
   html+='</div>';
   // 基础属性（五维 + 手动加点）
   const _free = attrPointsFree(p);
+  const _used = attrPointsUsed(p);
   const _alloc = p.attr || {};
   html+='<h3>基础属性</h3>';
-  if(_free>0) html+='<div class="muted">可分配点数：<b>'+_free+'</b>'
-    +'<button class="mini" data-attr="reset">洗点</button></div>';
+  html+='<div class="muted">可分配点数：<b>'+_free+'</b>'
+    +(_used>0 ? '<button class="mini" data-attr="reset">洗点</button>' : '')+'</div>';
   html+='<div class="stat-grid">';
   for(const k in s.attr){
     const _ad=Math.trunc(_alloc[k]||0);

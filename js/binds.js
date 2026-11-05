@@ -40,8 +40,9 @@ export function bindAttrClicks(){
              : (a==='reset') ? resetAttr(p)
              : {ok:false,msg:'未知操作'};
     log(r.ok? ('<span class="loot">'+r.msg+'</span>') : ('<span class="dmg">'+r.msg+'</span>'));
-    if(r.ok) saveAuto();
+    if(r.ok) save(true);                      // 立即写回存档（加点丢失的高发场景）
     renderHero();
+    renderHeader();                           // 血量/MP 上限随加点变化
   };
 }
 
