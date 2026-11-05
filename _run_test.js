@@ -1026,10 +1026,9 @@ function ok(name, cond, extra) {
     ok('共 8 个副本', dungs.length === 8, dungs.length + '');
     ok('共 38 个副本首领', dungs.reduce((s, m) => s + E.dungeonBosses(m).length, 0) === 38,
       dungs.reduce((s, m) => s + E.dungeonBosses(m).length, 0) + '');
-    // L3 补齐新增的 5 个高阶副本：进入等级高（95~115）、首领数值取自 v0.91 原版，
-    // 在「原版零加点 + 手动五维」新基线下需 L4 数值回正才能稳定击杀，属平衡范畴（非 L3 数据补齐）。
-    // 此处仅校验「可达 + 首领已配置」，可击杀性留待 UPGRADE_REPORT.md §八 L4 计划。
-    const L4_PENDING = new Set(['guimu_mh', 'xuanyuantai_mh', 'xianghunzhong_mh', 'shihundian', 'wuxingzhen']);
+    // 5 张高阶副本（进入等级 95~115）首领数值取自 v0.91 原版，经 L4 数值回正
+    // （HP/防御下调至约 2000 轮可击杀 + jobs 属性成长/技能伤害回正）后，
+    // 已纳入下方统一「可击杀」断言，不再特判跳过。
     for (const map of dungs) {
       const b = E.dungeonBosses(map)[0];
       const L = (map.enter_level_min || 1) + 5;
@@ -1065,13 +1064,7 @@ function ok(name, cond, extra) {
       Object.assign(E.state.auto, { hp: 85, mp: 30, potion: true, buy: true, zone: false, junk: true, stats: false, rank: false });
       E.state.speed = 4;
       const entered = E.startZone(map.key, null, true, b.key);
-      if (L4_PENDING.has(map.key)) {
-        // L4 数值回正待验证：仅校验「可达 + 首领已配置」（数据补齐层面已达标）
-        ok('L4·' + map.name + '「' + b.name + '」可达且首领已配置', entered && !!b,
-          'entered=' + entered + ' boss=' + (b ? b.name : 'null') + ' enterMin=' + (map.enter_level_min || 1) + ' Lv' + L);
-        E.setIdle(false);
-        continue;
-      }
+      // L4 数值回正已完成：5 张高阶副本首领与原版属性/技能回正一并纳入统一「可击杀」断言。
       const d0 = E.state.sess.deaths || 0;
       E.state.combat = null; E.setIdle(true);
       let won = false, rounds = 0;
@@ -2420,7 +2413,11 @@ function ok(name, cond, extra) {
     q.equip.weapon = mk({}, []); E.refreshStats();
     const hp0 = q._s.max_hp;
     q.equip.weapon = mk({}, [{name:'生命值', suffix:'%', value:20}]); E.refreshStats();
-    ok('生命百分比按 max_hp×(1+pct%) 生效', q._s.max_hp === Math.round(hp0 * 1.2));
+    // 生命值% 应使 max_hp 增加约 20%。引擎对「combat.max_hp+100」取整后再乘 (1+pct%)，
+    // 当 combat.max_hp 为非整数（如 v0.91 战士力量成长 2.5×等级）时，会与「先舍入 hp0 再 ×1.2」
+    // 产生 ≤1 的取整误差，故允许 ±1 容差（实质仍校验 +20% 比例正确）。
+    ok('生命百分比按 max_hp×(1+pct%) 生效', Math.abs(q._s.max_hp - hp0 * 1.2) <= 1,
+      'hp0=' + hp0 + ' hp1=' + q._s.max_hp + ' expect≈' + Math.round(hp0 * 1.2));
 
     // ④ 原版公式助手
     ok('怪物技能 sd = round(max_phys_atk×(mult-1))', E.monsterSkillSd({max_phys_atk:606}, {mult:1.507}) === 307);
