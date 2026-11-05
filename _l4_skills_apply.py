@@ -42,7 +42,8 @@ def process(prof):
     wi = load(wf)
     v0 = load(vf)
     v0map = {s['key']: s for s in v0['active_skills']}
-    st = {'dmg': 0, 'desc': 0, 'mp': 0, 'cd': 0, 'skills': [], 'skip_type': [], 'no_dmg_field': 0}
+    st = {'dmg': 0, 'desc': 0, 'mp': 0, 'cd': 0, 'req_level': 0, 'req_money': 0, 'req_exp': 0,
+           'skills': [], 'skip_type': [], 'no_dmg_field': 0}
     for s in wi['active_skills']:
         v = v0map.get(s['key'])
         if not v:
@@ -76,6 +77,17 @@ def process(prof):
                     wl[i][f] = vl[i][f]
                     st[f] += 1
                     sk += 1
+        # 技能升级条件（requirements：升到下一级所需 level/money/exp），索引与等级对齐
+        # web-idle 侧 level 门槛比 v0.91 高 1、金币/经验成本约为 v0.91 的 0.7 倍
+        ra = s.get('requirements')
+        rb = v.get('requirements')
+        if isinstance(ra, list) and isinstance(rb, list):
+            for i in range(min(len(ra), len(rb))):
+                for f in ('level', 'money', 'exp'):
+                    if f in ra[i] and f in rb[i] and ra[i][f] != rb[i][f]:
+                        ra[i][f] = rb[i][f]
+                        st['req_' + f] += 1
+                        sk += 1
         if sk:
             st['skills'].append('%s(%d级)' % (s.get('name'), sk))
     out = json.dumps(wi, indent=1, ensure_ascii=False)
@@ -98,8 +110,15 @@ def process(prof):
             for f in ('damage', 'mp', 'cd'):
                 if f in wl[i] and f in vl[i] and wl[i][f] != vl[i][f]:
                     bad.append('%s L%d.%s' % (s['key'], i + 1, f))
-    print('%-9s 改动技能=%d 伤害点=%d desc同步=%d mp=%d cd=%d | 类型不同跳过=%d %s'
+        ra = s.get('requirements') or []
+        rb = v.get('requirements') or []
+        for i in range(min(len(ra), len(rb))):
+            for f in ('level', 'money', 'exp'):
+                if f in ra[i] and f in rb[i] and ra[i][f] != rb[i][f]:
+                    bad.append('%s req%d.%s' % (s['key'], i, f))
+    print('%-9s 改动技能=%d 伤害点=%d desc同步=%d mp=%d cd=%d req(level/money/exp)=%d/%d/%d | 类型不同跳过=%d %s'
           % (prof, len(st['skills']), st['dmg'], st['desc'], st['mp'], st['cd'],
+             st['req_level'], st['req_money'], st['req_exp'],
              len(st['skip_type']), st['skip_type'] or ''))
     print('          改动技能明细: %s' % (', '.join(st['skills']) or '无'))
     return bad

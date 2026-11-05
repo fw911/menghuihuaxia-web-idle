@@ -24,7 +24,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 3,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "central",
@@ -37,7 +37,7 @@
             "lvmao_zhizhu"
           ],
           "monster_level": 5,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "ronglin",
@@ -49,7 +49,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 7,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "zhaohuntai",
@@ -60,7 +60,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 7,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -128,7 +128,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 14,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "hu_xiao_gu",
@@ -144,7 +144,7 @@
             "zhangyouezei19"
           ],
           "monster_level": 14,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "tian_sheng_hu",
@@ -155,7 +155,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 16,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "cheng_dong_mi_lin",
@@ -165,7 +165,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 16,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "ji_chang",
@@ -176,7 +176,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 17,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "bei_shan_da_lao",
@@ -187,7 +187,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 19,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "is_dungeon": false,
@@ -242,7 +242,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 22,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "fei_ying_ya",
@@ -253,7 +253,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 25,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "you_lin_ji_zhong_nan_bu",
@@ -264,7 +264,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 25,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "ban_quan_jun_ying_ji_zhong_bei_bu",
@@ -278,7 +278,7 @@
             "shanqingxinshi42"
           ],
           "monster_level": 30,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "feng_gu",
@@ -298,7 +298,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 31,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "yu_chi_zhou_bian",
@@ -311,7 +311,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 33,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "hu_mao_zhai",
@@ -324,7 +324,7 @@
             "humaosishi48"
           ],
           "monster_level": 34,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "tian_lie_shan",
@@ -336,7 +336,7 @@
             "shanqingwuzhe52"
           ],
           "monster_level": 34,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "hua_xia_yi_zhi",
@@ -347,7 +347,7 @@
             "shihun61"
           ],
           "monster_level": 35,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "is_dungeon": false,
@@ -441,7 +441,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 20,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xi_ce_qu_yu",
@@ -454,7 +454,7 @@
             "shanqingkuangtu3"
           ],
           "monster_level": 22,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "chao_ge_shan_er_ceng_ru_kou_fu_jin",
@@ -465,7 +465,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 22,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_bei_bu_qu_yu",
@@ -477,7 +477,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 23,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "shi_shi_zhou_bian",
@@ -491,7 +491,7 @@
             "lijiaoqianxing11"
           ],
           "monster_level": 23,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_jian_pian_you_qu_yu",
@@ -505,7 +505,7 @@
             "lijiaowushi12"
           ],
           "monster_level": 23,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -583,7 +583,7 @@
             "shanqingqiangdao28"
           ],
           "monster_level": 30,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_xia_qu_yu",
@@ -596,7 +596,7 @@
             "shanqinghanfei29"
           ],
           "monster_level": 30,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_ce_zhong_bu_qu_yu",
@@ -608,7 +608,7 @@
             "lijiaoshashou46"
           ],
           "monster_level": 31,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_shang_qu_yu",
@@ -619,7 +619,7 @@
             "shanqinghanfei29"
           ],
           "monster_level": 33,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "mu_shi",
@@ -630,7 +630,7 @@
             "suohunshouwei37"
           ],
           "monster_level": 33,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_shang_qu_yu",
@@ -641,7 +641,7 @@
             "lijiaolieshou42"
           ],
           "monster_level": 33,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "mu_shi_xia_fang_qu_yu",
@@ -653,7 +653,7 @@
             "suohunshiwei36"
           ],
           "monster_level": 34,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -741,7 +741,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 25,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "cun_yao_sen_lin",
@@ -753,7 +753,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 27,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "man_zhang_yu_lin",
@@ -765,7 +765,7 @@
             "zhangyouhuwei_25"
           ],
           "monster_level": 28,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "dan_shui_cun",
@@ -776,7 +776,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 28,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "lv_yi_cun",
@@ -790,7 +790,7 @@
             "lvyiwushi_js"
           ],
           "monster_level": 34,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "tao_jiang_nan_an",
@@ -801,7 +801,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 35,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -884,7 +884,7 @@
             "julinxiyi"
           ],
           "monster_level": 42,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "qiu_feng_gu",
@@ -897,7 +897,7 @@
             "pofengxunlie"
           ],
           "monster_level": 43,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "fen_shui_shi",
@@ -908,7 +908,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 43,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "jiao_mu_gu",
@@ -918,7 +918,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 44,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "duo_ming_gu",
@@ -928,7 +928,7 @@
             "nifengxunlie"
           ],
           "monster_level": 44,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "luo_ye_yu_lin",
@@ -940,7 +940,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 46,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "xi_hun_shi",
@@ -952,7 +952,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 48,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "zhu_mo_zhen",
@@ -964,7 +964,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 49,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "duan_jian_xia",
@@ -975,7 +975,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 52,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -1053,7 +1053,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 52,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "mi_dao_jin_tou",
@@ -1068,7 +1068,7 @@
             "huangyefashi1"
           ],
           "monster_level": 54,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -1119,7 +1119,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 50,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_yi_tong_dao",
@@ -1133,7 +1133,7 @@
           ],
           "boss": [],
           "monster_level": 52,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xia_ceng_ru_kou",
@@ -1145,7 +1145,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 56,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_nan_pian_ting",
@@ -1160,7 +1160,7 @@
           ],
           "boss": [],
           "monster_level": 57,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "mi_dao_chu_kou",
@@ -1173,7 +1173,7 @@
           ],
           "boss": [],
           "monster_level": 57,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -1260,7 +1260,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 64,
-          "explore_target": 50,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -1275,7 +1275,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 66,
-          "explore_target": 50,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -1290,7 +1290,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 66,
-          "explore_target": 50,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -1302,7 +1302,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 66,
-          "explore_target": 50,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -1315,7 +1315,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 69,
-          "explore_target": 50,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -1332,7 +1332,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 69,
-          "explore_target": 50,
+          "explore_target": 35,
           "boss": []
         }
       ],
@@ -1406,7 +1406,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 71,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "gu_mu_lin",
@@ -1421,7 +1421,7 @@
             "maominwushi"
           ],
           "monster_level": 74,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "guo_yun_ti",
@@ -1431,7 +1431,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 77,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "yao_chi",
@@ -1443,7 +1443,7 @@
             "xiangwucike"
           ],
           "monster_level": 82,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "fu_xiao_shan",
@@ -1456,7 +1456,7 @@
             "xiangwuwushi"
           ],
           "monster_level": 83,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "bu_zhou_shan",
@@ -1469,7 +1469,7 @@
             "yimushushi"
           ],
           "monster_level": 84,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "kun_lun_xu_wai",
@@ -1484,7 +1484,7 @@
             "yanweiwushi"
           ],
           "monster_level": 85,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -1577,7 +1577,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 68,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "changwucun",
@@ -1589,7 +1589,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 70,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "yudaihe",
@@ -1599,7 +1599,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 71,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "baizhulin",
@@ -1609,7 +1609,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 74,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "xinghanghuisuo",
@@ -1620,7 +1620,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 74,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "qiancaoya",
@@ -1643,7 +1643,7 @@
             "huangyejisi"
           ],
           "monster_level": 75,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "baihuaya",
@@ -1653,7 +1653,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 75,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "lieyanya",
@@ -1663,7 +1663,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 77,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "wangyueyuan",
@@ -1674,7 +1674,7 @@
             "wuyingmeihuo"
           ],
           "monster_level": 78,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -1757,7 +1757,7 @@
             "jry_kuangtu"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "mu_yun_ling",
@@ -1769,7 +1769,7 @@
             "jry_youxia"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "cai_shi_chang",
@@ -1781,7 +1781,7 @@
             "ezhaoxunlie"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "huang_ji_lin",
@@ -1794,7 +1794,7 @@
             "xuehan"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "ju_ren_ye_ye_wai",
@@ -1807,7 +1807,7 @@
             "eyi"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "lin_yuan_ya",
@@ -1819,7 +1819,7 @@
             "manghan"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "luo_ri_ya",
@@ -1832,7 +1832,7 @@
             "huanxueshanbao"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "ju_ren_ye_shen_chu",
@@ -1845,7 +1845,7 @@
             "shixuexiniao"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -1920,7 +1920,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 64,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_ce_tong_dao",
@@ -1931,7 +1931,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 66,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "nan_bu_ru_kou",
@@ -1942,7 +1942,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 66,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_yi",
@@ -1953,7 +1953,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 67,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xi_nan_jiao",
@@ -1964,7 +1964,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 67,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "sha_xue_dong",
@@ -1977,7 +1977,7 @@
             "xiongtu66"
           ],
           "monster_level": 67,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_shang_jiao",
@@ -1990,7 +1990,7 @@
             "shixueetu66"
           ],
           "monster_level": 68,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -2090,7 +2090,7 @@
             "mantu70"
           ],
           "monster_level": 71,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xue_chi",
@@ -2103,7 +2103,7 @@
             "baoyixiangwu71"
           ],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "nan_bu_ru_kou",
@@ -2114,7 +2114,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_shang_jiao",
@@ -2130,7 +2130,7 @@
             "moyan72"
           ],
           "monster_level": 73,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "jin_di",
@@ -2143,7 +2143,7 @@
             "kuangtushouwei72"
           ],
           "monster_level": 73,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xi_nan_tong_dao",
@@ -2156,7 +2156,7 @@
             "shangaomowei71"
           ],
           "monster_level": 73,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -2265,7 +2265,7 @@
             "tiejiaoxuewei77"
           ],
           "monster_level": 77,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_ce",
@@ -2278,7 +2278,7 @@
             "yanweixuewei78"
           ],
           "monster_level": 78,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_shang_bu",
@@ -2289,7 +2289,7 @@
             "juetiewei77"
           ],
           "monster_level": 78,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_xia_jiao",
@@ -2302,7 +2302,7 @@
             "lizhaoxuewei77"
           ],
           "monster_level": 78,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_shu_di_dai",
@@ -2317,7 +2317,7 @@
             "juetiewei78"
           ],
           "monster_level": 79,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_ce",
@@ -2332,7 +2332,7 @@
             "yanweixuewei79"
           ],
           "monster_level": 80,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -2437,7 +2437,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 88,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -2454,7 +2454,7 @@
             "chishuihuwei"
           ],
           "monster_level": 88,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -2469,7 +2469,7 @@
             "huangyexuewei"
           ],
           "monster_level": 88,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -2483,7 +2483,7 @@
             "luohun3"
           ],
           "monster_level": 93,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -2501,7 +2501,7 @@
             "shihunxiushi"
           ],
           "monster_level": 94,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         }
       ],
@@ -2607,7 +2607,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 13,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "luanfengang",
@@ -2617,7 +2617,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 15,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "banyuezhaoze",
@@ -2628,7 +2628,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 17,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "sanchaokou",
@@ -2639,7 +2639,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 19,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "huangnigang",
@@ -2654,7 +2654,7 @@
             "shangaojisi"
           ],
           "monster_level": 21,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -2667,7 +2667,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 24,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -2740,7 +2740,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 76,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "lin_hai_gang_shao",
@@ -2754,7 +2754,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 76,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "duan_bi_gu",
@@ -2770,7 +2770,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 79,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "xing_keng",
@@ -2781,7 +2781,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 79,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "gui_yun_feng",
@@ -2794,7 +2794,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 80,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "jue_ling_guan",
@@ -2807,7 +2807,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 81,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "chu_shan",
@@ -2819,7 +2819,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 82,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "duan_ya",
@@ -2856,7 +2856,7 @@
             "dbg_305__xing_gui_cun"
           ],
           "monster_level": 82,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "qian_jue_ling",
@@ -2869,7 +2869,7 @@
             "dbg_341__qian_jue_ling"
           ],
           "monster_level": 85,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -2959,7 +2959,7 @@
             "shixuemaoyao64"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "wangqingpo",
@@ -2979,7 +2979,7 @@
             "xuelingshuyao64"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "xianghunzhong",
@@ -2996,7 +2996,7 @@
             "xianghunzhongshouwei65",
             "lvyishushi70"
           ],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "baicaoyuan",
@@ -3011,7 +3011,7 @@
             "nanhaitongling69"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "donghepingyuan",
@@ -3025,7 +3025,7 @@
             "moxueliebao66"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "nanhaixingying",
@@ -3035,7 +3035,7 @@
           "elite_monsters": [
             "nanhaijingbing69"
           ],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "donghegu",
@@ -3048,7 +3048,7 @@
             "hunisanbing70"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "lvyicunluo",
@@ -3066,7 +3066,7 @@
             "lijiaobaobiao73",
             "lvyilieshou70"
           ],
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -3154,7 +3154,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 35,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "yinmingshan",
@@ -3167,7 +3167,7 @@
             "shangaoshiwei"
           ],
           "monster_level": 38,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "dongtaobei",
@@ -3177,7 +3177,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 39,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "manniuye",
@@ -3187,7 +3187,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 41,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "bingleihu",
@@ -3202,7 +3202,7 @@
             "tiejiadaoke"
           ],
           "monster_level": 45,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "xuanyuanyizhi",
@@ -3214,7 +3214,7 @@
             "guimei"
           ],
           "monster_level": 45,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "daxueshan",
@@ -3225,7 +3225,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 45,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "hushenling",
@@ -3235,7 +3235,7 @@
             "yimuanwei"
           ],
           "monster_level": 45,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -3330,7 +3330,7 @@
           "elite_monsters": [
             "xyt_30208"
           ],
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "xyt_z2",
@@ -3343,7 +3343,7 @@
             "xyt_30202",
             "xyt_30209"
           ],
-          "explore_target": 100
+          "explore_target": 15
         },
         {
           "key": "xyt_z2b",
@@ -3357,7 +3357,7 @@
           "elite_monsters": [
             "xyt_30232"
           ],
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "xyt_z3",
@@ -3368,7 +3368,7 @@
             "xyt_30213",
             "xyt_30214"
           ],
-          "explore_target": 100
+          "explore_target": 15
         },
         {
           "key": "xyt_z3b",
@@ -3381,7 +3381,7 @@
           "elite_monsters": [
             "xyt_30234"
           ],
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "xyt_z4",
@@ -3392,7 +3392,7 @@
             "xyt_30228",
             "xyt_30236"
           ],
-          "explore_target": 100
+          "explore_target": 15
         },
         {
           "key": "xyt_z4b",
@@ -3403,7 +3403,7 @@
             "xyt_30250"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "xyt_z5",
@@ -3414,7 +3414,7 @@
             "xyt_30240",
             "xyt_30242"
           ],
-          "explore_target": 100
+          "explore_target": 15
         }
       ],
       "enter_level_min": 35,
@@ -3476,7 +3476,7 @@
             "mohunhuayao85"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "yuluhu",
@@ -3488,7 +3488,7 @@
             "huanxuexiniao88"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "lvyijunying",
@@ -3502,7 +3502,7 @@
           "elite_monsters": [
             "lvyijinwei91"
           ],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "bingpogudao",
@@ -3515,7 +3515,7 @@
           "elite_monsters": [
             "hushamobing91"
           ],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "cangfangling",
@@ -3529,7 +3529,7 @@
             "tiewei91",
             "tiewei93"
           ],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "anyuecaoyuan",
@@ -3542,7 +3542,7 @@
           "elite_monsters": [
             "tieyingsuohun94"
           ],
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -3633,7 +3633,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 67,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -3650,7 +3650,7 @@
             "yimuwushi71"
           ],
           "monster_level": 70,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -3663,7 +3663,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 70,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -3678,7 +3678,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 71,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -3693,7 +3693,7 @@
             "zhangyouyongshi73"
           ],
           "monster_level": 72,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -3720,7 +3720,7 @@
             "zhangyouzhanglao74"
           ],
           "monster_level": 73,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -3733,7 +3733,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 74,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -3745,7 +3745,7 @@
             "zhangyoushushi78"
           ],
           "monster_level": 78,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         },
         {
@@ -3764,7 +3764,7 @@
             "zhangguzhanglao79"
           ],
           "monster_level": 78,
-          "explore_target": 100,
+          "explore_target": 35,
           "boss": []
         }
       ],
@@ -3852,7 +3852,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 75,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_nan_jiao",
@@ -3866,7 +3866,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 75,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_ce_hui_lang",
@@ -3879,7 +3879,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 76,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_yi_lang_dao",
@@ -3892,7 +3892,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 77,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_yi_bei_tong_dao",
@@ -3906,7 +3906,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 77,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "shi_mi_dong",
@@ -3918,7 +3918,7 @@
           ],
           "boss": [],
           "monster_level": 77,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_shu_di_dai",
@@ -3932,7 +3932,7 @@
           ],
           "boss": [],
           "monster_level": 77,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "bei_yi_tong_dao",
@@ -3945,7 +3945,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 78,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_shang_jiao",
@@ -3958,7 +3958,7 @@
           ],
           "boss": [],
           "monster_level": 79,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -4041,7 +4041,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 83,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_yi_tong_dao",
@@ -4055,7 +4055,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 84,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_shang_jiao",
@@ -4068,7 +4068,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 85,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "bei_ce_hui_lang",
@@ -4080,7 +4080,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 86,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "fu_she_shen_tan",
@@ -4093,7 +4093,7 @@
           ],
           "boss": [],
           "monster_level": 87,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_yi_chao_xue",
@@ -4105,7 +4105,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 87,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_ce_shi_shi",
@@ -4118,7 +4118,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 87,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "an_tian_shen_tan",
@@ -4131,7 +4131,7 @@
           ],
           "boss": [],
           "monster_level": 88,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -4238,7 +4238,7 @@
             "shanzei"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "qing_yun_ling",
@@ -4251,7 +4251,7 @@
             "shanzhaitoumu"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "da_yan_guan",
@@ -4263,7 +4263,7 @@
             "shituanweishi"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "bai_mu_hu",
@@ -4275,7 +4275,7 @@
           "elite_monsters": [
             "xunlujinzu"
           ],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "ning_hai_zhou_ye_wai",
@@ -4289,7 +4289,7 @@
             "nanhaishizu"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "san_ye_hu",
@@ -4302,7 +4302,7 @@
             "tierenchong"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "ju_shou_shan",
@@ -4313,7 +4313,7 @@
             "tiezhaomaoyao"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "nei_hai_hu",
@@ -4326,7 +4326,7 @@
             "nanhaiyouyong"
           ],
           "elite_monsters": [],
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "is_dungeon": false,
@@ -4401,7 +4401,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 51,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "luan_shi_gang",
@@ -4414,7 +4414,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 54,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "dong_yi_cun",
@@ -4426,7 +4426,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 55,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "huang_lin",
@@ -4438,7 +4438,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 55,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "shan_jiao_cun",
@@ -4450,7 +4450,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 57,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "huang_sha_ling",
@@ -4461,7 +4461,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 58,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "ku_mu_lin",
@@ -4474,7 +4474,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 58,
-          "explore_target": 100
+          "explore_target": 35
         },
         {
           "key": "chi_yi_ling",
@@ -4486,7 +4486,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 62,
-          "explore_target": 100
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -4569,7 +4569,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 51,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_ce_mu_dao",
@@ -4581,7 +4581,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 52,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_ce_mu_dao",
@@ -4592,7 +4592,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 52,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "bei_ce_mu_dao",
@@ -4605,7 +4605,7 @@
             "daodouzei1"
           ],
           "monster_level": 53,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_bei_mu_shi",
@@ -4618,7 +4618,7 @@
             "mojinzei3"
           ],
           "monster_level": 54,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "mi_ku",
@@ -4630,7 +4630,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 55,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -4705,7 +4705,7 @@
             "dongfuwushi"
           ],
           "monster_level": 90,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "hui_lang",
@@ -4717,7 +4717,7 @@
             "jupu"
           ],
           "monster_level": 90,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_xin_qu_yu",
@@ -4729,7 +4729,7 @@
             "tiebi"
           ],
           "monster_level": 92,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_ce_qu_yu",
@@ -4742,7 +4742,7 @@
             "moyi"
           ],
           "monster_level": 93,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_xia_qu_yu",
@@ -4752,7 +4752,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 93,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_xia_qu_yu",
@@ -4764,7 +4764,7 @@
             "hujuntongling"
           ],
           "monster_level": 93,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "cang_fang",
@@ -4774,7 +4774,7 @@
             "tianzunjinwei"
           ],
           "monster_level": 94,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "di_bu_da_ting",
@@ -4786,7 +4786,7 @@
             "juhui"
           ],
           "monster_level": 94,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "no_safe_zone": true,
@@ -4901,7 +4901,7 @@
             "wanglingguiyuan1"
           ],
           "monster_level": 58,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "bei_bu",
@@ -4914,7 +4914,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 61,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_bei_jiao",
@@ -4927,7 +4927,7 @@
             "yanweijinwei1"
           ],
           "monster_level": 61,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "di_tan",
@@ -4942,7 +4942,7 @@
             "daomujuren2"
           ],
           "monster_level": 61,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "tian_tan",
@@ -4954,7 +4954,7 @@
             "yanweijinwei2"
           ],
           "monster_level": 62,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xi_bei_jiao",
@@ -4974,7 +4974,7 @@
             "mojinjuren2"
           ],
           "monster_level": 64,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -5057,7 +5057,7 @@
             "wanglingjuxi1"
           ],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "bei_bu",
@@ -5071,7 +5071,7 @@
           ],
           "boss": [],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_yi",
@@ -5091,7 +5091,7 @@
             "wanglingfashi2"
           ],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_yi",
@@ -5107,7 +5107,7 @@
           ],
           "boss": [],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xi_nan_jiao",
@@ -5123,7 +5123,7 @@
           ],
           "boss": [],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "nan_bu",
@@ -5138,7 +5138,7 @@
           ],
           "boss": [],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_nan_jiao",
@@ -5153,7 +5153,7 @@
             "xunliewushi_22"
           ],
           "monster_level": 72,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -5247,7 +5247,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 35,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_xia_jiao",
@@ -5260,7 +5260,7 @@
             "jurenshashou36"
           ],
           "monster_level": 37,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhao_hun_dian",
@@ -5271,7 +5271,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 37,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_ce_tong_dao",
@@ -5282,7 +5282,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 37,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_shu_di_dai",
@@ -5296,7 +5296,7 @@
             "juduzhizhu35"
           ],
           "monster_level": 37,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_ce_ru_kou",
@@ -5307,7 +5307,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 38,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [],
@@ -5375,7 +5375,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 46,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_bu_da_dian",
@@ -5387,7 +5387,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 47,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_shang_jiao",
@@ -5399,7 +5399,7 @@
             "mojiadaoke47"
           ],
           "monster_level": 48,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_ce_tong_dao",
@@ -5411,7 +5411,7 @@
           ],
           "elite_monsters": [],
           "monster_level": 50,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_shang_jiao",
@@ -5423,7 +5423,7 @@
             "moxuedaoke49"
           ],
           "monster_level": 50,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "bei_bu_tong_dao",
@@ -5434,7 +5434,7 @@
             "molingdaoke51"
           ],
           "monster_level": 51,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -5535,7 +5535,7 @@
             "jinjiashashou57"
           ],
           "monster_level": 57,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_nan_jiao",
@@ -5550,7 +5550,7 @@
             "lijiaotiewei57"
           ],
           "monster_level": 58,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhan_hun_dian",
@@ -5565,7 +5565,7 @@
             "moyingdaoke57"
           ],
           "monster_level": 59,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_bei_jiao",
@@ -5580,7 +5580,7 @@
             "jinjiashashou60"
           ],
           "monster_level": 60,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "jubao_spots": [
@@ -5721,7 +5721,7 @@
             "anyinglvyi"
           ],
           "monster_level": 66,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_nan_ce",
@@ -5734,7 +5734,7 @@
             "weizhang"
           ],
           "monster_level": 66,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xi_nan_ce",
@@ -5748,7 +5748,7 @@
             "cedianshouhu_167"
           ],
           "monster_level": 67,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_yang_zhu_ting",
@@ -5762,7 +5762,7 @@
             "dadianhuwei_167"
           ],
           "monster_level": 67,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xi_bei_ce",
@@ -5776,7 +5776,7 @@
             "hufa_170"
           ],
           "monster_level": 70,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "theme": "mohua",
@@ -5896,7 +5896,7 @@
             "xunyaoyimu"
           ],
           "monster_level": 84,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_shang_qu_yu",
@@ -5909,7 +5909,7 @@
             "yaoshi"
           ],
           "monster_level": 85,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_shang_jiao",
@@ -5921,7 +5921,7 @@
             "anyingdaozei"
           ],
           "monster_level": 85,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_zuo_bu",
@@ -5933,7 +5933,7 @@
             "huanyingsuohun_285"
           ],
           "monster_level": 86,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_ce",
@@ -5945,7 +5945,7 @@
             "tieyixiangwu_286_2"
           ],
           "monster_level": 87,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "shen_nong_dian",
@@ -5956,7 +5956,7 @@
             "jiyingsuohun"
           ],
           "monster_level": 87,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zuo_shang_jiao",
@@ -5967,7 +5967,7 @@
             "anyinglingyi"
           ],
           "monster_level": 88,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "theme": "mohua",
@@ -6019,7 +6019,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 92,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_shang_jiao",
@@ -6031,7 +6031,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 92,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_shang_bu",
@@ -6044,7 +6044,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 93,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_zuo_bu",
@@ -6057,7 +6057,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 93,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "hai_di_wei_suo",
@@ -6072,7 +6072,7 @@
           ],
           "boss": [],
           "monster_level": 95,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_du_hai_kou",
@@ -6086,7 +6086,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 97,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -6180,7 +6180,7 @@
           ],
           "boss": [],
           "monster_level": 102,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "bei_bu_hai_yu",
@@ -6192,7 +6192,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 103,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xuan_gui_hai_yu",
@@ -6205,7 +6205,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 104,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "jiao_yi_ju_dian",
@@ -6217,7 +6217,7 @@
           ],
           "boss": [],
           "monster_level": 105,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "you_yi_shui_yu",
@@ -6231,7 +6231,7 @@
           ],
           "boss": [],
           "monster_level": 106,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "han_mo_bao_lei",
@@ -6248,7 +6248,7 @@
           ],
           "boss": [],
           "monster_level": 107,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -6348,7 +6348,7 @@
           ],
           "boss": [],
           "monster_level": 110,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "hai_di_fei_xu",
@@ -6361,7 +6361,7 @@
           ],
           "boss": [],
           "monster_level": 113,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xi_nan_jiao",
@@ -6373,7 +6373,7 @@
           ],
           "boss": [],
           "monster_level": 114,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "zhong_yang_shui_yu",
@@ -6391,7 +6391,7 @@
           ],
           "boss": [],
           "monster_level": 115,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "xiong_yu_hai_gu",
@@ -6405,7 +6405,7 @@
           ],
           "boss": [],
           "monster_level": 116,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_bu_an_liu",
@@ -6417,7 +6417,7 @@
           ],
           "boss": [],
           "monster_level": 116,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "shui_fu",
@@ -6432,7 +6432,7 @@
           ],
           "boss": [],
           "monster_level": 118,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -6546,7 +6546,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 118,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "dong_nan_hai_yu",
@@ -6557,7 +6557,7 @@
           "elite_monsters": [],
           "boss": [],
           "monster_level": 119,
-          "explore_target": 50
+          "explore_target": 35
         },
         {
           "key": "bei_bu_hai_yu",
@@ -6571,7 +6571,7 @@
           ],
           "boss": [],
           "monster_level": 120,
-          "explore_target": 50
+          "explore_target": 35
         }
       ],
       "boss_zone": {
@@ -6655,7 +6655,7 @@
             "guimu_30006"
           ],
           "monster_level": 22,
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "gm_z2",
@@ -6672,7 +6672,7 @@
             "guimu_30013"
           ],
           "monster_level": 22,
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "gm_z3",
@@ -6689,7 +6689,7 @@
             "guimu_30021"
           ],
           "monster_level": 22,
-          "explore_target": 100
+          "explore_target": 15
         },
         {
           "key": "gm_z4",
@@ -6706,7 +6706,7 @@
             "guimu_30029"
           ],
           "monster_level": 23,
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "gm_z5",
@@ -6723,7 +6723,7 @@
             "guimu_30036"
           ],
           "monster_level": 23,
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "gm_z6",
@@ -6739,7 +6739,7 @@
             "guimu_30043"
           ],
           "monster_level": 23,
-          "explore_target": 100
+          "explore_target": 15
         },
         {
           "key": "gm_z7",
@@ -6755,7 +6755,7 @@
             "guimu_30050"
           ],
           "monster_level": 24,
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "gm_z8",
@@ -6771,7 +6771,7 @@
             "guimu_30058"
           ],
           "monster_level": 25,
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "gm_z9",
@@ -6787,7 +6787,7 @@
             "guimu_30065"
           ],
           "monster_level": 26,
-          "explore_target": 100
+          "explore_target": 15
         }
       ],
       "dungeon_bosses": [
@@ -6842,7 +6842,7 @@
             "xhz_30810",
             "xhz_30811"
           ],
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "xhz_z2",
@@ -6858,7 +6858,7 @@
             "xhz_30812",
             "xhz_30813"
           ],
-          "explore_target": 100
+          "explore_target": 15
         },
         {
           "key": "xhz_z3",
@@ -6872,7 +6872,7 @@
             "xhz_30806",
             "xhz_30816"
           ],
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "xhz_z4",
@@ -6889,7 +6889,7 @@
             "xhz_30830",
             "xhz_821"
           ],
-          "explore_target": 100
+          "explore_target": 15
         },
         {
           "key": "xhz_z5",
@@ -6902,7 +6902,7 @@
             "xhz_30820",
             "xhz_30823"
           ],
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "xhz_z6",
@@ -6914,7 +6914,7 @@
             "xhz_30817",
             "xhz_30832"
           ],
-          "explore_target": 100
+          "explore_target": 15
         },
         {
           "key": "xhz_z6b",
@@ -6927,7 +6927,7 @@
           "elite_monsters": [
             "xhz_30834"
           ],
-          "explore_target": 100
+          "explore_target": 10
         },
         {
           "key": "xhz_z7",
@@ -6938,7 +6938,7 @@
             "xhz_30835",
             "xhz_30808"
           ],
-          "explore_target": 100
+          "explore_target": 15
         }
       ],
       "dungeon_bosses": [

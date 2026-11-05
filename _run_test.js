@@ -1100,7 +1100,8 @@ function ok(name, cond, extra) {
     const bj = E.mapByKey('beijun');
     const z0 = bj.zones[0];
     const T = E.zoneTarget(bj, z0);
-    ok('区域带 explore_target = 100（普通地图）', T === 100, String(T));
+    // 探索门槛已回正 v0.91（普通区 explore_target = 35；web-idle 原为 100/50，探索被拖慢 2~3 倍）
+    ok('区域带 explore_target = 35（普通地图，v0.91 口径）', T === 35, String(T));
     ok('新号该区域未探索', !E.zoneExplored(bj.key, z0.key));
     ok('新号该区域击杀数为 0', E.zoneKillCount(bj.key, z0.key) === 0);
     ok('新号已探索区域数 0', E.zoneExploredCount(bj) === 0);

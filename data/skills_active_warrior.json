@@ -161,124 +161,124 @@
    ],
    "requirements": [
     {
-     "level": 1,
+     "level": 0,
      "money": 0,
      "exp": 0
     },
     {
-     "level": 6,
-     "money": 60,
-     "exp": 50
+     "level": 5,
+     "money": 98,
+     "exp": 79
     },
     {
-     "level": 11,
-     "money": 95,
-     "exp": 81
+     "level": 9,
+     "money": 400,
+     "exp": 312
+    },
+    {
+     "level": 13,
+     "money": 1080,
+     "exp": 816
     },
     {
      "level": 17,
-     "money": 149,
-     "exp": 131
+     "money": 2160,
+     "exp": 1632
     },
     {
-     "level": 22,
-     "money": 235,
-     "exp": 212
+     "level": 21,
+     "money": 4040,
+     "exp": 3012
     },
     {
-     "level": 27,
-     "money": 371,
-     "exp": 344
+     "level": 25,
+     "money": 7100,
+     "exp": 5256
     },
     {
-     "level": 32,
-     "money": 586,
-     "exp": 557
+     "level": 29,
+     "money": 11490,
+     "exp": 8436
+    },
+    {
+     "level": 33,
+     "money": 17500,
+     "exp": 12792
     },
     {
      "level": 37,
-     "money": 924,
-     "exp": 903
+     "money": 25400,
+     "exp": 18504
     },
     {
-     "level": 43,
-     "money": 1458,
-     "exp": 1462
+     "level": 42,
+     "money": 38800,
+     "exp": 28320
     },
     {
-     "level": 48,
-     "money": 2300,
-     "exp": 2369
+     "level": 47,
+     "money": 57200,
+     "exp": 41520
     },
     {
-     "level": 53,
-     "money": 3627,
-     "exp": 3837
+     "level": 52,
+     "money": 80300,
+     "exp": 58200
     },
     {
-     "level": 58,
-     "money": 5722,
-     "exp": 6214
+     "level": 57,
+     "money": 108300,
+     "exp": 78360
     },
     {
-     "level": 63,
-     "money": 9025,
-     "exp": 10065
+     "level": 62,
+     "money": 142000,
+     "exp": 103080
     },
     {
-     "level": 68,
-     "money": 14236,
-     "exp": 16303
+     "level": 67,
+     "money": 183000,
+     "exp": 132120
     },
     {
-     "level": 74,
-     "money": 22456,
-     "exp": 26406
+     "level": 72,
+     "money": 228000,
+     "exp": 164400
     },
     {
-     "level": 79,
-     "money": 35421,
-     "exp": 42771
+     "level": 77,
+     "money": 277000,
+     "exp": 199680
     },
     {
-     "level": 84,
-     "money": 55873,
-     "exp": 69277
+     "level": 82,
+     "money": 332000,
+     "exp": 238800
     },
     {
-     "level": 89,
-     "money": 88133,
-     "exp": 112210
+     "level": 87,
+     "money": 388000,
+     "exp": 279600
     },
     {
-     "level": 94,
-     "money": 139019,
-     "exp": 181749
+     "level": 92,
+     "money": 444000,
+     "exp": 320400
     },
     {
-     "level": 100,
-     "money": 219285,
-     "exp": 294384
+     "level": 97,
+     "money": 502000,
+     "exp": 361200
     },
     {
-     "level": 105,
-     "money": 345896,
-     "exp": 476822
+     "level": 102,
+     "money": 618900,
+     "exp": 385138
     },
     {
-     "level": 110,
-     "money": 545610,
-     "exp": 772320
-    },
-    {
-     "level": 115,
-     "money": 860564,
-     "exp": 1218216
-    },
-    {
-     "level": 120,
-     "money": 1357690,
-     "exp": 1921780
+     "level": 107,
+     "money": 681900,
+     "exp": 537638
     }
    ],
    "learn_level": 1,
@@ -604,119 +604,119 @@
    ],
    "requirements": [
     {
-     "level": 4,
-     "money": 21,
-     "exp": 20
+     "level": 3,
+     "money": 37,
+     "exp": 32
     },
     {
-     "level": 6,
-     "money": 32,
-     "exp": 31
+     "level": 7,
+     "money": 210,
+     "exp": 166
     },
     {
-     "level": 8,
-     "money": 49,
-     "exp": 47
+     "level": 11,
+     "money": 680,
+     "exp": 516
     },
     {
-     "level": 10,
-     "money": 75,
-     "exp": 72
+     "level": 15,
+     "money": 1530,
+     "exp": 1164
     },
     {
-     "level": 12,
-     "money": 113,
-     "exp": 109
+     "level": 19,
+     "money": 2930,
+     "exp": 2196
     },
     {
-     "level": 14,
-     "money": 173,
-     "exp": 167
+     "level": 23,
+     "money": 5420,
+     "exp": 4020
     },
     {
-     "level": 16,
-     "money": 265,
-     "exp": 256
+     "level": 27,
+     "money": 9110,
+     "exp": 6708
     },
     {
-     "level": 18,
-     "money": 405,
-     "exp": 391
+     "level": 31,
+     "money": 14280,
+     "exp": 10464
     },
     {
-     "level": 20,
-     "money": 620,
-     "exp": 599
+     "level": 35,
+     "money": 21200,
+     "exp": 15468
     },
     {
-     "level": 22,
-     "money": 948,
-     "exp": 916
-    },
-    {
-     "level": 24,
-     "money": 1450,
-     "exp": 1401
-    },
-    {
-     "level": 26,
-     "money": 2217,
-     "exp": 2142
-    },
-    {
-     "level": 28,
-     "money": 3391,
-     "exp": 3276
-    },
-    {
-     "level": 30,
-     "money": 5185,
-     "exp": 5010
-    },
-    {
-     "level": 32,
-     "money": 7931,
-     "exp": 7663
-    },
-    {
-     "level": 34,
-     "money": 12130,
-     "exp": 11720
-    },
-    {
-     "level": 36,
-     "money": 18552,
-     "exp": 17925
-    },
-    {
-     "level": 38,
-     "money": 28375,
-     "exp": 27415
-    },
-    {
-     "level": 40,
-     "money": 43397,
-     "exp": 41929
-    },
-    {
-     "level": 42,
-     "money": 66371,
-     "exp": 64127
+     "level": 39,
+     "money": 30100,
+     "exp": 21924
     },
     {
      "level": 44,
-     "money": 101509,
-     "exp": 98076
+     "money": 45600,
+     "exp": 33240
     },
     {
-     "level": 46,
-     "money": 155250,
-     "exp": 150000
+     "level": 49,
+     "money": 65800,
+     "exp": 47760
     },
     {
-     "level": 48,
-     "money": 237890,
-     "exp": 230000
+     "level": 54,
+     "money": 90900,
+     "exp": 65880
+    },
+    {
+     "level": 59,
+     "money": 120900,
+     "exp": 87360
+    },
+    {
+     "level": 64,
+     "money": 158000,
+     "exp": 114240
+    },
+    {
+     "level": 69,
+     "money": 200000,
+     "exp": 144720
+    },
+    {
+     "level": 74,
+     "money": 247000,
+     "exp": 178080
+    },
+    {
+     "level": 79,
+     "money": 298000,
+     "exp": 214800
+    },
+    {
+     "level": 84,
+     "money": 354000,
+     "exp": 255600
+    },
+    {
+     "level": 89,
+     "money": 410000,
+     "exp": 295200
+    },
+    {
+     "level": 94,
+     "money": 468000,
+     "exp": 337200
+    },
+    {
+     "level": 99,
+     "money": 525000,
+     "exp": 376800
+    },
+    {
+     "level": 104,
+     "money": 641400,
+     "exp": 423638
     }
    ],
    "learn_level": 4,
@@ -991,99 +991,99 @@
    ],
    "requirements": [
     {
-     "level": 11,
-     "money": 290,
-     "exp": 260
+     "level": 10,
+     "money": 530,
+     "exp": 408
     },
     {
      "level": 14,
-     "money": 410,
-     "exp": 367
-    },
-    {
-     "level": 16,
-     "money": 578,
-     "exp": 518
+     "money": 1260,
+     "exp": 948
     },
     {
      "level": 18,
-     "money": 817,
-     "exp": 732
+     "money": 2470,
+     "exp": 1860
     },
     {
-     "level": 21,
-     "money": 1155,
-     "exp": 1034
-    },
-    {
-     "level": 24,
-     "money": 1630,
-     "exp": 1460
+     "level": 22,
+     "money": 4600,
+     "exp": 3420
     },
     {
      "level": 26,
-     "money": 2301,
-     "exp": 2061
+     "money": 8060,
+     "exp": 5952
     },
     {
-     "level": 28,
-     "money": 3251,
-     "exp": 2911
+     "level": 30,
+     "money": 12830,
+     "exp": 9408
     },
     {
-     "level": 31,
-     "money": 4590,
-     "exp": 4110
+     "level": 35,
+     "money": 21200,
+     "exp": 15468
     },
     {
-     "level": 34,
-     "money": 6481,
-     "exp": 5804
+     "level": 40,
+     "money": 32700,
+     "exp": 23940
     },
     {
-     "level": 36,
-     "money": 9151,
-     "exp": 8195
+     "level": 45,
+     "money": 49300,
+     "exp": 35880
     },
     {
-     "level": 38,
-     "money": 12922,
-     "exp": 11572
+     "level": 50,
+     "money": 70500,
+     "exp": 51120
     },
     {
-     "level": 41,
-     "money": 18247,
-     "exp": 16341
+     "level": 55,
+     "money": 96500,
+     "exp": 69840
     },
     {
-     "level": 44,
-     "money": 25766,
-     "exp": 23074
+     "level": 60,
+     "money": 128000,
+     "exp": 92400
     },
     {
-     "level": 46,
-     "money": 36384,
-     "exp": 32583
+     "level": 65,
+     "money": 166000,
+     "exp": 120120
     },
     {
-     "level": 48,
-     "money": 51377,
-     "exp": 46009
+     "level": 70,
+     "money": 209000,
+     "exp": 151200
     },
     {
-     "level": 51,
-     "money": 72549,
-     "exp": 64969
+     "level": 75,
+     "money": 257000,
+     "exp": 185040
     },
     {
-     "level": 54,
-     "money": 102444,
-     "exp": 91741
+     "level": 80,
+     "money": 309000,
+     "exp": 223200
     },
     {
-     "level": 56,
-     "money": 144659,
-     "exp": 129545
+     "level": 85,
+     "money": 365000,
+     "exp": 262800
+    },
+    {
+     "level": 90,
+     "money": 421000,
+     "exp": 303600
+    },
+    {
+     "level": 95,
+     "money": 480000,
+     "exp": 345600
     }
    ],
    "learn_level": 11,
@@ -1345,94 +1345,94 @@
    ],
    "requirements": [
     {
-     "level": 17,
-     "money": 1032,
-     "exp": 870
+     "level": 16,
+     "money": 1780,
+     "exp": 1356
     },
     {
      "level": 20,
-     "money": 1451,
-     "exp": 1223
-    },
-    {
-     "level": 22,
-     "money": 2042,
-     "exp": 1721
+     "money": 3380,
+     "exp": 2532
     },
     {
      "level": 24,
-     "money": 2872,
-     "exp": 2420
+     "money": 6100,
+     "exp": 4524
     },
     {
-     "level": 27,
-     "money": 4038,
-     "exp": 3403
-    },
-    {
-     "level": 30,
-     "money": 5679,
-     "exp": 4786
+     "level": 28,
+     "money": 10250,
+     "exp": 7536
     },
     {
      "level": 32,
-     "money": 7986,
-     "exp": 6730
+     "money": 15800,
+     "exp": 11580
     },
     {
-     "level": 34,
-     "money": 11231,
-     "exp": 9464
+     "level": 36,
+     "money": 23200,
+     "exp": 16944
     },
     {
-     "level": 37,
-     "money": 15795,
-     "exp": 13310
+     "level": 41,
+     "money": 35700,
+     "exp": 26040
     },
     {
-     "level": 40,
-     "money": 22212,
-     "exp": 18718
+     "level": 46,
+     "money": 53100,
+     "exp": 38640
     },
     {
-     "level": 42,
-     "money": 31237,
-     "exp": 26323
+     "level": 51,
+     "money": 75300,
+     "exp": 54600
     },
     {
-     "level": 44,
-     "money": 43929,
-     "exp": 37019
+     "level": 56,
+     "money": 102300,
+     "exp": 74040
     },
     {
-     "level": 47,
-     "money": 61778,
-     "exp": 52060
+     "level": 61,
+     "money": 135000,
+     "exp": 97680
     },
     {
-     "level": 50,
-     "money": 86879,
-     "exp": 73213
+     "level": 66,
+     "money": 174000,
+     "exp": 126000
     },
     {
-     "level": 52,
-     "money": 122180,
-     "exp": 102961
+     "level": 71,
+     "money": 219000,
+     "exp": 157800
     },
     {
-     "level": 54,
-     "money": 171823,
-     "exp": 144795
+     "level": 76,
+     "money": 267000,
+     "exp": 192120
     },
     {
-     "level": 57,
-     "money": 241637,
-     "exp": 203627
+     "level": 81,
+     "money": 321000,
+     "exp": 231600
     },
     {
-     "level": 60,
-     "money": 339819,
-     "exp": 286364
+     "level": 86,
+     "money": 377000,
+     "exp": 271200
+    },
+    {
+     "level": 91,
+     "money": 432000,
+     "exp": 312000
+    },
+    {
+     "level": 96,
+     "money": 491000,
+     "exp": 352800
     }
    ],
    "learn_level": 17,
@@ -1550,39 +1550,39 @@
    ],
    "requirements": [
     {
-     "level": 34,
-     "money": 11786,
-     "exp": 8730
+     "level": 33,
+     "money": 17500,
+     "exp": 12792
     },
     {
-     "level": 38,
-     "money": 20222,
-     "exp": 14979
+     "level": 43,
+     "money": 42100,
+     "exp": 30720
     },
     {
-     "level": 42,
-     "money": 34695,
-     "exp": 25700
+     "level": 53,
+     "money": 85500,
+     "exp": 61920
     },
     {
-     "level": 46,
-     "money": 59528,
-     "exp": 44095
+     "level": 63,
+     "money": 150000,
+     "exp": 108600
     },
     {
-     "level": 50,
-     "money": 102138,
-     "exp": 75658
+     "level": 73,
+     "money": 238000,
+     "exp": 171240
     },
     {
-     "level": 54,
-     "money": 175245,
-     "exp": 129811
+     "level": 83,
+     "money": 343000,
+     "exp": 247200
     },
     {
-     "level": 58,
-     "money": 300681,
-     "exp": 222727
+     "level": 93,
+     "money": 456000,
+     "exp": 328800
     }
    ],
    "learn_level": 34,
@@ -1686,69 +1686,69 @@
    ],
    "requirements": [
     {
-     "level": 38,
-     "money": 17294,
-     "exp": 12810
+     "level": 37,
+     "money": 25400,
+     "exp": 18504
     },
     {
-     "level": 41,
-     "money": 24073,
-     "exp": 17832
+     "level": 43,
+     "money": 42100,
+     "exp": 30720
     },
     {
-     "level": 44,
-     "money": 33511,
-     "exp": 24823
+     "level": 49,
+     "money": 65800,
+     "exp": 47760
     },
     {
-     "level": 47,
-     "money": 46649,
-     "exp": 34555
+     "level": 55,
+     "money": 96500,
+     "exp": 69840
     },
     {
-     "level": 50,
-     "money": 64936,
-     "exp": 48101
+     "level": 61,
+     "money": 135000,
+     "exp": 97680
     },
     {
-     "level": 53,
-     "money": 90395,
-     "exp": 66959
+     "level": 67,
+     "money": 183000,
+     "exp": 132120
     },
     {
-     "level": 56,
-     "money": 125834,
-     "exp": 93210
+     "level": 73,
+     "money": 238000,
+     "exp": 171240
     },
     {
-     "level": 59,
-     "money": 175164,
-     "exp": 129751
+     "level": 79,
+     "money": 298000,
+     "exp": 214800
     },
     {
-     "level": 62,
-     "money": 243836,
-     "exp": 180619
+     "level": 85,
+     "money": 365000,
+     "exp": 262800
     },
     {
-     "level": 65,
-     "money": 339429,
-     "exp": 251429
+     "level": 91,
+     "money": 432000,
+     "exp": 312000
     },
     {
-     "level": 68,
-     "money": 472500,
-     "exp": 350000
+     "level": 97,
+     "money": 502000,
+     "exp": 361200
     },
     {
-     "level": 71,
-     "money": 657778,
-     "exp": 487333
+     "level": 103,
+     "money": 629700,
+     "exp": 400638
     },
     {
-     "level": 74,
-     "money": 915556,
-     "exp": 678444
+     "level": 109,
+     "money": 713400,
+     "exp": 651138
     }
    ],
    "learn_level": 38,
@@ -1789,9 +1789,9 @@
    ],
    "requirements": [
     {
-     "level": 100,
-     "money": 418500,
-     "exp": 310000
+     "level": 99,
+     "money": 600000,
+     "exp": 500000
     }
    ],
    "learn_level": 100,
@@ -1823,9 +1823,9 @@
    ],
    "requirements": [
     {
-     "level": 100,
-     "money": 418500,
-     "exp": 310000
+     "level": 99,
+     "money": 600000,
+     "exp": 500000
     }
    ],
    "learn_level": 100,
@@ -1995,54 +1995,54 @@
    ],
    "requirements": [
     {
-     "level": 24,
-     "money": 3348,
-     "exp": 2640
-    },
-    {
-     "level": 28,
-     "money": 5280,
-     "exp": 4163
+     "level": 23,
+     "money": 5420,
+     "exp": 4020
     },
     {
      "level": 31,
-     "money": 8325,
-     "exp": 6564
+     "money": 14280,
+     "exp": 10464
     },
     {
-     "level": 34,
-     "money": 13127,
-     "exp": 10350
+     "level": 39,
+     "money": 30100,
+     "exp": 21924
     },
     {
-     "level": 38,
-     "money": 20700,
-     "exp": 16321
+     "level": 47,
+     "money": 57200,
+     "exp": 41520
     },
     {
-     "level": 42,
-     "money": 32641,
-     "exp": 25735
+     "level": 55,
+     "money": 96500,
+     "exp": 69840
     },
     {
-     "level": 45,
-     "money": 51468,
-     "exp": 40579
+     "level": 63,
+     "money": 150000,
+     "exp": 108600
     },
     {
-     "level": 48,
-     "money": 81154,
-     "exp": 63985
+     "level": 71,
+     "money": 219000,
+     "exp": 157800
     },
     {
-     "level": 52,
-     "money": 127967,
-     "exp": 100894
+     "level": 79,
+     "money": 298000,
+     "exp": 214800
     },
     {
-     "level": 56,
-     "money": 201780,
-     "exp": 159091
+     "level": 87,
+     "money": 388000,
+     "exp": 279600
+    },
+    {
+     "level": 95,
+     "money": 480000,
+     "exp": 345600
     }
    ],
    "learn_level": 24,
@@ -2174,44 +2174,44 @@
    ],
    "requirements": [
     {
-     "level": 46,
-     "money": 34506,
-     "exp": 25560
+     "level": 45,
+     "money": 49300,
+     "exp": 35880
     },
     {
-     "level": 50,
-     "money": 47918,
-     "exp": 35495
+     "level": 52,
+     "money": 80300,
+     "exp": 58200
     },
     {
-     "level": 54,
-     "money": 66542,
-     "exp": 49290
-    },
-    {
-     "level": 58,
-     "money": 92405,
-     "exp": 68448
-    },
-    {
-     "level": 62,
-     "money": 128320,
-     "exp": 95052
+     "level": 59,
+     "money": 120900,
+     "exp": 87360
     },
     {
      "level": 66,
-     "money": 178196,
-     "exp": 131997
+     "money": 174000,
+     "exp": 126000
     },
     {
-     "level": 70,
-     "money": 247456,
-     "exp": 183301
+     "level": 73,
+     "money": 238000,
+     "exp": 171240
     },
     {
-     "level": 74,
-     "money": 343636,
-     "exp": 254545
+     "level": 80,
+     "money": 309000,
+     "exp": 223200
+    },
+    {
+     "level": 87,
+     "money": 388000,
+     "exp": 279600
+    },
+    {
+     "level": 94,
+     "money": 468000,
+     "exp": 337200
     }
    ],
    "learn_level": 46,
@@ -2287,44 +2287,44 @@
    ],
    "requirements": [
     {
-     "level": 54,
-     "money": 61236,
-     "exp": 45360
+     "level": 53,
+     "money": 85500,
+     "exp": 61920
     },
     {
-     "level": 58,
-     "money": 90918,
-     "exp": 67347
+     "level": 61,
+     "money": 135000,
+     "exp": 97680
     },
     {
-     "level": 62,
-     "money": 134991,
-     "exp": 99993
+     "level": 69,
+     "money": 200000,
+     "exp": 144720
     },
     {
-     "level": 66,
-     "money": 200424,
-     "exp": 148462
+     "level": 77,
+     "money": 277000,
+     "exp": 199680
     },
     {
-     "level": 70,
-     "money": 297575,
-     "exp": 220426
+     "level": 85,
+     "money": 365000,
+     "exp": 262800
     },
     {
-     "level": 74,
-     "money": 441819,
-     "exp": 327273
+     "level": 93,
+     "money": 456000,
+     "exp": 328800
     },
     {
-     "level": 78,
-     "money": 655819,
-     "exp": 486000
+     "level": 101,
+     "money": 609000,
+     "exp": 377138
     },
     {
-     "level": 82,
-     "money": 973819,
-     "exp": 721818
+     "level": 109,
+     "money": 713400,
+     "exp": 651138
     }
    ],
    "learn_level": 54,
@@ -2404,44 +2404,44 @@
    ],
    "requirements": [
     {
-     "level": 62,
-     "money": 99225,
-     "exp": 73500
+     "level": 61,
+     "money": 135000,
+     "exp": 97680
     },
     {
-     "level": 66,
-     "money": 133766,
-     "exp": 99086
+     "level": 68,
+     "money": 192000,
+     "exp": 138360
     },
     {
-     "level": 70,
-     "money": 180330,
-     "exp": 133578
-    },
-    {
-     "level": 74,
-     "money": 243105,
-     "exp": 180078
-    },
-    {
-     "level": 78,
-     "money": 327733,
-     "exp": 242765
+     "level": 75,
+     "money": 257000,
+     "exp": 185040
     },
     {
      "level": 82,
-     "money": 441819,
-     "exp": 327273
+     "money": 332000,
+     "exp": 238800
     },
     {
-     "level": 86,
-     "money": 595819,
-     "exp": 441818
+     "level": 89,
+     "money": 410000,
+     "exp": 295200
     },
     {
-     "level": 90,
-     "money": 801819,
-     "exp": 594545
+     "level": 96,
+     "money": 491000,
+     "exp": 352800
+    },
+    {
+     "level": 103,
+     "money": 629700,
+     "exp": 400638
+    },
+    {
+     "level": 110,
+     "money": 730500,
+     "exp": 719138
     }
    ],
    "learn_level": 62,
@@ -2564,24 +2564,24 @@
    ],
    "requirements": [
     {
-     "level": 70,
-     "money": 143546,
-     "exp": 106330
+     "level": 69,
+     "money": 200000,
+     "exp": 144720
     },
     {
-     "level": 76,
-     "money": 182408,
-     "exp": 135117
+     "level": 79,
+     "money": 298000,
+     "exp": 214800
     },
     {
-     "level": 82,
-     "money": 231792,
-     "exp": 171698
+     "level": 89,
+     "money": 410000,
+     "exp": 295200
     },
     {
-     "level": 88,
-     "money": 294546,
-     "exp": 218182
+     "level": 99,
+     "money": 525000,
+     "exp": 376800
     }
    ],
    "learn_level": 70,
@@ -2878,79 +2878,79 @@
    ],
    "requirements": [
     {
-     "level": 30,
-     "money": 7588,
-     "exp": 5670
+     "level": 29,
+     "money": 11490,
+     "exp": 8436
     },
     {
-     "level": 33,
-     "money": 9912,
-     "exp": 7406
+     "level": 34,
+     "money": 19300,
+     "exp": 14088
     },
     {
-     "level": 36,
-     "money": 12947,
-     "exp": 9674
+     "level": 38,
+     "money": 27700,
+     "exp": 20160
     },
     {
-     "level": 39,
-     "money": 16911,
-     "exp": 12636
-    },
-    {
-     "level": 42,
-     "money": 22089,
-     "exp": 16505
-    },
-    {
-     "level": 45,
-     "money": 28853,
-     "exp": 21559
+     "level": 43,
+     "money": 42100,
+     "exp": 30720
     },
     {
      "level": 48,
-     "money": 37689,
-     "exp": 28161
+     "money": 61400,
+     "exp": 44640
     },
     {
-     "level": 51,
-     "money": 49229,
-     "exp": 36784
+     "level": 53,
+     "money": 85500,
+     "exp": 61920
     },
     {
-     "level": 54,
-     "money": 64303,
-     "exp": 48047
-    },
-    {
-     "level": 57,
-     "money": 83994,
-     "exp": 62760
-    },
-    {
-     "level": 60,
-     "money": 109713,
-     "exp": 81977
+     "level": 58,
+     "money": 114500,
+     "exp": 82800
     },
     {
      "level": 63,
-     "money": 143307,
-     "exp": 107079
+     "money": 150000,
+     "exp": 108600
     },
     {
-     "level": 66,
-     "money": 187189,
-     "exp": 139867
+     "level": 68,
+     "money": 192000,
+     "exp": 138360
     },
     {
-     "level": 69,
-     "money": 244505,
-     "exp": 182694
+     "level": 73,
+     "money": 238000,
+     "exp": 171240
     },
     {
-     "level": 72,
-     "money": 319375,
-     "exp": 238636
+     "level": 78,
+     "money": 287000,
+     "exp": 207600
+    },
+    {
+     "level": 83,
+     "money": 343000,
+     "exp": 247200
+    },
+    {
+     "level": 88,
+     "money": 399000,
+     "exp": 286800
+    },
+    {
+     "level": 93,
+     "money": 456000,
+     "exp": 328800
+    },
+    {
+     "level": 98,
+     "money": 514000,
+     "exp": 369600
     }
    ],
    "learn_level": 30,
@@ -3029,24 +3029,24 @@
    ],
    "requirements": [
     {
-     "level": 42,
-     "money": 24692,
-     "exp": 18290
+     "level": 41,
+     "money": 35700,
+     "exp": 26040
     },
     {
-     "level": 48,
-     "money": 47139,
-     "exp": 34918
+     "level": 59,
+     "money": 120900,
+     "exp": 87360
     },
     {
-     "level": 54,
-     "money": 89998,
-     "exp": 66665
+     "level": 77,
+     "money": 277000,
+     "exp": 199680
     },
     {
-     "level": 60,
-     "money": 171819,
-     "exp": 127273
+     "level": 95,
+     "money": 480000,
+     "exp": 345600
     }
    ],
    "learn_level": 42,
@@ -3112,19 +3112,19 @@
    ],
    "requirements": [
     {
-     "level": 50,
-     "money": 46588,
-     "exp": 34510
+     "level": 49,
+     "money": 65800,
+     "exp": 47760
     },
     {
-     "level": 58,
-     "money": 77483,
-     "exp": 57395
+     "level": 74,
+     "money": 247000,
+     "exp": 178080
     },
     {
-     "level": 66,
-     "money": 128864,
-     "exp": 95455
+     "level": 99,
+     "money": 525000,
+     "exp": 376800
     }
    ],
    "learn_level": 50,
@@ -3215,29 +3215,29 @@
    ],
    "requirements": [
     {
-     "level": 66,
-     "money": 123647,
-     "exp": 91590
+     "level": 65,
+     "money": 166000,
+     "exp": 120120
     },
     {
      "level": 72,
-     "money": 162425,
-     "exp": 120315
+     "money": 228000,
+     "exp": 164400
     },
     {
-     "level": 78,
-     "money": 213365,
-     "exp": 158048
+     "level": 79,
+     "money": 298000,
+     "exp": 214800
     },
     {
-     "level": 84,
-     "money": 280280,
-     "exp": 207615
+     "level": 86,
+     "money": 377000,
+     "exp": 271200
     },
     {
-     "level": 90,
-     "money": 368181,
-     "exp": 272727
+     "level": 93,
+     "money": 456000,
+     "exp": 328800
     }
    ],
    "learn_level": 66,
@@ -3349,34 +3349,34 @@
    ],
    "requirements": [
     {
-     "level": 58,
-     "money": 73642,
-     "exp": 54550
+     "level": 57,
+     "money": 108300,
+     "exp": 78360
     },
     {
-     "level": 62,
-     "money": 105378,
-     "exp": 78058
+     "level": 65,
+     "money": 166000,
+     "exp": 120120
     },
     {
-     "level": 66,
-     "money": 150791,
-     "exp": 111697
+     "level": 73,
+     "money": 238000,
+     "exp": 171240
     },
     {
-     "level": 70,
-     "money": 215773,
-     "exp": 159832
+     "level": 81,
+     "money": 321000,
+     "exp": 231600
     },
     {
-     "level": 74,
-     "money": 308760,
-     "exp": 228711
+     "level": 89,
+     "money": 410000,
+     "exp": 295200
     },
     {
-     "level": 78,
-     "money": 441819,
-     "exp": 327273
+     "level": 97,
+     "money": 502000,
+     "exp": 361200
     }
    ],
    "learn_level": 58,
