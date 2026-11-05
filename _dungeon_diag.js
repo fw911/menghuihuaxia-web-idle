@@ -58,7 +58,8 @@ const E = global.__exp;
       ((q._s.combat.phys_atk || 0) * (q._s.combat.phys_atk || 0) / Math.max(1, mon.min_phys_def || 1)).toFixed(0),
       (mon.hp / Math.max(1, (q._s.combat.phys_atk || 0) ** 2 / Math.max(1, mon.min_phys_def || 1))).toFixed(0));
 
-    Object.assign(E.state.auto, { potion: true, buy: true, zone: false, junk: true, stats: false, rank: false });
+    // 怪物伤害对齐原版后首领 20% 物爆 ×2 暴击，喝药阈值需调高（与 _run_test.js 一致）
+    Object.assign(E.state.auto, { hp: 85, mp: 30, potion: true, buy: true, zone: false, junk: true, stats: false, rank: false });
     E.state.speed = 4;
     const entered = E.startZone(map.key, null, true, b.key);
     const d0 = E.state.sess.deaths || 0;

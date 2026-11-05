@@ -3,7 +3,7 @@
  * 导出 19 个顶层名；import 由 AST 跨模块引用自动计算。
  */
 import { state } from './state.js';
-import { ATTR_EFFECT_KEY, DATA, PERK_STAT_MAP, SM_ACTIVE } from './core.js';
+import { ATTR_EFFECT_KEY, DATA, PERK_STAT_MAP, perkToStat, SM_ACTIVE } from './core.js';
 import { monsterDef, passiveBonus, sm, smTransform, wuhunStats } from './player.js';
 import { itemName } from './shop.js';
 import { fmtNum, itemConsume, itemCount } from './life.js';
@@ -219,6 +219,14 @@ export function computeStats(p){
   const _smAg = (p.shenmo && p.shenmo.faction) ? smAggCached() : null;
   if(_smAg && _smAg.constitutionPct) attr.constitution = Math.round(attr.constitution*(1+_smAg.constitutionPct/100));
   // 装备 + 词条 + 宝石 + 精炼 加成
+  // 原版 character\equipment.py 聚合有两条路径（字节码逐条还原）：
+  //  ① equip_battle_stats(:101)：stats → _add_range(:137) 把 [lo,hi] 区间加到 min_/max_ 攻防、
+  //     hp/mp → max_hp/max_mp；perks → PERK_TO_STAT 按「是否百分比」选 flat_key / pct_key，
+  //     '致命一击概率' 同时加物爆+法爆、'受到伤害' → dmg_reduce_pct 且取 abs。
+  //  ② equip_five_stats(:82) / aggregate_equip_five(:161)：五维词条加到角色五维，
+  //     在 attribute_to_battle 之前生效（本 port 用 ATTR_EFFECT_KEY 落到 attr，等价 ✓）。
+  // 本 port 玩家战斗属性是单一标量（无 min/max 区间），it.stats 直接累加到 battle stat
+  // 与 _add_range 的 lo=hi=标量 等价 ✓；此前唯一实质偏差是「百分比词条被当成固定值」。
   const bonus = {}; // stat -> val
   const addStat = (s,v)=> bonus[s]=(bonus[s]||0)+v;
   for(const slot in p.equip){
@@ -226,7 +234,13 @@ export function computeStats(p){
     if(!it) continue;
     for(const s in (it.stats||{})) addStat(s, it.stats[s]);
     for(const pk of (it.perks||[])){
-      if(ATTR_EFFECT_KEY[pk.name]) addStat(ATTR_EFFECT_KEY[pk.name], pk.value);
+      // 五维词条 → 五维（原版 FIVE_PERK 路径，必须走 attr 才能在属性→战斗属性换算里生效）
+      if(ATTR_EFFECT_KEY[pk.name]){ addStat(ATTR_EFFECT_KEY[pk.name], pk.value); continue; }
+      const r = perkToStat(pk.name, pk);
+      if(r){
+        if(r.hit==='致命一击概率'){ addStat('phys_crit', r.val); addStat('magic_crit', r.val); }
+        else addStat(r.key, r.val);
+      }
       else if(PERK_STAT_MAP[pk.name]) addStat(PERK_STAT_MAP[pk.name], pk.value);
     }
     for(const g of (it.gems||[])) if(g) addStat(g.stat, g.value);
@@ -283,10 +297,14 @@ export function computeStats(p){
   // 主攻击
   const main = job.main_damage==='magic' ? (combat.magic_atk||0) : (combat.phys_atk||0);
   const defType = job.main_damage==='magic' ? 'magic_def' : 'phys_def';
+  // 原版 attribute_to_battle（character\stats.py:88-91）：
+  //   max_hp = round(max_hp × (1 + max_hp_pct/100))，max_mp 同理。
+  // 百分比词条（生命值+3% / 法力值+3%）此前映射到 max_hp_pct 却无人消费，在此补齐。
+  const hpPct = combat.max_hp_pct||0, mpPct = combat.max_mp_pct||0;
   return {
     attr, combat, main, defType,
-    max_hp: Math.round((combat.max_hp||100) + 100),
-    max_mp: Math.round((combat.max_mp||50) + 50),
+    max_hp: Math.round(((combat.max_hp||100) + 100) * (1 + hpPct/100)),
+    max_mp: Math.round(((combat.max_mp||50) + 50) * (1 + mpPct/100)),
   };
 }
 export function refreshStats(){

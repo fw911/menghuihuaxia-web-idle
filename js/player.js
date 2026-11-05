@@ -3,7 +3,7 @@
  * 导出 59 个顶层名；import 由 AST 跨模块引用自动计算。
  */
 import { state } from './state.js';
-import { DATA, PASSIVES, SKILLS, WUHUN_ATTR_CAT, WUHUN_EXP_MULT, WUHUN_TYPE_KEYS, BATTLE_ORIG, clamp, pick, ri, rnd, uid } from './core.js';
+import { DATA, PASSIVES, SKILLS, WUHUN_ATTR_CAT, WUHUN_EXP_MULT, WUHUN_TYPE_KEYS, BATTLE_ORIG, FOUR_ELEMENTS, clamp, isSpellElement, pick, ri, rnd, uid } from './core.js';
 import { refreshStats, smAggCached } from './smtree.js';
 import { todayKey } from './world.js';
 import { eventLog, log } from './render.js';
@@ -293,7 +293,9 @@ export function rollDef(m, type){
 // 玩家只有单一主属性值（lo=hi），故结果为确定值，无随机浮动。
 export function playerAtk(s){
   const base = s && (s.main||0) || 0;
-  const pct  = (s && s.combat && (s.combat.phys_atk_pct||0)) || 0;
+  // 原版 _phys_atk_range(:375) 用 phys_atk_pct；本 port 法师主属性是 magic_atk，
+  // 故按 defType 选对应攻%词条（装备百分比词条现已映射到 *_atk_pct）。
+  const pct = (s && s.combat && ((s.defType==='magic_def' ? s.combat.magic_atk_pct : s.combat.phys_atk_pct)||0)) || 0;
   return Math.max(1, Math.round(base * (1 + pct/100)));
 }
 // 原版暴击倍率（battle\engine.py:448）：dmg *= (2 + crit_dmg_pct/100)
@@ -302,6 +304,86 @@ export function critMult(s){
   const extra = ((ag&&ag.critDmg)||0) + ((s&&s.combat&&(s.combat.crit_dmg_pct||0))||0);
   return (BATTLE_ORIG==='legacy' ? 1.8 : 2) + extra/100;
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 怪物侧原版战斗口径（battle\engine.py 字节码逐条还原）
+// 取证：_dis_battle.txt（v0.91 exe 反汇编）
+//   :1603 build_monster_unit  —— 技能 damage(sd) = max(0, round(max_phys_atk×(mult-1)))
+//   :379  roll_attack        —— 物理/法术攻击区间随机
+//   :414  _roll_def          —— 防御区间随机 ×(1+def_pct%)
+//   :425  _roll_dodge        —— rate = dodge + (magic_dodge if is_magic else 0)
+//   :469  apply_multi_reduce —— 逐项连乘 dmg *= (1-r/100)
+//   :482  skill_damage       —— raw=(atk+sd)*atk/df、暴击×(2+暴伤%)、max(1,int(raw))
+//   :434  compute_phys_damage—— 普攻 raw=atk*atk/df（同上，无 sd）
+// ═══════════════════════════════════════════════════════════════════════════
+
+// build_monster_unit(:1611-1618)：sd 不论物理/法术技能都取怪物的 max_phys_atk。
+// ⚠️ v0.91 原版 monster_skills.json 的 effects 为空；web-idle 自研的 effects[].value
+//    （=max_*_atk）并非原版 sd 来源，故不采用。
+export function monsterSkillSd(m, sk){
+  const mult = (sk && sk.mult!=null) ? Number(sk.mult) : 1;
+  return Math.max(0, Math.round((m.max_phys_atk||0) * (mult - 1)));
+}
+
+// roll_attack(:379) + _phys_atk_range(:369)
+export function monsterAtk(m, elem){
+  const spell = isSpellElement(elem);
+  let lo, hi;
+  if(!spell){
+    const mult = 1 + (m.phys_atk_pct||0)/100;
+    lo = Math.round(((m.min_phys_atk||0) + (m.phys_atk||0)) * mult);
+    hi = Math.round(((m.max_phys_atk||0) + (m.phys_atk||0)) * mult);
+    lo = Math.max(1, lo); hi = Math.max(lo+1, hi);
+    return ri(lo, hi);
+  }
+  const extra = FOUR_ELEMENTS.indexOf(elem)>=0 ? (m[elem+'_atk']||0) : 0;
+  lo = (m.min_magic_atk||0) + extra + (m.magic_atk||0);
+  hi = (m.max_magic_atk||0) + extra + (m.magic_atk||0);
+  lo = Math.max(1, lo); hi = Math.max(lo+1, hi);
+  return ri(lo, hi) * (1 + (m.magic_atk_pct||0)/100);
+}
+
+// _roll_def(:414) 作用在玩家身上：本 port 玩家防御是单一标量（无 min/max 区间），
+// 故 base = phys_def/magic_def，再乘 (1+def_pct/100)；法术再加对应元素防御。
+export function playerDefRoll(s, elem, extraDef){
+  const magic = isSpellElement(elem);
+  const flat = (magic ? (s.combat.magic_def||0) : (s.combat.phys_def||0)) + (extraDef||0);
+  const pct  = magic ? (s.combat.magic_def_pct||0) : (s.combat.phys_def_pct||0);
+  let df = Math.max(1, Math.max(1, flat) * (1 + pct/100));
+  if(magic && FOUR_ELEMENTS.indexOf(elem)>=0) df += (s.combat[elem+'_def']||0);
+  return Math.max(1, df);
+}
+
+// apply_multi_reduce(:469)：modifiers['dmg_reduce'] 可为标量或列表，逐项连乘。
+// web-idle 此前把 dmg_reduce_pct 与神魔 block 相加后一次乘，这里改为逐项连乘。
+export function applyMultiReduce(dmg, s, ag){
+  const sources = [ (s.combat.dmg_reduce_pct||0), ((ag&&ag.block)||0) ];
+  for(const r of sources) if(r>0) dmg *= (1 - r/100);
+  return dmg;
+}
+
+// skill_damage(:482) / compute_phys_damage(:434) 的怪物侧完整还原。
+// sk=null 表示普攻；返回 {dmg, crit, dodged}，调用方负责召唤兽分担/反弹等自研逻辑。
+export function monsterDamageOrig(m, sk, s, extraDef){
+  const elem = sk ? (sk.element||'physical') : 'physical';
+  const spell = isSpellElement(elem);
+  // _roll_dodge(:425)
+  const rate = (s.combat.dodge||0) + (spell ? (s.combat.magic_dodge||0) : 0);
+  if(rate>0 && Math.random() < rate/100) return {dmg:0, crit:false, dodged:true};
+  const atk = monsterAtk(m, elem);
+  let df = playerDefRoll(s, elem, extraDef);
+  const ignoreDef = sk && (sk.ignore_def||0);
+  if(ignoreDef>0) df *= (1 - ignoreDef/100);
+  const sd = sk ? monsterSkillSd(m, sk) : 0;
+  let raw = (sk ? (atk + sd) : atk) * atk / Math.max(1, df);
+  const critRate = spell ? (m.magic_crit||0) : (m.phys_crit||0);
+  const crit = Math.random() < critRate/100;
+  if(crit) raw *= 2 + (m.crit_dmg_bonus_pct||0)/100;    // :448 / :520
+  raw = applyMultiReduce(raw, s, smAggCached());          // :449 / :528
+  // execute(:522) 与 _vuln_burst(:530) 在 v0.91 配置中未提供，按原版默认跳过
+  return {dmg: Math.max(1, Math.trunc(raw)), crit, dodged:false};
+}
+
 export function damageMonster(m, raw){
   const p=state.player, s0=p._s;
   const dodged = Math.random()*100 < (m.dodge||0);

@@ -4,8 +4,8 @@
  */
 import { state } from './state.js';
 import { cloudRank } from './api.js';
-import { DATA, MON_SKILLS, SUMMON_SKILLS, BATTLE_ORIG, clamp, getMonster, pageVisible, pick, ri, rnd, uid } from './core.js';
-import { castBattleStartBuffs, castHeal, critMult, damageMonster, expToNext, genWuhun, isXianzhiNow, monsterDef, monsterExp, paySkill, pickAttackSkill, pickHealSkill, playerAtk, rollDef, skillDamage, smAppendHit, smGain, smXianzhiTick, syncSkills, tickSkillCd, whName, whReqLevel, wuhunAbsorb } from './player.js';
+import { DATA, MON_SKILLS, SUMMON_SKILLS, BATTLE_ORIG, clamp, getMonster, isSpellElement, pageVisible, pick, ri, rnd, uid } from './core.js';
+import { castBattleStartBuffs, castHeal, critMult, damageMonster, expToNext, genWuhun, isXianzhiNow, monsterDamageOrig, monsterDef, monsterExp, paySkill, pickAttackSkill, pickHealSkill, playerAtk, rollDef, skillDamage, smAppendHit, smGain, smXianzhiTick, syncSkills, tickSkillCd, whName, whReqLevel, wuhunAbsorb } from './player.js';
 import { xyTrialOnKill } from './quest.js';
 import { refreshStats, smActiveCast, smAggCached } from './smtree.js';
 import { QNAME, rollLoot } from './equip.js';
@@ -20,8 +20,18 @@ import { autoPotion, autoZoneOnLevelUp, sessBump, sessLevelUp } from './idle.js'
 import { renderAll } from './boot.js';
 
 // ---------- 战斗 ----------
-// 首领威胁加成：让刚解锁的首领有真实压力（普通/精英区不受影响），配合死亡惩罚形成「挑战」感
-export const BOSS_HP_MULT = 1.3, BOSS_ATK_MULT = 1.5;
+// 首领威胁加成：HP 保留 1.3（让刚解锁的首领有血量压力）。
+// 攻击倍率撤销为 1.0，依据原版 v0.91 bytecode：
+//   · build_monster_unit(:1603) 直接用 mon 配置值构造战斗单位，atk_hi = mon.get('max_phys_atk')(:1611)，
+//     difficulty.json 仅有 monster_speed_mult，全配置无任何首领攻击倍率；
+//   · 原版首领自带 3~4 个技能（xhz_30807 另含 sig_xhz_30807），强度来自技能而非攻击加成。
+// web-idle 曾因 MON_SKILLS 前缀猜测 bug 让副本首领永远只会普攻，故自研 1.5 倍攻击补偿威胁；
+// MON_SKILLS 改按 monsters.json.skills[] 权威直连后首领恢复原版技能，1.5 倍攻击与
+// skill_damage 的 (atk+sd)*atk/df 形成平方级叠加（≈2.25×）：
+//   正交实验（_balance_lab.js）幽芷冢 Lv65 配装玩家 ×1.5 → 0/6、×1.3 → 2/5、×1.2 → 3/5、
+//   ×1.1 → 5/5、×1.0 → 5/5（平均 2101 轮，与修复前 2156 轮一致）；喝药阈值 85→99 与减伤 20% 均无效。
+// 副作用（正向）：m.max_phys_atk 不再被放大后，monsterSkillSd 自然回到原版「配置原值」口径。
+export const BOSS_HP_MULT = 1.3, BOSS_ATK_MULT = 1.0;
 export function spawnMonster(){
   const z = state.zone;
   let key, isBoss=false, isElite=false;
@@ -159,7 +169,7 @@ export function playerHit(m){
 }
 export function monsterHit(m){
   const p = state.player, s = p._s;
-  // 怪物技能：按 weight 抽取已就绪技能，元素决定攻防类型
+  // 怪物技能：按 weight 抽取已就绪技能（沿用 web-idle 的 35% 触发率与 cd 机制）
   let sk=null;
   const list = m.skills || [];
   if(list.length){
@@ -171,33 +181,45 @@ export function monsterHit(m){
       sk = ready.find(x=>x.key===kk) || null;
     }
   }
-  const magic = sk && (sk.element==='magic' || sk.element==='dark' || sk.element==='fire' || sk.element==='elec');
-  const mult = sk? (sk.mult||1) : 1;
-  const lo = magic? (m.min_magic_atk||m.min_phys_atk||1) : (m.min_phys_atk||1);
-  const hi = magic? (m.max_magic_atk||m.max_phys_atk||1) : (m.max_phys_atk||1);
-  const raw = ((lo+hi)/2) * mult;
-  const def = (magic? (s.combat.magic_def||0) : (s.combat.phys_def||0)) + ((state.buff&&state.buff.phys_def)||0);
-  // 原版伤害公式：max(1, round(atk²/def))；玩家完全闪避则 0 伤害（不触发分担/减伤/反弹）
-  const dodged = Math.random()*100 < (s.combat.dodge||0);
-  let dmg = dodged ? 0 : Math.max(1, Math.round(raw*raw/def));
+  const magic = sk && isSpellElement(sk.element);
+  const buffDef = (state.buff&&state.buff.phys_def)||0;
+  let dmg, crit=false, dodged=false;
+  if(BATTLE_ORIG==='legacy'){
+    // 改造前口径（仅供对比）：攻击取区间中值 × mult → raw²/def，减伤相加后一次乘
+    const mult = sk? (sk.mult||1) : 1;
+    const lo = magic? (m.min_magic_atk||m.min_phys_atk||1) : (m.min_phys_atk||1);
+    const hi = magic? (m.max_magic_atk||m.max_phys_atk||1) : (m.max_phys_atk||1);
+    const raw = ((lo+hi)/2) * mult;
+    const def = (magic? (s.combat.magic_def||0) : (s.combat.phys_def||0)) + buffDef;
+    dodged = Math.random()*100 < (s.combat.dodge||0);
+    dmg = dodged ? 0 : Math.max(1, Math.round(raw*raw/Math.max(1,def)));
+  }else{
+    // 原版口径：普攻 = compute_phys_damage(:434) atk²/df；
+    //           技能 = skill_damage(:482) (atk+sd)*atk/df，sd = round(max_phys_atk×(mult-1))
+    //   含 _roll_dodge / roll_attack 区间随机 / 暴击×(2+暴伤%) / apply_multi_reduce 逐项连乘
+    const r = monsterDamageOrig(m, sk, s, buffDef);
+    dmg=r.dmg; crit=r.crit; dodged=r.dodged;
+  }
   if(!dodged){
-    // 出战召唤兽承担 30% 伤害
+    // 出战召唤兽承担 30% 伤害（web-idle 自研增强，原版无此机制）
     if(p.summon && state.summonHp>0){
       const share = Math.round(dmg*0.3);
       state.summonHp -= share; dmg -= share;
       if(state.summonHp<=0){ state.summonHp=0; log('<span class="dmg">召唤兽 '+summonDef(p.summon).name+' 被击退！</span>'); }
     }
-    // 神魔：减伤（变身 dmg_reduce / 格挡）
-    const ag0 = smAggCached();
-    const reduce = ((s.combat.dmg_reduce_pct||0) + (ag0.block||0));
-    if(reduce) dmg = Math.max(1, Math.round(dmg*(1 - clamp(reduce,0,80)/100)));
+    // legacy 独有：减伤相加后一次乘（orig 已在 applyMultiReduce 逐项连乘）
+    if(BATTLE_ORIG==='legacy'){
+      const reduce = ((s.combat.dmg_reduce_pct||0) + (smAggCached().block||0));
+      if(reduce) dmg = Math.max(1, Math.round(dmg*(1 - clamp(reduce,0,80)/100)));
+    }
     // 神魔：反弹（on_damage_taken reflect_pct）
+    const ag0 = smAggCached();
     if(ag0.reflect>0 && m){ const rf=Math.max(1, Math.round(dmg*ag0.reflect/100)); m.curHp-=rf; state.pendingReflect=(state.pendingReflect||0)+rf; }
   }
   p.hp -= dmg;
   if(sk) m.skillCd[sk.key] = sk.cd||2;
   if(m.silence>0) m.silence--;
-  return {dmg, skill:sk, dodged};
+  return {dmg, crit, skill:sk, dodged};
 }
 
 export function tick(){
@@ -383,7 +405,7 @@ export function monsterTurn(m){
   state.pendingReflect = 0;
   const mh = monsterHit(m);
   if(mh.dodged) log('你闪避了 '+m.name+(mh.skill? ' 的 <span class="skill">'+mh.skill.name+'</span>':' 的反击')+'！');
-  else log(m.name+(mh.skill? ' 施放 <span class="skill">'+mh.skill.name+'</span>':' 反击')+'，你受到 <span class="dmg">'+fmtNum(mh.dmg)+'</span> 伤害（HP '+fmtNum(Math.max(0,Math.round(p.hp)))+'/'+fmtNum(p._s.max_hp)+'）');
+  else log(m.name+(mh.skill? ' 施放 <span class="skill">'+mh.skill.name+'</span>':' 反击')+(mh.crit?' <span class="skill">暴击!</span>':'')+'，你受到 <span class="dmg">'+fmtNum(mh.dmg)+'</span> 伤害（HP '+fmtNum(Math.max(0,Math.round(p.hp)))+'/'+fmtNum(p._s.max_hp)+'）');
   if(state.pendingReflect>0){ log('<span class="skill">伤害反弹</span> 反弹 <span class="dmg">'+state.pendingReflect+'</span> 给 '+m.name); state.pendingReflect=0; }
 }
 

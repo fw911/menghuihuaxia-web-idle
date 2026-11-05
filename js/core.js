@@ -73,6 +73,58 @@ export const PERK_STAT_MAP = {
   '最小物理攻击':'phys_atk', '最大物理攻击':'phys_atk'
 };
 
+// ── 原版 character\equipment.py:15-40 PERK_TO_STAT（字节码逐条还原）────────────
+// 词条文字 → (flat_key, pct_key)：原版 _parse_perk_value(:53) 从「+3%」这类文字里
+// 解析出 is_pct，equip_battle_stats(:129) 据此选 pct_key / flat_key，逐件累加进 BattleStats。
+// 本 port 词条是结构化对象 {name, suffix, value}，故用 suffix==='%' 判定百分比。
+// 顺序与原版一致（原版按 items() 顺序 startswith 命中即 break）。
+export const PERK_TO_STAT = {
+  '物理攻击':['phys_atk','phys_atk_pct'],
+  '最大物理攻击':['max_phys_atk','max_phys_atk'],
+  '最小物理攻击':['min_phys_atk','min_phys_atk'],
+  '物理致命一击概率':['phys_crit','phys_crit'],
+  '物理致命一击':['phys_crit','phys_crit'],
+  '法术致命一击概率':['magic_crit','magic_crit'],
+  '法术致命一击':['magic_crit','magic_crit'],
+  '致命一击概率':['phys_crit','phys_crit'],   // 特殊：原版 :126-127 同时加 phys_crit + magic_crit
+  '受到伤害':['dmg_reduce_pct','dmg_reduce_pct'],
+  '火系法术攻击':['fire_atk','fire_atk'],
+  '冰系法术攻击':['ice_atk','ice_atk'],
+  '电系法术攻击':['elec_atk','elec_atk'],
+  '暗系法术攻击':['dark_atk','dark_atk'],
+  '法术攻击':['magic_atk','magic_atk_pct'],
+  '物理防御':['phys_def','phys_def_pct'],
+  '法术防御':['magic_def','magic_def_pct'],
+  '火系法术防御':['fire_def','fire_def'],
+  '冰系法术防御':['ice_def','ice_def'],
+  '电系法术防御':['elec_def','elec_def'],
+  '暗系法术防御':['dark_def','dark_def'],
+  '生命值':['max_hp','max_hp_pct'],
+  '生命':['max_hp','max_hp_pct'],
+  '法力值':['max_mp','max_mp_pct'],
+  '法术值':['max_mp','max_mp_pct'],
+  '攻击':['phys_atk','phys_atk_pct']
+};
+// 词条解析：返回 {key, val, hit}（命中原版映射）或 null（交给 PERK_STAT_MAP 兜底）
+export function perkToStat(name, pk){
+  const text = String(name||'');
+  let hit = PERK_TO_STAT[text], hitName = text;
+  if(!hit){
+    for(const k in PERK_TO_STAT){
+      if(text.indexOf(k)===0){ hit = PERK_TO_STAT[k]; hitName = k; break; }
+    }
+  }
+  if(!hit) return null;
+  const isPct = (pk && pk.suffix==='%') || text.indexOf('%')>=0;
+  let val = pk ? pk.value : 0;
+  if(hit[isPct?1:0]==='dmg_reduce_pct') val = Math.abs(val);   // 原版 :131 _v = abs(val)
+  return { key: hit[isPct?1:0], val, hit: hitName };
+}
+
+// ── 原版 battle\engine.py:335 FOUR_ELEMENTS / :338 is_spell_element ──────────
+export const FOUR_ELEMENTS = ['fire','ice','elec','dark'];
+export const isSpellElement = (e)=> e==='magic' || FOUR_ELEMENTS.indexOf(e)>=0;
+
 // ---------- 工具 ----------
 // ── 战斗公式口径开关 ────────────────────────────────────────────────
 // 'orig'   = 原版 v0.91 口径（默认）
@@ -206,13 +258,21 @@ export async function loadData(){
     if(d && d.active_skills) SKILLS[j]=d.active_skills;
   }
   PASSIVES = (DATA.skills_passive||{}).passive_skills || [];
-  // 怪物技能：技能 key 以怪物 key 开头（如 anyingguiyuan1_magic -> anyingguiyuan1）
+  // 怪物技能：权威来源是 monsters.json 每只怪自带的 skills[]（技能 key 列表）。
+  // 旧实现用「技能 key 以怪物 key 开头」猜前缀，只能覆盖 535/1208 只怪、1180/1997 条技能，
+  // 且 3 个副本首领的技能 key 是区域前缀（xhz_zhong_pi / xyt_zhong_ji / guimu_L20_phys），
+  // 与怪物 key（xhz_30807 等）不同前缀 → 全部漏索引，首领永远只会普攻。
+  // 按权威列表直连：2313 条引用全部命中技能表，1208 只怪全部有技能。
   MON_SKILLS = {};
-  const mkeys = Object.keys(MONSTERS);
-  for(const sk of ((DATA.monster_skills||{}).monster_skills||[])){
-    let best=null;
-    for(const k of mkeys){ if(sk.key.indexOf(k)===0 && (!best || k.length>best.length)) best=k; }
-    if(best){ (MON_SKILLS[best]=MON_SKILLS[best]||[]).push(sk); }
+  const _msByKey = {};
+  for(const sk of ((DATA.monster_skills||{}).monster_skills||[])) _msByKey[sk.key] = sk;
+  for(const mk in MONSTERS){
+    const _arr = [];
+    for(const skKey of ((MONSTERS[mk].skills)||[])){
+      const _sk = _msByKey[skKey];
+      if(_sk) _arr.push(_sk);
+    }
+    if(_arr.length) MON_SKILLS[mk] = _arr;
   }
   // 神魔主动技能（shenmo_active_skills* 合并）
   SM_ACTIVE = {};

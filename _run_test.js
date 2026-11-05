@@ -577,8 +577,12 @@ function ok(name, cond, extra) {
     const goldGain = pl.gold - beforeGold;          // 离线金币，应为 floor(50*3600*OFFLINE_EFF)
     const expExpect = Math.floor(100*3600*E.OFFLINE_EFF);
     const goldExpect = Math.floor(50*3600*E.OFFLINE_EFF);
-    ok('离线经验补算 = floor(100×3600×OFFLINE_EFF)', Math.abs(grossExp - expExpect) < 1, grossExp + ' vs ' + expExpect);
-    ok('离线金币补算 = floor(50×3600×OFFLINE_EFF)', Math.abs(goldGain - goldExpect) < 1, goldGain + ' vs ' + goldExpect);
+    // 容差 1：0.0875 的 IEEE754 值为 0.087499999999999994449，100*3600*该值 = 31499.999999999996，
+    // 期望 floor 为 31499；但 applyOfflineEarnings 的 away=(Date.now()-_loadedTs)/1000 因两次取
+    // Date.now() 略大于 3600（如 3600.001），实结算 floor(100*3600.001*0.0875) = 31500。
+    // 原版 int() 同为截断，业务行为一致；与上方云端读档断言（532 行）统一用 <= 1 容差。
+    ok('离线经验补算 = floor(100×3600×OFFLINE_EFF)', Math.abs(grossExp - expExpect) <= 1, grossExp + ' vs ' + expExpect);
+    ok('离线金币补算 = floor(50×3600×OFFLINE_EFF)', Math.abs(goldGain - goldExpect) <= 1, goldGain + ' vs ' + goldExpect);
     ok('离线时间戳已清空', E.state._loadedTs === null);
   }
   {
@@ -715,7 +719,13 @@ function ok(name, cond, extra) {
     const m = E.spawnMonster();
     const base = E.getMonster(m.key);
     ok('首领血量已加成', m.hp === Math.round((base.hp || 0) * E.BOSS_HP_MULT), m.hp + ' vs ' + Math.round((base.hp || 0) * E.BOSS_HP_MULT));
-    ok('首领攻击已加成', m.max_phys_atk === Math.round((base.max_phys_atk || 0) * E.BOSS_ATK_MULT), m.max_phys_atk + '');
+    // 原版无任何首领攻击倍率（difficulty.json 仅 monster_speed_mult）：MON_SKILLS 修复后
+    // 首领恢复原版技能，撤销 web-idle 自研 1.5 倍攻击补偿，避免 skill_damage 平方级叠加。
+    ok('首领攻击对齐原版（BOSS_ATK_MULT=1.0，不额外放大）',
+      E.BOSS_ATK_MULT === 1.0 && m.max_phys_atk === (base.max_phys_atk || 0), m.max_phys_atk + '');
+    ok('怪物技能 sd 用配置原值（build_monster_unit:1611 atk_hi = mon.max_phys_atk）',
+      E.monsterSkillSd(m, { mult: 1.5 }) === Math.round((base.max_phys_atk || 0) * 0.5),
+      String(E.monsterSkillSd(m, { mult: 1.5 })));
     ok('首领等级/名称未被改动', m.name === base.name && m.level === base.level);
     ok('首领标记正确', m.isBoss === true);
 
@@ -1045,7 +1055,10 @@ function ok(name, cond, extra) {
         q.attr_migrated = true;
       })();
       E.refreshStats();
-      Object.assign(E.state.auto, { potion: true, buy: true, zone: false, junk: true, stats: false, rank: false });
+      // 怪物伤害已对齐原版 compute_phys_damage(:446)：首领 20% 物爆 ×2 暴击。
+      // 改造前怪物完全不会暴击，故默认 auto.hp=60 的喝药阈值不足以扛住「暴击+连击」；
+      // 正常玩家面对会暴击的首领把阈值调到 85 即可稳定通关（实测 2000~2400 轮）。
+      Object.assign(E.state.auto, { hp: 85, mp: 30, potion: true, buy: true, zone: false, junk: true, stats: false, rank: false });
       E.state.speed = 4;
       const entered = E.startZone(map.key, null, true, b.key);
       const d0 = E.state.sess.deaths || 0;
@@ -2358,6 +2371,62 @@ function ok(name, cond, extra) {
     const it10 = E.buildEquip(E.DATA.bases_warrior.weapons.find(w => w.req_level === 10), 'warrior', 3, 'weapon');
     pg.level = 10; E.refreshStats();
     ok('需求等级=角色等级可穿（边界）', E.equipItem(it10) !== false && pg.equip.weapon.uid === it10.uid);
+  }
+
+  // ---- 原版战斗口径 / 装备聚合对齐（v0.91 字节码取证）----
+  console.log('-- 原版战斗口径与装备聚合对齐 --');
+  {
+    // ① PERK_TO_STAT 映射表（character\equipment.py:15-40）
+    ok('PERK_TO_STAT 物理攻击 flat/pct', JSON.stringify(E.PERK_TO_STAT['物理攻击']) === '["phys_atk","phys_atk_pct"]');
+    ok('PERK_TO_STAT 物理防御 flat/pct', JSON.stringify(E.PERK_TO_STAT['物理防御']) === '["phys_def","phys_def_pct"]');
+    ok('FOUR_ELEMENTS = fire/ice/elec/dark', JSON.stringify(E.FOUR_ELEMENTS) === '["fire","ice","elec","dark"]');
+    ok('isSpellElement 判定', ['magic','fire','ice','elec','dark'].every(e => E.isSpellElement(e)) && !E.isSpellElement('physical'));
+
+    // ② 词条解析：百分比走 pct_key、固定值走 flat_key、减伤取 abs
+    const flat = E.perkToStat('物理防御', {suffix:'', value:7});
+    const pct  = E.perkToStat('物理防御', {suffix:'%', value:3});
+    const dr   = E.perkToStat('受到伤害', {suffix:'%', value:-4});
+    ok('固定值词条 → flat_key', !!flat && flat.key === 'phys_def' && flat.val === 7);
+    ok('百分比词条 → pct_key（不再当固定值）', !!pct && pct.key === 'phys_def_pct' && pct.val === 3);
+    ok('受到伤害取 abs → dmg_reduce_pct', !!dr && dr.key === 'dmg_reduce_pct' && dr.val === 4);
+    ok('元素攻击词条有映射', E.perkToStat('火系法术攻击', {suffix:'', value:9}).key === 'fire_atk');
+    ok('致命一击概率命中特殊分支', E.perkToStat('致命一击概率', {suffix:'%', value:2}).hit === '致命一击概率');
+
+    // ③ 装备聚合端到端：百分比词条真的落到 pct 字段并参与战斗
+    const mk = (stats, perks) => ({type:'equip', uid:'align_test', slot:'weapon', job:'warrior', tier:1,
+      name:'测试装备', reqLevel:1, stats:stats||{}, perks:perks||[], gems:[], refine:0, sockets:0});
+    E.newPlayer('对齐', 'warrior');
+    const q = E.state.player; q.level = 30; q.attr_migrated = true;
+    q.equip = {};                       // newPlayer 会随机赠送带词条的新手装，必须清空才能取稳定基线
+    q.equip.weapon = mk({}, []); E.refreshStats();
+    const d0 = q._s.combat.phys_def, pc0 = q._s.combat.phys_crit, mc0 = q._s.combat.magic_crit || 0;
+    q.equip.weapon = mk({}, [{name:'物理防御', suffix:'', value:25}]); E.refreshStats();
+    ok('固定值防具词条累加到 phys_def', Math.round(q._s.combat.phys_def - d0) === 25);
+    q.equip.weapon = mk({}, [{name:'物理防御', suffix:'%', value:10}]); E.refreshStats();
+    ok('百分比防具词条落到 phys_def_pct', q._s.combat.phys_def_pct === 10 && Math.abs(q._s.combat.phys_def - d0) < 0.001);
+    q.equip.weapon = mk({}, [{name:'致命一击概率', suffix:'%', value:5}]); E.refreshStats();
+    ok('致命一击概率同时加物爆+法爆', Math.round(q._s.combat.phys_crit - pc0) === 5 && Math.round((q._s.combat.magic_crit||0) - mc0) === 5);
+    q.equip.weapon = mk({}, []); E.refreshStats();
+    const hp0 = q._s.max_hp;
+    q.equip.weapon = mk({}, [{name:'生命值', suffix:'%', value:20}]); E.refreshStats();
+    ok('生命百分比按 max_hp×(1+pct%) 生效', q._s.max_hp === Math.round(hp0 * 1.2));
+
+    // ④ 原版公式助手
+    ok('怪物技能 sd = round(max_phys_atk×(mult-1))', E.monsterSkillSd({max_phys_atk:606}, {mult:1.507}) === 307);
+    ok('playerDefRoll 消费 def_pct', Math.abs(E.playerDefRoll({combat:{phys_def:100, phys_def_pct:10, dodge:0}}, 'physical', 0) - 110) < 1e-9);
+    ok('playerDefRoll 法术叠加元素防御', E.playerDefRoll({combat:{magic_def:80, magic_def_pct:0, fire_def:7, dodge:0}}, 'fire', 0) === 87);
+    ok('applyMultiReduce 逐项连乘（非相加一次乘）',
+      Math.abs(E.applyMultiReduce(1000, {combat:{dmg_reduce_pct:10}}, {block:10}) - 810) < 1e-9);
+    const realRnd = Math.random;
+    Math.random = () => 0.5;
+    const mFix = {min_phys_atk:100, max_phys_atk:200, phys_atk:0, phys_atk_pct:0, phys_crit:0, magic_crit:0,
+      min_magic_atk:100, max_magic_atk:200, magic_atk:0, magic_atk_pct:0};
+    const sFix = {combat:{phys_def:100, magic_def:100, phys_def_pct:0, magic_def_pct:0, dodge:0, dmg_reduce_pct:0}};
+    const r0 = E.monsterDamageOrig(mFix, null, sFix, 0);
+    const r1 = E.monsterDamageOrig(mFix, {element:'physical', mult:1.5}, sFix, 0);
+    Math.random = realRnd;
+    ok('怪物普攻 = atk²/df（compute_phys_damage:445）', r0.dmg === 225, 'dmg=' + r0.dmg);
+    ok('怪物技能 = (atk+sd)*atk/df（skill_damage:515）', r1.dmg === 375, 'dmg=' + r1.dmg);
   }
 
   // 恢复默认页签，避免影响后续/重复运行

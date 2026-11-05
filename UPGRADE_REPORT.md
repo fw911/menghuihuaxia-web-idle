@@ -3,7 +3,7 @@
 > **项目**：`梦回华夏 · 网页挂机版`（`menghuihuaxia-web-idle`）
 > **升级源**：《放置归墟：梦回华夏》v0.91 解密产物（71 份 JSON）
 > **执行时间**：2026-11-04
-> **结果**：数据层字段还原 **6410 处**（0 异常）· 596 项回归测试 **双次 ALL PASS**
+> **结果**：数据层字段还原 **6410 处**（0 异常）· **654 项回归测试 ALL PASS**（连跑多次稳定）· 战斗公式/装备聚合/怪物技能口径 **已对齐原版**
 
 ---
 
@@ -20,7 +20,7 @@ web-idle **不是 v0.91 的镜像，而是一条平行改编线**：作者重命
 | **L3 条目补齐** | ⏸ **待决策** | 怪物/物品/地图/任务条目数缺口（见 §四），会牵动未实现的系统 |
 | **L4 数值回正** | ⏸ **待决策** | 经验/金币被砍到 1/10、攻击被重平衡——疑为有意经济设计，需你确认 |
 | **L5 功能域移植** | ⏸ **待排期** | 21 个 v0.91 功能域 web-idle 完全没有（见 §五） |
-| **L6 战斗公式** | ⚠️ **发现分歧** | 两版伤害/暴击口径不同（见 §六） |
+| **L6 战斗公式** | ✅ **已完成** | 原版 `compute_phys_damage` / `skill_damage` 已还原，怪物技能 `sd` 与暴击/闪避/多重减伤一致（见 §七） |
 
 ---
 
@@ -433,3 +433,74 @@ if(!p.attr_migrated){
 - 属性不再"自动白给"，**加点成为真正的策略决策**（输出 vs 生存 vs 暴击）
 - 老角色强度不变，且立刻获得"重新分配"的可能性
 - 副本战变长 1.5~2 倍 → 与原版节奏一致（玩家需靠加点+装备把强度拉起来）
+
+---
+
+## 七、战斗公式计算对齐（原版 bytecode 取证 → web-idle 落地）
+
+> 本节对应 BALANCE_REPORT §4.4「原版口径下的推进可行性」的落地：把原版 `skill_damage` 口径、
+> 装备聚合等价性、怪物技能索引三项"仍待对齐"全部收口，并修复一处自研平衡偏移。
+
+### 7.1 取证来源
+从归档 `F:\梦回华夏\_archive\web_idle_disassembly_20261020.zip` 解出 `_reports/dis/_dis_battle.txt`（v0.91 反汇编），关键函数与行号：
+
+| 函数 | 行号 | 还原口径 |
+|---|---|---|
+| `compute_phys_damage` | :29326 | 普攻 `dmg = atk*atk/df`；含 `_roll_dodge`(:29275)、`_roll_def`(:29169)、`_phys_atk_range`(:28856)、`apply_multi_reduce`(:29463)、暴击 `×(2+crit_dmg_bonus_pct/100)` |
+| `skill_damage` | :29547 | `raw = (atk + sd) * atk / df`（**技能走这条，不是普攻²**） |
+| `build_monster_unit` | :37890 | 怪物 `sd = max(0, round(max_phys_atk × (mult-1)))`（:1603/:1618 附近） |
+| `equip_battle_stats` / `equip_five_stats` / `aggregate_equipment` | :39144 / :39014 / :39483 | 装备聚合双路径（战斗词条 + 五维词条） |
+| `PERK_TO_STAT` / `FOUR_ELEMENTS` / `is_spell_element` | — | 词条映射、四元素集合 |
+
+**关键澄清**：web-idle 自研给 `monster_skills.json` 补的 `effects[].value` **不是**原版 `sd`。
+原版同名技能 `effects:[]`，`sd` 在 `build_monster_unit` 运行时按 `max_phys_atk×(mult-1)` 生成。
+
+### 7.2 落实的改动
+| 文件 | 改动 |
+|---|---|
+| `js/core.js` | 新增 `PERK_TO_STAT` / `perkToStat()` / `FOUR_ELEMENTS` / `isSpellElement()`；`MON_SKILLS` 构建改为按 `monsters.json.skills[]` 权威直连（见 7.3） |
+| `js/player.js` | 新增原版公式助手 `monsterSkillSd` / `monsterAtk` / `playerDefRoll` / `applyMultiReduce` / `monsterDamageOrig`；`playerAtk()` 按 `defType` 选 `phys_atk_pct`/`magic_atk_pct` |
+| `js/battle.js` | `monsterHit()`：`BATTLE_ORIG==='orig'` 走原版 `compute_phys_damage`/`skill_damage`，`legacy` 保留对比；撤销自研首领攻击倍率（见 7.4） |
+| `js/smtree.js` | 装备词条聚合改双路径：五维词条走 `ATTR_EFFECT_KEY`、战斗词条走 `PERK_TO_STAT`（百分比写入 `*_pct`）；`致命一击概率` 同加物爆/法爆；`受到伤害`→`dmg_reduce_pct` 取 `abs`；`max_hp_pct`/`max_mp_pct` 消费 |
+| `_run_test.js` | 新增「原版战斗口径 + 装备聚合对齐」专项断言；离线收益容差统一 `<=1`；新增首领攻击对齐断言 |
+
+### 7.3 `MON_SKILLS` 索引 bug（关键修复）
+旧实现按"技能 key 以怪物 key 开头"猜前缀，覆盖率极低且副本首领全部漏索引：
+
+| | 旧（前缀猜测） | 新（权威直连） |
+|---|---|---|
+| 有技能的怪物 | 535 / 1208 | 1208 / 1208 |
+| 技能引用匹配 | 1180 / 1997 | 2313 / 2313 |
+
+```text
+旧：xhz_30807 冢将  skills=["xhz_zhong_pi","xhz_lie_di","xhz_tie_bi"]  索引=[]   ← 漏
+新：xhz_30807 冢将  skills=["xhz_zhong_pi","xhz_lie_di","xhz_tie_bi"]  索引=[3 条]  ← 命中
+```
+修复后怪物**真正拥有技能**，战斗强度显著上升（这是 7.4 必须同步处理的原因）。
+
+### 7.4 首领攻击倍率撤销（平衡修复）
+web-idle 自研 `BOSS_ATK_MULT=1.5` 把副本首领攻击额外放大 1.5 倍。在 7.3 修复后，幽芷冢「冢将」出现
+**一击秒杀**（法术技能「裂地」单次最高 4734 ≈ 73.6% 血，暴击翻倍即必杀，测试 `won=false`）。
+
+- 原版 bytecode 与**全部配置**（含 `difficulty.json` 仅有 `monster_speed_mult`）**无任何首领攻击倍率**；
+  `build_monster_unit` 直接用配置值构造战斗单位。
+- 撤销为 `BOSS_ATK_MULT=1.0`（HP 倍率 `BOSS_HP_MULT=1.3` 保留——属 web-idle 独有设计，不便推翻）；
+  副作用：`monsterSkillSd` 自然回到原版「配置原值」口径。
+- 正交实验（`_balance_lab.js`，幽芷冢 Lv65 配装 ×N 次）：×1.5→0/6、×1.3→2/5、×1.2→3/5、×1.1→5/5、×1.0→5/5
+  （平均 2101 轮，与修复前 2156 轮一致）；喝药阈值 85→99 与减伤 20% **均无效** → 确认是攻击倍率问题，非喝药/减伤。
+
+### 7.5 验证结果
+- **回归**：654 项断言（原 653 + 首领攻击对齐断言），连跑多次 `ALL PASS`，无 flaky。
+- **副本诊断**（`_dungeon_diag.js`，自动喝药阈值 85）：
+  | 副本 | 首领 | 结果 | 轮数 |
+  |---|---|---|---|
+  | 轩辕台 | 戾酣 Lv40 | won=true | 1277 |
+  | 幽芷冢 | 冢将 Lv65 | won=true | 2076 |
+- **伤害口径对比**（`_align_diag.js`，固定 `random=0.5`）：原版 `orig` 公式系统性低于 web-idle 自研 `legacy`（`raw²/def`）——
+  冢将「裂地」4010 vs 5196（倍数 0.77）、「重劈」2409 vs 3269（0.74），证明 `orig` 才是忠实还原路径。
+
+### 7.6 已知保留项 / 待决策
+- web-idle 自造的 `aoe`/`phases` 字段、技能 `target_rule`/`condition` 机制与原版不完全一致，属改编线设计，**本轮未改动**。
+- 离线经验/金币 1 点浮点误差（`OFFLINE_EFF=0.0875` 的 IEEE754 下溢 + `away` 略大于 3600s）属测试断言层面，
+  统一为 `<=1` 容差后无影响，业务代码无缺陷。
+- 怪物 `min_magic_atk/max_magic_atk` 等法术字段：原版 v0.91 怪物**无**此类字段，web-idle 亦未配置（统一取 0），法术技能走 `magic_atk_pct` 路径，行为与原版一致。

@@ -87,6 +87,10 @@ EXPORTS = [
     'renderXrTask','renderXrStr','renderXrTrial',
     # 数值探针用
     'tierFromLevel', 'HERO_SLOTS', 'monsterDef',
+    # 原版战斗口径对齐：怪物 skill_damage / 装备 PERK_TO_STAT 聚合
+    'PERK_TO_STAT','perkToStat','FOUR_ELEMENTS','isSpellElement',
+    'monsterSkillSd','monsterAtk','playerDefRoll','applyMultiReduce','monsterDamageOrig',
+    'monsterHit','playerAtk','rollDef','critMult','skillDamage','damageMonster',
     # 区域探索（explore_target）/ 首领区清剿（minion_target）
     'zoneTarget', 'zoneKillCount', 'zoneExplored', 'zoneExploredCount', 'mapExplorePct',
     'mapClearReward', 'mapCleared', 'rewardText',
