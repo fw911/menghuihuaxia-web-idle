@@ -126,21 +126,46 @@ function mysticSample(arr, n){
   }
   return a.slice(0, Math.min(n, a.length));
 }
-function mysticSubperfect(lo, hi){
-  if(hi<=lo) return lo;
-  const n=hi-lo+1, q3=Math.floor(3*n/4);
-  if(n<=4) return hi-1;                                   // 窄区间无独立次完美段
-  return ri(Math.min(lo+q3, hi-1), hi-1);
+// 0.94 perk_pool._roll_perk_value 精确口径（v0.58/v0.91 标准反汇编函数体逐指令还原：
+// F:/梦回华夏/_archive/web_idle_disassembly_20261020.zip → _dis_quality.txt L44792..45390。
+// L11 曾判定「0.94 co_code 不可得、q1/q3 只能按 docstring 复刻」，实际该归档包里
+// 本来就有 _roll_perk_value 的完整 dis 输出，此处按真函数体落地）。
+//   n = hi-lo+1
+//   n==1 → lo；n==2 → hi(10%) / lo(90%)
+//   n==3 → choices([lo, lo+1, hi], weights=[0.2, 0.7, 0.1])  ← 首档 0.2，不是 0.1
+//   n==4 → choices([lo, lo+1, lo+2, hi], weights=[0.1, 0.7, 0.1, 0.1])
+//   n>=5 → q1=(n-1)//4, q3=max(q1+1, (n-1)*3//4)
+//           bands = [[lo, lo+max(q1,1)), [lo+max(q1,1), lo+q3), [lo+q3, hi), [hi]]
+//           band = choices(bands, weights=[0.1,0.7,0.1,0.1])[0]; return choice(band)
+function mysticWeighted(vals, weights){
+  const r=Math.random(); let acc=0;
+  for(let i=0;i<vals.length;i++){ acc+=weights[i]; if(r<acc) return vals[i]; }
+  return vals[vals.length-1];
 }
-function mysticPerkValue(lo, hi){
+function mysticRange(a,b){ const out=[]; for(let x=a;x<b;x++) out.push(x); return out; }
+export function mysticQuartiles(lo,hi){
+  const n=hi-lo+1, q1=Math.floor((n-1)/4);
+  return {n, q1, q3:Math.max(q1+1, Math.floor((n-1)*3/4))};
+}
+export function mysticSubperfect(lo, hi){
   if(hi<=lo) return lo;
-  const n=hi-lo+1, q1=Math.floor(n/4), q3=Math.floor(3*n/4);
-  const lowEnd=lo+q1, midEnd=Math.max(lowEnd, Math.min(lo+q3, hi-1));
-  const r=Math.random();
-  if(r<0.10) return ri(lo, lowEnd);                       // 最低
-  if(r<0.80) return ri(lowEnd, midEnd);                   // 中位
-  if(r<0.90) return mysticSubperfect(lo,hi);              // 次完美
-  return hi;                                              // 完美
+  const {n,q3}=mysticQuartiles(lo,hi);
+  // 0.94 _roll_subperfect_value docstring：宽区间 [lo+q3, hi-1]；n<=4 无独立次完美段 → hi-1
+  if(n<=4) return hi-1;
+  const a=Math.max(lo+q3, lo+1), b=hi-1;
+  return a<=b ? ri(a,b) : hi-1;
+}
+export function mysticPerkValue(lo, hi){
+  if(hi<=lo) return lo;
+  const {n,q1,q3}=mysticQuartiles(lo,hi);
+  if(n===1) return lo;
+  if(n===2) return Math.random()<0.1 ? hi : lo;
+  if(n===3) return mysticWeighted([lo,lo+1,hi],[0.2,0.7,0.1]);
+  if(n===4) return mysticWeighted([lo,lo+1,lo+2,hi],[0.1,0.7,0.1,0.1]);
+  const cut=lo+Math.max(q1,1), sub=lo+q3;
+  const bands=[mysticRange(lo,cut), mysticRange(cut,sub), mysticRange(sub,hi), [hi]];
+  const band=mysticWeighted(bands,[0.1,0.7,0.1,0.1]);
+  return band.length ? band[Math.floor(Math.random()*band.length)] : lo;
 }
 export function buildMysticEquip(base, job, tier, slot, perfect){
   const eq=buildEquip(base, job, tier, slot, 'whiteboard');

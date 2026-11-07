@@ -1319,12 +1319,185 @@ v0.58 两个字段都有丰富真实值，而 v0.91 的 `items.json` 又完整�
 
 ### 14.5 残留边界
 
-- 0.94 `co_code` 仍不可得，`_roll_perk_value` 的 `q1/q3` **精确边界**仍按 docstring
+- ~~0.94 `co_code` 仍不可得，`_roll_perk_value` 的 `q1/q3` **精确边界**仍按 docstring
   复刻；常量池里 `vs/vals/band/choices/weights` 变量名暗示内部按段取样，
-  但四档权重与概率已由浮点常量坐实。
-- 0.94 `generate_mystic_equip` 还消费 `apply_refine_levels`（精炼等级）、`spec`、
-  `hand` 入参与 `pool_kind` 等，web-idle 未实现精炼等级应用与按 spec 指定词条。
+  但四档权重与概率已由浮点常量坐实。~~
+  **L12 更正**：归档包里的 `_dis_quality.txt` L44792–45390 本来就有
+  `_roll_perk_value` 的**完整 `dis` 输出**（L11 只查了 `_dis_all.txt` 与
+  `_dis_shop_forensic.txt`）。已按真函数体落地，见 §15.4。
+- ~~0.94 `generate_mystic_equip` 还消费 `apply_refine_levels`（精炼等级）、`spec`、
+  `hand` 入参与 `pool_kind` 等，web-idle 未实现精炼等级应用与按 spec 指定词条。~~
+  **L12 更正**：`js/life.js` 早已实现 `applyRefineLevels()` 与 `instSpec()` 驱动的
+  副本护符兑换；问题不是「没实现」，而是取池 / 模板匹配口径有偏差，见 §15.3。
 - 3 个续命道具仍不生效；2 个炼魂壶别名仍为自研兜底；全站「战魂」命名混合态同 §13.6。
+
+## 十五、L12 取证 `apply_refine_levels` 与 `spec` 口径（已落地）
+
+### 15.1 三路证据
+
+| 路 | 来源 | 取到什么 |
+|---|---|---|
+| A | `web_idle_disassembly_20261020.zip` → **`_dis_quality.txt`**（此前各轮只用了 `_dis_all.txt`） | `apply_refine_levels`(refine.py:143)、`_apply_refine_one_level`(:96)、`add_refine_hidden_perk`(:125)、`generate_instance_equip`(generator.py:372)、`_find_perk_template`(:360)、`_roll_perk_value`(perk_pool.py:46)、`get_quality`(config.py:28) 的**完整函数体** |
+| B | 0.94 `BACKHX_v0.94.exe` 明文紧凑 marshal 常量池 | 同名符号仍在（`apply_refine_levels` ×8、`generate_instance_equip` ×7、`perks_by_pool_job` ×3），「兑换配置缺…职业词条表」错误文案、精炼 docstring「赠送已精炼装备时不该结算」→ 证明 0.94 口径未变 |
+| C | 0.94 `config_enc` 解密 | `instance_exchange.json._exchange_spec`（spec 真值）、`refine.json`、`perk_pool.json` |
+
+可复现脚本 `_l12_apply.py`（`--check` 校验 8 个反汇编区块 + 11 个 exe 符号 +
+配置真值；`--apply` 落地 `refine.json` 定点补丁）。
+
+### 15.2 `apply_refine_levels` 真口径
+
+```python
+def apply_refine_levels(equip, levels):            # refine.py:143
+    for _ in range(max(0, int(levels))):
+        if equip.refine_level >= REFINE_MAX: break  # 0.94 REFINE_MAX = 7
+        _apply_refine_one_level(equip)
+    if equip.refine_level >= REFINE_MAX and not any(p.is_hidden for p in equip.perks):
+        add_refine_hidden_perk(equip)
+    return equip.refine_level
+```
+
+- `_apply_refine_one_level`：`refine_level += 1`；`refine_flat_per_level(equip.tier)`
+  按**装备档位**取 `[flat_lo, flat_hi]`，给 `stats` 四个白板攻防键
+  （`phys_atk / magic_atk / phys_def / magic_def`）的 `[lo,hi]` 两端分别加值，
+  **跳过 `(0,0)` 的键**；`durability = int(durability × (1+0.04))`；刷新 `refine_bonus` 文案。
+- `add_refine_hidden_perk`：`weapon / ring1 / ring2` → `REFINE_HIDDEN_PERKS['attack']`，
+  其余部位 → `['defense']`；随机取一条，追加 `is_hidden=True` 词条。
+- 0.94 docstring 明确：这是**「赠送已精炼装备」**的结算，
+  「不含概率判定/材料/熟练度/成就——那些属于玩家亲手精炼的行为」。
+- `generate_instance_equip` 在构造 `equip` 后调用
+  `apply_refine_levels(equip, int(spec.get('refine', 0)))`，再
+  `get_quality(count_attrs(perks, slots), total_slots, equip.refine_level)`。
+  经 `get_quality` 函数体复核，**只读 `perk_count`**，`total_slots`/`refine_level`
+  两参未被使用（L11 结论正确）。
+
+web-idle 的 `js/refine.js` + `applyRefineLevels()` 本就与此吻合，本轮只补
+`return it.refine||0`（原版返回最终等级）与一处顺序调整。
+
+### 15.3 `spec` 真口径与 web-idle 的偏差（本轮实质修正）
+
+0.94 的 spec **不是抽象参数，而是一份配置**：
+`config/instance_exchange.json` 的 `_exchange_spec` 元数据块：
+
+```json
+{"sockets": 3, "refine": 5, "perk_value": "mid",
+ "perks_by_pool_job": {"weapon": {"warrior": ["物理攻击","物理攻击%"], ...},
+                       "general": {"warrior": ["体质","生命值"], ...}}}
+```
+
+`generate_instance_equip(tier, job_key, slot_key, spec)` 的消费链：
+
+1. `char_job = job_key or 'warrior'`；
+   `pool_kind = 'weapon' if slot_key in _WEAPON_SLOTS else 'general'`
+2. `names = (spec.get('perks_by_pool_job') or {}).get(pool_kind, {}).get(char_job)`；
+   **空则报错返回 None**（「兑换配置缺 X 池 Y 职业词条表」）
+3. `base = pick_base(tier, slot_key, job_key=...)`；
+   `pool = _pick_pool(base.get('job', char_job), slot_key)[0]`
+4. 逐个 `want`：`_find_perk_template(pool, want)` 按
+   **`f"{t['name']}{t.get('suffix','')}"` 显示名**精确匹配，返回首个命中；
+   **找不到则报错返回 None，退还护符**
+5. `lo, hi = tmpl['values'].get(str(tier), [1,3])`；
+   `PerkItem(name=f"{tmpl['name']} +{(lo+hi)//2}{suffix}", ...)`（`perk_value=mid`）
+6. `total_slots = int(spec.get('sockets', 0))`；
+   `hand = 'double' if base.get('hand') in ('双手','double') else 'single'`
+7. 组装 `equip`（`refine_level=0`）→ `apply_refine_levels(equip, int(spec.get('refine',0)))`
+   → `get_quality(...)` → `store.add(equip)`
+
+**web-idle 的偏差（修正前）**：
+
+| 项 | 旧实现 | 0.94 真口径 | 后果 |
+|---|---|---|---|
+| 取池 | 恒取 `{job}_general_pool` | 按部位分选（武器/护手→职业武器池，首饰跨职业，其余→通用池） | 8 个武器词条全部落空 |
+| 模板匹配 | 只比 `t.name`，且只查 3 组 | 比 `name+suffix` 显示名，查 5 组 | 「物理攻击%」永远找不到；「生命值」误命中 `%` 模板 |
+| 中值 | `Math.round((lo+hi)/2)` | `(lo+hi)//2` | 奇数和时差 1 |
+| 缺 tier 兜底 | `values['1']` / `[1,1]` | `[1,3]` | — |
+| 缺失处理 | 静默返回 `1` | 报错 + 退还护符 | 产出数值为 1 的哑装备 |
+| 顺序 | 先精炼后写 perks | 先解析 perks 再精炼、最后算品质 | 满级隐藏词条会被覆盖 |
+
+量化：spec 共 4 职业 × 2 池 × 2 词条 = **16 个**，旧实现只命中 8 个，
+且命中的 4 个「生命值」取到 `[2,3]`（`%` 模板）而非 `[24,34]`（固定值模板）——
+**16 个里没有一个数值是对的**。修正后 16/16 命中，5 档战士武器产出
+「物理攻击 +23」「物理攻击% +2」，`+5` 精炼、3 孔。
+
+### 15.4 顺带消解 §14.5 悬案：`_roll_perk_value` 精确边界
+
+`_dis_quality.txt` L44792 起的函数体（旧版标准 Python 3.14 `dis`）：
+
+```python
+n = hi - lo + 1
+if n == 1: return lo
+if n == 2: return hi if random.random() < 0.1 else lo
+if n == 3: w = [(lo,0.2), (lo+1,0.7), (hi,0.1)]          # 首档 0.2，不是 0.1
+elif n == 4: w = list(zip([lo,lo+1,lo+2,hi], [0.1,0.7,0.1,0.1]))
+else:
+    q1 = (n-1)//4
+    q3 = max(q1+1, (n-1)*3//4)                            # 不是 n//4、3n//4
+    cut = lo + max(q1,1)
+    w = [(list(range(lo, cut)), 0.1),                     # 最低
+         (list(range(cut, lo+q3)), 0.7),                  # 中位
+         (list(range(lo+q3, hi)), 0.1),                   # 次完美（不含 hi）
+         ([hi], 0.1)]                                     # 完美
+if isinstance(w[0][0], int):
+    return random.choices([v for v,_ in w], weights=[p for _,p in w], k=1)[0]
+band = random.choices([b for b,_ in w], weights=[p for _,p in w], k=1)[0]
+return random.choice(band)
+```
+
+0.94 另有独立的 `_roll_subperfect_value`（exe 明文 docstring）：
+「次完美段内均匀随机（完美档非首条禁满专用，2026-09-24 用户拍板）。
+宽区间段 = `[lo+q3, hi-1]`，q3 切分与 `_roll_perk_value` 四分位口径一致；
+窄区间（n<=4 无独立次完美段）退化取 hi-1」。
+
+L10 的 `q1=Math.floor(n/4)` / `q3=Math.floor(3*n/4)` + 连续区间 `ri()`
+是错的；本轮按真函数体重写（含 n≤4 离散值加权抽样），并导出
+`mysticQuartiles` / `mysticSubperfect` / `mysticPerkValue` 供断言。
+
+### 15.5 落地
+
+| 文件 | 改动 |
+|---|---|
+| `js/life.js` | 新增 `instPoolKey` / `instPerkTemplate`；`perkMidValue` 改 4 参（按池 + 显示名 + `(lo+hi)//2` + `[1,3]` 兜底，缺失返回 `null`）；`buildExchangeEquip` 按 0.94 顺序重排、缺配置/词条时返回 `null`、`quality` 排除隐藏词条；`applyRefineLevels` 返回最终等级；兑换失败文案注明「护符未消耗」 |
+| `js/equip.js` | 按 15.4 重写四档与次完美；新增 `mysticWeighted` / `mysticRange` / `mysticQuartiles`，3 个辅助函数导出 |
+| `data/refine.json` | 补 `"8": [15, 20]`（0.94 唯一差异，定点插入保留 `\r\r\n`） |
+| `_patch.py` / `_run_test.js` | 补 5 个导出（共 323）、新增 **14 条断言** |
+| `_l12_apply.py` | 可复现取证 + 定点补丁脚本 |
+
+`data/instance_exchange.json` 的 `_exchange_spec`（sockets/refine/perk_value/
+perks_by_pool_job）与 0.94 **逐字段一致**，本轮未改。
+
+### 15.6 保留未改的数据差异（本轮如实登记）
+
+| 文件 | 0.94 | web-idle | 性质 |
+|---|---|---|---|
+| `instance_exchange.json` 36 条 `npc` | 岑肃 / 卫澜 / 桑野 | `null` | web-idle 无 NPC 对话系统，引擎不消费 |
+| `gm_*` 9 条 `cost_count` | 3 | 5 | 0.94 注释「诡墓 3 张，其余 5 张」；改会调整玩法成本 |
+| `wxz_*` 9 条 `tier` / `name` | 6 档 | 7 档 | 五曜阵台产出档位，属版本结构差异 |
+| 2 条元数据 `comment` | 昆吾台 / 含 npc 字段 | 轩辕台 / 无 | 纯展示文案（L6 的 v0.91 对齐结果） |
+| `perk_pool.json` 模板 | 含 `values['8']` + `stat_key` | 7 档、无 `stat_key` | 0.94 有 8 档装备体系 |
+| `ring_perk_pool` | `stat_percent` 2 / `atk_fixed` 8 | 5 / 15 | web-idle 自研扩充 |
+
+这些会改变产出档位、兑换成本或数据结构，超出「取口径 + 修实现」范围，
+**本轮一律保留**，待单独决策。0.94 `refine.json` 的 8 档 flat 已补但当前
+`tier ≤ 7` 永不触发，属零行为影响的数据完整性补齐。
+
+### 15.7 验证
+
+- `_run_test.js` **698 项 ALL PASS / 0 FAIL / 0 SKIP**（684 → 698，新增 14 条；
+  8014 后端在跑，测后关闭）
+- `_l4_survive.js` 挂机 6 例 × 2500 轮 **死亡 0/6**；`_l4_verify.js` 首领三档
+  与 L5/L6/L8/L9/L10/L11 一致
+- `data/refine.json` 5808 → 5829 B、`\r\r\n` 123 → 124，diff 精确 2 行，
+  反向替换逐字节还原；`_run_test.js` 保持 CRLF 2755 行；`js/equip.js`、`js/life.js`
+  保持 LF；`node --check` / `py_compile` 通过
+
+### 15.8 残留边界
+
+- 0.94 的 `co_code` **仍不可逐指令反汇编**（L11 已证），但本轮确认归档包内
+  旧版标准 `dis` 覆盖了所有相关函数，不再需要它。
+- `apply_refine_levels` 的百分比表 `refine_per_level_pct*` 在原版是死代码
+  （`js/refine.js` 头部注释已记录），本轮不动。
+- web-idle 装备属性是标量、原版是 `[lo,hi]` 区间，精炼 flat 用中值等价
+  （`refineStep`），属已知适配。
+- 3 个续命道具、2 个炼魂壶别名、全站「战魂」混合态同 §13.6。
 
 
 

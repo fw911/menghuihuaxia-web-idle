@@ -15,6 +15,8 @@ EXPORTS = [
     'mineStart','mineTick','mineSettle','mineConf','compassDef','mineExpNeed','mineProgress',
     'gemRecipeFor','doGemRefine','doPotionRefine','itemCount','itemConsume','itemName','gemCount',
     'instEntries','instSpec','doInstanceExchange','buildExchangeEquip','perkMidValue',
+    # L12：0.94 _pick_pool / _find_perk_template 在副本兑换侧的等价实现
+    'instPoolKey','instPerkTemplate',
     'achList','achValue','achDone','checkAchievements','grantAchievement',
     'summonDef','summonTier','summonAvailable','summonAttack',
     'addToBag','consolidateBag','equipItem','doForge','doRefine',
@@ -104,6 +106,8 @@ EXPORTS = [
     'buildMysticEquip','genEquipBaseForSlot',
     # L11：0.94 _pick_pool 按职业×部位分选 + 去重（js/equip.js）
     'mysticPoolKeys','mysticUniqueTemplates',
+    # L12：0.94 _roll_perk_value 精确四档（旧版标准反汇编完整函数体）
+    'mysticQuartiles','mysticSubperfect','mysticPerkValue',
 ]
 
 lines = [

@@ -205,9 +205,12 @@ export function instSpec(){ return (DATA.instance_exchange||{})._exchange_spec |
 export function instName(key){ const n={xianghunzhong_instance:'香魂冢', xuanyuantai:'轩辕台', guimu:'古墓', wuxingzhen:'五曜阵台'}; return n[key]||key; }
 export function instMapName(mapKey){ const m=(DATA.maps.maps||[]).find(x=>x.key===mapKey); return m? m.name : mapKey; }
 export function instGroup(mapKey){ return instEntries().filter(e=> e.npc_map===mapKey); }
-// 逐级套用精炼加成（与手动精炼到同级结果一致，不判定成败）
+// 逐级套用精炼加成（0.94 refine.py#apply_refine_levels L143 字节码口径）：
+//   for _ in range(max(0,int(levels)))：已达 REFINE_MAX 则 break，否则 _apply_refine_one_level；
+//   满级且无隐藏词条 → add_refine_hidden_perk；返回最终 refine_level。
+//   原版 docstring 明确：这是「赠送已精炼装备」的结算，不含概率/材料/熟练度/成就。
 export function applyRefineLevels(it, lv){
-  const rf=DATA.refine; if(!rf) return;
+  const rf=DATA.refine; if(!rf) return it.refine||0;
   const max=rf.refine_max||7;
   for(let n=0;n<Math.max(0,Math.floor(lv||0));n++){
     if((it.refine||0)>=max) break;
@@ -215,29 +218,53 @@ export function applyRefineLevels(it, lv){
     refineApplyOne(it);
   }
   if((it.refine||0)>=max && !(it.perks||[]).some(pk=>pk.hidden)) refineAddHidden(it);
+  return it.refine||0;
 }
-// 取词条在该档位的中值（perk_value=mid）
-export function perkMidValue(name, tier, job){
-  const pool=DATA.perk_pool[job+'_general_pool'] || DATA.perk_pool['warrior_general_pool'];
-  if(!pool) return 1;
-  const all=(pool.stat_fixed||[]).concat(pool.stat_percent||[], pool.atk_fixed||[]);
-  const f=all.find(x=>x.name===name);
-  if(!f) return 1;
-  const v=f.values[''+tier] || f.values['1'] || [1,1];
-  return Math.round((v[0]+v[1])/2);
+// 0.94 perk_pool._pick_pool：首饰跨职业，武器/护手走职业武器池，其余走职业通用池
+export function instPoolKey(slot, job){
+  if(slot==='ring1'||slot==='ring2') return 'ring_perk_pool';
+  if(slot==='necklace') return 'necklace_perk_pool';
+  if(slot==='weapon'||slot==='gloves') return job+'_weapon_perk_pool';
+  return job+'_general_pool';
+}
+// 0.94 generator._find_perk_template：按「显示名」name+suffix 精确匹配，返回首个命中的模板
+export function instPerkTemplate(want, slot, job){
+  const pool=(DATA.perk_pool||{})[instPoolKey(slot,job)];
+  if(!pool) return null;
+  for(const cat of ['stat_fixed','stat_percent','atk_fixed','atk_percent','elemental']){
+    for(const t of (pool[cat]||[])) if((t.name||'')+(t.suffix||'')===want) return {cat,t};
+  }
+  return null;
+}
+// 0.94 _exchange_spec.perk_value=mid：lo,hi = tmpl.values.get(str(tier), [1,3])，取 (lo+hi)//2。
+// 返回 null 表示「词条不在该池内」，调用方按原版报错并退还护符，不得静默产出数值为 1 的装备。
+export function perkMidValue(name, tier, job, slot){
+  const hit=instPerkTemplate(name, slot||'armor', job||'warrior');
+  if(!hit) return null;
+  const v=hit.t.values[''+tier] || [1,3];
+  return Math.floor((v[0]+v[1])/2);
 }
 export function buildExchangeEquip(e){
   const p=state.player, spec=instSpec();
   const it=genEquip(e.slot, p.job, e.tier, p.level);
   if(!it) return null;
+  // 0.94 generate_instance_equip：先按「池×职业」解析固定词条，再结算精炼/孔/品质
+  const poolKind=(e.slot==='weapon'||e.slot==='gloves')? 'weapon':'general';
+  const names=((spec.perks_by_pool_job||{})[poolKind]||{})[p.job] || [];
+  if(!names.length) return null;                  // 「兑换配置缺 X 池 Y 职业词条表」
+  const perks=[];
+  for(const n of names){
+    const v=perkMidValue(n, e.tier, p.job, e.slot);
+    if(v==null) return null;                     // 「词条「N」不在 X 池内」→ 退还护符
+    perks.push({name:n, value:v});
+  }
+  it.perks=perks;
+  it.sockets=spec.sockets||3;
+  it.gems=new Array(it.sockets).fill(null);
   applyRefineLevels(it, spec.refine||5);
-  it.sockets = spec.sockets||3;
-  it.gems = new Array(it.sockets).fill(null);
-  const poolKey = (e.slot==='weapon'||e.slot==='gloves')? 'weapon':'general';
-  const names = ((spec.perks_by_pool_job||{})[poolKey]||{})[p.job] || [];
-  it.perks = names.map(n=>({name:n, value:perkMidValue(n, e.tier, p.job)}));
-  it.quality = qualityFromPerks(it.perks.length);
-  it.fromInstance = e.instance;
+  // 0.94 count_attrs 排除隐藏词条，get_quality 只按非隐藏词条数查阈值
+  it.quality=qualityFromPerks(it.perks.filter(pk=>!pk.hidden).length);
+  it.fromInstance=e.instance;
   return it;
 }
 export function doInstanceExchange(key){
@@ -246,7 +273,7 @@ export function doInstanceExchange(key){
   if(!e) return;
   if(itemCount(e.cost_key) < e.cost_count){ log('<span class="dmg">护符不足：需 '+itemName(e.cost_key)+' x'+e.cost_count+'</span>'); return; }
   const it=buildExchangeEquip(e);
-  if(!it){ log('<span class="dmg">兑换失败：无可用基底</span>'); return; }
+  if(!it){ log('<span class="dmg">兑换失败：无可用底材，或兑换配置缺该职业词条表（护符未消耗）</span>'); return; }
   itemConsume(e.cost_key, e.cost_count);
   addToBag(it);
   log('<span class="loot">兑换成功：['+QNAME[it.quality]+']'+it.name+'（+'+(it.refine)+'精炼·'+it.sockets+'孔）</span>');

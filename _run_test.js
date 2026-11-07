@@ -1801,6 +1801,102 @@ function ok(name, cond, extra) {
         ng.length > 0 && eqN.perks.every(p => ng.some(t => t.name === p.name)));
     }
 
+    // L12：0.94 apply_refine_levels / spec（generator.py#generate_instance_equip）口径
+    {
+      const spec12 = E.instSpec();
+      ok('0.94 _exchange_spec 统一规格：sockets=3 / refine=5 / perk_value=mid',
+        spec12.sockets === 3 && spec12.refine === 5 && spec12.perk_value === 'mid' &&
+        Object.keys(spec12.perks_by_pool_job).sort().join() === 'general,weapon');
+      ok('0.94 instPoolKey：首饰跨职业 / 武器护手走职业武器池 / 其余职业通用池',
+        E.instPoolKey('weapon','warrior') === 'warrior_weapon_perk_pool' &&
+        E.instPoolKey('gloves','mage') === 'mage_weapon_perk_pool' &&
+        E.instPoolKey('ring1','warrior') === 'ring_perk_pool' &&
+        E.instPoolKey('ring2','mage') === 'ring_perk_pool' &&
+        E.instPoolKey('necklace','shaman') === 'necklace_perk_pool' &&
+        E.instPoolKey('helmet','darkwitch') === 'darkwitch_general_pool');
+      const tPct = E.instPerkTemplate('物理攻击%','weapon','warrior');
+      const tAtk = E.instPerkTemplate('物理攻击','weapon','warrior');
+      const tHp  = E.instPerkTemplate('生命值','helmet','warrior');
+      ok('0.94 _find_perk_template 按显示名 name+suffix 精确匹配（含 % 词条）',
+        !!tPct && tPct.t.suffix === '%' &&
+        !!tAtk && tAtk.t.suffix === '' && tAtk.cat === 'atk_fixed' &&
+        !!tHp && tHp.t.suffix === '' && tHp.cat === 'atk_fixed');
+      const jobs12 = ['warrior','mage','darkwitch','shaman'];
+      let hit12 = 0; const miss12 = [];
+      for (const kind of ['weapon','general'])
+        for (const j of jobs12)
+          for (const n of ((spec12.perks_by_pool_job||{})[kind]||{})[j] || []) {
+            const slot = kind === 'weapon' ? 'weapon' : 'helmet';
+            if (E.perkMidValue(n, 5, j, slot) !== null) hit12++;
+            else miss12.push(kind+'/'+j+'/'+n);
+          }
+      ok('0.94 spec 16/16 固定词条在对应池命中（旧实现仅 8/16）',
+        hit12 === 16, 'hit=' + hit12 + ' miss=' + miss12.join(','));
+      ok('0.94 perk_value=mid 取 (lo+hi)//2 且命中正确模板',
+        E.perkMidValue('物理攻击', 5, 'warrior', 'weapon') === 23 &&
+        E.perkMidValue('物理攻击%', 5, 'warrior', 'weapon') === 2 &&
+        E.perkMidValue('生命值', 5, 'warrior', 'helmet') === 29 &&
+        E.perkMidValue('不存在的词条', 5, 'warrior', 'helmet') === null);
+      const pl12 = E.state.player, savedJob = pl12.job, savedLv = pl12.level;
+      pl12.job = 'warrior'; pl12.level = 80;
+      const we = E.instEntries().find(x => x.slot === 'weapon' && x.tier === 5);
+      const eq12 = E.buildExchangeEquip(we);
+      ok('0.94 副本兑换武器：2 条固定词条取真值 23/2、+5 精炼、3 孔',
+        !!eq12 && eq12.refine === 5 && eq12.sockets === 3 &&
+        eq12.perks.length === 2 && eq12.perks[0].value === 23 && eq12.perks[1].value === 2,
+        eq12 ? JSON.stringify(eq12.perks) : 'none');
+      const savedNames = spec12.perks_by_pool_job.weapon.warrior.slice();
+      try {
+        spec12.perks_by_pool_job.weapon.warrior = ['不存在的词条'];
+        E.addToBag({type:'consumable', key:we.cost_key, count:we.cost_count});
+        const cnt12 = E.itemCount(we.cost_key);
+        E.doInstanceExchange(we._k);
+        ok('0.94 词条不在池内时拒绝兑换且护符不扣', E.itemCount(we.cost_key) === cnt12);
+        E.itemConsume(we.cost_key, we.cost_count);
+      } finally {
+        spec12.perks_by_pool_job.weapon.warrior = savedNames;
+        pl12.job = savedJob; pl12.level = savedLv;
+      }
+      const probe12 = E.genEquip('weapon','warrior',5,80);
+      ok('0.94 applyRefineLevels 返回最终等级且封顶 REFINE_MAX=7',
+        !!probe12 && E.applyRefineLevels(probe12, 0) === 0 &&
+        E.applyRefineLevels(probe12, 5) === 5 &&
+        E.applyRefineLevels(probe12, 10) === 7);
+      ok('0.94 refine.json 补 8 档固定加点 [15,20]（当前 7 档体系零行为影响）',
+        JSON.stringify(E.DATA.refine.refine_per_level_flat['8']) === '[15,20]' &&
+        E.DATA.refine.refine_max === 7);
+    }
+
+    // L12：0.94 _roll_perk_value 精确四档（旧版标准反汇编完整函数体，消解 §14.5 悬案）
+    {
+      const q = E.mysticQuartiles(1, 20);
+      ok('0.94 q1=(n-1)//4 / q3=max(q1+1,(n-1)*3//4)（L11 的 n//4 近似已更正）',
+        q.n === 20 && q.q1 === 4 && q.q3 === 14);
+      ok('0.94 n==1/2 退化：唯一值返回 lo，双值仅在 {lo,hi} 内取',
+        E.mysticPerkValue(7, 7) === 7 &&
+        Array.from({length: 400}, () => E.mysticPerkValue(7, 8)).every(v => v === 7 || v === 8));
+      const v3 = Array.from({length: 600}, () => E.mysticPerkValue(1, 3));
+      const v4 = Array.from({length: 600}, () => E.mysticPerkValue(1, 4));
+      const r3 = v3.filter(v => v === 3).length / v3.length;
+      ok('0.94 n==3/4 走离散值加权抽样（n==3 首档权重 0.2、满值 0.1）',
+        v3.every(v => v >= 1 && v <= 3) && v4.every(v => v >= 1 && v <= 4) &&
+        r3 > 0.04 && r3 < 0.18, 'full(n3)=' + r3.toFixed(3));
+      const wide = Array.from({length: 3000}, () => E.mysticPerkValue(1, 20));
+      let bad12 = 0, lo12 = 0, hi12 = 0;
+      for (const v of wide) {
+        if (v < 1 || v > 20) bad12++;
+        if (v >= 1 && v < 5) lo12++;
+        if (v === 20) hi12++;
+      }
+      ok('0.94 n>=5 四段抽样：[1,5) 最低 / [5,15) 中位 / [15,20) 次完美 / 20 完美',
+        bad12 === 0 && lo12 / 3000 > 0.04 && lo12 / 3000 < 0.18 &&
+        hi12 / 3000 > 0.04 && hi12 / 3000 < 0.18,
+        'bad=' + bad12 + ' low=' + (lo12/3000).toFixed(3) + ' full=' + (hi12/3000).toFixed(3));
+      const sp = Array.from({length: 400}, () => E.mysticSubperfect(1, 20));
+      ok('0.94 _roll_subperfect_value：宽区间 [lo+q3, hi-1]=[15,19]，n<=4 退化 hi-1',
+        sp.every(v => v >= 15 && v <= 19) && E.mysticSubperfect(1, 4) === 3);
+    }
+
   // ⑤ 技能 / 武魂
   {
     const sk = E.subTabs('skill').map(x => x.key);
