@@ -4,9 +4,9 @@
  */
 import { state } from './state.js';
 import { BASE_BY_KEY, DATA, ITEM_NAME_CACHE, SLOT_NAME, uid } from './core.js';
-import { QNAME, buildEquip, genEquipBaseForSlot, jobFromBaseKey } from './equip.js';
+import { QNAME, buildEquip, buildMysticEquip, genEquipBaseForSlot, jobFromBaseKey } from './equip.js';
 import { gainExp } from './battle.js';
-import { addToBag } from './bag.js';
+import { BAG_CAP, addToBag } from './bag.js';
 import { eventLog, log, renderHeader } from './render.js';
 import { renderTab } from './tabs.js';
 import { fmtNum } from './life.js';
@@ -69,10 +69,15 @@ export function buyShopItem(shopKey, idx){
   const price=it.price;
   if(it.kind==='mystic_equip'){
     if(p.crystal<price){ log('<span class="dmg">神秘结晶不足</span>'); return; }
+    // 0.94 api_shop_mystic_exchange：装备区满则拒绝兑换（不扣结晶）。
+    // web-idle 的 trimBag 会在背包超容时回收白/绿装，不先检查会「扣了结晶却拿不到装备」。
+    if(p.bag.length>=BAG_CAP){ log('<span class="dmg">背包已满，无法兑换装备</span>'); return; }
     const slot=window._mysticSlot||'weapon';
     const base=genEquipBaseForSlot(slot, p.job, it.tier);
     if(!base){ log('<span class="dmg">该部位暂无可用基底</span>'); return; }
-    const eq=buildEquip(base, p.job, it.tier, slot, it.perfect ? 'full_perk' : undefined);
+    // v0.94：普通 / 完美两档走 generate_mystic_equip 规则（1~3 词条 + 四档数值分布），
+    // 不再用通用 buildEquip 的 full_perk 满词条近似。
+    const eq=buildMysticEquip(base, p.job, it.tier, slot, !!it.perfect);
     p.crystal-=price; addToBag(eq);
     log('<span class="loot">兑换 '+SLOT_NAME[slot]+'·'+eq.name+'（'+it.name+'，['+QNAME[eq.quality]+']）</span>');
   }else if(it.kind==='mystic_item'){

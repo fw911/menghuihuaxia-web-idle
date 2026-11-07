@@ -100,6 +100,8 @@ EXPORTS = [
     'campaignIncompleteZone', 'campaignDungeonTarget', 'campaignProgressInfo', 'renderCampaignStatus',
     # L9：0.94 神秘商人购买 / 续命道具使用（js/shop.js）
     'buyShopItem','useConsumable',
+    # L10：0.94 神秘商人装备生成（js/equip.js，字节码取证后的忠实实现）
+    'buildMysticEquip','genEquipBaseForSlot',
 ]
 
 lines = [

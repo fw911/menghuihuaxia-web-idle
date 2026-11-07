@@ -1164,6 +1164,95 @@ v0.58 两个字段都有丰富真实值，而 v0.91 的 `items.json` 又完整�
 - 3 个续命道具**不生效**（无寿命系统），只做到「可购买、不吞道具、有明确提示」；真正的寿命机制属 L5 功能域移植。
 - `companion_grocery` 新增 3 条的 `group` 沿用 0.94 的「延灵」，与店内 L6 对齐的「摄魂 / 逗魂粮」战魂系文案
   并不统一；本轮不改展示文案，留待单独的文案决策。
+  → **以上三条（`perfect` 近似、`5/6 档自研`定性、分组文案）均已在 §十三 解决或更正。**
+
+## 十三、L10 字节码取证：0.94 神秘商人「完美装备」的真实口径（已落地）
+
+### 13.1 取证路径（含一次失败的尝试）
+
+`_l10_dis_v094.py` 最初按旧 `_dis_dump.py` 的路线扫 0.94 exe 的 zlib 流并用 Python 3.14
+`marshal.loads` 还原 code object，结果 **10,848 个候选流、0 个模块**。原因：0.94 把 code object
+以**自定义紧凑 marshal 明文**存放在 exe 内（`a`/`u` = NUL 结尾 ASCII/UTF-8 字符串、
+`T` = tuple、`l` = varint int、`C` = code），既不是标准 3.14 marshal（`marshal.dumps`
+首字节 `0xe3`），也不在 zlib 流里。于是改走两条互补路线：
+
+1. **0.94 明文常量 / docstring 提取**（`_l10_dis_v094.py` → `_dis_v094_forensic.txt`）——
+   `BACKHX_v0.94.exe` 的中文 docstring 把规则、概率和拍板日期都写死了；
+2. **v0.58/v0.91 全量反汇编交叉验证**（`F:/梦回华夏/_archive/web_idle_disassembly_20261020.zip`
+   内 `_dis_all.txt`，标准 3.14 marshal，可 `dis`）——核对函数签名、常量与调用链。
+
+### 13.2 取到的 0.94 口径
+
+`generator.py#generate_mystic_equip(tier, job_key, slot_key, max_level, perfect, hand)`
+（参数名来自 66,642,380 处常量池；`perfect` / `hand` 是 0.94 新增）：
+
+> 神秘商人装备生成：本职业指定部位 + 指定档位（2026-09-22 拆「普通 / 完美」两档）。
+> - 随机 1~3 条属性（词条），每条按**正常四档分布**随机（最低 10% / 中位 70% / 次完美 10% / 完美 10%）
+> - `perfect=True`（**完美档**，7 档 1200 结晶）：**首条强制取该档上限 hi** ⇒ 必带 1 条完美词条；
+>   词条数单条概率 10%（2/3 条各 45%）；除首条外不可出现满属性（命中 hi 重投次完美段，2026-09-24 拍板）
+> - `perfect=False`（**普通档**，7 档 120 结晶）：全部走正常分布（与掉落装备同质量分布，不保证完美）
+> - 随机 1~3 个孔（`total_slots`）；底材按 职业×部位 过滤；`hand` 仅武器部位生效
+
+`content/huaxia/rules/perk_pool.py` 的四档分布 docstring（2026-08-27 拍板，
+次完美由 20% 降至 10%）：
+
+> 把 `[lo, hi]` 按位置切成四段，档位与权重：最低（区间下段，含 lo）10% /
+> 中位数（中段，占比最大）70% / 次完美（上段，接近但不到上限）10% / 完美（取 hi）10%；
+> 区间太窄放不下四段时向中间段并拢。
+> `_roll_subperfect_value`：宽区间段 = `[lo+q3, hi-1]`，窄区间（n<=4）退化取 `hi-1`。
+
+`main.py#api_shop_mystic_exchange`：价格 / 清单 / 是否完美档的**单一源 = 配置**
+（2026-09-22 起弃用硬编码），扣 `shenmi_jingjie`，装备区满则拒绝，生成失败退还结晶。
+
+### 13.3 对 L9 结论的三处更正
+
+1. **L9 的 `perfect` 用 `full_perk` 满词条是错的**。web-idle 的 `full_perk` 含义是
+   「词条数拉到 `PERK_CAP[tier]`（7 档 = 9 条）且数值均匀随机」，与 0.94 的
+   「1~3 条 + 首条满值 + 其余禁满 + 四档分布」完全不同。
+2. **被删掉的 5/6 档并非「自研兑换」**。旧版 `api_shop_mystic_exchange`
+   （`_dis_all.txt` main.py:2716）硬编码 `tier ∈ {5,6,7}`、`cost = {5:10, 6:30, 7:50}` 结晶，
+   调 `generate_mystic_equip(tier, job_key, slot)` 且**无 `perfect` 参数**——
+   web-idle 原来那 3 条正是忠实旧版 API。L9 按用户拍板「完整替换」删除它们，
+   是版本路线选择，不是清理自研数据。
+3. 旧版 `api_shop_mystic_items` / `api_shop_mystic_exchange_item`（main.py:2777 / 2803）
+   用硬编码 `_MYSTIC_ITEM_EXCHANGE[item_key] = (cost, gain)`、`ITEM_BY_KEY` 查名、
+   `add_consumable` 发放；0.94 改为配置驱动 `give` / `give_pool` / `gain`。
+   L9 的 `mystic_item` 分支语义与之吻合，保留。
+
+### 13.4 落地
+
+| 文件 | 改动 |
+|---|---|
+| `js/equip.js` | 新增 `mysticPerkValue` / `mysticSubperfect` / `buildMysticEquip`：1~3 词条、四档分布（10/70/10/10、q1/q3 四分位切段）、perfect 首条 `hi`、其余禁满、`sockets=1~3`；词条显式带 `hi`（档位上限，便于校验） |
+| `js/shop.js` | `mystic_equip` 分支改用 `buildMysticEquip`，弃用 `full_perk` 近似；新增 0.94 容量检查 `bag.length>=BAG_CAP` → 拒绝且不扣结晶（否则 `trimBag` 会回收白/绿装，出现「扣结晶却拿不到装备」） |
+| `data/shops.json` | `companion_grocery` 展示文案按 0.94 统一：`name` 战魂杂货商→灵兽杂货商、`desc` 整句、14 处 `group`（摄魂→摄灵 2、逗魂粮→逗灵粮 12），共 16 处；可复现脚本 `_l10_apply.py` |
+| `_patch.py` | 补 `buildMysticEquip` / `genEquipBaseForSlot` 两个测试导出（共 316） |
+| `_run_test.js` | 新增 6 条断言：夹具、两档装备 160 次采样忠实性、普通档满值率约 10%、背包满拒绝、完美档购买、文案对齐 |
+
+`full_perk` 本身保留（`js/life.js` 洗练成本与既有 `buildEquip` 断言仍消费它），
+通用掉落 / 打造的 `rollPerkCount` 口径不受影响 —— 两套生成逻辑刻意分离。
+
+### 13.5 验证
+
+- `_run_test.js` **680 项 ALL PASS / 0 FAIL / 0 SKIP**（8014 后端在跑）
+- `_l4_survive.js` 挂机 6 例 × 2500 轮 **死亡 0/6**；`_l4_verify.js` 首领三档与 L5/L6/L8/L9 一致
+- `data/shops.json` 41179 B 不变、CRLF 1620 行不变，git diff 精确 16 行；
+  反向替换逐字节还原证明非目标零改动
+- `node --check` / `py_compile` 通过
+
+### 13.6 残留边界
+
+- 0.94 的自定义紧凑 marshal **未逐指令反汇编**：四档分布的 `q1/q3` 按 docstring
+  「按位置切成四段」复刻（`q1=n//4`、`q3=3n/4` 偏移），未验证 `_roll_perk_value` 的逐条边界；
+  窄区间并拢按 `_roll_subperfect_value` 说明实现。
+- 词条池用 web-idle `data/perk_pool.json`（0.94 用 `PERK_POOLS` + `MODE_CATEGORIES`
+  按职业/部位选池）；`quality` 用 web-idle `qualityFromPerks(perks.length)`
+  （0.94 是 `get_quality(count_attrs(perks, slots), total_slots, 0)`）；
+  `hand` 单/双手过滤未实现（`genEquipBaseForSlot` 只按 职业×档位×部位 取底材）。
+- 3 个续命道具仍不生效（无寿命系统）；2 个炼魂壶别名仍是自研兜底。
+- **全站「战魂」命名仍是 L6 的 v0.91 文案**：本轮只把 `companion_grocery` 一店
+  回正到 0.94 灵兽系，其余商店 / 系统名称保持一致，属已知混合态。
+
 
 
 

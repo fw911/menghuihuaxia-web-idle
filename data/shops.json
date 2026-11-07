@@ -1383,26 +1383,26 @@
     },
     {
       "key": "companion_grocery",
-      "name": "战魂杂货商",
+      "name": "灵兽杂货商",
       "category": "companion",
       "group": "grocery",
       "map_key": [
         "baishougu",
         "qixingling"
       ],
-      "desc": "百兽谷/七星岭才有：摄魂用的魂帛与魂壶、1~3 星未封印珠、秘魂丹与逗魂粮（钱币）",
+      "desc": "万兽谷/七曜岭才有：摄灵用的灵帛与灵壶、1~3 星未封印珠、秘灵丹与逗灵粮（钱币）",
       "items": [
         {
           "item": "hunbo",
           "price": 5000,
           "kind": "consumable",
-          "group": "摄魂"
+          "group": "摄灵"
         },
         {
           "item": "hunhu",
           "price": 5000,
           "kind": "consumable",
-          "group": "摄魂"
+          "group": "摄灵"
         },
         {
           "item": "weifengyin_1x",
@@ -1456,73 +1456,73 @@
           "item": "huanledu_cao",
           "price": 300,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_lingdang",
           "price": 300,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_qian",
           "price": 300,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_rou",
           "price": 300,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_bianzhong",
           "price": 600,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_fei",
           "price": 600,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_shen",
           "price": 600,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_yu",
           "price": 600,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_shan",
           "price": 1200,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_tao",
           "price": 1200,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_xie",
           "price": 1200,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         },
         {
           "item": "huanledu_yupei",
           "price": 1200,
           "kind": "consumable",
-          "group": "逗魂粮"
+          "group": "逗灵粮"
         }
       ]
     },

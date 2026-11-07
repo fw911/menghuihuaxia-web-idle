@@ -72,6 +72,54 @@ export function buildEquip(base, job, tier, slot, mode){
     gems: new Array(base.sockets||0).fill(null), baseKey: base.key
   };
 }
+// ---------- v0.94 神秘商人装备生成（generator.py#generate_mystic_equip 字节码取证） ----------
+// 证据：BACKHX_v0.94.exe 内该函数 docstring「2026-09-22 拆普通 / 完美两档」及
+// content/huaxia/rules/perk_pool.py 的「词条数值四档概率分布」说明（2026-08-27 用户拍板）。
+//   1) 词条数 1~3；完美档 1 条 10% / 2 条 45% / 3 条 45%，普通档均匀 1~3
+//   2) 每条数值按四档分布：最低 10% / 中位 70% / 次完美 10% / 完美 10%（q1/q3 四分位切段）
+//   3) perfect=True：首条强制取该档上限 hi；其余禁满，命中 hi 重投次完美段（2026-09-24 拍板）
+//   4) 孔位 total_slots = 随机 1~3
+// 与通用 buildEquip 的自研 rollPerkCount（0~cap 条）刻意分离，避免掉落 / 洗练口径被污染。
+function mysticSubperfect(lo, hi){
+  if(hi<=lo) return lo;
+  const n=hi-lo+1, q3=Math.floor(3*n/4);
+  if(n<=4) return hi-1;                                   // 窄区间无独立次完美段
+  return ri(Math.min(lo+q3, hi-1), hi-1);
+}
+function mysticPerkValue(lo, hi){
+  if(hi<=lo) return lo;
+  const n=hi-lo+1, q1=Math.floor(n/4), q3=Math.floor(3*n/4);
+  const lowEnd=lo+q1, midEnd=Math.max(lowEnd, Math.min(lo+q3, hi-1));
+  const r=Math.random();
+  if(r<0.10) return ri(lo, lowEnd);                       // 最低
+  if(r<0.80) return ri(lowEnd, midEnd);                   // 中位
+  if(r<0.90) return mysticSubperfect(lo,hi);              // 次完美
+  return hi;                                              // 完美
+}
+export function buildMysticEquip(base, job, tier, slot, perfect){
+  const eq=buildEquip(base, job, tier, slot, 'whiteboard');
+  const pool=DATA.perk_pool[job+'_general_pool'] || DATA.perk_pool.warrior_general_pool || {};
+  let all=[];
+  for(const g of ['stat_fixed','stat_percent','atk_fixed','atk_percent','elemental']) all=all.concat(pool[g]||[]);
+  const r=Math.random();
+  const n=perfect ? (r<0.10?1:(r<0.55?2:3)) : ri(1,3);
+  const perks=[];
+  for(let i=0;i<n && all.length;i++){
+    const sf=pick(all);
+    const vals=sf.values[''+tier] || sf.values['1'] || [1,1];
+    const lo=vals[0], hi=vals[1];
+    let val=(perfect && i===0) ? hi : mysticPerkValue(lo,hi);
+    if(perfect && i>0 && val===hi) val=mysticSubperfect(lo,hi);
+    // hi = 该模板在该档位的上限（0.94 四档分布的分档基准；显式带出便于校验「禁满」）
+    perks.push({name:sf.name, suffix:sf.suffix||'', value:val, hi:hi});
+  }
+  eq.perks=perks;
+  eq.quality=qualityFromPerks(perks.length);
+  eq.sockets=ri(1,3);
+  eq.gems=new Array(eq.sockets).fill(null);
+  eq.perfect=!!perfect;
+  return eq;
+}
 // 耐久（原版 craft.py：打造时 stat_roller.roll_durability(base) 产出标量；
 // 解密数据 292 个基底 durability 全部为 [n,n] 等值对 → roll_lo~roll_hi 区间退化为单点，结果恒为 n，
 // 直接取 [0] 即零随机零臆造；原版无耐久消耗/修理/损坏机制，精炼按 refine_durability_pct 每级复合提升）

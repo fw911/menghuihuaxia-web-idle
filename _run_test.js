@@ -1710,6 +1710,61 @@ function ok(name, cond, extra) {
       ok('续命道具未开放时不吞道具', p9.bag.some(b => b.uid === '__life_probe__'));
       p9.bag = savedBag;
     }
+
+    // L10：0.94 字节码取证后的神秘商人装备生成（generator.py#generate_mystic_equip）
+    // 旧 L9 用 full_perk「词条数拉满 9 条」近似，与 0.94 的 1~3 条 + 四档分布不符。
+    {
+      const bb = E.genEquipBaseForSlot('weapon', 'warrior', 7);
+      ok('L10 夹具：7 档战士武器基底存在', !!bb);
+      let faithful = true, slots = 0, full = 0;
+      for (let i = 0; i < 160; i++) {
+        const pf = E.buildMysticEquip(bb, 'warrior', 7, 'weapon', true);
+        const nm = E.buildMysticEquip(bb, 'warrior', 7, 'weapon', false);
+        for (const eq of [pf, nm]) {
+          if (eq.perks.length < 1 || eq.perks.length > 3) faithful = false;
+          if (eq.sockets < 1 || eq.sockets > 3 || eq.gems.length !== eq.sockets) faithful = false;
+          if (eq.tier !== 7 || eq.slot !== 'weapon' || eq.job !== 'warrior') faithful = false;
+        }
+        if (pf.perfect !== true || nm.perfect !== false) faithful = false;
+        if (pf.perks[0].value !== pf.perks[0].hi) faithful = false;                 // 首条强制 hi
+        for (const p of pf.perks.slice(1)) if (p.value >= p.hi) faithful = false;  // 其余禁满
+        for (const p of nm.perks) { slots++; if (p.value === p.hi) full++; }        // 普通档四档分布
+      }
+      ok('v0.94 两档装备：1~3 词条 / 1~3 孔，完美档首条满值且其余禁满（160 次采样）', faithful);
+      const rate = full / Math.max(1, slots);
+      ok('v0.94 普通档数值四档分布（满值率约 10%，非均匀随机）',
+        rate > 0.03 && rate < 0.20, (rate * 100).toFixed(1) + '%');
+      // 购买路径：0.94 先检查容量（满则拒绝且不扣结晶），腾空后完美档 1200 结晶
+      // → 入包装备条数 ≤3（旧 full_perk 近似会给 9 条）
+      const p10 = E.state.player;
+      const c10 = p10.crystal, b10 = JSON.parse(JSON.stringify(p10.bag));
+      p10.crystal = 2000;
+      p10.bag = JSON.parse(JSON.stringify(b10));
+      while (p10.bag.length < 300) p10.bag.push({ uid: '__cap__' + p10.bag.length, type: 'consumable', key: 'x', count: 1 });
+      E.buyShopItem('shenmi_shangren', 1);
+      ok('v0.94 背包满时拒绝兑换装备且不扣结晶',
+        p10.crystal === 2000 && !p10.bag.some(x => x.perfect === true), 'crystal=' + p10.crystal);
+      p10.bag = [];
+      E.buyShopItem('shenmi_shangren', 1);
+      const got = p10.bag.find(x => x.type === 'equip' && x.perfect === true);
+      ok('完美档购买：扣 1200 结晶、入包装备 ≤3 词条且首条满值',
+        p10.crystal === 800 && !!got && got.perks.length <= 3 &&
+        got.perks[0].value === got.perks[0].hi,
+        got ? 'crystal=' + p10.crystal + ' perks=' + got.perks.length :
+          'none crystal=' + p10.crystal + ' bag=' + p10.bag.length);
+      p10.crystal = c10; p10.bag = b10;
+    }
+
+    // L10：灵兽杂货商展示文案统一到 0.94 灵兽系（L6 的 v0.91 战魂系在该店回退）
+    {
+      const g10 = all.find(x => x.key === 'companion_grocery');
+      ok('灵兽杂货商 name/desc/group 全量按 0.94 对齐',
+        g10.name === '灵兽杂货商' && g10.desc.indexOf('万兽谷/七曜岭') === 0 &&
+        g10.items.filter(o => o.group === '摄灵').length === 2 &&
+        g10.items.filter(o => o.group === '逗灵粮').length === 12 &&
+        g10.items.filter(o => o.group === '延灵').length === 3 &&
+        !g10.items.some(o => o.group === '摄魂' || o.group === '逗魂粮'));
+    }
   }
 
   // ⑤ 技能 / 武魂
