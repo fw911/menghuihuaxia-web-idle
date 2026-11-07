@@ -19,6 +19,39 @@ import { achList, addCrystalStone, checkAchievements, checkTitles, crystalForTie
 import { autoPotion, autoZoneOnLevelUp, sessBump, sessLevelUp } from './idle.js';
 import { renderAll } from './boot.js';
 
+// ---------- 难度（data/difficulty.json） ----------
+// 怪物出手速度倍率：按玩家等级分段（数据：<70 → 0.8，70/80/90 逐档提升，≥100 → 1.0）
+export function monsterSpeedMult(level){
+  const cfg = (DATA.difficulty||{}).monster_speed_mult || {};
+  const def = cfg.default != null ? Number(cfg.default) : 1;
+  const lv = Number(level) || 1;
+  let hit = null;
+  for(const b of (cfg.bands||[])){
+    const ml = Number(b.min_level) || 0;
+    if(lv >= ml && (!hit || ml > (Number(hit.min_level)||0))) hit = b;
+  }
+  return hit ? (hit.mult != null ? Number(hit.mult) : def) : def;
+}
+// 遭遇规模：按地图 region_type 取 difficulty.batch_size（本仓库「副本」对应 instance）
+export function mapBatchSize(map){
+  const bs = (DATA.difficulty||{}).batch_size || {};
+  let rt = (map && map.region_type) || 'field';
+  if(rt === '副本') rt = 'instance';
+  const arr = (bs[rt] || bs.field || [1,1]).map(Number);
+  const lo = Math.max(1, Math.min.apply(null, arr));
+  const hi = Math.max(lo, Math.max.apply(null, arr));
+  return [lo, hi];
+}
+// 遭遇精英率 / 单次遭遇精英上限
+export function eliteChance(){
+  const v = Number((DATA.difficulty||{}).elite_rate);
+  return isFinite(v) && v > 0 ? Math.min(1, v) : 0;
+}
+export function eliteCap(){
+  const v = Number((DATA.difficulty||{}).elite_cap_per_encounter);
+  return isFinite(v) && v > 0 ? Math.floor(v) : 0;
+}
+
 // ---------- 战斗 ----------
 // 首领威胁加成：HP 保留 1.3（让刚解锁的首领有血量压力）。
 // 攻击倍率撤销为 1.0，依据原版 v0.91 bytecode：
@@ -32,7 +65,8 @@ import { renderAll } from './boot.js';
 //   ×1.1 → 5/5、×1.0 → 5/5（平均 2101 轮，与修复前 2156 轮一致）；喝药阈值 85→99 与减伤 20% 均无效。
 // 副作用（正向）：m.max_phys_atk 不再被放大后，monsterSkillSd 自然回到原版「配置原值」口径。
 export const BOSS_HP_MULT = 1.3, BOSS_ATK_MULT = 1.0;
-export function spawnMonster(){
+// kind：'normal' / 'elite' 由遇怪组按难度指定；不传时保持旧行为（普通区 8% 精英、首领区 25%）
+export function spawnMonster(kind){
   const z = state.zone;
   let key, isBoss=false, isElite=false;
   if(z.isBoss){
@@ -44,7 +78,8 @@ export function spawnMonster(){
         const _pool=(_bm.boss_zone.monsters||[]).slice();
         const _el=(_bm.boss_zone.elite_monsters||[]).slice();
         const _needElite=minionKillCount(_bm.key,'elite')<_t.elite;
-        if(_needElite && _el.length && Math.random()<0.25){ key=pick(_el); isElite=true; }
+        const _wantElite = kind === 'elite' || (kind == null && _needElite && Math.random()<0.25);
+        if(_wantElite && _el.length){ key=pick(_el); isElite=true; }
         else if(_pool.length){ key=pick(_pool); }
         else if(_el.length){ key=pick(_el); isElite=true; }
         else return null;
@@ -56,12 +91,14 @@ export function spawnMonster(){
     const map = DATA.maps.maps.find(m=>m.key===z.mapKey);
     const zone = map.zones.find(zz=>zz.key===z.zoneKey);
     const pool = (zone.monsters||[]).slice();
-    if(zone.elite_monsters && zone.elite_monsters.length && Math.random()<0.08){
-      key = pick(zone.elite_monsters); isElite=true;
+    const el = (zone.elite_monsters||[]).slice();
+    const wantElite = kind === 'elite' || (kind == null && el.length && Math.random()<0.08);
+    if(wantElite && el.length){
+      key = pick(el); isElite=true;
     }else if(pool.length){
       key = pick(pool);
-    }else if(zone.elite_monsters && zone.elite_monsters.length){
-      key = pick(zone.elite_monsters); isElite=true;
+    }else if(el.length){
+      key = pick(el); isElite=true;
     }
   }
   const base = getMonster(key);
@@ -75,35 +112,59 @@ export function spawnMonster(){
     m.min_magic_atk = Math.round((m.min_magic_atk||0)*BOSS_ATK_MULT);
     m.max_magic_atk = Math.round((m.max_magic_atk||0)*BOSS_ATK_MULT);
   }
+  // 难度：怪物出手速度按玩家等级分段缩放（difficulty.monster_speed_mult）
+  m.speed = (m.speed == null ? 4 : Number(m.speed)) * monsterSpeedMult(state.player ? state.player.level : 1);
   m.curHp = m.hp;
   m.skills = MON_SKILLS[key] || [];
   m.skillCd = {};
   return m;
 }
 
-// 每次遇怪的怪物组：普通练级区 / 首领区小怪阶段生成 2~6 只；首领本尊、副本首领单只。
-// 这样既满足「每次遇怪 2~6 个」的需求，又不破坏首领/副本的单体战斗体验。
+// 每次遇怪的怪物组：普通练级区 / 首领区小怪阶段成群；首领本尊、副本首领单只。
+// 难度接入：普通遭遇规模取 difficulty.batch_size（field/dungeon/instance），
+// 精英按 difficulty.elite_rate 概率整组替换（数量 ≤ elite_cap_per_encounter），不新增槽位。
 export function spawnMonsterGroup(){
   const z = state.zone;
   if(!z) return [];
-  // 群体规模：普通练级区 / 首领区小怪按设置生成（默认随机 2~6）；首领本尊 / 副本首领始终单只
+  const map = DATA.maps.maps.find(m=>m.key===z.mapKey);
+  // 群体规模：玩家固定档位优先（保持原 UI 语义）；随机档位按难度表的地图类型区间
   const gs = state.auto.groupSize;
-  const grpN = (gs && gs!=='rand') ? Math.max(1, Math.min(6, parseInt(gs,10)||2)) : ri(2,6);
+  let grpN;
+  if(gs && gs!=='rand') grpN = Math.max(1, Math.min(6, parseInt(gs,10)||2));
+  else if(z.isBoss) grpN = ri(2,6);                  // 首领区小怪阶段保持既有 2~6
+  else { const [lo,hi] = mapBatchSize(map); grpN = ri(lo,hi); }
   // 补齐到目标数量：spawnMonster 偶发返回 null（个别怪物数据缺失）时循环重试，保证「每波遇怪数量」
-  const fill = (n) => {
+  const fill = (n, kind) => {
     const arr = [];
     let guard = 0;
-    while(arr.length < n && guard++ < n*4 + 8){ const m = spawnMonster(); if(m) arr.push(m); }
+    while(arr.length < n && guard++ < n*4 + 8){ const m = spawnMonster(kind); if(m) arr.push(m); }
     return arr;
   };
   if(z.isBoss){
-    const _bm = DATA.maps.maps.find(m=>m.key===z.mapKey);
+    const _bm = map;
     if(_bm && _bm.boss_zone && !bossZoneCleared(_bm)){
-      return fill(grpN);   // 首领区小怪阶段：按规模成群
+      return fill(grpN, null);   // 首领区小怪阶段：沿用既有精英需求逻辑（不套难度替换）
     }
     const m = spawnMonster(); return m? [m] : [];   // 首领本尊 / 副本首领：单只
   }
-  return fill(grpN);
+  const arr = fill(grpN, 'normal');
+  // 难度精英：整组按概率替换 n 个槽位（n = randint(1, min(cap, size))）
+  const zone = map && map.zones ? map.zones.find(zz=>zz.key===z.zoneKey) : null;
+  const elites = (zone && zone.elite_monsters) || [];
+  const cap = eliteCap();
+  if(arr.length && elites.length && cap > 0 && Math.random() < eliteChance()){
+    const n = ri(1, Math.min(cap, arr.length));
+    const idx = arr.map((_,i)=>i);
+    for(let i=idx.length-1;i>0;i--){                  // 洗牌后取前 n 个，等概率替换
+      const j = Math.floor(Math.random()*(i+1));
+      const t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+    }
+    for(let i=0;i<n;i++){
+      const m = spawnMonster('elite');
+      if(m) arr[idx[i]] = m;
+    }
+  }
+  return arr;
 }
 
 // ---------- 召唤兽 ----------

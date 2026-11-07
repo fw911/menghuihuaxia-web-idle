@@ -89,7 +89,9 @@ export function buildSavePayload(){
     ores:p.ores, materials:p.materials, wuhunSlots:p.wuhunSlots||[null,null], shenmo:p.shenmo||null,
     skills:p.skills||{}, passives:p.passives||{}, events:state.events.slice(-12), _uid:_ids.n,
     summon:p.summon||null, mining:p.mining||{level:1,exp:0}, stats:p.stats||{}, ach:p.ach||{}, mine:state.mine||null,
-    titles:p.titles||{}, equippedTitle:p.equippedTitle||null, crystals:p.crystals||{}, power:powerScore(p), v:2, ts:Date.now(), rate:idleRate() };
+    titles:p.titles||{}, equippedTitle:p.equippedTitle||null, crystals:p.crystals||{}, power:powerScore(p),
+    attr:p.attr||{}, attr_migrated:!!p.attr_migrated,   // 五维手动加点：必须入库，否则读档丢失
+    v:2, ts:Date.now(), rate:idleRate() };
 }
 // 应用存档数据（本地读档与云端读档共用）
 export function applySavePayload(d){
@@ -99,6 +101,7 @@ export function applySavePayload(d){
     wuhunSlots:d.wuhunSlots||[null,null], shenmo:d.shenmo||null,
     skills:d.skills||{}, passives:d.passives||{}, skillCd:{}, _s:null,
     summon:d.summon||null, mining:d.mining||{level:1, exp:0},
+    attr:d.attr||null, attr_migrated:d.attr_migrated===true,   // 旧档无这两个字段 → 交给 computeStats 等量迁移
     stats:d.stats||{kills:0, killType:{}, mapKills:{}, mapClear:[], mapBoss:{}, dungeonEnter:{}, zoneKills:{}, minionKills:{}, refine7:0, craftCount:0, crystalTotal:0}, ach:d.ach||{}, titles:d.titles||{}, equippedTitle:d.equippedTitle||null, crystals:d.crystals||{} };
   state.kills=d.kills||0; _ids.n=d._uid||1; state.events=d.events||[];
   state.mine = d.mine||null;

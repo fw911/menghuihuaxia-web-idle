@@ -745,6 +745,120 @@ function ok(name, cond, extra) {
     ok('普通区怪物不被加成', same);
   }
 
+  console.log('-- 掉落体系（monster_loot_built / loot_pools / loot_rules）--');
+  {
+    // ① 加载与覆盖
+    const builtN = Object.keys(E.DATA.monster_loot_built || {}).length;
+    ok('monster_loot_built 已加载', builtN > 0, builtN + ' 条');
+    ok('loot_pools 已加载', Object.keys(E.DATA.loot_pools || {}).filter(k => k !== '_meta').length > 0,
+      Object.keys(E.DATA.loot_pools || {}).filter(k => k !== '_meta').length + ' 池');
+    ok('loot_rules 已加载', !!(E.DATA.loot_rules && E.DATA.loot_rules.gem_recipe),
+      Object.keys(E.DATA.loot_rules || {}).join(','));
+    const allMons = E.DATA.monsters.monsters;
+    let covered = 0;
+    for (const m of allMons) if (E.LOOT_BUILT[m.key] && E.LOOT_BUILT[m.key].drops) covered++;
+    ok('全部怪物接入 L1 掉落', covered === allMons.length, covered + '/' + allMons.length);
+
+    // ② 几率边界：0 恒不掉 / 1 必掉 / 50% 边界
+    ok('几率 0 永不掉落', E.lootDropHit(0, () => 0) === false);
+    ok('几率 0 极小随机数仍不掉', E.lootDropHit(0, () => 0.0000001) === false);
+    ok('几率 100% 必掉', E.lootDropHit(1, () => 0.999999) === true);
+    ok('几率 50% 边界判定', E.lootDropHit(0.5, () => 0.4999) === true && E.lootDropHit(0.5, () => 0.5) === false);
+
+    // ③ 数量区间（表内 count 为 [lo,hi]）
+    let cMin = 99, cMax = 0;
+    for (let i = 0; i < 5000; i++) { const c = E.lootCountOf([5, 50]); cMin = Math.min(cMin, c); cMax = Math.max(cMax, c); }
+    ok('数量区间 [5,50] 不越界', cMin >= 5 && cMax <= 50, cMin + '~' + cMax);
+    ok('数量区间 [5,50] 能覆盖两端', cMin === 5 && cMax === 50, cMin + '~' + cMax);
+    ok('固定数量/缺省按 1', E.lootCountOf(1) === 1 && E.lootCountOf(undefined) === 1);
+
+    // ④ 池抽取：无放回 + 等权
+    let poolBad = false;
+    for (let i = 0; i < 500; i++) {
+      const got = E.lootPoolPick(['a', 'b', 'c'], 2);
+      if (got.length !== 2 || new Set(got).size !== 2) poolBad = true;
+    }
+    ok('池抽取 pick=2 无重复', !poolBad);
+    const pickN = { a: 0, b: 0, c: 0 };
+    for (let i = 0; i < 3000; i++) pickN[E.lootPoolPick(['a', 'b', 'c'], 1)[0]]++;
+    ok('池抽取 3 项各约占 1/3', Math.abs(pickN.a - 1000) < 250 && Math.abs(pickN.b - 1000) < 250 && Math.abs(pickN.c - 1000) < 250,
+      JSON.stringify(pickN));
+
+    // ⑤ 实打实结算：残血刀客（L1 built，含必掉 + 五珠池）
+    E.newPlayer('掉落', 'warrior');
+    const pl = E.state.player; pl.level = 70; E.refreshStats();
+    const lmon = E.getMonster('canxuedaoke38');
+    const beadKeys = ['xiangrui_zhu', 'xingyun_zhu', 'gaoji_xiangrui', 'gaoji_xingyun', 'lingyun_zhu'];
+    const beadCnt = {}; beadKeys.forEach(k => beadCnt[k] = 0);
+    let guaranteed = 0, unknownConsumable = 0, EQUIP = 0, GEM = 0;
+    for (let i = 0; i < 3000; i++) {
+      const ds = E.rollLoot(lmon, pl);
+      for (const d of ds) {
+        if (d.type === 'consumable') {
+          if (d.key === 'tong_ban') guaranteed++;
+          if (beadKeys.indexOf(d.key) >= 0) beadCnt[d.key]++;
+          if (!E.dropKeyKnown(d.key)) unknownConsumable++;
+        } else if (d.type === 'equip') EQUIP++;
+        else if (d.type === 'gem') GEM++;
+      }
+    }
+    ok('必掉组每次必出（3000/3000）', guaranteed === 3000, guaranteed + '');
+    const beadTotal = beadKeys.reduce((a, k) => a + beadCnt[k], 0);
+    ok('五珠池权重分布均匀', beadTotal > 200 && beadKeys.every(k => Math.abs(beadCnt[k] - beadTotal / 5) < beadTotal / 5 * 0.4),
+      beadTotal + ' 件 ' + JSON.stringify(beadCnt));
+    ok('未接入物品不会入包', unknownConsumable === 0, unknownConsumable + ' 件未知');
+    ok('装备/宝石按表产出', EQUIP > 200 && GEM > 100, 'equip=' + EQUIP + ' gem=' + GEM);
+  }
+
+  console.log('-- 难度系统（difficulty.json）--');
+  {
+    ok('difficulty 已加载', !!(E.DATA.difficulty && Array.isArray(E.DATA.difficulty.monster_speed_mult.bands)));
+    ok('速度系数 1 级=0.8', E.monsterSpeedMult(1) === 0.8, E.monsterSpeedMult(1) + '');
+    ok('速度系数 70 级=0.85', E.monsterSpeedMult(70) === 0.85, E.monsterSpeedMult(70) + '');
+    ok('速度系数 80 级=0.9', E.monsterSpeedMult(80) === 0.9, E.monsterSpeedMult(80) + '');
+    ok('速度系数 100 级=1.0', E.monsterSpeedMult(100) === 1.0, E.monsterSpeedMult(100) + '');
+    ok('遭遇规模表 field=[1,6]', E.mapBatchSize({ region_type: 'field' }).join(',') === '1,6', E.mapBatchSize({ region_type: 'field' }).join(','));
+    ok('遭遇规模表 dungeon=[3,6]', E.mapBatchSize({ region_type: 'dungeon' }).join(',') === '3,6');
+    ok('副本按 instance=[3,6]', E.mapBatchSize({ region_type: '副本' }).join(',') === '3,6');
+    ok('精英率/上限来自表', E.eliteChance() === 0.4 && E.eliteCap() === 3, E.eliteChance() + '/' + E.eliteCap());
+
+    // 实测：怪物速度随玩家等级缩放（普通区）
+    E.newPlayer('难度', 'warrior');
+    const pl = E.state.player;
+    E.state.zone = { mapKey: 'beijun', zoneKey: 'central', isBoss: false };
+    E.state.auto.groupSize = 'rand';
+    pl.level = 1; E.refreshStats();
+    const m1 = E.spawnMonster('normal'); const b1 = E.getMonster(m1.key);
+    const bs1 = (b1.speed == null ? 4 : b1.speed);
+    ok('1 级怪物速度=基础×0.8', Math.abs(m1.speed - bs1 * 0.8) < 1e-9, m1.speed + ' vs ' + bs1);
+    pl.level = 100; E.refreshStats();
+    const m2 = E.spawnMonster('normal'); const b2 = E.getMonster(m2.key);
+    const bs2 = (b2.speed == null ? 4 : b2.speed);
+    ok('100 级怪物速度=基础×1.0', Math.abs(m2.speed - bs2 * 1.0) < 1e-9, m2.speed + ' vs ' + bs2);
+
+    // 实测：遭遇规模 / 精英率 / 精英上限（普通区 400 次）
+    const sizeCnt = {}; let enc = 0, eliteEnc = 0, maxElite = 0, overCap = 0;
+    for (let i = 0; i < 400; i++) {
+      const g = E.spawnMonsterGroup();
+      sizeCnt[g.length] = (sizeCnt[g.length] || 0) + 1; enc++;
+      const ne = g.filter(x => x.isElite).length;
+      if (ne > 0) eliteEnc++;
+      if (ne > maxElite) maxElite = ne;
+      if (ne > 3) overCap++;
+    }
+    ok('普通区遭遇规模落在 [1,6]', Object.keys(sizeCnt).every(k => +k >= 1 && +k <= 6), JSON.stringify(sizeCnt));
+    ok('普通区能出 1 只遭遇', (sizeCnt[1] || 0) > 0);
+    ok('精英遭遇率≈0.4', Math.abs(eliteEnc / enc - 0.4) < 0.08, (eliteEnc / enc).toFixed(3));
+    ok('单次遭遇精英数≤3', overCap === 0 && maxElite <= 3, 'max=' + maxElite);
+
+    // 实测：dungeon 地图规模 [3,6]
+    E.state.zone = { mapKey: 'chaoshan_l1', zoneKey: 'xi_ce_qu_yu', isBoss: false };
+    const dSize = {};
+    for (let i = 0; i < 200; i++) { const g = E.spawnMonsterGroup(); dSize[g.length] = (dSize[g.length] || 0) + 1; }
+    ok('dungeon 遭遇规模落在 [3,6]', Object.keys(dSize).every(k => +k >= 3 && +k <= 6), JSON.stringify(dSize));
+    E.state.auto.groupSize = 'rand';
+  }
+
   console.log('-- 本地存档 导入 / 导出 --');
   {
     // ① 校验器：坏档必须被拦（坏档不许覆盖好档）
@@ -2862,6 +2976,95 @@ function ok(name, cond, extra) {
     Math.random = realRnd;
     ok('怪物普攻 = atk²/df（compute_phys_damage:445）', r0.dmg === 225, 'dmg=' + r0.dmg);
     ok('怪物技能 = (atk+sd)*atk/df（skill_damage:515）', r1.dmg === 375, 'dmg=' + r1.dmg);
+  }
+
+  // ---------- 五维加点（C 方案：per_level_points 发放 + 手动分配） ----------
+  {
+    console.log('-- 五维加点（C 方案）--');
+    E.newPlayer('加点', 'warrior');
+    const pa = E.state.player;
+    const jobW = E.DATA.jobs.jobs.find(j => j.key === 'warrior');
+    const per = E.attrPerLevel('warrior');
+    // 原版 jobs.json#per_level_points = 6（4 职业相同）。
+    // 权威源：0.94 config_enc/jobs.json 直解密 → per_level_points = 6；
+    // v0.91 口径亦为 6（UPGRADE_REPORT §四/§六之四）。旧 web 数据误写 5，此处以 0.94 为准。
+    ok('per_level_points 取自 jobs.json = 6（0.94 直解密真值）', per === 6, String(per));
+    ok('维度以 job.base_stats 为唯一来源（五维）', E.attrDims(pa).length === 5, JSON.stringify(E.attrDims(pa)));
+
+    // 全部期望值由 per 推导，避免数据表口径变化时断言静默失效
+    const T30 = per * 29;              // Lv30 总可分配点数
+    const MIG = T30;                    // 旧档迁移：每维转入量 = per×(lv−1)
+
+    // ① 发放：升级后总点数按公式增长（gainExp 触发，不需要额外结算代码）
+    pa.level = 1; pa.exp = 0; E.refreshStats();
+    E.gainExp(E.expToNext(1));
+    ok('升级 Lv1→2 后自动结算 ' + per + ' 点', pa.level === 2 && E.attrPointsTotal(pa) === per && E.attrPointsFree(pa) === per,
+      'lv=' + pa.level + ' total=' + E.attrPointsTotal(pa) + ' free=' + E.attrPointsFree(pa));
+
+    // ② 基线：Lv30 未加点时属性 = base + growth×(level−1)，不含任何自动加点
+    pa.level = 30; E.refreshStats();
+    const baseStr = jobW.base_stats.strength + jobW.growth.strength * 29;
+    ok('Lv30 总点数 = ' + per + '×29 = ' + T30, E.attrPointsTotal(pa) === T30, String(E.attrPointsTotal(pa)));
+    ok('未加点属性 = base+growth×29（无自动加点）', Math.abs(pa._s.attr.strength - baseStr) < 1e-9,
+      pa._s.attr.strength + ' vs ' + baseStr);
+
+    // ③ 加点：写回 + 立即重算派生属性
+    const s0 = pa._s.attr.strength;
+    const r1 = E.allocAttr(pa, 'strength', 1);
+    ok('加点成功且派生属性立即 +1', r1.ok && pa._s.attr.strength === s0 + 1 && pa.attr.strength === 1,
+      r1.msg + ' str=' + pa._s.attr.strength);
+    ok('可用点数同步扣减（' + T30 + '→' + (T30 - 1) + '）', E.attrPointsFree(pa) === T30 - 1, String(E.attrPointsFree(pa)));
+    const rOver = E.allocAttr(pa, 'strength', T30);
+    ok('超出可用点数被拒且不写回', !rOver.ok && pa.attr.strength === 1, rOver.msg);
+    const rBad = E.allocAttr(pa, 'not_a_dim', 1);
+    ok('未知维度被拒', !rBad.ok, rBad.msg);
+    const rFrac = E.allocAttr(pa, 'strength', 1.5);
+    ok('小数按 1 点结算（不产生半点）', rFrac.ok && pa.attr.strength === 2, 'str=' + pa.attr.strength);
+    const rNeg = E.allocAttr(pa, 'strength', -5);
+    ok('减点不能为负', !rNeg.ok && pa.attr.strength === 2, rNeg.msg);
+
+    // ④ 用尽 + 洗点
+    E.allocAttr(pa, 'constitution', E.attrPointsFree(pa));
+    ok('点数用尽后 free=0', E.attrPointsFree(pa) === 0, String(E.attrPointsFree(pa)));
+    ok('用尽后再 +1 被拒', E.allocAttr(pa, 'agility', 1).ok === false);
+    E.renderHero();
+    const heroFull = global.document.getElementById('hero-pane').innerHTML;
+    ok('用尽时 UI 仍显示洗点入口（否则无法重分配）', heroFull.indexOf('data-attr="reset"') >= 0);
+    const rReset = E.resetAttr(pa);
+    ok('洗点归还全部 ' + T30 + ' 点且派生属性回到基线',
+      rReset.ok && E.attrPointsUsed(pa) === 0 && E.attrPointsFree(pa) === T30
+      && Math.abs(pa._s.attr.strength - baseStr) < 1e-9, rReset.msg);
+
+    // ⑤ 存档往返：attr / attr_migrated 必须落盘并可还原
+    E.allocAttr(pa, 'agility', 7);
+    const pay = E.buildSavePayload();
+    ok('存档包含 attr 与 attr_migrated',
+      pay.attr && pay.attr.agility === 7 && pay.attr_migrated === true, JSON.stringify(pay.attr));
+    E.applySavePayload(JSON.parse(JSON.stringify(pay)));
+    ok('读档还原手动加点（不被迁移覆盖）',
+      E.state.player.attr.agility === 7 && E.attrPointsFree(E.state.player) === T30 - 7,
+      'agi=' + E.state.player.attr.agility + ' free=' + E.attrPointsFree(E.state.player));
+
+    // ⑥ 旧档迁移：缺 attr/attr_migrated → 等量转入加点，强度不变
+    const old = JSON.parse(JSON.stringify(pay));
+    delete old.attr; delete old.attr_migrated;
+    E.applySavePayload(old);
+    const po = E.state.player;
+    const baseStr30 = baseStr;   // 同一职业/等级
+    ok('旧档迁移标记置位', po.attr_migrated === true);
+    ok('旧档迁移为每维 ' + MIG + ' 点（等于旧自动加点总量）',
+      E.attrPointsUsed(po) === MIG * 5 && po.attr.strength === MIG, 'used=' + E.attrPointsUsed(po));
+    ok('迁移后强度不变（base+growth×29+' + MIG + '）',
+      Math.abs(po._s.attr.strength - (baseStr30 + MIG)) < 1e-9,
+      po._s.attr.strength + ' vs ' + (baseStr30 + MIG));
+
+    // ⑦ 迁移不清零既有加点：有 attr 但漏了 attr_migrated
+    const mid = JSON.parse(JSON.stringify(pay));
+    delete mid.attr_migrated; mid.attr = { strength: 3 };
+    E.applySavePayload(mid);
+    ok('有手动加点但缺标记 → 保留原值仅补标记（不清零）',
+      E.state.player.attr.strength === 3 && E.state.player.attr_migrated === true,
+      JSON.stringify(E.state.player.attr));
   }
 
   // 恢复默认页签，避免影响后续/重复运行

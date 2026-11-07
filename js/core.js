@@ -45,6 +45,8 @@ export let TITLES = [];     // achievements.json#titles（称号配置）
 export let JOB_BASES = {};  // job -> bases object
 export let BASE_BY_KEY = {}; // base_key -> base object (跨职业)
 export let LOOT = {};       // 合并后的掉落表
+export let LOOT_BUILT = {}; // 原版 monster_loot_built：怪物 key -> 预编译掉落条目
+export let DROP_ITEM_OK = new Set(); // 可入包掉落 key（items.json + 武魂材料）
 // 生活技能：矿石 / 材料 资源索引
 export let ORE_BY_TIER = ['hantie','chitong','moyin','wujin','liufang','lihuo','haihun'];
 export let ORE_NAME = {};   // ore key -> 中文名
@@ -240,6 +242,12 @@ export async function loadData(){
     const t = DATA[f]; if(!t) continue;
     for(const k in t) LOOT[k]=t[k];
   }
+  // 原版 monster_loot_built：怪物 key -> 预编译掉落条目（L1）
+  LOOT_BUILT = DATA.monster_loot_built || {};
+  // 可入包掉落 key：items.json 主物品表 + 武魂系统材料（三魂七魄/灵引/名器/涅槃）
+  DROP_ITEM_OK = new Set();
+  (DATA.items.items||[]).forEach(i=>{ if(i.key) DROP_ITEM_OK.add(i.key); });
+  for(const k in ((DATA.wuhun||{}).items||{})) DROP_ITEM_OK.add(k);
   // 建立 base_key -> base 对象 索引（商店装备兑换用）
   for(const k in BASE_BY_KEY) delete BASE_BY_KEY[k];
   for(const f of ['bases_warrior','bases_mage','bases_shaman','bases_darkwitch','bases_accessory']){
