@@ -16,18 +16,21 @@
       {
         "key": "bailian_shi",
         "count": 5,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "道具商城 5 点券；BOSS、副本首领与聚宝怪掉落"
       },
       {
         "key": "yumo",
         "count": 10,
-        "kind": "crystal"
+        "kind": "crystal",
+        "source": "提炼装备获得"
       },
       {
         "key": "lianhua_ping",
         "count": 1,
         "kind": "consumable",
-        "bottle": true
+        "bottle": true,
+        "source": "杂货店有售（5 银）"
       }
     ],
     "bottle_key": "lianhua_ping",
@@ -49,23 +52,27 @@
       {
         "key": "bailian_dan_1",
         "count": 2,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "由上一级配方炼制得到"
       },
       {
         "key": "bailian_shi",
         "count": 10,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "道具商城 5 点券；BOSS、副本首领与聚宝怪掉落"
       },
       {
         "key": "zhanhun",
         "count": 5,
-        "kind": "crystal"
+        "kind": "crystal",
+        "source": "提炼装备获得"
       },
       {
         "key": "lianhua_ping",
         "count": 1,
         "kind": "consumable",
-        "bottle": true
+        "bottle": true,
+        "source": "杂货店有售（5 银）"
       }
     ],
     "bottle_key": "lianhua_ping",
@@ -87,23 +94,27 @@
       {
         "key": "bailian_dan_2",
         "count": 2,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "由上一级配方炼制得到"
       },
       {
         "key": "bailian_shi",
         "count": 20,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "道具商城 5 点券；BOSS、副本首领与聚宝怪掉落"
       },
       {
         "key": "lingnian",
         "count": 3,
-        "kind": "crystal"
+        "kind": "crystal",
+        "source": "提炼装备获得"
       },
       {
         "key": "lianhua_ping",
         "count": 1,
         "kind": "consumable",
-        "bottle": true
+        "bottle": true,
+        "source": "杂货店有售（5 银）"
       }
     ],
     "bottle_key": "lianhua_ping",
@@ -125,23 +136,27 @@
       {
         "key": "bailian_dan_3",
         "count": 2,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "由上一级配方炼制得到"
       },
       {
         "key": "bailian_shi",
         "count": 30,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "道具商城 5 点券；BOSS、副本首领与聚宝怪掉落"
       },
       {
         "key": "jufa",
         "count": 3,
-        "kind": "crystal"
+        "kind": "crystal",
+        "source": "提炼装备获得"
       },
       {
         "key": "lianhua_ping",
         "count": 1,
         "kind": "consumable",
-        "bottle": true
+        "bottle": true,
+        "source": "杂货店有售（5 银）"
       }
     ],
     "bottle_key": "lianhua_ping",
@@ -163,23 +178,27 @@
       {
         "key": "bailian_dan_4",
         "count": 2,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "由上一级配方炼制得到"
       },
       {
         "key": "bailian_shi",
         "count": 40,
-        "kind": "consumable"
+        "kind": "consumable",
+        "source": "道具商城 5 点券；BOSS、副本首领与聚宝怪掉落"
       },
       {
         "key": "huanshen",
         "count": 3,
-        "kind": "crystal"
+        "kind": "crystal",
+        "source": "提炼装备获得"
       },
       {
         "key": "lianhua_ping",
         "count": 1,
         "kind": "consumable",
-        "bottle": true
+        "bottle": true,
+        "source": "杂货店有售（5 银）"
       }
     ],
     "bottle_key": "lianhua_ping",

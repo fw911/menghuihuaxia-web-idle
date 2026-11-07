@@ -1554,3 +1554,89 @@ perks_by_pool_job）与 0.94 **逐字段一致**，本轮未改。
 - `panels.js` 产出行里 `e.tier*10` 的历史文案未动（与本轮无关）。
 - 3 个续命道具、2 个炼魂壶别名、全站「战魂」混合态、`bases_*.json` 与
   `crystal_types` 之外仍存在的 v0.91 文案线，均维持现状。
+
+
+## 十七、L14 按 v0.94 回正生活 / 生产 / 锻造系统数值与结构
+
+### 17.1 取证：又一处「web-idle 自研压平」
+
+全库盘点 `config_enc` 74 份与 `data/*.json` 71 份同名文件，**25 份已逐字段全等**。
+`bases_*` 5 份按数组下标比对显示 84~98 处差异，但按 `key` 复核后**全部为零差异**
+（纯数组顺序不同，不属漂移）。真差异里有一组与 L7/L8 同类的系统性压平：
+
+| 配置 | web-idle | 0.94 官方真值 | 取证 |
+|---|---|---|---|
+| `smith.forge.perk_count_weights` | `1..8=0, 9=100` | `1:50 / 2:35 / 3:15` | exe 常量池 `SMITH_FORGE` / `_pick_perk_count` |
+| `smith.forge.hole_weights` | `0..2=0, 3=100` | `0:40 / 1:30 / 2:20 / 3:10` | 同上 |
+| `smith.merge_ladder.perk_cum` | 1..9 全 `1.0` | `0.9 / 0.45 / 0.32 / 0.18 / 0.1` | exe docstring 原文「1:90% / 2:45% / 3:32% / 4:18% / 5:10%」，并注明 `P(k)=P(k)-P(k+1)` 差分口径 |
+| `furnace_recipes.box_*`（6 条） | `src_count=50`、金币 ×3 | `src_count=5`、`15/25/42/58/83/100` | `config_enc/furnace_recipes.json.enc`；`js/life.js:528` 直接消费 |
+| `qiling.carriers[].teleport_charges` | `999`（无限传送） | `0 / 3 / 5` | exe 常量池 `charges_max` / `_teleport_charges_now`；冷却 1→10 分钟 |
+| `fuling.hp_base` | `24~92`（v1.8） | `109~417` 等差 44（v1.9） | 0.94 `comment` 明载 2026-10-18 拍板「附灵 +7 与 3 颗神石加成平齐」，exe 常量 `FULING_HP_BASE` |
+| `craft.craft_upgrade_max_tier` | `7` | `8` | exe 常量 `CRAFT_UPGRADE_MAX_TIER`；与 L13 的 8 档装备体系配套 |
+
+此外 0.94 新增了一批 web-idle 缺失的结构字段：`loot_probs.elite/boss.segments`
+（各 5 段）、`ring_quest.exclude_maps`、`mining.byproducts.sanpin`、
+`ore_recipes/potion_recipes[].sources`、`gem_recipes[].src_count + sources`、
+`bailian_recipes[].materials[].source`。exe 常量池可见 `exclude_maps`、
+`byproducts`、`src_count` 的消费代码。
+
+### 17.2 落地
+
+| 文件 | 改动 |
+|---|---|
+| `data/craft.json` | 百炼上限 7→8 |
+| `data/fuling.json` | `hp_base` 8 值、`version` 1.8→1.9、`comment` v1.9 依据 |
+| `data/qiling.json` | 3 条 `teleport_charges` 999→0/3/5、`teleport.cooldown_minutes` 1→10 |
+| `data/furnace_recipes.json` | 6 条宝匣 `src_count` 50→5 + `gold_cost` ×1/3（12 处） |
+| `data/smith.json` | 31 处权重/阶梯回正，删 10 个 web 自研压平键 |
+| `data/loot_probs.json` | 补 elite/boss `segments` 共 23 个叶子 |
+| `data/ring_quest.json` | 补 `exclude_maps` |
+| `data/mining.json` | 补 `byproducts.sanpin` |
+| `data/ore_recipes.json` / `potion_recipes.json` | 补 4+3 条 `sources` |
+| `data/gem_recipes.json` | 补 `src_count` + `sources` |
+| `data/bailian_recipes.json` | 补 8 级配方每条材料的 `source` |
+| `js/life.js` | `doGemRefine` 由硬编码 `4` 改读 `r.src_count || 4`（官方全表 4，零行为变化） |
+| `_run_test.js` | +15 条 L14 断言 |
+
+写入方式：9 份可 `json.dumps(indent=2)` 零差异重建的文件按原行尾 / 末尾换行
+bytes 直写；`loot_probs` / `ore_recipes` / `potion_recipes` 属历史畸形排版，
+走**定点插入**，原文其余字节一字不动。脚本 `_l14_apply.py` 对每份做两条强校验：
+① 与 0.94 的差异集合恰好等于展示文案白名单；② 相对 web 的差异不含任何展示文案字段。
+
+### 17.3 关键判定：`loot_probs.segments` 只补数据、不接引擎
+
+0.94 exe 常量池中的 `a_segment_of` / `level_segments` 属于 `loot_rules.json#level_segments`
+（`loot_rules.json` 已与 0.94 全等），**未找到 `loot_probs.json#segments` 的消费代码**；
+归档标准反汇编也没有该字段。`js/equip.js#rollLoot` 仍按 0.94 的扁平
+`rolls` / `probs` 掷骰（该扁平字段两边逐值一致），本轮不改掉落行为，
+避免凭空造出无证据的分段逻辑。
+
+同理，`fuling` / `qiling` / `smith` / `ring_quest` **不在 `js/state.js#DATA_FILES`
+加载清单里**（web-idle 未接入附灵 / 器灵 / 锻造 / 巡天六祭系统），本轮只回正配置数据，
+不扩大引擎加载面；`_run_test.js` 对这 4 份用 `fs.readFileSync` 直读校验，
+其余 8 份走 `E.DATA`。把这些系统真正接进引擎属独立一轮。
+
+### 17.4 本轮未改：0.94 整套改名线（登记为 L15）
+
+`items.json` / `ores.json` / `gems.json` **已经是 0.94 命名**（淬锋丹、淬锋石、
+焚髓碧玉、潮生水晶、曜纹金矿、晶核刚玉、玄璧、蕴元瓶、初/中/上品勘矿罗盘），
+但下列配置仍残留 web-idle 的旧名，属内部不一致，需连同 UI 硬编码与断言一起处理：
+
+| 文件 | 旧名 → 0.94 名 | 牵连 |
+|---|---|---|
+| `bailian_recipes` | 百炼丹 → 淬锋丹（16 处 + `_meta.comment`） | `js/inlay.js` / `life.js` / `tabs.js` 硬编码、`_run_test.js` 两处 ② 断言 |
+| `gem_recipes` | 北斗石/北斗灵石 → 玄璧石/玄璧灵石（77 处） | `E.itemName('beidou_石')` 断言（现为「北斗石」）、`js/inlay.js` 系列说明 |
+| `ore_recipes` / `furnace_recipes` | 乌金矿石/六方金刚石/离火翡翠/海魂水晶 → 曜纹金矿/晶核刚玉/焚髓碧玉/潮生水晶（10+2 处） | `js/inlay.js` 提示文案 |
+| `mining` | 一/二/三品罗盘 → 初/中/上品勘矿罗盘（3 处） | 面板显示 |
+| `guide` | 仙之境静修 → 栖霞秘境静修（1 处） | 全站「仙之境」命名 |
+| `potion_recipes` | 玉泉定神液 → 玉泉定神守心液 等（3 处） | 面板显示 |
+
+另：`quests.json` 的「战魂 → 灵兽」整条任务线（48 处）与 `wuhun_recipes.json`
+（279 处）绑定 companion / summons / wuhun 全套改造，属独立大工程；
+`monster_*` / `shenmo_*` / `achievements` / `shops` 等为已知自研改编线。
+
+### 17.5 验证
+
+- `_run_test.js`：**726 项 ALL PASS / 0 FAIL / 0 SKIP**（711 → 726，新增 15 条）
+- `_l4_survive.js` 挂机 6 例零死亡；`_l4_verify.js` 首领三档与前几轮一致
+- `node --check` / `py_compile` 通过；12 份数据回读后「除展示文案外与 0.94 全等」

@@ -47,60 +47,60 @@
     "name": "玄龟匣→青鸾匣",
     "category": "box",
     "src_key": "baoxia_xuangui",
-    "src_count": 50,
+    "src_count": 5,
     "result_key": "baoxia_qingluan",
     "result_count": 1,
-    "gold_cost": 45
+    "gold_cost": 15
   },
   "box_2_to_3": {
     "key": "box_2_to_3",
     "name": "青鸾匣→白泽匣",
     "category": "box",
     "src_key": "baoxia_qingluan",
-    "src_count": 50,
+    "src_count": 5,
     "result_key": "baoxia_baize",
     "result_count": 1,
-    "gold_cost": 75
+    "gold_cost": 25
   },
   "box_3_to_4": {
     "key": "box_3_to_4",
     "name": "白泽匣→麒麟匣",
     "category": "box",
     "src_key": "baoxia_baize",
-    "src_count": 50,
+    "src_count": 5,
     "result_key": "baoxia_qilin",
     "result_count": 1,
-    "gold_cost": 125
+    "gold_cost": 42
   },
   "box_4_to_5": {
     "key": "box_4_to_5",
     "name": "麒麟匣→九尾匣",
     "category": "box",
     "src_key": "baoxia_qilin",
-    "src_count": 50,
+    "src_count": 5,
     "result_key": "baoxia_jiuwei",
     "result_count": 1,
-    "gold_cost": 175
+    "gold_cost": 58
   },
   "box_5_to_6": {
     "key": "box_5_to_6",
     "name": "九尾匣→应龙匣",
     "category": "box",
     "src_key": "baoxia_jiuwei",
-    "src_count": 50,
+    "src_count": 5,
     "result_key": "baoxia_yinglong",
     "result_count": 1,
-    "gold_cost": 250
+    "gold_cost": 83
   },
   "box_6_to_7": {
     "key": "box_6_to_7",
     "name": "应龙匣→烛龙匣",
     "category": "box",
     "src_key": "baoxia_yinglong",
-    "src_count": 50,
+    "src_count": 5,
     "result_key": "baoxia_zhulong",
     "result_count": 1,
-    "gold_cost": 300
+    "gold_cost": 100
   },
   "baiyu_lingpai_to_lvyu": {
     "key": "baiyu_lingpai_to_lvyu",

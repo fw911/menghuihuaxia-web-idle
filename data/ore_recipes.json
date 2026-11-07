@@ -22,6 +22,11 @@
       "coin": 2000
     },
     "bottle_key": "lianhua_ping",
+    "sources": {
+      "ore": "探矿（使用勘矿罗盘）获得",
+      "crystal": "提炼装备获得",
+      "coin": "击杀怪物、出售物品获得"
+    },
     "obtain": []
   },
   "recipe_ore_5": {
@@ -47,6 +52,11 @@
       "coin": 4000
     },
     "bottle_key": "lianhua_ping",
+    "sources": {
+      "ore": "探矿（使用勘矿罗盘）获得",
+      "crystal": "提炼装备获得",
+      "coin": "击杀怪物、出售物品获得"
+    },
     "obtain": []
   },
   "recipe_ore_6": {
@@ -72,6 +82,11 @@
       "coin": 8000
     },
     "bottle_key": "lianhua_ping",
+    "sources": {
+      "ore": "探矿（使用勘矿罗盘）获得",
+      "crystal": "提炼装备获得",
+      "coin": "击杀怪物、出售物品获得"
+    },
     "obtain": []
   },
   "recipe_ore_7": {
@@ -97,6 +112,11 @@
       "coin": 16000
     },
     "bottle_key": "lianhua_ping",
+    "sources": {
+      "ore": "探矿（使用勘矿罗盘）获得",
+      "crystal": "提炼装备获得",
+      "coin": "击杀怪物、出售物品获得"
+    },
     "obtain": []
   }
 }

@@ -1,7 +1,76 @@
 {
   "normal": { "rolls": 1, "probs": [0.01] },
-  "elite":  { "rolls": 2, "probs": [0.03, 0.02] },
-  "boss":   { "rolls": 3, "probs": [0.3, 0.1, 0.05] },
+  "elite":  { "rolls": 2, "probs": [0.03, 0.02],
+    "segments": {
+      "s0": {
+        "rolls": 1,
+        "probs": [
+          0.02
+        ]
+      },
+      "s1": {
+        "rolls": 1,
+        "probs": [
+          0.03
+        ]
+      },
+      "s2": {
+        "rolls": 1,
+        "probs": [
+          0.04
+        ]
+      },
+      "s3": {
+        "rolls": 1,
+        "probs": [
+          0.05
+        ]
+      },
+      "s4": {
+        "rolls": 1,
+        "probs": [
+          0.05
+        ]
+      }
+    }
+  },
+  "boss":  { "rolls": 3, "probs": [0.3, 0.1, 0.05],
+    "segments": {
+      "s0": {
+        "rolls": 1,
+        "probs": [
+          0.3
+        ]
+      },
+      "s1": {
+        "rolls": 1,
+        "probs": [
+          0.4
+        ]
+      },
+      "s2": {
+        "rolls": 2,
+        "probs": [
+          0.5,
+          0.15
+        ]
+      },
+      "s3": {
+        "rolls": 2,
+        "probs": [
+          0.5,
+          0.2
+        ]
+      },
+      "s4": {
+        "rolls": 2,
+        "probs": [
+          0.5,
+          0.25
+        ]
+      }
+    }
+  },
   "dungeon_boss": { "rolls": 4, "probs": [1.0, 0.5, 0.15, 0.1] },
   "jubao":  { "rolls": 4, "probs": [1.0, 0.5, 0.15, 0.1] }
 }

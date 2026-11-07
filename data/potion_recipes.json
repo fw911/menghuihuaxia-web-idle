@@ -22,6 +22,11 @@
       "crystal": {"key": "yumo_crystal", "count": 1},
       "bottle": {"key": "lianhua_ping", "count": 1}
     },
+    "sources": {
+      "hp": "杂货店有售；怪物掉落",
+      "mp": "杂货店有售；怪物掉落",
+      "crystal": "提炼装备获得"
+    },
     "obtain": []
   },
   "recipe_potion_t4": {
@@ -47,6 +52,11 @@
       "crystal": {"key": "zhanhun_crystal", "count": 1},
       "bottle": {"key": "lianhua_ping", "count": 1}
     },
+    "sources": {
+      "hp": "杂货店有售；怪物掉落",
+      "mp": "杂货店有售；怪物掉落",
+      "crystal": "提炼装备获得"
+    },
     "obtain": []
   },
   "recipe_potion_t5": {
@@ -71,6 +81,11 @@
       "mp_potion": {"key": "ningshen_jiuzhuan", "count": 5},
       "crystal": {"key": "lingnian_crystal", "count": 1},
       "bottle": {"key": "lianhua_ping", "count": 1}
+    },
+    "sources": {
+      "hp": "杂货店有售；怪物掉落",
+      "mp": "杂货店有售；怪物掉落",
+      "crystal": "提炼装备获得"
     },
     "obtain": []
   }

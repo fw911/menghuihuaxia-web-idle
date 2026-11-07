@@ -394,9 +394,11 @@ export function doGemRefine(series, grade){
   const r=gemRecipeFor(series, grade);
   if(!r){ log('<span class="dmg">无对应炼制配方</span>'); return; }
   if(p.level < (r.level_required||0)){ log('<span class="dmg">等级不足（需 Lv.'+r.level_required+'）</span>'); return; }
-  if(gemCount(series, grade) < 4){ log('<span class="dmg">需要 '+r.src_name+' x4</span>'); return; }
+  // L14：0.94 gem_recipes[].src_count 配置驱动（官方全表 4，缺省兜底 4）
+  const need = r.src_count || 4;
+  if(gemCount(series, grade) < need){ log('<span class="dmg">需要 '+r.src_name+' x'+need+'</span>'); return; }
   if(!useMaterial(r.bottle_key||'lianhua_ping', 1)){ log('<span class="dmg">需要炼化瓶 x1</span>'); return; }
-  gemConsume(series, grade, 4);
+  gemConsume(series, grade, need);
   addToBag({type:'gem', series:series, grade:r.dst_grade, count:1});
   log('<span class="loot">炼制成功：'+r.dst_name+' x1</span>');
   eventLog('炼制宝石 <span class="loot">'+r.dst_name+'</span>');

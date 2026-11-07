@@ -1918,6 +1918,72 @@ function ok(name, cond, extra) {
         ['岑肃','卫澜','桑野','诡墓需 3 张'].every(s => h13.indexOf(s) >= 0));
     }
 
+
+
+    // L14：0.94 生活/生产系统数值与结构对齐（展示文案线保留，见报告 §十七）
+    {
+      const D = E.DATA;
+      // fuling / qiling / smith / ring_quest 未列入 DATA_FILES（引擎未接入的系统），测试直读配置
+      const RD = f => JSON.parse(fs.readFileSync(path.join(DIR, f + '.json'), 'utf8'));
+      ok('0.94 百炼上限 7→8（与 L13 的 8 档装备体系配套）',
+        D.craft.craft_upgrade_max_tier === 8 && !!D.bailian_recipes.level_8);
+      const fu = RD('fuling');
+      const hp = Object.keys(fu.hp_base).map(Number).sort((a,b)=>a-b)
+        .map(k => fu.hp_base[k]);
+      ok('0.94 附灵 v1.9：hp_base 109~417 等差 44，version/comment 同步',
+        fu.version === '1.9' && hp[0] === 109 && hp[7] === 417 &&
+        hp.every((v,i) => i === 0 || v - hp[i-1] === 44) &&
+        fu.comment.indexOf('v1.9') >= 0);
+      const qi = RD('qiling');
+      ok('0.94 器灵传送次数 0/3/5（web 自研 999 无限已撤销），冷却 1→10 分钟',
+        JSON.stringify(qi.carriers.map(c => c.teleport_charges)) === '[0,3,5]' &&
+        qi.teleport.cooldown_minutes === 10);
+      const boxes = Object.keys(D.furnace_recipes).filter(k => k.indexOf('box_') === 0);
+      ok('0.94 宝匣合成 src_count 50→5 且 6 条金币费回正（15/25/42/58/83/100）',
+        boxes.length === 6 && boxes.every(k => D.furnace_recipes[k].src_count === 5) &&
+        JSON.stringify(boxes.map(k => D.furnace_recipes[k].gold_cost).sort((a,b)=>a-b))
+          === '[15,25,42,58,83,100]');
+      const sm = RD('smith');
+      ok('0.94 锻造词条数权重 50/35/15（web 压平成 9:100）',
+        JSON.stringify(sm.forge.perk_count_weights) === '{"1":50,"2":35,"3":15}');
+      ok('0.94 打孔权重 40/30/20/10（web 压平成 3:100）',
+        JSON.stringify(sm.forge.hole_weights) === '{"0":40,"1":30,"2":20,"3":10}');
+      ok('0.94 合成阶梯 perk_cum 90/45/32/18/10%（exe docstring 取证）',
+        JSON.stringify(Object.values(sm.merge_ladder.perk_cum)) === '[0.9,0.45,0.32,0.18,0.1]' &&
+        JSON.stringify(Object.values(sm.merge_ladder.hole_cum)) === '[0.9,0.45,0.2]');
+      ok('0.94 loot_probs 补 elite/boss 各 5 段 segments，boss s4 = 2 掷 [0.5,0.25]',
+        Object.keys(D.loot_probs.elite.segments).length === 5 &&
+        Object.keys(D.loot_probs.boss.segments).length === 5 &&
+        D.loot_probs.boss.segments.s4.rolls === 2 &&
+        JSON.stringify(D.loot_probs.boss.segments.s4.probs) === '[0.5,0.25]' &&
+        D.loot_probs.normal.rolls === 1);
+      ok('0.94 巡天六祭补 exclude_maps（百兽谷 / 栖霞岭）',
+        JSON.stringify(RD('ring_quest').exclude_maps) === '["baishougu","qixingling"]');
+      ok('0.94 探矿补上品罗盘副产物（秘银砂 5% ×2）',
+        D.mining.mining.byproducts.sanpin.length === 1 &&
+        D.mining.mining.byproducts.sanpin[0].key === 'miyinsha' &&
+        D.mining.mining.byproducts.sanpin[0].prob === 0.05 &&
+        D.mining.mining.byproducts.sanpin[0].count === 2);
+      const ores = Object.keys(D.ore_recipes);
+      ok('0.94 4 条矿石配方均补 sources 三来源说明',
+        ores.length === 4 && ores.every(k =>
+          D.ore_recipes[k].sources && Object.keys(D.ore_recipes[k].sources).length === 3));
+      const pots = Object.keys(D.potion_recipes);
+      ok('0.94 3 条药水配方均补 sources 三来源说明',
+        pots.length === 3 && pots.every(k =>
+          D.potion_recipes[k].sources && Object.keys(D.potion_recipes[k].sources).length === 3));
+      const gems = Object.keys(D.gem_recipes);
+      ok('0.94 宝石配方补 src_count=4 / sources，引擎改为配置驱动',
+        D.gem_recipes.recipe_gem_beidou_石.src_count === 4 &&
+        gems.filter(k => D.gem_recipes[k].src_count === 4).length >= 12 &&
+        E.gemRecipeFor('beidou', '石').src_count === 4);
+      const bl = Object.keys(D.bailian_recipes).filter(k => k.indexOf('level_') === 0);
+      ok('0.94 淬锋丹 8 级配方每条材料都补 source 说明且展示文案线原样保留',
+        bl.length === 8 && bl.every(k => D.bailian_recipes[k].materials.every(m => !!m.source)) &&
+        D.bailian_recipes.level_1.name.indexOf('百炼丹') >= 0);
+      ok('0.94 引擎仍按 loot_probs.rolls/probs 掷骰（segments 未消费，配置忠实）',
+        typeof E.rollLoot === 'function' && D.loot_probs.boss.rolls === 3);
+    }
     // L12：0.94 _roll_perk_value 精确四档（旧版标准反汇编完整函数体，消解 §14.5 悬案）
     {
       const q = E.mysticQuartiles(1, 20);

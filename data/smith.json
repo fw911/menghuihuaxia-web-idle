@@ -7,21 +7,15 @@
   "forge": {
     "success_rate": 1.0,
     "perk_count_weights": {
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 100
+      "1": 50,
+      "2": 35,
+      "3": 15
     },
     "hole_weights": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 100
+      "0": 40,
+      "1": 30,
+      "2": 20,
+      "3": 10
     },
     "perk_value_tier": 7
   },
@@ -35,20 +29,16 @@
   },
   "merge_ladder": {
     "perk_cum": {
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0,
-      "4": 1.0,
-      "5": 1.0,
-      "6": 1.0,
-      "7": 1.0,
-      "8": 1.0,
-      "9": 1.0
+      "1": 0.9,
+      "2": 0.45,
+      "3": 0.32,
+      "4": 0.18,
+      "5": 0.1
     },
     "hole_cum": {
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0
+      "1": 0.9,
+      "2": 0.45,
+      "3": 0.2
     }
   },
   "refine_materials": {
@@ -199,12 +189,12 @@
       "materials": [
         {
           "key": "fengling_zhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
           "key": "yu_lingzhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
@@ -249,12 +239,12 @@
       "materials": [
         {
           "key": "fengling_zhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
           "key": "lei_lingzhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
@@ -299,12 +289,12 @@
       "materials": [
         {
           "key": "fengling_zhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
           "key": "dian_lingzhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
@@ -349,12 +339,12 @@
       "materials": [
         {
           "key": "fengling_zhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
           "key": "yu_lingzhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
@@ -399,12 +389,12 @@
       "materials": [
         {
           "key": "fengling_zhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
           "key": "lei_lingzhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
@@ -449,12 +439,12 @@
       "materials": [
         {
           "key": "fengling_zhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
           "key": "lei_lingzhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
@@ -499,12 +489,12 @@
       "materials": [
         {
           "key": "fengling_zhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
           "key": "dian_lingzhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
@@ -549,12 +539,12 @@
       "materials": [
         {
           "key": "fengling_zhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {
           "key": "dian_lingzhu",
-          "count": 80,
+          "count": 40,
           "kind": "consumable"
         },
         {

@@ -19,6 +19,10 @@
     "dst_name": "北斗石",
     "desc": "以四颗北斗碎石与一个炼化瓶，可炼成一颗北斗石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -42,6 +46,10 @@
     "dst_name": "北斗灵石",
     "desc": "以四颗北斗石与一个炼化瓶，可炼成一颗北斗灵石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -65,6 +73,10 @@
     "dst_name": "北斗神石",
     "desc": "以四颗北斗灵石与一个炼化瓶，可炼成一颗北斗神石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -88,6 +100,10 @@
     "dst_name": "天行石",
     "desc": "以四颗天行碎石与一个炼化瓶，可炼成一颗天行石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -111,6 +127,10 @@
     "dst_name": "天行灵石",
     "desc": "以四颗天行石与一个炼化瓶，可炼成一颗天行灵石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -134,6 +154,10 @@
     "dst_name": "天行神石",
     "desc": "以四颗天行灵石与一个炼化瓶，可炼成一颗天行神石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -157,6 +181,10 @@
     "dst_name": "望月石",
     "desc": "以四颗望月碎石与一个炼化瓶，可炼成一颗望月石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -180,6 +208,10 @@
     "dst_name": "望月灵石",
     "desc": "以四颗望月石与一个炼化瓶，可炼成一颗望月灵石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -203,6 +235,10 @@
     "dst_name": "望月神石",
     "desc": "以四颗望月灵石与一个炼化瓶，可炼成一颗望月神石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -226,6 +262,10 @@
     "dst_name": "无相石",
     "desc": "以四颗无相碎石与一个炼化瓶，可炼成一颗无相石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -249,6 +289,10 @@
     "dst_name": "无相灵石",
     "desc": "以四颗无相石与一个炼化瓶，可炼成一颗无相灵石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -272,6 +316,10 @@
     "dst_name": "无相神石",
     "desc": "以四颗无相灵石与一个炼化瓶，可炼成一颗无相神石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -295,6 +343,10 @@
     "dst_name": "元如石",
     "desc": "以四颗元如碎石与一个炼化瓶，可炼成一颗元如石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -318,6 +370,10 @@
     "dst_name": "元如灵石",
     "desc": "以四颗元如石与一个炼化瓶，可炼成一颗元如灵石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -341,6 +397,10 @@
     "dst_name": "元如神石",
     "desc": "以四颗元如灵石与一个炼化瓶，可炼成一颗元如神石。",
     "bottle_key": "lianhua_ping",
+    "src_count": 4,
+    "sources": {
+      "src": "怪物掉落（各地图怪物均有产出，随地图等级产出对应档位）"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   },
@@ -362,6 +422,9 @@
     "result_name": "幻影晶石",
     "result_count": 1,
     "bottle_key": "lianhua_ping",
+    "sources": {
+      "src": "提炼装备获得"
+    },
     "duration_sec": 300,
     "time": "【5 分钟】"
   }

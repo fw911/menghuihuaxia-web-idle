@@ -81,6 +81,15 @@
       }
     },
     "ore_group_base": 20,
+    "byproducts": {
+      "sanpin": [
+        {
+          "key": "miyinsha",
+          "prob": 0.05,
+          "count": 2
+        }
+      ]
+    },
     "ancient_monster": [
       {
         "level": 9,

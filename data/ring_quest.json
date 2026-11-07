@@ -1,6 +1,10 @@
 {
   "round_per_day": 1,
   "min_level": 30,
+  "exclude_maps": [
+    "baishougu",
+    "qixingling"
+  ],
   "home": {
     "npc_key": "yao_ji",
     "name": "瑶姬",
