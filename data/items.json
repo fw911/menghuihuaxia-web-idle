@@ -5657,6 +5657,51 @@
       "icon": "",
       "desc": "玄界封印战魂的宝珠：使用后获得一只「七星魔君」战魂（BOSS 外形）。\n由七星岭 BOSS 击败后掉落。",
       "flavor": "败七星魔君分身，收其战魂"
+    },
+    {
+      "key": "yanshou_san",
+      "name": "续命散",
+      "type": "consumable",
+      "effect_type": "companion_lifespan",
+      "price": 10000,
+      "effect": {
+        "life": 1000
+      },
+      "level_required": 19,
+      "tier": 0,
+      "icon": "static/icons/items/medicine_004.png",
+      "desc": "为灵兽续命的丹饵，使用后延长寿命 1000 点（不超过该灵兽的寿命上限）。\n仅可对灵兽使用。灵兽杂货商处有售。",
+      "flavor": "一撮草灰，续魂三旬"
+    },
+    {
+      "key": "yanshou_dan",
+      "name": "续命丹",
+      "type": "consumable",
+      "effect_type": "companion_lifespan",
+      "price": 40000,
+      "effect": {
+        "life": 5000
+      },
+      "level_required": 19,
+      "tier": 0,
+      "icon": "static/icons/items/medicine_005.png",
+      "desc": "为灵兽续命的丹饵，使用后延长寿命 5000 点（不超过该灵兽的寿命上限）。\n仅可对灵兽使用。灵兽杂货商处有售。",
+      "flavor": "丹成九转，寿元渐复"
+    },
+    {
+      "key": "jiuzhuan_yanshou_dan",
+      "name": "九转延寿丹",
+      "type": "consumable",
+      "effect_type": "companion_lifespan",
+      "price": 150000,
+      "effect": {
+        "life": 20000
+      },
+      "level_required": 19,
+      "tier": 0,
+      "icon": "static/icons/items/medicine_006.png",
+      "desc": "为灵兽续命的丹饵，使用后延长寿命 20000 点（不超过该灵兽的寿命上限）。\n仅可对灵兽使用。灵兽杂货商处有售。",
+      "flavor": "九转功成，寿与天齐"
     }
   ]
 }

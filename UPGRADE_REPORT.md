@@ -1102,4 +1102,68 @@ v0.58 两个字段都有丰富真实值，而 v0.91 的 `items.json` 又完整�
 - 0.94 新增 3 个续命道具 / 3 条商店商品未补（结构对齐，待单独决策）。
 - 引用/枚举类 1466 处、展示类 406 处（排除清单）与 L6 结论一致，本轮未动。
 
+---
+
+## 十二、L9 结构对齐：0.94 神秘商人 + 续命道具（含引擎配套，已落地）
+
+### 12.1 拍板范围
+
+用户确认两点：① 神秘商人**完整替换成 0.94 的 40 条，并同步改引擎**让新条目真正可用；
+② 0.94 新增的 3 个续命道具**补定义 + 补商品**，寿命无系统支撑的空壳状态如实标注。
+本轮首次改动 `js/` 下的引擎代码（此前 L1~L8 均只动 `data/`）。
+
+### 12.2 探查结论（为什么必须动引擎）
+
+| 发现 | 影响 |
+|---|---|
+| `shenmi_shangren` 不是差 3 条，而是 **3 → 40 条**（2 条 `mystic_equip` + 38 条 `mystic_item`） | 0.94 只有 7 档普通/完美装备，没有 web-idle 自研的 5/6 档；完整替换会删掉 5/6 档 |
+| `js/shop.js` 的 `renderShop` / `buyShopItem` 只认 `mystic_equip` / `equip` / `consumable` / `ore` | 直接铺数据会产生 **38 个空白、点了没反应**的按钮 |
+| 40 条引用的 47 个 `give`/`give_pool` key 中，13 个在 0.94 `items.json` 里也没有（跨表引用） | 但 45 个可由 web-idle 的 `items/wuhun/ores` 进入 `ITEM_NAME_CACHE`，仅 2 个炼魂壶需别名兜底 |
+| web-idle 有 `data/companion.json`，但引擎无灵兽寿命字段 | `companion_lifespan` 道具必然是空壳 |
+| `buildEquip(base, job, tier, slot, mode)` 的 `rollPerks` 支持 `full_perk` | 0.94 的「完美装备」可用满词条模式近似实现 |
+
+### 12.3 数据落地
+
+| 文件 | 改动 | 结果 |
+|---|---|---|
+| `data/items.json` | 末尾追加 3 个续命道具完整定义 | 354 → **357** 条；续命散 10000 / 续命丹 40000 / 九转延寿丹 150000，`effect.life` = 1000/5000/20000 |
+| `data/shops.json` | `shenmi_shangren.items` 整体替换 | 3 → **40** 条，逐字段与 0.94 一致（含 `give`/`give_pool`/`gain`/`group`/`perfect`） |
+| `data/shops.json` | `companion_grocery.items` 在 `xianhun_dan` 后插入 3 条 | 19 → **22** 条，item 序列与 0.94 完全一致；原有 19 条一字未动（保留 L6 的战魂系 `group` 文案） |
+
+商店总条目 179 → **219**。`_l9_struct_apply.py` 用「按 key 定位对象 + 括号配对确定数组区间 + 只替换数组内部」，
+前缀/后缀字节零变化；`items.json` / `shops.json` 均为 CRLF（5706 / 1620 行），无 `\r\r\n`。
+回读校验：原 354 条物品、其余 12 个商店、原有 19 条灵兽商品全部逐字段不变。
+
+### 12.4 引擎配套（`js/shop.js`，LF）
+
+1. 新增 `MYSTIC_GIVE_ALIAS`（`chuji_lianhun_hu`/`gaoji_lianhun_hu` → 初级/高级炼魂壶），
+   `mysticGiveName()` 优先查 `ITEM_NAME_CACHE`，`mysticGiveType()` 按 `items.json` / `ores.json` 判定
+   `consumable` / `ore`（47 个 give key 中 45 个有中文名）。
+2. `renderShop`：`mystic_item` 的标签取 `it.name || 发放物中文名`，与 `mystic_equip` 一同按**神秘结晶**计价。
+3. `buyShopItem` 新增 `mystic_item` 分支：校验结晶 → `give` 或 `give_pool` 随机一个 → 按 `gain` 发放入包。
+4. `mystic_equip` 支持 `perfect`：`buildEquip(..., 'full_perk')` 生成满词条装备。
+5. `useConsumable`：遇 `companion_lifespan` 明确提示「灵兽寿命系统尚未开放」**并保留道具**（不静默吞掉）。
+
+测试入口 `_patch.py` 的 `EXPORTS` 增加 `buyShopItem` / `useConsumable`，重新生成 `_test_entry.mjs`
+（该文件被 `.gitignore` 忽略，属本地生成物，改动落在生成器上）。
+
+### 12.5 验证
+
+- `_run_test.js` 新增 7 条断言（条目结构、perfect、渲染无空白标签、按结晶计价、
+  `mystic_item` 购买扣 2 结晶并发放赤焰晶、续命道具不吞道具），L8 值域断言由 `5~2000000` 更新为
+  `2~2000000`（0.94 神秘商人最低 2 结晶）→ **674 项 ALL PASS / 0 FAIL / 0 SKIP**（8014 后端在跑）。
+- `_l4_survive.js` 挂机 6 例 × 2500 轮 **死亡 0/6**；`_l4_verify.js` 首领结果与 L5/L6/L8 一致。
+- `node --check` 通过；`data/items.json` 213693 B、`data/shops.json` 41179 B，`js/shop.js` 9047 B。
+
+### 12.6 已知边界（诚实清单）
+
+- **5/6 档自研装备兑换已删除**（用户确认的完整替换）；7 档现为 120 结晶（普通）/ 1200 结晶（完美）。
+- 2 个炼魂壶的中文名是 **web-idle 自研兜底**，两版配置均无定义。
+- `perfect` 用 `full_perk` 满词条近似，**未从 0.94 字节码取证其完美品质算法**。
+- 跨系统 give 物品按 `consumable`/`ore` 入包；`qiling_*_spirit` 等可能属其它系统，归属与 0.94 内部实现可能有差异。
+- 3 个续命道具**不生效**（无寿命系统），只做到「可购买、不吞道具、有明确提示」；真正的寿命机制属 L5 功能域移植。
+- `companion_grocery` 新增 3 条的 `group` 沿用 0.94 的「延灵」，与店内 L6 对齐的「摄魂 / 逗魂粮」战魂系文案
+  并不统一；本轮不改展示文案，留待单独的文案决策。
+
+
 

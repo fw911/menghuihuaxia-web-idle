@@ -1649,8 +1649,8 @@ function ok(name, cond, extra) {
         .find(o => o.item === key || o.base_key === key);
       ok('商店无 price=1 残留（L8 回填 104 处 v0.94 真值）',
         items.every(o => o.price !== 1), items.filter(o => o.price === 1).length + '');
-      ok('商店价格值域 5 ~ 2000000（v0.94）',
-        Math.min.apply(null, items.map(o => o.price)) === 5 &&
+      ok('商店价格值域 2 ~ 2000000（v0.94，含神秘结晶兑换）',
+        Math.min.apply(null, items.map(o => o.price)) === 2 &&
         Math.max.apply(null, items.map(o => o.price)) === 2000000);
       ok('v0.94 商店价抽样（农场 / 防具 / 灵兽 / 老店）',
         byKey('farm_shop', 'zz_xiaomai').price === 10 &&
@@ -1669,6 +1669,46 @@ function ok(name, cond, extra) {
         spots.find(j => j.name === '溟渊').refresh_minutes === 240 &&
         spots.find(j => j.name === '虎蛮族长').refresh_minutes === 180 &&
         spots.find(j => j.name === '蓬莱镇波').refresh_minutes === 150);
+    }
+
+    // L9：0.94 结构对齐（神秘商人 40 条 + 3 个续命道具 + 引擎配套）
+    {
+      const ms = all.find(x => x.key === 'shenmi_shangren');
+      const gc = all.find(x => x.key === 'companion_grocery');
+      const defs = E.DATA.items.items || [];
+      ok('神秘商人 40 条（0.94：2 装备 + 38 材料）',
+        ms.items.length === 40 &&
+        ms.items.filter(o => o.kind === 'mystic_equip').length === 2 &&
+        ms.items.filter(o => o.kind === 'mystic_item').length === 38);
+      ok('7 档普通 120 / 完美 1200 结晶（perfect 标记）',
+        ms.items[0].price === 120 && ms.items[0].perfect === false &&
+        ms.items[1].price === 1200 && ms.items[1].perfect === true);
+      ok('灵兽杂货商 22 条含 3 个续命道具',
+        gc.items.length === 22 &&
+        ['yanshou_san', 'yanshou_dan', 'jiuzhuan_yanshou_dan']
+          .every(k => gc.items.some(o => o.item === k)));
+      ok('items.json 357 条含 3 个 companion_lifespan 定义',
+        defs.length === 357 && defs.filter(o => o.effect_type === 'companion_lifespan').length === 3);
+      const mh = E.renderShop('shenmi_shangren');
+      ok('神秘商人 40 条可渲染、无空白标签、按结晶计价',
+        cntOf(mh, 'data-buy="shenmi_shangren|') === 40 &&
+        mh.indexOf('> <span class="pill"') < 0 &&
+        cntOf(mh, '结晶') >= 40);
+      // 购买行为：mystic_item 扣结晶 + 入包（深拷贝保存/恢复玩家状态）
+      const p9 = E.state.player;
+      const savedC = p9.crystal, savedBag = JSON.parse(JSON.stringify(p9.bag));
+      p9.crystal = 1000;
+      E.buyShopItem('shenmi_shangren', 2);
+      ok('mystic_item 可购买：扣 2 结晶并发放赤焰晶',
+        p9.crystal === 998 && p9.bag.some(b => b.key === 'fuling_chijing'),
+        'crystal=' + p9.crystal + ' bag=' + p9.bag.length);
+      p9.crystal = savedC; p9.bag = savedBag;
+      // 续命道具：寿命系统未开放时明确提示且不吞道具
+      const probe = { uid: '__life_probe__', type: 'consumable', key: 'yanshou_san', count: 1 };
+      p9.bag = JSON.parse(JSON.stringify(savedBag)).concat([probe]);
+      E.useConsumable(probe);
+      ok('续命道具未开放时不吞道具', p9.bag.some(b => b.uid === '__life_probe__'));
+      p9.bag = savedBag;
     }
   }
 

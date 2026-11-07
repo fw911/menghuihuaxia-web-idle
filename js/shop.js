@@ -11,6 +11,23 @@ import { eventLog, log, renderHeader } from './render.js';
 import { renderTab } from './tabs.js';
 import { fmtNum } from './life.js';
 
+// 0.94 神秘商人：跨表 give key 的中文名兜底
+// 47 个 give/give_pool 键里 45 个已由 items.json / wuhun / ores 进入 ITEM_NAME_CACHE，
+// 仅「炼魂壶」两个键在两版配置里都无定义，按 key 含义补可读名（web-idle 自研兜底）。
+const MYSTIC_GIVE_ALIAS = {
+  chuji_lianhun_hu: '初级炼魂壶',
+  gaoji_lianhun_hu: '高级炼魂壶'
+};
+function mysticGiveName(key){
+  return ITEM_NAME_CACHE[key] || MYSTIC_GIVE_ALIAS[key] || key;
+}
+function mysticGiveType(key){
+  const def=(DATA.items.items||[]).find(i=>i.key===key);
+  if(def) return def.type==='ore' ? 'ore' : (def.type || 'consumable');
+  if((((DATA.ores||{}).ore_types)||[]).some(o=>o.key===key)) return 'ore';
+  return 'consumable';
+}
+
 // ---------- 商店 ----------
 export function itemName(key){ return ITEM_NAME_CACHE[key] || key; }
 export function mysticSlotOptions(){
@@ -33,9 +50,11 @@ export function renderShop(sub){
       if(it.kind==='consumable'||it.kind==='ore') label=itemName(it.item);
       else if(it.kind==='equip') label=it.name;
       else if(it.kind==='mystic_equip') label=it.name;
-      const cur = it.kind==='mystic_equip'? p.crystal : p.gold;
+      else if(it.kind==='mystic_item') label=it.name || (it.give? mysticGiveName(it.give) : '随机材料');
+      const isMystic = it.kind==='mystic_equip' || it.kind==='mystic_item';
+      const cur = isMystic ? p.crystal : p.gold;
       const afford = cur>=it.price;
-      const unit = it.kind==='mystic_equip'?'结晶':'金';
+      const unit = isMystic ? '结晶' : '金';
       html+='<div class="item shop-item" data-buy="'+shop.key+'|'+i+'"'+(afford?'':' style="opacity:.55"')+'>'+label+' <span class="pill">'+fmtNum(it.price)+unit+'</span></div>';
     }
     html+='</div>';
@@ -53,9 +72,18 @@ export function buyShopItem(shopKey, idx){
     const slot=window._mysticSlot||'weapon';
     const base=genEquipBaseForSlot(slot, p.job, it.tier);
     if(!base){ log('<span class="dmg">该部位暂无可用基底</span>'); return; }
-    const eq=buildEquip(base, p.job, it.tier, slot);
+    const eq=buildEquip(base, p.job, it.tier, slot, it.perfect ? 'full_perk' : undefined);
     p.crystal-=price; addToBag(eq);
     log('<span class="loot">兑换 '+SLOT_NAME[slot]+'·'+eq.name+'（'+it.name+'，['+QNAME[eq.quality]+']）</span>');
+  }else if(it.kind==='mystic_item'){
+    if(p.crystal<price){ log('<span class="dmg">神秘结晶不足</span>'); return; }
+    const pool = it.give_pool||[];
+    const key = it.give || (pool.length? pool[Math.floor(Math.random()*pool.length)] : null);
+    if(!key){ log('<span class="dmg">兑换目标缺失</span>'); return; }
+    const gain = it.gain || 1;
+    p.crystal-=price;
+    addToBag({uid:uid(), type:mysticGiveType(key), key, count:gain, name:mysticGiveName(key)});
+    log('<span class="loot">兑换 '+mysticGiveName(key)+'×'+gain+'</span>');
   }else if(it.kind==='equip'){
     if(p.gold<price){ log('<span class="dmg">金币不足</span>'); return; }
     const base=BASE_BY_KEY[it.base_key]; if(!base){ log('<span class="dmg">装备基底缺失</span>'); return; }
@@ -130,6 +158,11 @@ export function questProgress(m){
 export function useConsumable(it){
   const def=(DATA.items.items||[]).find(i=>i.key===it.key); if(!def) return;
   const p=state.player;
+  // 0.94 续命道具：web-idle 尚无灵兽寿命系统，明确提示且不吞掉道具
+  if(def.effect_type==='companion_lifespan'){
+    log('<span class="muted">灵兽寿命系统尚未开放，'+def.name+'暂未生效</span>');
+    return;
+  }
   const per = def.effect && (def.effect.hp_per_tick!=null?def.effect.hp_per_tick:def.effect.mp_per_tick||0);
   const isMp = def.effect && def.effect.mp_per_tick!=null;
   const total = per*(def.duration_ticks||1);

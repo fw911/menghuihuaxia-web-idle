@@ -98,6 +98,8 @@ EXPORTS = [
     # 战役推进（自动推进地图）
     'maybeCampaign', 'campaignTargetMap', 'campaignRegularZones', 'allRegularExplored',
     'campaignIncompleteZone', 'campaignDungeonTarget', 'campaignProgressInfo', 'renderCampaignStatus',
+    # L9：0.94 神秘商人购买 / 续命道具使用（js/shop.js）
+    'buyShopItem','useConsumable',
 ]
 
 lines = [

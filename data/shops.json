@@ -506,24 +506,337 @@
       "items": [
         {
           "item": "shenmi_jingjie",
-          "name": "5 档装备兑换",
-          "tier": 5,
-          "price": 10,
-          "kind": "mystic_equip"
-        },
-        {
-          "item": "shenmi_jingjie",
-          "name": "6 档装备兑换",
-          "tier": 6,
-          "price": 30,
-          "kind": "mystic_equip"
-        },
-        {
-          "item": "shenmi_jingjie",
           "name": "7 档装备兑换",
           "tier": 7,
-          "price": 50,
-          "kind": "mystic_equip"
+          "price": 120,
+          "kind": "mystic_equip",
+          "perfect": false,
+          "group": "装备"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "name": "7 档完美装备兑换",
+          "tier": 7,
+          "price": 1200,
+          "kind": "mystic_equip",
+          "perfect": true,
+          "group": "装备"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 2,
+          "kind": "mystic_item",
+          "give": "fuling_chijing",
+          "gain": 1,
+          "group": "材料"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 2,
+          "kind": "mystic_item",
+          "give": "fuling_shuangning",
+          "gain": 1,
+          "group": "材料"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 6,
+          "kind": "mystic_item",
+          "give": "fuling_xuanlei",
+          "gain": 1,
+          "group": "材料"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 10,
+          "kind": "mystic_item",
+          "give": "haihun",
+          "gain": 1,
+          "group": "材料"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "name": "三魂七魄（随机 1 个）",
+          "price": 2,
+          "kind": "mystic_item",
+          "gain": 1,
+          "give_pool": [
+            "sanhun_tian",
+            "sanhun_di",
+            "sanhun_ren",
+            "qipo_xi",
+            "qipo_nu",
+            "qipo_ai_sorrow",
+            "qipo_ju",
+            "qipo_ai_love",
+            "qipo_wu",
+            "qipo_yu"
+          ],
+          "group": "材料"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 2,
+          "kind": "mystic_item",
+          "give": "yaoshi_xuangui",
+          "gain": 1,
+          "group": "宝匣钥匙"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 4,
+          "kind": "mystic_item",
+          "give": "yaoshi_qingluan",
+          "gain": 1,
+          "group": "宝匣钥匙"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 6,
+          "kind": "mystic_item",
+          "give": "yaoshi_baize",
+          "gain": 1,
+          "group": "宝匣钥匙"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 8,
+          "kind": "mystic_item",
+          "give": "yaoshi_qilin",
+          "gain": 1,
+          "group": "宝匣钥匙"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 12,
+          "kind": "mystic_item",
+          "give": "yaoshi_jiuwei",
+          "gain": 1,
+          "group": "宝匣钥匙"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 16,
+          "kind": "mystic_item",
+          "give": "yaoshi_yinglong",
+          "gain": 1,
+          "group": "宝匣钥匙"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 24,
+          "kind": "mystic_item",
+          "give": "yaoshi_zhulong",
+          "gain": 1,
+          "group": "宝匣钥匙"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 1200,
+          "kind": "mystic_item",
+          "give": "qiling_chihuo_spirit",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 1200,
+          "kind": "mystic_item",
+          "give": "qiling_qinglan_spirit",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 1200,
+          "kind": "mystic_item",
+          "give": "qiling_hanyue_spirit",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 1200,
+          "kind": "mystic_item",
+          "give": "qiling_xiaoying_spirit",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 40,
+          "kind": "mystic_item",
+          "give": "qhk_qiling_cao",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 20,
+          "kind": "mystic_item",
+          "give": "qhk_ninglu_gao",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 20,
+          "kind": "mystic_item",
+          "give": "qhk_wangyou_san",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 40,
+          "kind": "mystic_item",
+          "give": "qhk_wangchen_dan",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 400,
+          "kind": "mystic_item",
+          "give": "qhk_juxingfu",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 400,
+          "kind": "mystic_item",
+          "give": "qhk_huajiedan",
+          "gain": 1,
+          "group": "骑灵"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 30,
+          "kind": "mystic_item",
+          "give": "chuji_lianhun_hu",
+          "gain": 1,
+          "group": "魂印"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 80,
+          "kind": "mystic_item",
+          "give": "gaoji_lianhun_hu",
+          "gain": 1,
+          "group": "魂印"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 6,
+          "kind": "mystic_item",
+          "give": "weifengyin_4x",
+          "gain": 1,
+          "group": "封印珠"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 12,
+          "kind": "mystic_item",
+          "give": "weifengyin_5x",
+          "gain": 1,
+          "group": "封印珠"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 24,
+          "kind": "mystic_item",
+          "give": "weifengyin_6x",
+          "gain": 1,
+          "group": "封印珠"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 48,
+          "kind": "mystic_item",
+          "give": "weifengyin_7x",
+          "gain": 1,
+          "group": "封印珠"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 4,
+          "kind": "mystic_item",
+          "give": "yin_hun_yuandan_1",
+          "gain": 1,
+          "group": "引灵元丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 10,
+          "kind": "mystic_item",
+          "give": "yin_hun_yuandan_2",
+          "gain": 1,
+          "group": "引灵元丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 24,
+          "kind": "mystic_item",
+          "give": "yin_hun_yuandan_3",
+          "gain": 1,
+          "group": "引灵元丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 40,
+          "kind": "mystic_item",
+          "give": "yin_hun_yuandan_4",
+          "gain": 1,
+          "group": "引灵元丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 8,
+          "kind": "mystic_item",
+          "give": "yin_hun_lingdan_1",
+          "gain": 1,
+          "group": "引灵灵丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 20,
+          "kind": "mystic_item",
+          "give": "yin_hun_lingdan_2",
+          "gain": 1,
+          "group": "引灵灵丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 48,
+          "kind": "mystic_item",
+          "give": "yin_hun_lingdan_3",
+          "gain": 1,
+          "group": "引灵灵丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 12,
+          "kind": "mystic_item",
+          "give": "guiyuan_dan_1",
+          "gain": 1,
+          "group": "归元丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 30,
+          "kind": "mystic_item",
+          "give": "guiyuan_dan_2",
+          "gain": 1,
+          "group": "归元丹"
+        },
+        {
+          "item": "shenmi_jingjie",
+          "price": 60,
+          "kind": "mystic_item",
+          "give": "guiyuan_dan_3",
+          "gain": 1,
+          "group": "归元丹"
         }
       ],
       "group": "mystic"
@@ -1120,6 +1433,24 @@
           "price": 6000,
           "kind": "consumable",
           "group": "疗伤"
+        },
+        {
+          "item": "yanshou_san",
+          "price": 10000,
+          "kind": "consumable",
+          "group": "延灵"
+        },
+        {
+          "item": "yanshou_dan",
+          "price": 40000,
+          "kind": "consumable",
+          "group": "延灵"
+        },
+        {
+          "item": "jiuzhuan_yanshou_dan",
+          "price": 150000,
+          "kind": "consumable",
+          "group": "延灵"
         },
         {
           "item": "huanledu_cao",
