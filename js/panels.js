@@ -18,14 +18,14 @@ import { sessPerMin } from './idle.js';
 export function renderInstance(sub){
   const p=state.player; const spec=instSpec();
   let html='<h3>副本护符兑换</h3><div class="muted">首领掉落对应护符：香魂冢·英灵护符（临海）、轩辕台·光明护符（轩辕）、古墓·死亡护符（葱郁沼泽）。'
-    +'集齐 '+5+' 个可换本职业固定规格装备（+'+(spec.refine||5)+' 精炼 · '+(spec.sockets||3)+' 孔 · 词条取中值）。</div>';
+    +'集齐对应护符可换本职业固定规格装备（+'+(spec.refine||5)+' 精炼 · '+(spec.sockets||3)+' 孔 · 词条取中值；诡墓需 3 张，其余 5 张）。</div>';
   const groups={};
   instEntries().forEach(e=>{ (groups[e.instance]=groups[e.instance]||[]).push(e); });
   let shown=0;
   for(const ik in groups){
     if(sub && ik!==sub) continue;               // 按子菜单只显示该副本（sub 为空 = 全部）
     shown++;
-    html+='<div class="shop"><div class="shop-name">'+instName(ik)+'（兑换 NPC：'+instMapName(groups[ik][0].npc_map)+'）</div>';
+    html+='<div class="shop"><div class="shop-name">'+instName(ik)+'（兑换 NPC：'+(groups[ik][0].npc||'—')+' @ '+instMapName(groups[ik][0].npc_map)+'）</div>';
     for(const e of groups[ik]){
       const have=itemCount(e.cost_key), okc=have>=(e.cost_count||1);
       html+='<div class="item" data-inst="'+e._k+'"'+(okc?'':' style="opacity:.55"')+'><b>'+(SLOT_NAME[e.slot]||e.slot)+'</b> '+e.tier+' 档'

@@ -1476,8 +1476,8 @@ perks_by_pool_job）与 0.94 **逐字段一致**，本轮未改。
 | `ring_perk_pool` | `stat_percent` 2 / `atk_fixed` 8 | 5 / 15 | web-idle 自研扩充 |
 
 这些会改变产出档位、兑换成本或数据结构，超出「取口径 + 修实现」范围，
-**本轮一律保留**，待单独决策。0.94 `refine.json` 的 8 档 flat 已补但当前
-`tier ≤ 7` 永不触发，属零行为影响的数据完整性补齐。
+**本轮一律保留**，待单独决策（L13 已按用户拍板执行，见 §十六）。
+0.94 `refine.json` 的 8 档 flat 已补；L13 打通 8 档体系后该档位可被触发。
 
 ### 15.7 验证
 
@@ -1499,7 +1499,58 @@ perks_by_pool_job）与 0.94 **逐字段一致**，本轮未改。
   （`refineStep`），属已知适配。
 - 3 个续命道具、2 个炼魂壶别名、全站「战魂」混合态同 §13.6。
 
+## 十六、L13：按 v0.94 对齐 8 档装备体系与副本兑换配置（2026-11-07）
 
+### 16.1 取证结论
 
+| 证据 | 结论 |
+|---|---|
+| `config_enc/perk_pool.json.enc` | 0.94 共 **119** 个词条模板，每个都有 `values.8`、`stat_key`、`op`（`add` 90 / `add_pct` 29，与 suffix 严格对应）；`1..7` 档数值与 web-idle **逐条一致**，差异只在新增的 8 档与两个字段 |
+| 同上 | web-idle 多出 **10 条自研 `ring_perk_pool` 扩充**（7 条 `atk_fixed` 防御/生命 + 3 条 `stat_percent`），0.94 无；`ring_perk_pool` 真值 17 条 |
+| `config_enc/crystals.json.enc` | `tier_to_crystal.8 = "huanshen"`（复用 7 档结晶）；7 条 `crystal_types[].desc` 官方文案 web-idle 缺失 |
+| `config_enc/instance_exchange.json.enc` | **27 条缺 `npc`**（岑肃/卫澜/桑野各 9），五曜镇将 9 条原本已有 → 补齐后 36 条齐备；`gm_*` 消耗 5→**3** 张；`wxz_*` 7 档→**6** 档（`tier` 与 `name` 同步）；2 条 comment 文案（昆吾台、诡墓 3 张、`npc=兑换委托人`） |
+| `config_enc/bases_*.json.enc` | 0.94 有 **72 条 tier=8 基底**（战士 19 + 法/暗巫/幻师各 17 + 首饰 2），web-idle 已有且逐字段一致 —— 8 档体系只缺词条数值与引擎上限 |
+| `_dis_quality.txt#_tier_of_level` / `clamp_drop_tier` | 旧版掉落档位硬上限 **7**（lv≥100 boss 随机 6/7）；0.94 `ores.json` 亦只有 1..7 档矿石 → **锻造/掉落维持 1..7**，不放宽 |
 
+### 16.2 落地
 
+| 文件 | 改动 |
+|---|---|
+| `data/perk_pool.json` | 全量按 0.94 重建：119 模板补 `values.8` / `stat_key` / `op`，删 10 条自研戒指池扩充；LF + 末尾换行保持 |
+| `data/crystals.json` | 补 `tier_to_crystal.8` 与 7 条 `desc`；`\r\r\n` 双重回车保持，diff 精确 |
+| `data/instance_exchange.json` | 56 处差异一次对齐（27 新增 `npc` + 9 `cost_count` + 9 `tier` + 9 `name` + 2 `comment`）；CRLF 保持 |
+| `js/equip.js` | `buildEquip` 的 `clamp(tier,1,7)` → `1..8`（旧实现把 8 档基底压成 7 档）；`PERK_CAP` 补 `8:9` |
+| `js/life.js` | `crystalForTier` clamp → `1..8`（有 0.94 配置证据）；`doForge` 维持 `1..7` 并注明矿石依据 |
+| `js/panels.js` | 兑换面板改显示 0.94 真 NPC 名 + 所在地图；顶部说明由硬编码「5 个」改为「诡墓需 3 张，其余 5 张」 |
+| `_run_test.js` | +13 条断言；更正 L12 中「当前 7 档体系零行为影响」旧文案 |
+| `UPGRADE_REPORT.md` | 本章节 + 更正 §15.6/§15.7 的 8 档历史结论 |
+
+三份数据文件均经 `json.dumps(indent=2, ensure_ascii=False)` **零差异重建验证**，
+写入走 bytes 直写；脚本 `_l13_apply.py` 对每份做「差异路径集合 == 预期清单」强校验
+（perk_pool 另做「抹掉新增字段/插回自研模板后 == 原对象」复核），确保无目标之外改动。
+
+### 16.3 关键判定：8 档从哪里来、不改哪里
+
+- **改的是构建层**：`buildEquip(base, job, 8, ...)` 此前返回 `tier=7`，导致已有的 8 档
+  基底永远出不来；同时 `rollPerks` 取 `values['8']` 落空 → 退化 `[1,3]`。本轮两处一起修。
+- **不改掉落/锻造档位**：归档标准反汇编证明旧版 `_tier_of_level` 最高 7、
+  `clamp_drop_tier` 对 lv≥100 boss 只给 6/7；0.94 `ores.json` 无 8 档矿。`tierFromLevel`
+  与 `doForge` 保持 `1..7`，避免凭空造出 0.94 没有的 8 档掉落流。
+- `stat_key` / `op` 是 0.94 新版属性系统的配置字段，web-idle 的 `perkToStat` 仍走
+  「中文显示名 + suffix」映射（自研适配）。本轮**只补齐配置不切换引擎映射**，
+  避免改变既有战斗数值；接入属独立一轮。
+
+### 16.4 验证
+
+- `_run_test.js`：**711 项 ALL PASS / 0 FAIL / 0 SKIP**（698 → 711，新增 13 条；
+  8014 后端在跑，测后关闭）
+- `_l4_survive.js` 挂机 6 例零死亡；`_l4_verify.js` 首领三档与前几轮一致
+- `node --check` / `py_compile` 通过；数据文件行尾/末尾换行保持不变
+
+### 16.5 本轮未改（如实登记）
+
+- 0.94 comment 写「昆吾台」，而 `instName` 仍显示「轩辕台」（`instance` key 为
+  `xuanyuantai`，L6 文案线按 v0.91 对齐）；comment 忠实 0.94、UI 名维持现状。
+- `panels.js` 产出行里 `e.tier*10` 的历史文案未动（与本轮无关）。
+- 3 个续命道具、2 个炼魂壶别名、全站「战魂」混合态、`bases_*.json` 与
+  `crystal_types` 之外仍存在的 v0.91 文案线，均维持现状。

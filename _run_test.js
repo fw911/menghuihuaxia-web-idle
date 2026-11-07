@@ -1862,9 +1862,60 @@ function ok(name, cond, extra) {
         !!probe12 && E.applyRefineLevels(probe12, 0) === 0 &&
         E.applyRefineLevels(probe12, 5) === 5 &&
         E.applyRefineLevels(probe12, 10) === 7);
-      ok('0.94 refine.json 补 8 档固定加点 [15,20]（当前 7 档体系零行为影响）',
+      ok('0.94 refine.json 补 8 档固定加点 [15,20]（L13 起 8 档体系已打通，精炼仍封顶 7）',
         JSON.stringify(E.DATA.refine.refine_per_level_flat['8']) === '[15,20]' &&
         E.DATA.refine.refine_max === 7);
+    }
+
+    // L13：0.94 8 档装备体系 + 副本护符兑换配置对齐
+    {
+      const pp13 = E.DATA.perk_pool;
+      const tp13 = [];
+      for (const pool in pp13) for (const cat in pp13[pool]) for (const t of pp13[pool][cat]) tp13.push(t);
+      ok('0.94 perk_pool 119 模板（删去 10 条自研戒指池扩充）', tp13.length === 119, 'n=' + tp13.length);
+      ok('0.94 每模板都有 values.8 / stat_key / op 且 op 与 suffix 对应',
+        tp13.every(t => Array.isArray(t.values['8']) && t.values['8'].length === 2 &&
+          typeof t.stat_key === 'string' && (t.op === 'add' || t.op === 'add_pct') &&
+          (t.op === 'add_pct') === (t.suffix === '%')));
+      ok('0.94 8 档中值真值：物理攻击 48 / 生命值 51 / 最小物理攻击 38',
+        E.perkMidValue('物理攻击', 8, 'warrior', 'weapon') === 48 &&
+        E.perkMidValue('生命值', 8, 'warrior', 'helmet') === 51 &&
+        E.perkMidValue('最小物理攻击', 8, 'warrior', 'ring1') === 38);
+      ok('0.94 crystals.tier_to_crystal.8 = huanshen 且 crystalForTier(8) 命中',
+        E.DATA.crystals.tier_to_crystal['8'] === 'huanshen' && E.crystalForTier(8) === 'huanshen');
+      const b8 = E.genEquipBaseForSlot('weapon', 'warrior', 8);
+      const eq8 = E.buildEquip(b8, 'warrior', 8, 'weapon', 'full_perk');
+      ok('0.94 buildEquip tier=8 不再被 clamp 成 7', !!eq8 && eq8.tier === 8,
+        eq8 ? 'tier=' + eq8.tier : 'none');
+      ok('0.94 8 档装备词条取 values.8 真值而不是 [1,3] 兜底',
+        !!eq8 && eq8.perks.length > 0 && eq8.perks.every(p => p.value >= 4),
+        eq8 ? JSON.stringify(eq8.perks.slice(0, 3)) : 'none');
+      ok('0.94 掉落档位仍封顶 7（旧版 _tier_of_level 字节码 / ores 只到 7 档）',
+        E.tierFromLevel(200) === 7 && !!b8);
+      const ie13 = E.DATA.instance_exchange, en13 = E.instEntries();
+      ok('0.94 兑换表 36 条 npc 齐备：岑肃/卫澜/桑野/五曜镇将 各 9',
+        en13.length === 36 && ['岑肃','卫澜','桑野','五曜镇将']
+          .every(n => en13.filter(e => e.npc === n).length === 9));
+      ok('0.94 古墓护符 5→3 张，其余仍 5 张',
+        en13.filter(e => e._k.indexOf('gm_') === 0).every(e => e.cost_count === 3) &&
+        en13.filter(e => e._k.indexOf('gm_') !== 0).every(e => e.cost_count === 5));
+      ok('0.94 五曜阵 7 档→6 档（tier 与 name 同步）',
+        en13.filter(e => e._k.indexOf('wxz_') === 0)
+          .every(e => e.tier === 6 && e.name.indexOf('6 档') === 0));
+      ok('0.94 两条 comment 对齐（昆吾台 / 诡墓 3 张 / npc=兑换委托人）',
+        ie13._exchange_spec.comment.indexOf('昆吾台') >= 0 &&
+        ie13._exchange_spec.comment.indexOf('诡墓 3 张') >= 0 &&
+        ie13._instance_exchange_meta.comment.indexOf('npc=兑换委托人') >= 0);
+      const sp13 = E.instSpec();
+      let hit13 = 0;
+      for (const kind of ['weapon','general'])
+        for (const j of ['warrior','mage','darkwitch','shaman'])
+          for (const n of ((sp13.perks_by_pool_job||{})[kind]||{})[j] || [])
+            if (E.perkMidValue(n, 8, j, kind === 'weapon' ? 'weapon' : 'helmet') !== null) hit13++;
+      ok('0.94 spec 16 固定词条在 8 档同样全命中', hit13 === 16, 'hit=' + hit13);
+      const h13 = E.renderInstance();
+      ok('兑换面板显示 0.94 真 NPC 名与 3 张消耗',
+        ['岑肃','卫澜','桑野','诡墓需 3 张'].every(s => h13.indexOf(s) >= 0));
     }
 
     // L12：0.94 _roll_perk_value 精确四档（旧版标准反汇编完整函数体，消解 §14.5 悬案）

@@ -42,7 +42,8 @@ export function fmtNum(n){
 // ---------- 晶石（crystals.json）：精炼 +5 起需消耗对应档晶石 ----------
 export function crystalDef(k){ return ((DATA.crystals||{}).crystal_types||[]).find(c=>c.key===k)||null; }
 export function crystalName(k){ const d=crystalDef(k); return d? d.name : k; }
-export function crystalForTier(tier){ const m=(DATA.crystals||{}).tier_to_crystal||{}; return m[''+clamp(tier||1,1,7)] || m['1']; }
+// L13：0.94 crystals.tier_to_crystal 有 8 档（8 -> huanshen），结晶档位上限随配置放宽
+export function crystalForTier(tier){ const m=(DATA.crystals||{}).tier_to_crystal||{}; return m[''+clamp(tier||1,1,8)] || m['1']; }
 export function crystalStartRefine(){ return (DATA.crystals||{}).crystal_start_refine || 5; }
 export function crystalCount(k){ return ((state.player.crystals||{})[k])||0; }
 export function useCrystalStone(k, n){
@@ -430,7 +431,7 @@ export function useMaterial(k,n){ const p=state.player; if((p.materials[k]||0)>=
 export function doForge(){
   const p=state.player;
   const slot=LS.forgeSlot;
-  const tier=clamp(parseInt(LS.forgeTier,10)||1,1,7);
+  const tier=clamp(parseInt(LS.forgeTier,10)||1,1,7);   // L13：锻造维持 1..7（0.94 ores.json 只有 1..7 档矿石，无 8 档矿）
   const oreKey=ORE_BY_TIER[tier-1];
   const oreCost=3+tier*2, goldCost=tier*150;
   const base=genEquipBaseForSlot(slot, p.job, tier);

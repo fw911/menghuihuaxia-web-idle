@@ -19,7 +19,7 @@ export const QNAME = {white:'白板',green:'绿色',blue:'蓝色',purple:'紫色
 
 // 词条数量上限：放宽到可出紫/橙（原 tier_perk_max 恒为 3，最高仅蓝）。
 // 高档装备天花板更高，且分层掷骰保证低品质仍占多数（稀有度高）。
-export const PERK_CAP = {1:6, 2:7, 3:8, 4:9, 5:9, 6:9, 7:9};
+export const PERK_CAP = {1:6, 2:7, 3:8, 4:9, 5:9, 6:9, 7:9, 8:9};  // L13：0.94 已有 8 档基底/词条/结晶，8 档沿用最高档词条上限
 export function rollPerkCount(tier){
   const cap = PERK_CAP[tier] || 4;
   const r = Math.random();
@@ -56,7 +56,7 @@ export function rollPerks(tier, job, mode){
 }
 // 从具体 base 对象构建一件装备（商店/兑换/掉落共用）
 export function buildEquip(base, job, tier, slot, mode){
-  tier = clamp(tier,1,7);
+  tier = clamp(tier,1,8);   // L13：旧 clamp 会把 8 档基底压成 7 档；0.94 perk_pool.values.8 / bases_* tier=8 齐备
   const stats = {};
   for(const f in (base.stats||{})){
     const rg = base.stats[f];
