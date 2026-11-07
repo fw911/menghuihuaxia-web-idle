@@ -14,7 +14,7 @@
       "level_required": 0,
       "tier": 1,
       "icon": "static/icons/items/medicine_002.jpg",
-      "desc": "持续10秒每回合回复 20 点生命；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 80 点生命，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "基础疗伤药，温养气血",
       "duration_ms": 10000,
       "cd_ms": 10000
@@ -33,7 +33,7 @@
       "level_required": 20,
       "tier": 2,
       "icon": "static/icons/items/medicine_003.jpg",
-      "desc": "持续10秒每回合回复 43 点生命；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 172 点生命，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "小还丹，疗伤更进一层",
       "duration_ms": 10000,
       "cd_ms": 10000
@@ -52,7 +52,7 @@
       "level_required": 40,
       "tier": 3,
       "icon": "static/icons/items/medicine_005.jpg",
-      "desc": "持续10秒每回合回复 78 点生命；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 312 点生命，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "大还丹，重伤可续",
       "duration_ms": 10000,
       "cd_ms": 10000
@@ -71,7 +71,7 @@
       "level_required": 60,
       "tier": 4,
       "icon": "static/icons/items/medicine_006.jpg",
-      "desc": "持续10秒每回合回复 121 点生命；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 484 点生命，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "三清道韵，气血自盈",
       "duration_ms": 10000,
       "cd_ms": 10000
@@ -90,7 +90,7 @@
       "level_required": 80,
       "tier": 5,
       "icon": "static/icons/items/medicine_007.jpg",
-      "desc": "持续10秒每回合回复 178 点生命；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 712 点生命，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "九转回魂，濒死可救",
       "duration_ms": 10000,
       "cd_ms": 10000
@@ -109,14 +109,14 @@
       "level_required": 100,
       "tier": 6,
       "icon": "static/icons/items/medicine_001.gif",
-      "desc": "持续10秒每回合回复 253 点生命；冷却10秒；疗伤圣药，杂货店有售",
-      "flavor": "疗伤圣药，时间越久功效越大",
+      "desc": "使用后每秒回复 1012 点生命，持续 10秒；冷却 10秒；疗伤圣药，杂货店有售",
+      "flavor": "疗伤圣药，久服方见其效",
       "duration_ms": 10000,
       "cd_ms": 10000
     },
     {
       "key": "ningshenye",
-      "name": "定神液",
+      "name": "定神守心液",
       "type": "consumable",
       "effect_type": "mp_hot",
       "price": 20,
@@ -128,14 +128,14 @@
       "level_required": 0,
       "tier": 1,
       "icon": "static/icons/items/liquid_002.jpg",
-      "desc": "持续10秒每回合回复 20 点法术；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 80 点法术，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "基础凝神药，润养法力",
       "duration_ms": 10000,
       "cd_ms": 10000
     },
     {
       "key": "ningshen_lingfu",
-      "name": "灵符定神液",
+      "name": "灵符定神守心液",
       "type": "consumable",
       "effect_type": "mp_hot",
       "price": 45,
@@ -147,14 +147,14 @@
       "level_required": 20,
       "tier": 2,
       "icon": "static/icons/items/liquid_004.jpg",
-      "desc": "持续10秒每回合回复 43 点法术；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 172 点法术，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "灵符引气，法力渐丰",
       "duration_ms": 10000,
       "cd_ms": 10000
     },
     {
       "key": "ningshen_yuquan",
-      "name": "玉泉定神液",
+      "name": "玉泉定神守心液",
       "type": "consumable",
       "effect_type": "mp_hot",
       "price": 80,
@@ -166,14 +166,14 @@
       "level_required": 40,
       "tier": 3,
       "icon": "static/icons/items/liquid_005.jpg",
-      "desc": "持续10秒每回合回复 78 点法术；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 312 点法术，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "玉泉涌动，法力充盈",
       "duration_ms": 10000,
       "cd_ms": 10000
     },
     {
       "key": "ningshen_sanhua",
-      "name": "三花定神液",
+      "name": "三花定神守心液",
       "type": "consumable",
       "effect_type": "mp_hot",
       "price": 130,
@@ -185,14 +185,14 @@
       "level_required": 60,
       "tier": 4,
       "icon": "static/icons/items/liquid_006.jpg",
-      "desc": "持续10秒每回合回复 121 点法术；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 484 点法术，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "三花聚顶，法力自生",
       "duration_ms": 10000,
       "cd_ms": 10000
     },
     {
       "key": "ningshen_jiuzhuan",
-      "name": "九转定神液",
+      "name": "九转定神守心液",
       "type": "consumable",
       "effect_type": "mp_hot",
       "price": 190,
@@ -204,14 +204,14 @@
       "level_required": 80,
       "tier": 5,
       "icon": "static/icons/items/liquid_007.jpg",
-      "desc": "持续10秒每回合回复 178 点法术；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 712 点法术，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "九转凝元，法力沛然",
       "duration_ms": 10000,
       "cd_ms": 10000
     },
     {
       "key": "ningshen_longxian",
-      "name": "龙涎定神液",
+      "name": "龙涎定神守心液",
       "type": "consumable",
       "effect_type": "mp_hot",
       "price": 260,
@@ -223,7 +223,7 @@
       "level_required": 100,
       "tier": 6,
       "icon": "static/icons/items/liquid_001.gif",
-      "desc": "持续10秒每回合回复 253 点法术；冷却10秒；杂货店有售",
+      "desc": "使用后每秒回复 1012 点法术，持续 10秒；冷却 10秒；杂货店有售",
       "flavor": "凝神圣药，时间越久功效越大",
       "duration_ms": 10000,
       "cd_ms": 10000
@@ -242,7 +242,7 @@
       "tier": 3,
       "icon": "static/icons/items/misc_001.jpg",
       "desc": "使用后瞬间恢复 750 生命 + 900 法术，无冷却",
-      "flavor": "玉泉琼浆，瞬息回元"
+      "flavor": "玉泉灵浆，瞬息回元"
     },
     {
       "key": "sanhua_yuye",
@@ -258,7 +258,7 @@
       "tier": 4,
       "icon": "static/icons/items/liquid_003.jpg",
       "desc": "使用后瞬间恢复 1400 生命 + 1700 法术，无冷却",
-      "flavor": "三花玉液，瞬息大补"
+      "flavor": "三花玉露，瞬息大补"
     },
     {
       "key": "jiuzhuan_shengshui",
@@ -274,7 +274,7 @@
       "tier": 5,
       "icon": "static/icons/items/medicine_004.jpg",
       "desc": "使用后瞬间恢复 2500 生命 + 2700 法术，无冷却",
-      "flavor": "九转圣水，起死回生"
+      "flavor": "九转神水，起死回生"
     },
     {
       "key": "jiuzhuan_box",
@@ -290,7 +290,7 @@
       "level_required": 1,
       "tier": 5,
       "icon": "static/icons/items/box_002.png",
-      "desc": "右键点击使用，打开盒子将得到10个九转圣水。\n九转圣水使用远古秘方所制，功效独特，瞬间回复2500生命和2700法术。",
+      "desc": "右键点击使用，打开盒子将得到10个九转神水。\n九转神水使用远古秘方所制，功效独特，瞬间回复2500生命和2700法术。",
       "flavor": "圣水玉盒，十全十美"
     },
     {
@@ -307,7 +307,7 @@
       "level_required": 1,
       "tier": 4,
       "icon": "static/icons/items/box_001.png",
-      "desc": "右键点击使用，打开盒子将得到10个三花玉液。\n三花玉液使用远古秘方所制，功效独特，瞬间回复1400生命和1700法术。",
+      "desc": "右键点击使用，打开盒子将得到10个三花玉露。\n三花玉露使用远古秘方所制，功效独特，瞬间回复1400生命和1700法术。",
       "flavor": "玉液锦盒，十全十美"
     },
     {
@@ -324,12 +324,12 @@
       "level_required": 1,
       "tier": 3,
       "icon": "static/icons/items/box_003.png",
-      "desc": "右键点击使用，打开盒子将得到10个玉泉琼浆。\n玉泉琼浆使用远古秘方所制，功效独特，瞬间回复750生命和900法术。",
+      "desc": "右键点击使用，打开盒子将得到10个玉泉灵浆。\n玉泉灵浆使用远古秘方所制，功效独特，瞬间回复750生命和900法术。",
       "flavor": "琼浆玉盒，十全十美"
     },
     {
       "key": "yipin_luopan",
-      "name": "一品探矿罗盘",
+      "name": "初品勘矿罗盘",
       "type": "consumable",
       "effect_type": "luopan",
       "price": 200,
@@ -338,12 +338,12 @@
       },
       "level_required": 1,
       "icon": "static/icons/items/compass_002.png",
-      "desc": "探矿用的罗盘\n探矿等级达到1级方可使用\n可在天圣原、阪泉使用",
+      "desc": "探矿用的罗盘\n探矿等级达到1级方可使用\n可在凤鸣原、龙脊使用",
       "flavor": ""
     },
     {
       "key": "erpin_luopan",
-      "name": "二品探矿罗盘",
+      "name": "中品勘矿罗盘",
       "type": "consumable",
       "effect_type": "luopan",
       "price": 0,
@@ -353,12 +353,12 @@
       },
       "level_required": 13,
       "icon": "static/icons/items/compass_001.png",
-      "desc": "探矿用的罗盘\n探矿等级达到13级方可使用\n可在阪泉使用",
+      "desc": "探矿用的罗盘\n探矿等级达到13级方可使用\n可在龙脊使用\nBOSS、副本首领与聚宝怪掉落。",
       "flavor": ""
     },
     {
       "key": "sanpin_luopan",
-      "name": "三品探矿罗盘",
+      "name": "上品勘矿罗盘",
       "type": "consumable",
       "effect_type": "luopan",
       "price": 0,
@@ -369,12 +369,12 @@
       "level_required": 27,
       "tier": 3,
       "icon": "static/icons/items/compass_003.png",
-      "desc": "探矿用的罗盘\n探矿等级达到27级方可使用\n可在轩辕、西莽荒原使用",
+      "desc": "探矿用的罗盘\n探矿等级达到27级方可使用\n可在逐日、朔风荒原使用\nBOSS、副本首领与聚宝怪掉落。",
       "flavor": ""
     },
     {
       "key": "erpin_pack10",
-      "name": "二品罗盘包(10个)",
+      "name": "中品罗盘包(10个)",
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
@@ -386,12 +386,12 @@
       "level_required": 1,
       "tier": 2,
       "icon": "static/icons/items/pack_003.png",
-      "desc": "右键点击使用，打开包裹将得到10个二品探矿罗盘。\n使用罗盘探矿可获得3至5档矿石，用于精炼装备可提高装备基础属性。",
+      "desc": "右键点击使用，打开包裹将得到10个中品勘矿罗盘。\n使用罗盘探矿可获得3至5档矿石，用于精炼装备可提高装备基础属性。",
       "flavor": ""
     },
     {
       "key": "erpin_pack20",
-      "name": "二品罗盘包(20个)",
+      "name": "中品罗盘包(20个)",
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
@@ -403,12 +403,12 @@
       "level_required": 1,
       "tier": 2,
       "icon": "static/icons/items/pack_004.png",
-      "desc": "右键点击使用，打开包裹将得到20个二品探矿罗盘。\n使用罗盘探矿可获得3至5档矿石，用于精炼装备可提高装备基础属性。",
+      "desc": "右键点击使用，打开包裹将得到20个中品勘矿罗盘。\n使用罗盘探矿可获得3至5档矿石，用于精炼装备可提高装备基础属性。",
       "flavor": ""
     },
     {
       "key": "sanpin_pack10",
-      "name": "三品罗盘包(10个)",
+      "name": "上品罗盘包(10个)",
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
@@ -420,12 +420,12 @@
       "level_required": 1,
       "tier": 3,
       "icon": "static/icons/items/pack_001.png",
-      "desc": "右键点击使用，打开包裹将得到10个三品探矿罗盘。\n使用罗盘探矿可获得5档以上矿石，用于精炼装备可提高装备基础属性。",
+      "desc": "右键点击使用，打开包裹将得到10个上品勘矿罗盘。\n使用罗盘探矿可获得5档以上矿石，用于精炼装备可提高装备基础属性。",
       "flavor": ""
     },
     {
       "key": "sanpin_pack20",
-      "name": "三品罗盘包(20个)",
+      "name": "上品罗盘包(20个)",
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
@@ -437,7 +437,7 @@
       "level_required": 27,
       "tier": 3,
       "icon": "static/icons/items/pack_002.png",
-      "desc": "右键点击使用，打开包裹将得到20个三品探矿罗盘。\n使用罗盘探矿可获得5档以上矿石，用于精炼装备可提高装备基础属性。",
+      "desc": "右键点击使用，打开包裹将得到20个上品勘矿罗盘。\n使用罗盘探矿可获得5档以上矿石，用于精炼装备可提高装备基础属性。",
       "flavor": ""
     },
     {
@@ -451,7 +451,7 @@
       },
       "level_required": 25,
       "icon": "static/icons/items/stone_001.png",
-      "desc": "精炼时使用，可防止装备因精炼失败而消失\n\n精炼1至6档装备时可以使用\n\n天工族在多年研制兵器过程中发现的\n极品精炼材料",
+      "desc": "精炼时使用，可防止装备因精炼失败而消失\n\n精炼1至6档装备时可以使用\n\n天工族在多年研制兵器过程中发现的\n极品精炼材料\n副本精英及以上与聚宝怪掉落。",
       "flavor": "铸造行当多年研器所得的精炼材料"
     },
     {
@@ -466,7 +466,7 @@
       },
       "level_required": 25,
       "icon": "static/icons/items/stone_002.png",
-      "desc": "精炼时使用，可防止装备因精炼失败而消失\n\n精炼7档以上装备时可以使用\n\n天工族在多年研制兵器过程中发现的\n极品精炼材料",
+      "desc": "精炼时使用，可防止装备因精炼失败而消失\n\n精炼7档以上装备时可以使用\n\n天工族在多年研制兵器过程中发现的\n极品精炼材料\n100 级以上副本首领与聚宝怪掉落。",
       "flavor": "铸造行当多年研器所得的极品精炼材料"
     },
     {
@@ -483,7 +483,7 @@
       },
       "level_required": 1,
       "icon": "static/icons/items/stone_006.png",
-      "desc": "合成重随石\n合成1至6档装备时可以使用，可重新生成1次合成结果（词条组合 + 升档判定）\n每次合成消耗1颗",
+      "desc": "合成重随石\n合成1至6档装备时可以使用，可重新生成1次合成结果（词条组合 + 升档判定）\n每次合成消耗1颗\n副本精英及以上与聚宝怪掉落。",
       "flavor": "可逆转一次合成结果的重随石"
     },
     {
@@ -500,7 +500,7 @@
       },
       "level_required": 1,
       "icon": "static/icons/items/stone_007.png",
-      "desc": "合成重随石\n合成7档以上装备时可以使用，可重新生成1次合成结果（词条组合 + 升档判定）\n每次合成消耗1颗",
+      "desc": "合成重随石\n合成7档以上装备时可以使用，可重新生成1次合成结果（词条组合 + 升档判定）\n每次合成消耗1颗\n100 级以上副本首领与聚宝怪掉落。",
       "flavor": "可逆转一次七档合成结果的重随石"
     },
     {
@@ -517,7 +517,7 @@
       },
       "level_required": 1,
       "icon": "static/icons/items/stone_005.png",
-      "desc": "合成重随石\n合成6档以上装备时可以使用，可在合成结果不如意时再生成两次结果\n由盘古身上的混沌之气沉积凝结而成的石头，可颠倒时间扭转命运",
+      "desc": "合成重随石\n合成6档以上装备时可以使用，可在合成结果不如意时再生成两次结果\n由盘古身上的混沌之气沉积凝结而成的石头，可颠倒时间扭转命运\n100 级以上副本首领与聚宝怪掉落。",
       "flavor": "可连番逆转两次合成结果的重随石"
     },
     {
@@ -537,7 +537,7 @@
     },
     {
       "key": "baiyu_lingpai",
-      "name": "白玉令",
+      "name": "墨玉令",
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 5000,
@@ -548,12 +548,12 @@
       "level_required": 25,
       "tier": 1,
       "icon": "static/icons/items/token_001.png",
-      "desc": "使用后立即获得 200000 点经验。\n华夏城守的令牌，可在军需官处发布悬赏，换取大量历练。\n等级达25级或以上才可以发布任务。",
-      "flavor": "朴素玉牌，悬赏信物"
+      "desc": "使用后立即获得 200000 点经验。\n华夏城守的令牌，凝聚军中历练。\n等级达25级或以上才可使用。\n太荒遗种掉落。",
+      "flavor": "朴素玉牌，历练信物"
     },
     {
       "key": "lvyu_lingpai",
-      "name": "绿玉令",
+      "name": "苍玉令",
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 20000,
@@ -564,12 +564,12 @@
       "level_required": 50,
       "tier": 2,
       "icon": "static/icons/items/token_002.png",
-      "desc": "使用后立即获得 1000000 点经验。\n武大将军的令牌，可在军需官处发布悬赏，换取大量历练。\n等级达50级或以上才可以发布任务。",
-      "flavor": "翠玉令牌，悬赏重赏"
+      "desc": "使用后立即获得 1000000 点经验。\n武大镇将的令牌，凝聚军中历练。\n等级达50级或以上才可使用。\n太荒遗种掉落。",
+      "flavor": "翠玉令牌，历练厚赠"
     },
     {
       "key": "huangjin_lingpai",
-      "name": "黄金令",
+      "name": "赤金令",
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 80000,
@@ -580,8 +580,8 @@
       "level_required": 80,
       "tier": 3,
       "icon": "static/icons/items/token_003.png",
-      "desc": "使用后立即获得 1500000 点经验。\n平逆将军的令牌，可在军需官处发布悬赏，换取大量历练。\n等级达80级或以上才可以发布任务。",
-      "flavor": "鎏金令牌，悬赏至重"
+      "desc": "使用后立即获得 1500000 点经验。\n平逆镇将的令牌，凝聚军中历练。\n等级达80级或以上才可使用。\n太荒遗种掉落。",
+      "flavor": "鎏金令牌，历练至珍"
     },
     {
       "key": "xiangrui_zhu",
@@ -597,7 +597,7 @@
       "level_required": 1,
       "tier": 2,
       "icon": "static/icons/items/pearl_004.png",
-      "desc": "使用后 1 小时内，挂机杀怪获得经验 +100%（2倍）。\n鸿运当头，历练倍增。",
+      "desc": "使用后 1 小时内，挂机杀怪获得经验 +100%（2倍）。\n鸿运当头，历练倍增。\nBOSS、副本首领与聚宝怪掉落。",
       "flavor": "珠蕴鸿运，运势绵延"
     },
     {
@@ -614,7 +614,7 @@
       "level_required": 1,
       "tier": 3,
       "icon": "static/icons/items/pearl_002.png",
-      "desc": "使用后 1 小时内，挂机杀怪获得经验 +50%（1.5倍）。\n福运临门，历练渐长。",
+      "desc": "使用后 1 小时内，挂机杀怪获得经验 +50%（1.5倍）。\n福运临门，历练渐长。\nBOSS、副本首领与聚宝怪掉落。",
       "flavor": "珠蕴福运，机缘加身"
     },
     {
@@ -631,7 +631,7 @@
       "level_required": 1,
       "tier": 3,
       "icon": "static/icons/items/pearl_006.png",
-      "desc": "使用后 2 小时内，挂机杀怪获得经验 +100%（2倍）。\n鸿运绵长，历练持久。",
+      "desc": "使用后 2 小时内，挂机杀怪获得经验 +100%（2倍）。\n鸿运绵长，历练持久。\nBOSS、副本首领与聚宝怪掉落。",
       "flavor": "高纯鸿运，福泽深长"
     },
     {
@@ -648,7 +648,7 @@
       "level_required": 1,
       "tier": 3,
       "icon": "static/icons/items/pearl_005.png",
-      "desc": "使用后 2 小时内，挂机杀怪获得经验 +50%（1.5倍）。\n福运绵长，机缘常伴。",
+      "desc": "使用后 2 小时内，挂机杀怪获得经验 +50%（1.5倍）。\n福运绵长，机缘常伴。\nBOSS、副本首领与聚宝怪掉落。",
       "flavor": "高纯福运，时运亨通"
     },
     {
@@ -665,7 +665,7 @@
       "level_required": 1,
       "tier": 4,
       "icon": "static/icons/items/pearl_003.png",
-      "desc": "使用后 1 小时内，挂机杀怪获得经验 +150%（2.5倍）。\n天运加身，道行暴涨。",
+      "desc": "使用后 1 小时内，挂机杀怪获得经验 +150%（2.5倍）。\n天运加身，道行暴涨。\nBOSS、副本首领与聚宝怪掉落。",
       "flavor": "灵珠孕运，修行如飞"
     },
     {
@@ -680,8 +680,8 @@
       },
       "level_required": 10,
       "tier": 3,
-      "icon": "static/icons/items/stone_003.png",
-      "desc": "右键点击使用，可使鸿福石增加 10 小时双倍经验时间。\n鸿福石最多可充 100 小时，若使用后总时间超过 100 小时将按 100 小时计算。",
+      "icon": "static/icons/items/qiyuan_shi.png",
+      "desc": "右键点击使用，可使鸿福石增加 10 小时双倍经验时间。\n鸿福石最多可充 100 小时，若使用后总时间超过 100 小时将按 100 小时计算。\n副本首领与聚宝怪掉落。",
       "flavor": "许愿之力，灌注鸿福"
     },
     {
@@ -695,7 +695,7 @@
       "level_required": 1,
       "tier": 0,
       "icon": "static/icons/items/stone_004.png",
-      "desc": "蕴含祝福之力的灵石，出生即自带，全服唯一。\n右键开启后挂机杀怪经验 +100%（双倍），按现实时间扣减；用许愿石可充值时间（上限 100 小时）。\n右键再次点击可关闭，关闭后时间冻结不再扣减。",
+      "desc": "蕴含祝福之力的灵石，出生即自带，全服唯一。\n每天自动赠送 2 小时双倍时间，可逐日累计（上限 100 小时）。\n右键开启后挂机杀怪经验 +100%（双倍），仅在线时按现实时间扣减，离线冻结；用许愿石可充值时间。\n右键再次点击可关闭，关闭后时间冻结不再扣减。",
       "flavor": "鸿福加身，修行如飞"
     },
     {
@@ -714,7 +714,7 @@
     },
     {
       "key": "wuyao_baozhu",
-      "name": "曜灵珠",
+      "name": "晖灵珠",
       "type": "consumable",
       "effect_type": "offline_exp",
       "price": 0,
@@ -738,8 +738,8 @@
       },
       "level_required": 1,
       "tier": 4,
-      "icon": "static/icons/items/misc_002.png",
-      "desc": "使用后获得 3000 点券。\n金光灿灿，财源广进。",
+      "icon": "static/icons/items/jin_yuanbao.png",
+      "desc": "使用后获得 3000 点券。\n金光灿灿，财源广进。\n副本首领与聚宝怪掉落。",
       "flavor": "足金元宝，富贵逼人"
     },
     {
@@ -754,8 +754,8 @@
       },
       "level_required": 1,
       "tier": 2,
-      "icon": "static/icons/items/misc_003.png",
-      "desc": "使用后获得 1000 点券。\n银辉温润，小有积蓄。",
+      "icon": "static/icons/items/yin_yuanbao.png",
+      "desc": "使用后获得 1000 点券。\n银辉温润，小有积蓄。\n副本首领与聚宝怪掉落。",
       "flavor": "足银元宝，居家之资"
     },
     {
@@ -770,8 +770,8 @@
       },
       "level_required": 1,
       "tier": 1,
-      "icon": "static/icons/items/misc_005.png",
-      "desc": "使用后获得 500 点券。\n铜身古朴，聚少成多。",
+      "icon": "static/icons/items/tong_yuanbao.png",
+      "desc": "使用后获得 500 点券。\n铜身古朴，聚少成多。\nBOSS 掉落。",
       "flavor": "铜质元宝，勤俭持家"
     },
     {
@@ -786,8 +786,8 @@
       },
       "level_required": 1,
       "tier": 1,
-      "icon": "static/icons/items/misc_006.png",
-      "desc": "使用后获得 100 点券。\n铜板一枚，聊胜于无。",
+      "icon": "static/icons/items/tong_ban.png",
+      "desc": "使用后获得 100 点券。\n铜板一枚，聊胜于无。\nBOSS 掉落。",
       "flavor": "小小铜板，日积月累"
     },
     {
@@ -821,7 +821,7 @@
       "level_required": 5,
       "tier": 1,
       "icon": "static/icons/items/box_chest_xuangui.png",
-      "desc": "需 5 级开启。右键点击使用，需用玄龟钥匙开启。\n开启可获得 1 档装备、经验、铜钱，以及@tiangong_shi、@lunhui_shi、宝石、魂魄等珍贵道具。",
+      "desc": "需 5 级开启。右键点击使用，需用@yaoshi_xuangui开启。\n开启必得 @shenmi_jingjie×1、经验与铜钱，并有机会获得附灵材料、潮生水晶与珍稀道具。\n★ 保底：每开 10 / 30 / 50 盒必得厚礼，第 50 盒最丰厚（50 盒一轮，循环计数）。\n★ 彩头：极小概率开出 3 星魂印 ／ 神品骑灵珠 ／ 灵品骑灵珠。",
       "flavor": "灵龟驮匣，瑞气蕴藏"
     },
     {
@@ -838,7 +838,7 @@
       "level_required": 15,
       "tier": 2,
       "icon": "static/icons/items/box_chest_qingluan.png",
-      "desc": "需 15 级开启。右键点击使用，需用青鸾钥匙开启。\n开启可获得 2 档装备、经验、铜钱，以及@tiangong_shi、@lunhui_shi、@xiangrui_zhu、宝石、魂魄等珍贵道具。",
+      "desc": "需 15 级开启。右键点击使用，需用@yaoshi_qingluan开启。\n开启必得 @shenmi_jingjie×2、经验与铜钱，并有机会获得附灵材料、潮生水晶与珍稀道具。\n★ 保底：每开 10 / 30 / 50 盒必得厚礼，第 50 盒最丰厚（50 盒一轮，循环计数）。\n★ 彩头：极小概率开出 3 星魂印 ／ 神品骑灵珠 ／ 灵品骑灵珠。",
       "flavor": "青鸾衔玉，瑞兆祥云"
     },
     {
@@ -855,7 +855,7 @@
       "level_required": 30,
       "tier": 3,
       "icon": "static/icons/items/box_chest_baize.png",
-      "desc": "需 30 级开启。右键点击使用，需用白泽钥匙开启。\n开启可获得 3 档装备、经验、铜钱，以及@tiangong_shi、@lunhui_shi、@xiangrui_zhu、宝石、@erpin_luopan、魂魄等珍贵道具。",
+      "desc": "需 30 级开启。右键点击使用，需用@yaoshi_baize开启。\n开启必得 @shenmi_jingjie×3、经验与铜钱，并有机会获得附灵材料、潮生水晶与珍稀道具。\n★ 保底：每开 10 / 30 / 50 盒必得厚礼，第 50 盒最丰厚（50 盒一轮，循环计数）。\n★ 彩头：极小概率开出 3 星魂印 ／ 神品骑灵珠 ／ 灵品骑灵珠。",
       "flavor": "白泽通灵，识尽万物"
     },
     {
@@ -872,7 +872,7 @@
       "level_required": 40,
       "tier": 4,
       "icon": "static/icons/items/box_chest_qilin.png",
-      "desc": "需 40 级开启。右键点击使用，需用麒麟钥匙开启。\n开启可获得 4 档装备、经验、铜钱，以及@tiangong_shi、@lunhui_shi、@xiangrui_zhu、0 星武魂、宝石、魂魄等珍贵道具。",
+      "desc": "需 40 级开启。右键点击使用，需用@yaoshi_qilin开启。\n开启必得 @shenmi_jingjie×4、经验与铜钱，并有机会获得附灵材料、潮生水晶与珍稀道具。\n★ 保底：每开 10 / 30 / 50 盒必得厚礼，第 50 盒最丰厚（50 盒一轮，循环计数）。\n★ 彩头：极小概率开出 3 星魂印 ／ 神品骑灵珠 ／ 灵品骑灵珠。",
       "flavor": "麒麟踏云，瑞临四海"
     },
     {
@@ -889,7 +889,7 @@
       "level_required": 60,
       "tier": 5,
       "icon": "static/icons/items/box_chest_jiuwei.png",
-      "desc": "需 60 级开启。右键点击使用，需用九尾钥匙开启。\n开启可获得 5 档装备、经验、铜钱、神秘结晶，以及@tiangong_shi、@lunhui_shi、@xingyun_zhu、0 星武魂、魂魄等珍贵道具。",
+      "desc": "需 60 级开启。右键点击使用，需用@yaoshi_jiuwei开启。\n开启必得 @shenmi_jingjie×6、经验与铜钱，并有机会获得附灵材料、潮生水晶与珍稀道具。\n★ 保底：每开 10 / 30 / 50 盒必得厚礼，第 50 盒最丰厚（50 盒一轮，循环计数）。\n★ 彩头：极小概率开出 3 星魂印 ／ 神品骑灵珠 ／ 灵品骑灵珠。",
       "flavor": "九尾灵狐，魅惑众生"
     },
     {
@@ -906,7 +906,7 @@
       "level_required": 75,
       "tier": 6,
       "icon": "static/icons/items/box_chest_yinglong.png",
-      "desc": "需 75 级开启。右键点击使用，需用应龙钥匙开启。\n开启可获得 6 档装备、经验、铜钱，以及@tiangong_shi、@lunhui_shi、@lunhui_chaoji、@gaoji_xiangrui、@lingyun_zhu、0 星武魂、魂魄等珍贵道具。",
+      "desc": "需 75 级开启。右键点击使用，需用@yaoshi_yinglong开启。\n开启必得 @shenmi_jingjie×8、经验与铜钱，并有机会获得附灵材料、潮生水晶与珍稀道具。\n★ 保底：每开 10 / 30 / 50 盒必得厚礼，第 50 盒最丰厚（50 盒一轮，循环计数）。\n★ 彩头：极小概率开出 3 星魂印 ／ 神品骑灵珠 ／ 灵品骑灵珠。",
       "flavor": "应龙振翼，翻云覆雨"
     },
     {
@@ -923,7 +923,7 @@
       "level_required": 90,
       "tier": 7,
       "icon": "static/icons/items/box_chest_zhulong.png",
-      "desc": "需 90 级开启。右键点击使用，需用烛龙钥匙开启。\n开启可获得 7 档装备、经验、铜钱、神秘结晶，以及@tiangong_shenshi、@lunhui_shenshi、@lunhui_chaoji、@gaoji_xiangrui、@qiyuan_shi、高级配方、3 星武魂等珍贵道具。",
+      "desc": "需 90 级开启。右键点击使用，需用@yaoshi_zhulong开启。\n开启必得 @shenmi_jingjie×12、经验与铜钱，并有机会获得附灵材料、潮生水晶与珍稀道具。\n★ 保底：每开 10 / 30 / 50 盒必得厚礼，第 50 盒最丰厚（50 盒一轮，循环计数）。\n★ 彩头：极小概率开出 3 星魂印 ／ 神品骑灵珠 ／ 灵品骑灵珠。",
       "flavor": "烛龙睁目，昼夜为昼"
     },
     {
@@ -1051,12 +1051,12 @@
       "level_required": 0,
       "tier": 1,
       "icon": "static/icons/items/shenmi_jingjie.png",
-      "desc": "自九尾、应龙、烛龙宝匣中开出的神秘晶石。\n可在天圣原神秘商人处兑换本职业指定部位的 5、6、7 档装备。",
+      "desc": "宝匣中开出的神秘晶石，每开一盒必得。\n可在凤鸣原神秘商人处兑换：7 档装备（普通 / 完美两档）、附灵材料、@ziling_hua 与 @fengling_zhu、以及各档宝匣钥匙。",
       "flavor": "紫晶流光，蕴藏天机"
     },
     {
       "key": "shoushan_shi_1",
-      "name": "寿山石☆",
+      "name": "昆山石☆",
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
@@ -1066,13 +1066,13 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "",
+      "icon": "static/icons/items/shoushanshi_1.png",
       "desc": "修验等级 50~59 级重置修验技能加点的消耗道具。\n可在点券商城购买。",
       "flavor": "灵石有脉，可涤旧学"
     },
     {
       "key": "shoushan_shi_2",
-      "name": "寿山石☆☆",
+      "name": "昆山石☆☆",
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
@@ -1082,13 +1082,13 @@
       },
       "level_required": 0,
       "tier": 2,
-      "icon": "",
+      "icon": "static/icons/items/shoushanshi_2.png",
       "desc": "修验等级 60~69 级重置修验技能加点的消耗道具。\n可在点券商城购买。",
       "flavor": "灵石二曜，可涤旧学"
     },
     {
       "key": "shoushan_shi_3",
-      "name": "寿山石☆☆☆",
+      "name": "昆山石☆☆☆",
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
@@ -1098,13 +1098,13 @@
       },
       "level_required": 0,
       "tier": 3,
-      "icon": "",
+      "icon": "static/icons/items/shoushanshi_3.png",
       "desc": "修验等级 70~79 级重置修验技能加点的消耗道具。\n可在点券商城购买。",
       "flavor": "灵石三曜，可涤旧学"
     },
     {
       "key": "shoushan_shi_4",
-      "name": "寿山石☆☆☆☆",
+      "name": "昆山石☆☆☆☆",
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
@@ -1114,13 +1114,13 @@
       },
       "level_required": 0,
       "tier": 4,
-      "icon": "",
-      "desc": "修验等级 80~89 级重置修验技能加点的消耗道具（原版资料缺失档，Q5 补）。\n可在点券商城购买。",
+      "icon": "static/icons/items/shoushanshi_4.png",
+      "desc": "修验等级 80~89 级重置修验技能加点的消耗道具。\n可在点券商城购买。",
       "flavor": "灵石四曜，可涤旧学"
     },
     {
       "key": "shoushan_shi_5",
-      "name": "寿山石☆☆☆☆☆",
+      "name": "昆山石☆☆☆☆☆",
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
@@ -1130,7 +1130,7 @@
       },
       "level_required": 0,
       "tier": 5,
-      "icon": "",
+      "icon": "static/icons/items/shoushanshi_5.png",
       "desc": "修验等级 90~100 级重置修验技能加点的消耗道具。\n可在点券商城购买。",
       "flavor": "灵石五曜，可涤旧学"
     },
@@ -1146,9 +1146,9 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "",
+      "icon": "static/icons/items/xiuyandan_1.png",
       "desc": "修验任务（1A）炼制产物。服食获得固定修验值。\n背包右键服食。",
-      "flavor": "白丹微光，神凝气聚"
+      "flavor": "白丹微光，凝神固魄气聚"
     },
     {
       "key": "xiuyandan_2",
@@ -1162,7 +1162,7 @@
       },
       "level_required": 0,
       "tier": 2,
-      "icon": "",
+      "icon": "static/icons/items/xiuyandan_2.png",
       "desc": "修验任务（2A）炼制产物。服食获得固定修验值。\n背包右键服食。",
       "flavor": "丹色如翠，药气盎然"
     },
@@ -1178,7 +1178,7 @@
       },
       "level_required": 0,
       "tier": 3,
-      "icon": "",
+      "icon": "static/icons/items/xiuyandan_3.png",
       "desc": "修验任务（3A）炼制产物。服食获得固定修验值。\n背包右键服食。",
       "flavor": "金丸凝露，灵光内蕴"
     },
@@ -1194,7 +1194,7 @@
       },
       "level_required": 0,
       "tier": 4,
-      "icon": "",
+      "icon": "static/icons/items/xiuyandan_4.png",
       "desc": "修验任务（4A）炼制产物。服食获得固定修验值。\n背包右键服食。",
       "flavor": "湛蓝如海，珍稀难炼"
     },
@@ -1210,13 +1210,13 @@
       },
       "level_required": 0,
       "tier": 5,
-      "icon": "",
+      "icon": "static/icons/items/xiuyandan_5.png",
       "desc": "修验任务（5A）炼制产物。服食获得固定修验值。\n背包右键服食。",
       "flavor": "紫气东来，极品神丹"
     },
     {
       "key": "liandan_shenlu",
-      "name": "炼丹神炉",
+      "name": "玄炉",
       "type": "consumable",
       "effect_type": "shenmo_tool",
       "price": 1,
@@ -1225,13 +1225,13 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "",
+      "icon": "static/icons/items/liandan_shenlu.png",
       "desc": "修验任务炼丹前置工具，持有不消耗。\n杂货店 1 金购 1 个即可，拥有后方可炼丹。",
       "flavor": "炉火纯青，百炼成丹"
     },
     {
       "key": "bailian_shi",
-      "name": "百炼石",
+      "name": "淬锋石",
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 5,
@@ -1241,13 +1241,13 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "",
-      "desc": "炼丹引子/百炼石类配方主导材料（可叠加）。\n点券商城 5 点券（仅道具商城有售）。",
+      "icon": "static/icons/items/bailian_shi.png",
+      "desc": "炼丹引子/淬锋石类配方主导材料（可叠加）。\n点券商城 5 点券（仅道具商城有售）。\nBOSS、副本首领与聚宝怪掉落。",
       "flavor": "百炼不折，可为丹引"
     },
     {
       "key": "ziling_hua",
-      "name": "紫灵花",
+      "name": "丹蕊花",
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 0,
@@ -1257,13 +1257,13 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "",
-      "desc": "炼丹引子（可叠加）。\n开宝匣（1~7 档）有几率获得；点券商城 15 点券（仅道具商城有售）。",
+      "icon": "static/icons/items/ziling_hua.png",
+      "desc": "炼丹引子（可叠加）。\n开幸运盒有几率获得；点券商城 15 点券（仅道具商城有售）。",
       "flavor": "紫英凝灵，入丹为引"
     },
     {
       "key": "fengling_zhu",
-      "name": "风灵珠",
+      "name": "劲风珠",
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 0,
@@ -1273,13 +1273,13 @@
       },
       "level_required": 0,
       "tier": 2,
-      "icon": "",
-      "desc": "炼丹引子（可叠加）。\n开白泽匣（3 档）及以上有几率获得；点券商城 15 点券（仅道具商城有售）。",
+      "icon": "static/icons/items/fengling_zhu.png",
+      "desc": "炼丹引子（可叠加）。\n开幸运盒有几率获得；100 级以上 BOSS、副本首领与聚宝怪掉落；点券商城 15 点券（仅道具商城有售）。",
       "flavor": "风旋成珠，灵动不散"
     },
     {
       "key": "xishuashua",
-      "name": "洗刷刷",
+      "name": "涤尘符",
       "type": "consumable",
       "effect_type": "shenmo_refresh",
       "price": 0,
@@ -1289,13 +1289,13 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "",
-      "desc": "刷新修验任务等级（每日金币刷新次数用尽后消耗，每日上限 99 次）。\n点券商城 1 点券。",
+      "icon": "static/icons/items/xishuashua.png",
+      "desc": "刷新修验任务等级（每日铜钱刷新次数用尽后消耗，每日上限 99 次）。\n点券商城 1 点券。",
       "flavor": "一刷一洗，去旧迎新"
     },
     {
       "key": "shenmo_xiulian_fu",
-      "name": "神魔修验符",
+      "name": "修验令",
       "type": "consumable",
       "effect_type": "shenmo_talisman",
       "price": 0,
@@ -1305,7 +1305,7 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "",
+      "icon": "static/icons/items/shenmo_xiulian_fu.png",
       "desc": "符接修验任务：消耗 1 符，本次任务最终丹值 +20%；并可增加每日次数（≥40 级）。\n点券商城 10 点券。",
       "flavor": "符箓引灵，功倍事半"
     },
@@ -1322,8 +1322,8 @@
       },
       "level_required": 1,
       "tier": 3,
-      "icon": "static/icons/items/box_004.png",
-      "desc": "右键点击使用，打开盒子将得到10个地下城传送卷。\n地下城传送卷使用后可选择传送至朝歌山一层、青云寨一层、奇石洞一层、伏羲陵墓道、炼骨洞一层、七曲洞一层、药王阁一层、天罗洞府、幻月海一层的第一个房间。",
+      "icon": "static/icons/items/dichuan_chuansongjuan_lihe.png",
+      "desc": "右键点击使用，打开盒子将得到10个地下城传送卷。\n地下城传送卷使用后可选择传送至朝歌山一层、空桑寨一层、玉山洞一层、幽都陵墓道、穷奇窟一层、迷谷洞一层、芝草阁一层、钟山洞府、玄溟海一层的第一个房间。",
       "flavor": "匣藏秘境，瞬息可达"
     },
     {
@@ -1341,35 +1341,35 @@
           },
           {
             "map_key": "qingyunzhai_l1",
-            "name": "青云寨一层"
+            "name": "空桑寨一层"
           },
           {
             "map_key": "qibingdong_l1",
-            "name": "奇石洞一层"
+            "name": "玉山洞一层"
           },
           {
             "map_key": "fuxiling_mudao",
-            "name": "伏羲陵墓道"
+            "name": "幽都陵墓道"
           },
           {
             "map_key": "lianguku_l1",
-            "name": "炼骨洞一层"
+            "name": "穷奇窟一层"
           },
           {
             "map_key": "qimidong_l1",
-            "name": "七曲洞一层"
+            "name": "迷谷洞一层"
           },
           {
             "map_key": "dongfu_yaowang_1",
-            "name": "药王阁一层"
+            "name": "芝草阁一层"
           },
           {
             "map_key": "dongfu_tianzun",
-            "name": "天罗洞府"
+            "name": "钟山洞府"
           },
           {
             "map_key": "huanhai_l1",
-            "name": "幻月海一层"
+            "name": "玄溟海一层"
           }
         ]
       },
@@ -1381,7 +1381,7 @@
     },
     {
       "key": "tianshengyuan_chuansongjuan",
-      "name": "天圣原传送卷轴",
+      "name": "主城传送卷",
       "type": "consumable",
       "effect_type": "teleport_map",
       "price": 1000,
@@ -1392,7 +1392,7 @@
       "level_required": 1,
       "tier": 1,
       "icon": "static/icons/items/scroll_teleport_safe.png",
-      "desc": "使用后可直接传送至天圣原安全区。\n售价10银，杂货店有售。",
+      "desc": "使用后可直接传送至凤鸣原安全区。\n售价10银，杂货店有售。",
       "flavor": "归乡之卷，瞬返圣境"
     },
     {
@@ -1408,8 +1408,8 @@
       "requires_key": "jiefeng_fu",
       "level_required": 0,
       "tier": 1,
-      "icon": "static/icons/items/box_chest_zhulong.png",
-      "desc": "右键点击使用，需消耗 1 个解封符开启。\n必得：洗刷刷×1~100；有几率获得：神魔修验符×1~3、百炼石×1~5。\n点券商城 20 点券；90 级及以上地图怪物有几率掉落。",
+      "icon": "static/icons/items/lucky_box.png",
+      "desc": "右键点击使用，需消耗 1 个解封符开启。\n必得：涤尘符×1~100；有几率获得：修验令×1~3、淬锋石×1~5。\n点券商城 20 点券；90 级及以上地图怪物有几率掉落。",
       "flavor": "吉光片羽，福至心灵"
     },
     {
@@ -1424,13 +1424,13 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "static/icons/items/misc_003.png",
+      "icon": "static/icons/items/jiefeng_fu.png",
       "desc": "用于开启幸运盒，开启一个幸运盒需消耗 1 张解封符。\n可在点券商城购买。",
       "flavor": "符破玄封，盒启福来"
     },
     {
       "key": "xishuashua_box",
-      "name": "洗刷刷宝箱",
+      "name": "涤尘符宝箱",
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
@@ -1442,12 +1442,12 @@
       "level_required": 0,
       "tier": 1,
       "icon": "static/icons/items/box_001.png",
-      "desc": "右键点击使用，打开宝箱将得到 100 个洗刷刷。\n仅 100 级及以上聚宝怪有几率掉落。",
+      "desc": "右键点击使用，打开宝箱将得到 100 个涤尘符。\n仅 100 级及以上聚宝怪有几率掉落。",
       "flavor": "一箱洗刷，焕然一新"
     },
     {
       "key": "bailian_dan_1",
-      "name": "百炼丹·壹",
+      "name": "淬锋丹·壹",
       "type": "consumable",
       "effect_type": "bailian_dan",
       "price": 0,
@@ -1457,13 +1457,13 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "static/icons/items/medicine_002.jpg",
-      "desc": "神魔修验者可服食，瞬间获得 5000 修验值。\n每天最多服食 8 个百炼丹（全等级共用）。",
+      "icon": "static/icons/items/bailian_dan_1.png",
+      "desc": "神魔修验者可服食，瞬间获得 5000 修验值。\n每天最多服食 8 个淬锋丹（全等级共用）。",
       "flavor": "丹成百炼，一服进阶"
     },
     {
       "key": "bailian_dan_2",
-      "name": "百炼丹·贰",
+      "name": "淬锋丹·贰",
       "type": "consumable",
       "effect_type": "bailian_dan",
       "price": 0,
@@ -1473,13 +1473,13 @@
       },
       "level_required": 0,
       "tier": 2,
-      "icon": "static/icons/items/medicine_003.jpg",
-      "desc": "神魔修验者可服食，瞬间获得 15000 修验值。\n每天最多服食 8 个百炼丹（全等级共用）。",
+      "icon": "static/icons/items/bailian_dan_2.png",
+      "desc": "神魔修验者可服食，瞬间获得 15000 修验值。\n每天最多服食 8 个淬锋丹（全等级共用）。",
       "flavor": "丹成百炼，一服进阶"
     },
     {
       "key": "bailian_dan_3",
-      "name": "百炼丹·叁",
+      "name": "淬锋丹·叁",
       "type": "consumable",
       "effect_type": "bailian_dan",
       "price": 0,
@@ -1489,13 +1489,13 @@
       },
       "level_required": 0,
       "tier": 3,
-      "icon": "static/icons/items/medicine_005.jpg",
-      "desc": "神魔修验者可服食，瞬间获得 50000 修验值。\n每天最多服食 8 个百炼丹（全等级共用）。",
+      "icon": "static/icons/items/bailian_dan_3.png",
+      "desc": "神魔修验者可服食，瞬间获得 50000 修验值。\n每天最多服食 8 个淬锋丹（全等级共用）。",
       "flavor": "丹成百炼，一服进阶"
     },
     {
       "key": "bailian_dan_4",
-      "name": "百炼丹·肆",
+      "name": "淬锋丹·肆",
       "type": "consumable",
       "effect_type": "bailian_dan",
       "price": 0,
@@ -1505,13 +1505,13 @@
       },
       "level_required": 0,
       "tier": 4,
-      "icon": "static/icons/items/medicine_006.jpg",
-      "desc": "神魔修验者可服食，瞬间获得 100000 修验值。\n每天最多服食 8 个百炼丹（全等级共用）。",
+      "icon": "static/icons/items/bailian_dan_4.png",
+      "desc": "神魔修验者可服食，瞬间获得 100000 修验值。\n每天最多服食 8 个淬锋丹（全等级共用）。",
       "flavor": "丹成百炼，一服进阶"
     },
     {
       "key": "bailian_dan_5",
-      "name": "百炼丹·伍",
+      "name": "淬锋丹·伍",
       "type": "consumable",
       "effect_type": "bailian_dan",
       "price": 0,
@@ -1521,13 +1521,13 @@
       },
       "level_required": 0,
       "tier": 5,
-      "icon": "static/icons/items/medicine_007.jpg",
-      "desc": "神魔修验者可服食，瞬间获得 200000 修验值。\n每天最多服食 8 个百炼丹（全等级共用）。",
+      "icon": "static/icons/items/bailian_dan_5.png",
+      "desc": "神魔修验者可服食，瞬间获得 200000 修验值。\n每天最多服食 8 个淬锋丹（全等级共用）。",
       "flavor": "丹成百炼，一服进阶"
     },
     {
       "key": "recipe_bailian_1",
-      "name": "百炼丹升级配方·壹",
+      "name": "淬锋丹升级配方·壹",
       "type": "consumable",
       "effect_type": "bailian_recipe",
       "price": 200000,
@@ -1537,13 +1537,13 @@
       },
       "level_required": 0,
       "tier": 1,
-      "icon": "static/icons/items/token_001.png",
-      "desc": "炼制百炼丹·壹的配方卷轴。\n右键使用：消耗百炼石×5 + 3档晶石×10 + 淬魂瓶，炼制完成后可得百炼丹·壹×1。",
+      "icon": "static/icons/items/recipe_bailian_1.png",
+      "desc": "炼制淬锋丹·壹的配方卷轴。\n右键使用：消耗淬锋石×5 + 3档晶石×10 + 蕴元瓶，炼制完成后可得淬锋丹·壹×1。",
       "flavor": "丹方秘录，炼化万灵"
     },
     {
       "key": "recipe_bailian_2",
-      "name": "百炼丹升级配方·贰",
+      "name": "淬锋丹升级配方·贰",
       "type": "consumable",
       "effect_type": "bailian_recipe",
       "price": 500000,
@@ -1553,13 +1553,13 @@
       },
       "level_required": 0,
       "tier": 2,
-      "icon": "static/icons/items/token_002.png",
-      "desc": "炼制百炼丹·贰的配方卷轴。\n右键使用：消耗百炼丹·壹×2 + 百炼石×10 + 4档晶石×5 + 淬魂瓶，炼制完成后可得百炼丹·贰×1。",
+      "icon": "static/icons/items/recipe_bailian_2.png",
+      "desc": "炼制淬锋丹·贰的配方卷轴。\n右键使用：消耗淬锋丹·壹×2 + 淬锋石×10 + 4档晶石×5 + 蕴元瓶，炼制完成后可得淬锋丹·贰×1。",
       "flavor": "丹方秘录，炼化万灵"
     },
     {
       "key": "recipe_bailian_3",
-      "name": "百炼丹升级配方·叁",
+      "name": "淬锋丹升级配方·叁",
       "type": "consumable",
       "effect_type": "bailian_recipe",
       "price": 2000000,
@@ -1569,13 +1569,13 @@
       },
       "level_required": 0,
       "tier": 3,
-      "icon": "static/icons/items/token_003.png",
-      "desc": "炼制百炼丹·叁的配方卷轴。\n右键使用：消耗百炼丹·贰×2 + 百炼石×20 + 5档晶石×3 + 淬魂瓶，炼制完成后可得百炼丹·叁×1。",
+      "icon": "static/icons/items/recipe_bailian_3.png",
+      "desc": "炼制淬锋丹·叁的配方卷轴。\n右键使用：消耗淬锋丹·贰×2 + 淬锋石×20 + 5档晶石×3 + 蕴元瓶，炼制完成后可得淬锋丹·叁×1。",
       "flavor": "丹方秘录，炼化万灵"
     },
     {
       "key": "recipe_bailian_4",
-      "name": "百炼丹升级配方·肆",
+      "name": "淬锋丹升级配方·肆",
       "type": "consumable",
       "effect_type": "bailian_recipe",
       "price": 0,
@@ -1585,13 +1585,13 @@
       },
       "level_required": 0,
       "tier": 4,
-      "icon": "static/icons/items/token_001.png",
-      "desc": "炼制百炼丹·肆的配方卷轴。\n右键使用：消耗百炼丹·叁×2 + 百炼石×30 + 6档晶石×3 + 淬魂瓶，炼制完成后可得百炼丹·肆×1。",
+      "icon": "static/icons/items/recipe_bailian_4.png",
+      "desc": "炼制淬锋丹·肆的配方卷轴。\n右键使用：消耗淬锋丹·叁×2 + 淬锋石×30 + 6档晶石×3 + 蕴元瓶，炼制完成后可得淬锋丹·肆×1。",
       "flavor": "丹方秘录，炼化万灵"
     },
     {
       "key": "recipe_bailian_5",
-      "name": "百炼丹升级配方·伍",
+      "name": "淬锋丹升级配方·伍",
       "type": "consumable",
       "effect_type": "bailian_recipe",
       "price": 0,
@@ -1601,8 +1601,8 @@
       },
       "level_required": 0,
       "tier": 5,
-      "icon": "static/icons/items/token_002.png",
-      "desc": "炼制百炼丹·伍的配方卷轴。\n右键使用：消耗百炼丹·肆×2 + 百炼石×40 + 7档晶石×3 + 淬魂瓶，炼制完成后可得百炼丹·伍×1。",
+      "icon": "static/icons/items/recipe_bailian_5.png",
+      "desc": "炼制淬锋丹·伍的配方卷轴。\n右键使用：消耗淬锋丹·肆×2 + 淬锋石×40 + 7档晶石×3 + 蕴元瓶，炼制完成后可得淬锋丹·伍×1。",
       "flavor": "丹方秘录，炼化万灵"
     },
     {
@@ -1615,13 +1615,13 @@
         "exchange": "xianghunzhong_instance"
       },
       "level_required": 60,
-      "icon": "",
-      "desc": "香魂冢头目掉落。集齐一定数量可在副本入口处兑换高阶装备。",
+      "icon": "static/icons/items/yingling_hufu.png",
+      "desc": "幽芷冢头目掉落。集齐一定数量可在副本入口处兑换高阶装备。",
       "flavor": "古玉镂纹，隐隐有香"
     },
     {
       "key": "guangming_fufu",
-      "name": "曜光护符",
+      "name": "晖光护符",
       "type": "consumable",
       "effect_type": "exchange_token",
       "price": 0,
@@ -1629,8 +1629,8 @@
         "exchange": "xuanyuantai"
       },
       "level_required": 35,
-      "icon": "",
-      "desc": "轩辕台头目掉落。集齐一定数量可在副本入口处兑换四阶装备。",
+      "icon": "static/icons/items/yaoguang_hufu.png",
+      "desc": "昆吾台头目掉落。集齐一定数量可在副本入口处兑换四阶装备。",
       "flavor": "祭台遗光，温润不熄"
     },
     {
@@ -1643,8 +1643,8 @@
         "exchange": "guimu"
       },
       "level_required": 20,
-      "icon": "",
-      "desc": "诡墓头目掉落。集齐一定数量可在副本入口处兑换三阶装备。",
+      "icon": "static/icons/items/siwang_hufu.png",
+      "desc": "蛊雕墓头目掉落。集齐一定数量可在副本入口处兑换三阶装备。",
       "flavor": "墓穴阴气所凝,触之生寒"
     },
     {

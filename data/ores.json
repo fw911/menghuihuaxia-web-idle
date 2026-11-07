@@ -2,7 +2,7 @@
   "ore_types": [
     {
       "key": "hantie",
-      "name": "寒铁矿石",
+      "name": "霜髓铁矿",
       "icon": "static/icons/ores/ore_hantie.jpg",
       "tier": 1,
       "price": 15,
@@ -10,7 +10,7 @@
     },
     {
       "key": "chitong",
-      "name": "炽铜矿石",
+      "name": "炎髓铜矿",
       "icon": "static/icons/ores/ore_chitong.jpg",
       "tier": 2,
       "price": 30,
@@ -18,7 +18,7 @@
     },
     {
       "key": "moyin",
-      "name": "墨银矿石",
+      "name": "玄泽银矿",
       "icon": "static/icons/ores/ore_moyin.jpg",
       "tier": 3,
       "price": 60,
@@ -26,7 +26,7 @@
     },
     {
       "key": "wujin",
-      "name": "乌金矿石",
+      "name": "曜纹金矿",
       "icon": "static/icons/ores/ore_wujin.jpg",
       "tier": 4,
       "price": 120,
@@ -34,7 +34,7 @@
     },
     {
       "key": "liufang",
-      "name": "六方金刚石",
+      "name": "晶核刚玉",
       "icon": "static/icons/ores/ore_liufang_jingang.jpg",
       "tier": 5,
       "price": 240,
@@ -42,7 +42,7 @@
     },
     {
       "key": "lihuo",
-      "name": "离火翡翠",
+      "name": "焚髓碧玉",
       "icon": "static/icons/ores/ore_lihuo_feicui.jpg",
       "tier": 6,
       "price": 480,
@@ -50,7 +50,7 @@
     },
     {
       "key": "haihun",
-      "name": "海魂水晶",
+      "name": "潮生水晶",
       "icon": "static/icons/ores/ore_haihun_shuijing.jpg",
       "tier": 7,
       "price": 960,

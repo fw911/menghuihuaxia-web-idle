@@ -51,7 +51,7 @@ function ok(name, cond, extra) {
   ok('宝石品级链', E.GEM_ORDER.length >= 2, JSON.stringify(E.GEM_ORDER));
   ok('副本兑换条目 36', E.instEntries().length === 36, E.instEntries().length + '');
   ok('成就条目 90（v0.91 补齐 3 条）', E.achList().length === 90, E.achList().length + '');
-  ok('消耗品掉落中文名', E.itemName('xuming_xiao') === '回春小还丹' && E.itemName('ningshen_jiuzhuan') === '九转定神液', E.itemName('xuming_xiao') + ' / ' + E.itemName('ningshen_jiuzhuan'));
+  ok('消耗品掉落中文名', E.itemName('xuming_xiao') === '回春小还丹' && E.itemName('ningshen_jiuzhuan') === '九转定神守心液', E.itemName('xuming_xiao') + ' / ' + E.itemName('ningshen_jiuzhuan'));
   ok('道具名兜底', E.itemName('__missing__') === '__missing__', E.itemName('__missing__'));
 
   E.newPlayer('测试', 'warrior');
@@ -346,7 +346,7 @@ function ok(name, cond, extra) {
   {
     p.bag.push({ uid: 'gem_p1', type: 'gem', series: 'beidou', grade: '碎石', count: 1 });   // 武器/护手/戒指
     p.bag.push({ uid: 'gem_p2', type: 'gem', series: 'wangyue', grade: '碎石', count: 1 });  // 防具六件
-    ok('宝石系列 key 映射为完整中文名', E.gemSeriesName('beidou') === '北斗' && E.gemSeriesName('wangyue') === '望月' && E.gemSeriesName('unknown') === 'unknown');
+    ok('宝石系列 key 映射为完整中文名', E.gemSeriesName('beidou') === '玄璧' && E.gemSeriesName('wangyue') === '霜华' && E.gemSeriesName('unknown') === 'unknown');
     const gb = p.bag.find(b => b.uid === 'gem_p1'), gw = p.bag.find(b => b.uid === 'gem_p2');
     const iw = E.genEquip('weapon', p.job, 7, 100);
     const ih = E.genEquip('helmet', p.job, 7, 100);
@@ -1927,7 +1927,7 @@ function ok(name, cond, extra) {
 
     // 装备地图称号测试 map_buff
     const bj = E.titleByKey('my_beijun');
-    ok('称号配置可读取（北原郡勇者）', !!bj && bj.name === '北原郡勇者' && bj.effect.type === 'map_buff');
+    ok('称号配置可读取（青丘勇者）', !!bj && bj.name === '青丘勇者' && bj.effect.type === 'map_buff');
     ps.equippedTitle = 'my_beijun';
     ps.map = 'beijun';
     E.state.zone = { mapKey: 'beijun', zoneKey: 'beijun_plains', isBoss: false };
@@ -1941,12 +1941,21 @@ function ok(name, cond, extra) {
     ok('怪物名含关键字时称号伤害倍率生效', E.titleDmgMult(m1) === 1.5, E.titleDmgMult(m1));
     ok('怪物名不含关键字时倍率为 1', E.titleDmgMult(m2) === 1, E.titleDmgMult(m2));
 
+    // L6：怪物名回正 v0.91 后，v0.91 双名关键词体系必须仍能命中真实怪物名，
+    // 否则称号伤害倍率/击杀解锁会静默失效（旧名适配称号 kx_厉角/kx_山膏/kx_延维 属 web-idle 自研，不在此列）
+    {
+      const names = Object.keys(E.MONSTERS).map(k => E.MONSTERS[k].name || '');
+      const v091Kw = ['双首', '狰牙', '莽岭', '玄盟', '翠裳', '蜘蛛', '虎', '熊', '蝎', '鬼'];
+      const zero = v091Kw.filter(k => !names.some(n => n.indexOf(k) >= 0));
+      ok('v0.91 称号关键词在改名后怪物名上均有命中', zero.length === 0, '零命中=' + zero.join(','));
+    }
+
     ps.titles = origTitles; ps.equippedTitle = origEq;
   }
 
   // 物品中文名覆盖：商店/背包中不再出现 raw key
   {
-    ok('矿石显示中文名（寒铁矿石）', E.itemName('hantie') === '寒铁矿石');
+    ok('矿石显示中文名（霜髓铁矿）', E.itemName('hantie') === '霜髓铁矿');
     ok('武魂配方卷轴显示中文名（启魂符☆炼制配方）', E.itemName('recipe_lingyin_1') === '启魂符☆炼制配方');
     ok('宝石原料显示中文名（北斗石）', E.itemName('beidou_石') === '北斗石');
     ok('武魂材料显示中文名（天魂）', E.itemName('sanhun_tian') === '天魂');

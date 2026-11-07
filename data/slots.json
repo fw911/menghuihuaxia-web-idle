@@ -261,7 +261,7 @@
     },
     {
       "key": "soul1",
-      "name": "武魂",
+      "name": "魂印",
       "slot_type": "soul",
       "hand": false,
       "stat_fields": [
@@ -276,7 +276,7 @@
     },
     {
       "key": "soul2",
-      "name": "武魂",
+      "name": "魂印",
       "slot_type": "soul",
       "hand": false,
       "stat_fields": [

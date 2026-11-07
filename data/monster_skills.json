@@ -5773,7 +5773,7 @@
   },
   {
    "key": "ghost_14_p",
-   "name": "裂创",
+   "name": "裂创铭骨",
    "element": "physical",
    "mult": 1.39,
    "weight": 100,
@@ -5973,7 +5973,7 @@
   },
   {
    "key": "ghost_19_p",
-   "name": "裂创",
+   "name": "裂创铭骨",
    "element": "physical",
    "mult": 1.49,
    "weight": 100,
@@ -6513,7 +6513,7 @@
   },
   {
    "key": "ghost_3_p",
-   "name": "长右重击",
+   "name": "四耳重击",
    "element": "physical",
    "mult": 1.66,
    "weight": 100,
@@ -9439,7 +9439,7 @@
   },
   {
    "key": "kl_canjiang_phys",
-   "name": "裂创",
+   "name": "裂创铭骨",
    "element": "physical",
    "mult": 1.342,
    "weight": 100,
@@ -14325,7 +14325,7 @@
   },
   {
    "key": "she_hun",
-   "name": "寒风",
+   "name": "摄魂",
    "element": "magic",
    "mult": 1.15,
    "weight": 100,
@@ -15936,7 +15936,7 @@
   },
   {
    "key": "xiong_phys_1",
-   "name": "裂创",
+   "name": "裂创铭骨",
    "element": "physical",
    "mult": 1.49,
    "weight": 100,
@@ -15956,7 +15956,7 @@
   },
   {
    "key": "xiong_phys_2",
-   "name": "裂创",
+   "name": "裂创铭骨",
    "element": "physical",
    "mult": 1.448,
    "weight": 100,
@@ -28622,7 +28622,7 @@
   },
   {
    "key": "xhz_she_hun",
-   "name": "摄魂",
+   "name": "拘魂",
    "element": "magic",
    "mult": 1.55,
    "weight": 100,
@@ -28938,7 +28938,7 @@
   },
   {
    "key": "xyt_she_hun",
-   "name": "摄魂",
+   "name": "拘魂",
    "element": "magic",
    "mult": 1.62,
    "weight": 100,

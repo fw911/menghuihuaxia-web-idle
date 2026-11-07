@@ -907,8 +907,8 @@
     {
       "key": "msingle_beijun",
       "category": "map_single",
-      "name": "北原郡通关",
-      "desc": "通关「北原郡」",
+      "name": "青丘通关",
+      "desc": "通关「青丘」",
       "metric": "map_single",
       "target": 1,
       "map_key": "beijun",
@@ -920,8 +920,8 @@
     {
       "key": "msingle_tianshengyuan",
       "category": "map_single",
-      "name": "天圣原通关",
-      "desc": "通关「天圣原」",
+      "name": "凤鸣原通关",
+      "desc": "通关「凤鸣原」",
       "metric": "map_single",
       "target": 1,
       "map_key": "tianshengyuan",
@@ -933,8 +933,8 @@
     {
       "key": "msingle_banquan",
       "category": "map_single",
-      "name": "阪泉通关",
-      "desc": "通关「阪泉」",
+      "name": "龙脊通关",
+      "desc": "通关「龙脊」",
       "metric": "map_single",
       "target": 1,
       "map_key": "banquan",
@@ -946,8 +946,8 @@
     {
       "key": "msingle_nanjun",
       "category": "map_single",
-      "name": "南原郡通关",
-      "desc": "通关「南原郡」",
+      "name": "澜溪通关",
+      "desc": "通关「澜溪」",
       "metric": "map_single",
       "target": 1,
       "map_key": "nanjun",
@@ -959,8 +959,8 @@
     {
       "key": "msingle_qiufengyuan",
       "category": "map_single",
-      "name": "秋野原通关",
-      "desc": "通关「秋野原」",
+      "name": "烽烟原通关",
+      "desc": "通关「烽烟原」",
       "metric": "map_single",
       "target": 1,
       "map_key": "qiufengyuan",
@@ -972,8 +972,8 @@
     {
       "key": "msingle_kunlun",
       "category": "map_single",
-      "name": "昆仑通关",
-      "desc": "通关「昆仑」",
+      "name": "玉轮通关",
+      "desc": "通关「玉轮」",
       "metric": "map_single",
       "target": 1,
       "map_key": "kunlun",
@@ -985,8 +985,8 @@
     {
       "key": "msingle_muxiuyulin",
       "category": "map_single",
-      "name": "暮雨林通关",
-      "desc": "通关「暮雨林」",
+      "name": "雾隐雨林通关",
+      "desc": "通关「雾隐雨林」",
       "metric": "map_single",
       "target": 1,
       "map_key": "muxiuyulin",
@@ -998,8 +998,8 @@
     {
       "key": "msingle_jurenye",
       "category": "map_single",
-      "name": "巨灵野通关",
-      "desc": "通关「巨灵野」",
+      "name": "擎苍野通关",
+      "desc": "通关「擎苍野」",
       "metric": "map_single",
       "target": 1,
       "map_key": "jurenye",
@@ -1011,8 +1011,8 @@
     {
       "key": "msingle_chishui",
       "category": "map_single",
-      "name": "赤水通关",
-      "desc": "通关「赤水」",
+      "name": "落雁通关",
+      "desc": "通关「落雁」",
       "metric": "map_single",
       "target": 1,
       "map_key": "chishui",
@@ -1024,8 +1024,8 @@
     {
       "key": "msingle_congyuzhaoze",
       "category": "map_single",
-      "name": "丛雨沼泽通关",
-      "desc": "通关「丛雨沼泽」",
+      "name": "雁回沼泽通关",
+      "desc": "通关「雁回沼泽」",
       "metric": "map_single",
       "target": 1,
       "map_key": "congyuzhaoze",
@@ -1037,8 +1037,8 @@
     {
       "key": "msingle_duanbigu",
       "category": "map_single",
-      "name": "断崖谷通关",
-      "desc": "通关「断崖谷」",
+      "name": "寒戍谷通关",
+      "desc": "通关「寒戍谷」",
       "metric": "map_single",
       "target": 1,
       "map_key": "duanbigu",
@@ -1050,8 +1050,8 @@
     {
       "key": "msingle_linhai",
       "category": "map_single",
-      "name": "林海通关",
-      "desc": "通关「林海」",
+      "name": "青萝通关",
+      "desc": "通关「青萝」",
       "metric": "map_single",
       "target": 1,
       "map_key": "linhai",
@@ -1063,8 +1063,8 @@
     {
       "key": "msingle_xuanyuan",
       "category": "map_single",
-      "name": "轩辕通关",
-      "desc": "通关「轩辕」",
+      "name": "逐日通关",
+      "desc": "通关「逐日」",
       "metric": "map_single",
       "target": 1,
       "map_key": "xuanyuan",
@@ -1076,8 +1076,8 @@
     {
       "key": "msingle_donglicao",
       "category": "map_single",
-      "name": "东篱草原通关",
-      "desc": "通关「东篱草原」",
+      "name": "牧云草原通关",
+      "desc": "通关「牧云草原」",
       "metric": "map_single",
       "target": 1,
       "map_key": "donglicao",
@@ -1089,8 +1089,8 @@
     {
       "key": "msingle_langyapendi",
       "category": "map_single",
-      "name": "琅琊盆地通关",
-      "desc": "通关「琅琊盆地」",
+      "name": "望岳盆地通关",
+      "desc": "通关「望岳盆地」",
       "metric": "map_single",
       "target": 1,
       "map_key": "langyapendi",
@@ -1102,8 +1102,8 @@
     {
       "key": "msingle_ninghaizhou",
       "category": "map_single",
-      "name": "宁海州通关",
-      "desc": "通关「宁海州」",
+      "name": "海岱州通关",
+      "desc": "通关「海岱州」",
       "metric": "map_single",
       "target": 1,
       "map_key": "ninghaizhou",
@@ -1115,8 +1115,8 @@
     {
       "key": "msingle_xilie",
       "category": "map_single",
-      "name": "西莽荒原通关",
-      "desc": "通关「西莽荒原」",
+      "name": "朔风荒原通关",
+      "desc": "通关「朔风荒原」",
       "metric": "map_single",
       "target": 1,
       "map_key": "xilie",
@@ -1128,8 +1128,8 @@
     {
       "key": "msingle_guimu",
       "category": "map_single",
-      "name": "诡墓通关",
-      "desc": "通关「诡墓」",
+      "name": "蛊雕墓通关",
+      "desc": "通关「蛊雕墓」",
       "metric": "map_single",
       "target": 1,
       "map_key": "guimu",
@@ -1505,11 +1505,11 @@
     {
       "key": "ktype_青依_1500",
       "category": "kill_type",
-      "name": "诛青依克星",
-      "desc": "累计击杀含「青依」的怪物 1500 只",
+      "name": "诛翠裳克星",
+      "desc": "累计击杀含「翠裳」的怪物 1500 只",
       "metric": "kill_type",
       "target": 1500,
-      "kill_keyword": "青依",
+      "kill_keyword": "翠裳",
       "reward_coins": 300000,
       "reward_coupon": 20,
       "reward_items": [
@@ -1524,11 +1524,11 @@
     {
       "key": "ktype_赤社_1500",
       "category": "kill_type",
-      "name": "荡赤社克星",
-      "desc": "累计击杀含「赤社」的怪物 1500 只",
+      "name": "荡玄盟克星",
+      "desc": "累计击杀含「玄盟」的怪物 1500 只",
       "metric": "kill_type",
       "target": 1500,
-      "kill_keyword": "赤社",
+      "kill_keyword": "玄盟",
       "reward_coins": 300000,
       "reward_coupon": 20,
       "reward_items": [
@@ -1724,31 +1724,31 @@
     },
     {
       "key": "kx_青依",
-      "name": "诛青依克星",
-      "desc": "对含「青依」的怪物造成伤害 ×1.5",
+      "name": "诛翠裳克星",
+      "desc": "对含「翠裳」的怪物造成伤害 ×1.5",
       "unlock": {
         "type": "kill_type",
-        "keyword": "青依",
+        "keyword": "翠裳",
         "count": 1500
       },
       "effect": {
         "type": "monster_dmg",
-        "keyword": "青依",
+        "keyword": "翠裳",
         "mult": 1.5
       }
     },
     {
       "key": "kx_赤社",
-      "name": "荡赤社克星",
-      "desc": "对含「赤社」的怪物造成伤害 ×1.5",
+      "name": "荡玄盟克星",
+      "desc": "对含「玄盟」的怪物造成伤害 ×1.5",
       "unlock": {
         "type": "kill_type",
-        "keyword": "赤社",
+        "keyword": "玄盟",
         "count": 1500
       },
       "effect": {
         "type": "monster_dmg",
-        "keyword": "赤社",
+        "keyword": "玄盟",
         "mult": 1.5
       }
     },
@@ -1769,8 +1769,8 @@
     },
     {
       "key": "my_beijun",
-      "name": "北原郡勇者",
-      "desc": "在北原郡内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "青丘勇者",
+      "desc": "在青丘内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "beijun"
@@ -1785,8 +1785,8 @@
     },
     {
       "key": "my_tianshengyuan",
-      "name": "天圣原勇者",
-      "desc": "在天圣原内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "凤鸣原勇者",
+      "desc": "在凤鸣原内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "tianshengyuan"
@@ -1801,8 +1801,8 @@
     },
     {
       "key": "my_banquan",
-      "name": "阪泉勇者",
-      "desc": "在阪泉内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "龙脊勇者",
+      "desc": "在龙脊内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "banquan"
@@ -1817,8 +1817,8 @@
     },
     {
       "key": "my_nanjun",
-      "name": "南原郡勇者",
-      "desc": "在南原郡内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "澜溪勇者",
+      "desc": "在澜溪内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "nanjun"
@@ -1833,8 +1833,8 @@
     },
     {
       "key": "my_qiufengyuan",
-      "name": "秋野原勇者",
-      "desc": "在秋野原内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "烽烟原勇者",
+      "desc": "在烽烟原内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "qiufengyuan"
@@ -1849,8 +1849,8 @@
     },
     {
       "key": "my_kunlun",
-      "name": "昆仑勇者",
-      "desc": "在昆仑内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "玉轮勇者",
+      "desc": "在玉轮内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "kunlun"
@@ -1865,8 +1865,8 @@
     },
     {
       "key": "my_muxiuyulin",
-      "name": "暮雨林勇者",
-      "desc": "在暮雨林内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "雾隐雨林勇者",
+      "desc": "在雾隐雨林内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "muxiuyulin"
@@ -1881,8 +1881,8 @@
     },
     {
       "key": "my_jurenye",
-      "name": "巨灵野勇者",
-      "desc": "在巨灵野内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "擎苍野勇者",
+      "desc": "在擎苍野内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "jurenye"
@@ -1897,8 +1897,8 @@
     },
     {
       "key": "my_chishui",
-      "name": "赤水勇者",
-      "desc": "在赤水内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "落雁勇者",
+      "desc": "在落雁内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "chishui"
@@ -1913,8 +1913,8 @@
     },
     {
       "key": "my_congyuzhaoze",
-      "name": "丛雨沼泽勇者",
-      "desc": "在丛雨沼泽内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "雁回沼泽勇者",
+      "desc": "在雁回沼泽内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "congyuzhaoze"
@@ -1929,8 +1929,8 @@
     },
     {
       "key": "my_duanbigu",
-      "name": "断崖谷勇者",
-      "desc": "在断崖谷内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "寒戍谷勇者",
+      "desc": "在寒戍谷内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "duanbigu"
@@ -1945,8 +1945,8 @@
     },
     {
       "key": "my_linhai",
-      "name": "林海勇者",
-      "desc": "在林海内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "青萝勇者",
+      "desc": "在青萝内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "linhai"
@@ -1961,8 +1961,8 @@
     },
     {
       "key": "my_xuanyuan",
-      "name": "轩辕勇者",
-      "desc": "在轩辕内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "逐日勇者",
+      "desc": "在逐日内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "xuanyuan"
@@ -1977,8 +1977,8 @@
     },
     {
       "key": "my_donglicao",
-      "name": "东篱草原勇者",
-      "desc": "在东篱草原内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "牧云草原勇者",
+      "desc": "在牧云草原内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "donglicao"
@@ -1993,8 +1993,8 @@
     },
     {
       "key": "my_langyapendi",
-      "name": "琅琊盆地勇者",
-      "desc": "在琅琊盆地内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "望岳盆地勇者",
+      "desc": "在望岳盆地内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "langyapendi"
@@ -2009,8 +2009,8 @@
     },
     {
       "key": "my_ninghaizhou",
-      "name": "宁海州勇者",
-      "desc": "在宁海州内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "海岱州勇者",
+      "desc": "在海岱州内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "ninghaizhou"
@@ -2025,8 +2025,8 @@
     },
     {
       "key": "my_xilie",
-      "name": "西莽荒原勇者",
-      "desc": "在西莽荒原内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "朔风荒原勇者",
+      "desc": "在朔风荒原内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "xilie"
@@ -2041,8 +2041,8 @@
     },
     {
       "key": "my_guimu",
-      "name": "诡墓勇者",
-      "desc": "在诡墓内战斗时，每回合回复 2% 生命和 2% 法术，造成伤害 +15%",
+      "name": "蛊雕墓勇者",
+      "desc": "在蛊雕墓内战斗时，造成伤害 +15%",
       "unlock": {
         "type": "map_clear",
         "map_key": "guimu"

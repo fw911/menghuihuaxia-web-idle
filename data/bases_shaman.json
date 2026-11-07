@@ -1,14 +1,14 @@
 {
   "helmets": [
     {
-      "name": "绛羽帽",
+      "name": "青藤帽",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_helmet_1.png",
-      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "desc": "族人初次历练，以草药之力仿出灵鹊翠羽之形，披之如沐春风",
       "durability": [
         14,
         14
@@ -27,14 +27,14 @@
       "req_level": 11
     },
     {
-      "name": "苍翎帽",
+      "name": "翠微帽",
       "tier": 2,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_helmet_2.png",
-      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "desc": "取蓝翎竹叶为材，其形似雕翎，既护周身，也养灵气",
       "durability": [
         18,
         18
@@ -53,14 +53,14 @@
       "req_level": 26
     },
     {
-      "name": "鸿翎帽",
+      "name": "白露帽",
       "tier": 3,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_helmet_3.png",
-      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "desc": "取远海孤雁的尾翎为骨，灌入擎木木髓，趁晨露未干时炼成",
       "durability": [
         23,
         23
@@ -79,14 +79,14 @@
       "req_level": 41
     },
     {
-      "name": "玄鹤帽",
+      "name": "赤翎帽",
       "tier": 4,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_helmet_4.png",
-      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "desc": "相传古鹤掠海而过，翎羽落水，竟自化作一身羽衣",
       "durability": [
         27,
         27
@@ -105,14 +105,14 @@
       "req_level": 56
     },
     {
-      "name": "鹏翎帽",
+      "name": "紫芝帽",
       "tier": 5,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_helmet_5.png",
-      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "desc": "以鹏翼缀石，交由铸造行巧匠缝合，入手便知不是凡品",
       "durability": [
         32,
         32
@@ -131,14 +131,14 @@
       "req_level": 71
     },
     {
-      "name": "鸾铭帽",
+      "name": "云霓帽",
       "tier": 6,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_helmet_6.png",
-      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "desc": "相传以凤羽与古玉编成，真伪已不可考，珍贵却是公认的",
       "durability": [
         36,
         36
@@ -157,14 +157,14 @@
       "req_level": 86
     },
     {
-      "name": "夜啸天帽",
+      "name": "龙吟九渊帽",
       "tier": 7,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_helmet_7.png",
-      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "desc": "相传族中长老曾救下一位过客，那人留下这身龙吟九渊，飘然而去",
       "durability": [
         41,
         41
@@ -253,14 +253,14 @@
   ],
   "shoulders": [
     {
-      "name": "苍翎护肩",
+      "name": "翠微护肩",
       "tier": 2,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoulder_2.png",
-      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "desc": "取蓝翎竹叶为材，其形似雕翎，既护周身，也养灵气",
       "durability": [
         14,
         14
@@ -279,14 +279,14 @@
       "req_level": 29
     },
     {
-      "name": "鸿翎护肩",
+      "name": "白露护肩",
       "tier": 3,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoulder_3.png",
-      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "desc": "取远海孤雁的尾翎为骨，灌入擎木木髓，趁晨露未干时炼成",
       "durability": [
         18,
         18
@@ -305,14 +305,14 @@
       "req_level": 44
     },
     {
-      "name": "玄鹤护肩",
+      "name": "赤翎护肩",
       "tier": 4,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoulder_4.png",
-      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "desc": "相传古鹤掠海而过，翎羽落水，竟自化作一身羽衣",
       "durability": [
         23,
         23
@@ -331,14 +331,14 @@
       "req_level": 59
     },
     {
-      "name": "鹏翎护肩",
+      "name": "紫芝护肩",
       "tier": 5,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoulder_5.png",
-      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "desc": "以鹏翼缀石，交由铸造行巧匠缝合，入手便知不是凡品",
       "durability": [
         27,
         27
@@ -357,14 +357,14 @@
       "req_level": 74
     },
     {
-      "name": "鸾铭护肩",
+      "name": "云霓护肩",
       "tier": 6,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoulder_6.png",
-      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "desc": "相传以凤羽与古玉编成，真伪已不可考，珍贵却是公认的",
       "durability": [
         32,
         32
@@ -383,14 +383,14 @@
       "req_level": 89
     },
     {
-      "name": "夜啸天护肩",
+      "name": "龙吟九渊护肩",
       "tier": 7,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoulder_7.png",
-      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "desc": "相传族中长老曾救下一位过客，那人留下这身龙吟九渊，飘然而去",
       "durability": [
         36,
         36
@@ -505,14 +505,14 @@
   ],
   "armors": [
     {
-      "name": "绛羽衫",
+      "name": "青藤衫",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_armor_1.png",
-      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "desc": "族人初次历练，以草药之力仿出灵鹊翠羽之形，披之如沐春风",
       "durability": [
         15,
         15
@@ -531,14 +531,14 @@
       "req_level": 15
     },
     {
-      "name": "苍翎衫",
+      "name": "翠微衫",
       "tier": 2,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_armor_2.png",
-      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "desc": "取蓝翎竹叶为材，其形似雕翎，既护周身，也养灵气",
       "durability": [
         20,
         20
@@ -557,14 +557,14 @@
       "req_level": 30
     },
     {
-      "name": "鸿翎衫",
+      "name": "白露衫",
       "tier": 3,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_armor_3.png",
-      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "desc": "取远海孤雁的尾翎为骨，灌入擎木木髓，趁晨露未干时炼成",
       "durability": [
         25,
         25
@@ -583,14 +583,14 @@
       "req_level": 45
     },
     {
-      "name": "玄鹤衫",
+      "name": "赤翎衫",
       "tier": 4,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_armor_4.png",
-      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "desc": "相传古鹤掠海而过，翎羽落水，竟自化作一身羽衣",
       "durability": [
         30,
         30
@@ -609,14 +609,14 @@
       "req_level": 60
     },
     {
-      "name": "鹏翎衫",
+      "name": "紫芝衫",
       "tier": 5,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_armor_5.png",
-      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "desc": "以鹏翼缀石，交由铸造行巧匠缝合，入手便知不是凡品",
       "durability": [
         35,
         35
@@ -635,14 +635,14 @@
       "req_level": 75
     },
     {
-      "name": "鸾铭衫",
+      "name": "云霓衫",
       "tier": 6,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_armor_6.png",
-      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "desc": "相传以凤羽与古玉编成，真伪已不可考，珍贵却是公认的",
       "durability": [
         40,
         40
@@ -661,14 +661,14 @@
       "req_level": 90
     },
     {
-      "name": "夜啸天衫",
+      "name": "龙吟九渊衫",
       "tier": 7,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_armor_7.png",
-      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "desc": "相传族中长老曾救下一位过客，那人留下这身龙吟九渊，飘然而去",
       "durability": [
         45,
         45
@@ -687,14 +687,14 @@
       "req_level": 105
     },
     {
-      "name": "青竹襟",
+      "name": "藤襟",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_armor_1.png",
-      "desc": "竹襟",
+      "desc": "藤叶裁作衣襟，轻软无须缝线",
       "durability": [
         10,
         10
@@ -783,14 +783,14 @@
   ],
   "pants": [
     {
-      "name": "绛羽护腿",
+      "name": "青藤护腿",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_pants_1.png",
-      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "desc": "族人初次历练，以草药之力仿出灵鹊翠羽之形，披之如沐春风",
       "durability": [
         15,
         15
@@ -809,14 +809,14 @@
       "req_level": 19
     },
     {
-      "name": "苍翎护腿",
+      "name": "翠微护腿",
       "tier": 2,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_pants_2.png",
-      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "desc": "取蓝翎竹叶为材，其形似雕翎，既护周身，也养灵气",
       "durability": [
         20,
         20
@@ -835,14 +835,14 @@
       "req_level": 34
     },
     {
-      "name": "鸿翎护腿",
+      "name": "白露护腿",
       "tier": 3,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_pants_3.png",
-      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "desc": "取远海孤雁的尾翎为骨，灌入擎木木髓，趁晨露未干时炼成",
       "durability": [
         25,
         25
@@ -861,14 +861,14 @@
       "req_level": 49
     },
     {
-      "name": "玄鹤护腿",
+      "name": "赤翎护腿",
       "tier": 4,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_pants_4.png",
-      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "desc": "相传古鹤掠海而过，翎羽落水，竟自化作一身羽衣",
       "durability": [
         30,
         30
@@ -887,14 +887,14 @@
       "req_level": 64
     },
     {
-      "name": "鹏翎护腿",
+      "name": "紫芝护腿",
       "tier": 5,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_pants_5.png",
-      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "desc": "以鹏翼缀石，交由铸造行巧匠缝合，入手便知不是凡品",
       "durability": [
         35,
         35
@@ -913,14 +913,14 @@
       "req_level": 79
     },
     {
-      "name": "鸾铭护腿",
+      "name": "云霓护腿",
       "tier": 6,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_pants_6.png",
-      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "desc": "相传以凤羽与古玉编成，真伪已不可考，珍贵却是公认的",
       "durability": [
         40,
         40
@@ -939,14 +939,14 @@
       "req_level": 94
     },
     {
-      "name": "夜啸天护腿",
+      "name": "龙吟九渊护腿",
       "tier": 7,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_pants_7.png",
-      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "desc": "相传族中长老曾救下一位过客，那人留下这身龙吟九渊，飘然而去",
       "durability": [
         45,
         45
@@ -965,14 +965,14 @@
       "req_level": 109
     },
     {
-      "name": "青竹裙",
+      "name": "藤裙",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_pants_1.png",
-      "desc": "竹裙",
+      "desc": "藤叶裁作短裙，行走不生声响",
       "durability": [
         10,
         10
@@ -1061,14 +1061,14 @@
   ],
   "shoes": [
     {
-      "name": "绛羽鞋",
+      "name": "青藤鞋",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoes_1.png",
-      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "desc": "族人初次历练，以草药之力仿出灵鹊翠羽之形，披之如沐春风",
       "durability": [
         14,
         14
@@ -1087,14 +1087,14 @@
       "req_level": 5
     },
     {
-      "name": "苍翎鞋",
+      "name": "翠微鞋",
       "tier": 2,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoes_2.png",
-      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "desc": "取蓝翎竹叶为材，其形似雕翎，既护周身，也养灵气",
       "durability": [
         18,
         18
@@ -1113,14 +1113,14 @@
       "req_level": 20
     },
     {
-      "name": "鸿翎鞋",
+      "name": "白露鞋",
       "tier": 3,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoes_3.png",
-      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "desc": "取远海孤雁的尾翎为骨，灌入擎木木髓，趁晨露未干时炼成",
       "durability": [
         23,
         23
@@ -1139,14 +1139,14 @@
       "req_level": 35
     },
     {
-      "name": "玄鹤鞋",
+      "name": "赤翎鞋",
       "tier": 4,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoes_4.png",
-      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "desc": "相传古鹤掠海而过，翎羽落水，竟自化作一身羽衣",
       "durability": [
         27,
         27
@@ -1165,14 +1165,14 @@
       "req_level": 50
     },
     {
-      "name": "鹏翎鞋",
+      "name": "紫芝鞋",
       "tier": 5,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoes_5.png",
-      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "desc": "以鹏翼缀石，交由铸造行巧匠缝合，入手便知不是凡品",
       "durability": [
         32,
         32
@@ -1191,14 +1191,14 @@
       "req_level": 65
     },
     {
-      "name": "鸾铭鞋",
+      "name": "云霓鞋",
       "tier": 6,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoes_6.png",
-      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "desc": "相传以凤羽与古玉编成，真伪已不可考，珍贵却是公认的",
       "durability": [
         36,
         36
@@ -1217,14 +1217,14 @@
       "req_level": 80
     },
     {
-      "name": "夜啸天鞋",
+      "name": "龙吟九渊鞋",
       "tier": 7,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_shoes_7.png",
-      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "desc": "相传族中长老曾救下一位过客，那人留下这身龙吟九渊，飘然而去",
       "durability": [
         41,
         41
@@ -1313,14 +1313,14 @@
   ],
   "gloves": [
     {
-      "name": "绛羽护腕",
+      "name": "青藤护腕",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_glove_1.png",
-      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "desc": "族人初次历练，以草药之力仿出灵鹊翠羽之形，披之如沐春风",
       "durability": [
         12,
         12
@@ -1339,14 +1339,14 @@
       "req_level": 7
     },
     {
-      "name": "苍翎护腕",
+      "name": "翠微护腕",
       "tier": 2,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_glove_2.png",
-      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "desc": "取蓝翎竹叶为材，其形似雕翎，既护周身，也养灵气",
       "durability": [
         16,
         16
@@ -1365,14 +1365,14 @@
       "req_level": 22
     },
     {
-      "name": "鸿翎护腕",
+      "name": "白露护腕",
       "tier": 3,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_glove_3.png",
-      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "desc": "取远海孤雁的尾翎为骨，灌入擎木木髓，趁晨露未干时炼成",
       "durability": [
         20,
         20
@@ -1391,14 +1391,14 @@
       "req_level": 37
     },
     {
-      "name": "玄鹤护腕",
+      "name": "赤翎护腕",
       "tier": 4,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_glove_4.png",
-      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "desc": "相传古鹤掠海而过，翎羽落水，竟自化作一身羽衣",
       "durability": [
         24,
         24
@@ -1417,14 +1417,14 @@
       "req_level": 52
     },
     {
-      "name": "鹏翎护腕",
+      "name": "紫芝护腕",
       "tier": 5,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_glove_5.png",
-      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "desc": "以鹏翼缀石，交由铸造行巧匠缝合，入手便知不是凡品",
       "durability": [
         28,
         28
@@ -1443,14 +1443,14 @@
       "req_level": 67
     },
     {
-      "name": "鸾铭护腕",
+      "name": "云霓护腕",
       "tier": 6,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_glove_6.png",
-      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "desc": "相传以凤羽与古玉编成，真伪已不可考，珍贵却是公认的",
       "durability": [
         32,
         32
@@ -1469,14 +1469,14 @@
       "req_level": 82
     },
     {
-      "name": "夜啸天护腕",
+      "name": "龙吟九渊护腕",
       "tier": 7,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_glove_7.png",
-      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "desc": "相传族中长老曾救下一位过客，那人留下这身龙吟九渊，飘然而去",
       "durability": [
         36,
         36
@@ -1565,14 +1565,14 @@
   ],
   "belts": [
     {
-      "name": "绛羽腰带",
+      "name": "青藤腰带",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_belt_1.png",
-      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "desc": "族人初次历练，以草药之力仿出灵鹊翠羽之形，披之如沐春风",
       "durability": [
         12,
         12
@@ -1591,14 +1591,14 @@
       "req_level": 13
     },
     {
-      "name": "苍翎腰带",
+      "name": "翠微腰带",
       "tier": 2,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_belt_2.png",
-      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "desc": "取蓝翎竹叶为材，其形似雕翎，既护周身，也养灵气",
       "durability": [
         16,
         16
@@ -1617,14 +1617,14 @@
       "req_level": 28
     },
     {
-      "name": "鸿翎腰带",
+      "name": "白露腰带",
       "tier": 3,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_belt_3.png",
-      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "desc": "取远海孤雁的尾翎为骨，灌入擎木木髓，趁晨露未干时炼成",
       "durability": [
         20,
         20
@@ -1643,14 +1643,14 @@
       "req_level": 43
     },
     {
-      "name": "玄鹤腰带",
+      "name": "赤翎腰带",
       "tier": 4,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_belt_4.png",
-      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "desc": "相传古鹤掠海而过，翎羽落水，竟自化作一身羽衣",
       "durability": [
         24,
         24
@@ -1669,14 +1669,14 @@
       "req_level": 58
     },
     {
-      "name": "鹏翎腰带",
+      "name": "紫芝腰带",
       "tier": 5,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_belt_5.png",
-      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "desc": "以鹏翼缀石，交由铸造行巧匠缝合，入手便知不是凡品",
       "durability": [
         28,
         28
@@ -1695,14 +1695,14 @@
       "req_level": 73
     },
     {
-      "name": "鸾铭腰带",
+      "name": "云霓腰带",
       "tier": 6,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_belt_6.png",
-      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "desc": "相传以凤羽与古玉编成，真伪已不可考，珍贵却是公认的",
       "durability": [
         32,
         32
@@ -1721,14 +1721,14 @@
       "req_level": 88
     },
     {
-      "name": "夜啸天腰带",
+      "name": "龙吟九渊腰带",
       "tier": 7,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_belt_7.png",
-      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "desc": "相传族中长老曾救下一位过客，那人留下这身龙吟九渊，飘然而去",
       "durability": [
         36,
         36
@@ -1817,14 +1817,14 @@
   ],
   "cloaks": [
     {
-      "name": "绛羽披风",
+      "name": "青藤披风",
       "tier": 1,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_cloak_1.png",
-      "desc": "凡是灵羽族人，他们初次考验便是以丹药之功\\n效模拟出灵鹊翠羽",
+      "desc": "族人初次历练，以草药之力仿出灵鹊翠羽之形，披之如沐春风",
       "durability": [
         12,
         12
@@ -1843,14 +1843,14 @@
       "req_level": 17
     },
     {
-      "name": "苍翎披风",
+      "name": "翠微披风",
       "tier": 2,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_cloak_2.png",
-      "desc": "这竹叶极象雕翎的蓝翎竹是很不错的材料，除\\n了防护外还可提供灵气",
+      "desc": "取蓝翎竹叶为材，其形似雕翎，既护周身，也养灵气",
       "durability": [
         16,
         16
@@ -1869,14 +1869,14 @@
       "req_level": 32
     },
     {
-      "name": "鸿翎披风",
+      "name": "白露披风",
       "tier": 3,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_cloak_3.png",
-      "desc": "取海外孤雁的雁尾翎为基，以湘江擎木的木髓\\n注入其中炼制而成",
+      "desc": "取远海孤雁的尾翎为骨，灌入擎木木髓，趁晨露未干时炼成",
       "durability": [
         20,
         20
@@ -1895,14 +1895,14 @@
       "req_level": 47
     },
     {
-      "name": "玄鹤披风",
+      "name": "赤翎披风",
       "tier": 4,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_cloak_4.png",
-      "desc": "有古鹤曾飞到碧澜城外的沧澜海微涛，羽毛浸泡\\n其中，就此幻化成羽衣",
+      "desc": "相传古鹤掠海而过，翎羽落水，竟自化作一身羽衣",
       "durability": [
         24,
         24
@@ -1921,14 +1921,14 @@
       "req_level": 62
     },
     {
-      "name": "鹏翎披风",
+      "name": "紫芝披风",
       "tier": 5,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_cloak_5.png",
-      "desc": "以鹏翼和玲珑石相结合，加上铸造行巧匠，注\\n定其具有非凡的品质",
+      "desc": "以鹏翼缀石，交由铸造行巧匠缝合，入手便知不是凡品",
       "durability": [
         28,
         28
@@ -1947,14 +1947,14 @@
       "req_level": 77
     },
     {
-      "name": "鸾铭披风",
+      "name": "云霓披风",
       "tier": 6,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_cloak_6.png",
-      "desc": "号称以凤凰羽毛和玄墨古玉编织而成，不论是\\n否真实，都足以表明其珍贵",
+      "desc": "相传以凤羽与古玉编成，真伪已不可考，珍贵却是公认的",
       "durability": [
         32,
         32
@@ -1973,14 +1973,14 @@
       "req_level": 92
     },
     {
-      "name": "夜啸天披风",
+      "name": "龙吟九渊披风",
       "tier": 7,
       "job": "shaman",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_cloak_7.png",
-      "desc": "传说灵羽长老曾在机缘巧合下救了一人，那人\\n随后留下了这套鸣夜动天甲飘然而去",
+      "desc": "相传族中长老曾救下一位过客，那人留下这身龙吟九渊，飘然而去",
       "durability": [
         36,
         36
@@ -2076,7 +2076,7 @@
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_weapon_1.png",
-      "desc": "将精铁锻成兽角状，贯穿于峦石之中，故名悬\\n铁锤",
+      "desc": "精铁锻作兽角之形，穿入山岩淬炼，故名坠星",
       "durability": [
         15,
         15
@@ -2102,7 +2102,7 @@
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_weapon_2.png",
-      "desc": "两端为锥形，兼有凿击功效",
+      "desc": "两端起锥，可锤可凿，破石如粉",
       "durability": [
         20,
         20
@@ -2121,14 +2121,14 @@
       "req_level": 24
     },
     {
-      "name": "展翼锤",
+      "name": "破空锤",
       "tier": 3,
       "job": "shaman",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_weapon_3.png",
-      "desc": "其形稍扁，两端上下突出，如大鹏展翅",
+      "desc": "锤身扁平，两端翘起，形如大鹏展翅",
       "durability": [
         25,
         25
@@ -2147,14 +2147,14 @@
       "req_level": 39
     },
     {
-      "name": "璃光锤",
+      "name": "琥珀锤",
       "tier": 4,
       "job": "shaman",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_weapon_4.png",
-      "desc": "用七彩琉璃制成，其势犹如一鹤冲天",
+      "desc": "以七彩宝石铸成，挥起时如一鹤冲天",
       "durability": [
         30,
         30
@@ -2173,14 +2173,14 @@
       "req_level": 54
     },
     {
-      "name": "暮色锤",
+      "name": "落霞锤",
       "tier": 5,
       "job": "shaman",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_weapon_5.png",
-      "desc": "棰身如塔倒置，彷佛日暮西山",
+      "desc": "锤身倒置如塔，一挥便是满眼落霞",
       "durability": [
         35,
         35
@@ -2199,14 +2199,14 @@
       "req_level": 69
     },
     {
-      "name": "擎岳锤",
+      "name": "拔山",
       "tier": 6,
       "job": "shaman",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_weapon_6.png",
-      "desc": "棰为暗金锻制，表面布满扭曲的花纹，如擎天\\n巨柱",
+      "desc": "暗金锻成，满身扭纹，举起如撑天之柱",
       "durability": [
         40,
         40
@@ -2225,14 +2225,14 @@
       "req_level": 84
     },
     {
-      "name": "怒涛锤",
+      "name": "惊涛",
       "tier": 7,
       "job": "shaman",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_weapon_7.png",
-      "desc": "棰身布满恶魔獠牙，于狞笑中掀起狂澜",
+      "desc": "锤身缀满巨兽獠牙，出手便掀起惊涛",
       "durability": [
         45,
         45
@@ -2258,7 +2258,7 @@
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/shaman_weapon_1.png",
-      "desc": "以桃木打磨而成",
+      "desc": "桃木一段，磨光即成，轻巧合用",
       "durability": [
         10,
         10

@@ -11,7 +11,7 @@
       "target_rule": "single",
       "max_level": 1,
       "icon": "static/icons/skills/darkwitch_001.gif",
-      "desc": "炎灵兽以利爪撕裂敌人",
+      "desc": "焰鬃兽以利爪撕裂敌人",
       "levels": [
         {
           "damage": 60,
@@ -62,7 +62,7 @@
       "target_rule": "single",
       "max_level": 1,
       "icon": "static/icons/skills/darkwitch_001.gif",
-      "desc": "魅影施展电系法术攻击敌人",
+      "desc": "幽蝶施展电系法术攻击敌人",
       "levels": [
         {
           "damage": 60,

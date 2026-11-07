@@ -36,7 +36,7 @@
     {
       "key": "mage",
       "name": "法师",
-      "desc": "远程法术系，智力精神为主，精通四系法术与治疗。",
+      "desc": "远程法术系，智力体质为主，精通四系法术与治疗。",
       "icon": "",
       "base_stats": {"strength": 0, "agility": 7, "constitution": 7, "intelligence": 20, "spirit": 6},
       "growth": {"strength": 0.0, "agility": 1.0, "constitution": 1.5, "intelligence": 2.5, "spirit": 1.0},
@@ -63,7 +63,7 @@
       "form_buffs": {"du": {"phys_def_pct": -7, "magic_def_pct": 4, "max_hp_pct": 7}, "qun": {"phys_def_pct": 8, "magic_def_pct": 5, "max_hp_pct": -5}}},
     {
       "key": "darkwitch",
-      "name": "暗巫",
+      "name": "巫师",
       "desc": "远程法术系，精通暗系法术，精神可强化宠物。",
       "icon": "",
       "base_stats": {"strength": 0, "agility": 7, "constitution": 7, "intelligence": 13, "spirit": 13},
@@ -96,8 +96,8 @@
       "form_buffs": {"zhao": {"phys_def_pct": 5, "magic_def_pct": -6, "max_hp_pct": 7}, "zu": {"phys_def_pct": -4, "magic_def_pct": 8, "max_hp_pct": 6}}},
     {
       "key": "shaman",
-      "name": "幻师",
-      "desc": "多面手，敏捷智力精神均衡，精通治疗与幻化形态。",
+      "name": "医师",
+      "desc": "多面手，敏捷智力为主，精通治疗与换骨形态。",
       "icon": "",
       "base_stats": {"strength": 0, "agility": 20, "constitution": 7, "intelligence": 6, "spirit": 7},
       "growth": {"strength": 0.0, "agility": 2.0, "constitution": 1.0, "intelligence": 2.0, "spirit": 1.0},

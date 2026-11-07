@@ -1,14 +1,14 @@
 {
   "helmets": [
     {
-      "name": "澜丝冠",
+      "name": "云纱冠",
       "tier": 1,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_helmet_1.png",
-      "desc": "海丝是碧澜城海域的一种海蚕丝，因为产量不\\n大，所以比较珍贵",
+      "desc": "取海中蚕丝捻作轻纱，入水不濡，云纹自生",
       "durability": [
         14,
         14
@@ -27,14 +27,14 @@
       "key": "base_mage_helmets_1_1"
     },
     {
-      "name": "冰蛛冠",
+      "name": "霜罗冠",
       "tier": 2,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_helmet_2.png",
-      "desc": "雪蛛栖息于苦寒之地，所结的丝坚韧耐寒，是\\n极好的材料",
+      "desc": "蛛丝生于苦寒之地，韧而耐冷，织作罗衣不惧霜气",
       "durability": [
         18,
         18
@@ -53,14 +53,14 @@
       "key": "base_mage_helmets_2_2"
     },
     {
-      "name": "瑶涎冠",
+      "name": "薰草冠",
       "tier": 3,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_helmet_3.png",
-      "desc": "取海底寒玉虫分泌的涎液，以一种特殊的禁制\\n使其凝结而成",
+      "desc": "以寒潭虫液凝作软革，再以薰草熏染，久穿自有清香",
       "durability": [
         23,
         23
@@ -79,14 +79,14 @@
       "key": "base_mage_helmets_3_3"
     },
     {
-      "name": "鲛须冠",
+      "name": "鲛泪冠",
       "tier": 4,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_helmet_4.png",
-      "desc": "蜃原本就是一种罕见的异兽，取蜃须对境界和\\n修为都有极高的要求",
+      "desc": "鲛人泣珠，取其泪痕所凝之丝，非术法精纯者不能取用",
       "durability": [
         27,
         27
@@ -105,14 +105,14 @@
       "key": "base_mage_helmets_4_4"
     },
     {
-      "name": "千缕冠",
+      "name": "月华冠",
       "tier": 5,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_helmet_5.png",
-      "desc": "收取天外铭石炼制成丝，辅以玉涎蜃须，千丝\\n相连环环相扣",
+      "desc": "收月下清辉入丝，再以深海遗珠相缀，丝丝相扣不见接痕",
       "durability": [
         32,
         32
@@ -131,14 +131,14 @@
       "key": "base_mage_helmets_5_5"
     },
     {
-      "name": "赤元冠",
+      "name": "天枢冠",
       "tier": 6,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_helmet_6.png",
-      "desc": "入炫元赤火洞取炫元赤火，将其注入千丝之\\n中，可谓水火不侵",
+      "desc": "地火浸炼十日，火气凝入丝中，纹列如斗，寒暑不侵",
       "durability": [
         36,
         36
@@ -157,14 +157,14 @@
       "key": "base_mage_helmets_6_6"
     },
     {
-      "name": "三魂归一冠",
+      "name": "星垂万象冠",
       "tier": 7,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_helmet_7.png",
-      "desc": "传说隐龙岭的隐世真人，留给碧澜城一颗\\n三命石，这套圣衣便是由此幻化而来",
+      "desc": "相传圣者观星百年，取九霄之精织成此衣，夜行时星纹自现",
       "durability": [
         41,
         41
@@ -253,14 +253,14 @@
   ],
   "shoulders": [
     {
-      "name": "冰蛛护肩",
+      "name": "霜罗护肩",
       "tier": 2,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoulder_l_2.png",
-      "desc": "雪蛛栖息于苦寒之地，所结的丝坚韧耐寒，是\\n极好的材料",
+      "desc": "蛛丝生于苦寒之地，韧而耐冷，织作罗衣不惧霜气",
       "durability": [
         14,
         14
@@ -279,14 +279,14 @@
       "key": "base_mage_shoulders_2_1"
     },
     {
-      "name": "瑶涎护肩",
+      "name": "薰草护肩",
       "tier": 3,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoulder_l_3.png",
-      "desc": "取海底寒玉虫分泌的涎液，以一种特殊的禁制\\n使其凝结而成",
+      "desc": "以寒潭虫液凝作软革，再以薰草熏染，久穿自有清香",
       "durability": [
         18,
         18
@@ -305,14 +305,14 @@
       "key": "base_mage_shoulders_3_2"
     },
     {
-      "name": "鲛须护肩",
+      "name": "鲛泪护肩",
       "tier": 4,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoulder_l_4.png",
-      "desc": "蜃原本就是一种罕见的异兽，取蜃须对境界和\\n修为都有极高的要求",
+      "desc": "鲛人泣珠，取其泪痕所凝之丝，非术法精纯者不能取用",
       "durability": [
         23,
         23
@@ -331,14 +331,14 @@
       "key": "base_mage_shoulders_4_3"
     },
     {
-      "name": "千缕护肩",
+      "name": "月华护肩",
       "tier": 5,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoulder_l_5.png",
-      "desc": "收取天外铭石炼制成丝，辅以玉涎蜃须，千丝\\n相连环环相扣",
+      "desc": "收月下清辉入丝，再以深海遗珠相缀，丝丝相扣不见接痕",
       "durability": [
         27,
         27
@@ -357,14 +357,14 @@
       "key": "base_mage_shoulders_5_4"
     },
     {
-      "name": "赤元护肩",
+      "name": "天枢护肩",
       "tier": 6,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoulder_l_6.png",
-      "desc": "入炫元赤火洞取炫元赤火，将其注入千丝之\\n中，可谓水火不侵",
+      "desc": "地火浸炼十日，火气凝入丝中，纹列如斗，寒暑不侵",
       "durability": [
         32,
         32
@@ -383,14 +383,14 @@
       "key": "base_mage_shoulders_6_5"
     },
     {
-      "name": "三魂归一护肩",
+      "name": "星垂万象护肩",
       "tier": 7,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoulder_l_7.png",
-      "desc": "传说隐龙岭的隐世真人，留给碧澜城一颗\\n三命石，这套圣衣便是由此幻化而来",
+      "desc": "相传圣者观星百年，取九霄之精织成此衣，夜行时星纹自现",
       "durability": [
         36,
         36
@@ -512,7 +512,7 @@
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/mage_armor_1.png",
-      "desc": "以粗麻织成的法修新衣，轻柔透气",
+      "desc": "粗麻织就的法修新衣，轻柔透气",
       "durability": [
         10,
         10
@@ -531,14 +531,14 @@
       "req_level": 0
     },
     {
-      "name": "澜丝袍",
+      "name": "云纱袍",
       "tier": 1,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_armor_1.png",
-      "desc": "海丝是碧澜城海域的一种海蚕丝，因为产量不\\n大，所以比较珍贵",
+      "desc": "取海中蚕丝捻作轻纱，入水不濡，云纹自生",
       "durability": [
         15,
         15
@@ -557,14 +557,14 @@
       "key": "base_mage_armors_1_1"
     },
     {
-      "name": "冰蛛袍",
+      "name": "霜罗袍",
       "tier": 2,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_armor_2.png",
-      "desc": "雪蛛栖息于苦寒之地，所结的丝坚韧耐寒，是\\n极好的材料",
+      "desc": "蛛丝生于苦寒之地，韧而耐冷，织作罗衣不惧霜气",
       "durability": [
         20,
         20
@@ -583,14 +583,14 @@
       "key": "base_mage_armors_2_2"
     },
     {
-      "name": "瑶涎袍",
+      "name": "薰草袍",
       "tier": 3,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_armor_3.png",
-      "desc": "取海底寒玉虫分泌的涎液，以一种特殊的禁制\\n使其凝结而成",
+      "desc": "以寒潭虫液凝作软革，再以薰草熏染，久穿自有清香",
       "durability": [
         25,
         25
@@ -609,14 +609,14 @@
       "key": "base_mage_armors_3_3"
     },
     {
-      "name": "鲛须袍",
+      "name": "鲛泪袍",
       "tier": 4,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_armor_4.png",
-      "desc": "蜃原本就是一种罕见的异兽，取蜃须对境界和\\n修为都有极高的要求",
+      "desc": "鲛人泣珠，取其泪痕所凝之丝，非术法精纯者不能取用",
       "durability": [
         30,
         30
@@ -635,14 +635,14 @@
       "key": "base_mage_armors_4_4"
     },
     {
-      "name": "千缕袍",
+      "name": "月华袍",
       "tier": 5,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_armor_5.png",
-      "desc": "收取天外铭石炼制成丝，辅以玉涎蜃须，千丝\\n相连环环相扣",
+      "desc": "收月下清辉入丝，再以深海遗珠相缀，丝丝相扣不见接痕",
       "durability": [
         35,
         35
@@ -661,14 +661,14 @@
       "key": "base_mage_armors_5_5"
     },
     {
-      "name": "赤元袍",
+      "name": "天枢袍",
       "tier": 6,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_armor_6.png",
-      "desc": "入炫元赤火洞取炫元赤火，将其注入千丝之\\n中，可谓水火不侵",
+      "desc": "地火浸炼十日，火气凝入丝中，纹列如斗，寒暑不侵",
       "durability": [
         40,
         40
@@ -687,14 +687,14 @@
       "key": "base_mage_armors_6_6"
     },
     {
-      "name": "三魂归一袍",
+      "name": "星垂万象袍",
       "tier": 7,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_armor_7.png",
-      "desc": "传说隐龙岭的隐世真人，留给碧澜城一颗\\n三命石，这套圣衣便是由此幻化而来",
+      "desc": "相传圣者观星百年，取九霄之精织成此衣，夜行时星纹自现",
       "durability": [
         45,
         45
@@ -790,7 +790,7 @@
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/mage_pants_1.png",
-      "desc": "粗麻织成的法修新裙，简单朴素",
+      "desc": "粗麻织就的法修新裙，简朴耐穿",
       "durability": [
         10,
         10
@@ -809,14 +809,14 @@
       "req_level": 0
     },
     {
-      "name": "澜丝护腿",
+      "name": "云纱护腿",
       "tier": 1,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_pants_1.png",
-      "desc": "海丝是碧澜城海域的一种海蚕丝，因为产量不\\n大，所以比较珍贵",
+      "desc": "取海中蚕丝捻作轻纱，入水不濡，云纹自生",
       "durability": [
         15,
         15
@@ -835,14 +835,14 @@
       "key": "base_mage_pants_1_1"
     },
     {
-      "name": "冰蛛护腿",
+      "name": "霜罗护腿",
       "tier": 2,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_pants_2.png",
-      "desc": "雪蛛栖息于苦寒之地，所结的丝坚韧耐寒，是\\n极好的材料",
+      "desc": "蛛丝生于苦寒之地，韧而耐冷，织作罗衣不惧霜气",
       "durability": [
         20,
         20
@@ -861,14 +861,14 @@
       "key": "base_mage_pants_2_2"
     },
     {
-      "name": "瑶涎护腿",
+      "name": "薰草护腿",
       "tier": 3,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_pants_3.png",
-      "desc": "取海底寒玉虫分泌的涎液，以一种特殊的禁制\\n使其凝结而成",
+      "desc": "以寒潭虫液凝作软革，再以薰草熏染，久穿自有清香",
       "durability": [
         25,
         25
@@ -887,14 +887,14 @@
       "key": "base_mage_pants_3_3"
     },
     {
-      "name": "鲛须护腿",
+      "name": "鲛泪护腿",
       "tier": 4,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_pants_4.png",
-      "desc": "蜃原本就是一种罕见的异兽，取蜃须对境界和\\n修为都有极高的要求",
+      "desc": "鲛人泣珠，取其泪痕所凝之丝，非术法精纯者不能取用",
       "durability": [
         30,
         30
@@ -913,14 +913,14 @@
       "key": "base_mage_pants_4_4"
     },
     {
-      "name": "千缕护腿",
+      "name": "月华护腿",
       "tier": 5,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_pants_5.png",
-      "desc": "收取天外铭石炼制成丝，辅以玉涎蜃须，千丝\\n相连环环相扣",
+      "desc": "收月下清辉入丝，再以深海遗珠相缀，丝丝相扣不见接痕",
       "durability": [
         35,
         35
@@ -939,14 +939,14 @@
       "key": "base_mage_pants_5_5"
     },
     {
-      "name": "赤元护腿",
+      "name": "天枢护腿",
       "tier": 6,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_pants_6.png",
-      "desc": "入炫元赤火洞取炫元赤火，将其注入千丝之\\n中，可谓水火不侵",
+      "desc": "地火浸炼十日，火气凝入丝中，纹列如斗，寒暑不侵",
       "durability": [
         40,
         40
@@ -965,14 +965,14 @@
       "key": "base_mage_pants_6_6"
     },
     {
-      "name": "三魂归一护腿",
+      "name": "星垂万象护腿",
       "tier": 7,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_pants_7.png",
-      "desc": "传说隐龙岭的隐世真人，留给碧澜城一颗\\n三命石，这套圣衣便是由此幻化而来",
+      "desc": "相传圣者观星百年，取九霄之精织成此衣，夜行时星纹自现",
       "durability": [
         45,
         45
@@ -1061,14 +1061,14 @@
   ],
   "shoes": [
     {
-      "name": "澜丝鞋",
+      "name": "云纱鞋",
       "tier": 1,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoes_1.png",
-      "desc": "海丝是碧澜城海域的一种海蚕丝，因为产量不\\n大，所以比较珍贵",
+      "desc": "取海中蚕丝捻作轻纱，入水不濡，云纹自生",
       "durability": [
         14,
         14
@@ -1087,14 +1087,14 @@
       "key": "base_mage_shoes_1_1"
     },
     {
-      "name": "冰蛛鞋",
+      "name": "霜罗鞋",
       "tier": 2,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoes_2.png",
-      "desc": "雪蛛栖息于苦寒之地，所结的丝坚韧耐寒，是\\n极好的材料",
+      "desc": "蛛丝生于苦寒之地，韧而耐冷，织作罗衣不惧霜气",
       "durability": [
         18,
         18
@@ -1113,14 +1113,14 @@
       "key": "base_mage_shoes_2_2"
     },
     {
-      "name": "瑶涎鞋",
+      "name": "薰草鞋",
       "tier": 3,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoes_3.png",
-      "desc": "取海底寒玉虫分泌的涎液，以一种特殊的禁制\\n使其凝结而成",
+      "desc": "以寒潭虫液凝作软革，再以薰草熏染，久穿自有清香",
       "durability": [
         23,
         23
@@ -1139,14 +1139,14 @@
       "key": "base_mage_shoes_3_3"
     },
     {
-      "name": "鲛须鞋",
+      "name": "鲛泪鞋",
       "tier": 4,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoes_4.png",
-      "desc": "蜃原本就是一种罕见的异兽，取蜃须对境界和\\n修为都有极高的要求",
+      "desc": "鲛人泣珠，取其泪痕所凝之丝，非术法精纯者不能取用",
       "durability": [
         27,
         27
@@ -1165,14 +1165,14 @@
       "key": "base_mage_shoes_4_4"
     },
     {
-      "name": "千缕鞋",
+      "name": "月华鞋",
       "tier": 5,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoes_5.png",
-      "desc": "收取天外铭石炼制成丝，辅以玉涎蜃须，千丝\\n相连环环相扣",
+      "desc": "收月下清辉入丝，再以深海遗珠相缀，丝丝相扣不见接痕",
       "durability": [
         32,
         32
@@ -1191,14 +1191,14 @@
       "key": "base_mage_shoes_5_5"
     },
     {
-      "name": "赤元鞋",
+      "name": "天枢鞋",
       "tier": 6,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoes_6.png",
-      "desc": "入炫元赤火洞取炫元赤火，将其注入千丝之\\n中，可谓水火不侵",
+      "desc": "地火浸炼十日，火气凝入丝中，纹列如斗，寒暑不侵",
       "durability": [
         36,
         36
@@ -1217,14 +1217,14 @@
       "key": "base_mage_shoes_6_6"
     },
     {
-      "name": "三魂归一鞋",
+      "name": "星垂万象鞋",
       "tier": 7,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_shoes_7.png",
-      "desc": "传说隐龙岭的隐世真人，留给碧澜城一颗\\n三命石，这套圣衣便是由此幻化而来",
+      "desc": "相传圣者观星百年，取九霄之精织成此衣，夜行时星纹自现",
       "durability": [
         41,
         41
@@ -1313,14 +1313,14 @@
   ],
   "gloves": [
     {
-      "name": "澜丝护腕",
+      "name": "云纱护腕",
       "tier": 1,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_gloves_1.png",
-      "desc": "海丝是碧澜城海域的一种海蚕丝，因为产量不\\n大，所以比较珍贵",
+      "desc": "取海中蚕丝捻作轻纱，入水不濡，云纹自生",
       "durability": [
         12,
         12
@@ -1339,14 +1339,14 @@
       "key": "base_mage_gloves_1_1"
     },
     {
-      "name": "冰蛛护腕",
+      "name": "霜罗护腕",
       "tier": 2,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_gloves_2.png",
-      "desc": "雪蛛栖息于苦寒之地，所结的丝坚韧耐寒，是\\n极好的材料",
+      "desc": "蛛丝生于苦寒之地，韧而耐冷，织作罗衣不惧霜气",
       "durability": [
         16,
         16
@@ -1365,14 +1365,14 @@
       "key": "base_mage_gloves_2_2"
     },
     {
-      "name": "瑶涎护腕",
+      "name": "薰草护腕",
       "tier": 3,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_gloves_3.png",
-      "desc": "取海底寒玉虫分泌的涎液，以一种特殊的禁制\\n使其凝结而成",
+      "desc": "以寒潭虫液凝作软革，再以薰草熏染，久穿自有清香",
       "durability": [
         20,
         20
@@ -1391,14 +1391,14 @@
       "key": "base_mage_gloves_3_3"
     },
     {
-      "name": "鲛须护腕",
+      "name": "鲛泪护腕",
       "tier": 4,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_gloves_4.png",
-      "desc": "蜃原本就是一种罕见的异兽，取蜃须对境界和\\n修为都有极高的要求",
+      "desc": "鲛人泣珠，取其泪痕所凝之丝，非术法精纯者不能取用",
       "durability": [
         24,
         24
@@ -1417,14 +1417,14 @@
       "key": "base_mage_gloves_4_4"
     },
     {
-      "name": "千缕护腕",
+      "name": "月华护腕",
       "tier": 5,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_gloves_5.png",
-      "desc": "收取天外铭石炼制成丝，辅以玉涎蜃须，千丝\\n相连环环相扣",
+      "desc": "收月下清辉入丝，再以深海遗珠相缀，丝丝相扣不见接痕",
       "durability": [
         28,
         28
@@ -1443,14 +1443,14 @@
       "key": "base_mage_gloves_5_5"
     },
     {
-      "name": "赤元护腕",
+      "name": "天枢护腕",
       "tier": 6,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_gloves_6.png",
-      "desc": "入炫元赤火洞取炫元赤火，将其注入千丝之\\n中，可谓水火不侵",
+      "desc": "地火浸炼十日，火气凝入丝中，纹列如斗，寒暑不侵",
       "durability": [
         32,
         32
@@ -1469,14 +1469,14 @@
       "key": "base_mage_gloves_6_6"
     },
     {
-      "name": "三魂归一护腕",
+      "name": "星垂万象护腕",
       "tier": 7,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_gloves_7.png",
-      "desc": "传说隐龙岭的隐世真人，留给碧澜城一颗\\n三命石，这套圣衣便是由此幻化而来",
+      "desc": "相传圣者观星百年，取九霄之精织成此衣，夜行时星纹自现",
       "durability": [
         36,
         36
@@ -1565,14 +1565,14 @@
   ],
   "belts": [
     {
-      "name": "澜丝腰带",
+      "name": "云纱腰带",
       "tier": 1,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_belt_1.png",
-      "desc": "海丝是碧澜城海域的一种海蚕丝，因为产量不\\n大，所以比较珍贵",
+      "desc": "取海中蚕丝捻作轻纱，入水不濡，云纹自生",
       "durability": [
         12,
         12
@@ -1591,14 +1591,14 @@
       "key": "base_mage_belts_1_1"
     },
     {
-      "name": "冰蛛腰带",
+      "name": "霜罗腰带",
       "tier": 2,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_belt_2.png",
-      "desc": "雪蛛栖息于苦寒之地，所结的丝坚韧耐寒，是\\n极好的材料",
+      "desc": "蛛丝生于苦寒之地，韧而耐冷，织作罗衣不惧霜气",
       "durability": [
         16,
         16
@@ -1617,14 +1617,14 @@
       "key": "base_mage_belts_2_2"
     },
     {
-      "name": "瑶涎腰带",
+      "name": "薰草腰带",
       "tier": 3,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_belt_3.png",
-      "desc": "取海底寒玉虫分泌的涎液，以一种特殊的禁制\\n使其凝结而成",
+      "desc": "以寒潭虫液凝作软革，再以薰草熏染，久穿自有清香",
       "durability": [
         20,
         20
@@ -1643,14 +1643,14 @@
       "key": "base_mage_belts_3_3"
     },
     {
-      "name": "鲛须腰带",
+      "name": "鲛泪腰带",
       "tier": 4,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_belt_4.png",
-      "desc": "蜃原本就是一种罕见的异兽，取蜃须对境界和\\n修为都有极高的要求",
+      "desc": "鲛人泣珠，取其泪痕所凝之丝，非术法精纯者不能取用",
       "durability": [
         24,
         24
@@ -1669,14 +1669,14 @@
       "key": "base_mage_belts_4_4"
     },
     {
-      "name": "千缕腰带",
+      "name": "月华腰带",
       "tier": 5,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_belt_5.png",
-      "desc": "收取天外铭石炼制成丝，辅以玉涎蜃须，千丝\\n相连环环相扣",
+      "desc": "收月下清辉入丝，再以深海遗珠相缀，丝丝相扣不见接痕",
       "durability": [
         28,
         28
@@ -1695,14 +1695,14 @@
       "key": "base_mage_belts_5_5"
     },
     {
-      "name": "赤元腰带",
+      "name": "天枢腰带",
       "tier": 6,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_belt_6.png",
-      "desc": "入炫元赤火洞取炫元赤火，将其注入千丝之\\n中，可谓水火不侵",
+      "desc": "地火浸炼十日，火气凝入丝中，纹列如斗，寒暑不侵",
       "durability": [
         32,
         32
@@ -1721,14 +1721,14 @@
       "key": "base_mage_belts_6_6"
     },
     {
-      "name": "三魂归一腰带",
+      "name": "星垂万象腰带",
       "tier": 7,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_belt_7.png",
-      "desc": "传说隐龙岭的隐世真人，留给碧澜城一颗\\n三命石，这套圣衣便是由此幻化而来",
+      "desc": "相传圣者观星百年，取九霄之精织成此衣，夜行时星纹自现",
       "durability": [
         36,
         36
@@ -1817,14 +1817,14 @@
   ],
   "cloaks": [
     {
-      "name": "澜丝披风",
+      "name": "云纱披风",
       "tier": 1,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_cloak_1.png",
-      "desc": "海丝是碧澜城海域的一种海蚕丝，因为产量不\\n大，所以比较珍贵",
+      "desc": "取海中蚕丝捻作轻纱，入水不濡，云纹自生",
       "durability": [
         12,
         12
@@ -1843,14 +1843,14 @@
       "key": "base_mage_cloaks_1_1"
     },
     {
-      "name": "冰蛛披风",
+      "name": "霜罗披风",
       "tier": 2,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_cloak_2.png",
-      "desc": "雪蛛栖息于苦寒之地，所结的丝坚韧耐寒，是\\n极好的材料",
+      "desc": "蛛丝生于苦寒之地，韧而耐冷，织作罗衣不惧霜气",
       "durability": [
         16,
         16
@@ -1869,14 +1869,14 @@
       "key": "base_mage_cloaks_2_2"
     },
     {
-      "name": "瑶涎披风",
+      "name": "薰草披风",
       "tier": 3,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_cloak_3.png",
-      "desc": "取海底寒玉虫分泌的涎液，以一种特殊的禁制\\n使其凝结而成",
+      "desc": "以寒潭虫液凝作软革，再以薰草熏染，久穿自有清香",
       "durability": [
         20,
         20
@@ -1895,14 +1895,14 @@
       "key": "base_mage_cloaks_3_3"
     },
     {
-      "name": "鲛须披风",
+      "name": "鲛泪披风",
       "tier": 4,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_cloak_4.png",
-      "desc": "蜃原本就是一种罕见的异兽，取蜃须对境界和\\n修为都有极高的要求",
+      "desc": "鲛人泣珠，取其泪痕所凝之丝，非术法精纯者不能取用",
       "durability": [
         24,
         24
@@ -1921,14 +1921,14 @@
       "key": "base_mage_cloaks_4_4"
     },
     {
-      "name": "千缕披风",
+      "name": "月华披风",
       "tier": 5,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_cloak_5.png",
-      "desc": "收取天外铭石炼制成丝，辅以玉涎蜃须，千丝\\n相连环环相扣",
+      "desc": "收月下清辉入丝，再以深海遗珠相缀，丝丝相扣不见接痕",
       "durability": [
         28,
         28
@@ -1947,14 +1947,14 @@
       "key": "base_mage_cloaks_5_5"
     },
     {
-      "name": "赤元披风",
+      "name": "天枢披风",
       "tier": 6,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_cloak_6.png",
-      "desc": "入炫元赤火洞取炫元赤火，将其注入千丝之\\n中，可谓水火不侵",
+      "desc": "地火浸炼十日，火气凝入丝中，纹列如斗，寒暑不侵",
       "durability": [
         32,
         32
@@ -1973,14 +1973,14 @@
       "key": "base_mage_cloaks_6_6"
     },
     {
-      "name": "三魂归一披风",
+      "name": "星垂万象披风",
       "tier": 7,
       "job": "mage",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_cloak_7.png",
-      "desc": "传说隐龙岭的隐世真人，留给碧澜城一颗\\n三命石，这套圣衣便是由此幻化而来",
+      "desc": "相传圣者观星百年，取九霄之精织成此衣，夜行时星纹自现",
       "durability": [
         36,
         36
@@ -2069,14 +2069,14 @@
   ],
   "weapons": [
     {
-      "name": "柳烟杖",
+      "name": "碧枝杖",
       "tier": 1,
       "job": "mage",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_weapon_1.png",
-      "desc": "取柳木之精华，辅以玉坠而成",
+      "desc": "取柳心嫩枝为干，缀一枚玉坠，握久生温",
       "durability": [
         15,
         15
@@ -2095,14 +2095,14 @@
       "key": "base_mage_weapons_1_1"
     },
     {
-      "name": "角犀杖",
+      "name": "兽牙杖",
       "tier": 2,
       "job": "mage",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_weapon_2.png",
-      "desc": "取灵犀之角，缚于柳杖杖首",
+      "desc": "杖首缚兽牙一枚，行术时声如低吼",
       "durability": [
         20,
         20
@@ -2121,14 +2121,14 @@
       "key": "base_mage_weapons_2_2"
     },
     {
-      "name": "楠香杖",
+      "name": "香柏杖",
       "tier": 3,
       "job": "mage",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_weapon_3.png",
-      "desc": "以楠木为干，辅以灵犀之角",
+      "desc": "柏木为干，通体带香，虫蚁不近",
       "durability": [
         25,
         25
@@ -2147,14 +2147,14 @@
       "key": "base_mage_weapons_3_3"
     },
     {
-      "name": "檀沉杖",
+      "name": "墨竹杖",
       "tier": 4,
       "job": "mage",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_weapon_4.png",
-      "desc": "以南方紫檀木为干，杖首雕成怪兽骷髅状",
+      "desc": "墨竹为干，杖首雕作兽首骷髅",
       "durability": [
         30,
         30
@@ -2180,7 +2180,7 @@
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_weapon_5.png",
-      "desc": "取怪兽残首及骸骨制成，在兽角处缀有玉佩",
+      "desc": "取巨兽头骨为杖首，角上缀玉佩，行术时骨响如吟",
       "durability": [
         35,
         35
@@ -2199,14 +2199,14 @@
       "key": "base_mage_weapons_5_5"
     },
     {
-      "name": "雾隐杖",
+      "name": "岚影",
       "tier": 6,
       "job": "mage",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_weapon_6.png",
-      "desc": "以紫檀木为干，杖首用紫铜箍一紫色水晶",
+      "desc": "杖身箍铜，嵌一枚紫水晶，挥动时岚气随身",
       "durability": [
         40,
         40
@@ -2225,14 +2225,14 @@
       "key": "base_mage_weapons_6_6"
     },
     {
-      "name": "凝雾杖",
+      "name": "凝云",
       "tier": 7,
       "job": "mage",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/mage_weapon_7.png",
-      "desc": "杖首以碧翠为环，顶端缚一绿色晶石，可兴云\\n吐雾",
+      "desc": "杖首碧环系青石，挥时云气自聚",
       "durability": [
         45,
         45
@@ -2251,14 +2251,14 @@
       "key": "base_mage_weapons_7_7"
     },
     {
-      "name": "青禾杖",
+      "name": "藤杖",
       "tier": 1,
       "job": "mage",
       "hand": "single",
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/mage_weapon_1.png",
-      "desc": "以禾木打磨而成",
+      "desc": "老藤一段，磨去毛刺即成",
       "durability": [
         10,
         10

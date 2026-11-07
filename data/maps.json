@@ -2,20 +2,20 @@
   "maps": [
     {
       "key": "beijun",
-      "name": "北原郡",
-      "desc": "新手区域，含平原村、农田、演武场、北郡军营、榕树林、东岭、招魂台等",
+      "name": "青丘",
+      "desc": "新手区域，含青丘村、农田、演武场、青丘军营、榕树林、东岭、招魂台等",
       "neighbors": [
         "tianshengyuan",
         "banquan"
       ],
       "region_type": "field",
       "safe_zone": {
-        "name": "平原村"
+        "name": "青丘村"
       },
       "zones": [
         {
           "key": "farm",
-          "name": "农田·演武场",
+          "name": "演武场",
           "monsters": [
             "zhizhu",
             "xiezi",
@@ -28,7 +28,7 @@
         },
         {
           "key": "central",
-          "name": "北原郡平原中央",
+          "name": "青丘平原",
           "monsters": [
             "liegou",
             "lengxue_zongxiong"
@@ -91,14 +91,14 @@
     },
     {
       "key": "xianzhijing",
-      "name": "仙之境",
+      "name": "栖霞秘境",
       "desc": "神魔修验者的专属静修之地，安全区无战斗，按滞留时长自动获得修验经验。每日最多进入 60 分钟。",
       "neighbors": [
         "beijun"
       ],
       "region_type": "field",
       "safe_zone": {
-        "name": "仙之境"
+        "name": "栖霞秘境"
       },
       "require_shenmo": true,
       "zones": [],
@@ -106,8 +106,8 @@
     },
     {
       "key": "tianshengyuan",
-      "name": "天圣原",
-      "desc": "南郡平原南侧，10-21级练级区域，华夏城为安全区",
+      "name": "凤鸣原",
+      "desc": "澜溪平原南侧，10-21级练级区域，凤鸣城为安全区",
       "neighbors": [
         "beijun",
         "banquan",
@@ -117,7 +117,7 @@
       ],
       "region_type": "field",
       "safe_zone": {
-        "name": "华夏城"
+        "name": "凤鸣城"
       },
       "zones": [
         {
@@ -132,7 +132,7 @@
         },
         {
           "key": "hu_xiao_gu",
-          "name": "虎啸谷",
+          "name": "凤鸣谷",
           "monsters": [
             "juxiniao15",
             "xiyi16",
@@ -148,7 +148,7 @@
         },
         {
           "key": "tian_sheng_hu",
-          "name": "天圣湖",
+          "name": "凤鸣湖",
           "monsters": [
             "huayao4",
             "feichong24"
@@ -222,20 +222,20 @@
     },
     {
       "key": "banquan",
-      "name": "阪泉",
-      "desc": "北郡平原北侧，22-35级高级区域，阪泉军营为安全区",
+      "name": "龙脊",
+      "desc": "青丘平原北侧，22-35级高级区域，龙脊军营为安全区",
       "neighbors": [
         "tianshengyuan",
         "xilie"
       ],
       "region_type": "field",
       "safe_zone": {
-        "name": "阪泉军营"
+        "name": "龙脊军营"
       },
       "zones": [
         {
           "key": "bai_zhang_gu_fu_jin",
-          "name": "白障谷附近",
+          "name": "白障谷",
           "monsters": [
             "gankushuyao27",
             "taguai28"
@@ -257,7 +257,7 @@
         },
         {
           "key": "you_lin_ji_zhong_nan_bu",
-          "name": "幽林及中南部",
+          "name": "幽林中南",
           "monsters": [
             "gankushuyao36",
             "humaozhaimin35"
@@ -268,7 +268,7 @@
         },
         {
           "key": "ban_quan_jun_ying_ji_zhong_bei_bu",
-          "name": "阪泉军营及中北部",
+          "name": "龙脊军营",
           "monsters": [
             "chixueshiyao38",
             "aohuoshiyao39",
@@ -292,7 +292,7 @@
         },
         {
           "key": "xi_xian_jun_ying",
-          "name": "西线军营",
+          "name": "西境军营",
           "monsters": [
             "shihun54"
           ],
@@ -315,7 +315,7 @@
         },
         {
           "key": "hu_mao_zhai",
-          "name": "胡毛寨",
+          "name": "苍峪寨",
           "monsters": [
             "humaozhaishou46"
           ],
@@ -328,7 +328,7 @@
         },
         {
           "key": "tian_lie_shan",
-          "name": "天裂山",
+          "name": "星陨山",
           "monsters": [
             "shanqingbingding51"
           ],
@@ -340,7 +340,7 @@
         },
         {
           "key": "hua_xia_yi_zhi",
-          "name": "华夏遗址",
+          "name": "扶桑遗址",
           "monsters": [],
           "elite_monsters": [
             "canhunegui60",
@@ -355,7 +355,7 @@
         {
           "key": "banquan_jubao",
           "zone": "ku_song_shan",
-          "name": "酣巨人头领",
+          "name": "峻丘头领",
           "monster": "hanjurentouling66",
           "level": 34,
           "refresh_minutes": 50
@@ -412,7 +412,7 @@
     {
       "key": "chaoshan_l1",
       "name": "朝歌山一层",
-      "desc": "地下城一层，17-23级，天圣原入口",
+      "desc": "地下城一层，17-23级，凤鸣原入口",
       "neighbors": [
         "tianshengyuan",
         "chaoshan_l2"
@@ -458,7 +458,7 @@
         },
         {
           "key": "chao_ge_shan_er_ceng_ru_kou_fu_jin",
-          "name": "朝歌山二层入口附近",
+          "name": "朝歌入口",
           "monsters": [
             "shanqingdaozei18",
             "shiyao14"
@@ -469,7 +469,7 @@
         },
         {
           "key": "zhong_bei_bu_qu_yu",
-          "name": "中北部区域",
+          "name": "中北部",
           "monsters": [
             "ruankejiachong4",
             "duxie5",
@@ -495,7 +495,7 @@
         },
         {
           "key": "zhong_jian_pian_you_qu_yu",
-          "name": "中间偏右区域",
+          "name": "中部偏右",
           "monsters": [
             "lijiaoxiaozu13",
             "shiyao14",
@@ -512,7 +512,7 @@
         {
           "key": "l1_jubao",
           "zone": "xi_nan_qu_yu",
-          "name": "蛮淘",
+          "name": "魁狞",
           "monster": "mantao26",
           "level": 23,
           "refresh_minutes": 46
@@ -600,7 +600,7 @@
         },
         {
           "key": "you_ce_zhong_bu_qu_yu",
-          "name": "右侧中部区域",
+          "name": "右侧中部",
           "monsters": [
             "lijiaowushi44"
           ],
@@ -645,7 +645,7 @@
         },
         {
           "key": "mu_shi_xia_fang_qu_yu",
-          "name": "墓室下方区域",
+          "name": "墓室下方",
           "monsters": [
             "yeguisuohun38"
           ],
@@ -660,7 +660,7 @@
         {
           "key": "l2_jubao",
           "zone": "you_xia_qu_yu",
-          "name": "鬼将",
+          "name": "鬼帅",
           "monster": "guige51",
           "level": 34,
           "refresh_minutes": 49
@@ -718,8 +718,8 @@
     },
     {
       "key": "nanjun",
-      "name": "南原郡",
-      "desc": "华夏南部边境，23-39级练级区域，南郡城为安全区",
+      "name": "澜溪",
+      "desc": "华夏南部边境，23-39级练级区域，澜溪城为安全区",
       "neighbors": [
         "tianshengyuan",
         "congyuzhaoze",
@@ -729,12 +729,12 @@
       "region_type": "field",
       "is_dungeon": false,
       "safe_zone": {
-        "name": "南郡"
+        "name": "澜溪城"
       },
       "zones": [
         {
           "key": "tao_jiang_xi_pan",
-          "name": "桃江西畔",
+          "name": "澜溪西畔",
           "monsters": [
             "lizuixiniao_23",
             "lizuitujiu_24"
@@ -794,7 +794,7 @@
         },
         {
           "key": "tao_jiang_nan_an",
-          "name": "桃江南岸",
+          "name": "澜溪南岸",
           "monsters": [
             "daoke_31",
             "daoketouling_34"
@@ -808,7 +808,7 @@
         {
           "key": "nanjun_jubao",
           "zone": "hui_xuan_shan_gu",
-          "name": "厉角堂主",
+          "name": "狰牙堂主",
           "monster": "lijiaotangzhu_38",
           "level": 39,
           "refresh_minutes": 51
@@ -860,7 +860,7 @@
     },
     {
       "key": "qiufengyuan",
-      "name": "秋野原",
+      "name": "烽烟原",
       "desc": "华夏边陲战场遗迹，40-55级练级区域，华夏军营为安全区",
       "neighbors": [
         "congyuzhaoze",
@@ -876,7 +876,7 @@
       "zones": [
         {
           "key": "xun_lie_shan",
-          "name": "迅烈山",
+          "name": "罡羽山",
           "monsters": [
             "zhangweixiyi"
           ],
@@ -944,7 +944,7 @@
         },
         {
           "key": "xi_hun_shi",
-          "name": "吸魂石",
+          "name": "锁魂石",
           "monsters": [
             "suohunhuwei",
             "huanxueshuyao",
@@ -956,7 +956,7 @@
         },
         {
           "key": "zhu_mo_zhen",
-          "name": "诛魔阵",
+          "name": "伐魔阵",
           "monsters": [
             "meihuoyahuan",
             "meihuoyahuan",
@@ -982,7 +982,7 @@
         {
           "key": "qiufengyuan_jubao",
           "zone": "suo_hun_po",
-          "name": "索魂暗使",
+          "name": "摄形暗使",
           "monster": "suohunanshi_53",
           "level": 55,
           "refresh_minutes": 48
@@ -990,7 +990,7 @@
       ],
       "boss_zone": {
         "key": "suo_hun_po",
-        "name": "索魂坡",
+        "name": "缚魂坡",
         "boss": [
           "dingfengxunlie",
           "yugu",
@@ -1033,8 +1033,8 @@
     },
     {
       "key": "qiufengyuan_midao",
-      "name": "秋野原密道",
-      "desc": "秋枫原深处的隐秘通道，可直达奇兵洞一层，沿途驻扎煌叶叛军暗桩",
+      "name": "烽烟原密道",
+      "desc": "烽烟原深处的隐秘通道，可直达玉山洞一层，沿途驻扎煌叶叛军暗桩",
       "neighbors": [
         "qiufengyuan",
         "qibingdong_l1"
@@ -1097,8 +1097,8 @@
     },
     {
       "key": "qibingdong_l1",
-      "name": "奇石洞一层",
-      "desc": "奇兵洞的表层洞窟，分左右两翼与密室，驻扎煌叶叛军与延维一族",
+      "name": "玉山洞一层",
+      "desc": "玉山洞的表层洞窟，分左右两翼与密室，驻扎煌叶叛军与双首一族",
       "neighbors": [
         "qiufengyuan_midao",
         "qibingdong_l2",
@@ -1210,7 +1210,7 @@
         {
           "key": "qibing_l1_jubao",
           "zone": "mi_shi",
-          "name": "参谋",
+          "name": "幽谋",
           "monster": "canmou1",
           "level": 54,
           "refresh_minutes": 56
@@ -1237,8 +1237,8 @@
     },
     {
       "key": "qibingdong_l2",
-      "name": "奇石洞二层",
-      "desc": "奇兵洞一层之下的深层洞窟，分西北角/中西部/将军台/中南部等区域，驻扎煌叶叛军精锐、延维一族与聚宝管融",
+      "name": "玉山洞二层",
+      "desc": "玉山洞一层之下的深层洞窟，分西北角/中西部/镇将台/中南部等区域，驻扎煌叶叛军精锐、双首一族与聚宝玄陀",
       "neighbors": [
         "qibingdong_l1"
       ],
@@ -1338,7 +1338,7 @@
       ],
       "boss_zone": {
         "key": "jiang_jun_tai",
-        "name": "将军台",
+        "name": "镇将台",
         "boss": [
           "huangyejisi1"
         ],
@@ -1363,7 +1363,7 @@
         {
           "key": "qibingdong_l2_jubao",
           "zone": "jiang_jun_tai",
-          "name": "管融",
+          "name": "玄陀",
           "monster": "guanrong1",
           "level": 69,
           "refresh_minutes": 56
@@ -1386,15 +1386,15 @@
     },
     {
       "key": "kunlun",
-      "name": "昆仑",
-      "desc": "西极神山，70-88级高阶练级区域，昆仑仙关为安全区",
+      "name": "玉轮",
+      "desc": "西极神山，70-88级高阶练级区域，玉轮仙关为安全区",
       "neighbors": [
         "qiufengyuan"
       ],
       "region_type": "field",
       "is_dungeon": false,
       "safe_zone": {
-        "name": "昆仑仙关"
+        "name": "玉轮仙关"
       },
       "zones": [
         {
@@ -1473,7 +1473,7 @@
         },
         {
           "key": "kun_lun_xu_wai",
-          "name": "昆仑墟外",
+          "name": "玉轮墟外",
           "monsters": [],
           "elite_monsters": [
             "nanhaiwushi83",
@@ -1522,7 +1522,7 @@
         {
           "key": "kunlun_jubao",
           "zone": "bu_tian_tai",
-          "name": "延维长老",
+          "name": "双首长老",
           "monster": "yanweizhanglao",
           "level": 88,
           "refresh_minutes": 71
@@ -1553,8 +1553,8 @@
     },
     {
       "key": "muxiuyulin",
-      "name": "暮雨林",
-      "desc": "华夏南方热带雨林秘境，66-80级高阶练级区域，雨林营地为安全区。原版相邻：秋枫原/巨人野/赤水。",
+      "name": "雾隐雨林",
+      "desc": "华夏南方热带雨林秘境，66-80级高阶练级区域，雨林营地为安全区。",
       "neighbors": [
         "qiufengyuan",
         "jurenye",
@@ -1564,7 +1564,7 @@
       "region_type": "field",
       "is_dungeon": false,
       "safe_zone": {
-        "name": "百果城"
+        "name": "雾隐城"
       },
       "zones": [
         {
@@ -1634,7 +1634,7 @@
         },
         {
           "key": "yuhushan",
-          "name": "玉湖山",
+          "name": "雾屏山",
           "monsters": [
             "huangye_tanzi",
             "huangyewushi"
@@ -1679,7 +1679,7 @@
       ],
       "boss_zone": {
         "key": "boss_zone",
-        "name": "首领区",
+        "name": "碧云台",
         "boss": [
           "moxueliyi",
           "fushezhanglao",
@@ -1707,7 +1707,7 @@
         {
           "key": "huangyetongling_spot",
           "zone": "boss_zone",
-          "name": "煌叶统领",
+          "name": "灼华魁领",
           "monster": "huangyetongling",
           "level": 80,
           "refresh_minutes": 61
@@ -1733,8 +1733,8 @@
     },
     {
       "key": "jurenye",
-      "name": "巨灵野",
-      "desc": "巨人野（55-72级）莽憨岭、暮云岭、采石场、荒寂林、巨人野野外、临渊崖、落日崖、巨人野深处，含首领族长、酣巨人猎手、拘魂孤怨、摄魂、迷魂；内部炼骨窟为地下城",
+      "name": "擎苍野",
+      "desc": "擎苍野（55-72级）莽憨岭、暮云岭、采石场、荒寂林、擎苍野野外、临渊崖、落日崖、擎苍野深处，含首领族首、巍丘猎手、拘魂孤戾、拘魂、惑魂；内部穷奇窟为地下城",
       "neighbors": [
         "xuanyuan",
         "muxiuyulin",
@@ -1743,7 +1743,7 @@
       "region_type": "field",
       "is_dungeon": false,
       "safe_zone": {
-        "name": "戚轩村"
+        "name": "擎苍村"
       },
       "zones": [
         {
@@ -1798,7 +1798,7 @@
         },
         {
           "key": "ju_ren_ye_ye_wai",
-          "name": "巨灵野野外",
+          "name": "擎苍野外",
           "monster_level": 66,
           "monsters": [
             "hanjurenshanmin",
@@ -1836,7 +1836,7 @@
         },
         {
           "key": "ju_ren_ye_shen_chu",
-          "name": "巨灵野深处",
+          "name": "擎苍深处",
           "monster_level": 71,
           "monsters": [
             "manghan",
@@ -1850,7 +1850,7 @@
       ],
       "boss_zone": {
         "key": "juren_shouling",
-        "name": "巨人野·首领区",
+        "name": "擎苍峰",
         "boss": [
           "hanjurenlieshou",
           "juhunguyuan",
@@ -1878,7 +1878,7 @@
         {
           "key": "jubao_zuzhang",
           "zone": "juren_shouling",
-          "name": "族长",
+          "name": "宗首",
           "monster": "zuzhang",
           "level": 72,
           "refresh_minutes": 60
@@ -1901,8 +1901,8 @@
     },
     {
       "key": "lianguku_l1",
-      "name": "炼骨洞一层",
-      "desc": "炼骨窟一层（63-68级），巨人野入口",
+      "name": "穷奇窟一层",
+      "desc": "穷奇窟一层（63-68级），擎苍野入口",
       "neighbors": [
         "jurenye",
         "lianguku_l2"
@@ -1996,7 +1996,7 @@
       "jubao_spots": [
         {
           "key": "lianguku_l1_jb_liebao68",
-          "name": "猎宝",
+          "name": "逐珍",
           "monster": "liebao68",
           "level": 68,
           "refresh_minutes": 59,
@@ -2005,7 +2005,7 @@
       ],
       "boss_zone": {
         "key": "you_xia_jiao",
-        "name": "炼骨窟一层·首领区",
+        "name": "右下角",
         "boss": [
           "daidushangao66",
           "duanya67",
@@ -2063,8 +2063,8 @@
     },
     {
       "key": "lianguku_l2",
-      "name": "炼骨洞二层",
-      "desc": "炼骨窟二层（66-73级），炼骨窟一层入口",
+      "name": "穷奇窟二层",
+      "desc": "穷奇窟二层（66-73级），穷奇窟一层入口",
       "neighbors": [
         "lianguku_l1",
         "lianguku_l3"
@@ -2162,7 +2162,7 @@
       "jubao_spots": [
         {
           "key": "lianguku_l2_jb_eyunkuangtu73",
-          "name": "厄运狂徒",
+          "name": "煞途狂徒",
           "monster": "eyunkuangtu73",
           "level": 73,
           "refresh_minutes": 59,
@@ -2171,7 +2171,7 @@
       ],
       "boss_zone": {
         "key": "tie_lao",
-        "name": "炼骨窟二层·首领区",
+        "name": "铁牢",
         "boss": [
           "chimu71",
           "eji73",
@@ -2244,8 +2244,8 @@
     },
     {
       "key": "lianguku_l3",
-      "name": "炼骨洞三层",
-      "desc": "炼骨窟三层（76-80级），炼骨窟二层入口",
+      "name": "穷奇窟三层",
+      "desc": "穷奇窟三层（76-80级），穷奇窟二层入口",
       "neighbors": [
         "lianguku_l2"
       ],
@@ -2338,7 +2338,7 @@
       "jubao_spots": [
         {
           "key": "lianguku_l3_jb_erenwang80",
-          "name": "恶人王",
+          "name": "戾渊魁",
           "monster": "erenwang80",
           "level": 80,
           "refresh_minutes": 61,
@@ -2347,7 +2347,7 @@
       ],
       "boss_zone": {
         "key": "hua_gu_tan",
-        "name": "化骨坛·BOSS",
+        "name": "化骨坛",
         "boss": [
           "duwei80",
           "kuangmang80",
@@ -2416,8 +2416,8 @@
     },
     {
       "key": "chishui",
-      "name": "赤水",
-      "desc": "赤水流域高阶战场，88-97级。原版相邻：暮秀雨林",
+      "name": "落雁",
+      "desc": "落雁流域高阶战场，88-97级。",
       "neighbors": [
         "muxiuyulin",
         "dongfu_tianzun"
@@ -2425,7 +2425,7 @@
       "region_type": "field",
       "is_dungeon": false,
       "safe_zone": {
-        "name": "连云寨"
+        "name": "落霞寨"
       },
       "zones": [
         {
@@ -2488,7 +2488,7 @@
         },
         {
           "key": "chi_shui_cheng",
-          "name": "赤水城",
+          "name": "落雁城",
           "monsters": [],
           "elite_monsters": [
             "kuileishouwei",
@@ -2539,7 +2539,7 @@
           "key": "jubao_csq_miehun",
           "zone": "shi_hun_gu",
           "group": "chishui_miehun",
-          "name": "灭魂",
+          "name": "绝冥",
           "monster": "csq_miehun",
           "level": 91,
           "refresh_minutes": 96
@@ -2548,7 +2548,7 @@
           "key": "chishui_youmingguiwang",
           "zone": "shi_hun_gu",
           "group": "chishui_youmingguiwang",
-          "name": "幽冥鬼王",
+          "name": "杳冥鬼煞",
           "monster": "youmingguiwang",
           "level": 84,
           "refresh_minutes": 120
@@ -2584,8 +2584,8 @@
     },
     {
       "key": "congyuzhaoze",
-      "name": "丛雨沼泽",
-      "desc": "水网密布的沼泽地，毒虫猛兽与流寇盘踞。原版相邻：南郡/天圣原/秋枫原，12-26级区域，含地下城奇兵洞与聚宝煌叶偏将。",
+      "name": "雁回沼泽",
+      "desc": "水网密布的沼泽地，毒虫猛兽与流寇盘踞。12-26级区域，含地下城玉山洞与聚宝灼华偏将。",
       "neighbors": [
         "nanjun",
         "tianshengyuan",
@@ -2621,7 +2621,7 @@
         },
         {
           "key": "banyuezhaoze",
-          "name": "半月沼泽",
+          "name": "沉月沼泽",
           "monsters": [
             "banyueshuyao",
             "banyuehuayao"
@@ -2697,7 +2697,7 @@
         {
           "key": "congyu_jubao_1",
           "zone": "milinshidi",
-          "name": "煌叶偏将",
+          "name": "灼华偏将",
           "monster": "huangyepianjiang",
           "level": 26,
           "refresh_minutes": 46
@@ -2721,14 +2721,14 @@
     },
     {
       "key": "duanbigu",
-      "name": "断崖谷",
-      "desc": "76-89级高级区域，铁旗/东夷/山膏三族混战，含聚宝风烈与四大首领。原版相邻：林海。",
+      "name": "寒戍谷",
+      "desc": "76-89级高级区域，铁旗/东夷/莽岭三族混战，含聚宝飙烈与四大首领。",
       "neighbors": [
         "linhai"
       ],
       "region_type": "field",
       "safe_zone": {
-        "name": "断壁驿"
+        "name": "寒戍驿"
       },
       "zones": [
         {
@@ -2744,7 +2744,7 @@
         },
         {
           "key": "lin_hai_gang_shao",
-          "name": "林海岗哨",
+          "name": "青萝岗哨",
           "monsters": [
             "dbg_270__lin_hai_gang_shao",
             "dbg_270__lin_hai_gang_shao",
@@ -2785,7 +2785,7 @@
         },
         {
           "key": "gui_yun_feng",
-          "name": "归云峰",
+          "name": "叠嶂峰",
           "monsters": [
             "dbg_325__gui_yun_feng",
             "dbg_299__gui_yun_feng",
@@ -2874,7 +2874,7 @@
       ],
       "boss_zone": {
         "key": "duanbigu_shouling",
-        "name": "断壁谷·首领区",
+        "name": "断崖坪",
         "boss": [
           "dbg_310__chu_shan",
           "dbg_288__duan_bi_gu",
@@ -2904,7 +2904,7 @@
         {
           "key": "duanbigu_jubao",
           "zone": "duanbigu_shouling",
-          "name": "风烈",
+          "name": "飙烈",
           "monster": "dbg_335__qian_jue_ling",
           "level": 89,
           "refresh_minutes": 30
@@ -2932,8 +2932,8 @@
     },
     {
       "key": "linhai",
-      "name": "林海",
-      "desc": "占位壳（待正式接入），原版相邻：断壁谷，76级起区域。",
+      "name": "青萝",
+      "desc": "76级起区域。",
       "neighbors": [
         "duanbigu",
         "xuanyuan",
@@ -2943,7 +2943,7 @@
       "region_type": "field",
       "safe_zone": {
         "name": "华夏军营",
-        "desc": "华夏军营（林海安全区）"
+        "desc": "华夏军营（青萝安全区）"
       },
       "zones": [
         {
@@ -2983,7 +2983,7 @@
         },
         {
           "key": "xianghunzhong",
-          "name": "香魂冢外围",
+          "name": "幽芷冢",
           "monster_level": 67,
           "monsters": [
             "lvyihuwei67",
@@ -3029,7 +3029,7 @@
         },
         {
           "key": "nanhaixingying",
-          "name": "南海行营",
+          "name": "青萝行营",
           "monster_level": 69,
           "monsters": [],
           "elite_monsters": [
@@ -3100,7 +3100,7 @@
         {
           "key": "lvyipianjiang75",
           "zone": "poxiao_senlin",
-          "name": "绿依偏将",
+          "name": "翠裳偏将",
           "monster": "lvyipianjiang75",
           "level": 75,
           "refresh_minutes": 60
@@ -3130,8 +3130,8 @@
     },
     {
       "key": "xuanyuan",
-      "name": "轩辕",
-      "desc": "轩辕古战场，32-48级区域，含轩辕台副本与二聚宝（冰甲石精/探宝）",
+      "name": "逐日",
+      "desc": "逐日古战场，32-48级区域，含昆吾台副本与二聚宝（寒甲石精/觅宝）",
       "neighbors": [
         "nanjun",
         "linhai",
@@ -3158,7 +3158,7 @@
         },
         {
           "key": "yinmingshan",
-          "name": "银明山",
+          "name": "曜明山",
           "monsters": [
             "shangaizhaimin"
           ],
@@ -3191,7 +3191,7 @@
         },
         {
           "key": "bingleihu",
-          "name": "冰泪湖",
+          "name": "玄冰湖",
           "monsters": [
             "tiejiadaoke",
             "daokeantan",
@@ -3206,7 +3206,7 @@
         },
         {
           "key": "xuanyuanyizhi",
-          "name": "轩辕遗址",
+          "name": "逐日遗址",
           "monsters": [
             "meihuo"
           ],
@@ -3271,7 +3271,7 @@
           "key": "bingjiashijing_spot",
           "zone": "junying",
           "group": "junying_bingji",
-          "name": "冰甲石精",
+          "name": "寒胄石精",
           "monster": "bingjiashijing",
           "level": 45,
           "refresh_minutes": 53
@@ -3280,7 +3280,7 @@
           "key": "tanbao_spot",
           "zone": "junying",
           "group": "junying_tanbao",
-          "name": "探宝",
+          "name": "觅珍",
           "monster": "tanbao",
           "level": 45,
           "refresh_minutes": 60
@@ -3309,8 +3309,8 @@
     },
     {
       "key": "xuanyuantai",
-      "name": "轩辕台",
-      "desc": "轩辕古祭坛副本，35 级可入，头目掉落曜光护符",
+      "name": "昆吾台",
+      "desc": "逐日古祭坛副本，35 级可入，头目掉落曜光护符",
       "neighbors": [
         "xuanyuan"
       ],
@@ -3425,35 +3425,35 @@
         {
           "key": "xyt_lihan",
           "zone": "xyt_z2",
-          "name": "戾酣",
+          "name": "戾犀",
           "monster": "xyt_30212",
           "level": 42
         },
         {
           "key": "xyt_canya",
           "zone": "xyt_z3",
-          "name": "残牙",
+          "name": "断颚",
           "monster": "xyt_30230",
           "level": 42
         },
         {
           "key": "xyt_nuxue",
           "zone": "xyt_z4",
-          "name": "怒血",
+          "name": "血咆",
           "monster": "xyt_30235",
           "level": 43
         },
         {
           "key": "xyt_linan",
           "zone": "xyt_z5",
-          "name": "厉南",
+          "name": "凶颅",
           "monster": "xyt_30255",
           "level": 44
         },
         {
           "key": "xyt_lisheng",
           "zone": "xyt_z5",
-          "name": "厉盛",
+          "name": "枭颅",
           "monster": "xyt_30254",
           "level": 45
         }
@@ -3462,14 +3462,14 @@
     },
     {
       "key": "donglicao",
-      "name": "东篱草原",
-      "desc": "林海以东的辽阔草原，绿依残部、胡煞游骑与翔舞使团在此角力，84~97 级区域。",
+      "name": "牧云草原",
+      "desc": "青萝以东的辽阔草原，绿依残部、赤陇游骑与惊羽使团在此角力，84~97 级区域。",
       "region_type": "field",
       "is_dungeon": false,
       "zones": [
         {
           "key": "songlinmangyuan",
-          "name": "松林莽原",
+          "name": "松风莽原",
           "monster_level": 85,
           "monsters": [
             "molingshuyao84",
@@ -3506,7 +3506,7 @@
         },
         {
           "key": "bingpogudao",
-          "name": "冰魄古道",
+          "name": "凝霜古道",
           "monster_level": 91,
           "monsters": [
             "hushafubing88",
@@ -3533,7 +3533,7 @@
         },
         {
           "key": "anyuecaoyuan",
-          "name": "暗月草原",
+          "name": "幽月草原",
           "monster_level": 94,
           "monsters": [
             "huanyingsuohun92",
@@ -3549,7 +3549,7 @@
         {
           "key": "donglicao_xiangwushichen",
           "zone": "yemayuan",
-          "name": "翔舞使臣",
+          "name": "惊羽使臣",
           "monster": "xiangwushichen96",
           "level": 96,
           "refresh_minutes": 90
@@ -3612,20 +3612,20 @@
     },
     {
       "key": "langyapendi",
-      "name": "琅琊盆地",
-      "desc": "琅琊盆地，含长右村、古道、界碑林、枯竹林、七迷洞外、长股村、望海崖等，邻接宁海州与七迷洞地下城",
+      "name": "望岳盆地",
+      "desc": "望岳盆地，含四耳村、古道、界碑林、枯竹林、迷谷洞外、长趾村、望海崖等，邻接海岱州与迷谷洞地下城",
       "neighbors": [
         "ninghaizhou",
         "qimidong_l1"
       ],
       "region_type": "field",
       "safe_zone": {
-        "name": "长右村"
+        "name": "四耳村"
       },
       "zones": [
         {
           "key": "lang_ya_gu_dao",
-          "name": "琅琊古道",
+          "name": "望岳古道",
           "monsters": [
             "shihunxiniao69",
             "moxuetujiu68",
@@ -3655,7 +3655,7 @@
         },
         {
           "key": "ku_se_hu",
-          "name": "苦涩湖",
+          "name": "甘棠湖",
           "monsters": [
             "shihunxiniao69",
             "shihunshiyao71",
@@ -3683,7 +3683,7 @@
         },
         {
           "key": "zhang_you_cun_wai",
-          "name": "长右村外",
+          "name": "四耳村外",
           "monsters": [
             "zhangyouzhaimin69",
             "zhangyoulieshou70"
@@ -3738,7 +3738,7 @@
         },
         {
           "key": "qi_mi_dong_wai",
-          "name": "七曲洞外",
+          "name": "迷谷洞外",
           "monsters": [],
           "elite_monsters": [
             "hushajingbing77",
@@ -3772,7 +3772,7 @@
         {
           "key": "changshan_jubao",
           "zone": "zhang_gu_cun",
-          "name": "常山",
+          "name": "玄梧",
           "monster": "changshan81",
           "level": 81,
           "refresh_minutes": 61
@@ -3780,7 +3780,7 @@
       ],
       "boss_zone": {
         "key": "zhang_gu_cun",
-        "name": "长股村",
+        "name": "长趾村",
         "boss": [
           "anhe75",
           "xunlietouling74",
@@ -3831,8 +3831,8 @@
     },
     {
       "key": "qimidong_l1",
-      "name": "七曲洞一层",
-      "desc": "七迷洞的表层洞窟，分左上角/左翼廊道/北翼通道等十区，驻扎复社叛军与虫妖一族",
+      "name": "迷谷洞一层",
+      "desc": "迷谷洞的表层洞窟，分左上角/左翼廊道/北翼通道等十区，驻扎复社叛军与虫妖一族",
       "neighbors": [
         "langyapendi",
         "qimidong_l2"
@@ -3896,7 +3896,7 @@
         },
         {
           "key": "you_yi_bei_tong_dao",
-          "name": "右翼北通道",
+          "name": "右翼北道",
           "monsters": [
             "fusheyuanbing2",
             "huanxuechongguai3",
@@ -3989,7 +3989,7 @@
         {
           "key": "qimidong_l1_fushejisi1",
           "zone": "zhong_xin_da_ting",
-          "name": "复社祭司",
+          "name": "玄盟祭司",
           "monster": "fushejisi1",
           "level": 77,
           "refresh_minutes": 61
@@ -4021,8 +4021,8 @@
     },
     {
       "key": "qimidong_l2",
-      "name": "七曲洞二层",
-      "desc": "七迷洞深层洞窟，复社叛军核心据点，3 名 BOSS（复社巫老/复社大统领/魔蛛王）+ 聚宝复社大长老",
+      "name": "迷谷洞二层",
+      "desc": "迷谷洞深层洞窟，复社叛军核心据点，3 名 BOSS（玄盟巫老/复社大镇/玄蛛王）+ 聚宝赤社大长老",
       "neighbors": [
         "qimidong_l1"
       ],
@@ -4122,7 +4122,7 @@
         },
         {
           "key": "an_tian_shen_tan",
-          "name": "暗天神坛",
+          "name": "若木坛",
           "monsters": [],
           "elite_monsters": [
             "mochizhizhu1",
@@ -4165,7 +4165,7 @@
         {
           "key": "qimidong_l2_fushedazhanglao1",
           "zone": "ji_zu_shen_tan",
-          "name": "复社大长老",
+          "name": "玄盟大长老",
           "monster": "fushedazhanglao1",
           "level": 88,
           "refresh_minutes": 61
@@ -4173,7 +4173,7 @@
         {
           "key": "qimidong_l2_yaojia1",
           "zone": "ji_zu_shen_tan",
-          "name": "耀嘉",
+          "name": "曜渊",
           "monster": "yaojia",
           "level": 95,
           "refresh_minutes": 119,
@@ -4183,7 +4183,7 @@
         {
           "key": "qimidong_l2_bianyi_yaojia1",
           "zone": "ji_zu_shen_tan",
-          "name": "变异耀嘉",
+          "name": "变异曜渊",
           "monster": "bianyi_yaojia",
           "level": 95,
           "refresh_minutes": 119,
@@ -4216,8 +4216,8 @@
     },
     {
       "key": "ninghaizhou",
-      "name": "宁海州",
-      "desc": "宁海州（44-58级）飞云山、大堰关、白暮湖、宁海州野外、遗民村、青云岭、巨兽山、三叶湖、内海湖，含首领林海使者与巡路统领，内海湖藏聚宝厉其",
+      "name": "海岱州",
+      "desc": "海岱州（44-58级）飞云山、大堰关、白暮湖、海岱州野外、海岱村、空桑岭、巨兽山、三叶湖、内海湖，含首领青萝巡使与巡路魁领，内海湖藏聚宝玄枭",
       "neighbors": [
         "langyapendi",
         "xuanyuan",
@@ -4225,7 +4225,7 @@
       ],
       "region_type": "field",
       "safe_zone": {
-        "name": "遗民村"
+        "name": "海岱村"
       },
       "zones": [
         {
@@ -4242,7 +4242,7 @@
         },
         {
           "key": "qing_yun_ling",
-          "name": "青云岭",
+          "name": "空桑岭",
           "monster_level": 47,
           "monsters": [
             "shanzhailiushou",
@@ -4279,7 +4279,7 @@
         },
         {
           "key": "ning_hai_zhou_ye_wai",
-          "name": "宁海州野外",
+          "name": "海岱野外",
           "monster_level": 51,
           "monsters": [
             "huanxueshu",
@@ -4332,7 +4332,7 @@
       "is_dungeon": false,
       "boss_zone": {
         "key": "ninghaizhou_shouling",
-        "name": "宁海州·首领区",
+        "name": "海岱湾",
         "boss": [
           "linhaishizhe",
           "xunlutongling"
@@ -4357,7 +4357,7 @@
         {
           "key": "ninghaizhou_jubao",
           "zone": "ninghaizhou_shouling",
-          "name": "厉其",
+          "name": "玄枭",
           "monster": "liqi",
           "level": 58,
           "refresh_minutes": 57
@@ -4379,8 +4379,8 @@
     },
     {
       "key": "xilie",
-      "name": "西莽荒原",
-      "desc": "荒原与村落交织的战场，阪泉以南的高阶区域（47-62级）",
+      "name": "朔风荒原",
+      "desc": "荒原与村落交织的战场，龙脊以南的高阶区域（47-62级）",
       "neighbors": [
         "banquan",
         "fuxiling_mudao"
@@ -4491,7 +4491,7 @@
       ],
       "boss_zone": {
         "key": "xilie_shouling",
-        "name": "西烈荒原·首领区",
+        "name": "朔风坡",
         "boss": [
           "yongshi",
           "jurentouling",
@@ -4523,7 +4523,7 @@
         {
           "key": "xilie_jubao",
           "zone": "xilie_shouling",
-          "name": "燕闻",
+          "name": "孤隼",
           "monster": "yanwen",
           "level": 62,
           "refresh_minutes": 58
@@ -4549,8 +4549,8 @@
     },
     {
       "key": "fuxiling_mudao",
-      "name": "伏羲陵墓道",
-      "desc": "伏羲陵中层墓道，分迷窟/北侧墓道/东北墓室等七区，3 名 BOSS（幻目/恶目/贪目）",
+      "name": "幽都陵墓道",
+      "desc": "幽都陵中层墓道，分迷窟/北侧墓道/东北墓室等七区，3 名 BOSS（幻瞳/恶瞳/贪瞳）",
       "neighbors": [
         "xilie",
         "fuxiling_shangceng"
@@ -4663,7 +4663,7 @@
         {
           "key": "fuxiling_mudao_xiongmu1",
           "zone": "dong_nan_mu_dao",
-          "name": "凶目",
+          "name": "狞眸",
           "monster": "xiongmu1",
           "level": 55,
           "refresh_minutes": 59
@@ -4687,8 +4687,8 @@
     },
     {
       "key": "dongfu_tianzun",
-      "name": "天罗洞府",
-      "desc": "天尊遗留的洞府，机关重重，强敌环伺，深处有聚宝天尊长老镇守。",
+      "name": "钟山洞府",
+      "desc": "烛阴遗留的洞府，机关重重，强敌环伺，深处有聚宝烛阴长老镇守。",
       "neighbors": [
         "chishui"
       ],
@@ -4793,7 +4793,7 @@
       "jubao_spots": [
         {
           "key": "dongfu_tianzun_jb_tianzunzhanglao95",
-          "name": "天尊长老",
+          "name": "幽霄长老",
           "monster": "tianzunzhanglao",
           "level": 95,
           "refresh_minutes": 85,
@@ -4802,7 +4802,7 @@
         {
           "key": "dongfu_tianzun_jb_tianzun95",
           "zone": "xing_fang",
-          "name": "天尊",
+          "name": "幽霄",
           "monster": "tianzun",
           "level": 95,
           "refresh_minutes": 127,
@@ -4812,7 +4812,7 @@
         {
           "key": "dongfu_tianzun_jb_bianyi_tianzun95",
           "zone": "xing_fang",
-          "name": "变异天尊",
+          "name": "变异幽霄",
           "monster": "bianyi_tianzun",
           "level": 95,
           "refresh_minutes": 127,
@@ -4822,7 +4822,7 @@
       ],
       "boss_zone": {
         "key": "xing_fang",
-        "name": "天尊洞府·首领区",
+        "name": "钟山殿",
         "boss": [
           "dongfutongling",
           "dongfuwulao",
@@ -4877,8 +4877,8 @@
     },
     {
       "key": "fuxiling_shangceng",
-      "name": "伏羲陵上层",
-      "desc": "伏羲陵上层（L58-66），分西北角/北部/东北角/天坛/地坛/西南角/东南角七区，多 BOSS 据点",
+      "name": "幽都陵上层",
+      "desc": "幽都陵上层（58-66 级），分西北角/北部/东北角/天坛/地坛/西南角/东南角七区，多 BOSS 据点",
       "neighbors": [
         "fuxiling_mudao",
         "fuxiling_xiaceng"
@@ -5007,7 +5007,7 @@
         {
           "key": "guyuanshiwang_jubao",
           "zone": "dong_nan_jiao",
-          "name": "孤怨尸王",
+          "name": "冷啸尸王",
           "monster": "guyuanshiwang1",
           "level": 66,
           "refresh_minutes": 60
@@ -5039,8 +5039,8 @@
     },
     {
       "key": "fuxiling_xiaceng",
-      "name": "伏羲陵下层",
-      "desc": "伏羲陵下层（L70-76），分西北角/北部/东北角/左翼/右翼/西南角/东南角/伏羲坛九区，多 BOSS 据点",
+      "name": "幽都陵下层",
+      "desc": "幽都陵下层（70-76 级），分西北角/北部/东北角/左翼/右翼/西南角/东南角/祖灵坛九区，多 BOSS 据点",
       "is_dungeon": true,
       "region_type": "dungeon",
       "no_safe_zone": true,
@@ -5160,7 +5160,7 @@
         {
           "key": "wanglingjisi_jubao",
           "zone": "dong_bei_jiao",
-          "name": "皇陵祭司",
+          "name": "玄阙祭司",
           "monster": "wanglingjisi1",
           "level": 75,
           "refresh_minutes": 60
@@ -5227,8 +5227,8 @@
     },
     {
       "key": "qingyunzhai_l1",
-      "name": "青云寨一层",
-      "desc": "青云寨一层（35-39级）",
+      "name": "空桑寨一层",
+      "desc": "空桑寨一层（35-39级）",
       "region_type": "dungeon",
       "is_dungeon": true,
       "no_safe_zone": true,
@@ -5313,7 +5313,7 @@
       "jubao_spots": [],
       "boss_zone": {
         "key": "you_shang_jiao",
-        "name": "右上角·BOSS",
+        "name": "右上角",
         "boss": [
           "canxuedaoke38",
           "nuhuodaoke37",
@@ -5355,8 +5355,8 @@
     },
     {
       "key": "qingyunzhai_l2",
-      "name": "青云寨二层",
-      "desc": "青云寨二层（46-51级）",
+      "name": "空桑寨二层",
+      "desc": "空桑寨二层（46-51级）",
       "region_type": "dungeon",
       "is_dungeon": true,
       "no_safe_zone": true,
@@ -5440,7 +5440,7 @@
       "jubao_spots": [
         {
           "key": "qingyunzhai_l2_jb_duobao51",
-          "name": "夺宝",
+          "name": "窃珍",
           "monster": "duobao51",
           "level": 51,
           "refresh_minutes": 55,
@@ -5449,7 +5449,7 @@
       ],
       "boss_zone": {
         "key": "nan_bu_dong_shi",
-        "name": "南部洞室·BOSS",
+        "name": "南部洞室",
         "boss": [
           "zhuimingdaoke48",
           "chonghou47",
@@ -5513,8 +5513,8 @@
     },
     {
       "key": "qingyunzhai_l3",
-      "name": "青云寨三层",
-      "desc": "青云寨三层（57-61级）",
+      "name": "空桑寨三层",
+      "desc": "空桑寨三层（57-61级）",
       "region_type": "dungeon",
       "is_dungeon": true,
       "no_safe_zone": true,
@@ -5587,7 +5587,7 @@
         {
           "key": "qingyunzhai_l3_jb_lijiaotongling59",
           "zone": "xi_nan_jiao",
-          "name": "厉角统领",
+          "name": "狰牙魁领",
           "monster": "lijiaotongling59",
           "level": 59,
           "refresh_minutes": 61
@@ -5595,7 +5595,7 @@
       ],
       "boss_zone": {
         "key": "xi_nan_jiao",
-        "name": "西南角·BOSS",
+        "name": "西南角",
         "boss": [
           "kuangzhandaoke59",
           "kuangtudaoke61",
@@ -5654,8 +5654,8 @@
     },
     {
       "key": "dongfu_yaowang_1",
-      "name": "药王阁·一层",
-      "desc": "药王殿一层，殿中药香弥漫，暗藏杀机。",
+      "name": "芝草阁·一层",
+      "desc": "芝草阁一层，殿中药香弥漫，暗藏杀机。",
       "neighbors": [
         "muxiuyulin",
         "dongfu_yaowang_2"
@@ -5665,7 +5665,7 @@
       "no_safe_zone": true,
       "boss_zone": {
         "key": "feng_xian_dian",
-        "name": "药王殿·一层·首领区",
+        "name": "奉仙殿",
         "boss": [
           "fengxiandianjiangjun",
           "yuanshi"
@@ -5702,7 +5702,7 @@
         {
           "key": "fengxiandiandianshi",
           "zone": "feng_xian_dian",
-          "name": "奉贤殿殿师",
+          "name": "芝草院首",
           "monster": "fengxiandiandianshi",
           "level": 71,
           "refresh_minutes": 60
@@ -5807,8 +5807,8 @@
     },
     {
       "key": "dongfu_yaowang_2",
-      "name": "药王阁·二层",
-      "desc": "药王殿二层，殿中药香弥漫，暗藏杀机。",
+      "name": "芝草阁·二层",
+      "desc": "芝草阁二层，殿中药香弥漫，暗藏杀机。",
       "neighbors": [
         "dongfu_yaowang_1"
       ],
@@ -5817,7 +5817,7 @@
       "no_safe_zone": true,
       "boss_zone": {
         "key": "you_xia_jiao",
-        "name": "药王殿·二层·首领区",
+        "name": "丹鼎殿",
         "boss": [
           "yingkong",
           "yingsha",
@@ -5858,7 +5858,7 @@
         {
           "key": "jiaomu",
           "zone": "you_xia_jiao",
-          "name": "骄目",
+          "name": "傲瞳",
           "monster": "jiaomu",
           "level": 88,
           "refresh_minutes": 60
@@ -5866,7 +5866,7 @@
         {
           "key": "yumo",
           "zone": "you_xia_jiao",
-          "name": "狱魔",
+          "name": "囚煞",
           "monster": "yumo",
           "level": 95,
           "refresh_minutes": 127,
@@ -5876,7 +5876,7 @@
         {
           "key": "bianyi_yumo",
           "zone": "you_xia_jiao",
-          "name": "变异狱魔",
+          "name": "变异囚煞",
           "monster": "bianyi_yumo",
           "level": 95,
           "refresh_minutes": 127,
@@ -5949,7 +5949,7 @@
         },
         {
           "key": "shen_nong_dian",
-          "name": "神农殿",
+          "name": "百草殿",
           "monsters": [],
           "elite_monsters": [
             "lihun",
@@ -5999,8 +5999,8 @@
     },
     {
       "key": "huanhai_l1",
-      "name": "幻月海一层",
-      "desc": "幻海第1层，深海秘境，强敌环伺。",
+      "name": "玄溟海一层",
+      "desc": "玄溟海第1层，深海秘境，强敌环伺。",
       "neighbors": [
         "ninghaizhou",
         "huanhai_l2"
@@ -6091,7 +6091,7 @@
       ],
       "boss_zone": {
         "key": "zuo_du_hai_kou",
-        "name": "幻海一层·首领区",
+        "name": "左渡海口",
         "boss": [
           "hanmoxianfeng"
         ],
@@ -6121,7 +6121,7 @@
         {
           "key": "huanhai_l1_jb_xunhaijiangjun",
           "zone": "zuo_du_hai_kou",
-          "name": "巡海将军",
+          "name": "踏浪都尉",
           "monster": "xunhaijiangjun",
           "level": 96,
           "refresh_minutes": 120
@@ -6129,7 +6129,7 @@
         {
           "key": "huanhai_l1_jb_xueewang",
           "zone": "zuo_du_hai_kou",
-          "name": "血颚王",
+          "name": "朱颌魔君",
           "monster": "xueewang",
           "level": 100,
           "refresh_minutes": 130
@@ -6155,8 +6155,8 @@
     },
     {
       "key": "huanhai_l2",
-      "name": "幻月海二层",
-      "desc": "幻海第2层，深海秘境，强敌环伺。",
+      "name": "玄溟海二层",
+      "desc": "玄溟海第2层，深海秘境，强敌环伺。",
       "neighbors": [
         "huanhai_l1",
         "huanhai_l3"
@@ -6253,7 +6253,7 @@
       ],
       "boss_zone": {
         "key": "han_mo_qian_shao",
-        "name": "幻海二层·首领区",
+        "name": "玄墨前哨",
         "boss": [
           "xunhaidajiang",
           "xuanwushengui"
@@ -6290,7 +6290,7 @@
         {
           "key": "huanhai_l2_jb_molongwang",
           "zone": "han_mo_qian_shao",
-          "name": "魔龙王",
+          "name": "螭蛟魔尊",
           "monster": "molongwang",
           "level": 104,
           "refresh_minutes": 137
@@ -6324,8 +6324,8 @@
     },
     {
       "key": "huanhai_l3",
-      "name": "幻月海三层",
-      "desc": "幻海第3层，深海秘境，强敌环伺。",
+      "name": "玄溟海三层",
+      "desc": "玄溟海第3层，深海秘境，强敌环伺。",
       "neighbors": [
         "huanhai_l2",
         "huanhai_l4"
@@ -6437,7 +6437,7 @@
       ],
       "boss_zone": {
         "key": "da_hai_gou",
-        "name": "幻海三层·首领区",
+        "name": "大海沟",
         "boss": [
           "hanmoxiewu_boss"
         ],
@@ -6484,7 +6484,7 @@
         {
           "key": "huanhai_l3_jb_mingsha",
           "zone": "da_hai_gou",
-          "name": "冥刹",
+          "name": "渊刹",
           "monster": "mingsha",
           "level": 109,
           "refresh_minutes": 147
@@ -6526,8 +6526,8 @@
     },
     {
       "key": "huanhai_l4",
-      "name": "幻月海四层",
-      "desc": "幻海第4层，深海秘境，强敌环伺。",
+      "name": "玄溟海四层",
+      "desc": "玄溟海第4层，深海秘境，强敌环伺。",
       "neighbors": [
         "huanhai_l3"
       ],
@@ -6576,7 +6576,7 @@
       ],
       "boss_zone": {
         "key": "hai_dian_yi_ji",
-        "name": "幻海四层·首领区",
+        "name": "海殿遗迹",
         "boss": [
           "zhenhaihanmo_boss"
         ],
@@ -6602,7 +6602,7 @@
         {
           "key": "huanhai_l4_jb_haisha",
           "zone": "hai_dian_yi_ji",
-          "name": "海煞",
+          "name": "溟渊",
           "monster": "haisha",
           "level": 115,
           "refresh_minutes": 240
@@ -6627,8 +6627,8 @@
     },
     {
       "key": "guimu",
-      "name": "诡墓",
-      "desc": "丛雨沼泽深处的上古墓穴，藏有大量经验、金钱、宝物",
+      "name": "蛊雕墓",
+      "desc": "雁回沼泽深处的上古墓穴，藏有大量经验、铜钱、宝物",
       "region_type": "副本",
       "is_dungeon": false,
       "no_safe_zone": true,
@@ -6775,7 +6775,7 @@
         },
         {
           "key": "gm_z9",
-          "name": "寂灭之殿",
+          "name": "终寂殿",
           "monsters": [],
           "elite_monsters": [
             "guimu_30059",
@@ -6794,21 +6794,21 @@
         {
           "key": "guimu_huapi",
           "zone": "gm_z3",
-          "name": "画皮",
+          "name": "剥颜",
           "monster": "guimu_30020",
           "level": 22
         },
         {
           "key": "guimu_lv_gui",
           "zone": "gm_z6",
-          "name": "厉鬼",
+          "name": "阴鬼",
           "monster": "guimu_30028",
           "level": 24
         },
         {
           "key": "guimu_ji_mie",
           "zone": "gm_z9",
-          "name": "寂灭",
+          "name": "湮寂",
           "monster": "guimu_30054",
           "level": 26
         }
@@ -6818,7 +6818,7 @@
     {
       "key": "xianghunzhong_instance",
       "name": "幽芷冢",
-      "desc": "幽芷公主陵墓，青依族世代守墓，盗墓贼黑目一伙入侵盗墓",
+      "desc": "幽芷公主陵墓，青依族世代守墓，探幽贼暗瞳一伙入侵盗墓",
       "region_type": "副本",
       "is_dungeon": false,
       "no_safe_zone": true,
@@ -6945,14 +6945,14 @@
         {
           "key": "xhz_zhongjiang",
           "zone": "xhz_z2",
-          "name": "冢将",
+          "name": "冢帅",
           "monster": "xhz_30807",
           "level": 64
         },
         {
           "key": "xhz_juduguafu",
           "zone": "xhz_z4",
-          "name": "剧毒寡妇",
+          "name": "毒煞蛛母",
           "monster": "xhz_30822",
           "level": 67
         },
@@ -6966,7 +6966,7 @@
         {
           "key": "xhz_heimu",
           "zone": "xhz_z7",
-          "name": "黑目",
+          "name": "暗瞳",
           "monster": "xhz_30836",
           "level": 74
         }

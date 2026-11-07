@@ -1,14 +1,14 @@
 {
   "helmets": [
     {
-      "name": "玄结帽",
+      "name": "冥纹帽",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_helmet_1.png",
-      "desc": "逐灵族祭师幽隐特采百结藤蔓附于荆葛之中，\\n故得名百结",
+      "desc": "族中祭师取百结藤蔓绞入荆葛，织就这一身，故名冥纹",
       "durability": [
         14,
         14
@@ -27,14 +27,14 @@
       "req_level": 11
     },
     {
-      "name": "涤罪帽",
+      "name": "蚀影帽",
       "tier": 2,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_helmet_2.png",
-      "desc": "逐灵族的法术与幽界有着千丝万缕的关系，而\\n悔卸装也是如此",
+      "desc": "族中法术与幽界纠葛极深，此装便是那股阴气的载体",
       "durability": [
         18,
         18
@@ -53,14 +53,14 @@
       "req_level": 26
     },
     {
-      "name": "缠妄帽",
+      "name": "蛊丝帽",
       "tier": 3,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_helmet_3.png",
-      "desc": "逐灵族的咒语很多，此为专门以驱除心魔的毋\\n涩符咒加持过的装备",
+      "desc": "族中咒语繁多，此装以驱除心魔的咒文反复加持",
       "durability": [
         23,
         23
@@ -79,14 +79,14 @@
       "req_level": 41
     },
     {
-      "name": "蚀澜帽",
+      "name": "幽瘴帽",
       "tier": 4,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_helmet_4.png",
-      "desc": "在孤雁岛玄冥墓旁，有一潭黏液其色青莹剧毒\\n无比，得名毒澜",
+      "desc": "孤岛荒墓旁有一潭青莹毒液，浸丝成衣，取名幽瘴",
       "durability": [
         27,
         27
@@ -105,14 +105,14 @@
       "req_level": 56
     },
     {
-      "name": "咒衍帽",
+      "name": "阴契帽",
       "tier": 5,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_helmet_5.png",
-      "desc": "九渊从幽隐遗作中悟出一种结印，后人将结印\\n叠加幻化出衍咒装",
+      "desc": "后人从先代遗作中悟出一式结印，层层叠加，幻化出这一身",
       "durability": [
         32,
         32
@@ -131,14 +131,14 @@
       "req_level": 71
     },
     {
-      "name": "血渊帽",
+      "name": "夜煞帽",
       "tier": 6,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_helmet_6.png",
-      "desc": "随幽隐一起来到有情世间的血涯兽，历经千年\\n后只留下了血涯兽皮",
+      "desc": "相传随先代渡来的巨兽，千年后只余下一张兽皮",
       "durability": [
         36,
         36
@@ -157,14 +157,14 @@
       "req_level": 86
     },
     {
-      "name": "幽道无庸帽",
+      "name": "幽都泣血帽",
       "tier": 7,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_helmet_7.png",
-      "desc": "传说是幽隐的遗物，隐隐有魔道的气息流转，\\n不过殊途同归，大道无庸",
+      "desc": "相传为上古遗物，隐有幽冥之气流转，静夜时似有泣声",
       "durability": [
         41,
         41
@@ -253,14 +253,14 @@
   ],
   "shoulders": [
     {
-      "name": "涤罪护肩",
+      "name": "蚀影护肩",
       "tier": 2,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoulder_2.png",
-      "desc": "逐灵族的法术与幽界有着千丝万缕的关系，而\\n悔卸装也是如此",
+      "desc": "族中法术与幽界纠葛极深，此装便是那股阴气的载体",
       "durability": [
         14,
         14
@@ -279,14 +279,14 @@
       "req_level": 29
     },
     {
-      "name": "缠妄护肩",
+      "name": "蛊丝护肩",
       "tier": 3,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoulder_3.png",
-      "desc": "逐灵族的咒语很多，此为专门以驱除心魔的毋\\n涩符咒加持过的装备",
+      "desc": "族中咒语繁多，此装以驱除心魔的咒文反复加持",
       "durability": [
         18,
         18
@@ -305,14 +305,14 @@
       "req_level": 44
     },
     {
-      "name": "蚀澜护肩",
+      "name": "幽瘴护肩",
       "tier": 4,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoulder_4.png",
-      "desc": "在孤雁岛玄冥墓旁，有一潭黏液其色青莹剧毒\\n无比，得名毒澜",
+      "desc": "孤岛荒墓旁有一潭青莹毒液，浸丝成衣，取名幽瘴",
       "durability": [
         23,
         23
@@ -331,14 +331,14 @@
       "req_level": 59
     },
     {
-      "name": "咒衍护肩",
+      "name": "阴契护肩",
       "tier": 5,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoulder_5.png",
-      "desc": "九渊从幽隐遗作中悟出一种结印，后人将结印\\n叠加幻化出衍咒装",
+      "desc": "后人从先代遗作中悟出一式结印，层层叠加，幻化出这一身",
       "durability": [
         27,
         27
@@ -357,14 +357,14 @@
       "req_level": 74
     },
     {
-      "name": "血渊护肩",
+      "name": "夜煞护肩",
       "tier": 6,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoulder_6.png",
-      "desc": "随幽隐一起来到有情世间的血涯兽，历经千年\\n后只留下了血涯兽皮",
+      "desc": "相传随先代渡来的巨兽，千年后只余下一张兽皮",
       "durability": [
         32,
         32
@@ -383,14 +383,14 @@
       "req_level": 89
     },
     {
-      "name": "幽道无庸护肩",
+      "name": "幽都泣血护肩",
       "tier": 7,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoulder_7.png",
-      "desc": "传说是幽隐的遗物，隐隐有魔道的气息流转，\\n不过殊途同归，大道无庸",
+      "desc": "相传为上古遗物，隐有幽冥之气流转，静夜时似有泣声",
       "durability": [
         36,
         36
@@ -505,14 +505,14 @@
   ],
   "armors": [
     {
-      "name": "玄结衣",
+      "name": "冥纹衣",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_armor_1.png",
-      "desc": "逐灵族祭师幽隐特采百结藤蔓附于荆葛之中，\\n故得名百结",
+      "desc": "族中祭师取百结藤蔓绞入荆葛，织就这一身，故名冥纹",
       "durability": [
         15,
         15
@@ -531,14 +531,14 @@
       "req_level": 15
     },
     {
-      "name": "涤罪衣",
+      "name": "蚀影衣",
       "tier": 2,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_armor_2.png",
-      "desc": "逐灵族的法术与幽界有着千丝万缕的关系，而\\n悔卸装也是如此",
+      "desc": "族中法术与幽界纠葛极深，此装便是那股阴气的载体",
       "durability": [
         20,
         20
@@ -557,14 +557,14 @@
       "req_level": 30
     },
     {
-      "name": "缠妄衣",
+      "name": "蛊丝衣",
       "tier": 3,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_armor_3.png",
-      "desc": "逐灵族的咒语很多，此为专门以驱除心魔的毋\\n涩符咒加持过的装备",
+      "desc": "族中咒语繁多，此装以驱除心魔的咒文反复加持",
       "durability": [
         25,
         25
@@ -583,14 +583,14 @@
       "req_level": 45
     },
     {
-      "name": "蚀澜衣",
+      "name": "幽瘴衣",
       "tier": 4,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_armor_4.png",
-      "desc": "在孤雁岛玄冥墓旁，有一潭黏液其色青莹剧毒\\n无比，得名毒澜",
+      "desc": "孤岛荒墓旁有一潭青莹毒液，浸丝成衣，取名幽瘴",
       "durability": [
         30,
         30
@@ -609,14 +609,14 @@
       "req_level": 60
     },
     {
-      "name": "咒衍衣",
+      "name": "阴契衣",
       "tier": 5,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_armor_5.png",
-      "desc": "九渊从幽隐遗作中悟出一种结印，后人将结印\\n叠加幻化出衍咒装",
+      "desc": "后人从先代遗作中悟出一式结印，层层叠加，幻化出这一身",
       "durability": [
         35,
         35
@@ -635,14 +635,14 @@
       "req_level": 75
     },
     {
-      "name": "血渊衣",
+      "name": "夜煞衣",
       "tier": 6,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_armor_6.png",
-      "desc": "随幽隐一起来到有情世间的血涯兽，历经千年\\n后只留下了血涯兽皮",
+      "desc": "相传随先代渡来的巨兽，千年后只余下一张兽皮",
       "durability": [
         40,
         40
@@ -661,14 +661,14 @@
       "req_level": 90
     },
     {
-      "name": "幽道无庸衣",
+      "name": "幽都泣血衣",
       "tier": 7,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_armor_7.png",
-      "desc": "传说是幽隐的遗物，隐隐有魔道的气息流转，\\n不过殊途同归，大道无庸",
+      "desc": "相传为上古遗物，隐有幽冥之气流转，静夜时似有泣声",
       "durability": [
         45,
         45
@@ -687,14 +687,14 @@
       "req_level": 105
     },
     {
-      "name": "藤葛衣",
+      "name": "麻衣",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_armor_1.png",
-      "desc": "葛衣",
+      "desc": "葛麻粗织，遮身而已",
       "durability": [
         10,
         10
@@ -783,14 +783,14 @@
   ],
   "pants": [
     {
-      "name": "玄结护腿",
+      "name": "冥纹护腿",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_pants_1.png",
-      "desc": "逐灵族祭师幽隐特采百结藤蔓附于荆葛之中，\\n故得名百结",
+      "desc": "族中祭师取百结藤蔓绞入荆葛，织就这一身，故名冥纹",
       "durability": [
         15,
         15
@@ -809,14 +809,14 @@
       "req_level": 19
     },
     {
-      "name": "涤罪护腿",
+      "name": "蚀影护腿",
       "tier": 2,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_pants_2.png",
-      "desc": "逐灵族的法术与幽界有着千丝万缕的关系，而\\n悔卸装也是如此",
+      "desc": "族中法术与幽界纠葛极深，此装便是那股阴气的载体",
       "durability": [
         20,
         20
@@ -835,14 +835,14 @@
       "req_level": 34
     },
     {
-      "name": "缠妄护腿",
+      "name": "蛊丝护腿",
       "tier": 3,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_pants_3.png",
-      "desc": "逐灵族的咒语很多，此为专门以驱除心魔的毋\\n涩符咒加持过的装备",
+      "desc": "族中咒语繁多，此装以驱除心魔的咒文反复加持",
       "durability": [
         25,
         25
@@ -861,14 +861,14 @@
       "req_level": 49
     },
     {
-      "name": "蚀澜护腿",
+      "name": "幽瘴护腿",
       "tier": 4,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_pants_4.png",
-      "desc": "在孤雁岛玄冥墓旁，有一潭黏液其色青莹剧毒\\n无比，得名毒澜",
+      "desc": "孤岛荒墓旁有一潭青莹毒液，浸丝成衣，取名幽瘴",
       "durability": [
         30,
         30
@@ -887,14 +887,14 @@
       "req_level": 64
     },
     {
-      "name": "咒衍护腿",
+      "name": "阴契护腿",
       "tier": 5,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_pants_5.png",
-      "desc": "九渊从幽隐遗作中悟出一种结印，后人将结印\\n叠加幻化出衍咒装",
+      "desc": "后人从先代遗作中悟出一式结印，层层叠加，幻化出这一身",
       "durability": [
         35,
         35
@@ -913,14 +913,14 @@
       "req_level": 79
     },
     {
-      "name": "血渊护腿",
+      "name": "夜煞护腿",
       "tier": 6,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_pants_6.png",
-      "desc": "随幽隐一起来到有情世间的血涯兽，历经千年\\n后只留下了血涯兽皮",
+      "desc": "相传随先代渡来的巨兽，千年后只余下一张兽皮",
       "durability": [
         40,
         40
@@ -939,14 +939,14 @@
       "req_level": 94
     },
     {
-      "name": "幽道无庸护腿",
+      "name": "幽都泣血护腿",
       "tier": 7,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_pants_7.png",
-      "desc": "传说是幽隐的遗物，隐隐有魔道的气息流转，\\n不过殊途同归，大道无庸",
+      "desc": "相传为上古遗物，隐有幽冥之气流转，静夜时似有泣声",
       "durability": [
         45,
         45
@@ -965,14 +965,14 @@
       "req_level": 109
     },
     {
-      "name": "藤葛裙",
+      "name": "麻裙",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_pants_1.png",
-      "desc": "葛裙",
+      "desc": "葛麻粗织的短裙，轻便",
       "durability": [
         10,
         10
@@ -1061,14 +1061,14 @@
   ],
   "shoes": [
     {
-      "name": "玄结鞋",
+      "name": "冥纹鞋",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoes_1.png",
-      "desc": "逐灵族祭师幽隐特采百结藤蔓附于荆葛之中，\\n故得名百结",
+      "desc": "族中祭师取百结藤蔓绞入荆葛，织就这一身，故名冥纹",
       "durability": [
         14,
         14
@@ -1087,14 +1087,14 @@
       "req_level": 5
     },
     {
-      "name": "涤罪鞋",
+      "name": "蚀影鞋",
       "tier": 2,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoes_2.png",
-      "desc": "逐灵族的法术与幽界有着千丝万缕的关系，而\\n悔卸装也是如此",
+      "desc": "族中法术与幽界纠葛极深，此装便是那股阴气的载体",
       "durability": [
         18,
         18
@@ -1113,14 +1113,14 @@
       "req_level": 20
     },
     {
-      "name": "缠妄鞋",
+      "name": "蛊丝鞋",
       "tier": 3,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoes_3.png",
-      "desc": "逐灵族的咒语很多，此为专门以驱除心魔的毋\\n涩符咒加持过的装备",
+      "desc": "族中咒语繁多，此装以驱除心魔的咒文反复加持",
       "durability": [
         23,
         23
@@ -1139,14 +1139,14 @@
       "req_level": 35
     },
     {
-      "name": "蚀澜鞋",
+      "name": "幽瘴鞋",
       "tier": 4,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoes_4.png",
-      "desc": "在孤雁岛玄冥墓旁，有一潭黏液其色青莹剧毒\\n无比，得名毒澜",
+      "desc": "孤岛荒墓旁有一潭青莹毒液，浸丝成衣，取名幽瘴",
       "durability": [
         27,
         27
@@ -1165,14 +1165,14 @@
       "req_level": 50
     },
     {
-      "name": "咒衍鞋",
+      "name": "阴契鞋",
       "tier": 5,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoes_5.png",
-      "desc": "九渊从幽隐遗作中悟出一种结印，后人将结印\\n叠加幻化出衍咒装",
+      "desc": "后人从先代遗作中悟出一式结印，层层叠加，幻化出这一身",
       "durability": [
         32,
         32
@@ -1191,14 +1191,14 @@
       "req_level": 65
     },
     {
-      "name": "血渊鞋",
+      "name": "夜煞鞋",
       "tier": 6,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoes_6.png",
-      "desc": "随幽隐一起来到有情世间的血涯兽，历经千年\\n后只留下了血涯兽皮",
+      "desc": "相传随先代渡来的巨兽，千年后只余下一张兽皮",
       "durability": [
         36,
         36
@@ -1217,14 +1217,14 @@
       "req_level": 80
     },
     {
-      "name": "幽道无庸鞋",
+      "name": "幽都泣血鞋",
       "tier": 7,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_shoes_7.png",
-      "desc": "传说是幽隐的遗物，隐隐有魔道的气息流转，\\n不过殊途同归，大道无庸",
+      "desc": "相传为上古遗物，隐有幽冥之气流转，静夜时似有泣声",
       "durability": [
         41,
         41
@@ -1313,14 +1313,14 @@
   ],
   "gloves": [
     {
-      "name": "玄结护腕",
+      "name": "冥纹护腕",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_glove_1.png",
-      "desc": "逐灵族祭师幽隐特采百结藤蔓附于荆葛之中，\\n故得名百结",
+      "desc": "族中祭师取百结藤蔓绞入荆葛，织就这一身，故名冥纹",
       "durability": [
         12,
         12
@@ -1339,14 +1339,14 @@
       "req_level": 7
     },
     {
-      "name": "涤罪护腕",
+      "name": "蚀影护腕",
       "tier": 2,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_glove_2.png",
-      "desc": "逐灵族的法术与幽界有着千丝万缕的关系，而\\n悔卸装也是如此",
+      "desc": "族中法术与幽界纠葛极深，此装便是那股阴气的载体",
       "durability": [
         16,
         16
@@ -1365,14 +1365,14 @@
       "req_level": 22
     },
     {
-      "name": "缠妄护腕",
+      "name": "蛊丝护腕",
       "tier": 3,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_glove_3.png",
-      "desc": "逐灵族的咒语很多，此为专门以驱除心魔的毋\\n涩符咒加持过的装备",
+      "desc": "族中咒语繁多，此装以驱除心魔的咒文反复加持",
       "durability": [
         20,
         20
@@ -1391,14 +1391,14 @@
       "req_level": 37
     },
     {
-      "name": "蚀澜护腕",
+      "name": "幽瘴护腕",
       "tier": 4,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_glove_4.png",
-      "desc": "在孤雁岛玄冥墓旁，有一潭黏液其色青莹剧毒\\n无比，得名毒澜",
+      "desc": "孤岛荒墓旁有一潭青莹毒液，浸丝成衣，取名幽瘴",
       "durability": [
         24,
         24
@@ -1417,14 +1417,14 @@
       "req_level": 52
     },
     {
-      "name": "咒衍护腕",
+      "name": "阴契护腕",
       "tier": 5,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_glove_5.png",
-      "desc": "九渊从幽隐遗作中悟出一种结印，后人将结印\\n叠加幻化出衍咒装",
+      "desc": "后人从先代遗作中悟出一式结印，层层叠加，幻化出这一身",
       "durability": [
         28,
         28
@@ -1443,14 +1443,14 @@
       "req_level": 67
     },
     {
-      "name": "血渊护腕",
+      "name": "夜煞护腕",
       "tier": 6,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_glove_6.png",
-      "desc": "随幽隐一起来到有情世间的血涯兽，历经千年\\n后只留下了血涯兽皮",
+      "desc": "相传随先代渡来的巨兽，千年后只余下一张兽皮",
       "durability": [
         32,
         32
@@ -1469,14 +1469,14 @@
       "req_level": 82
     },
     {
-      "name": "幽道无庸护腕",
+      "name": "幽都泣血护腕",
       "tier": 7,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_glove_7.png",
-      "desc": "传说是幽隐的遗物，隐隐有魔道的气息流转，\\n不过殊途同归，大道无庸",
+      "desc": "相传为上古遗物，隐有幽冥之气流转，静夜时似有泣声",
       "durability": [
         36,
         36
@@ -1565,14 +1565,14 @@
   ],
   "belts": [
     {
-      "name": "玄结腰带",
+      "name": "冥纹腰带",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_belt_1.png",
-      "desc": "逐灵族祭师幽隐特采百结藤蔓附于荆葛之中，\\n故得名百结",
+      "desc": "族中祭师取百结藤蔓绞入荆葛，织就这一身，故名冥纹",
       "durability": [
         12,
         12
@@ -1591,14 +1591,14 @@
       "req_level": 13
     },
     {
-      "name": "涤罪腰带",
+      "name": "蚀影腰带",
       "tier": 2,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_belt_2.png",
-      "desc": "逐灵族的法术与幽界有着千丝万缕的关系，而\\n悔卸装也是如此",
+      "desc": "族中法术与幽界纠葛极深，此装便是那股阴气的载体",
       "durability": [
         16,
         16
@@ -1617,14 +1617,14 @@
       "req_level": 28
     },
     {
-      "name": "缠妄腰带",
+      "name": "蛊丝腰带",
       "tier": 3,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_belt_3.png",
-      "desc": "逐灵族的咒语很多，此为专门以驱除心魔的毋\\n涩符咒加持过的装备",
+      "desc": "族中咒语繁多，此装以驱除心魔的咒文反复加持",
       "durability": [
         20,
         20
@@ -1643,14 +1643,14 @@
       "req_level": 43
     },
     {
-      "name": "蚀澜腰带",
+      "name": "幽瘴腰带",
       "tier": 4,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_belt_4.png",
-      "desc": "在孤雁岛玄冥墓旁，有一潭黏液其色青莹剧毒\\n无比，得名毒澜",
+      "desc": "孤岛荒墓旁有一潭青莹毒液，浸丝成衣，取名幽瘴",
       "durability": [
         24,
         24
@@ -1669,14 +1669,14 @@
       "req_level": 58
     },
     {
-      "name": "咒衍腰带",
+      "name": "阴契腰带",
       "tier": 5,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_belt_5.png",
-      "desc": "九渊从幽隐遗作中悟出一种结印，后人将结印\\n叠加幻化出衍咒装",
+      "desc": "后人从先代遗作中悟出一式结印，层层叠加，幻化出这一身",
       "durability": [
         28,
         28
@@ -1695,14 +1695,14 @@
       "req_level": 73
     },
     {
-      "name": "血渊腰带",
+      "name": "夜煞腰带",
       "tier": 6,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_belt_6.png",
-      "desc": "随幽隐一起来到有情世间的血涯兽，历经千年\\n后只留下了血涯兽皮",
+      "desc": "相传随先代渡来的巨兽，千年后只余下一张兽皮",
       "durability": [
         32,
         32
@@ -1721,14 +1721,14 @@
       "req_level": 88
     },
     {
-      "name": "幽道无庸腰带",
+      "name": "幽都泣血腰带",
       "tier": 7,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_belt_7.png",
-      "desc": "传说是幽隐的遗物，隐隐有魔道的气息流转，\\n不过殊途同归，大道无庸",
+      "desc": "相传为上古遗物，隐有幽冥之气流转，静夜时似有泣声",
       "durability": [
         36,
         36
@@ -1817,14 +1817,14 @@
   ],
   "cloaks": [
     {
-      "name": "玄结披风",
+      "name": "冥纹披风",
       "tier": 1,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_cloak_1.png",
-      "desc": "逐灵族祭师幽隐特采百结藤蔓附于荆葛之中，\\n故得名百结",
+      "desc": "族中祭师取百结藤蔓绞入荆葛，织就这一身，故名冥纹",
       "durability": [
         12,
         12
@@ -1843,14 +1843,14 @@
       "req_level": 17
     },
     {
-      "name": "涤罪披风",
+      "name": "蚀影披风",
       "tier": 2,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_cloak_2.png",
-      "desc": "逐灵族的法术与幽界有着千丝万缕的关系，而\\n悔卸装也是如此",
+      "desc": "族中法术与幽界纠葛极深，此装便是那股阴气的载体",
       "durability": [
         16,
         16
@@ -1869,14 +1869,14 @@
       "req_level": 32
     },
     {
-      "name": "缠妄披风",
+      "name": "蛊丝披风",
       "tier": 3,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_cloak_3.png",
-      "desc": "逐灵族的咒语很多，此为专门以驱除心魔的毋\\n涩符咒加持过的装备",
+      "desc": "族中咒语繁多，此装以驱除心魔的咒文反复加持",
       "durability": [
         20,
         20
@@ -1895,14 +1895,14 @@
       "req_level": 47
     },
     {
-      "name": "蚀澜披风",
+      "name": "幽瘴披风",
       "tier": 4,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_cloak_4.png",
-      "desc": "在孤雁岛玄冥墓旁，有一潭黏液其色青莹剧毒\\n无比，得名毒澜",
+      "desc": "孤岛荒墓旁有一潭青莹毒液，浸丝成衣，取名幽瘴",
       "durability": [
         24,
         24
@@ -1921,14 +1921,14 @@
       "req_level": 62
     },
     {
-      "name": "咒衍披风",
+      "name": "阴契披风",
       "tier": 5,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_cloak_5.png",
-      "desc": "九渊从幽隐遗作中悟出一种结印，后人将结印\\n叠加幻化出衍咒装",
+      "desc": "后人从先代遗作中悟出一式结印，层层叠加，幻化出这一身",
       "durability": [
         28,
         28
@@ -1947,14 +1947,14 @@
       "req_level": 77
     },
     {
-      "name": "血渊披风",
+      "name": "夜煞披风",
       "tier": 6,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_cloak_6.png",
-      "desc": "随幽隐一起来到有情世间的血涯兽，历经千年\\n后只留下了血涯兽皮",
+      "desc": "相传随先代渡来的巨兽，千年后只余下一张兽皮",
       "durability": [
         32,
         32
@@ -1973,14 +1973,14 @@
       "req_level": 92
     },
     {
-      "name": "幽道无庸披风",
+      "name": "幽都泣血披风",
       "tier": 7,
       "job": "darkwitch",
       "hand": "none",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_cloak_7.png",
-      "desc": "传说是幽隐的遗物，隐隐有魔道的气息流转，\\n不过殊途同归，大道无庸",
+      "desc": "相传为上古遗物，隐有幽冥之气流转，静夜时似有泣声",
       "durability": [
         36,
         36
@@ -2069,14 +2069,14 @@
   ],
   "weapons": [
     {
-      "name": "双刃剑",
+      "name": "交刃剑",
       "tier": 1,
       "job": "darkwitch",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_weapon_1.png",
-      "desc": "剑身虽短，却锋利无比",
+      "desc": "剑身短而交刃，出手极快",
       "durability": [
         15,
         15
@@ -2102,7 +2102,7 @@
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_weapon_2.png",
-      "desc": "剑身古朴，剑气穿心而过，伤人于无形",
+      "desc": "剑身古拙，出手无声，伤人于无形",
       "durability": [
         20,
         20
@@ -2128,7 +2128,7 @@
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_weapon_3.png",
-      "desc": "形如月牙，剑身有突刺",
+      "desc": "刃形如月牙，背起突刺",
       "durability": [
         25,
         25
@@ -2147,14 +2147,14 @@
       "req_level": 39
     },
     {
-      "name": "九曲刃",
+      "name": "盘蛇刃",
       "tier": 4,
       "job": "darkwitch",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_weapon_4.png",
-      "desc": "剑身带钩，其形如九曲回旋",
+      "desc": "刃身带钩，盘曲如蛇",
       "durability": [
         30,
         30
@@ -2173,14 +2173,14 @@
       "req_level": 54
     },
     {
-      "name": "逐星刺",
+      "name": "摘星刺",
       "tier": 5,
       "job": "darkwitch",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_weapon_5.png",
-      "desc": "剑身寒气逼人，剑光如闪电追星",
+      "desc": "剑身寒气逼人，挥出如一线摘星",
       "durability": [
         35,
         35
@@ -2199,14 +2199,14 @@
       "req_level": 69
     },
     {
-      "name": "断魂刃",
+      "name": "噬髓",
       "tier": 6,
       "job": "darkwitch",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_weapon_6.png",
-      "desc": "铸造行匠师用陨铁打制而成，因其锋利异常被\\n称为断肠剑",
+      "desc": "铸造行匠师以陨铁打制，锋利异常，入骨噬髓",
       "durability": [
         40,
         40
@@ -2225,14 +2225,14 @@
       "req_level": 84
     },
     {
-      "name": "龙骨刃",
+      "name": "龙骨",
       "tier": 7,
       "job": "darkwitch",
       "hand": "single",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_weapon_7.png",
-      "desc": "传说是用蛮祖杀的海怪千须蜃的骸骨制成，故\\n名鱼刃",
+      "desc": "相传以蚩尤所斩海怪的骸骨磨成，故名龙骨",
       "durability": [
         45,
         45
@@ -2258,7 +2258,7 @@
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/darkwitch_weapon_1.png",
-      "desc": "以藤蔓编制而成",
+      "desc": "荆条缠作剑形，轻而便于藏",
       "durability": [
         10,
         10

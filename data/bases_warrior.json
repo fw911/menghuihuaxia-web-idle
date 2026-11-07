@@ -1,14 +1,14 @@
 {
   "helmets": [
     {
-      "name": "荒兽盔",
+      "name": "蛮骨盔",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_helmet_1.jpg",
-      "desc": "北荒族男子成年之时，会猎取一种异兽，取其\n皮毛制成一套防具",
+      "desc": "荒原男子成年，猎异兽取其骨革，缝作一身护甲，此俗相沿，成了战士的标记",
       "durability": [
         14,
         14
@@ -27,14 +27,14 @@
       "req_level": 12
     },
     {
-      "name": "灵犀盔",
+      "name": "犀革盔",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_helmet_2.jpg",
-      "desc": "灵角兽皮缀以铁环兽骨，将全身上下要害之处\n保护起来",
+      "desc": "取犀兽之革缝作甲，缀骨环于肩肘，周身要害皆护",
       "durability": [
         18,
         18
@@ -53,14 +53,14 @@
       "req_level": 27
     },
     {
-      "name": "寒铁盔",
+      "name": "苍岩盔",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_helmet_3.jpg",
-      "desc": "灵角兽骨外覆产于玄岳的玄铁，千锤百炼而成",
+      "desc": "兽骨为胎，外覆苍岩玄铁，千锤百炼始成",
       "durability": [
         23,
         23
@@ -79,14 +79,14 @@
       "req_level": 42
     },
     {
-      "name": "琉铜盔",
+      "name": "赤玉盔",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_helmet_4.jpg",
-      "desc": "以产于燥热之地的幻铜为基，以灵犀筋络相连",
+      "desc": "以燥地赤玉为基，脉络相连，佩之温润",
       "durability": [
         27,
         27
@@ -105,14 +105,14 @@
       "req_level": 57
     },
     {
-      "name": "曜银盔",
+      "name": "陨铁盔",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_helmet_5.jpg",
-      "desc": "以天外陨坠的魔银石为主，由铸造行辅以玄铁\n幻铜精心打造而成",
+      "desc": "天外陨铁为主，辅以寒石，经铸造行反复锻打而成",
       "durability": [
         32,
         32
@@ -131,14 +131,14 @@
       "req_level": 72
     },
     {
-      "name": "天金盔",
+      "name": "龙鳞盔",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_helmet_6.jpg",
-      "desc": "集山川之灵气，合五行之妙用的仙尘金，惟有\n炼器宗师方可炼制",
+      "desc": "山川灵气凝作鳞纹，五行相合，非炼器宗师不能成",
       "durability": [
         36,
         36
@@ -157,14 +157,14 @@
       "req_level": 87
     },
     {
-      "name": "孤星逐月盔",
+      "name": "寒戈映月盔",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_helmet_7.jpg",
-      "desc": "传说绝代英雄神羿的战甲名孤星，而现在的孤\n星战月，是由原来的碎片为魂炼制而成",
+      "desc": "传说上古后羿的战甲名「孤星」，此装以其残片为魂重炼，戈影映月",
       "durability": [
         41,
         41
@@ -253,14 +253,14 @@
   ],
   "shoulders": [
     {
-      "name": "荒兽护肩",
+      "name": "蛮骨护肩",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
-      "icon": "static/icons/bases/warrior_shoulder_2.jpg",
-      "desc": "北荒族男子成年之时，会猎取一种异兽，取其皮毛制成一套防具，此风俗流传至今，成了战士身份的标志",
+      "icon": "static/icons/bases/warrior_shoulder_1.jpg",
+      "desc": "荒原男子成年，猎异兽取其骨革，缝作一身护甲，此俗相沿，成了战士的标记",
       "durability": [
         10,
         10
@@ -279,14 +279,14 @@
       "req_level": 15
     },
     {
-      "name": "灵犀护肩",
+      "name": "犀革护肩",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoulder_2.jpg",
-      "desc": "灵角兽皮缀以铁环兽骨，将全身上下要害之处\n保护起来",
+      "desc": "取犀兽之革缝作甲，缀骨环于肩肘，周身要害皆护",
       "durability": [
         18,
         18
@@ -305,14 +305,14 @@
       "req_level": 30
     },
     {
-      "name": "寒铁护肩",
+      "name": "苍岩护肩",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoulder_3.jpg",
-      "desc": "灵角兽骨外覆产于玄岳的玄铁，千锤百炼而成",
+      "desc": "兽骨为胎，外覆苍岩玄铁，千锤百炼始成",
       "durability": [
         23,
         23
@@ -331,14 +331,14 @@
       "req_level": 45
     },
     {
-      "name": "琉铜护肩",
+      "name": "赤玉护肩",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoulder_4.jpg",
-      "desc": "以产于燥热之地的幻铜为基，以灵犀筋络相连",
+      "desc": "以燥地赤玉为基，脉络相连，佩之温润",
       "durability": [
         27,
         27
@@ -357,14 +357,14 @@
       "req_level": 60
     },
     {
-      "name": "曜银护肩",
+      "name": "陨铁护肩",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoulder_5.jpg",
-      "desc": "以天外陨坠的魔银石为主，由铸造行辅以玄铁\n幻铜精心打造而成",
+      "desc": "天外陨铁为主，辅以寒石，经铸造行反复锻打而成",
       "durability": [
         32,
         32
@@ -383,14 +383,14 @@
       "req_level": 75
     },
     {
-      "name": "天金护肩",
+      "name": "龙鳞护肩",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 1,
       "icon": "static/icons/bases/warrior_shoulder_6.jpg",
-      "desc": "集山川之灵气，合五行之妙用的仙尘金，惟有\n炼器宗师方可炼制",
+      "desc": "山川灵气凝作鳞纹，五行相合，非炼器宗师不能成",
       "durability": [
         36,
         36
@@ -409,14 +409,14 @@
       "req_level": 90
     },
     {
-      "name": "孤星逐月护肩",
+      "name": "寒戈映月护肩",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoulder_7.jpg",
-      "desc": "传说绝代英雄神羿的战甲名孤星，而现在的孤\n星战月，是由原来的碎片为魂炼制而成",
+      "desc": "传说上古后羿的战甲名「孤星」，此装以其残片为魂重炼，戈影映月",
       "durability": [
         41,
         41
@@ -505,14 +505,14 @@
   ],
   "gloves": [
     {
-      "name": "荒兽护腕",
+      "name": "蛮骨护腕",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_glove_1.jpg",
-      "desc": "北荒族男子成年之时，会猎取一种异兽，取其\n皮毛制成一套防具",
+      "desc": "荒原男子成年，猎异兽取其骨革，缝作一身护甲，此俗相沿，成了战士的标记",
       "durability": [
         12,
         12
@@ -531,14 +531,14 @@
       "req_level": 8
     },
     {
-      "name": "灵犀护腕",
+      "name": "犀革护腕",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_glove_2.jpg",
-      "desc": "灵角兽皮缀以铁环兽骨，将全身上下要害之处\n保护起来",
+      "desc": "取犀兽之革缝作甲，缀骨环于肩肘，周身要害皆护",
       "durability": [
         16,
         16
@@ -557,14 +557,14 @@
       "req_level": 23
     },
     {
-      "name": "寒铁护腕",
+      "name": "苍岩护腕",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 1,
       "icon": "static/icons/bases/warrior_glove_3.jpg",
-      "desc": "灵角兽骨外覆产于玄岳的玄铁，千锤百炼而成",
+      "desc": "兽骨为胎，外覆苍岩玄铁，千锤百炼始成",
       "durability": [
         20,
         20
@@ -583,14 +583,14 @@
       "req_level": 38
     },
     {
-      "name": "琉铜护腕",
+      "name": "赤玉护腕",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_glove_4.jpg",
-      "desc": "以产于燥热之地的幻铜为基，以灵犀筋络相连",
+      "desc": "以燥地赤玉为基，脉络相连，佩之温润",
       "durability": [
         24,
         24
@@ -609,14 +609,14 @@
       "req_level": 53
     },
     {
-      "name": "曜银护腕",
+      "name": "陨铁护腕",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_glove_5.jpg",
-      "desc": "以天外陨坠的魔银石为主，由铸造行辅以玄铁\n幻铜精心打造而成",
+      "desc": "天外陨铁为主，辅以寒石，经铸造行反复锻打而成",
       "durability": [
         28,
         28
@@ -635,14 +635,14 @@
       "req_level": 68
     },
     {
-      "name": "天金护腕",
+      "name": "龙鳞护腕",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_glove_6.jpg",
-      "desc": "集山川之灵气，合五行之妙用的仙尘金，惟有\n炼器宗师方可炼制",
+      "desc": "山川灵气凝作鳞纹，五行相合，非炼器宗师不能成",
       "durability": [
         32,
         32
@@ -661,14 +661,14 @@
       "req_level": 83
     },
     {
-      "name": "孤星逐月护腕",
+      "name": "寒戈映月护腕",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_glove_7.jpg",
-      "desc": "传说绝代英雄神羿的战甲名孤星，而现在的孤\n星战月，是由原来的碎片为魂炼制而成",
+      "desc": "传说上古后羿的战甲名「孤星」，此装以其残片为魂重炼，戈影映月",
       "durability": [
         36,
         36
@@ -757,14 +757,14 @@
   ],
   "pants": [
     {
-      "name": "兽皮裙",
+      "name": "革裙",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": true,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_pants_1.jpg",
-      "desc": "以兽皮制成",
+      "desc": "兽皮裁作短裙，便于奔走",
       "durability": [
         10,
         10
@@ -783,14 +783,14 @@
       "req_level": 1
     },
     {
-      "name": "荒兽护腿",
+      "name": "蛮骨护腿",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_pants_1.jpg",
-      "desc": "北荒族男子成年之时，会猎取一种异兽，取其\n皮毛制成一套防具",
+      "desc": "荒原男子成年，猎异兽取其骨革，缝作一身护甲，此俗相沿，成了战士的标记",
       "durability": [
         10,
         10
@@ -809,14 +809,14 @@
       "req_level": 20
     },
     {
-      "name": "灵犀护腿",
+      "name": "犀革护腿",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_pants_2.jpg",
-      "desc": "灵角兽皮缀以铁环兽骨，将全身上下要害之处\n保护起来",
+      "desc": "取犀兽之革缝作甲，缀骨环于肩肘，周身要害皆护",
       "durability": [
         20,
         20
@@ -835,14 +835,14 @@
       "req_level": 35
     },
     {
-      "name": "寒铁护腿",
+      "name": "苍岩护腿",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_pants_3.jpg",
-      "desc": "灵角兽骨外覆产于玄岳的玄铁，千锤百炼而成",
+      "desc": "兽骨为胎，外覆苍岩玄铁，千锤百炼始成",
       "durability": [
         25,
         25
@@ -861,14 +861,14 @@
       "req_level": 50
     },
     {
-      "name": "琉铜护腿",
+      "name": "赤玉护腿",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_pants_4.jpg",
-      "desc": "以产于燥热之地的幻铜为基，以灵犀筋络相连",
+      "desc": "以燥地赤玉为基，脉络相连，佩之温润",
       "durability": [
         30,
         30
@@ -887,14 +887,14 @@
       "req_level": 65
     },
     {
-      "name": "曜银护腿",
+      "name": "陨铁护腿",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 1,
       "icon": "static/icons/bases/warrior_pants_5.jpg",
-      "desc": "以天外陨坠的魔银石为主，由铸造行辅以玄铁\n幻铜精心打造而成",
+      "desc": "天外陨铁为主，辅以寒石，经铸造行反复锻打而成",
       "durability": [
         35,
         35
@@ -913,14 +913,14 @@
       "req_level": 80
     },
     {
-      "name": "天金护腿",
+      "name": "龙鳞护腿",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_pants_6.jpg",
-      "desc": "集山川之灵气，合五行之妙用的仙尘金，惟有\n炼器宗师方可炼制",
+      "desc": "山川灵气凝作鳞纹，五行相合，非炼器宗师不能成",
       "durability": [
         40,
         40
@@ -939,14 +939,14 @@
       "req_level": 95
     },
     {
-      "name": "孤星逐月护腿",
+      "name": "寒戈映月护腿",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_pants_7.jpg",
-      "desc": "传说绝代英雄神羿的战甲名孤星，而现在的孤\n星战月，是由原来的碎片为魂炼制而成",
+      "desc": "传说上古后羿的战甲名「孤星」，此装以其残片为魂重炼，戈影映月",
       "durability": [
         45,
         45
@@ -1035,14 +1035,14 @@
   ],
   "cloaks": [
     {
-      "name": "荒兽披风",
+      "name": "蛮骨披风",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
-      "icon": "static/icons/bases/warrior_cloak_2.jpg",
-      "desc": "北荒族男子成年之时，会猎取一种异兽，取其\n皮毛制成一套防具",
+      "icon": "static/icons/bases/warrior_cloak_1.jpg",
+      "desc": "荒原男子成年，猎异兽取其骨革，缝作一身护甲，此俗相沿，成了战士的标记",
       "durability": [
         10,
         10
@@ -1061,14 +1061,14 @@
       "req_level": 18
     },
     {
-      "name": "灵犀披风",
+      "name": "犀革披风",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_cloak_2.jpg",
-      "desc": "灵角兽皮缀以铁环兽骨，将全身上下要害之处\n保护起来",
+      "desc": "取犀兽之革缝作甲，缀骨环于肩肘，周身要害皆护",
       "durability": [
         16,
         16
@@ -1087,14 +1087,14 @@
       "req_level": 33
     },
     {
-      "name": "寒铁披风",
+      "name": "苍岩披风",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_cloak_3.jpg",
-      "desc": "灵角兽骨外覆产于玄岳的玄铁，千锤百炼而成",
+      "desc": "兽骨为胎，外覆苍岩玄铁，千锤百炼始成",
       "durability": [
         20,
         20
@@ -1113,14 +1113,14 @@
       "req_level": 48
     },
     {
-      "name": "琉铜披风",
+      "name": "赤玉披风",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_cloak_4.jpg",
-      "desc": "以产于燥热之地的幻铜为基，以灵犀筋络相连",
+      "desc": "以燥地赤玉为基，脉络相连，佩之温润",
       "durability": [
         24,
         24
@@ -1139,14 +1139,14 @@
       "req_level": 63
     },
     {
-      "name": "曜银披风",
+      "name": "陨铁披风",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_cloak_5.jpg",
-      "desc": "以天外陨坠的魔银石为主，由铸造行辅以玄铁\n幻铜精心打造而成",
+      "desc": "天外陨铁为主，辅以寒石，经铸造行反复锻打而成",
       "durability": [
         28,
         28
@@ -1165,14 +1165,14 @@
       "req_level": 78
     },
     {
-      "name": "天金披风",
+      "name": "龙鳞披风",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_cloak_6.jpg",
-      "desc": "集山川之灵气，合五行之妙用的仙尘金，惟有\n炼器宗师方可炼制",
+      "desc": "山川灵气凝作鳞纹，五行相合，非炼器宗师不能成",
       "durability": [
         32,
         32
@@ -1191,14 +1191,14 @@
       "req_level": 93
     },
     {
-      "name": "孤星逐月披风",
+      "name": "寒戈映月披风",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_cloak_7.jpg",
-      "desc": "传说绝代英雄神羿的战甲名孤星，而现在的孤\n星战月，是由原来的碎片为魂炼制而成",
+      "desc": "传说上古后羿的战甲名「孤星」，此装以其残片为魂重炼，戈影映月",
       "durability": [
         36,
         36
@@ -1313,14 +1313,14 @@
       "req_level": 0
     },
     {
-      "name": "荒兽铠",
+      "name": "蛮骨铠",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_armor_1.jpg",
-      "desc": "北荒族男子成年之时，会猎取一种异兽，取其\n皮毛制成一套防具",
+      "desc": "荒原男子成年，猎异兽取其骨革，缝作一身护甲，此俗相沿，成了战士的标记",
       "durability": [
         15,
         15
@@ -1339,14 +1339,14 @@
       "req_level": 16
     },
     {
-      "name": "灵犀铠",
+      "name": "犀革铠",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_armor_2.jpg",
-      "desc": "灵角兽皮缀以铁环兽骨，将全身上下要害之处\n保护起来",
+      "desc": "取犀兽之革缝作甲，缀骨环于肩肘，周身要害皆护",
       "durability": [
         20,
         20
@@ -1365,14 +1365,14 @@
       "req_level": 31
     },
     {
-      "name": "寒铁铠",
+      "name": "苍岩铠",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_armor_3.jpg",
-      "desc": "灵角兽骨外覆产于玄岳的玄铁，千锤百炼而成",
+      "desc": "兽骨为胎，外覆苍岩玄铁，千锤百炼始成",
       "durability": [
         25,
         25
@@ -1391,14 +1391,14 @@
       "req_level": 46
     },
     {
-      "name": "琉铜铠",
+      "name": "赤玉铠",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_armor_4.jpg",
-      "desc": "以产于燥热之地的幻铜为基，以灵犀筋络相连",
+      "desc": "以燥地赤玉为基，脉络相连，佩之温润",
       "durability": [
         30,
         30
@@ -1417,14 +1417,14 @@
       "req_level": 61
     },
     {
-      "name": "曜银铠",
+      "name": "陨铁铠",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 1,
       "icon": "static/icons/bases/warrior_armor_5.jpg",
-      "desc": "以天外陨坠的魔银石为主，由铸造行辅以玄铁\n幻铜精心打造而成",
+      "desc": "天外陨铁为主，辅以寒石，经铸造行反复锻打而成",
       "durability": [
         35,
         35
@@ -1443,14 +1443,14 @@
       "req_level": 76
     },
     {
-      "name": "天金铠",
+      "name": "龙鳞铠",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_armor_6.jpg",
-      "desc": "集山川之灵气，合五行之妙用的仙尘金，惟有\n炼器宗师方可炼制",
+      "desc": "山川灵气凝作鳞纹，五行相合，非炼器宗师不能成",
       "durability": [
         40,
         40
@@ -1469,14 +1469,14 @@
       "req_level": 91
     },
     {
-      "name": "孤星逐月铠",
+      "name": "寒戈映月铠",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_armor_7.jpg",
-      "desc": "传说绝代英雄神羿的战甲名孤星，而现在的孤\n星战月，是由原来的碎片为魂炼制而成",
+      "desc": "传说上古后羿的战甲名「孤星」，此装以其残片为魂重炼，戈影映月",
       "durability": [
         45,
         45
@@ -1565,14 +1565,14 @@
   ],
   "weapons": [
     {
-      "name": "砺岩刀",
+      "name": "砺刃",
       "tier": 1,
       "job": "warrior",
       "hand": "单手",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/weapon_014.jpg",
-      "desc": "以岩石打磨而成",
+      "desc": "山岩粗磨而成，钝则再砺",
       "durability": [
         10,
         10
@@ -1592,14 +1592,14 @@
       "kind": "dao"
     },
     {
-      "name": "沉铜刀",
+      "name": "黑砂刀",
       "tier": 1,
       "job": "warrior",
       "hand": "单手",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/weapon_015.jpg",
-      "desc": "用紫铜杂以精铁锻制而成，有一定身份及地位\n的人才能佩戴",
+      "desc": "紫铜掺精铁锻成，非有身份者不得佩",
       "durability": [
         10,
         10
@@ -1619,14 +1619,14 @@
       "kind": "dao"
     },
     {
-      "name": "玄乌刀",
+      "name": "鹤喙刀",
       "tier": 2,
       "job": "warrior",
       "hand": "单手",
       "is_newbie": false,
       "sockets": 2,
       "icon": "static/icons/bases/weapon_011.jpg",
-      "desc": "以乌金砂提炼锻制，刀头如鹤嘴，刀背有倒刺",
+      "desc": "乌金砂炼成，刀头似鹤喙，背起倒钩",
       "durability": [
         20,
         20
@@ -1646,14 +1646,14 @@
       "kind": "dao"
     },
     {
-      "name": "龙脊刀",
+      "name": "藏刃",
       "tier": 3,
       "job": "warrior",
       "hand": "单手",
       "is_newbie": false,
       "sockets": 2,
       "icon": "static/icons/bases/weapon_010.jpg",
-      "desc": "与其说是刀，倒不如说是剑来得更合适，刀身\n起伏，锋利无比",
+      "desc": "名为刀，形却近剑，刃身起伏，利不可当",
       "durability": [
         25,
         25
@@ -1673,14 +1673,14 @@
       "kind": "dao"
     },
     {
-      "name": "断梦刀",
+      "name": "镌纹刀",
       "tier": 4,
       "job": "warrior",
       "hand": "单手",
       "is_newbie": false,
       "sockets": 2,
       "icon": "static/icons/bases/weapon_009.jpg",
-      "desc": "刀身刻有符纹，断魂碎梦，故名碎梦刀",
+      "desc": "刀身镌符，魂梦为之断，故名断梦",
       "durability": [
         30,
         30
@@ -1700,14 +1700,14 @@
       "kind": "dao"
     },
     {
-      "name": "裂骨惊风",
+      "name": "狰狞噬骨",
       "tier": 5,
       "job": "warrior",
       "hand": "单手",
       "is_newbie": false,
       "sockets": 2,
       "icon": "static/icons/bases/weapon_001.jpg",
-      "desc": "狰狞诡异，错骨惊风",
+      "desc": "斧形狰狞，落处裂骨，风过犹带寒声",
       "durability": [
         35,
         35
@@ -1727,14 +1727,14 @@
       "kind": ""
     },
     {
-      "name": "浑璞刀",
+      "name": "浑朴",
       "tier": 6,
       "job": "warrior",
       "hand": "单手",
       "is_newbie": false,
       "sockets": 2,
       "icon": "static/icons/bases/weapon_003.jpg",
-      "desc": "刀身造型古朴，可谓大巧若拙，刀名古意",
+      "desc": "刀身不施纹饰，愈看愈见古拙",
       "durability": [
         40,
         40
@@ -1754,14 +1754,14 @@
       "kind": "dao"
     },
     {
-      "name": "蔽月刀",
+      "name": "曜星",
       "tier": 7,
       "job": "warrior",
       "hand": "单手",
       "is_newbie": false,
       "sockets": 2,
       "icon": "static/icons/bases/weapon_012.jpg",
-      "desc": "传说锻制时，用隐龙岭密咒加持，制成后流光\n四射，掩月夺目",
+      "desc": "锻时以密咒加持，成后流光夺目，几可吞月",
       "durability": [
         45,
         45
@@ -1788,7 +1788,7 @@
       "is_newbie": false,
       "sockets": 1,
       "icon": "static/icons/bases/weapon_002.jpg",
-      "desc": "斧刃锋利，断金如切腐木",
+      "desc": "刃利无比，砍金铁如剁朽柴",
       "durability": [
         15,
         15
@@ -1808,14 +1808,14 @@
       "kind": "fu"
     },
     {
-      "name": "璞玉斧",
+      "name": "顽石斧",
       "tier": 2,
       "job": "warrior",
       "hand": "双手",
       "is_newbie": false,
       "sockets": 1,
       "icon": "static/icons/bases/weapon_005.jpg",
-      "desc": "其形虽有些怪异，却威力惊人，即便坚硬如玉\n石者也莫能匹敌",
+      "desc": "形貌虽怪，锋威却足以碎玉开石",
       "durability": [
         20,
         20
@@ -1835,14 +1835,14 @@
       "kind": "fu"
     },
     {
-      "name": "噬血斧",
+      "name": "啖魂斧",
       "tier": 3,
       "job": "warrior",
       "hand": "双手",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/weapon_013.jpg",
-      "desc": "血肉之躯岂能挡得住这饮血斧",
+      "desc": "刃饮鲜血，血肉之躯难当其锋",
       "durability": [
         25,
         25
@@ -1869,7 +1869,7 @@
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/weapon_008.jpg",
-      "desc": "斧名离人，意思是斧刃所指，便会与身体分离",
+      "desc": "刃锋所指，魂与身两分",
       "durability": [
         30,
         30
@@ -1896,7 +1896,7 @@
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/weapon_007.jpg",
-      "desc": "斧刃极薄，挥动之际不带一丝风尘",
+      "desc": "刃薄如纸，挥时连风都不惊",
       "durability": [
         35,
         35
@@ -1916,14 +1916,14 @@
       "kind": "fu"
     },
     {
-      "name": "惊鸿",
+      "name": "贯日",
       "tier": 6,
       "job": "warrior",
       "hand": "双手",
       "is_newbie": false,
       "sockets": 1,
       "icon": "static/icons/bases/weapon_006.jpg",
-      "desc": "斧名惊虹，意思是指挥舞时闪烁的寒光更胜过\n天上的彩虹",
+      "desc": "挥动时刃光如鸿影掠空，一闪而过",
       "durability": [
         40,
         40
@@ -1943,14 +1943,14 @@
       "kind": "fu"
     },
     {
-      "name": "幽冥斧",
+      "name": "裂魂",
       "tier": 7,
       "job": "warrior",
       "hand": "双手",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/weapon_004.jpg",
-      "desc": "传说是勾魄从地府带到有情世间的战斧",
+      "desc": "取九幽底铁锻成，刃过处魂随其断",
       "durability": [
         45,
         45
@@ -2026,14 +2026,14 @@
   ],
   "shields": [
     {
-      "name": "虬藤盾",
+      "name": "缠枝盾",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shield_1.jpg",
-      "desc": "用盘于盘龙木上的枯藤，浸于冽泉编制而成",
+      "desc": "取盘绕古木的枯藤，浸山泉，层层编作盾面",
       "durability": [
         15,
         15
@@ -2052,14 +2052,14 @@
       "req_level": 11
     },
     {
-      "name": "凛铁盾",
+      "name": "轻钢盾",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shield_2.jpg",
-      "desc": "以精铁制成，轻便实用",
+      "desc": "精铁打作薄盾，轻便不碍手",
       "durability": [
         20,
         20
@@ -2078,14 +2078,14 @@
       "req_level": 26
     },
     {
-      "name": "皓月盾",
+      "name": "玉盘盾",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shield_3.jpg",
-      "desc": "以天外陨坠的默银陨石提炼而成，形如明月",
+      "desc": "取天外陨石提银铸面，圆如满月",
       "durability": [
         25,
         25
@@ -2104,14 +2104,14 @@
       "req_level": 41
     },
     {
-      "name": "赤焰盾",
+      "name": "淬火盾",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shield_4.jpg",
-      "desc": "用赤金杂以精铁锻制而成，刚中有柔",
+      "desc": "赤金掺精铁锻成，刚柔相济",
       "durability": [
         30,
         30
@@ -2130,14 +2130,14 @@
       "req_level": 56
     },
     {
-      "name": "幽绝盾",
+      "name": "骸骨盾",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shield_5.jpg",
-      "desc": "此盾以荒兽骸骨辅以顽石百炼而成，能御百劫",
+      "desc": "以巨兽骸骨与顽石同炼，能挡百劫",
       "durability": [
         35,
         35
@@ -2156,14 +2156,14 @@
       "req_level": 71
     },
     {
-      "name": "聚焰",
+      "name": "熔火",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shield_6.jpg",
-      "desc": "由铸造行以炎炎之火炼制而成，得名聚炎盾",
+      "desc": "熔炎为火，聚于盾心，故名聚焰",
       "durability": [
         40,
         40
@@ -2182,14 +2182,14 @@
       "req_level": 86
     },
     {
-      "name": "北辰盾",
+      "name": "北斗",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shield_7.jpg",
-      "desc": "取镏金砂置于雷渊，借天雷炼制而成",
+      "desc": "取镏金砂沉入雷渊，借天雷淬炼，纹列如北斗",
       "durability": [
         45,
         45
@@ -2244,14 +2244,14 @@
   ],
   "belts": [
     {
-      "name": "荒兽腰带",
+      "name": "蛮骨腰带",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_belt_1.jpg",
-      "desc": "北荒族男子成年之时，会猎取一种异兽，取其\n皮毛制成一套防具",
+      "desc": "荒原男子成年，猎异兽取其骨革，缝作一身护甲，此俗相沿，成了战士的标记",
       "durability": [
         12,
         12
@@ -2270,14 +2270,14 @@
       "req_level": 14
     },
     {
-      "name": "灵犀腰带",
+      "name": "犀革腰带",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_belt_2.jpg",
-      "desc": "灵角兽皮缀以铁环兽骨，将全身上下要害之处\n保护起来",
+      "desc": "取犀兽之革缝作甲，缀骨环于肩肘，周身要害皆护",
       "durability": [
         16,
         16
@@ -2296,14 +2296,14 @@
       "req_level": 29
     },
     {
-      "name": "寒铁腰带",
+      "name": "苍岩腰带",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_belt_3.jpg",
-      "desc": "灵角兽骨外覆产于玄岳的玄铁，千锤百炼而成",
+      "desc": "兽骨为胎，外覆苍岩玄铁，千锤百炼始成",
       "durability": [
         20,
         20
@@ -2322,14 +2322,14 @@
       "req_level": 44
     },
     {
-      "name": "琉铜腰带",
+      "name": "赤玉腰带",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_belt_4.jpg",
-      "desc": "以产于燥热之地的幻铜为基，以灵犀筋络相连",
+      "desc": "以燥地赤玉为基，脉络相连，佩之温润",
       "durability": [
         24,
         24
@@ -2348,14 +2348,14 @@
       "req_level": 59
     },
     {
-      "name": "曜银腰带",
+      "name": "陨铁腰带",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 1,
       "icon": "static/icons/bases/warrior_belt_5.jpg",
-      "desc": "以天外陨坠的魔银石为主，由铸造行辅以玄铁\n幻铜精心打造而成",
+      "desc": "天外陨铁为主，辅以寒石，经铸造行反复锻打而成",
       "durability": [
         28,
         28
@@ -2374,14 +2374,14 @@
       "req_level": 74
     },
     {
-      "name": "天金腰带",
+      "name": "龙鳞腰带",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_belt_6.jpg",
-      "desc": "集山川之灵气，合五行之妙用的仙尘金，惟有\n炼器宗师方可炼制",
+      "desc": "山川灵气凝作鳞纹，五行相合，非炼器宗师不能成",
       "durability": [
         32,
         32
@@ -2400,14 +2400,14 @@
       "req_level": 89
     },
     {
-      "name": "孤星逐月腰带",
+      "name": "寒戈映月腰带",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_belt_7.jpg",
-      "desc": "传说绝代英雄神羿的战甲名孤星，而现在的孤\n星战月，是由原来的碎片为魂炼制而成",
+      "desc": "传说上古后羿的战甲名「孤星」，此装以其残片为魂重炼，戈影映月",
       "durability": [
         36,
         36
@@ -2496,14 +2496,14 @@
   ],
   "shoes": [
     {
-      "name": "荒兽靴",
+      "name": "蛮骨靴",
       "tier": 1,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoes_1.jpg",
-      "desc": "北荒族男子成年之时，会猎取一种异兽，取其\n皮毛制成一套防具",
+      "desc": "荒原男子成年，猎异兽取其骨革，缝作一身护甲，此俗相沿，成了战士的标记",
       "durability": [
         14,
         14
@@ -2522,14 +2522,14 @@
       "req_level": 6
     },
     {
-      "name": "灵犀靴",
+      "name": "犀革靴",
       "tier": 2,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoes_2.jpg",
-      "desc": "灵角兽皮缀以铁环兽骨，将全身上下要害之处\n保护起来",
+      "desc": "取犀兽之革缝作甲，缀骨环于肩肘，周身要害皆护",
       "durability": [
         18,
         18
@@ -2548,14 +2548,14 @@
       "req_level": 21
     },
     {
-      "name": "寒铁靴",
+      "name": "苍岩靴",
       "tier": 3,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoes_3.jpg",
-      "desc": "灵角兽骨外覆产于玄岳的玄铁，千锤百炼而成",
+      "desc": "兽骨为胎，外覆苍岩玄铁，千锤百炼始成",
       "durability": [
         23,
         23
@@ -2574,14 +2574,14 @@
       "req_level": 36
     },
     {
-      "name": "琉铜靴",
+      "name": "赤玉靴",
       "tier": 4,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoes_4.jpg",
-      "desc": "以产于燥热之地的幻铜为基，以灵犀筋络相连",
+      "desc": "以燥地赤玉为基，脉络相连，佩之温润",
       "durability": [
         27,
         27
@@ -2600,14 +2600,14 @@
       "req_level": 51
     },
     {
-      "name": "曜银靴",
+      "name": "陨铁靴",
       "tier": 5,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoes_5.jpg",
-      "desc": "以天外陨坠的魔银石为主，由铸造行辅以玄铁\n幻铜精心打造而成",
+      "desc": "天外陨铁为主，辅以寒石，经铸造行反复锻打而成",
       "durability": [
         32,
         32
@@ -2626,14 +2626,14 @@
       "req_level": 66
     },
     {
-      "name": "天金靴",
+      "name": "龙鳞靴",
       "tier": 6,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoes_6.jpg",
-      "desc": "集山川之灵气，合五行之妙用的仙尘金，惟有\n炼器宗师方可炼制",
+      "desc": "山川灵气凝作鳞纹，五行相合，非炼器宗师不能成",
       "durability": [
         36,
         36
@@ -2652,14 +2652,14 @@
       "req_level": 81
     },
     {
-      "name": "孤星逐月靴",
+      "name": "寒戈映月靴",
       "tier": 7,
       "job": "warrior",
       "hand": "",
       "is_newbie": false,
       "sockets": 0,
       "icon": "static/icons/bases/warrior_shoes_7.jpg",
-      "desc": "传说绝代英雄神羿的战甲名孤星，而现在的孤\n星战月，是由原来的碎片为魂炼制而成",
+      "desc": "传说上古后羿的战甲名「孤星」，此装以其残片为魂重炼，戈影映月",
       "durability": [
         41,
         41
