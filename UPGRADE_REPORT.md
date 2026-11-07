@@ -1800,3 +1800,40 @@ L14 待办把此线记为「`quests` 战魂→灵兽 48 处 + `wuhun_recipes` 27
 
 - `_run_test.js`：**726 项 ALL PASS / 0 FAIL / 0 SKIP**（L17 不增删断言；`_run_test.js` 无战魂断言）。
 - 全仓库 `data/`+`js/`+`_run_test.js` 玩家可见「战魂」已清零（仅余历史注释与备份）。
+
+---
+
+## 二十一、L18 对齐 companion + summons 到 0.94（含 shenmo 文案同步，已落地）
+
+### 21.1 范围与关键取证
+用户选「companion + summons 都对齐」。但取证推翻简单假设：
+- `companion.json` **未接入 web 引擎**：`js/state.js#DATA_FILES` 不含 companion；`_run_test.js`/`_patch.py`/server 均不引用。web 真正运行的灵兽/召唤系统是 `summons`（DATA_FILES 含，battle.js `summonDef`、render.js 召唤兽面板在跑）。
+- 0.94 **本身就分两套独立系统**：`companion`（灵兽驯化）与 `summons`（召唤兽）。web 移植并接入 summons，未移植 companion。
+- 两文件 web 均为 0.94 **纯子集**（web独有字段恒=0，叶级差异=411+缺字段）→ 整文件按 0.94 真值重建零信息损失。
+
+### 21.2 companion.json（死数据，作未来接入备料）
+- `_l18_apply.py` 解密 0.94 → 规范化 → `indent=2`/LF 序列化重建。
+- 强校验：重建后与 0.94 逐字段 `deep-equal=True`。
+- 同时消除 web 残留的旧「战魂」文案（0.94 本来即灵兽，重建后天然对齐 L17 方向）。
+
+### 21.3 summons.json（引擎消费，实益落点）
+- 整文件按 0.94 重建：**回正 411 处数值漂移**（web 对召唤兽做了 buff 魔改，如 `yanling.levels.10.phys_crit` web=20 但 0.94=5、`meiying.levels.50.hp` web=4577 但 0.94=3604）。
+- 补回 web 缺失的 `zhenzu`（阵卒，map=wuxingzhen）整个召唤兽。
+- 强校验：重建后与 0.94 逐字段 `deep-equal=True`。
+
+### 21.4 测试断言修正（必要）
+- `_run_test.js:81` 硬编码 web 魔改名 `/炎灵兽/` 判定「召唤兽出手」；回正后 0.94 真名 `yanling.name='焰鬃兽'`、`meiying.name='幽蝶'`、`zhenzu.name='阵卒'`。
+- 修正为正则 `/焰鬃兽/`，匹配 0.94 真值（summons 名字对齐的必然修正）。
+
+### 21.5 shenmo 暗巫师技能文案同步（一致性收尾）
+- 0.94 `shenmo_skills_darkwitch` 技能 name/desc/fmt 用 **焰鬃兽/幽蝶**；web 魔改成 **炎灵兽/魅影**（如技能名「魅影相随」→0.94「幽蝶相随」）。
+- `_l18_shenmo.py` 字节级替换两文件 13 处（炎灵兽→焰鬃兽 6、魅影→幽蝶 7）；强校验残留 0、JSON 合法。
+- 消除「技能说召唤炎灵兽、实际焰鬃兽」的玩家可见不一致。
+
+### 21.6 验证
+- `_run_test.js`：**726 项 ALL PASS / 0 FAIL / 0 SKIP**（仅修正召唤兽名正则，不增删断言）。
+- companion/summons 重建后 `json.load` 合法 + `deep-equal` 复核通过；全仓库 `炎灵兽/魅影` 残留 = 0。
+
+### 21.7 保留项与说明
+- companion 为 0.94 未移植系统，重建作数据备料；web 引擎当前不消费，未来若接入须同步引擎代码。
+- zhenzu 在 web 可能缺专属获取途径（map=wuxingzhen 五行阵），仅作数据完整性补齐，不强制可达。

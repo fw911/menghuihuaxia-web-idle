@@ -78,7 +78,7 @@ function ok(name, cond, extra) {
     E.tick();
     const txt = E.state.logLines.join(' ');
     if (/施放/.test(txt)) usedSkill = true;
-    if (/炎灵兽/.test(txt)) summonHit = true;
+    if (/焰鬃兽/.test(txt)) summonHit = true;
     if (!E.state.combat) { // 怪物死亡，换一只
       const k = Object.keys(E.MON_SKILLS)[0];
       const b = E.MONSTERS[k];
