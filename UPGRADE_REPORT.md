@@ -1757,3 +1757,46 @@ L15 待办 #1 误记 loot_tables 含「乌金矿/离火翡翠/海魂水晶」旧
 - `data/loot_tables.json` 字节级替换，行尾/排版原样保留
 - 全仓库 `data/`+`js/`+`_run_test.js` 宝石品牌「北斗」已清零
   （仅余 `bases_warrior` 装备名+修辞，符合 L15 非漂移登记）
+
+---
+
+## 二十、L17 全站「战魂 → 灵兽」命名对齐（companion 体系，已落地）
+
+### 20.1 范围澄清（更正 L14 待办误判）
+
+L14 待办把此线记为「`quests` 战魂→灵兽 48 处 + `wuhun_recipes` 279 处」。实证全部推翻：
+- **`wuhun_recipes.json` 不含「战魂」**（wuhun=武魂，是独立于 companion 的系统，与此线无关）。
+- 实际「战魂」分布在 **10 个文件共 667 处**，且是 **web 把 0.94 的「灵兽」(companion) 体系整体重命名为「战魂」** 所致，并非仅 quests 一条线。
+
+### 20.2 证据
+
+- 0.94：`companion.json` 用「灵兽」(171 处)、`quests.json` 用「灵兽」(8 处)；`items.json` 用「灵兽」(519 处)。
+- web：`companion.json` 几乎全叫「战魂」(167 处)、`items.json`「战魂」(476 处) 等。
+- 关键安全证据：**全仓库无任何 JSON key 含「战魂」**（标识符稳定）；`js/` 代码层无「战魂」标识符（仅`_run_test.js` 1 处历史考证注释）。⇒ 纯文本改名不破坏代码引用。
+
+### 20.3 映射与落地（`_l17_apply.py` 字节级替换）
+
+| 文件 | 替换数 | 语义 |
+|---|---|---|
+| `items.json` | 476 | 灵兽道具名/描述（战魂珠·灵兽珠 等） |
+| `companion.json` | 167 | 驯化战魂→驯化灵兽、战魂技能 等系统文案 |
+| `quests.json` | 6 | 初摄战魂、战魂引者毋凌零、战魂技能学习界面 |
+| `maps.json` | 4 | 战魂殿、摄取战魂入门地、战魂图 |
+| `loot_pools.json` / `monster_loot_built.json` | 各 4 | BOSS 战魂珠 掉落 |
+| `shops.json` | 3 | 战魂培养料、战魂书商、战魂魂技秘笈 |
+| `achievements.json` / `taptap_achievements.json` | 各 1 | 九黎战魂 |
+| `bases_warrior.json` | 1 | 以殒铁混合战魂淬炼的战斧(desc) |
+
+合计 **667 处** `战魂`→`灵兽`。
+
+### 20.4 强校验与保留项
+
+- 替换后 `data/` 全文「战魂」计数 = **0**；逐个文件 `json.load` 合法性通过。
+- **保留**（不属本次改动、系事实记录）：`_l*_apply.py` 历史取证注释、`_run_test.js` 的
+  `0.94 灵兽系（L6 的 v0.91 战魂系在该店回退）` 考证注释（描述 v0.91 时代命名，改之失真）。
+- 仓库根 `_data_backup_before_upgrade/` 备份目录不触碰。
+
+### 20.5 验证
+
+- `_run_test.js`：**726 项 ALL PASS / 0 FAIL / 0 SKIP**（L17 不增删断言；`_run_test.js` 无战魂断言）。
+- 全仓库 `data/`+`js/`+`_run_test.js` 玩家可见「战魂」已清零（仅余历史注释与备份）。

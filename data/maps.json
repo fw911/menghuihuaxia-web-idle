@@ -5554,7 +5554,7 @@
         },
         {
           "key": "zhan_hun_dian",
-          "name": "战魂殿",
+          "name": "灵兽殿",
           "monsters": [
             "jinjiadaoke56n",
             "jinjiadaoke58n"
@@ -8361,7 +8361,7 @@
       "key": "baishougu",
       "theme": "gumu",
       "name": "百兽谷",
-      "desc": "兽影幢幢的深谷，低阶灵兽成群往来，是摄取战魂的入门之地（战魂图·无经验收益）",
+      "desc": "兽影幢幢的深谷，低阶灵兽成群往来，是摄取灵兽的入门之地（灵兽图·无经验收益）",
       "neighbors": [
         "tianshengyuan",
         "qixingling"
@@ -8451,7 +8451,7 @@
       "key": "qixingling",
       "theme": "shandi",
       "name": "七星岭",
-      "desc": "七星列阵的山岭，厉魂盘踞；岭巅八卦石阵封着四尊魔君分身（战魂图·无经验收益）",
+      "desc": "七星列阵的山岭，厉魂盘踞；岭巅八卦石阵封着四尊魔君分身（灵兽图·无经验收益）",
       "neighbors": [
         "baishougu"
       ],
