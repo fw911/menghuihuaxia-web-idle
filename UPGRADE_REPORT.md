@@ -325,8 +325,8 @@ web-idle **不是 v0.91 的镜像，而是一条平行改编线**：作者重命
 
 | 候选字段 | 处数 | v0.91 值特征 | 判定 |
 |---|---|---|---|
-| `shops.items[].price` | 43 | 185/185 全部 = 1 | ❌ 占位/脱敏值，写入会让全部商品变 1 金币，经济崩溃 |
-| `maps.jubao_spots[].refresh_minutes` | 45 | 50/50 全部 = 0 | ❌ 占位值，写入会让聚宝点零冷却刷新 |
+| `shops.items[].price` | 43 | 185/185 全部 = 1 | ❌ 写入会让全部商品变 1 金币，经济崩溃（§十已取证：原版真值即 1，非占位） |
+| `maps.jubao_spots[].refresh_minutes` | 45 | 50/50 全部 = 0 | ❌ 写入会让聚宝点零冷却刷新（§十已取证：原版真值即 0，非占位） |
 | `shenmo_skills*.json` 的 `scale_pct` 等 | ~110 | 多数恰为我方 0.5 倍 | ❌ 自研神魔技能树的刻意设计（文件 `_comment` 说明为 MOD 双切改造），非漂移 |
 | `monster_skills.effects[].value` / `mp` | 415 | 两套效果体系、蓝耗量纲不同 | ❌ 既定不可对齐（见 §二·2.4） |
 | `monsters` 5 首领 `hp`/`phys_def`/`atk` | 15 | 我方校准值 | ❌ 刻意校准，保证三档可杀 |
@@ -356,8 +356,9 @@ web-idle **不是 v0.91 的镜像，而是一条平行改编线**：作者重命
 #### L4 仍然未回正（移交下一轮）
 - **`monster_skills.json` 的 `mp`**（117 处散点 + 12 处恒定 0.05）与 `monsters[].mp`（132 处，恒定 0.05）
   → **引擎均不消费**（怪物无蓝量设定），属死数据，回正无实际意义
-- **v0.91 占位字段**：`shops.items[].price`（全 1）、`maps.jubao_spots[].refresh_minutes`（全 0）
-  → 需先从原版字节码取证真实取值来源，再决定是否回正；直接写入会破坏经济与刷新节奏
+- **v0.91 的 `shops.items[].price`（全 1）、`maps.jubao_spots[].refresh_minutes`（全 0）**
+  → §十 已从原版 exe 加密配置与字节码取证：**原版真值即 1 / 0，非占位、非脱敏**；
+  是否统一到该口径需单独决策（会改变经济与刷新节奏）
 - **自研神魔技能树数值**（`shenmo_skills*.json`）：属改编线设计，建议维持现状而非回正
 - **召唤兽 / 魂印等其余数值表**
 
@@ -381,7 +382,7 @@ web-idle **不是 v0.91 的镜像，而是一条平行改编线**：作者重命
 | 技能等级上限 `max_level` 补齐 | 31 技能 / 89 等级 | ✅ |
 | 天尊系列怪物 `level` | 6 处 | ✅ |
 | `monster_skills.mp` / `monsters.mp` | 249 处 | ⏸ 死数据，无需 |
-| v0.91 占位值 `price` / `refresh_minutes` | 88 处 | ⏸ 待字节码取证 |
+| `price` / `refresh_minutes` | 88 处 | ✅ §十 已取证为 v0.91 刻意设定；是否落地待决策 |
 | 自研神魔技能树数值 | ~110 处 | ⏸ 改编线设计，维持现状 |
 
 ---
@@ -815,7 +816,7 @@ web-idle 自研 `BOSS_ATK_MULT=1.5` 把副本首领攻击额外放大 1.5 倍。
   改造技能 / 占位商店条目。怪物名与称号关键词的耦合已在 L6 一并处理。
 - **1853 处引用/枚举类字符串**：`loot_table[]`（掉落体系，属 L5 功能域）、
   `effects[].type`（两套效果体系）、`jubao_spots[].zone` 等，不可直接搬。
-- **88 处 v0.91 占位值**（`shops.price` 全 1、`jubao.refresh_minutes` 全 0）：待字节码取证。
+- **88 处 `price` / `refresh_minutes`**：§十 已完成字节码取证，结论见下。
 - `bases_*.json` / `achievements.json` 的 `\r\r\n` 双重回车历史污染：本轮为控制 diff 未改，
   建议单独一轮统一为 LF。
 
@@ -873,7 +874,7 @@ web-idle 自研 `BOSS_ATK_MULT=1.5` 把副本首领攻击额外放大 1.5 倍。
 |---|---|---|
 | `monsters[].loot_table[]` | 1135 | **是 `LOOT[key]` 查表键，不是 item key**（144 个标签全都不在 `items.json` 的 354 个 key 里）。web-idle 的 144 个标签在 304 键 `LOOT` 中命中 73（51%）；v0.91 的 204 个标签在自身解密表 34 键中只命中 **1**、在 web-idle 表中命中 51（25%）。照搬会让约 75% 掉落失效 |
 | 引用 / 枚举类字符串 | 1466 | `zones[].key`、`jubao_spots[].zone`、`neighbors[]`、`zones[].monsters[]`、`skills[]`、`items[].item`、`levels[].effects[].type`、`effects[].type`、`target_rule`、`mode`、`condition`、`effect_type`、`hook`、`element`、`skill_type`、`form`、`region_type` 等——两套标识体系，引擎按字符串查找，改了会断链或让效果失效 |
-| `shops.items[].price` 43 / `jubao_spots[].refresh_minutes` 45 | 88 | v0.91 解密数据为全 1 / 全 0 的占位/脱敏值，待原版字节码取证 |
+| `shops.items[].price` 43 / `jubao_spots[].refresh_minutes` 45 | 88 | 原版 v0.91 配置即为全 1 / 全 0（§十 已证伪「占位/脱敏」）；本轮不落地，待决策路线 |
 | `effects[].value` 293 / `levels[].effects[].value` 195 | 488 | 两套效果体系量纲不同（v0.91 毫秒 + dot，web-idle 回合 + hot/taunt） |
 | `shenmo_*.json` 展示文案 | 381 | 自研 MOD 双切技能树（`_comment` 明确标注），属改编线 |
 | 3 个改造技能 `levels[].desc` | 23 | 等级数不同，按下标对齐会错位 |
@@ -899,6 +900,118 @@ web-idle 自研 `BOSS_ATK_MULT=1.5` 把副本首领攻击额外放大 1.5 倍。
 - 406 处展示文案残留（381 自研神魔 + 23 改造技能 + 2 占位商店）—— 建议维持。
 - 1466 处引用/枚举类字符串：若要回正，需先做**引擎消费口径映射表**，成对改数据 +
   改引用，不能单点搬运。
-- 88 处 v0.91 占位值：待原版 exe 字节码取证真实来源。
+- 88 处 `price` / `refresh_minutes`：**§十 取证已完成**；需在「完全忠实 v0.91」与
+  「恢复 v0.58 定价体系」两条路线间拍板，本轮未改数据。
 - 3 个自研旧名适配称号：待决定「删除 + 存档迁移」还是「保留兼容」。
 - `bases_*.json` / `achievements.json` 的 `\r\r\n` 历史污染：建议单独一轮统一为 LF。
+
+---
+
+## 十、L7 字节码取证：88 处「占位值」的真实来源（结论：证伪）
+
+> 可复现脚本：`_l7_forensic.py`（`python _l7_forensic.py`，**只读**，不改任何 `data/` 文件）。
+> 取证对象：`shops.items[].price` 43 处、`maps.jubao_spots[].refresh_minutes` 45 处。
+> 此前 §四 / §八 / §九 把它们定性为「占位 / 脱敏值，待取证」，**本轮结论推翻该定性**。
+
+### 10.1 四级证据链
+
+**① 原版 exe 加密配置，直接解密取原始字节**
+
+绕开「`放置归墟_v0.91_decrypted/` 可能被我们改写过」的疑虑，用 `_CONFIG_KEY.txt`
+给出的派生密钥（`78f5fd7b…53f7`），对原版包
+`E:/华夏/放置归墟：梦回华夏 v0.91/config_enc/` 内的 `.enc` 做
+`CONFIGENC(9) + IV(16) + AES-256-CBC + PKCS7` 解密（openssl 子进程）：
+
+| 原版加密文件 | 解密结果 |
+|---|---|
+| `shops.json.enc` | 11 商店 / 185 条商品，**`price` 185/185 = 1** |
+| `maps.json.enc` | 56 地图 / 50 聚宝点，**`refresh_minutes` 50/50 = 0** |
+| `items.json.enc` | 354 条物品，`price` 保留完整真实阶梯（20/45/80/130/190/260、100000 等） |
+
+药店前 3 条原文：`[{"item":"xumingdan","price":1,"kind":"consumable"}, …]`。
+→ **1 / 0 就是原版加密配置里的原始字节，不是解密脱敏、不是我们改写。**
+
+**② 原版 exe 字节码：引擎如何消费**
+
+`_dis_all.txt`（Python 3.14 `dis` 导出）中的 `main.py`：
+
+```python
+# 聚宝冷却（main.py:1674）
+refresh = int(js.get('refresh_minutes', 30)) * 60
+remain  = max(0, last + refresh - now)
+# → 字段存在且为 0 时零冷却；默认 30 分钟只在「字段缺失」时生效，不会覆盖 0。
+
+# 商店列表（api_shop）
+for entry in shop.get('items') or []:          # entry = shops.json 的商品条目
+    { 'price': entry.get('price', it.get('price', 0)) }   # it = items.json 物品
+# → 每条 entry 都带 price=1，恒取 1；items.json 的真实价格只是永不生效的兜底。
+
+# 购买扣款（api_shop/buy，main.py:2662）
+price = entry.get('price', 0)
+total = price * count
+character_manager.spend_currency(total)        # → 1 铜币 / 件
+```
+
+另：车夫传送路线的 `price`（`int(r.get('price',0))`、显示 `price//100` 银）是
+**另一条链**，与商店无关，勿混。
+
+**③ 运行时不存在回填**
+
+- `config_loader.py:162` `shops: _load('shops.json')` 为纯 JSON 加载；
+- `config.py:334` `SHOPS = _CONFIG['shops']['shops']`，336 行只建 `SHOP_BY_KEY` 索引；
+- `config_loader.py:434` **`_OVERRIDE_FIELDS = {'name','desc'}`** —— MOD 覆盖机制
+  （`apply_mods` / `_apply_one_mod`）只允许改文案，`_apply_one_mod` 甚至会用
+  `set(value) - _OVERRIDE_FIELDS` 校验并拒绝其他字段；
+- 全 7 个反汇编文本中，对 `price` / `refresh_minutes` **没有任何
+  `STORE_SUBSCR` / `STORE_ATTR` 写入**，也没有硬编码价格表或冷却公式。
+
+→ 1 / 0 一路透传到最终生效值，没有任何环节把它还原成真实数值。
+
+**④ v0.58 原版对照：数据丢失还是主动改写？**
+
+| 数据 | 商店条目 | `price` 取值种类 | 聚宝点 | `refresh_minutes` 取值种类 |
+|---|---|---|---|---|
+| v0.58 原版 | 75 | **42 种**（15~200000） | 45 | **25 种**（46~127） |
+| v0.91 原版 | 185 | **1 种**（全 1） | 50 | **1 种**（全 0） |
+| web-idle 当前 | 179 | 43 种（混合） | 50 | 26 种（混合） |
+
+v0.58 两个字段都有丰富真实值，而 v0.91 的 `items.json` 又完整保留了真实价格表
+（与 v0.58 / web-idle 一致）。→ 不是批量脱敏、不是数据丢失，而是
+**v0.91 作者有选择地把「商店购买价」和「聚宝刷新冷却」压成 1 / 0**，
+符合「放置归墟」挂机爽玩 MOD 的定位；`items.json.price` 因还服务于出售 / 估值等
+其他系统而未被改动。
+
+### 10.2 裁定
+
+> 这 88 处**不是占位值，也不是脱敏值**，而是 **v0.91 的刻意数值设定**：
+> 全商店 1 铜币、全聚宝点零冷却。此前的「写入会破坏经济」判断依然成立，
+> 但原因不是「数据是假的」，而是「v0.91 就是这么设计的」。
+
+**顺带查清的 web-idle 混合态**（此前未察觉）：
+
+- 已有 **104 条 `price=1`**，全部落在 L3 从 v0.91 补进来的 8 个新商店：
+  `farm_shop`(9) / `equip_warrior`(14) / `equip_mage`(12) / `equip_darkwitch`(12) /
+  `equip_shaman`(12) / `wuqishoushi`(13) / `companion_grocery`(19) / `companion_book`(13)；
+  6 个 v0.58 老商店的 **75 条仍是真实定价**。
+- 已有 **5 个 `refresh_minutes=0`**，全部落在 L3 新增地图：
+  海市蜃楼三层(2) / 四层(2) / 鬼灰大泽(1)；其余 45 个仍是 v0.58 真值。
+
+即：web-idle 当前经济是「新条目爽玩价 + 老条目原版价」的**不一致混合态**，
+无论选哪条路线都应该统一。
+
+### 10.3 两条路线（本轮**未改数据**，待拍板）
+
+| 路线 | 精确改动 | 结果 |
+|---|---|---|
+| **A 完全忠实 v0.91** | `data/shops.json`：43 处 `price` → 1；`data/maps.json`：45 处 `refresh_minutes` → 0 | 全表 179/179 = 1、50/50 = 0，与已补的 104/5 一致；与 L5「完全忠实」口径自洽，但商品全 1 金币、聚宝无限刷，经济系统事实上失效 |
+| **B 恢复 v0.58 定价体系** | 反向把 104 条新增商品按 `items.json[].price` 权威值回填（无价格的按同类阶梯补），5 个新增聚宝点按同地图规则补冷却 | 全表回到真实定价与刷新节奏，可玩性保留；但偏离 v0.91 基准 |
+
+两条路线都需同步 `_run_test.js` 中涉及价格 / 冷却的断言，并重跑 661 项回归、
+`_l4_survive.js` 挂机探针。本轮仅完成取证与落档，**未修改任何 `data/` 文件**。
+
+### 10.4 交付物
+
+- `_l7_forensic.py`：自包含只读取证脚本（原版 `.enc` 解密 + 字节码提取 + 三套数据对照 + 裁定）。
+  依赖 `openssl` 命令与原版包 / 归档包路径；不依赖 pycryptodome。
+- 本报告 §十；同时更正 §四、§八、§九 中「占位 / 脱敏 / 待取证」的历史表述。
+
