@@ -1767,6 +1767,40 @@ function ok(name, cond, extra) {
     }
   }
 
+    // L11：0.94 _pick_pool 按职业×部位分选 + seen 去重 + random.sample 不放回
+    {
+      const pk = E.mysticPoolKeys;
+      ok('0.94 _pick_pool：首饰跨职业 / 武器护手走职业武器池 / 其余走职业通用池',
+        pk('warrior','weapon').join() === 'warrior_weapon_perk_pool' &&
+        pk('mage','gloves').join() === 'mage_weapon_perk_pool' &&
+        pk('warrior','ring1').join() === 'ring_perk_pool' &&
+        pk('mage','ring2').join() === 'ring_perk_pool' &&
+        pk('darkwitch','necklace').join() === 'necklace_perk_pool' &&
+        pk('shaman','helmet').join() === 'shaman_general_pool' &&
+        pk('warrior','armor').join() === 'warrior_general_pool');
+      const u = E.mysticUniqueTemplates(['warrior_weapon_perk_pool']);
+      ok('0.94 词条去重：name 去 +N 并拼 suffix 建键，同名不同档只留首条',
+        u.length > 0 && u.length < 8 &&
+        new Set(u.map(t => String(t.name||'').replace(/[+]\d+/g,'') + (t.suffix||''))).size === u.length);
+      const bb11 = E.genEquipBaseForSlot('weapon', 'warrior', 7);
+      const wnames = new Set(E.mysticUniqueTemplates(['warrior_weapon_perk_pool']).map(t => t.name));
+      let poolFaithful = true, noDup = true, handOk = true;
+      for (let i = 0; i < 120; i++) {
+        const eq = E.buildMysticEquip(bb11, 'warrior', 7, 'weapon', false);
+        const keys = new Set(eq.perks.map(p => p.name + (p.suffix||'')));
+        if (keys.size !== eq.perks.length) noDup = false;
+        if (eq.perks.some(p => !wnames.has(p.name))) poolFaithful = false;
+        if (eq.hand !== 'single' && eq.hand !== 'double') handOk = false;
+      }
+      ok('0.94 神秘装备词条取自部位池、互不重复、hand 规范化（120 次采样）',
+        poolFaithful && noDup && handOk);
+      const ng = E.mysticUniqueTemplates(['necklace_perk_pool']);
+      const eqN = E.buildMysticEquip(bb11, 'warrior', 7, 'necklace', false);
+      ok('0.94 首饰槽走 necklace_perk_pool 且不绑职业',
+        E.mysticPoolKeys('mage','necklace').join() === 'necklace_perk_pool' &&
+        ng.length > 0 && eqN.perks.every(p => ng.some(t => t.name === p.name)));
+    }
+
   // ⑤ 技能 / 武魂
   {
     const sk = E.subTabs('skill').map(x => x.key);

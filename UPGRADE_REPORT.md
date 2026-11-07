@@ -1245,13 +1245,87 @@ v0.58 两个字段都有丰富真实值，而 v0.91 的 `items.json` 又完整�
 - 0.94 的自定义紧凑 marshal **未逐指令反汇编**：四档分布的 `q1/q3` 按 docstring
   「按位置切成四段」复刻（`q1=n//4`、`q3=3n/4` 偏移），未验证 `_roll_perk_value` 的逐条边界；
   窄区间并拢按 `_roll_subperfect_value` 说明实现。
-- 词条池用 web-idle `data/perk_pool.json`（0.94 用 `PERK_POOLS` + `MODE_CATEGORIES`
-  按职业/部位选池）；`quality` 用 web-idle `qualityFromPerks(perks.length)`
-  （0.94 是 `get_quality(count_attrs(perks, slots), total_slots, 0)`）；
-  `hand` 单/双手过滤未实现（`genEquipBaseForSlot` 只按 职业×档位×部位 取底材）。
+- ~~词条池 / quality / hand 三项口径未对齐~~ → **L11 已消解，见 §十四**：
+  0.94 `perk_pool.json` 的 10 个池键与 web-idle 逐键一致，按职业×部位分选已落地；
+  `get_quality` 经函数体取证确认只读 `perk_count`，`qualityFromPerks(词条数)` 忠实；
+  `hand` 已规范化为 `single/double`。
 - 3 个续命道具仍不生效（无寿命系统）；2 个炼魂壶别名仍是自研兜底。
 - **全站「战魂」命名仍是 L6 的 v0.91 文案**：本轮只把 `companion_grocery` 一店
   回正到 0.94 灵兽系，其余商店 / 系统名称保持一致，属已知混合态。
+
+## 十四、L11 按 0.94 `_pick_pool` 补齐职业×部位分选与词条去重（已落地）
+
+### 14.1 取证链（承接 §十三）
+
+0.94 exe 的 code object 是自定义紧凑 marshal 明文，L10 已证 `marshal.loads` / zlib
+扫描无效。本轮再探 `co_code`：以 `RESUME(80 00)` / `RETURN_VALUE(23 00)` 特征扫描
+得到 48,035 个候选，全部是 x86 机器码误报；常量池里也不存在 `s`+4B 长度的
+字节码块。**结论：0.94 的 `co_code` 不在这套明文常量池内，逐指令反汇编此路不通**，
+四档 `q1/q3` 精确边界维持 §13.6 的 docstring 复刻。
+
+改走「常量池明文 + 旧版标准反汇编 + 解密配置」三路交叉，脚本 `_l11_dis_v094.py`
+（输出 `_dis_v094_l11.txt`），全部关键证据自动校验：
+
+1. `_WEAPON_SLOTS` / `_JEWELRY_POOLS` 的值定义就在 exe `66,685,8xx` 常量池：
+   `S\x02 {gloves, weapon}`、`D\x03 {ring1→ring_perk_pool, ring2→ring_perk_pool,
+   necklace→necklace_perk_pool}`。
+2. `_pick_pool` docstring：「按 (职业, 部位) 选词条池」——首饰跨职业通用池、
+   武器/护手走该职业武器池、其余防具走该职业通用池。
+3. 四档权重在 `66,682,718` 解析为 `L\x04` + 4 个 double = **0.1 / 0.7 / 0.1 / 0.1**，
+   与 L10 的实现阈值一致；`_roll_subperfect_value` docstring 给出
+   「宽区间段 = [lo+q3, hi-1]、n<=4 退化取 hi-1」。
+4. 旧版标准反汇编 `_dis_all.txt#generate_mystic_equip`：`seen` 按
+   `re.sub('[+]\d+','',name) + suffix` 去重 → `random.sample(unique, min(n,len))`
+   **不放回**；`values.get(str(tier), [1,3])`；`hand` 规范化 `single/double`。
+5. `#get_quality` 函数体只按 `perk_count >= min_perks` 查阈值，`total_slots`
+   参数**未被使用**；`#count_attrs = len(非隐藏词条) + len(slots)`，神秘装备
+   `slots=[]`、`is_hidden=False` → 等于词条数。因此
+   `qualityFromPerks(perks.length)` **是忠实的**，无需按孔数调整。
+6. 解密 0.94 `perk_pool.json` / `quality.json`：10 个池键与 6 档
+   `quality_thresholds` 与 web-idle **逐键完全一致** —— 分选所需数据本来就齐备，
+   L10 只是没用。
+
+### 14.2 L10 的四处偏差
+
+| 项 | L10 实现 | 0.94 真口径 |
+|---|---|---|
+| 词条池 | 恒取 `{job}_general_pool` | 按部位分选（首饰 / 武器护手 / 其余防具） |
+| 抽样 | `pick(all)` 有放回，且不过滤同名模板 | `seen` 去重 + `random.sample` 不放回 |
+| `hand` | 沿用 `base.hand` 原值（`''` / 中文） | `single` / `double` 规范化 |
+| 缺 tier 值兜底 | `values['1']` 或 `[1,1]` | `values.get(str(tier), [1,3])` |
+
+`warrior_weapon_perk_pool` 8 个模板去重后 7 个（存在同名不同档），
+正好说明去重不是可选项。各池去重后均 ≥ 6 条，足够 1~3 条不放回抽样。
+
+### 14.3 落地
+
+| 文件 | 改动 |
+|---|---|
+| `js/equip.js` | 新增 `mysticPoolKeys` / `mysticUniqueTemplates` / `mysticSample`；`buildMysticEquip` 改按部位取池、去重不放回、`[1,3]` 兜底、hand 规范化；四档与 perfect 逻辑保持不变 |
+| `_patch.py` | 补 2 个测试导出（共 318） |
+| `_run_test.js` | 新增 4 条断言：三类部位池映射、去重键、120 次采样「词条取自部位池 + 无重复 + hand 规范」、首饰不绑职业 |
+| `_l11_dis_v094.py` | 可复现取证脚本（明文常量池 / 浮点权重 / 旧反汇编函数体 / 解密配置对比） |
+
+`qualityFromPerks` 经取证确认忠实，**未改动**；`full_perk`、通用掉落与洗练口径不受影响。
+`data/` 本轮零改动。
+
+### 14.4 验证
+
+- `_run_test.js` **684 项 ALL PASS / 0 FAIL / 0 SKIP**（8014 后端在跑，测后关闭）
+- `_l4_survive.js` 挂机 6 例 × 2500 轮 **死亡 0/6**；`_l4_verify.js` 首领三档
+  与 L5/L6/L8/L9/L10 一致（装备生成不触碰战斗数值）
+- `_run_test.js` 保持 CRLF（2659 行，CRLF==LF）；`js/equip.js` 保持 LF；
+  `node --check` / `py_compile` 通过
+
+### 14.5 残留边界
+
+- 0.94 `co_code` 仍不可得，`_roll_perk_value` 的 `q1/q3` **精确边界**仍按 docstring
+  复刻；常量池里 `vs/vals/band/choices/weights` 变量名暗示内部按段取样，
+  但四档权重与概率已由浮点常量坐实。
+- 0.94 `generate_mystic_equip` 还消费 `apply_refine_levels`（精炼等级）、`spec`、
+  `hand` 入参与 `pool_kind` 等，web-idle 未实现精炼等级应用与按 spec 指定词条。
+- 3 个续命道具仍不生效；2 个炼魂壶别名仍为自研兜底；全站「战魂」命名混合态同 §13.6。
+
 
 
 

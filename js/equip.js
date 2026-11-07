@@ -73,13 +73,59 @@ export function buildEquip(base, job, tier, slot, mode){
   };
 }
 // ---------- v0.94 神秘商人装备生成（generator.py#generate_mystic_equip 字节码取证） ----------
-// 证据：BACKHX_v0.94.exe 内该函数 docstring「2026-09-22 拆普通 / 完美两档」及
-// content/huaxia/rules/perk_pool.py 的「词条数值四档概率分布」说明（2026-08-27 用户拍板）。
+// 证据链（L10 取证 + L11 补证）：
+//   L10：0.94 exe 常量池内该函数 docstring「2026-09-22 拆普通 / 完美两档」、
+//        perk_pool.py「词条数值四档概率分布」(2026-08-27 拍板)、
+//        「次完美段内均匀随机」(2026-09-24 拍板)；四档权重在常量池里是
+//        L\x04 + 4 个 double = 0.1 / 0.7 / 0.1 / 0.1。
+//   L11：0.94 exe 常量池 _WEAPON_SLOTS = {'gloves','weapon'}（S\x02）、
+//        _JEWELRY_POOLS = {ring1/ring2→ring_perk_pool, necklace→necklace_perk_pool}（D\x03），
+//        _pick_pool docstring「按 (职业, 部位) 选词条池」；旧版标准反汇编
+//        _dis_all.txt#generate_mystic_equip 给出 seen 去重 + random.sample 不放回、
+//        values.get(str(tier), [1,3])、hand 规范化；#get_quality 只读 perk_count，
+//        #count_attrs = len(非隐藏词条) + len(slots)（slots 恒空）
+//        → qualityFromPerks(词条数) 忠实，无需按 total_slots 调整。
 //   1) 词条数 1~3；完美档 1 条 10% / 2 条 45% / 3 条 45%，普通档均匀 1~3
 //   2) 每条数值按四档分布：最低 10% / 中位 70% / 次完美 10% / 完美 10%（q1/q3 四分位切段）
-//   3) perfect=True：首条强制取该档上限 hi；其余禁满，命中 hi 重投次完美段（2026-09-24 拍板）
+//   3) perfect=True：首条强制取该档上限 hi；其余禁满，命中 hi 重投次完美段
 //   4) 孔位 total_slots = 随机 1~3
 // 与通用 buildEquip 的自研 rollPerkCount（0~cap 条）刻意分离，避免掉落 / 洗练口径被污染。
+const MYSTIC_WEAPON_SLOTS = new Set(['weapon', 'gloves']);
+const MYSTIC_JEWELRY_POOLS = {ring1:'ring_perk_pool', ring2:'ring_perk_pool', necklace:'necklace_perk_pool'};
+// 0.94 _pick_pool：首饰跨职业通用、武器/护手走职业武器池、其余防具走职业通用池
+export function mysticPoolKeys(job, slot){
+  const jp = MYSTIC_JEWELRY_POOLS[slot];
+  if(jp) return [jp];
+  const pp = DATA.perk_pool || {};
+  const wk = job + '_weapon_perk_pool';
+  if(MYSTIC_WEAPON_SLOTS.has(slot) && pp[wk]) return [wk];
+  const gk = job + '_general_pool';
+  if(pp[gk]) return [gk];
+  return ['warrior_general_pool'];
+}
+// 0.94：key = re.sub('[+]\\d+', '', name) + suffix，seen 保序去重
+//（同名不同档的模板只留首条，避免一次装备出现两条同名词条）
+export function mysticUniqueTemplates(keys){
+  const seen = new Map();
+  for(const k of keys){
+    const pool = (DATA.perk_pool||{})[k]; if(!pool) continue;
+    for(const g of ['stat_fixed','stat_percent','atk_fixed','atk_percent','elemental']){
+      for(const tmpl of (pool[g]||[])){
+        const key = String(tmpl.name||'').replace(/[+]\d+/g,'') + (tmpl.suffix||'');
+        if(!seen.has(key)) seen.set(key, tmpl);
+      }
+    }
+  }
+  return Array.from(seen.values());
+}
+// 0.94 random.sample(unique, min(n, len(unique)))：不放回，池不足时按实际条数收窄
+function mysticSample(arr, n){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1)); const t=a[i]; a[i]=a[j]; a[j]=t;
+  }
+  return a.slice(0, Math.min(n, a.length));
+}
 function mysticSubperfect(lo, hi){
   if(hi<=lo) return lo;
   const n=hi-lo+1, q3=Math.floor(3*n/4);
@@ -98,15 +144,13 @@ function mysticPerkValue(lo, hi){
 }
 export function buildMysticEquip(base, job, tier, slot, perfect){
   const eq=buildEquip(base, job, tier, slot, 'whiteboard');
-  const pool=DATA.perk_pool[job+'_general_pool'] || DATA.perk_pool.warrior_general_pool || {};
-  let all=[];
-  for(const g of ['stat_fixed','stat_percent','atk_fixed','atk_percent','elemental']) all=all.concat(pool[g]||[]);
   const r=Math.random();
   const n=perfect ? (r<0.10?1:(r<0.55?2:3)) : ri(1,3);
+  const picked=mysticSample(mysticUniqueTemplates(mysticPoolKeys(job, slot)), n);
   const perks=[];
-  for(let i=0;i<n && all.length;i++){
-    const sf=pick(all);
-    const vals=sf.values[''+tier] || sf.values['1'] || [1,1];
+  for(let i=0;i<picked.length;i++){
+    const sf=picked[i];
+    const vals=sf.values[''+tier] || [1,3];            // 0.94 .get(str(tier), [1,3])
     const lo=vals[0], hi=vals[1];
     let val=(perfect && i===0) ? hi : mysticPerkValue(lo,hi);
     if(perfect && i>0 && val===hi) val=mysticSubperfect(lo,hi);
@@ -118,6 +162,8 @@ export function buildMysticEquip(base, job, tier, slot, perfect){
   eq.sockets=ri(1,3);
   eq.gems=new Array(eq.sockets).fill(null);
   eq.perfect=!!perfect;
+  // 0.94 hand：base.get('hand') in ('双手','double') ? 'double' : 'single'
+  eq.hand=/双手|double/.test(String(base.hand||'')) ? 'double' : 'single';
   return eq;
 }
 // 耐久（原版 craft.py：打造时 stat_roller.roll_durability(base) 产出标量；

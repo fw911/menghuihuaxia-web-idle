@@ -102,6 +102,8 @@ EXPORTS = [
     'buyShopItem','useConsumable',
     # L10：0.94 神秘商人装备生成（js/equip.js，字节码取证后的忠实实现）
     'buildMysticEquip','genEquipBaseForSlot',
+    # L11：0.94 _pick_pool 按职业×部位分选 + 去重（js/equip.js）
+    'mysticPoolKeys','mysticUniqueTemplates',
 ]
 
 lines = [
