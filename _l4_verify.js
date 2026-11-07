@@ -1,6 +1,10 @@
 /* L4 验证：用真实引擎（已落地的 data/monsters.json）复测 5 张高阶副本首领
    在 entry / entry+5 / entry+10 三档是否可击杀（won=true）且不暴毙。
-   用法：node _l4_verify.js */
+   用法：node _l4_verify.js
+
+   ⚠ L5 起设计目标改为「完全忠实 v0.91 原版」：首领数值与技能全部回正，
+   不再做「约 2000 轮可击杀」的下调校准。因此本脚本现在主要用于**观测**
+   原版难度（允许 TIMEOUT / DIED），输出不再代表回归缺陷。 */
 const fs = require('fs'), path = require('path');
 global.window = global;
 global.fetch = async (u) => ({ ok: true, status: 200, json: async () => JSON.parse(fs.readFileSync(path.join(__dirname, String(u).replace(/^\//, '')), 'utf8')) });
@@ -82,6 +86,8 @@ function sim(mk, add) {
     const spec = E.dungeonBosses(map)[0];
     console.log(`  ${(spec.name + ' ' + spec.key).padEnd(26)} ${parts.join('  ')}`);
   }
-  console.log(allok ? 'RESULT: 全部档位可击杀/未暴毙 ✓' : 'RESULT: 存在不可杀或暴毙 ✗');
+  console.log(allok
+    ? 'RESULT: 全部档位可击杀/未暴毙 ✓'
+    : 'RESULT: 存在不可杀或暴毙（L5「完全忠实 v0.91」下的预期难度，非回归缺陷）');
   process.exit(0);
 })();

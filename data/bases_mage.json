@@ -181,6 +181,74 @@
       },
       "req_level": 101,
       "key": "base_mage_helmets_7_7"
+    },
+    {
+      "name": "离火焚霄冠",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_helmet_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          113,
+          150
+        ],
+        "magic_def": [
+          165,
+          219
+        ]
+      },
+      "key": "base_mage_helmets_8_1",
+      "req_level": 114,
+      "job": "mage"
+    },
+    {
+      "name": "玄霜覆海冠",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_helmet_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          125,
+          166
+        ],
+        "magic_def": [
+          175,
+          237
+        ]
+      },
+      "key": "base_mage_helmets_8_2",
+      "req_level": 114,
+      "job": "mage"
     }
   ],
   "shoulders": [
@@ -339,6 +407,100 @@
       },
       "req_level": 104,
       "key": "base_mage_shoulders_7_6"
+    },
+    {
+      "name": "云纱护肩",
+      "tier": 1,
+      "job": "mage",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_shoulder_l_1.png",
+      "desc": "取海中蚕丝捻作轻纱，入水不濡，云纹自生",
+      "durability": [
+        8,
+        8
+      ],
+      "stats": {
+        "phys_def": [
+          13,
+          16
+        ],
+        "magic_def": [
+          16,
+          20
+        ]
+      },
+      "req_level": 15,
+      "key": "base_mage_shoulders_1_1"
+    },
+    {
+      "name": "离火焚霄护肩",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_shoulder_l_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          105,
+          135
+        ],
+        "magic_def": [
+          143,
+          190
+        ]
+      },
+      "key": "base_mage_shoulders_8_1",
+      "req_level": 115,
+      "job": "mage"
+    },
+    {
+      "name": "玄霜覆海护肩",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_shoulder_l_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          111,
+          145
+        ],
+        "magic_def": [
+          152,
+          205
+        ]
+      },
+      "key": "base_mage_shoulders_8_2",
+      "req_level": 115,
+      "job": "mage"
     }
   ],
   "armors": [
@@ -549,6 +711,74 @@
       },
       "req_level": 105,
       "key": "base_mage_armors_7_7"
+    },
+    {
+      "name": "离火焚霄袍",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_armor_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          183,
+          238
+        ],
+        "magic_def": [
+          279,
+          379
+        ]
+      },
+      "key": "base_mage_armors_8_1",
+      "req_level": 116,
+      "job": "mage"
+    },
+    {
+      "name": "玄霜覆海袍",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_armor_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          193,
+          257
+        ],
+        "magic_def": [
+          304,
+          410
+        ]
+      },
+      "key": "base_mage_armors_8_2",
+      "req_level": 116,
+      "job": "mage"
     }
   ],
   "pants": [
@@ -759,6 +989,74 @@
       },
       "req_level": 109,
       "key": "base_mage_pants_7_7"
+    },
+    {
+      "name": "离火焚霄护腿",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_pants_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          151,
+          200
+        ],
+        "magic_def": [
+          220,
+          299
+        ]
+      },
+      "key": "base_mage_pants_8_1",
+      "req_level": 116,
+      "job": "mage"
+    },
+    {
+      "name": "玄霜覆海护腿",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_pants_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          163,
+          216
+        ],
+        "magic_def": [
+          239,
+          322
+        ]
+      },
+      "key": "base_mage_pants_8_2",
+      "req_level": 116,
+      "job": "mage"
     }
   ],
   "shoes": [
@@ -943,6 +1241,74 @@
       },
       "req_level": 95,
       "key": "base_mage_shoes_7_7"
+    },
+    {
+      "name": "离火焚霄鞋",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_shoes_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          81,
+          103
+        ],
+        "magic_def": [
+          115,
+          152
+        ]
+      },
+      "key": "base_mage_shoes_8_1",
+      "req_level": 112,
+      "job": "mage"
+    },
+    {
+      "name": "玄霜覆海鞋",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_shoes_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          83,
+          110
+        ],
+        "magic_def": [
+          122,
+          161
+        ]
+      },
+      "key": "base_mage_shoes_8_2",
+      "req_level": 112,
+      "job": "mage"
     }
   ],
   "gloves": [
@@ -1127,6 +1493,74 @@
       },
       "req_level": 97,
       "key": "base_mage_gloves_7_7"
+    },
+    {
+      "name": "离火焚霄护腕",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_gloves_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          65,
+          92
+        ],
+        "magic_def": [
+          106,
+          141
+        ]
+      },
+      "key": "base_mage_gloves_8_1",
+      "req_level": 113,
+      "job": "mage"
+    },
+    {
+      "name": "玄霜覆海护腕",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_gloves_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          70,
+          95
+        ],
+        "magic_def": [
+          112,
+          151
+        ]
+      },
+      "key": "base_mage_gloves_8_2",
+      "req_level": 113,
+      "job": "mage"
     }
   ],
   "belts": [
@@ -1311,6 +1745,74 @@
       },
       "req_level": 103,
       "key": "base_mage_belts_7_7"
+    },
+    {
+      "name": "离火焚霄腰带",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_belt_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          65,
+          85
+        ],
+        "magic_def": [
+          143,
+          187
+        ]
+      },
+      "key": "base_mage_belts_8_1",
+      "req_level": 115,
+      "job": "mage"
+    },
+    {
+      "name": "玄霜覆海腰带",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_belt_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          69,
+          92
+        ],
+        "magic_def": [
+          151,
+          204
+        ]
+      },
+      "key": "base_mage_belts_8_2",
+      "req_level": 115,
+      "job": "mage"
     }
   ],
   "cloaks": [
@@ -1495,6 +1997,74 @@
       },
       "req_level": 107,
       "key": "base_mage_cloaks_7_7"
+    },
+    {
+      "name": "离火焚霄披风",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_cloak_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          63,
+          79
+        ],
+        "magic_def": [
+          174,
+          234
+        ]
+      },
+      "key": "base_mage_cloaks_8_1",
+      "req_level": 116,
+      "job": "mage"
+    },
+    {
+      "name": "玄霜覆海披风",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_cloak_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          64,
+          84
+        ],
+        "magic_def": [
+          192,
+          253
+        ]
+      },
+      "key": "base_mage_cloaks_8_2",
+      "req_level": 116,
+      "job": "mage"
     }
   ],
   "weapons": [
@@ -1705,6 +2275,32 @@
       },
       "req_level": 0,
       "key": "base_mage_weapons_1_8"
+    },
+    {
+      "name": "陨星",
+      "tier": 8,
+      "job": "mage",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/mage_weapon_8.png",
+      "desc": "杖首栖着一只紫羽雷鸟的法杖，挥动时有紫电缠枝",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          350,
+          470
+        ]
+      },
+      "key": "base_mage_weapons_8_1",
+      "req_level": 120
     }
   ],
   "shields": [],

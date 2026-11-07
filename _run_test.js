@@ -50,7 +50,7 @@ function ok(name, cond, extra) {
   ok('怪物技能索引非空', Object.keys(E.MON_SKILLS).length > 0, Object.keys(E.MON_SKILLS).length + '');
   ok('宝石品级链', E.GEM_ORDER.length >= 2, JSON.stringify(E.GEM_ORDER));
   ok('副本兑换条目 36', E.instEntries().length === 36, E.instEntries().length + '');
-  ok('成就条目 87', E.achList().length === 87, E.achList().length + '');
+  ok('成就条目 90（v0.91 补齐 3 条）', E.achList().length === 90, E.achList().length + '');
   ok('消耗品掉落中文名', E.itemName('xuming_xiao') === '回春小还丹' && E.itemName('ningshen_jiuzhuan') === '九转定神液', E.itemName('xuming_xiao') + ' / ' + E.itemName('ningshen_jiuzhuan'));
   ok('道具名兜底', E.itemName('__missing__') === '__missing__', E.itemName('__missing__'));
 
@@ -267,7 +267,7 @@ function ok(name, cond, extra) {
         }
       }
     }
-    ok('全部 ' + nBase + ' 个基底耐久均为 [n,n] 等值对（roll 退化为单点，取 n 零臆造）', allEqPair && nBase === 292, 'nBase=' + nBase);
+    ok('全部 ' + nBase + ' 个基底耐久均为 [n,n] 等值对（roll 退化为单点，取 n 零臆造）', allEqPair && nBase === 368, 'nBase=' + nBase + ' allEqPair=' + allEqPair);
     ok('baseDurability 取等值对的 n', E.baseDurability({ durability: [14, 14] }, 'helmet') === 14 && E.baseDurability({}, 'helmet') === 25,
       JSON.stringify([E.baseDurability({ durability: [14, 14] }, 'helmet'), E.baseDurability({}, 'helmet')]));
 
@@ -1035,9 +1035,20 @@ function ok(name, cond, extra) {
     ok('共 8 个副本', dungs.length === 8, dungs.length + '');
     ok('共 38 个副本首领', dungs.reduce((s, m) => s + E.dungeonBosses(m).length, 0) === 38,
       dungs.reduce((s, m) => s + E.dungeonBosses(m).length, 0) + '');
-    // 5 张高阶副本（进入等级 95~115）首领数值取自 v0.91 原版，经 L4 数值回正
-    // （HP/防御下调至约 2000 轮可击杀 + jobs 属性成长/技能伤害回正）后，
-    // 已纳入下方统一「可击杀」断言，不再特判跳过。
+    // 5 张高阶副本（进入等级 95~115）：设计目标改为「完全忠实 v0.91 原版」——
+    // 首领 HP/防御/攻击与技能表均取 v0.91 原值，不再做「约 2000 轮可击杀」的下调校准。
+    // 补齐 v0.91 技能后首领具备原版技能，实测可能不可杀/被秒杀，属预期；
+    // 故对这 5 张断言「可进入 + 可生成 + 数值忠实 + 技能引用无悬空」而非「可击杀」。
+    // 其余 3 张低阶副本数值未变，仍保留原「可击杀」防回归断言。
+    const V091_BOSS = {
+      mh_guimu_30020: { hp: 1135350, min_phys_def: 6829, max_phys_def: 8348 },
+      mh_xyt_30212:   { hp: 1260374, min_phys_def: 7854, max_phys_def: 9600 },
+      mh_xhz_30807:   { hp: 2130000, min_phys_def: 9456, max_phys_def: 11558 },
+      shd_boss115:    { hp: 1900000, min_phys_def: 9077, max_phys_def: 11096 },
+      wxz_33164:      { hp: 795210, min_phys_def: 7155, max_phys_def: 8744,
+                        min_phys_atk: 2827, max_phys_atk: 3825 },
+    };
+    const _msKeys = new Set((E.DATA.monster_skills.monster_skills || []).map(x => x.key));
     for (const map of dungs) {
       const b = E.dungeonBosses(map)[0];
       const L = (map.enter_level_min || 1) + 5;
@@ -1073,7 +1084,19 @@ function ok(name, cond, extra) {
       Object.assign(E.state.auto, { hp: 85, mp: 30, potion: true, buy: true, zone: false, junk: true, stats: false, rank: false });
       E.state.speed = 4;
       const entered = E.startZone(map.key, null, true, b.key);
-      // L4 数值回正已完成：5 张高阶副本首领与原版属性/技能回正一并纳入统一「可击杀」断言。
+      if (V091_BOSS[b.monster]) {
+        const base = E.MONSTERS[b.monster];
+        const want = V091_BOSS[b.monster];
+        const faithful = Object.keys(want).every(f => base[f] === want[f]);
+        const skAll = (base.skills || []).every(k => _msKeys.has(k));
+        const m1 = E.spawnMonster();
+        ok(map.name + '「' + b.name + '」v0.91 原版数值/技能忠实且可生成',
+          entered && !!m1 && faithful && skAll,
+          'entered=' + entered + ' faithful=' + faithful + ' skills=' + (base.skills || []).length + ' hitAll=' + skAll);
+        E.setIdle(false);
+        continue;
+      }
+      // 低阶副本：保留原「可击杀」防回归断言。
       const d0 = E.state.sess.deaths || 0;
       E.state.combat = null; E.setIdle(true);
       let won = false, rounds = 0;
@@ -1090,6 +1113,19 @@ function ok(name, cond, extra) {
         entered && won, 'entered=' + entered + ' won=' + won + ' rounds=' + rounds);
       E.setIdle(false);
     }
+    ok('全部怪物技能引用命中技能表（悬空 = 0）', (function () {
+      let bad = 0;
+      for (const mk in E.MONSTERS) {
+        for (const k of (E.MONSTERS[mk].skills || [])) if (!_msKeys.has(k)) bad++;
+      }
+      return bad === 0;
+    })(), 'bad=' + (function () {
+      let bad = 0;
+      for (const mk in E.MONSTERS) {
+        for (const k of (E.MONSTERS[mk].skills || [])) if (!_msKeys.has(k)) bad++;
+      }
+      return bad;
+    })());
   }
 
   // ---- 区域探索进度（explore_target）----
@@ -2188,7 +2224,7 @@ function ok(name, cond, extra) {
     console.log('-- 双手武器互斥规则 --');
     const is2h = h => E.isTwoHand({ hand: h });
     const war2h = E.DATA.bases_warrior.weapons.filter(w => is2h(w.hand));
-    ok('战士双手武器 7 把（数据口径）', war2h.length === 7, war2h.length + '');
+    ok('战士双手武器 8 把（v0.91 补齐 8 档后数据口径）', war2h.length === 8, war2h.length + '');
     ok('其他职业无双手武器', ['mage','shaman','darkwitch'].every(
       j => E.DATA['bases_'+j].weapons.every(w => !is2h(w.hand))));
 

@@ -181,6 +181,74 @@
       },
       "key": "base_shaman_helmets_7_7",
       "req_level": 101
+    },
+    {
+      "name": "青鸾振羽帽",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          132,
+          178
+        ],
+        "magic_def": [
+          200,
+          273
+        ]
+      },
+      "key": "base_shaman_helmets_8_1",
+      "req_level": 114,
+      "job": "shaman"
+    },
+    {
+      "name": "雷动千山帽",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_helmet_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          145,
+          188
+        ],
+        "magic_def": [
+          221,
+          291
+        ]
+      },
+      "key": "base_shaman_helmets_8_2",
+      "req_level": 114,
+      "job": "shaman"
     }
   ],
   "shoulders": [
@@ -339,6 +407,100 @@
       },
       "key": "base_shaman_shoulders_7_6",
       "req_level": 104
+    },
+    {
+      "name": "青藤护肩",
+      "tier": 1,
+      "job": "shaman",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_1.png",
+      "desc": "族人初次历练，以草药之力仿出灵鹊翠羽之形，披之如沐春风",
+      "durability": [
+        8,
+        8
+      ],
+      "stats": {
+        "phys_def": [
+          14,
+          17
+        ],
+        "magic_def": [
+          15,
+          19
+        ]
+      },
+      "key": "base_shaman_shoulders_1_1",
+      "req_level": 15
+    },
+    {
+      "name": "青鸾振羽护肩",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          112,
+          150
+        ],
+        "magic_def": [
+          153,
+          209
+        ]
+      },
+      "key": "base_shaman_shoulders_8_1",
+      "req_level": 115,
+      "job": "shaman"
+    },
+    {
+      "name": "雷动千山护肩",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoulder_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          122,
+          162
+        ],
+        "magic_def": [
+          166,
+          224
+        ]
+      },
+      "key": "base_shaman_shoulders_8_2",
+      "req_level": 115,
+      "job": "shaman"
     }
   ],
   "armors": [
@@ -549,6 +711,74 @@
       },
       "key": "base_shaman_armors_1_8",
       "req_level": 0
+    },
+    {
+      "name": "青鸾振羽衫",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          207,
+          276
+        ],
+        "magic_def": [
+          337,
+          452
+        ]
+      },
+      "key": "base_shaman_armors_8_1",
+      "req_level": 116,
+      "job": "shaman"
+    },
+    {
+      "name": "雷动千山衫",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_armor_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          226,
+          300
+        ],
+        "magic_def": [
+          364,
+          487
+        ]
+      },
+      "key": "base_shaman_armors_8_2",
+      "req_level": 116,
+      "job": "shaman"
     }
   ],
   "pants": [
@@ -759,6 +989,74 @@
       },
       "key": "base_shaman_pants_1_8",
       "req_level": 0
+    },
+    {
+      "name": "青鸾振羽护腿",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          173,
+          227
+        ],
+        "magic_def": [
+          259,
+          345
+        ]
+      },
+      "key": "base_shaman_pants_8_1",
+      "req_level": 116,
+      "job": "shaman"
+    },
+    {
+      "name": "雷动千山护腿",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_pants_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          184,
+          246
+        ],
+        "magic_def": [
+          281,
+          373
+        ]
+      },
+      "key": "base_shaman_pants_8_2",
+      "req_level": 116,
+      "job": "shaman"
     }
   ],
   "shoes": [
@@ -943,6 +1241,74 @@
       },
       "key": "base_shaman_shoes_7_7",
       "req_level": 95
+    },
+    {
+      "name": "青鸾振羽鞋",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          87,
+          113
+        ],
+        "magic_def": [
+          113,
+          147
+        ]
+      },
+      "key": "base_shaman_shoes_8_1",
+      "req_level": 112,
+      "job": "shaman"
+    },
+    {
+      "name": "雷动千山鞋",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_shoes_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          92,
+          124
+        ],
+        "magic_def": [
+          118,
+          159
+        ]
+      },
+      "key": "base_shaman_shoes_8_2",
+      "req_level": 112,
+      "job": "shaman"
     }
   ],
   "gloves": [
@@ -1127,6 +1493,74 @@
       },
       "key": "base_shaman_gloves_7_7",
       "req_level": 97
+    },
+    {
+      "name": "青鸾振羽护腕",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          76,
+          101
+        ],
+        "magic_def": [
+          90,
+          117
+        ]
+      },
+      "key": "base_shaman_gloves_8_1",
+      "req_level": 113,
+      "job": "shaman"
+    },
+    {
+      "name": "雷动千山护腕",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_glove_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          83,
+          111
+        ],
+        "magic_def": [
+          96,
+          124
+        ]
+      },
+      "key": "base_shaman_gloves_8_2",
+      "req_level": 113,
+      "job": "shaman"
     }
   ],
   "belts": [
@@ -1311,6 +1745,74 @@
       },
       "key": "base_shaman_belts_7_7",
       "req_level": 103
+    },
+    {
+      "name": "青鸾振羽腰带",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          75,
+          97
+        ],
+        "magic_def": [
+          123,
+          166
+        ]
+      },
+      "key": "base_shaman_belts_8_1",
+      "req_level": 115,
+      "job": "shaman"
+    },
+    {
+      "name": "雷动千山腰带",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_belt_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          81,
+          108
+        ],
+        "magic_def": [
+          135,
+          182
+        ]
+      },
+      "key": "base_shaman_belts_8_2",
+      "req_level": 115,
+      "job": "shaman"
     }
   ],
   "cloaks": [
@@ -1495,6 +1997,74 @@
       },
       "key": "base_shaman_cloaks_7_7",
       "req_level": 107
+    },
+    {
+      "name": "青鸾振羽披风",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          46,
+          60
+        ],
+        "magic_def": [
+          192,
+          262
+        ]
+      },
+      "key": "base_shaman_cloaks_8_1",
+      "req_level": 116,
+      "job": "shaman"
+    },
+    {
+      "name": "雷动千山披风",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_cloak_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          50,
+          61
+        ],
+        "magic_def": [
+          207,
+          281
+        ]
+      },
+      "key": "base_shaman_cloaks_8_2",
+      "req_level": 116,
+      "job": "shaman"
     }
   ],
   "weapons": [
@@ -1705,6 +2275,32 @@
       },
       "key": "base_shaman_weapons_1_8",
       "req_level": 0
+    },
+    {
+      "name": "撼山",
+      "tier": 8,
+      "job": "shaman",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/shaman_weapon_8.png",
+      "desc": "钟锤合体的幻器，敲击声能荡涤心魔、消解灾厄",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          258,
+          345
+        ],
+        "magic_atk": [
+          255,
+          340
+        ]
+      },
+      "key": "base_shaman_weapons_8_1",
+      "req_level": 120
     }
   ],
   "shields": []

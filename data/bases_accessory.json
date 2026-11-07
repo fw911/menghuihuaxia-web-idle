@@ -250,6 +250,31 @@
       "effect": "exp_bonus_10",
       "key": "base_accessory_rings_7_2",
       "req_level": 0
+    },
+    {
+      "name": "聚星戒",
+      "tier": 8,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_ring_8.png",
+      "desc": "戒面刻有六芒星阵的指环，转动时能引星力护体",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          97,
+          125
+        ],
+        "magic_atk": [
+          78,
+          99
+        ]
+      },
+      "key": "base_accessory_rings_8_1",
+      "req_level": 119
     }
   ],
   "necklaces": [
@@ -427,6 +452,64 @@
       },
       "key": "base_accessory_necklaces_7_1",
       "req_level": 101
+    },
+    {
+      "name": "素珠颈链",
+      "tier": 1,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_necklace_1.png",
+      "desc": "素珠数颗，以细绳串成，朴实无华",
+      "durability": [
+        10,
+        10
+      ],
+      "stats": {
+        "phys_def": [
+          7,
+          8
+        ],
+        "magic_def": [
+          17,
+          22
+        ]
+      },
+      "key": "base_accessory_necklaces_1_1",
+      "req_level": 13
+    },
+    {
+      "name": "沧溟",
+      "tier": 8,
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/accessory_necklace_8.png",
+      "desc": "链身似有无尽延伸的坠链，佩戴者心神安稳如渊",
+      "durability": [
+        32,
+        32
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          46,
+          61
+        ],
+        "magic_def": [
+          182,
+          246
+        ]
+      },
+      "key": "base_accessory_necklaces_8_1",
+      "req_level": 118
     }
   ]
 }

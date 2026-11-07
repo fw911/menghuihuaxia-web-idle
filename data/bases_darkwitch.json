@@ -181,6 +181,74 @@
       },
       "key": "base_darkwitch_helmets_7_7",
       "req_level": 101
+    },
+    {
+      "name": "万蛊噬心帽",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_helmet_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          119,
+          156
+        ],
+        "magic_def": [
+          102,
+          138
+        ]
+      },
+      "key": "base_darkwitch_helmets_8_1",
+      "req_level": 114,
+      "job": "darkwitch"
+    },
+    {
+      "name": "冥河夜渡帽",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_helmet_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          126,
+          169
+        ],
+        "magic_def": [
+          111,
+          147
+        ]
+      },
+      "key": "base_darkwitch_helmets_8_2",
+      "req_level": 114,
+      "job": "darkwitch"
     }
   ],
   "shoulders": [
@@ -339,6 +407,100 @@
       },
       "key": "base_darkwitch_shoulders_7_6",
       "req_level": 104
+    },
+    {
+      "name": "冥纹护肩",
+      "tier": 1,
+      "job": "darkwitch",
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_shoulder_1.png",
+      "desc": "族中祭师取百结藤蔓绞入荆葛，织就这一身，故名冥纹",
+      "durability": [
+        8,
+        8
+      ],
+      "stats": {
+        "phys_def": [
+          13,
+          16
+        ],
+        "magic_def": [
+          11,
+          13
+        ]
+      },
+      "key": "base_darkwitch_shoulders_1_1",
+      "req_level": 15
+    },
+    {
+      "name": "万蛊噬心护肩",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_shoulder_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          105,
+          139
+        ],
+        "magic_def": [
+          86,
+          116
+        ]
+      },
+      "key": "base_darkwitch_shoulders_8_1",
+      "req_level": 115,
+      "job": "darkwitch"
+    },
+    {
+      "name": "冥河夜渡护肩",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_shoulder_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          115,
+          154
+        ],
+        "magic_def": [
+          95,
+          121
+        ]
+      },
+      "key": "base_darkwitch_shoulders_8_2",
+      "req_level": 115,
+      "job": "darkwitch"
     }
   ],
   "armors": [
@@ -549,6 +711,74 @@
       },
       "key": "base_darkwitch_armors_1_8",
       "req_level": 0
+    },
+    {
+      "name": "万蛊噬心衣",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_armor_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          185,
+          244
+        ],
+        "magic_def": [
+          185,
+          252
+        ]
+      },
+      "key": "base_darkwitch_armors_8_1",
+      "req_level": 116,
+      "job": "darkwitch"
+    },
+    {
+      "name": "冥河夜渡衣",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_armor_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          199,
+          265
+        ],
+        "magic_def": [
+          202,
+          268
+        ]
+      },
+      "key": "base_darkwitch_armors_8_2",
+      "req_level": 116,
+      "job": "darkwitch"
     }
   ],
   "pants": [
@@ -759,6 +989,74 @@
       },
       "key": "base_darkwitch_pants_1_8",
       "req_level": 0
+    },
+    {
+      "name": "万蛊噬心护腿",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_pants_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          155,
+          204
+        ],
+        "magic_def": [
+          154,
+          207
+        ]
+      },
+      "key": "base_darkwitch_pants_8_1",
+      "req_level": 116,
+      "job": "darkwitch"
+    },
+    {
+      "name": "冥河夜渡护腿",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_pants_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          165,
+          218
+        ],
+        "magic_def": [
+          169,
+          224
+        ]
+      },
+      "key": "base_darkwitch_pants_8_2",
+      "req_level": 116,
+      "job": "darkwitch"
     }
   ],
   "shoes": [
@@ -943,6 +1241,74 @@
       },
       "key": "base_darkwitch_shoes_7_7",
       "req_level": 95
+    },
+    {
+      "name": "万蛊噬心鞋",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_shoes_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          80,
+          108
+        ],
+        "magic_def": [
+          77,
+          99
+        ]
+      },
+      "key": "base_darkwitch_shoes_8_1",
+      "req_level": 112,
+      "job": "darkwitch"
+    },
+    {
+      "name": "冥河夜渡鞋",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_shoes_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          88,
+          114
+        ],
+        "magic_def": [
+          83,
+          109
+        ]
+      },
+      "key": "base_darkwitch_shoes_8_2",
+      "req_level": 112,
+      "job": "darkwitch"
     }
   ],
   "gloves": [
@@ -1127,6 +1493,74 @@
       },
       "key": "base_darkwitch_gloves_7_7",
       "req_level": 97
+    },
+    {
+      "name": "万蛊噬心护腕",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_glove_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          67,
+          94
+        ],
+        "magic_def": [
+          70,
+          93
+        ]
+      },
+      "key": "base_darkwitch_gloves_8_1",
+      "req_level": 113,
+      "job": "darkwitch"
+    },
+    {
+      "name": "冥河夜渡护腕",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_glove_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          75,
+          100
+        ],
+        "magic_def": [
+          77,
+          95
+        ]
+      },
+      "key": "base_darkwitch_gloves_8_2",
+      "req_level": 113,
+      "job": "darkwitch"
     }
   ],
   "belts": [
@@ -1311,6 +1745,74 @@
       },
       "key": "base_darkwitch_belts_7_7",
       "req_level": 103
+    },
+    {
+      "name": "万蛊噬心腰带",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_belt_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          65,
+          90
+        ],
+        "magic_def": [
+          94,
+          125
+        ]
+      },
+      "key": "base_darkwitch_belts_8_1",
+      "req_level": 115,
+      "job": "darkwitch"
+    },
+    {
+      "name": "冥河夜渡腰带",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_belt_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          72,
+          96
+        ],
+        "magic_def": [
+          101,
+          137
+        ]
+      },
+      "key": "base_darkwitch_belts_8_2",
+      "req_level": 115,
+      "job": "darkwitch"
     }
   ],
   "cloaks": [
@@ -1495,6 +1997,74 @@
       },
       "key": "base_darkwitch_cloaks_7_7",
       "req_level": 107
+    },
+    {
+      "name": "万蛊噬心披风",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_cloak_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          63,
+          80
+        ],
+        "magic_def": [
+          181,
+          238
+        ]
+      },
+      "key": "base_darkwitch_cloaks_8_1",
+      "req_level": 116,
+      "job": "darkwitch"
+    },
+    {
+      "name": "冥河夜渡披风",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_cloak_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          65,
+          91
+        ],
+        "magic_def": [
+          195,
+          256
+        ]
+      },
+      "key": "base_darkwitch_cloaks_8_2",
+      "req_level": 116,
+      "job": "darkwitch"
     }
   ],
   "weapons": [
@@ -1705,6 +2275,32 @@
       },
       "key": "base_darkwitch_weapons_1_8",
       "req_level": 0
+    },
+    {
+      "name": "蚀魂",
+      "tier": 8,
+      "job": "darkwitch",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/darkwitch_weapon_8.png",
+      "desc": "修罗场遗落的暗锥，锥身噬影，出手无光",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          254,
+          339
+        ]
+      },
+      "key": "base_darkwitch_weapons_8_1",
+      "req_level": 120
     }
   ],
   "shields": []

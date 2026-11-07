@@ -1519,7 +1519,8 @@
         }
       ],
       "icon": "achievement_kill"
-    },
+    ,
+      "kill_keyword_official": "绿依"},
     {
       "key": "ktype_赤社_1500",
       "category": "kill_type",
@@ -1537,7 +1538,8 @@
         }
       ],
       "icon": "achievement_kill"
-    },
+    ,
+      "kill_keyword_official": "复社"},
     {
       "key": "ktype_山膏_1500",
       "category": "kill_type",
@@ -1546,6 +1548,63 @@
       "metric": "kill_type",
       "target": 1500,
       "kill_keyword": "山膏",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_狰牙_1500",
+      "category": "kill_type",
+      "name": "破狰牙克星",
+      "desc": "累计击杀含「狰牙」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "狰牙",
+      "kill_keyword_official": "厉角",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_双首_1500",
+      "category": "kill_type",
+      "name": "斩双首克星",
+      "desc": "累计击杀含「双首」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "双首",
+      "kill_keyword_official": "延维",
+      "reward_coins": 300000,
+      "reward_coupon": 20,
+      "reward_items": [
+        {
+          "key": "lingyun_zhu",
+          "count": 1
+        }
+      ],
+      "icon": "achievement_kill"
+    },
+    {
+      "key": "ktype_莽岭_1500",
+      "category": "kill_type",
+      "name": "镇莽岭克星",
+      "desc": "累计击杀含「莽岭」的怪物 1500 只",
+      "metric": "kill_type",
+      "target": 1500,
+      "kill_keyword": "莽岭",
+      "kill_keyword_official": "山膏",
       "reward_coins": 300000,
       "reward_coupon": 20,
       "reward_items": [
@@ -2030,6 +2089,354 @@
       "unlock": {
         "type": "achieve_count",
         "count": 50
+      }
+    },
+    {
+      "key": "kx_狰牙",
+      "name": "破狰牙克星",
+      "desc": "对含「狰牙」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "狰牙",
+        "keyword_official": "厉角",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "狰牙",
+        "keyword_official": "厉角",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_双首",
+      "name": "斩双首克星",
+      "desc": "对含「双首」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "双首",
+        "keyword_official": "延维",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "双首",
+        "keyword_official": "延维",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "kx_莽岭",
+      "name": "镇莽岭克星",
+      "desc": "对含「莽岭」的怪物造成伤害 ×1.5",
+      "unlock": {
+        "type": "kill_type",
+        "keyword": "莽岭",
+        "keyword_official": "山膏",
+        "count": 1500
+      },
+      "effect": {
+        "type": "monster_dmg",
+        "keyword": "莽岭",
+        "keyword_official": "山膏",
+        "mult": 1.5
+      }
+    },
+    {
+      "key": "cz_1",
+      "name": "神佑守护",
+      "desc": "智力、精神、体质+5，力量、敏捷+4，物理和法术防御+2%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "guimu_mh"
+      },
+      "effect": {
+        "type": "stats",
+        "intelligence": 5,
+        "spirit": 5,
+        "constitution": 5,
+        "strength": 4,
+        "agility": 4,
+        "phys_def_pct": 2,
+        "magic_def_pct": 2
+      }
+    },
+    {
+      "key": "cz_2",
+      "name": "睿鉴八方",
+      "desc": "智力、敏捷+8，精神、体质+6，物理和法术攻击+1%，致命一击+1%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "xuanyuantai_mh"
+      },
+      "effect": {
+        "type": "stats",
+        "intelligence": 8,
+        "agility": 8,
+        "spirit": 6,
+        "constitution": 6,
+        "phys_atk_pct": 1,
+        "magic_atk_pct": 1,
+        "phys_crit": 1,
+        "magic_crit": 1
+      }
+    },
+    {
+      "key": "cz_3",
+      "name": "侠行八方",
+      "desc": "智力、精神、体质+10，力量、敏捷+8，物理和法术攻击+1%，生命上限+3%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "xianghunzhong_mh"
+      },
+      "effect": {
+        "type": "stats",
+        "intelligence": 10,
+        "spirit": 10,
+        "constitution": 10,
+        "strength": 8,
+        "agility": 8,
+        "phys_atk_pct": 1,
+        "magic_atk_pct": 1,
+        "max_hp_pct": 3
+      }
+    },
+    {
+      "key": "cz_4",
+      "name": "通天武圣",
+      "desc": "全五维+3，物理和法术攻击+2%，致命一击+1%",
+      "unlock": {
+        "type": "kill_total",
+        "count": 30000
+      },
+      "effect": {
+        "type": "stats",
+        "strength": 3,
+        "agility": 3,
+        "constitution": 3,
+        "intelligence": 3,
+        "spirit": 3,
+        "phys_atk_pct": 2,
+        "magic_atk_pct": 2,
+        "phys_crit": 1,
+        "magic_crit": 1
+      }
+    },
+    {
+      "key": "cz_5",
+      "name": "御极之风",
+      "desc": "全五维+4，物理和法术攻击+1%，物理和法术防御+1%，生命上限+1%",
+      "unlock": {
+        "type": "achieve_count",
+        "count": 45
+      },
+      "effect": {
+        "type": "stats",
+        "strength": 4,
+        "agility": 4,
+        "constitution": 4,
+        "intelligence": 4,
+        "spirit": 4,
+        "phys_atk_pct": 1,
+        "magic_atk_pct": 1,
+        "phys_def_pct": 1,
+        "magic_def_pct": 1,
+        "max_hp_pct": 1
+      }
+    },
+    {
+      "key": "cz_6",
+      "name": "九黎战魂",
+      "desc": "全五维+4，物理和法术防御+2%，生命上限+3%，受到伤害-1%",
+      "unlock": {
+        "type": "achieve_count",
+        "count": 50
+      },
+      "effect": {
+        "type": "stats",
+        "strength": 4,
+        "agility": 4,
+        "constitution": 4,
+        "intelligence": 4,
+        "spirit": 4,
+        "phys_def_pct": 2,
+        "magic_def_pct": 2,
+        "max_hp_pct": 3,
+        "dmg_reduce_pct": 1
+      }
+    },
+    {
+      "key": "cz_7",
+      "name": "蓬莱遗王",
+      "desc": "全五维+20，物理和法术攻击+3%，致命一击+2%，受到伤害-2%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "haishishenlou_l4"
+      },
+      "effect": {
+        "type": "stats",
+        "strength": 20,
+        "agility": 20,
+        "constitution": 20,
+        "intelligence": 20,
+        "spirit": 20,
+        "phys_atk_pct": 3,
+        "magic_atk_pct": 3,
+        "phys_crit": 2,
+        "magic_crit": 2,
+        "dmg_reduce_pct": 2
+      }
+    },
+    {
+      "key": "cz_8",
+      "name": "望渊裁决者",
+      "desc": "全五维+25，物理和法术攻击+3%，致命一击+2%，受到伤害-3%",
+      "unlock": {
+        "type": "map_clear",
+        "map_key": "shihundian"
+      },
+      "effect": {
+        "type": "stats",
+        "strength": 25,
+        "agility": 25,
+        "constitution": 25,
+        "intelligence": 25,
+        "spirit": 25,
+        "phys_atk_pct": 3,
+        "magic_atk_pct": 3,
+        "phys_crit": 2,
+        "magic_crit": 2,
+        "dmg_reduce_pct": 3
+      }
+    },
+    {
+      "key": "hc_xuanwu",
+      "name": "玄武勇者",
+      "desc": "集齐青丘、凤鸣原、雁回沼泽、龙脊、澜溪、逐日六张区域勇者。在上述区域内：全五维+8，物理和法术攻击+1%",
+      "unlock": {
+        "type": "title_set",
+        "titles": [
+          "my_beijun",
+          "my_tianshengyuan",
+          "my_congyuzhaoze",
+          "my_banquan",
+          "my_nanjun",
+          "my_xuanyuan"
+        ]
+      },
+      "effect": {
+        "type": "stats",
+        "scope": {
+          "maps": [
+            "beijun",
+            "tianshengyuan",
+            "congyuzhaoze",
+            "banquan",
+            "nanjun",
+            "xuanyuan"
+          ]
+        },
+        "strength": 8,
+        "agility": 8,
+        "constitution": 8,
+        "intelligence": 8,
+        "spirit": 8,
+        "phys_atk_pct": 1,
+        "magic_atk_pct": 1
+      }
+    },
+    {
+      "key": "hc_qinglin",
+      "name": "青麟勇者",
+      "desc": "集齐烽烟原、海岱州、朔风荒原、擎苍野、青萝、雾隐雨林、望岳盆地七张区域勇者。在上述区域内：全五维+8，物理和法术攻击+1%",
+      "unlock": {
+        "type": "title_set",
+        "titles": [
+          "my_qiufengyuan",
+          "my_ninghaizhou",
+          "my_xilie",
+          "my_jurenye",
+          "my_linhai",
+          "my_muxiuyulin",
+          "my_langyapendi"
+        ]
+      },
+      "effect": {
+        "type": "stats",
+        "scope": {
+          "maps": [
+            "qiufengyuan",
+            "ninghaizhou",
+            "xilie",
+            "jurenye",
+            "linhai",
+            "muxiuyulin",
+            "langyapendi"
+          ]
+        },
+        "strength": 8,
+        "agility": 8,
+        "constitution": 8,
+        "intelligence": 8,
+        "spirit": 8,
+        "phys_atk_pct": 1,
+        "magic_atk_pct": 1
+      }
+    },
+    {
+      "key": "hc_huofeng",
+      "name": "火凤勇者",
+      "desc": "集齐玉轮、寒戍谷、牧云草原、落雁四张区域勇者。在上述区域内：全五维+8，物理和法术攻击+1%",
+      "unlock": {
+        "type": "title_set",
+        "titles": [
+          "my_kunlun",
+          "my_duanbigu",
+          "my_donglicao",
+          "my_chishui"
+        ]
+      },
+      "effect": {
+        "type": "stats",
+        "scope": {
+          "maps": [
+            "kunlun",
+            "duanbigu",
+            "donglicao",
+            "chishui"
+          ]
+        },
+        "strength": 8,
+        "agility": 8,
+        "constitution": 8,
+        "intelligence": 8,
+        "spirit": 8,
+        "phys_atk_pct": 1,
+        "magic_atk_pct": 1
+      }
+    },
+    {
+      "key": "hc_huanglong",
+      "name": "黄龙勇者",
+      "desc": "集齐玄武、青麟、火凤三合称。在任何地方：全五维+15，物理和法术攻击+2%",
+      "unlock": {
+        "type": "title_set",
+        "titles": [
+          "hc_xuanwu",
+          "hc_qinglin",
+          "hc_huofeng"
+        ]
+      },
+      "effect": {
+        "type": "stats",
+        "scope": "all",
+        "strength": 15,
+        "agility": 15,
+        "constitution": 15,
+        "intelligence": 15,
+        "spirit": 15,
+        "phys_atk_pct": 2,
+        "magic_atk_pct": 2
       }
     }
   ]

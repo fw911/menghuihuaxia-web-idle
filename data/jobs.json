@@ -27,7 +27,12 @@
       "skill_pool": "warrior_skills",
       "perk_pool": "warrior",
       "skills": ["hanguang_zhan"]
-    },
+    ,
+      "hp_per_level": 15,
+      "mp_per_level": 5,
+      "form_five": {"xu": {"strength": 5, "agility": 5, "constitution": -12}, "pan": {"constitution": 10, "strength": -5, "agility": -8}},
+      "form_desc": {"xu": "蓄势待发，舍命相搏在所难免", "pan": "身临险境，全力退守坚如磐石"},
+      "form_buffs": {"xu": {"phys_def_pct": -6, "magic_def_pct": 7, "max_hp_pct": 5}, "pan": {"phys_def_pct": 7, "magic_def_pct": 6, "max_hp_pct": -5}}},
     {
       "key": "mage",
       "name": "法师",
@@ -50,7 +55,12 @@
       "skill_pool": "mage_skills",
       "perk_pool": "mage",
       "skills": ["jihuo_zhu"]
-    },
+    ,
+      "hp_per_level": 10,
+      "mp_per_level": 44,
+      "form_five": {"du": {"intelligence": 8, "constitution": -5, "spirit": -5}, "qun": {"intelligence": 5, "spirit": -6}},
+      "form_desc": {"du": "潇洒飘逸，特立独行", "qun": "声势浩大，威力惊人"},
+      "form_buffs": {"du": {"phys_def_pct": -7, "magic_def_pct": 4, "max_hp_pct": 7}, "qun": {"phys_def_pct": 8, "magic_def_pct": 5, "max_hp_pct": -5}}},
     {
       "key": "darkwitch",
       "name": "暗巫",
@@ -78,7 +88,12 @@
       "skill_pool": "darkwitch_skills",
       "perk_pool": "darkwitch",
       "skills": ["an_ying"]
-    },
+    ,
+      "hp_per_level": 10,
+      "mp_per_level": 20,
+      "form_five": {"zhao": {"spirit": 10, "intelligence": -12}, "zu": {"intelligence": 10, "spirit": -12}},
+      "form_desc": {"zhao": "咒语鬼神莫测唤醒魔界生灵", "zu": "巫术诡异离奇伤敌悄无声息"},
+      "form_buffs": {"zhao": {"phys_def_pct": 5, "magic_def_pct": -6, "max_hp_pct": 7}, "zu": {"phys_def_pct": -4, "magic_def_pct": 8, "max_hp_pct": 6}}},
     {
       "key": "shaman",
       "name": "幻师",
@@ -106,7 +121,12 @@
       "skill_pool": "shaman_skills",
       "perk_pool": "shaman",
       "skills": ["zi_dian"]
-    }
+    ,
+      "hp_per_level": 12,
+      "mp_per_level": 25,
+      "form_five": {"zhi": {"intelligence": 10, "agility": -12}, "huan": {"agility": 10, "intelligence": -12}},
+      "form_desc": {"zhi": "慈悲心，神奇医术救人性命", "huan": "临敌时，变幻身形迅疾如风"},
+      "form_buffs": {"zhi": {"phys_def_pct": -7, "magic_def_pct": 5, "max_hp_pct": 6}, "huan": {"phys_def_pct": 8, "magic_def_pct": 4, "max_hp_pct": -6}}}
   ],
   "attribute_effects": {
     "strength": {"phys_atk": 2, "max_hp": 5},

@@ -23933,3806 +23933,6 @@
    "skill_type": "attack"
   },
   {
-   "key": "canxuedaoke38_pa",
-   "name": "重踏",
-   "element": "physical",
-   "mult": 1.96,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "canxuedaoke38_sp",
-   "name": "凝霜",
-   "element": "magic",
-   "mult": 1.96,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "anyingshangao35_pa",
-   "name": "钢爪",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaodaoke36_pa",
-   "name": "撼岳",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaoshashou37_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 1.99,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaoshashou37_sp",
-   "name": "雷震",
-   "element": "magic",
-   "mult": 1.99,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jurenshashou36_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 2.01,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jurenshashou36_sp",
-   "name": "噬魂",
-   "element": "magic",
-   "mult": 2.01,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "nuhuodaoke37_pa",
-   "name": "碎金",
-   "element": "physical",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "nuhuodaoke37_sp",
-   "name": "咒缚",
-   "element": "magic",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maomindaoke35_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maominshashou37_pa",
-   "name": "钢爪",
-   "element": "physical",
-   "mult": 1.95,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maominshashou37_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 1.95,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maominshashou38_pa",
-   "name": "碎岩",
-   "element": "physical",
-   "mult": 1.97,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maominshashou38_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 1.97,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "biaoketouling39_pa",
-   "name": "破阵",
-   "element": "physical",
-   "mult": 1.96,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "biaoketouling39_sp",
-   "name": "阴风",
-   "element": "magic",
-   "mult": 1.96,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duanshoudaoke37_pa",
-   "name": "崩山",
-   "element": "physical",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duanshoudaoke37_sp",
-   "name": "咒杀",
-   "element": "magic",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jurendaoke35_pa",
-   "name": "扑杀",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaodaoke35_pa",
-   "name": "啄击",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duzhizhu35_pa",
-   "name": "刀法",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shixuezhizhu36_pa",
-   "name": "俯冲",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "juduzhizhu35_pa",
-   "name": "撼岳",
-   "element": "physical",
-   "mult": 2.02,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "juduzhizhu35_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 2.02,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lengxuedaoke37_pa",
-   "name": "回旋",
-   "element": "physical",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lengxuedaoke37_sp",
-   "name": "玄冰",
-   "element": "magic",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duzhizhu34_pa",
-   "name": "碎金",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaodaoke34_pa",
-   "name": "扑杀",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu46_pa",
-   "name": "刃击",
-   "element": "physical",
-   "mult": 1.76,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu46_sp",
-   "name": "咒缚",
-   "element": "magic",
-   "mult": 1.76,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieyingdaoke46_pa",
-   "name": "崩山",
-   "element": "physical",
-   "mult": 1.83,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieyingdaoke46_sp",
-   "name": "咒杀",
-   "element": "magic",
-   "mult": 1.83,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "mojiadaoke47_pa",
-   "name": "横扫",
-   "element": "physical",
-   "mult": 1.82,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "mojiadaoke47_sp",
-   "name": "噬魂",
-   "element": "magic",
-   "mult": 1.82,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "zhuimingdaoke48_pa",
-   "name": "啄击",
-   "element": "physical",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "zhuimingdaoke48_sp",
-   "name": "蚀骨",
-   "element": "magic",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lichifeichong45_pa",
-   "name": "钢爪",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lichifeichong46_pa",
-   "name": "疾斩",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieqiangdaoke47_pa",
-   "name": "咆哮",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "chonghou47_pa",
-   "name": "裂石",
-   "element": "physical",
-   "mult": 1.8,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "chonghou47_sp",
-   "name": "惑心",
-   "element": "magic",
-   "mult": 1.8,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieyingdaoke50_pa",
-   "name": "断岳",
-   "element": "physical",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieyingdaoke50_sp",
-   "name": "雷震",
-   "element": "magic",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "molingdaoke51_pa",
-   "name": "碎岩",
-   "element": "physical",
-   "mult": 1.76,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "molingdaoke51_sp",
-   "name": "噬魂",
-   "element": "magic",
-   "mult": 1.76,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieqiangdaoke45_pa",
-   "name": "突刺",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieqiangdaoke46_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "daobaoyimu49_pa",
-   "name": "冲撞",
-   "element": "physical",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "daobaoyimu49_sp",
-   "name": "噬魂",
-   "element": "magic",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duobaoyimu50_pa",
-   "name": "裂石",
-   "element": "physical",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duobaoyimu50_sp",
-   "name": "烈焰",
-   "element": "magic",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duobao51_pa",
-   "name": "劈山",
-   "element": "physical",
-   "mult": 1.52,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duobao51_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 1.52,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tiejiadaoke48_pa",
-   "name": "断岳",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tiejiadaoke49_pa",
-   "name": "刃击",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "moxuedaoke49_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duomingdaoke50_pa",
-   "name": "猛击",
-   "element": "physical",
-   "mult": 1.77,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duomingdaoke50_sp",
-   "name": "孢雾",
-   "element": "magic",
-   "mult": 1.77,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu48_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu48_sp",
-   "name": "冰锥",
-   "element": "magic",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu49_pa",
-   "name": "疾斩",
-   "element": "physical",
-   "mult": 1.81,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu49_sp",
-   "name": "厉啸",
-   "element": "magic",
-   "mult": 1.81,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "yimutongling50_pa",
-   "name": "碎岩",
-   "element": "physical",
-   "mult": 1.77,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "yimutongling50_sp",
-   "name": "冰锥",
-   "element": "magic",
-   "mult": 1.77,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xuexie55_pa",
-   "name": "钢爪",
-   "element": "physical",
-   "mult": 1.72,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xuexie55_sp",
-   "name": "孢雾",
-   "element": "magic",
-   "mult": 1.72,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shixuemaoxie56_pa",
-   "name": "横扫",
-   "element": "physical",
-   "mult": 1.71,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shixuemaoxie56_sp",
-   "name": "雷震",
-   "element": "magic",
-   "mult": 1.71,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiashashou57_pa",
-   "name": "破阵",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiashashou57_sp",
-   "name": "雷震",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "huanjiadaoke56_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 1.69,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "huanjiadaoke56_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 1.69,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiashashou60_pa",
-   "name": "俯冲",
-   "element": "physical",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiashashou60_sp",
-   "name": "寒袭",
-   "element": "magic",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuangzhandaoke59_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuangzhandaoke59_sp",
-   "name": "叶煞",
-   "element": "magic",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotiewei59_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 1.68,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotiewei59_sp",
-   "name": "冰锥",
-   "element": "magic",
-   "mult": 1.68,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuangtudaoke61_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 1.66,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuangtudaoke61_sp",
-   "name": "寒风",
-   "element": "magic",
-   "mult": 1.66,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "huanjiadaoke55_pa",
-   "name": "劈山",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "huanjiadaoke55_sp",
-   "name": "灼心",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "moyingdaoke57_pa",
-   "name": "碎金",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "moyingdaoke57_sp",
-   "name": "幽煞",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotongling59_pa",
-   "name": "裂地",
-   "element": "physical",
-   "mult": 1.44,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotongling59_sp",
-   "name": "冥袭",
-   "element": "magic",
-   "mult": 1.44,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiadaoke56_pa",
-   "name": "破阵",
-   "element": "physical",
-   "mult": 1.69,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiadaoke56_sp",
-   "name": "冥袭",
-   "element": "magic",
-   "mult": 1.69,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaoxuewei57_pa",
-   "name": "扑杀",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaoxuewei57_sp",
-   "name": "寒冰",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotiewei57_pa",
-   "name": "裂石",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotiewei57_sp",
-   "name": "玄冰",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuanglongdaoke58_pa",
-   "name": "破甲",
-   "element": "physical",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuanglongdaoke58_sp",
-   "name": "蛊咒",
-   "element": "magic",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "canxuedaoke38_pa",
-   "name": "重踏",
-   "element": "physical",
-   "mult": 1.96,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "canxuedaoke38_sp",
-   "name": "凝霜",
-   "element": "magic",
-   "mult": 1.96,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "anyingshangao35_pa",
-   "name": "钢爪",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaodaoke36_pa",
-   "name": "撼岳",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaoshashou37_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 1.99,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaoshashou37_sp",
-   "name": "雷震",
-   "element": "magic",
-   "mult": 1.99,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jurenshashou36_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 2.01,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jurenshashou36_sp",
-   "name": "噬魂",
-   "element": "magic",
-   "mult": 2.01,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "nuhuodaoke37_pa",
-   "name": "碎金",
-   "element": "physical",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "nuhuodaoke37_sp",
-   "name": "咒缚",
-   "element": "magic",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maomindaoke35_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maominshashou37_pa",
-   "name": "钢爪",
-   "element": "physical",
-   "mult": 1.95,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maominshashou37_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 1.95,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maominshashou38_pa",
-   "name": "碎岩",
-   "element": "physical",
-   "mult": 1.97,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "maominshashou38_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 1.97,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "biaoketouling39_pa",
-   "name": "破阵",
-   "element": "physical",
-   "mult": 1.96,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "biaoketouling39_sp",
-   "name": "阴风",
-   "element": "magic",
-   "mult": 1.96,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duanshoudaoke37_pa",
-   "name": "崩山",
-   "element": "physical",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duanshoudaoke37_sp",
-   "name": "咒杀",
-   "element": "magic",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jurendaoke35_pa",
-   "name": "扑杀",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaodaoke35_pa",
-   "name": "啄击",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duzhizhu35_pa",
-   "name": "刀法",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shixuezhizhu36_pa",
-   "name": "俯冲",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "juduzhizhu35_pa",
-   "name": "撼岳",
-   "element": "physical",
-   "mult": 2.02,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "juduzhizhu35_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 2.02,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lengxuedaoke37_pa",
-   "name": "回旋",
-   "element": "physical",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lengxuedaoke37_sp",
-   "name": "玄冰",
-   "element": "magic",
-   "mult": 1.98,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duzhizhu34_pa",
-   "name": "碎金",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shangaodaoke34_pa",
-   "name": "扑杀",
-   "element": "physical",
-   "mult": 3.097,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu46_pa",
-   "name": "刃击",
-   "element": "physical",
-   "mult": 1.76,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu46_sp",
-   "name": "咒缚",
-   "element": "magic",
-   "mult": 1.76,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieyingdaoke46_pa",
-   "name": "崩山",
-   "element": "physical",
-   "mult": 1.83,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieyingdaoke46_sp",
-   "name": "咒杀",
-   "element": "magic",
-   "mult": 1.83,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "mojiadaoke47_pa",
-   "name": "横扫",
-   "element": "physical",
-   "mult": 1.82,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "mojiadaoke47_sp",
-   "name": "噬魂",
-   "element": "magic",
-   "mult": 1.82,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "zhuimingdaoke48_pa",
-   "name": "啄击",
-   "element": "physical",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "zhuimingdaoke48_sp",
-   "name": "蚀骨",
-   "element": "magic",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lichifeichong45_pa",
-   "name": "钢爪",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lichifeichong46_pa",
-   "name": "疾斩",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieqiangdaoke47_pa",
-   "name": "咆哮",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "chonghou47_pa",
-   "name": "裂石",
-   "element": "physical",
-   "mult": 1.8,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "chonghou47_sp",
-   "name": "惑心",
-   "element": "magic",
-   "mult": 1.8,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieyingdaoke50_pa",
-   "name": "断岳",
-   "element": "physical",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieyingdaoke50_sp",
-   "name": "雷震",
-   "element": "magic",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "molingdaoke51_pa",
-   "name": "碎岩",
-   "element": "physical",
-   "mult": 1.76,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "molingdaoke51_sp",
-   "name": "噬魂",
-   "element": "magic",
-   "mult": 1.76,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieqiangdaoke45_pa",
-   "name": "突刺",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tieqiangdaoke46_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "daobaoyimu49_pa",
-   "name": "冲撞",
-   "element": "physical",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "daobaoyimu49_sp",
-   "name": "噬魂",
-   "element": "magic",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duobaoyimu50_pa",
-   "name": "裂石",
-   "element": "physical",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duobaoyimu50_sp",
-   "name": "烈焰",
-   "element": "magic",
-   "mult": 1.78,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duobao51_pa",
-   "name": "劈山",
-   "element": "physical",
-   "mult": 1.52,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duobao51_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 1.52,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tiejiadaoke48_pa",
-   "name": "断岳",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "tiejiadaoke49_pa",
-   "name": "刃击",
-   "element": "physical",
-   "mult": 4.028,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "moxuedaoke49_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duomingdaoke50_pa",
-   "name": "猛击",
-   "element": "physical",
-   "mult": 1.77,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "duomingdaoke50_sp",
-   "name": "孢雾",
-   "element": "magic",
-   "mult": 1.77,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu48_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu48_sp",
-   "name": "冰锥",
-   "element": "magic",
-   "mult": 1.79,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu49_pa",
-   "name": "疾斩",
-   "element": "physical",
-   "mult": 1.81,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xunzhaiyimu49_sp",
-   "name": "厉啸",
-   "element": "magic",
-   "mult": 1.81,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "yimutongling50_pa",
-   "name": "碎岩",
-   "element": "physical",
-   "mult": 1.77,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "yimutongling50_sp",
-   "name": "冰锥",
-   "element": "magic",
-   "mult": 1.77,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xuexie55_pa",
-   "name": "钢爪",
-   "element": "physical",
-   "mult": 1.72,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "xuexie55_sp",
-   "name": "孢雾",
-   "element": "magic",
-   "mult": 1.72,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shixuemaoxie56_pa",
-   "name": "横扫",
-   "element": "physical",
-   "mult": 1.71,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "shixuemaoxie56_sp",
-   "name": "雷震",
-   "element": "magic",
-   "mult": 1.71,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiashashou57_pa",
-   "name": "破阵",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiashashou57_sp",
-   "name": "雷震",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "huanjiadaoke56_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 1.69,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "huanjiadaoke56_sp",
-   "name": "瘴毒",
-   "element": "magic",
-   "mult": 1.69,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiashashou60_pa",
-   "name": "俯冲",
-   "element": "physical",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiashashou60_sp",
-   "name": "寒袭",
-   "element": "magic",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuangzhandaoke59_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuangzhandaoke59_sp",
-   "name": "叶煞",
-   "element": "magic",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotiewei59_pa",
-   "name": "尾击",
-   "element": "physical",
-   "mult": 1.68,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotiewei59_sp",
-   "name": "冰锥",
-   "element": "magic",
-   "mult": 1.68,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuangtudaoke61_pa",
-   "name": "猛扑",
-   "element": "physical",
-   "mult": 1.66,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuangtudaoke61_sp",
-   "name": "寒风",
-   "element": "magic",
-   "mult": 1.66,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "huanjiadaoke55_pa",
-   "name": "劈山",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "huanjiadaoke55_sp",
-   "name": "灼心",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "moyingdaoke57_pa",
-   "name": "碎金",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "moyingdaoke57_sp",
-   "name": "幽煞",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotongling59_pa",
-   "name": "裂地",
-   "element": "physical",
-   "mult": 1.44,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotongling59_sp",
-   "name": "冥袭",
-   "element": "magic",
-   "mult": 1.44,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiadaoke56_pa",
-   "name": "破阵",
-   "element": "physical",
-   "mult": 1.69,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "jinjiadaoke56_sp",
-   "name": "冥袭",
-   "element": "magic",
-   "mult": 1.69,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaoxuewei57_pa",
-   "name": "扑杀",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaoxuewei57_sp",
-   "name": "寒冰",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotiewei57_pa",
-   "name": "裂石",
-   "element": "physical",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "lijiaotiewei57_sp",
-   "name": "玄冰",
-   "element": "magic",
-   "mult": 1.7,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuanglongdaoke58_pa",
-   "name": "破甲",
-   "element": "physical",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 5,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
-   "key": "kuanglongdaoke58_sp",
-   "name": "蛊咒",
-   "element": "magic",
-   "mult": 1.67,
-   "weight": 1.0,
-   "cd": 2,
-   "aoe": false,
-   "mp": 0,
-   "effects": [
-    {
-     "type": "bleed",
-     "value": 8,
-     "duration": 2
-    }
-   ],
-   "cd_ms": 1000,
-   "target_rule": "single",
-   "skill_type": "attack"
-  },
-  {
    "key": "tz_jurenshouwei_1",
    "name": "巫咒",
    "element": "magic",
@@ -32993,6 +29193,3757 @@
    "cd_ms": 500,
    "target_rule": "single",
    "skill_type": "attack"
+  },
+  {
+   "key": "lingyu_p_1",
+   "name": "羽刃",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "lingyu_m_1",
+   "name": "风压",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 205,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "fengzhijingling_p_1",
+   "name": "风刃",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "fengzhijingling_m_1",
+   "name": "灵风",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 108,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaiwushi_p_1",
+   "name": "破浪斩",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaiwushi_m_1",
+   "name": "海啸诀",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 112,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaishouhu_p_1",
+   "name": "守护击",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaishouhu_m_1",
+   "name": "圣光波",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 115,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "duoluoxianshi_p_1",
+   "name": "堕仙掌",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "duoluoxianshi_m_1",
+   "name": "惑魂咒",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 219,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "dadizhixi_p_1",
+   "name": "地裂",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "dadizhixi_m_1",
+   "name": "土灵刺",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 213,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "yansun_p_1",
+   "name": "隼击",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "yansun_m_1",
+   "name": "风鸣",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 115,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "ningshizhe_p_1",
+   "name": "凝视刺",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "ningshizhe_m_1",
+   "name": "虚空噬",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 115,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaixingjun_p_1",
+   "name": "星辉斩",
+   "element": "physical",
+   "mult": 1.376,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 52,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaixingjun_m_1",
+   "name": "星陨术",
+   "element": "magic",
+   "mult": 1.752,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 104,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "penglaiwang_p_1",
+   "name": "王威",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 277,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaiwang_m_1",
+   "name": "沧海诀",
+   "element": "magic",
+   "mult": 1.4,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 554,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "penglaishoujiang_p_1",
+   "name": "守将斩",
+   "element": "physical",
+   "mult": 1.625,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 499,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaishoujiang_m_1",
+   "name": "碧涛诀",
+   "element": "magic",
+   "mult": 2.25,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 998,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "buyunmeng_p_1",
+   "name": "云梦爪",
+   "element": "physical",
+   "mult": 1.25,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 790,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "buyunmeng_m_1",
+   "name": "梦境噬",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1580,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "penglaiwenyao_p_1",
+   "name": "夜飞剪",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 155,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaiwenyao_m_1",
+   "name": "蜃光弹",
+   "element": "magic",
+   "mult": 1.4,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 310,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "penglaijimeng_p_1",
+   "name": "风雨斩",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 92,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaijimeng_m_1",
+   "name": "飘风咒",
+   "element": "magic",
+   "mult": 1.4,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 184,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "penglaiyingzhao_p_1",
+   "name": "虎纹裂",
+   "element": "physical",
+   "mult": 1.903,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 194,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaiyingzhao_m_1",
+   "name": "鹏翼风",
+   "element": "magic",
+   "mult": 2.805,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 387,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "penglaiyuqiang_p_1",
+   "name": "北海戟",
+   "element": "physical",
+   "mult": 2.25,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 69,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "penglaiyuqiang_m_1",
+   "name": "玄冥波",
+   "element": "magic",
+   "mult": 3.5,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 138,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "mh_guimu_phys",
+   "name": "魔煞爪",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_guimu_magic",
+   "name": "魔瘴波",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 757,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_guimu_boss_p",
+   "name": "魔焰斩",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 50,
+   "cd_ms": 500,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 0
+  },
+  {
+   "key": "mh_guimu_boss_m",
+   "name": "噬魂咒",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 50,
+   "cd_ms": 500,
+   "mp": 1433,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 0
+  },
+  {
+   "key": "mh_xyt_phys",
+   "name": "魔殇斩",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xyt_magic",
+   "name": "幽雷咒",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 872,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xyt_boss_p",
+   "name": "戾炎击",
+   "element": "physical",
+   "mult": 1.815,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 742,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xyt_boss_m",
+   "name": "碎魂雷",
+   "element": "magic",
+   "mult": 2.63,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1483,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "mh_xhz_phys",
+   "name": "冥煞爪",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xhz_magic",
+   "name": "腐骨雾",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 1483,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xhz_boss_p",
+   "name": "冢魔击",
+   "element": "physical",
+   "mult": 1.25,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 900,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xhz_boss_m",
+   "name": "万蛊咒",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1800,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "shd_phys",
+   "name": "尸煞击",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "shd_magic",
+   "name": "冥炎弹",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 2500,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "shd_shihuang_p",
+   "name": "万尸噬",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 1500,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "shd_shihuang_m",
+   "name": "黄泉波",
+   "element": "magic",
+   "mult": 1.4,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 3000,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "yuangu_89__yuan_gu_wei_ya_L75",
+   "name": "远古威压",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 100,
+   "cd_ms": 2000,
+   "mp": 40,
+   "effects": [
+    {
+     "type": "stun",
+     "duration_ms": 500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "guimu_30028__guimu_L24_phys",
+   "name": "俯冲",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "guimu_30028__guimu_L24_magic",
+   "name": "破煞",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xyt_30230__mh_xyt_boss_p",
+   "name": "戾炎击",
+   "element": "physical",
+   "mult": 2.25,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 742,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xyt_30230__mh_xyt_boss_m",
+   "name": "碎魂雷",
+   "element": "magic",
+   "mult": 3.5,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1483,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "mh_xhz_30807__mh_xhz_boss_p",
+   "name": "冢魔击",
+   "element": "physical",
+   "mult": 2.127,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 500,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xhz_30807__mh_xhz_boss_m",
+   "name": "万蛊咒",
+   "element": "magic",
+   "mult": 3.254,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1000,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "mh_xhz_30822__mh_xhz_boss_p",
+   "name": "冢魔击",
+   "element": "physical",
+   "mult": 1.3,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 900,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xhz_30822__mh_xhz_boss_m",
+   "name": "万蛊咒",
+   "element": "magic",
+   "mult": 1.6,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1800,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "mh_xhz_30828__mh_xhz_boss_p",
+   "name": "冢魔击",
+   "element": "physical",
+   "mult": 2.25,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 600,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_xhz_30828__mh_xhz_boss_m",
+   "name": "万蛊咒",
+   "element": "magic",
+   "mult": 3.5,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1200,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "shd_boss115_p",
+   "name": "枯骨重击",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 576,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "shd_boss115_m",
+   "name": "阴火焚魂",
+   "element": "magic",
+   "mult": 1.4,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1152,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_shd_boss115",
+   "name": "万骨枯",
+   "element": "physical",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2305,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 3,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "shd_boss117_p",
+   "name": "断骨撕魂",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 648,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "shd_boss117_m",
+   "name": "业火灼魂",
+   "element": "magic",
+   "mult": 1.4,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1296,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_shd_boss117",
+   "name": "黄泉引渡",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2593,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 4,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_penglaiyingzhao",
+   "name": "神威震怒",
+   "element": "magic",
+   "mult": 4.61,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 774,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "control",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 10
+  },
+  {
+   "key": "sig_hanmoxiewu_boss",
+   "name": "暗渊吞噬",
+   "element": "physical",
+   "mult": 4.123176265778895,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2520,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 1,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_zhenhaihanmo_boss",
+   "name": "吞海怒潮",
+   "element": "physical",
+   "mult": 5.399725820980666,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 3240,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "summon": 1,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_yuangu_109",
+   "name": "荒野咆哮",
+   "element": "physical",
+   "mult": 3.5,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2581,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 120,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_tianzun",
+   "name": "灭世天罚",
+   "element": "physical",
+   "mult": 3.6,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 6992,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "sig_tianzun_2",
+   "name": "灭世天罚·引",
+   "element": "magic",
+   "mult": 2.0,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 6992,
+   "effects": [
+    {
+     "type": "elec_dot",
+     "value": 2740,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 5
+  },
+  {
+   "key": "sig_bianyi_tianzun",
+   "name": "殛世狂威",
+   "element": "physical",
+   "mult": 3.6,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 9090,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "sig_bianyi_tianzun_2",
+   "name": "殛世狂威·引",
+   "element": "magic",
+   "mult": 2.0,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 9090,
+   "effects": [
+    {
+     "type": "elec_dot",
+     "value": 2740,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 5
+  },
+  {
+   "key": "sig_yaojia",
+   "name": "燃魂焚身",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 3107,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 1256,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 5
+  },
+  {
+   "key": "sig_bianyi_yaojia",
+   "name": "爆炎焚身",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 6060,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 1570,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 5,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_yumo",
+   "name": "锁魂囚牢",
+   "element": "physical",
+   "mult": 4.493115278748643,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 3107,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "control",
+   "cd": 10
+  },
+  {
+   "key": "sig_bianyi_yumo",
+   "name": "咒锁魂魄",
+   "element": "physical",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 4040,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "control",
+   "cd": 10
+  },
+  {
+   "key": "sig_mingsha",
+   "name": "暗影潜形",
+   "element": "physical",
+   "mult": 4.180165404325565,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 4562,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_haisha",
+   "name": "怒浪吞天",
+   "element": "physical",
+   "mult": 2.76,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 9331,
+   "effects": [
+    {
+     "type": "phys_def_down",
+     "value": -12,
+     "duration_ms": 1500
+    },
+    {
+     "type": "speed_down",
+     "value": 25,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "sig_penglaishoujiang119",
+   "name": "镇关铁壁",
+   "element": "physical",
+   "mult": 3.499128461782469,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 1997,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 700478,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 389154,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "defense",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "sig_buyunmeng119",
+   "name": "踏虚幻梦",
+   "element": "magic",
+   "mult": 2.0,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 3161,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "ice_dot",
+     "value": 4600,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 10
+  },
+  {
+   "key": "sig_guimu_30020",
+   "name": "剥皮换形",
+   "element": "magic",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 2406,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_guimu_30028",
+   "name": "索命尖啸",
+   "element": "magic",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 2581,
+   "effects": [
+    {
+     "type": "fear",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "summon": 5,
+   "summon_duration_ms": 0,
+   "cd": 22
+  },
+  {
+   "key": "sig_guimu_30054",
+   "name": "绝灭死气",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 8461,
+   "effects": [
+    {
+     "type": "dark_dot",
+     "value": 216,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_xyt_30212",
+   "name": "狂气凝锋",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 3656,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_xyt_30230",
+   "name": "嗜血撕咬",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 812,
+   "effects": [
+    {
+     "type": "bleed",
+     "value": 176,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_xyt_30255",
+   "name": "破军横扫",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 3895,
+   "effects": [
+    {
+     "type": "phys_def_down",
+     "value": -12,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_xyt_30254",
+   "name": "断魂重击",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 3974,
+   "effects": [
+    {
+     "type": "phys_def_down",
+     "value": -12,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_xhz_30807",
+   "name": "镇碑压顶",
+   "element": "magic",
+   "mult": 2.746557591810032,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 1846,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 64005,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 35558,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "defense",
+   "cd": 10
+  },
+  {
+   "key": "sig_xhz_30822",
+   "name": "毒丝织网",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 1568,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "poison",
+     "value": 12,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_xhz_30828",
+   "name": "怨魂缠身",
+   "element": "physical",
+   "mult": 2.6983413936706,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 4631,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_xhz_30836",
+   "name": "锁魂镇魄",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 4055,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "dark_dot",
+     "value": 214,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 22
+  },
+  {
+   "key": "sig_mh_xyt_30212",
+   "name": "狂焰凝锋",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 2966,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "sig_mh_xyt_30230",
+   "name": "血口撕咬",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 2966,
+   "effects": [
+    {
+     "type": "bleed",
+     "value": 828,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "sig_mh_xyt_30255",
+   "name": "裂地横扫",
+   "element": "magic",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 2966,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "control",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 10
+  },
+  {
+   "key": "sig_mh_xyt_30254",
+   "name": "绝命断魂",
+   "element": "magic",
+   "mult": 4.26,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 2966,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "control",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 10
+  },
+  {
+   "key": "sig_mh_xhz_30807",
+   "name": "巨碑镇魂",
+   "element": "magic",
+   "mult": 5.507925511696648,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 2000,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 355591,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 197550,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "defense",
+   "cd": 5
+  },
+  {
+   "key": "sig_mh_xhz_30822",
+   "name": "毒网天罗",
+   "element": "physical",
+   "mult": 2.2,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 3601,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "poison",
+     "value": 300,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 10
+  },
+  {
+   "key": "sig_mh_xhz_30828",
+   "name": "狂怨缠身",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2400,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_mh_xhz_30836",
+   "name": "千魂镇狱",
+   "element": "magic",
+   "mult": 2.0,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 3601,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "elec_dot",
+     "value": 2880,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 10
+  },
+  {
+   "key": "sig_shd_shihuang",
+   "name": "洪荒降临",
+   "element": "physical",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 6000,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 5,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_hushatouling80",
+   "name": "铁蹄踏阵",
+   "element": "physical",
+   "mult": 3.59,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 1653,
+   "effects": [
+    {
+     "type": "speed_down",
+     "value": 25,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_xueyumaoniuwang",
+   "name": "崩山蛮撞",
+   "element": "physical",
+   "mult": 3.185662337937712,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 1653,
+   "effects": [
+    {
+     "type": "phys_def_down",
+     "value": -12,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_yingmo",
+   "name": "裂空斩击",
+   "element": "physical",
+   "mult": 3.498737077204681,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 302,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 15
+  },
+  {
+   "key": "sig_kl_jiangjun",
+   "name": "号令聚兵",
+   "element": "magic",
+   "mult": 3.88312670853692,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 1239,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 51172,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 28428,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 1,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_nanhaishizhe",
+   "name": "溟潮引",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 3541,
+   "effects": [
+    {
+     "type": "ice_dot",
+     "value": 1122,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_yingyan",
+   "name": "瞳锁定身",
+   "element": "magic",
+   "mult": 2.51030368091965,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 826,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "atk_up",
+     "value": 10,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_tianmu",
+   "name": "灼瞳炽光",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 423,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 572,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_xiemu",
+   "name": "摄魂凝视",
+   "element": "magic",
+   "mult": 2.6859461670110916,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 847,
+   "effects": [
+    {
+     "type": "fear",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "phys_def_down",
+     "value": -12,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_duwei80",
+   "name": "剧毒锥刺",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 367,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 204,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_kuangmang80",
+   "name": "巨蟒绞杀",
+   "element": "magic",
+   "mult": 3.0215507271130173,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 1653,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 22
+  },
+  {
+   "key": "sig_dbg_275__xing_keng",
+   "name": "聚旗点兵",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 1160,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_dbg_288__duan_bi_gu",
+   "name": "结阵铁壁",
+   "element": "magic",
+   "mult": 2.744925291917315,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 1921,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 44794,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 24886,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "heal_reduce",
+     "value": -25,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "defense",
+   "cd": 10
+  },
+  {
+   "key": "sig_dbg_296__xing_gui_cun",
+   "name": "蛮力碎击",
+   "element": "physical",
+   "mult": 4.9098594324265346,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 1812,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_mingdouguijiang",
+   "name": "阴兵还魂",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 1208,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_csq_canjiang",
+   "name": "阵前督战",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2081,
+   "effects": [
+    {
+     "type": "bleed",
+     "value": 1238,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_csq_shouweitongling",
+   "name": "铁壁固守",
+   "element": "magic",
+   "mult": 2.2227607955164865,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 1184,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 97920,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 54400,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "defense",
+   "cd": 10
+  },
+  {
+   "key": "sig_chishuixunjian",
+   "name": "锁链缉拿",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 961,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "bleed",
+     "value": 650,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_huangyetouling",
+   "name": "焚天烈焰",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 480,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 242,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_qijue",
+   "name": "连环杀阵",
+   "element": "physical",
+   "mult": 1.9499916832854707,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2376,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_panmenzhanglao",
+   "name": "蚀骨毒手",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 786,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 560,
+     "duration_ms": 1500
+    },
+    {
+     "type": "heal_reduce",
+     "value": -25,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_heimu",
+   "name": "摄魄瞳光",
+   "element": "magic",
+   "mult": 3.055375461918451,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 826,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "atk_down",
+     "value": -15,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_canying",
+   "name": "幻影分身",
+   "element": "physical",
+   "mult": 3.5724052556845063,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 2415,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_yingsha",
+   "name": "瞬影斩",
+   "element": "physical",
+   "mult": 3.151826385053155,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 617,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 15
+  },
+  {
+   "key": "sig_siying",
+   "name": "暗影缠身",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 430,
+   "effects": [
+    {
+     "type": "dark_dot",
+     "value": 582,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_yingkong",
+   "name": "凌空俯冲",
+   "element": "physical",
+   "mult": 3.8519402703350227,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 1982,
+   "effects": [
+    {
+     "type": "phys_def_down",
+     "value": -12,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_fushewulao1",
+   "name": "血祭焚火",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 805,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 572,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_mozhuwang1",
+   "name": "蛛网缚敌",
+   "element": "magic",
+   "mult": 3.636284933934812,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 1290,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "summon": 1,
+   "summon_duration_ms": 0,
+   "cd": 22
+  },
+  {
+   "key": "sig_fushedatongling1",
+   "name": "血祭聚众",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 2528,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_dongfutongling",
+   "name": "暗伏奇兵",
+   "element": "physical",
+   "mult": 1.9775918278944544,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 2764,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 1,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_tianzunhufa",
+   "name": "罡气护体",
+   "element": "magic",
+   "mult": 2.024126362772311,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 2418,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 96840,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 53800,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "reflect",
+     "value": 15,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "defense",
+   "cd": 10
+  },
+  {
+   "key": "sig_dongfuwulao",
+   "name": "蛊毒蚀体",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 967,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 222,
+     "duration_ms": 1500
+    },
+    {
+     "type": "heal_reduce",
+     "value": -25,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_tianzunjisi",
+   "name": "祈雨唤雷",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 4352,
+   "effects": [
+    {
+     "type": "elec_dot",
+     "value": 1344,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_hushacike92",
+   "name": "暗影背刺",
+   "element": "physical",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 360,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 15
+  },
+  {
+   "key": "sig_lvyijiangjun93",
+   "name": "拱卫结阵",
+   "element": "magic",
+   "mult": 1.66,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 1477,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 93420,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 51900,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 1,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_hushatongling94",
+   "name": "重兵合围",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 4352,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "bleed",
+     "value": 1344,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 22
+  },
+  {
+   "key": "sig_tieweitongling94",
+   "name": "死守不退",
+   "element": "magic",
+   "mult": 1.9124897850095604,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 1260,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 107820,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 59900,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "defense",
+   "cd": 10
+  },
+  {
+   "key": "sig_suohunmingwang95",
+   "name": "拘魂夺命",
+   "element": "magic",
+   "mult": 1.89,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 4448,
+   "effects": [
+    {
+     "type": "silence",
+     "value": 0,
+     "duration_ms": 1000
+    },
+    {
+     "type": "heal_reduce",
+     "value": -25,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 22
+  },
+  {
+   "key": "sig_hanmoxianfeng",
+   "name": "破浪冲波",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 548,
+   "effects": [
+    {
+     "type": "ice_dot",
+     "value": 12,
+     "duration_ms": 1500
+    },
+    {
+     "type": "speed_down",
+     "value": 25,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_xuanwushengui",
+   "name": "磐甲龟息",
+   "element": "magic",
+   "mult": 3.647216668582887,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 754,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 144720,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 80400,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "defense",
+   "cd": 5
+  },
+  {
+   "key": "sig_xunhaidajiang",
+   "name": "翻江怒涛",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 1375,
+   "effects": [
+    {
+     "type": "ice_dot",
+     "value": 1722,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 5
+  },
+  {
+   "key": "sig_penglaiwenyao",
+   "name": "游渊穿浪",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 621,
+   "effects": [
+    {
+     "type": "ice_dot",
+     "value": 1778,
+     "duration_ms": 1500
+    },
+    {
+     "type": "dodge_up",
+     "value": 10,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 5
+  },
+  {
+   "key": "sig_huangyetongling",
+   "name": "星火燎原",
+   "element": "physical",
+   "mult": 3.311632456060996,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 4468,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 64,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_erenwang80",
+   "name": "横行霸道",
+   "element": "physical",
+   "mult": 2.070586915315259,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2978,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_changshan81",
+   "name": "磐石铁壁",
+   "element": "physical",
+   "mult": 4.067164173034083,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 8669,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 129166,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 71758,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "defense",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_youmingguiwang",
+   "name": "青焰焚身",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 12500,
+   "mp": 3268,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 162,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 1,
+   "summon_duration_ms": 0,
+   "cd": 12
+  },
+  {
+   "key": "sig_fushedazhanglao1",
+   "name": "血祭炼魂",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 9850,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 1400,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_yanweizhanglao",
+   "name": "上古咒诅",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 9850,
+   "effects": [
+    {
+     "type": "elec_dot",
+     "value": 1166,
+     "duration_ms": 1500
+    },
+    {
+     "type": "silence",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 22
+  },
+  {
+   "key": "sig_jiaomu",
+   "name": "幻目迷神",
+   "element": "physical",
+   "mult": 2.4224759880304103,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 2289,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_dbg_335__qian_jue_ling",
+   "name": "旋风回斩",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 5253,
+   "effects": [
+    {
+     "type": "bleed",
+     "value": 1422,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_tianzunzhanglao",
+   "name": "八卦法阵",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 5826,
+   "effects": [
+    {
+     "type": "elec_dot",
+     "value": 306,
+     "duration_ms": 1500
+    },
+    {
+     "type": "shield",
+     "value": 309600,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 172000,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_csq_miehun",
+   "name": "勾魂摄魄",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 5126,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 2,
+     "duration_ms": 1500
+    },
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_xiangwushichen96",
+   "name": "翩跹回旋",
+   "element": "physical",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 4064,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 1,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_xunhaijiangjun",
+   "name": "惊涛拍岸",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 5932,
+   "effects": [
+    {
+     "type": "ice_dot",
+     "value": 166,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_yuangu_89",
+   "name": "荒野咆哮",
+   "element": "physical",
+   "mult": 4.704311267943232,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2081,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 236,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_yuangu_99",
+   "name": "荒野咆哮",
+   "element": "physical",
+   "mult": 3.218278310357544,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 2581,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 92,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_xueewang",
+   "name": "碎骨撕咬",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 3158,
+   "effects": [
+    {
+     "type": "bleed",
+     "value": 138,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "sig_molongwang",
+   "name": "裂空咆哮",
+   "element": "physical",
+   "mult": 5.839583556405425,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 6422,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "summon": 3,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_mh_guimu_30020",
+   "name": "噬形夺魄",
+   "element": "magic",
+   "mult": 2.139295521427612,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 2292,
+   "effects": [
+    {
+     "type": "stun",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_mh_guimu_30028",
+   "name": "七窍索命",
+   "element": "magic",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 1719,
+   "effects": [
+    {
+     "type": "fear",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "control",
+   "summon": 5,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_mh_guimu_30054",
+   "name": "死寂绝地",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 2579,
+   "effects": [
+    {
+     "type": "elec_dot",
+     "value": 2160,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 5
+  },
+  {
+   "key": "sig_penglaijimeng",
+   "name": "唤雨呼风",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 369,
+   "effects": [
+    {
+     "type": "elec_dot",
+     "value": 2158,
+     "duration_ms": 1500
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1500,
+   "cast_mode": "channel",
+   "cd": 5
+  },
+  {
+   "key": "sig_penglaiyuqiang",
+   "name": "御风狂澜",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 276,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 2,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "sig_penglaixingjun118",
+   "name": "摘星御辰",
+   "element": "magic",
+   "mult": 2.504166904267915,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 207,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 576000,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 320000,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "defense",
+   "cast_ms": 1500,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "sig_penglaiwang119",
+   "name": "君临天下",
+   "element": "physical",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 1109,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "summon",
+   "summon": 5,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "wxz_phys",
+   "name": "裂幡击",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "wxz_magic",
+   "name": "曜焰涛",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 2500,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "wxz_boss_p",
+   "name": "镇幡重击",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "wxz_boss_m",
+   "name": "五曜焚天",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 6000,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "wxz_boss_guard",
+   "name": "幡柱护体",
+   "element": "physical",
+   "mult": 0,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "def_up",
+     "value": 30,
+     "duration_ms": 1500,
+     "target": "self"
+    },
+    {
+     "type": "dmg_reduce",
+     "value": 15,
+     "duration_ms": 1500,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "defense",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 22
+  },
+  {
+   "key": "sig_wxz_33214",
+   "name": "金锋裂地",
+   "element": "physical",
+   "mult": 3.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 5862,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_wxz_33215",
+   "name": "万藤缠身",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 1302,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 331,
+     "duration_ms": 3000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_wxz_33216",
+   "name": "寒涛怒卷",
+   "element": "magic",
+   "mult": 2.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 11138,
+   "effects": [
+    {
+     "type": "ice_dot",
+     "value": 663,
+     "duration_ms": 3000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_wxz_33217",
+   "name": "焚野燎原",
+   "element": "magic",
+   "mult": 2.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 11138,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 663,
+     "duration_ms": 3000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_wxz_33218",
+   "name": "镇岳崩山",
+   "element": "physical",
+   "mult": 3.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 5862,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_wxz_33164",
+   "name": "苍木缚阵",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 22500,
+   "mp": 2639,
+   "effects": [
+    {
+     "type": "root",
+     "value": 0,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "control",
+   "cd": 22
+  },
+  {
+   "key": "sig_wxz_33174",
+   "name": "锐金贯阵",
+   "element": "physical",
+   "mult": 3.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 6091,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 15
+  },
+  {
+   "key": "sig_wxz_33186",
+   "name": "沧澜护阵",
+   "element": "magic",
+   "mult": 2.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 11869,
+   "effects": [
+    {
+     "type": "ice_dot",
+     "value": 748,
+     "duration_ms": 3000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "channel",
+   "cd": 15
+  },
+  {
+   "key": "sig_wxz_33196",
+   "name": "炎阳照阵",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 60,
+   "cd_ms": 2500,
+   "mp": 2705,
+   "effects": [
+    {
+     "type": "fire_dot",
+     "value": 393,
+     "duration_ms": 3000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "sig_wxz_33209",
+   "name": "厚土磐阵",
+   "element": "magic",
+   "mult": 1.8,
+   "weight": 60,
+   "cd_ms": 10000,
+   "mp": 3698,
+   "effects": [
+    {
+     "type": "shield",
+     "value": 259437,
+     "duration_ms": 3000,
+     "target": "self"
+    },
+    {
+     "type": "regen",
+     "value": 72066,
+     "duration_ms": 3000,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "defense",
+   "cd": 10
+  },
+  {
+   "key": "sig_wxz_33219",
+   "name": "周天星陨",
+   "element": "physical",
+   "mult": 3.0,
+   "weight": 60,
+   "cd_ms": 15000,
+   "mp": 6657,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "summon",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "summon": 5,
+   "summon_duration_ms": 0,
+   "cd": 15
+  },
+  {
+   "key": "wxz_33219__boss_p",
+   "name": "碎星击",
+   "element": "physical",
+   "mult": 3.5,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "wxz_33219__boss_m",
+   "name": "曜灭咒",
+   "element": "magic",
+   "mult": 3.5,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 6000,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "sig_mh_xyt_30235",
+   "name": "血怒咆哮",
+   "element": "physical",
+   "mult": 6.0,
+   "weight": 60,
+   "cd_ms": 5000,
+   "mp": 2966,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cast_ms": 1000,
+   "cast_mode": "charge",
+   "cd": 5
+  },
+  {
+   "key": "mh_guimu_30028__mh_guimu_boss_m",
+   "name": "噬魂咒",
+   "element": "magic",
+   "mult": 3.5,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 860,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "mh_guimu_30028__mh_guimu_boss_p",
+   "name": "魔焰斩",
+   "element": "physical",
+   "mult": 2.25,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 430,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "mh_guimu_30054__mh_guimu_boss_m",
+   "name": "噬魂咒",
+   "element": "magic",
+   "mult": 1.4,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1290,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "mh_guimu_30054__mh_guimu_boss_p",
+   "name": "魔焰斩",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 645,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "hanmoxiewu_boss__hanmoxiewu_m_1",
+   "name": "孢雾",
+   "element": "magic",
+   "mult": 2.562,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1260,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "hanmoxiewu_boss__hanmoxiewu_p_1",
+   "name": "尾击",
+   "element": "physical",
+   "mult": 1.781,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 630,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "zhenhaihanmo_boss__zhenhaihanmo_m_1",
+   "name": "离焰",
+   "element": "magic",
+   "mult": 3.2,
+   "weight": 200,
+   "cd_ms": 2000,
+   "mp": 1620,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "zhenhaihanmo_boss__zhenhaihanmo_p_1",
+   "name": "猛击",
+   "element": "physical",
+   "mult": 2.1,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 810,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "bsg_phys",
+   "name": "裂爪击",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "bsg_magic",
+   "name": "雾谷蚀魂",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "qxl_phys",
+   "name": "噬骨击",
+   "element": "physical",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "qxl_magic",
+   "name": "厉魂啸",
+   "element": "magic",
+   "mult": 1.0,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "qxl_boss_p",
+   "name": "镇魔重击",
+   "element": "physical",
+   "mult": 1.5,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "qxl_boss_m",
+   "name": "七星灭魂",
+   "element": "magic",
+   "mult": 1.5,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "li_zhua",
+   "name": "利爪",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "zhuang_ji",
+   "name": "撞击",
+   "element": "physical",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "zhan_ji",
+   "name": "斩击",
+   "element": "physical",
+   "mult": 1.25,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "du_wu",
+   "name": "毒雾",
+   "element": "magic",
+   "mult": 1.15,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "poison",
+     "value": 35,
+     "duration_ms": 3000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "bing_zhui",
+   "name": "冰锥",
+   "element": "magic",
+   "mult": 1.15,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "lei_ji",
+   "name": "雷击",
+   "element": "magic",
+   "mult": 1.2,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "huo_fen",
+   "name": "火焚",
+   "element": "magic",
+   "mult": 1.15,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "bleed",
+     "value": 28,
+     "duration_ms": 2000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "an_qi",
+   "name": "暗器",
+   "element": "magic",
+   "mult": 1.15,
+   "weight": 100,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "tie_bi",
+   "name": "铁壁",
+   "element": "physical",
+   "mult": 1.05,
+   "weight": 60,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "def_up",
+     "value": 25,
+     "duration_ms": 3000,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "xu_li",
+   "name": "蓄力",
+   "element": "physical",
+   "mult": 1.05,
+   "weight": 60,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "atk_up",
+     "value": 25,
+     "duration_ms": 3000,
+     "target": "self"
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "zhen_she",
+   "name": "震慑",
+   "element": "physical",
+   "mult": 1.1,
+   "weight": 50,
+   "cd_ms": 2000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "stun",
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 2
+  },
+  {
+   "key": "chi_huan",
+   "name": "迟缓",
+   "element": "magic",
+   "mult": 1.1,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "speed_down",
+     "value": 20,
+     "duration_ms": 2000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "po_fa",
+   "name": "破法",
+   "element": "magic",
+   "mult": 1.15,
+   "weight": 50,
+   "cd_ms": 1000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "magic_def_down",
+     "value": 20,
+     "duration_ms": 2000
+    }
+   ],
+   "target_rule": "single",
+   "skill_type": "attack",
+   "cd": 1
+  },
+  {
+   "key": "sig_youming",
+   "name": "幽冥噬魂",
+   "element": "physical",
+   "mult": 1.45,
+   "weight": 100,
+   "cd_ms": 3000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "atk_down",
+     "value": 15,
+     "duration_ms": 2000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 3
+  },
+  {
+   "key": "sig_douhun",
+   "name": "斗魂狂斩",
+   "element": "physical",
+   "mult": 1.55,
+   "weight": 100,
+   "cd_ms": 3000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "bleed",
+     "value": 60,
+     "duration_ms": 3000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 3
+  },
+  {
+   "key": "sig_liyan",
+   "name": "离焰焚天",
+   "element": "magic",
+   "mult": 1.55,
+   "weight": 100,
+   "cd_ms": 3000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "bleed",
+     "value": 70,
+     "duration_ms": 3000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 3
+  },
+  {
+   "key": "sig_human",
+   "name": "虎蛮裂地",
+   "element": "physical",
+   "mult": 1.65,
+   "weight": 100,
+   "cd_ms": 3000,
+   "mp": 0,
+   "effects": [
+    {
+     "type": "vuln",
+     "value": 80,
+     "duration_ms": 1000
+    }
+   ],
+   "target_rule": "all",
+   "skill_type": "attack",
+   "cd": 3
   }
  ]
 }

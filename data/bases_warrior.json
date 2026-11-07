@@ -181,6 +181,74 @@
       },
       "key": "base_warrior_helmets_7_1",
       "req_level": 102
+    },
+    {
+      "name": "噬日吞天盔",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_helmet_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          238,
+          317
+        ],
+        "magic_def": [
+          191,
+          255
+        ]
+      },
+      "key": "base_warrior_helmets_8_1",
+      "req_level": 114,
+      "job": "warrior"
+    },
+    {
+      "name": "岳镇山河盔",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_helmet_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          256,
+          346
+        ],
+        "magic_def": [
+          204,
+          275
+        ]
+      },
+      "key": "base_warrior_helmets_8_2",
+      "req_level": 114,
+      "job": "warrior"
     }
   ],
   "shoulders": [
@@ -365,6 +433,74 @@
       },
       "key": "base_warrior_shoulders_7_1",
       "req_level": 105
+    },
+    {
+      "name": "噬日吞天护肩",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_shoulder_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          212,
+          281
+        ],
+        "magic_def": [
+          160,
+          216
+        ]
+      },
+      "key": "base_warrior_shoulders_8_1",
+      "req_level": 115,
+      "job": "warrior"
+    },
+    {
+      "name": "岳镇山河护肩",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_shoulder_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          224,
+          301
+        ],
+        "magic_def": [
+          177,
+          233
+        ]
+      },
+      "key": "base_warrior_shoulders_8_2",
+      "req_level": 115,
+      "job": "warrior"
     }
   ],
   "gloves": [
@@ -549,6 +685,74 @@
       },
       "key": "base_warrior_gloves_7_1",
       "req_level": 98
+    },
+    {
+      "name": "噬日吞天护腕",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_glove_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          142,
+          189
+        ],
+        "magic_def": [
+          83,
+          110
+        ]
+      },
+      "key": "base_warrior_gloves_8_1",
+      "req_level": 113,
+      "job": "warrior"
+    },
+    {
+      "name": "岳镇山河护腕",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_glove_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          150,
+          205
+        ],
+        "magic_def": [
+          86,
+          116
+        ]
+      },
+      "key": "base_warrior_gloves_8_2",
+      "req_level": 113,
+      "job": "warrior"
     }
   ],
   "pants": [
@@ -759,6 +963,74 @@
       },
       "key": "base_warrior_pants_7_1",
       "req_level": 110
+    },
+    {
+      "name": "噬日吞天护腿",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_pants_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          319,
+          431
+        ],
+        "magic_def": [
+          259,
+          351
+        ]
+      },
+      "key": "base_warrior_pants_8_1",
+      "req_level": 116,
+      "job": "warrior"
+    },
+    {
+      "name": "岳镇山河护腿",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_pants_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          344,
+          466
+        ],
+        "magic_def": [
+          284,
+          380
+        ]
+      },
+      "key": "base_warrior_pants_8_2",
+      "req_level": 116,
+      "job": "warrior"
     }
   ],
   "cloaks": [
@@ -943,6 +1215,74 @@
       },
       "key": "base_warrior_cloaks_7_1",
       "req_level": 108
+    },
+    {
+      "name": "噬日吞天披风",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_cloak_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          57,
+          78
+        ],
+        "magic_def": [
+          172,
+          228
+        ]
+      },
+      "key": "base_warrior_cloaks_8_1",
+      "req_level": 116,
+      "job": "warrior"
+    },
+    {
+      "name": "岳镇山河披风",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_cloak_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          62,
+          80
+        ],
+        "magic_def": [
+          186,
+          246
+        ]
+      },
+      "key": "base_warrior_cloaks_8_2",
+      "req_level": 116,
+      "job": "warrior"
     }
   ],
   "armors": [
@@ -1153,6 +1493,74 @@
       },
       "key": "base_warrior_armors_7_1",
       "req_level": 106
+    },
+    {
+      "name": "噬日吞天铠",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_armor_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          389,
+          519
+        ],
+        "magic_def": [
+          321,
+          434
+        ]
+      },
+      "key": "base_warrior_armors_8_1",
+      "req_level": 116,
+      "job": "warrior"
+    },
+    {
+      "name": "岳镇山河铠",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_armor_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          417,
+          562
+        ],
+        "magic_def": [
+          348,
+          467
+        ]
+      },
+      "key": "base_warrior_armors_8_2",
+      "req_level": 116,
+      "job": "warrior"
     }
   ],
   "weapons": [
@@ -1560,6 +1968,60 @@
       "key": "base_warrior_weapons_7_2",
       "req_level": 100,
       "kind": "fu"
+    },
+    {
+      "name": "崩星",
+      "tier": 8,
+      "job": "warrior",
+      "hand": "双手",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_weapon_8_1.png",
+      "desc": "上古神匠以殒铁混合战魂淬炼的战斧，斧锋过处魂魄俱断",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          426,
+          572
+        ],
+        "magic_atk": [
+          0,
+          0
+        ]
+      },
+      "key": "base_warrior_weapons_8_1",
+      "req_level": 120,
+      "kind": "fu"
+    },
+    {
+      "name": "斩蛟",
+      "tier": 8,
+      "job": "warrior",
+      "hand": "single",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_weapon_8_2.png",
+      "desc": "刀意直指破军星位，出鞘必见血的战刀，可配盾双手互搏",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          301,
+          400
+        ],
+        "magic_atk": [
+          0,
+          0
+        ]
+      },
+      "key": "base_warrior_weapons_8_2",
+      "req_level": 120,
+      "kind": "dao"
     }
   ],
   "shields": [
@@ -1744,6 +2206,40 @@
       },
       "key": "base_warrior_shields_7_1",
       "req_level": 101
+    },
+    {
+      "name": "磐岳",
+      "tier": 8,
+      "job": "warrior",
+      "hand": "",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_shield_8.png",
+      "desc": "以金刚石粉混入玄铁母液浇铸的巨盾，传说可挡天雷",
+      "durability": [
+        45,
+        45
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          561,
+          767
+        ],
+        "magic_def": [
+          534,
+          716
+        ]
+      },
+      "key": "base_warrior_shields_8_1",
+      "req_level": 120
     }
   ],
   "belts": [
@@ -1928,6 +2424,74 @@
       },
       "key": "base_warrior_belts_7_1",
       "req_level": 104
+    },
+    {
+      "name": "噬日吞天腰带",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_belt_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          132,
+          178
+        ],
+        "magic_def": [
+          112,
+          146
+        ]
+      },
+      "key": "base_warrior_belts_8_1",
+      "req_level": 115,
+      "job": "warrior"
+    },
+    {
+      "name": "岳镇山河腰带",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_belt_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        36,
+        36
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          148,
+          194
+        ],
+        "magic_def": [
+          121,
+          161
+        ]
+      },
+      "key": "base_warrior_belts_8_2",
+      "req_level": 115,
+      "job": "warrior"
     }
   ],
   "shoes": [
@@ -2112,6 +2676,74 @@
       },
       "key": "base_warrior_shoes_7_1",
       "req_level": 96
+    },
+    {
+      "name": "噬日吞天靴",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_shoes_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          158,
+          212
+        ],
+        "magic_def": [
+          121,
+          157
+        ]
+      },
+      "key": "base_warrior_shoes_8_1",
+      "req_level": 112,
+      "job": "warrior"
+    },
+    {
+      "name": "岳镇山河靴",
+      "tier": 8,
+      "hand": "none",
+      "is_newbie": false,
+      "sockets": 0,
+      "icon": "static/icons/bases/warrior_shoes_8.png",
+      "desc": "八档毕业防具底材，由七档防具熔晶升档而来",
+      "durability": [
+        41,
+        41
+      ],
+      "stats": {
+        "phys_atk": [
+          0,
+          0
+        ],
+        "magic_atk": [
+          0,
+          0
+        ],
+        "phys_def": [
+          170,
+          230
+        ],
+        "magic_def": [
+          127,
+          172
+        ]
+      },
+      "key": "base_warrior_shoes_8_2",
+      "req_level": 112,
+      "job": "warrior"
     }
   ]
 }
