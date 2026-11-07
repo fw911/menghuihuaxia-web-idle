@@ -9,8 +9,11 @@
   monsters.json       / monsters       / level（天尊系列 95 -> 109）        6 处
 
 明确排除（写入会破坏游戏，或属刻意设计；详见 UPGRADE_REPORT.md）：
-  shops.json  items[].price                  v0.91 全部 = 1（占位/脱敏），43 处
-  maps.json   jubao_spots[].refresh_minutes v0.91 全部 = 0（占位），45 处
+  shops.json  items[].price                  v0.91 全部 = 1，43 处
+  maps.json   jubao_spots[].refresh_minutes v0.91 全部 = 0，45 处
+  ⚠ 上面两项当时被误记为「占位/脱敏」：L7 从原版 .enc 直解证实是 v0.91 魔改版的
+    刻意压平设定；L8 又证实 v0.94 官方发行版已恢复真值，并已按 v0.94 回填
+    （见 UPGRADE_REPORT.md §十 / §十一、_l7_forensic.py、_l8_v094_apply.py）。
   shenmo_skills*.json levels[].scale_pct 等 自研神魔技能树（多数为刻意 2x 设计）
   monster_skills effects[].value / mp      效果体系、蓝耗量纲不同
   monsters.json 5 首领 hp/phys_def/atk     L4 刻意校准值，保证三档可杀

@@ -1640,6 +1640,36 @@ function ok(name, cond, extra) {
     ok('商店子页不混入其它商店的条目', !mixed);
     ok('商店：各子页 item 之和 == 全量',
       cntOf(E.renderShop(), 'class="item') === shops.reduce((a, s2) => a + cntOf(E.renderShop(s2.key), 'class="item'), 0));
+
+    // L8：以 v0.94 官方发行版真值回填，价格 / 冷却不再是被 v0.91 压平的 1 / 0
+    {
+      const items = [];
+      for (const s2 of all) for (const o of (s2.items || [])) items.push(o);
+      const byKey = (sk, key) => (all.find(x => x.key === sk).items || [])
+        .find(o => o.item === key || o.base_key === key);
+      ok('商店无 price=1 残留（L8 回填 104 处 v0.94 真值）',
+        items.every(o => o.price !== 1), items.filter(o => o.price === 1).length + '');
+      ok('商店价格值域 5 ~ 2000000（v0.94）',
+        Math.min.apply(null, items.map(o => o.price)) === 5 &&
+        Math.max.apply(null, items.map(o => o.price)) === 2000000);
+      ok('v0.94 商店价抽样（农场 / 防具 / 灵兽 / 老店）',
+        byKey('farm_shop', 'zz_xiaomai').price === 10 &&
+        byKey('equip_warrior', 'base_warrior_shoes_1_1').price === 70 &&
+        byKey('companion_grocery', 'hunbo').price === 5000 &&
+        byKey('companion_book', 'mijian_51122').price === 100000 &&
+        byKey('yaodian', 'xumingdan').price === 20);
+      const spots = [];
+      for (const m2 of E.DATA.maps.maps) for (const j of (m2.jubao_spots || [])) spots.push(j);
+      const mins = spots.map(j => j.refresh_minutes);
+      ok('聚宝点无零冷却残留（L8 回填 5 处 v0.94 真值）',
+        spots.length === 50 && mins.every(v => v > 0), mins.filter(v => v === 0).length + '');
+      ok('聚宝点冷却值域 30 ~ 240 分钟（v0.94）',
+        Math.min.apply(null, mins) === 30 && Math.max.apply(null, mins) === 240);
+      ok('v0.94 冷却抽样（溟渊 240 / 虎蛮族长 180 / 蓬莱镇波 150）',
+        spots.find(j => j.name === '溟渊').refresh_minutes === 240 &&
+        spots.find(j => j.name === '虎蛮族长').refresh_minutes === 180 &&
+        spots.find(j => j.name === '蓬莱镇波').refresh_minutes === 150);
+    }
   }
 
   // ⑤ 技能 / 武魂

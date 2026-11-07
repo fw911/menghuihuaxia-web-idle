@@ -7319,7 +7319,7 @@
           "name": "蓬莱辰君",
           "monster": "penglaixingjun118",
           "level": 118,
-          "refresh_minutes": 0
+          "refresh_minutes": 140
         },
         {
           "key": "hssl_l3_jb_penglaiwang",
@@ -7327,7 +7327,7 @@
           "name": "蓬莱海主",
           "monster": "penglaiwang119",
           "level": 119,
-          "refresh_minutes": 0
+          "refresh_minutes": 165
         }
       ],
       "unlock_map": "haishishenlou_l2",
@@ -7430,7 +7430,7 @@
           "name": "蓬莱镇波",
           "monster": "penglaishoujiang119",
           "level": 119,
-          "refresh_minutes": 0
+          "refresh_minutes": 150
         },
         {
           "key": "hssl_l4_jb_buyunmeng",
@@ -7438,7 +7438,7 @@
           "name": "凌虚客",
           "monster": "buyunmeng119",
           "level": 119,
-          "refresh_minutes": 0
+          "refresh_minutes": 180
         }
       ],
       "unlock_map": "haishishenlou_l3",
@@ -8742,7 +8742,7 @@
           "name": "虎蛮族长",
           "monster": "hurenzuzhang119",
           "level": 119,
-          "refresh_minutes": 0
+          "refresh_minutes": 180
         }
       ]
     }

@@ -537,47 +537,47 @@
       "items": [
         {
           "item": "zz_xiaomai",
-          "price": 1,
+          "price": 10,
           "kind": "consumable"
         },
         {
           "item": "zz_bima",
-          "price": 1,
+          "price": 25,
           "kind": "consumable"
         },
         {
           "item": "zz_gaoliang",
-          "price": 1,
+          "price": 40,
           "kind": "consumable"
         },
         {
           "item": "zz_dadou",
-          "price": 1,
+          "price": 60,
           "kind": "consumable"
         },
         {
           "item": "yc_yang",
-          "price": 1,
+          "price": 50,
           "kind": "consumable"
         },
         {
           "item": "yc_niu",
-          "price": 1,
+          "price": 100,
           "kind": "consumable"
         },
         {
           "item": "yc_ma",
-          "price": 1,
+          "price": 200,
           "kind": "consumable"
         },
         {
           "item": "caoliao",
-          "price": 1,
+          "price": 5,
           "kind": "consumable"
         },
         {
           "item": "feiliao",
-          "price": 1,
+          "price": 15,
           "kind": "consumable"
         }
       ]
@@ -592,98 +592,98 @@
         {
           "slot": "shoes",
           "tier": 1,
-          "price": 1,
+          "price": 70,
           "kind": "equip",
           "base_key": "base_warrior_shoes_1_1"
         },
         {
           "slot": "gloves",
           "tier": 1,
-          "price": 1,
+          "price": 80,
           "kind": "equip",
           "base_key": "base_warrior_gloves_1_1"
         },
         {
           "slot": "pants",
           "tier": 1,
-          "price": 1,
+          "price": 75,
           "kind": "equip",
           "base_key": "base_warrior_pants_1_1"
         },
         {
           "slot": "shield",
           "tier": 1,
-          "price": 1,
+          "price": 95,
           "kind": "equip",
           "base_key": "base_warrior_shields_1_1"
         },
         {
           "slot": "belt",
           "tier": 1,
-          "price": 1,
+          "price": 110,
           "kind": "equip",
           "base_key": "base_warrior_belts_1_1"
         },
         {
           "slot": "helmet",
           "tier": 1,
-          "price": 1,
+          "price": 130,
           "kind": "equip",
           "base_key": "base_warrior_helmets_1_1"
         },
         {
           "slot": "armor",
           "tier": 1,
-          "price": 1,
+          "price": 150,
           "kind": "equip",
           "base_key": "base_warrior_armors_1_1"
         },
         {
           "slot": "shoes",
           "tier": 2,
-          "price": 1,
+          "price": 700,
           "kind": "equip",
           "base_key": "base_warrior_shoes_2_1"
         },
         {
           "slot": "gloves",
           "tier": 2,
-          "price": 1,
+          "price": 800,
           "kind": "equip",
           "base_key": "base_warrior_gloves_2_1"
         },
         {
           "slot": "pants",
           "tier": 2,
-          "price": 1,
+          "price": 750,
           "kind": "equip",
           "base_key": "base_warrior_pants_2_1"
         },
         {
           "slot": "shield",
           "tier": 2,
-          "price": 1,
+          "price": 950,
           "kind": "equip",
           "base_key": "base_warrior_shields_2_1"
         },
         {
           "slot": "belt",
           "tier": 2,
-          "price": 1,
+          "price": 1100,
           "kind": "equip",
           "base_key": "base_warrior_belts_2_1"
         },
         {
           "slot": "helmet",
           "tier": 2,
-          "price": 1,
+          "price": 1300,
           "kind": "equip",
           "base_key": "base_warrior_helmets_2_1"
         },
         {
           "slot": "armor",
           "tier": 2,
-          "price": 1,
+          "price": 1500,
           "kind": "equip",
           "base_key": "base_warrior_armors_2_1"
         }
@@ -699,84 +699,84 @@
         {
           "slot": "shoes",
           "tier": 1,
-          "price": 1,
+          "price": 65,
           "kind": "equip",
           "base_key": "base_mage_shoes_1_1"
         },
         {
           "slot": "gloves",
           "tier": 1,
-          "price": 1,
+          "price": 75,
           "kind": "equip",
           "base_key": "base_mage_gloves_1_1"
         },
         {
           "slot": "pants",
           "tier": 1,
-          "price": 1,
+          "price": 120,
           "kind": "equip",
           "base_key": "base_mage_pants_1_1"
         },
         {
           "slot": "belt",
           "tier": 1,
-          "price": 1,
+          "price": 105,
           "kind": "equip",
           "base_key": "base_mage_belts_1_1"
         },
         {
           "slot": "helmet",
           "tier": 1,
-          "price": 1,
+          "price": 120,
           "kind": "equip",
           "base_key": "base_mage_helmets_1_1"
         },
         {
           "slot": "armor",
           "tier": 1,
-          "price": 1,
+          "price": 145,
           "kind": "equip",
           "base_key": "base_mage_armors_1_1"
         },
         {
           "slot": "shoes",
           "tier": 2,
-          "price": 1,
+          "price": 650,
           "kind": "equip",
           "base_key": "base_mage_shoes_2_2"
         },
         {
           "slot": "gloves",
           "tier": 2,
-          "price": 1,
+          "price": 750,
           "kind": "equip",
           "base_key": "base_mage_gloves_2_2"
         },
         {
           "slot": "pants",
           "tier": 2,
-          "price": 1,
+          "price": 1200,
           "kind": "equip",
           "base_key": "base_mage_pants_2_2"
         },
         {
           "slot": "belt",
           "tier": 2,
-          "price": 1,
+          "price": 1050,
           "kind": "equip",
           "base_key": "base_mage_belts_2_2"
         },
         {
           "slot": "helmet",
           "tier": 2,
-          "price": 1,
+          "price": 1200,
           "kind": "equip",
           "base_key": "base_mage_helmets_2_2"
         },
         {
           "slot": "armor",
           "tier": 2,
-          "price": 1,
+          "price": 1450,
           "kind": "equip",
           "base_key": "base_mage_armors_2_2"
         }
@@ -792,84 +792,84 @@
         {
           "slot": "shoes",
           "tier": 1,
-          "price": 1,
+          "price": 65,
           "kind": "equip",
           "base_key": "base_darkwitch_shoes_1_1"
         },
         {
           "slot": "gloves",
           "tier": 1,
-          "price": 1,
+          "price": 75,
           "kind": "equip",
           "base_key": "base_darkwitch_gloves_1_1"
         },
         {
           "slot": "pants",
           "tier": 1,
-          "price": 1,
+          "price": 120,
           "kind": "equip",
           "base_key": "base_darkwitch_pants_1_1"
         },
         {
           "slot": "belt",
           "tier": 1,
-          "price": 1,
+          "price": 105,
           "kind": "equip",
           "base_key": "base_darkwitch_belts_1_1"
         },
         {
           "slot": "helmet",
           "tier": 1,
-          "price": 1,
+          "price": 120,
           "kind": "equip",
           "base_key": "base_darkwitch_helmets_1_1"
         },
         {
           "slot": "armor",
           "tier": 1,
-          "price": 1,
+          "price": 145,
           "kind": "equip",
           "base_key": "base_darkwitch_armors_1_1"
         },
         {
           "slot": "shoes",
           "tier": 2,
-          "price": 1,
+          "price": 650,
           "kind": "equip",
           "base_key": "base_darkwitch_shoes_2_2"
         },
         {
           "slot": "gloves",
           "tier": 2,
-          "price": 1,
+          "price": 750,
           "kind": "equip",
           "base_key": "base_darkwitch_gloves_2_2"
         },
         {
           "slot": "pants",
           "tier": 2,
-          "price": 1,
+          "price": 1200,
           "kind": "equip",
           "base_key": "base_darkwitch_pants_2_2"
         },
         {
           "slot": "belt",
           "tier": 2,
-          "price": 1,
+          "price": 1050,
           "kind": "equip",
           "base_key": "base_darkwitch_belts_2_2"
         },
         {
           "slot": "helmet",
           "tier": 2,
-          "price": 1,
+          "price": 1200,
           "kind": "equip",
           "base_key": "base_darkwitch_helmets_2_2"
         },
         {
           "slot": "armor",
           "tier": 2,
-          "price": 1,
+          "price": 1450,
           "kind": "equip",
           "base_key": "base_darkwitch_armors_2_2"
         }
@@ -885,84 +885,84 @@
         {
           "slot": "shoes",
           "tier": 1,
-          "price": 1,
+          "price": 65,
           "kind": "equip",
           "base_key": "base_shaman_shoes_1_1"
         },
         {
           "slot": "gloves",
           "tier": 1,
-          "price": 1,
+          "price": 75,
           "kind": "equip",
           "base_key": "base_shaman_gloves_1_1"
         },
         {
           "slot": "pants",
           "tier": 1,
-          "price": 1,
+          "price": 120,
           "kind": "equip",
           "base_key": "base_shaman_pants_1_1"
         },
         {
           "slot": "belt",
           "tier": 1,
-          "price": 1,
+          "price": 105,
           "kind": "equip",
           "base_key": "base_shaman_belts_1_1"
         },
         {
           "slot": "helmet",
           "tier": 1,
-          "price": 1,
+          "price": 120,
           "kind": "equip",
           "base_key": "base_shaman_helmets_1_1"
         },
         {
           "slot": "armor",
           "tier": 1,
-          "price": 1,
+          "price": 145,
           "kind": "equip",
           "base_key": "base_shaman_armors_1_1"
         },
         {
           "slot": "shoes",
           "tier": 2,
-          "price": 1,
+          "price": 650,
           "kind": "equip",
           "base_key": "base_shaman_shoes_2_2"
         },
         {
           "slot": "gloves",
           "tier": 2,
-          "price": 1,
+          "price": 750,
           "kind": "equip",
           "base_key": "base_shaman_gloves_2_2"
         },
         {
           "slot": "pants",
           "tier": 2,
-          "price": 1,
+          "price": 1200,
           "kind": "equip",
           "base_key": "base_shaman_pants_2_2"
         },
         {
           "slot": "belt",
           "tier": 2,
-          "price": 1,
+          "price": 1050,
           "kind": "equip",
           "base_key": "base_shaman_belts_2_2"
         },
         {
           "slot": "helmet",
           "tier": 2,
-          "price": 1,
+          "price": 1200,
           "kind": "equip",
           "base_key": "base_shaman_helmets_2_2"
         },
         {
           "slot": "armor",
           "tier": 2,
-          "price": 1,
+          "price": 1450,
           "kind": "equip",
           "base_key": "base_shaman_armors_2_2"
         }
@@ -978,91 +978,91 @@
         {
           "slot": "weapon",
           "tier": 1,
-          "price": 1,
+          "price": 80,
           "kind": "equip",
           "base_key": "base_warrior_weapons_1_1"
         },
         {
           "slot": "weapon",
           "tier": 1,
-          "price": 1,
+          "price": 160,
           "kind": "equip",
           "base_key": "base_warrior_weapons_1_2"
         },
         {
           "slot": "weapon",
           "tier": 1,
-          "price": 1,
+          "price": 180,
           "kind": "equip",
           "base_key": "base_warrior_weapons_1_3"
         },
         {
           "slot": "weapon",
           "tier": 1,
-          "price": 1,
+          "price": 150,
           "kind": "equip",
           "base_key": "base_mage_weapons_1_1"
         },
         {
           "slot": "weapon",
           "tier": 1,
-          "price": 1,
+          "price": 150,
           "kind": "equip",
           "base_key": "base_darkwitch_weapons_1_1"
         },
         {
           "slot": "weapon",
           "tier": 1,
-          "price": 1,
+          "price": 150,
           "kind": "equip",
           "base_key": "base_shaman_weapons_1_1"
         },
         {
           "slot": "weapon",
           "tier": 2,
-          "price": 1,
+          "price": 800,
           "kind": "equip",
           "base_key": "base_warrior_weapons_2_1"
         },
         {
           "slot": "weapon",
           "tier": 2,
-          "price": 1,
+          "price": 1800,
           "kind": "equip",
           "base_key": "base_warrior_weapons_2_2"
         },
         {
           "slot": "weapon",
           "tier": 2,
-          "price": 1,
+          "price": 1500,
           "kind": "equip",
           "base_key": "base_mage_weapons_2_2"
         },
         {
           "slot": "weapon",
           "tier": 2,
-          "price": 1,
+          "price": 1500,
           "kind": "equip",
           "base_key": "base_darkwitch_weapons_2_2"
         },
         {
           "slot": "weapon",
           "tier": 2,
-          "price": 1,
+          "price": 1500,
           "kind": "equip",
           "base_key": "base_shaman_weapons_2_2"
         },
         {
           "slot": "ring1",
           "tier": 1,
-          "price": 1,
+          "price": 120,
           "kind": "equip",
           "base_key": "base_accessory_rings_1_1"
         },
         {
           "slot": "ring1",
           "tier": 2,
-          "price": 1,
+          "price": 1200,
           "kind": "equip",
           "base_key": "base_accessory_rings_2_1"
         }
@@ -1081,115 +1081,115 @@
       "items": [
         {
           "item": "hunbo",
-          "price": 1,
+          "price": 5000,
           "kind": "consumable",
           "group": "摄魂"
         },
         {
           "item": "hunhu",
-          "price": 1,
+          "price": 5000,
           "kind": "consumable",
           "group": "摄魂"
         },
         {
           "item": "weifengyin_1x",
-          "price": 1,
+          "price": 5000,
           "kind": "consumable",
           "group": "封印"
         },
         {
           "item": "weifengyin_2x",
-          "price": 1,
+          "price": 15000,
           "kind": "consumable",
           "group": "封印"
         },
         {
           "item": "weifengyin_3x",
-          "price": 1,
+          "price": 45000,
           "kind": "consumable",
           "group": "封印"
         },
         {
           "item": "mihun_dan",
-          "price": 1,
+          "price": 2000,
           "kind": "consumable",
           "group": "疗伤"
         },
         {
           "item": "xianhun_dan",
-          "price": 1,
+          "price": 6000,
           "kind": "consumable",
           "group": "疗伤"
         },
         {
           "item": "huanledu_cao",
-          "price": 1,
+          "price": 300,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_lingdang",
-          "price": 1,
+          "price": 300,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_qian",
-          "price": 1,
+          "price": 300,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_rou",
-          "price": 1,
+          "price": 300,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_bianzhong",
-          "price": 1,
+          "price": 600,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_fei",
-          "price": 1,
+          "price": 600,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_shen",
-          "price": 1,
+          "price": 600,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_yu",
-          "price": 1,
+          "price": 600,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_shan",
-          "price": 1,
+          "price": 1200,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_tao",
-          "price": 1,
+          "price": 1200,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_xie",
-          "price": 1,
+          "price": 1200,
           "kind": "consumable",
           "group": "逗魂粮"
         },
         {
           "item": "huanledu_yupei",
-          "price": 1,
+          "price": 1200,
           "kind": "consumable",
           "group": "逗魂粮"
         }
@@ -1208,79 +1208,79 @@
       "items": [
         {
           "item": "mijian_51122",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51123",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51124",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51125",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51126",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51127",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51128",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51129",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51135",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51136",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51137",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51138",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         },
         {
           "item": "mijian_51139",
-          "price": 1,
+          "price": 100000,
           "kind": "consumable",
           "group": "魂技秘笈"
         }
