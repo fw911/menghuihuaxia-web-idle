@@ -1837,3 +1837,117 @@ L14 待办把此线记为「`quests` 战魂→灵兽 48 处 + `wuhun_recipes` 27
 ### 21.7 保留项与说明
 - companion 为 0.94 未移植系统，重建作数据备料；web 引擎当前不消费，未来若接入须同步引擎代码。
 - zhenzu 在 web 可能缺专属获取途径（map=wuxingzhen 五行阵），仅作数据完整性补齐，不强制可达。
+
+---
+
+## 二十二、L19 全库 key 感知盘点 + items 对齐 0.94 + 修正 L17 过度替换
+
+### 22.1 前提：盘点方法论必须 key 感知（重演 L14 的教训）
+
+L14 曾出现「按数组下标比对 bases_* 显示 84~98 处差异，按 key 复核后全部为零」的假差异。
+本轮初跑全库盘点时**又犯了一次同样的错**，立即用 key 感知方式重做：
+
+- 新增 `_l19_inventory.py`：对含 `key` 字段的数组条目改按 key 对齐后再比叶级值。
+- 结论对比（同一份数据、两种比对法）：
+
+| 比对法 | bases_accessory | bases_mage | items |
+|---|---|---|---|
+| 按数组下标 | 98 处 | 84 处 | 309 处（非icon） |
+| **按 key** | **0** | **0** | 309（部分为真漂移） |
+
+⇒ **以后所有 config 盘点一律用 key 感知比对**（`_l19_inventory.py`）。
+
+### 22.2 全库盘点结果（key 感知）
+
+0.94 共 74 份 enc，web 71 份同名 data。盘点结果：
+- **51 份 config 零漂移**（已完全对齐）：bases_mage/shaman/darkwitch/accessory、perk_pool、quality、
+  refine、gems、crystals、craft、extract、ores、mining、guide、summons、companion、instances 等。
+- 有漂移且**引擎消费**（`js/state.js#DATA_FILES`）的主要是：
+  `monsters`(7533) / `monster_skills`(5368) / `skills_active_*`(4118) / `shenmo_*`(2734) /
+  `achievements`(710) / `shops`(437) / `items`(27) / `maps`(290) / `wuhun*`(473) /
+  `loot_tables`(231) / `quests`(60)。
+- 有漂移但**引擎不消费**（死数据）：`monster_loot_built`(16915)、`loot_pools`(1299)。
+  两者在 `js/`、`server/`、`_patch.py`、`_run_test.js` 中**均无任何引用**（仅见于取证脚本自身）。
+- 0.94 有、web 无：`birthday` / `leaderboard` / `welfare`（3 份未移植）。
+
+### 22.3 Part A：修正 L17 的过度替换（12 处）
+
+L17 做的是「战魂 → 灵兽」全站替换。但 **0.94 自身在部分字段保留「战魂」**：
+BOSS 战魂珠、战魂殿、九黎战魂、战魂淬炼的战斧、战魂培养料。
+
+取证链（三重）：
+1. **0.94 直解密**：上述 12 处字段的真值即「战魂」。
+2. **git 回溯**（`git show dd83fd7:data/...`，即 L17 前的 web 原版）：这 12 处**本就与 0.94 一致**
+   → 确认是 L17 全站替换**误改**，而非 web 原有的自研命名。
+3. **差异特征比对**：把两边文本中的「战魂/灵兽」统一抹成占位符后若完全相同，
+   则为纯措辞替换误伤 —— 全库精确命中这 12 处，**无其它误伤**。
+
+| 文件 | 位置 | 回正 |
+|---|---|---|
+| `achievements.json` | `cz_6.name` | 九黎灵兽 → 九黎战魂 |
+| `bases_warrior.json` | `base_warrior_weapons_8_1.desc` | 混合灵兽淬炼 → 混合战魂淬炼 |
+| `loot_pools.json` | 4 处 `note` | BOSS 灵兽珠 → BOSS 战魂珠 |
+| `monster_loot_built.json` | 4 处 `note` | BOSS 灵兽珠 → BOSS 战魂珠 |
+| `maps.json` | `qingyunzhai_l3.zones[2].name` | 灵兽殿 → 战魂殿 |
+| `shops.json` | `shenmi_shangren.desc` | 灵兽培养料 → 战魂培养料 |
+
+### 22.4 Part B/C/D：items.json 按 key 字段级合并
+
+条目集合与 0.94 **完全一致**（357 = 357，仅web 0 / 仅ref 0），故逐字段合并：
+
+| 字段 | 处数 | 处理 | 说明 |
+|---|---|---|---|
+| `desc` | 134 | 取 0.94 | web「魂能/魂技/驭魂者」→ 0.94「灵能/灵技/驭灵者」 |
+| `name` | 33 | 取 0.94 | 同上 + BOSS 专名（天尊→霄尊、七星魔君→七曜魔君、耀嘉→耀曦、狱魔→幽狱魔）+ 未封印珠补全「灵兽珠」后缀 |
+| `flavor` | 11 | 取 0.94 | 魂帛→灵帛、引魂→引灵 |
+| `coupon_price` | 92 | 取 0.94 | **web 全部压平为 1**，0.94 为 5~6000 的 34 种真实值（典型 web 压平，与 L7/L8/L14 同类） |
+| `effect.hp_per_tick` / `effect.mp_per_tick` | 12 | 取 0.94 | web 为 0.94 的 1/4（见 22.5） |
+| `duration_ticks` / `cd_ticks` | 24 | web 独有字段，值 = 对应 ms/1000 | 0.94 无此字段（对应其 `duration`/`cd` 的秒数语义） |
+| `effect.exp` / `effect.intimacy` | 3 | **保留 web** | web 经济标度 ×100，与 `monsters.exp` ×10 同源，属 web 自研经济体系 |
+| `icon` | 148 | **保留 web** | 0.94 图标资源 web 缺失（沿用 L13/L15 规则） |
+
+### 22.5 药效口径取证（回正依据，非盲改）
+
+**原版字节码**（`_reports/dis/_dis_battle.txt` 563-573 行）：
+```
+per_tick_key = 'hp_per_tick' if is_hp else 'mp_per_tick'
+fixed_tick = int(effect.get(per_tick_key, 0))
+if fixed_tick > 0:
+    total = fixed_tick * duration      # total = per_tick × duration
+    _mode_txt = f'每回合{per_tick}点'
+```
+**web 引擎同构**（`js/shop.js#useItem`）：
+```
+const per   = def.effect.hp_per_tick != null ? def.effect.hp_per_tick : def.effect.mp_per_tick || 0;
+const total = per * (def.duration_ticks || 1);   // 一次性结算
+```
+⇒ web 回正为 `per_tick = 80`（0.94 真值）× `duration_ticks = 10`（= `duration_ms`/1000）= **800**，
+与 0.94（80/秒 × 10 秒 = 800）及 **web 自身 desc**「使用后每秒回复 80 点生命，持续 10秒」三方一致。
+修正前 web 实际只给 **400**（文案与实际不符）。
+
+**排除「配套缩放」可能**：全量比对 `monsters.hp` —— 1536 个怪物**全部与 0.94 相同**（0 差异），
+说明 web 与 0.94 的血量标度完全一致，故药效 ÷4 是**纯漂移**，回正不会造成标度错配。
+
+### 22.6 强校验与验证
+
+- Part A：12 处旧串清零，逐份 `json.load` 合法。
+- Part B/C/D：合并后残余差异路径仅
+  `icon 148 / duration_ticks 12 / cd_ticks 12 / effect.exp 2 / effect.intimacy 1`，
+  **非预期残余差异 = 无**；tick 字段换算校验 OK；回春丹总回复量 = 800 ✓。
+- `_run_test.js`：**726 项 ALL PASS / 0 FAIL / 0 SKIP**（含 2000 轮长时挂机冒烟、死亡惩罚、
+  首领优先共 9 项挂机/首领断言）；测试断言的 3 个物品名（回春小还丹 / 九转定神守心液 / 回春丹）
+  与 0.94 完全一致，未受影响。
+- key 感知盘点复跑：`bases_warrior` 漂移 **1 → 0**；`items` 非icon 漂移 **309 → 27**
+  （仅剩 web 独有的 tick 字段与 web 经济标度字段）。
+
+### 22.7 保留 / 未改项（登记后续）
+
+1. **`items.effect.exp` / `effect.intimacy`（3 处）**：web 经济标度 ×100，与 `monsters.exp` ×10
+   同源，属 web 自研经济体系，不在本次回正范围。
+2. **`monsters`(7533) / `monster_skills`(5368)**：web 对怪物经验/金币做了 ×10 量级调整、
+   技能数值做了非等比重平衡（方向不一致），属整体经济与战斗平衡改动，
+   需单独规划（不能按「压平」简单回正）。
+3. **`quests`(60)**：web 自研剧情线（卿阎 vs 0.94 岑肃等），保留。
+4. **`shenmo_*`(2734) / `skills_active_*`(4118) / `wuhun*`(473)**：多为 web 自研 MOD 结构，维持现状。
+5. **`monster_loot_built` / `loot_pools`**：引擎不消费的死数据（本轮仅随 Part A 同步措辞）。
+6. **0.94 有、web 无的 `birthday` / `leaderboard` / `welfare`**：未移植系统，是否引入待评估。

@@ -7,10 +7,10 @@
       "effect_type": "hp_hot",
       "price": 20,
       "effect": {
-        "hp_per_tick": 20
+        "hp_per_tick": 80
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 0,
       "tier": 1,
       "icon": "static/icons/items/medicine_002.jpg",
@@ -26,10 +26,10 @@
       "effect_type": "hp_hot",
       "price": 45,
       "effect": {
-        "hp_per_tick": 43
+        "hp_per_tick": 172
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 20,
       "tier": 2,
       "icon": "static/icons/items/medicine_003.jpg",
@@ -45,10 +45,10 @@
       "effect_type": "hp_hot",
       "price": 80,
       "effect": {
-        "hp_per_tick": 78
+        "hp_per_tick": 312
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 40,
       "tier": 3,
       "icon": "static/icons/items/medicine_005.jpg",
@@ -64,10 +64,10 @@
       "effect_type": "hp_hot",
       "price": 130,
       "effect": {
-        "hp_per_tick": 121
+        "hp_per_tick": 484
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 60,
       "tier": 4,
       "icon": "static/icons/items/medicine_006.jpg",
@@ -83,10 +83,10 @@
       "effect_type": "hp_hot",
       "price": 190,
       "effect": {
-        "hp_per_tick": 178
+        "hp_per_tick": 712
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 80,
       "tier": 5,
       "icon": "static/icons/items/medicine_007.jpg",
@@ -102,10 +102,10 @@
       "effect_type": "hp_hot",
       "price": 260,
       "effect": {
-        "hp_per_tick": 253
+        "hp_per_tick": 1012
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 100,
       "tier": 6,
       "icon": "static/icons/items/medicine_001.gif",
@@ -121,10 +121,10 @@
       "effect_type": "mp_hot",
       "price": 20,
       "effect": {
-        "mp_per_tick": 20
+        "mp_per_tick": 80
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 0,
       "tier": 1,
       "icon": "static/icons/items/liquid_002.jpg",
@@ -140,10 +140,10 @@
       "effect_type": "mp_hot",
       "price": 45,
       "effect": {
-        "mp_per_tick": 43
+        "mp_per_tick": 172
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 20,
       "tier": 2,
       "icon": "static/icons/items/liquid_004.jpg",
@@ -159,10 +159,10 @@
       "effect_type": "mp_hot",
       "price": 80,
       "effect": {
-        "mp_per_tick": 78
+        "mp_per_tick": 312
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 40,
       "tier": 3,
       "icon": "static/icons/items/liquid_005.jpg",
@@ -178,10 +178,10 @@
       "effect_type": "mp_hot",
       "price": 130,
       "effect": {
-        "mp_per_tick": 121
+        "mp_per_tick": 484
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 60,
       "tier": 4,
       "icon": "static/icons/items/liquid_006.jpg",
@@ -197,10 +197,10 @@
       "effect_type": "mp_hot",
       "price": 190,
       "effect": {
-        "mp_per_tick": 178
+        "mp_per_tick": 712
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 80,
       "tier": 5,
       "icon": "static/icons/items/liquid_007.jpg",
@@ -216,10 +216,10 @@
       "effect_type": "mp_hot",
       "price": 260,
       "effect": {
-        "mp_per_tick": 253
+        "mp_per_tick": 1012
       },
-      "duration_ticks": 20,
-      "cd_ticks": 20,
+      "duration_ticks": 10,
+      "cd_ticks": 10,
       "level_required": 100,
       "tier": 6,
       "icon": "static/icons/items/liquid_001.gif",
@@ -282,7 +282,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 80,
       "effect": {
         "reward": "jiuzhuan_shengshui",
         "count": 10
@@ -299,7 +299,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 50,
       "effect": {
         "reward": "sanhua_yuye",
         "count": 10
@@ -316,7 +316,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 30,
       "effect": {
         "reward": "yuquan_qiongjiang",
         "count": 10
@@ -347,7 +347,7 @@
       "type": "consumable",
       "effect_type": "luopan",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "effect": {
         "grade": "erpin"
       },
@@ -362,7 +362,7 @@
       "type": "consumable",
       "effect_type": "luopan",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 30,
       "effect": {
         "grade": "sanpin"
       },
@@ -378,7 +378,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 110,
       "effect": {
         "reward": "erpin_luopan",
         "count": 10
@@ -395,7 +395,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 200,
       "effect": {
         "reward": "erpin_luopan",
         "count": 20
@@ -412,7 +412,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 260,
       "effect": {
         "reward": "sanpin_luopan",
         "count": 10
@@ -429,7 +429,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 500,
       "effect": {
         "reward": "sanpin_luopan",
         "count": 20
@@ -460,7 +460,7 @@
       "type": "consumable",
       "effect_type": "refine_protect",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 300,
       "effect": {
         "tier_max": 7
       },
@@ -475,7 +475,7 @@
       "type": "consumable",
       "effect_type": "craft_reroll",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 300,
       "effect": {
         "rerolls": 1,
         "tier_min": 1,
@@ -492,7 +492,7 @@
       "type": "consumable",
       "effect_type": "craft_reroll",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 900,
       "effect": {
         "rerolls": 1,
         "tier_min": 7,
@@ -509,7 +509,7 @@
       "type": "consumable",
       "effect_type": "craft_reroll_adv",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 2000,
       "effect": {
         "rerolls": 2,
         "tier_min": 6,
@@ -526,7 +526,7 @@
       "type": "consumable",
       "effect_type": "summon_souls",
       "price": 888,
-      "coupon_price": 1,
+      "coupon_price": 50,
       "level_required": 1,
       "icon": "static/icons/items/soul_flag_001.png",
       "desc": "使用后随机获取5个魂魄（三魂七魄皆可，可重复）。",
@@ -541,7 +541,7 @@
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 5000,
-      "coupon_price": 1,
+      "coupon_price": 100,
       "effect": {
         "exp": 200000
       },
@@ -557,7 +557,7 @@
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 20000,
-      "coupon_price": 1,
+      "coupon_price": 250,
       "effect": {
         "exp": 1000000
       },
@@ -573,7 +573,7 @@
       "type": "consumable",
       "effect_type": "exp_instant",
       "price": 80000,
-      "coupon_price": 1,
+      "coupon_price": 400,
       "effect": {
         "exp": 1500000
       },
@@ -589,7 +589,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 10000,
-      "coupon_price": 1,
+      "coupon_price": 120,
       "effect": {
         "bonus": 1.0
       },
@@ -606,7 +606,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 40000,
-      "coupon_price": 1,
+      "coupon_price": 60,
       "effect": {
         "bonus": 0.5
       },
@@ -623,7 +623,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 220,
       "effect": {
         "bonus": 1.0
       },
@@ -640,7 +640,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 100,
       "effect": {
         "bonus": 0.5
       },
@@ -657,7 +657,7 @@
       "type": "consumable",
       "effect_type": "exp_buff",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 300,
       "effect": {
         "bonus": 1.5
       },
@@ -674,7 +674,7 @@
       "type": "consumable",
       "effect_type": "bless_recharge",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 1500,
       "effect": {
         "hours": 10
       },
@@ -704,7 +704,7 @@
       "type": "consumable",
       "effect_type": "online_reward",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 350,
       "effect": {},
       "level_required": 1,
       "tier": 3,
@@ -718,7 +718,7 @@
       "type": "consumable",
       "effect_type": "offline_exp",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 220,
       "effect": {},
       "level_required": 40,
       "tier": 4,
@@ -796,7 +796,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 1314,
       "effect": {
         "reward_equip_key": "base_accessory_rings_7_2",
         "count": 1
@@ -932,7 +932,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 5,
       "effect": {
         "chest_tier": 1
       },
@@ -948,7 +948,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 10,
       "effect": {
         "chest_tier": 2
       },
@@ -964,7 +964,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "effect": {
         "chest_tier": 3
       },
@@ -980,7 +980,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 20,
       "effect": {
         "chest_tier": 4
       },
@@ -996,7 +996,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 30,
       "effect": {
         "chest_tier": 5
       },
@@ -1012,7 +1012,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 40,
       "effect": {
         "chest_tier": 6
       },
@@ -1028,7 +1028,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 60,
       "effect": {
         "chest_tier": 7
       },
@@ -1060,7 +1060,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 50,
       "effect": {
         "reset_star": 1
       },
@@ -1076,7 +1076,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 80,
       "effect": {
         "reset_star": 2
       },
@@ -1092,7 +1092,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 150,
       "effect": {
         "reset_star": 3
       },
@@ -1108,7 +1108,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 300,
       "effect": {
         "reset_star": 4
       },
@@ -1124,7 +1124,7 @@
       "type": "consumable",
       "effect_type": "shenmo_reset",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 600,
       "effect": {
         "reset_star": 5
       },
@@ -1235,7 +1235,7 @@
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 5,
-      "coupon_price": 1,
+      "coupon_price": 5,
       "effect": {
         "material": true
       },
@@ -1251,7 +1251,7 @@
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "effect": {
         "material": true
       },
@@ -1267,7 +1267,7 @@
       "type": "consumable",
       "effect_type": "shenmo_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "effect": {
         "material": true
       },
@@ -1299,7 +1299,7 @@
       "type": "consumable",
       "effect_type": "shenmo_talisman",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 10,
       "effect": {
         "pill_bonus_pct": 20
       },
@@ -1315,7 +1315,7 @@
       "type": "consumable",
       "effect_type": "box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 150,
       "effect": {
         "reward": "dichuan_chuansongjuan",
         "count": 10
@@ -1401,7 +1401,7 @@
       "type": "consumable",
       "effect_type": "lucky_box",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 20,
       "effect": {
         "requires_key": "jiefeng_fu"
       },
@@ -1418,7 +1418,7 @@
       "type": "consumable",
       "effect_type": "chest_key",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 20,
       "effect": {
         "unlock": "lucky_box"
       },
@@ -1653,7 +1653,7 @@
       "type": "consumable",
       "effect_type": "shenmo_faction_change",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 50,
       "effect": {
         "faction_change": true
       },
@@ -1669,7 +1669,7 @@
       "type": "consumable",
       "effect_type": "shenmo_faction_change",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 80,
       "effect": {
         "faction_change": true
       },
@@ -1685,7 +1685,7 @@
       "type": "consumable",
       "effect_type": "shenmo_faction_change",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 150,
       "effect": {
         "faction_change": true
       },
@@ -1701,7 +1701,7 @@
       "type": "consumable",
       "effect_type": "shenmo_faction_change",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 300,
       "effect": {
         "faction_change": true
       },
@@ -1717,7 +1717,7 @@
       "type": "consumable",
       "effect_type": "shenmo_faction_change",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 600,
       "effect": {
         "faction_change": true
       },
@@ -1749,7 +1749,7 @@
       "type": "consumable",
       "effect_type": "ring_double_exp",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 50,
       "effect": {
         "ring_double_exp": 1
       },
@@ -1894,7 +1894,7 @@
       "type": "consumable",
       "effect_type": "qiling_mount",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 6000,
       "effect": {
         "carrier": "qiling_spirit",
         "species": "chihuo"
@@ -1945,7 +1945,7 @@
       "type": "consumable",
       "effect_type": "qiling_mount",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 6000,
       "effect": {
         "carrier": "qiling_spirit",
         "species": "qinglan"
@@ -1996,7 +1996,7 @@
       "type": "consumable",
       "effect_type": "qiling_mount",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 6000,
       "effect": {
         "carrier": "qiling_spirit",
         "species": "hanyue"
@@ -2047,7 +2047,7 @@
       "type": "consumable",
       "effect_type": "qiling_mount",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 6000,
       "effect": {
         "carrier": "qiling_spirit",
         "species": "xiaoying"
@@ -2081,7 +2081,7 @@
       "type": "consumable",
       "effect_type": "qiling_exp",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 200,
       "effect": {
         "exp": 10000
       },
@@ -2113,7 +2113,7 @@
       "type": "consumable",
       "effect_type": "qiling_intimacy",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 100,
       "effect": {
         "intimacy": 20000
       },
@@ -2129,7 +2129,7 @@
       "type": "consumable",
       "effect_type": "qiling_star_down",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 100,
       "effect": {
         "star_down": 1
       },
@@ -2177,7 +2177,7 @@
       "type": "consumable",
       "effect_type": "qiling_star_boost",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 2000,
       "effect": {
         "per_item": 15
       },
@@ -2193,7 +2193,7 @@
       "type": "consumable",
       "effect_type": "qiling_promote",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 2000,
       "effect": {
         "promote": 1
       },
@@ -2209,7 +2209,7 @@
       "type": "consumable",
       "effect_type": "qiling_skill_remove",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 200,
       "effect": {
         "remove": 1
       },
@@ -2225,7 +2225,7 @@
       "type": "consumable",
       "effect_type": "fuling_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 6,
       "effect": {
         "category": "fuling_material"
       },
@@ -2241,7 +2241,7 @@
       "type": "consumable",
       "effect_type": "fuling_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 6,
       "effect": {
         "category": "fuling_material"
       },
@@ -2257,7 +2257,7 @@
       "type": "consumable",
       "effect_type": "fuling_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 30,
       "effect": {
         "category": "fuling_material"
       },
@@ -2273,7 +2273,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "effect": {
         "category": "craft_material"
       },
@@ -2289,7 +2289,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 50,
       "effect": {
         "category": "craft_material"
       },
@@ -2324,7 +2324,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 30,
       "effect": {
         "category": "craft_material"
       },
@@ -2340,7 +2340,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 45,
       "effect": {
         "category": "craft_material"
       },
@@ -2356,7 +2356,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 30,
       "effect": {
         "category": "craft_material"
       },
@@ -2372,7 +2372,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 200,
       "effect": {
         "category": "craft_material"
       },
@@ -2388,7 +2388,7 @@
       "type": "consumable",
       "effect_type": "fuling_guard",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 800,
       "effect": {
         "category": "fuling_guard"
       },
@@ -2404,7 +2404,7 @@
       "type": "consumable",
       "effect_type": "fuling_guard",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 2000,
       "effect": {
         "category": "fuling_guard"
       },
@@ -2420,7 +2420,7 @@
       "type": "consumable",
       "effect_type": "fuling_guard",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 2000,
       "effect": {
         "category": "fuling_guard"
       },
@@ -2436,7 +2436,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "effect": {
         "category": "craft_material"
       },
@@ -2475,7 +2475,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "effect": {
         "category": "craft_material"
       },
@@ -2779,7 +2779,7 @@
       "type": "consumable",
       "effect_type": "craft_material",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "effect": {
         "category": "craft_material"
       },
@@ -2955,7 +2955,7 @@
       "tier": 0,
       "icon": "static/icons/items/yu_lingzhu.png",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "yu_lingzhu",
       "name": "霖雨珠",
       "effect_type": "craft_material",
@@ -2971,7 +2971,7 @@
       "tier": 0,
       "icon": "static/icons/items/dian_lingzhu.png",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "dian_lingzhu",
       "name": "疾电珠",
       "effect_type": "craft_material",
@@ -2987,7 +2987,7 @@
       "tier": 0,
       "icon": "static/icons/items/gaoji_hejin.png",
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "gaoji_hejin",
       "name": "精金合金",
       "effect_type": "craft_material",
@@ -3183,7 +3183,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "jingpo_chi",
       "name": "赤精魄",
       "effect_type": "craft_material",
@@ -3199,7 +3199,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "jingpo_lan",
       "name": "蓝精魄",
       "effect_type": "craft_material",
@@ -3215,7 +3215,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 200,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "baicaogao",
       "name": "百草膏",
       "effect_type": "craft_material",
@@ -3231,7 +3231,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 150,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "chixuejing",
       "name": "赤血晶",
       "effect_type": "craft_material",
@@ -3247,7 +3247,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 300,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "lingjinghe",
       "name": "灵晶核",
       "effect_type": "craft_material",
@@ -3263,7 +3263,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 250,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "miyinsha",
       "name": "秘银砂",
       "effect_type": "craft_material",
@@ -3279,7 +3279,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 15,
       "key": "liangyi_yang",
       "name": "两仪阳石",
       "effect_type": "craft_material",
@@ -3295,7 +3295,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 30,
       "key": "liangyi_yin",
       "name": "两仪阴石",
       "effect_type": "craft_material",
@@ -3311,7 +3311,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 2000,
       "key": "hubaoshi",
       "name": "护宝石",
       "effect_type": "craft_material",
@@ -3327,7 +3327,7 @@
       "level_required": 100,
       "tier": 0,
       "price": 0,
-      "coupon_price": 1,
+      "coupon_price": 3000,
       "key": "zhuanlun_shi",
       "name": "重铸石",
       "effect_type": "craft_material",
@@ -3343,7 +3343,7 @@
       "level_required": 95,
       "tier": 0,
       "price": 1000000,
-      "coupon_price": 1,
+      "coupon_price": 800,
       "key": "wuxingfan",
       "name": "五曜幡",
       "effect_type": "instance_extra_enter",
@@ -3359,7 +3359,7 @@
       "level_required": 95,
       "tier": 0,
       "price": 1000000,
-      "coupon_price": 1,
+      "coupon_price": 50,
       "key": "canglingyin",
       "name": "苍灵印",
       "effect_type": "instance_skip_rounds",
@@ -3376,7 +3376,7 @@
       "level_required": 95,
       "tier": 0,
       "price": 1000000,
-      "coupon_price": 1,
+      "coupon_price": 500,
       "key": "zhuzhenfu",
       "name": "助阵符",
       "effect_type": "instance_summon_guard",
@@ -3404,7 +3404,7 @@
     },
     {
       "key": "hunbo",
-      "name": "魂帛",
+      "name": "灵帛",
       "type": "consumable",
       "effect_type": "companion_hunt",
       "price": 5000,
@@ -3414,12 +3414,12 @@
       "level_required": 19,
       "tier": 0,
       "icon": "",
-      "desc": "使用后进入「摄魂」状态，持续 30 分钟；仅限百兽谷、七星岭。\n摄魂期间击杀怪物按种族累计，同种满 10 只刷出可摄灵兽；背包备有魂壶时挂机自动摄取。\n灵兽杂货商处有售。",
-      "flavor": "魂帛一展，摄魂无形"
+      "desc": "使用后进入「摄灵」状态，持续 30 分钟；仅限万兽谷、七曜岭。\n摄灵期间击杀怪物按种族累计，同种满 10 只刷出可摄灵兽；背包备有灵壶时挂机自动摄取。\n灵兽杂货商处有售。",
+      "flavor": "灵帛一展，摄灵无形"
     },
     {
       "key": "hunhu",
-      "name": "魂壶",
+      "name": "灵壶",
       "type": "consumable",
       "effect_type": "companion_catch",
       "price": 5000,
@@ -3429,12 +3429,12 @@
       "level_required": 19,
       "tier": 0,
       "icon": "",
-      "desc": "在摄魂状态中使用的摄取法宝：对刷出的可摄灵兽执行摄取，收为灵兽（元魂为主，小概率始魂）。\n仅限百兽谷、七星岭；灵兽杂货商处有售。",
+      "desc": "在摄灵状态中使用的摄取法宝：对刷出的可摄灵兽执行摄取，收为灵兽（元魂为主，小概率始魂）。\n仅限万兽谷、七曜岭；灵兽杂货商处有售。",
       "flavor": "壶纳万魂，收归己用"
     },
     {
       "key": "mihun_dan",
-      "name": "秘魂丹",
+      "name": "秘灵丹",
       "type": "consumable",
       "effect_type": "companion_heal",
       "price": 2000,
@@ -3449,7 +3449,7 @@
     },
     {
       "key": "xianhun_dan",
-      "name": "仙魂丹",
+      "name": "仙灵丹",
       "type": "consumable",
       "effect_type": "companion_heal",
       "price": 6000,
@@ -3680,7 +3680,7 @@
     },
     {
       "key": "weifengyin_1x",
-      "name": "未封印的 1 星",
+      "name": "未封印的 1 星灵兽珠",
       "type": "consumable",
       "effect_type": "companion_seal",
       "price": 5000,
@@ -3690,12 +3690,12 @@
       "level_required": 20,
       "tier": 0,
       "icon": "",
-      "desc": "封印灵兽所需之物：封印 1 只携带等级 20 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「封印灵兽珠」（无损收纳，取回原样）。\n灵兽杂货商处有售。",
+      "desc": "封印灵兽所需之物：封印 1 只携带等级 20 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「<灵兽名>灵兽珠」（无损收纳，取回原样）。\n灵兽杂货商处有售。",
       "flavor": "一星微芒，灵光初现"
     },
     {
       "key": "weifengyin_2x",
-      "name": "未封印的 2 星",
+      "name": "未封印的 2 星灵兽珠",
       "type": "consumable",
       "effect_type": "companion_seal",
       "price": 15000,
@@ -3705,12 +3705,12 @@
       "level_required": 35,
       "tier": 0,
       "icon": "",
-      "desc": "封印灵兽所需之物：封印 1 只携带等级 35 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「封印灵兽珠」（无损收纳，取回原样）。\n灵兽杂货商处有售。",
+      "desc": "封印灵兽所需之物：封印 1 只携带等级 35 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「<灵兽名>灵兽珠」（无损收纳，取回原样）。\n灵兽杂货商处有售。",
       "flavor": "二星流转，光华渐盛"
     },
     {
       "key": "weifengyin_3x",
-      "name": "未封印的 3 星",
+      "name": "未封印的 3 星灵兽珠",
       "type": "consumable",
       "effect_type": "companion_seal",
       "price": 45000,
@@ -3720,12 +3720,12 @@
       "level_required": 50,
       "tier": 0,
       "icon": "",
-      "desc": "封印灵兽所需之物：封印 1 只携带等级 50 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「封印灵兽珠」（无损收纳，取回原样）。\n灵兽杂货商处有售。",
+      "desc": "封印灵兽所需之物：封印 1 只携带等级 50 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「<灵兽名>灵兽珠」（无损收纳，取回原样）。\n灵兽杂货商处有售。",
       "flavor": "三星澄澈，宝光内蕴"
     },
     {
       "key": "weifengyin_4x",
-      "name": "未封印的 4 星",
+      "name": "未封印的 4 星灵兽珠",
       "type": "consumable",
       "effect_type": "companion_seal",
       "price": 0,
@@ -3735,12 +3735,12 @@
       "level_required": 65,
       "tier": 0,
       "icon": "",
-      "desc": "封印灵兽所需之物：封印 1 只携带等级 65 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「封印灵兽珠」（无损收纳，取回原样）。\n神秘商人处以结晶兑换。",
+      "desc": "封印灵兽所需之物：封印 1 只携带等级 65 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「<灵兽名>灵兽珠」（无损收纳，取回原样）。\n神秘商人处以结晶兑换。",
       "flavor": "四星蕴华，流彩灼灼"
     },
     {
       "key": "weifengyin_5x",
-      "name": "未封印的 5 星",
+      "name": "未封印的 5 星灵兽珠",
       "type": "consumable",
       "effect_type": "companion_seal",
       "price": 0,
@@ -3750,12 +3750,12 @@
       "level_required": 80,
       "tier": 0,
       "icon": "",
-      "desc": "封印灵兽所需之物：封印 1 只携带等级 80 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「封印灵兽珠」（无损收纳，取回原样）。\n神秘商人处以结晶兑换。",
+      "desc": "封印灵兽所需之物：封印 1 只携带等级 80 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「<灵兽名>灵兽珠」（无损收纳，取回原样）。\n神秘商人处以结晶兑换。",
       "flavor": "五星辉映，魂光自生"
     },
     {
       "key": "weifengyin_6x",
-      "name": "未封印的 6 星",
+      "name": "未封印的 6 星灵兽珠",
       "type": "consumable",
       "effect_type": "companion_seal",
       "price": 0,
@@ -3765,12 +3765,12 @@
       "level_required": 95,
       "tier": 0,
       "icon": "",
-      "desc": "封印灵兽所需之物：封印 1 只携带等级 95 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「封印灵兽珠」（无损收纳，取回原样）。\n神秘商人处以结晶兑换。",
+      "desc": "封印灵兽所需之物：封印 1 只携带等级 95 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「<灵兽名>灵兽珠」（无损收纳，取回原样）。\n神秘商人处以结晶兑换。",
       "flavor": "六星璀璨，瑞彩千条"
     },
     {
       "key": "weifengyin_7x",
-      "name": "未封印的 7 星",
+      "name": "未封印的 7 星灵兽珠",
       "type": "consumable",
       "effect_type": "companion_seal",
       "price": 0,
@@ -3780,12 +3780,12 @@
       "level_required": 110,
       "tier": 0,
       "icon": "",
-      "desc": "封印灵兽所需之物：封印 1 只携带等级 110 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「封印灵兽珠」（无损收纳，取回原样）。\n神秘商人处以结晶兑换。",
+      "desc": "封印灵兽所需之物：封印 1 只携带等级 110 的灵兽需消耗 1 张同星空珠。\n使用后封入的灵兽化为「<灵兽名>灵兽珠」（无损收纳，取回原样）。\n神秘商人处以结晶兑换。",
       "flavor": "七星圆满，乾坤可纳"
     },
     {
       "key": "fengyin_zhanhunzhu",
-      "name": "封印灵兽珠",
+      "name": "灵兽珠",
       "type": "consumable",
       "effect_type": "companion_unseal",
       "price": 0,
@@ -3795,12 +3795,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "封装着一只灵兽的灵珠（无损收纳，保留全部状态）。\n使用后原样还原该灵兽入灵兽背包（满仓时无法取回）。",
+      "desc": "封装着一只灵兽的灵珠（以所含灵兽命名；无损收纳、保留全部状态、不可叠加）。\n使用后原样还原该灵兽入灵兽背包（满仓时无法取回）。",
       "flavor": "一珠一魂，封存如初"
     },
     {
       "key": "yin_hun_yuandan_1",
-      "name": "引魂初级元丹",
+      "name": "引灵初级元丹",
       "type": "consumable",
       "effect_type": "companion_yinhun",
       "price": 0,
@@ -3810,12 +3810,12 @@
       "level_required": 19,
       "tier": 0,
       "icon": "",
-      "desc": "玄界封印元魂的丹药，引魂时可代替元魂使用；有几率将灵兽修为直接提升 1 级。\n适用于主魂修为 4 级以下的初级灵兽。",
-      "flavor": "引魂法宝，可代元魂"
+      "desc": "玄界封印元魂的丹药，引灵时可代替元魂使用；有几率将灵兽修为直接提升 1 级。\n适用于主魂修为 4 级以下的初级灵兽。",
+      "flavor": "引灵法宝，可代元魂"
     },
     {
       "key": "yin_hun_yuandan_2",
-      "name": "引魂中级元丹",
+      "name": "引灵中级元丹",
       "type": "consumable",
       "effect_type": "companion_yinhun",
       "price": 0,
@@ -3825,12 +3825,12 @@
       "level_required": 19,
       "tier": 0,
       "icon": "",
-      "desc": "玄界封印元魂的丹药，引魂时可代替元魂使用；有几率将灵兽修为直接提升 1 级。\n适用于主魂修为 7 级以下的中级灵兽。",
-      "flavor": "引魂法宝，可代元魂"
+      "desc": "玄界封印元魂的丹药，引灵时可代替元魂使用；有几率将灵兽修为直接提升 1 级。\n适用于主魂修为 7 级以下的中级灵兽。",
+      "flavor": "引灵法宝，可代元魂"
     },
     {
       "key": "yin_hun_yuandan_3",
-      "name": "引魂高级元丹",
+      "name": "引灵高级元丹",
       "type": "consumable",
       "effect_type": "companion_yinhun",
       "price": 0,
@@ -3840,12 +3840,12 @@
       "level_required": 19,
       "tier": 0,
       "icon": "",
-      "desc": "玄界封印元魂的丹药，引魂时可代替元魂使用；有几率将灵兽修为直接提升 1 级。\n适用于主魂修为 10 级以下的高级灵兽。",
-      "flavor": "引魂法宝，可代元魂"
+      "desc": "玄界封印元魂的丹药，引灵时可代替元魂使用；有几率将灵兽修为直接提升 1 级。\n适用于主魂修为 10 级以下的高级灵兽。",
+      "flavor": "引灵法宝，可代元魂"
     },
     {
       "key": "yin_hun_yuandan_4",
-      "name": "灵兽灵修丹",
+      "name": "灵修丹",
       "type": "consumable",
       "effect_type": "companion_yinhun",
       "price": 0,
@@ -3855,12 +3855,12 @@
       "level_required": 19,
       "tier": 0,
       "icon": "",
-      "desc": "灵兽在玄界中提升修为的丹药，相传永远不会失败。\n消耗 1 个灵兽灵修丹，100% 将灵兽修为提升 1 级。",
+      "desc": "灵兽在玄界中提升修为的丹药，相传永远不会失败。\n消耗 1 个灵修丹，100% 将灵兽修为提升 1 级。",
       "flavor": "灵修一丹，修为必进"
     },
     {
       "key": "yin_hun_lingdan_1",
-      "name": "引魂初级灵丹",
+      "name": "引灵初级灵丹",
       "type": "consumable",
       "effect_type": "companion_yinhun",
       "price": 0,
@@ -3870,12 +3870,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "玄界中加强引魂成功率的丹药。\n适用于主魂修为 4 级以下的初级灵兽。",
-      "flavor": "灵丹相助，引魂更稳"
+      "desc": "玄界中加强引灵成功率的丹药。\n适用于主魂修为 4 级以下的初级灵兽。",
+      "flavor": "灵丹相助，引灵更稳"
     },
     {
       "key": "yin_hun_lingdan_2",
-      "name": "引魂中级灵丹",
+      "name": "引灵中级灵丹",
       "type": "consumable",
       "effect_type": "companion_yinhun",
       "price": 0,
@@ -3885,12 +3885,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "玄界中加强引魂成功率的丹药。\n适用于主魂修为 7 级以下的中级灵兽。",
-      "flavor": "灵丹相助，引魂更稳"
+      "desc": "玄界中加强引灵成功率的丹药。\n适用于主魂修为 7 级以下的中级灵兽。",
+      "flavor": "灵丹相助，引灵更稳"
     },
     {
       "key": "yin_hun_lingdan_3",
-      "name": "引魂高级灵丹",
+      "name": "引灵高级灵丹",
       "type": "consumable",
       "effect_type": "companion_yinhun",
       "price": 0,
@@ -3900,8 +3900,8 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "玄界中加强引魂成功率的丹药。\n适用于主魂修为 10 级以下的高级灵兽。",
-      "flavor": "灵丹相助，引魂更稳"
+      "desc": "玄界中加强引灵成功率的丹药。\n适用于主魂修为 10 级以下的高级灵兽。",
+      "flavor": "灵丹相助，引灵更稳"
     },
     {
       "key": "guiyuan_dan_1",
@@ -3915,7 +3915,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "驭魂人用来归元灵兽的仙药：可将元魂转变为始魂，或将始魂属性重置（无法对劫魂使用）。\n适用于携带等级 20、35、50 的灵兽。",
+      "desc": "驭灵人用来归元灵兽的仙药：可将元魂转变为始魂，或将始魂属性重置（无法对劫魂使用）。\n适用于携带等级 20、35、50 的灵兽。",
       "flavor": "归元逆转，复始如初"
     },
     {
@@ -3930,7 +3930,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "驭魂人用来归元灵兽的仙药：可将元魂转变为始魂，或将始魂属性重置（无法对劫魂使用）。\n适用于携带等级 65、80 的灵兽。",
+      "desc": "驭灵人用来归元灵兽的仙药：可将元魂转变为始魂，或将始魂属性重置（无法对劫魂使用）。\n适用于携带等级 65、80 的灵兽。",
       "flavor": "归元逆转，复始如初"
     },
     {
@@ -3945,12 +3945,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "驭魂人用来归元灵兽的仙药：可将元魂转变为始魂，或将始魂属性重置（无法对劫魂使用）。\n适用于携带等级 95 以上 的灵兽。",
+      "desc": "驭灵人用来归元灵兽的仙药：可将元魂转变为始魂，或将始魂属性重置（无法对劫魂使用）。\n适用于携带等级 95 以上 的灵兽。",
       "flavor": "归元逆转，复始如初"
     },
     {
       "key": "mijian_51026",
-      "name": "《强效魂力》秘笈",
+      "name": "《强效灵力》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 0,
@@ -3960,12 +3960,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的物理攻击增加20%，法术攻击减少20%\n记载《强效魂力》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量法术攻击力\n转化为灵兽的物理攻击力\n（被动技能）",
+      "desc": "【效果】灵兽的物理攻击增加20%，法术攻击减少20%\n记载《强效灵力》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量法术攻击力\n转化为灵兽的物理攻击力\n（被动技能）",
       "flavor": ""
     },
     {
       "key": "mijian_51027",
-      "name": "《强效魂能》秘笈",
+      "name": "《强效灵能》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 0,
@@ -3975,12 +3975,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的法术攻击增加20%，物理攻击减少20%\n记载《强效魂能》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量物理攻击力\n转化为灵兽的法术攻击力\n（被动技能）",
+      "desc": "【效果】灵兽的法术攻击增加20%，物理攻击减少20%\n记载《强效灵能》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量物理攻击力\n转化为灵兽的法术攻击力\n（被动技能）",
       "flavor": ""
     },
     {
       "key": "mijian_51028",
-      "name": "《强效魂甲》秘笈",
+      "name": "《强效灵甲》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 0,
@@ -3990,7 +3990,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的物理防御增加30%，物理攻击和法术攻击减少30%\n记载《强效魂甲》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量物理攻击力\n及法术攻击力转化为灵兽的物理防御力\n（被动技能）",
+      "desc": "【效果】灵兽的物理防御增加30%，物理攻击和法术攻击减少30%\n记载《强效灵甲》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量物理攻击力\n及法术攻击力转化为灵兽的物理防御力\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4005,7 +4005,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的火系法术防御增加30%，冰系法术防御减少30%\n记载《强效抗火》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量冰法术防御力\n转化为灵兽的火法术防御力\n（被动技能）",
+      "desc": "【效果】灵兽的火系法术防御增加30%，冰系法术防御减少30%\n记载《强效抗火》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量冰法术防御力\n转化为灵兽的火法术防御力\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4020,7 +4020,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的冰系法术防御增加30%，火系法术防御减少30%\n记载《强效抗冰》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量火法术防御力\n转化为灵兽的冰法术防御力\n（被动技能）",
+      "desc": "【效果】灵兽的冰系法术防御增加30%，火系法术防御减少30%\n记载《强效抗冰》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量火法术防御力\n转化为灵兽的冰法术防御力\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4035,7 +4035,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的电系法术防御增加30%，暗系法术防御减少30%\n记载《强效抗电》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量暗法术防御力\n转化为灵兽的电法术防御力\n（被动技能）",
+      "desc": "【效果】灵兽的电系法术防御增加30%，暗系法术防御减少30%\n记载《强效抗电》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量暗法术防御力\n转化为灵兽的电法术防御力\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4050,12 +4050,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的暗系法术防御增加30%，电系法术防御减少30%\n记载《强效抗暗》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量电法术防御力\n转化为灵兽的暗法术防御力\n（被动技能）",
+      "desc": "【效果】灵兽的暗系法术防御增加30%，电系法术防御减少30%\n记载《强效抗暗》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量电法术防御力\n转化为灵兽的暗法术防御力\n（被动技能）",
       "flavor": ""
     },
     {
       "key": "mijian_51033",
-      "name": "《强效魂灵》秘笈",
+      "name": "《强效灵魄》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 0,
@@ -4065,7 +4065,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的生命值上限增加25%，命中率和回避率减少20%\n记载《强效魂灵》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量命中\n转化为灵兽的生命值上限\n（被动技能）",
+      "desc": "【效果】灵兽的生命值上限增加25%，命中率和回避率减少20%\n记载《强效灵魄》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量命中\n转化为灵兽的生命值上限\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4080,7 +4080,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的命中率和回避率增加10%，物理防御降低10%\n记载《迅捷》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分物理防御力\n转化为灵兽的命中和回避\n（被动技能）",
+      "desc": "【效果】灵兽的命中率和回避率增加10%，物理防御降低10%\n记载《迅捷》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分物理防御力\n转化为灵兽的命中和回避\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4095,7 +4095,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的命中率和回避率增加20%，物理防御降低20%\n记载《强效迅捷》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量物理防御力\n转化为灵兽的命中和回避\n（被动技能）",
+      "desc": "【效果】灵兽的命中率和回避率增加20%，物理防御降低20%\n记载《强效迅捷》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量物理防御力\n转化为灵兽的命中和回避\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4110,7 +4110,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的致命一击几率增加3%，同时生命值上限减少15%\n记载《致命》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分生命值上限\n转化为灵兽的致命一击的几率\n（被动技能）",
+      "desc": "【效果】灵兽的致命一击几率增加3%，同时生命值上限减少15%\n记载《致命》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分生命值上限\n转化为灵兽的致命一击的几率\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4125,7 +4125,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加灵兽的致命一击的几率6%，同时生命值上限减少30%\n记载《强效致命》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽大量生命值上限\n转化为灵兽的致命一击的几率\n（被动技能）",
+      "desc": "【效果】增加灵兽的致命一击的几率6%，同时生命值上限减少30%\n记载《强效致命》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽大量生命值上限\n转化为灵兽的致命一击的几率\n（被动技能）",
       "flavor": ""
     },
     {
@@ -4140,7 +4140,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的力量10%，状态存在3分钟\n记载《强效刚力》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭魂者的力量\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的力量10%，状态存在3分钟\n记载《强效刚力》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭灵者的力量\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4155,7 +4155,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的智力10%，状态存在3分钟\n记载《强效敏锐》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭魂者的智力\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的智力10%，状态存在3分钟\n记载《强效敏锐》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭灵者的智力\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4170,7 +4170,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的敏捷10%，状态存在3分钟\n记载《强效疾风》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭魂者的敏捷\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的敏捷10%，状态存在3分钟\n记载《强效疾风》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭灵者的敏捷\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4185,7 +4185,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的体质10%，状态存在3分钟\n记载《强效霸体》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭魂者的体质\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的体质10%，状态存在3分钟\n记载《强效霸体》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭灵者的体质\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4200,7 +4200,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的精神10%，状态存在3分钟\n记载《强效精力》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭魂者的精神\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的精神10%，状态存在3分钟\n记载《强效精力》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n大幅提升驭灵者的精神\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4215,7 +4215,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次物理属性的攻击，该次攻击增加1000物理攻击力\n记载《强效猛击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次物理属性的攻击\n造成大量伤害\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会发动一次物理属性的攻击，该次攻击增加1000物理攻击力\n记载《强效猛击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次物理属性的攻击\n造成大量伤害\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4230,7 +4230,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次火属性的攻击，该次攻击增加1000法术攻击力\n记载《强效炎击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次火属性的攻击\n造成大量伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会发动一次火属性的攻击，该次攻击增加1000法术攻击力\n记载《强效炎击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次火属性的攻击\n造成大量伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4245,7 +4245,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次冰属性的攻击，该次攻击增加1000法术攻击力\n记载《强效冰击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次冰属性的攻击\n造成大量伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会发动一次冰属性的攻击，该次攻击增加1000法术攻击力\n记载《强效冰击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次冰属性的攻击\n造成大量伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4260,7 +4260,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次电属性的攻击，该次攻击增加1000法术攻击力\n记载《强效雷击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次电属性的攻击\n造成大量伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会发动一次电属性的攻击，该次攻击增加1000法术攻击力\n记载《强效雷击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次电属性的攻击\n造成大量伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4275,7 +4275,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次暗属性的攻击，该次攻击增加1000法术攻击力\n记载《强效暗击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次暗属性的攻击\n造成大量伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会发动一次暗属性的攻击，该次攻击增加1000法术攻击力\n记载《强效暗击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次暗属性的攻击\n造成大量伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4290,7 +4290,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会有几率发动一次造成两次较多伤害的物理攻击，\n每次增加300物理攻击力\n记载《连击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率连续发动\n两次造成较多伤害的物理攻击\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会有几率发动一次造成两次较多伤害的物理攻击，\n每次增加300物理攻击力\n记载《连击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率连续发动\n两次造成较多伤害的物理攻击\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4305,7 +4305,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会有几率发动一次造成两次较多伤害的物理攻击，\n每次增加600物理攻击力\n记载《强效连击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率连续发动\n两次造成大量伤害的物理攻击\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会有几率发动一次造成两次较多伤害的物理攻击，\n每次增加600物理攻击力\n记载《强效连击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率连续发动\n两次造成大量伤害的物理攻击\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4320,7 +4320,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】反击造成物理攻击力伤害，每次增加400物理攻击力\n记载《反击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率对攻击它\n的目标进行反击，造成较多伤害\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】反击造成物理攻击力伤害，每次增加400物理攻击力\n记载《反击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率对攻击它\n的目标进行反击，造成较多伤害\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4335,7 +4335,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】反击造成物理攻击力伤害，每次增加800物理攻击力\n记载《强效反击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率对攻击它\n的目标进行反击，造成大量伤害\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】反击造成物理攻击力伤害，每次增加800物理攻击力\n记载《强效反击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率对攻击它\n的目标进行反击，造成大量伤害\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4350,7 +4350,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】将受到伤害的15%反弹给目标\n记载《震击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率将受到的\n较多伤害反弹给目标\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】将受到伤害的15%反弹给目标\n记载《震击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率将受到的\n较多伤害反弹给目标\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4365,12 +4365,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】将受到伤害的30%反弹给目标\n记载《强效震击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率将受到的\n大量伤害反弹给目标\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】将受到伤害的30%反弹给目标\n记载《强效震击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率将受到的\n大量伤害反弹给目标\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
       "key": "mijian_51066",
-      "name": "《噬魂》秘笈",
+      "name": "《噬灵》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 0,
@@ -4380,12 +4380,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】每次吸取攻击随机值减对方防御的3%为自己生命的增加\n记载《噬魂》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率在攻击时\n从目标身上吸取较多防御转换为自己的生命\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】每次吸取攻击随机值减对方防御的3%为自己生命的增加\n记载《噬灵》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率在攻击时\n从目标身上吸取较多防御转换为自己的生命\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
       "key": "mijian_51067",
-      "name": "《强效噬魂》秘笈",
+      "name": "《强效噬灵》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 0,
@@ -4395,7 +4395,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】每次吸取攻击随机值减对方防御的6%为自己生命的增加\n记载《强效噬魂》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率在攻击时\n从目标身上吸取大量防御转换为自己的生命\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】每次吸取攻击随机值减对方防御的6%为自己生命的增加\n记载《强效噬灵》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率在攻击时\n从目标身上吸取大量防御转换为自己的生命\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4410,7 +4410,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】每次减少自身法术攻击随机值减去对方法防的3%为目标的法力值减少量\n记载《破法》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率在攻击时\n减少目标较多法力值\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】每次减少自身法术攻击随机值减去对方法防的3%为目标的法力值减少量\n记载《破法》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率在攻击时\n减少目标较多法力值\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4425,7 +4425,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】每次减少自身法术攻击随机值减去对方法防的6%为目标的法力值减少量\n记载《强效破法》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率在攻击时\n减少目标大量法力值\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】每次减少自身法术攻击随机值减去对方法防的6%为目标的法力值减少量\n记载《强效破法》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率在攻击时\n减少目标大量法力值\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4440,7 +4440,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】5秒内将主人将受到伤害的10%吸收\n记载《卸力》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率吸收\n驭魂者所受的较多伤害\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】5秒内将主人将受到伤害的10%吸收\n记载《卸力》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率吸收\n驭灵者所受的较多伤害\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4455,7 +4455,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】5秒内将主人将受到伤害的20%吸收\n记载《强效卸力》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率吸收\n驭魂者所受的大量伤害\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】5秒内将主人将受到伤害的20%吸收\n记载《强效卸力》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率吸收\n驭灵者所受的大量伤害\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4470,7 +4470,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会有几率对主人释放一个将主人受到的致命伤害\n全额转给自己的状态，状态持续时间10秒。\n记载《忠诚》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率对驭魂者释放一个\n将驭魂者所受致命伤害完全转移给自己的状态\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会有几率对主人释放一个将主人受到的致命伤害\n全额转给自己的状态，状态持续时间10秒。\n记载《忠诚》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率对驭灵者释放一个\n将驭灵者所受致命伤害完全转移给自己的状态\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4485,7 +4485,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会有较高几率对主人释放一个将主人受到的致命伤害\n全额转给自己的状态，状态持续时间10秒。\n记载《强效忠诚》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有较高几率对驭魂者释放一个\n将驭魂者所受致命伤害完全转移给自己的状态\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会有较高几率对主人释放一个将主人受到的致命伤害\n全额转给自己的状态，状态持续时间10秒。\n记载《强效忠诚》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有较高几率对驭灵者释放一个\n将驭灵者所受致命伤害完全转移给自己的状态\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4500,7 +4500,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会有几率为主人抵销一个不良状态\n记载《护身》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有几率抵销\n驭魂者身上一个不良状态\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会有几率为主人抵销一个不良状态\n记载《护身》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有几率抵销\n驭灵者身上一个不良状态\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4515,7 +4515,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会有几率为主人抵销一个不良状态\n记载《强效护身》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽有较高几率抵销\n驭魂者身上一个不良状态\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】灵兽会有几率为主人抵销一个不良状态\n记载《强效护身》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽有较高几率抵销\n驭灵者身上一个不良状态\n谨慎性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4530,7 +4530,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减少目标物理攻击力的10%，状态持续60秒\n记载《残废》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标较多物理攻击力的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减少目标物理攻击力的10%，状态持续20秒\n记载《残废》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标较多物理攻击力的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4545,7 +4545,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减少目标物理攻击力的20%，状态持续60秒\n记载《强效残废》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标大量物理攻击力的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减少目标物理攻击力的20%，状态持续20秒\n记载《强效残废》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标大量物理攻击力的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4560,7 +4560,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减少目标法术攻击力的10%，状态持续60秒\n记载《虚灵》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标较多法术攻击力的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减少目标法术攻击力的10%，状态持续20秒\n记载《虚灵》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标较多法术攻击力的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4575,7 +4575,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减少目标法术攻击力的20%，状态持续60秒\n记载《强效虚灵》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标大量法术攻击力的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减少目标法术攻击力的20%，状态持续20秒\n记载《强效虚灵》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标大量法术攻击力的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4590,7 +4590,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减少目标物理防御力的10%，状态持续60秒\n记载《衰弱》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标较多物理防御力的状态\n勇敢性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减少目标物理防御力的10%，状态持续20秒\n记载《衰弱》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标较多物理防御力的状态\n勇敢性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4605,7 +4605,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减少目标物理防御力的20%，状态持续60秒\n记载《强效衰弱》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标大量物理防御力的状态\n勇敢性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减少目标物理防御力的20%，状态持续20秒\n记载《强效衰弱》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标大量物理防御力的状态\n勇敢性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4620,7 +4620,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减少目标法术防御力的10%，状态持续60秒\n记载《软弱》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标较多法术防御力的状态\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减少目标法术防御力的10%，状态持续20秒\n记载《软弱》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标较多法术防御力的状态\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4635,7 +4635,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减少目标法术防御力的20%，状态持续60秒\n记载《强效软弱》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标大量法术防御力的状态\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减少目标法术防御力的20%，状态持续20秒\n记载《强效软弱》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n降低目标大量法术防御力的状态\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4650,7 +4650,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】6秒内减少3000生命\n记载《喂毒》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n中毒的状态，减少目标较多生命\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】6秒内减少3000生命\n记载《喂毒》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n中毒的状态，减少目标较多生命\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4665,7 +4665,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】6秒内减少5000生命\n记载《强效喂毒》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n中毒的状态，减少目标大量生命\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】6秒内减少5000生命\n记载《强效喂毒》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n中毒的状态，减少目标大量生命\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4680,7 +4680,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减速至正常的60%，状态持续时间3秒\n记载《缚足》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n小幅降低移动速度的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减速至正常的60%，状态持续时间3秒\n记载《缚足》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n小幅降低移动速度的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4695,7 +4695,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】减速至正常的40%，状态持续时间3秒\n记载《强效缚足》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n大幅降低移动速度的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】减速至正常的40%，状态持续时间3秒\n记载《强效缚足》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对目标释放在一定时间内\n大幅降低移动速度的状态\n精明性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -4710,7 +4710,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成3次物理伤害，每次造成物理攻击力增加400的伤害，\n持续3秒，灵兽释放完后即可移动\n记载《血爪》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动物理群体攻击，造成较多伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成3次物理伤害，每次造成物理攻击力增加400的伤害，\n持续3秒，灵兽释放完后即可移动\n记载《血爪》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动物理群体攻击，造成较多伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4725,7 +4725,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成3次物理伤害，每次造成物理攻击力增加650的伤害，\n持续3秒，灵兽释放完后即可移动\n记载《强效血爪》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动物理群体攻击，造成大量伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成3次物理伤害，每次造成物理攻击力增加650的伤害，\n持续3秒，灵兽释放完后即可移动\n记载《强效血爪》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动物理群体攻击，造成大量伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4740,7 +4740,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成5次火属性伤害，每次造成法攻增加250的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《流星》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动火属性群体攻击，造成较多伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成5次火属性伤害，每次造成法攻增加250的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《流星》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动火属性群体攻击，造成较多伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4755,7 +4755,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成5次火属性伤害，每次造成法攻增加400的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《强效流星》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动火属性群体攻击，造成大量伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成5次火属性伤害，每次造成法攻增加400的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《强效流星》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动火属性群体攻击，造成大量伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4770,7 +4770,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成5次冰属性伤害，每次造成法攻增加250的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《冰霜》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动冰属性群体攻击，造成较多伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成5次冰属性伤害，每次造成法攻增加250的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《冰霜》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动冰属性群体攻击，造成较多伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4785,7 +4785,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成5次冰属性伤害，每次造成法攻增加400的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《强效冰霜》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动冰属性群体攻击，造成大量伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成5次冰属性伤害，每次造成法攻增加400的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《强效冰霜》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动冰属性群体攻击，造成大量伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4800,7 +4800,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成5次电属性伤害，每次造成法攻增加250的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《雷暴》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动电属性群体攻击，造成较多伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成5次电属性伤害，每次造成法攻增加250的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《雷暴》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动电属性群体攻击，造成较多伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4815,7 +4815,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成5次电属性伤害，每次造成法攻增加400的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《强效雷暴》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动电属性群体攻击，造成大量伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成5次电属性伤害，每次造成法攻增加400的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《强效雷暴》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动电属性群体攻击，造成大量伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4830,7 +4830,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成5次暗属性伤害，每次造成法攻增加250的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《夜幕》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动暗属性群体攻击，造成较多伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成5次暗属性伤害，每次造成法攻增加250的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《夜幕》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动暗属性群体攻击，造成较多伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4845,7 +4845,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定地区造成5次暗属性伤害，每次造成法攻增加400的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《强效夜幕》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动暗属性群体攻击，造成大量伤害\n（手动技能）",
+      "desc": "【效果】对指定地区造成5次暗属性伤害，每次造成法攻增加400的伤害，\n持续5秒，灵兽释放完后即可移动\n记载《强效夜幕》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动暗属性群体攻击，造成大量伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4860,7 +4860,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定区域造成毒伤害，造成法术攻击增加800的伤害，\n并且每个受到攻击的目标都会受到5*300的毒伤害，持续5秒\n记载《蛊毒》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动毒群体攻击，造成较多伤害\n（手动技能）",
+      "desc": "【效果】对指定区域造成毒伤害，造成法术攻击增加800的伤害，\n并且每个受到攻击的目标都会受到5*300的毒伤害，持续5秒\n记载《蛊毒》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动毒群体攻击，造成较多伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4875,7 +4875,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对指定区域造成毒伤害，造成法术攻击增加1600的伤害，\n并且每个受到攻击的目标都会受到6*400的毒伤害，持续6秒\n记载《强效蛊毒》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n发动毒群体攻击，造成大量伤害\n（手动技能）",
+      "desc": "【效果】对指定区域造成毒伤害，造成法术攻击增加1600的伤害，\n并且每个受到攻击的目标都会受到6*400的毒伤害，持续6秒\n记载《强效蛊毒》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n发动毒群体攻击，造成大量伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4890,7 +4890,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对选定的目标释放，目标与周边一定范围内的目标均被荆棘丛生固定3秒\n记载《禁锢》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n释放持续时间较短的群体荆棘术\n（手动技能）",
+      "desc": "【效果】对选定的目标释放，目标与周边一定范围内的目标均被荆棘束缚固定3秒\n记载《禁锢》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n释放持续时间较短的群体荆棘术\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4905,7 +4905,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】对选定的目标释放，目标与周边一定范围内的目标均被荆棘丛生固定6秒\n记载《强效禁锢》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定范围内\n释放持续时间较长的群体荆棘术\n（手动技能）",
+      "desc": "【效果】对选定的目标释放，目标与周边一定范围内的目标均被荆棘束缚固定6秒\n记载《强效禁锢》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定范围内\n释放持续时间较长的群体荆棘术\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4920,7 +4920,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】指定目标眩晕2秒\n记载《击昏》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定目标\n造成持续时间较短的眩晕\n（手动技能）",
+      "desc": "【效果】指定目标眩晕2秒\n记载《击昏》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定目标\n造成持续时间较短的眩晕\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4935,7 +4935,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】指定目标眩晕4秒\n记载《强效击昏》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对指定目标\n造成持续时间较长的眩晕\n（手动技能）",
+      "desc": "【效果】指定目标眩晕4秒\n记载《强效击昏》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对指定目标\n造成持续时间较长的眩晕\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4950,7 +4950,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】激活后为宠物添加一个如果体力扣到0\n就自动恢复20%生命的状态，状态持续时间20分钟\n记载《复活》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽释放在一定时间内\n体力为零时自动恢复较多生命的状态\n（手动技能）",
+      "desc": "【效果】激活后为宠物添加一个如果体力扣到0\n就自动恢复20%生命的状态，状态持续时间20分钟\n记载《复活》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽释放在一定时间内\n体力为零时自动恢复较多生命的状态\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4965,7 +4965,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】激活后为宠物添加一个如果体力扣到0\n就自动恢复50%生命的状态，状态持续时间20分钟\n记载《强效复活》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽释放在一定时间内\n体力为零时自动恢复大量生命的状态\n（手动技能）",
+      "desc": "【效果】激活后为宠物添加一个如果体力扣到0\n就自动恢复50%生命的状态，状态持续时间20分钟\n记载《强效复活》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽释放在一定时间内\n体力为零时自动恢复大量生命的状态\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4980,7 +4980,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】为灵兽恢复生命值的50%\n记载《治愈》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可恢复灵兽大量生命值\n（手动技能）",
+      "desc": "【效果】为灵兽恢复生命值的50%\n记载《治愈》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可恢复灵兽大量生命值\n（手动技能）",
       "flavor": ""
     },
     {
@@ -4995,7 +4995,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】为灵兽恢复生命值的100%\n记载《强效治愈》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可恢复灵兽全部生命值\n（手动技能）",
+      "desc": "【效果】为灵兽恢复生命值的100%\n记载《强效治愈》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可恢复灵兽全部生命值\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5010,7 +5010,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】指定范围内目标均恢复约3000血\n记载《回天》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可恢复治疗指定范围内\n的己方目标较多生命值\n（手动技能）",
+      "desc": "【效果】指定范围内目标均恢复约3000血\n记载《回天》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可恢复治疗指定范围内\n的己方目标较多生命值\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5025,7 +5025,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】指定范围内目标均恢复约5000血\n记载《强效回天》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可恢复治疗指定范围内\n的己方目标大量生命值\n（手动技能）",
+      "desc": "【效果】指定范围内目标均恢复约5000血\n记载《强效回天》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可恢复治疗指定范围内\n的己方目标大量生命值\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5040,7 +5040,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】解除主人的眩晕状态\n记载《唤醒》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽解除驭魂者的眩晕状态\n（手动技能）",
+      "desc": "【效果】解除主人的眩晕状态\n记载《唤醒》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽解除驭灵者的眩晕状态\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5055,7 +5055,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】解除主人的冰冻状态\n记载《消解》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽解除驭魂者的冰冻状态\n（手动技能）",
+      "desc": "【效果】解除主人的冰冻状态\n记载《消解》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽解除驭灵者的冰冻状态\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5070,7 +5070,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽当前生命值减少生命上限的50%，\n主人当前生命值增加灵兽损失生命值的70%\n记载《融血》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽当前生命值减少上限的50%\n主人当前生命值增加灵兽损失生命值的70%\n（手动技能）",
+      "desc": "【效果】灵兽当前生命值减少生命上限的50%，\n主人当前生命值增加灵兽损失生命值的70%\n记载《融血》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽当前生命值减少上限的50%\n主人当前生命值增加灵兽损失生命值的70%\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5085,7 +5085,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽当前生命值减少生命上限的50%，\n主人当前生命值增加灵兽损失生命值的100%\n记载《强效融血》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽当前生命值减少上限的50%\n主人当前生命值增加灵兽损失生命值的100%\n（手动技能）",
+      "desc": "【效果】灵兽当前生命值减少生命上限的50%，\n主人当前生命值增加灵兽损失生命值的100%\n记载《强效融血》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽当前生命值减少上限的50%\n主人当前生命值增加灵兽损失生命值的100%\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5100,7 +5100,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽当前生命值减少生命上限的50%，\n主人当前法力值增加灵兽损失生命值的40%\n记载《融魔》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽当前生命值减少上限的50%\n主人当前法力值增加灵兽损失生命值的40%\n（手动技能）",
+      "desc": "【效果】灵兽当前生命值减少生命上限的50%，\n主人当前法力值增加灵兽损失生命值的40%\n记载《融魔》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽当前生命值减少上限的50%\n主人当前法力值增加灵兽损失生命值的40%\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5115,7 +5115,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽当前生命值减少生命上限的50%，\n主人当前法力值增加灵兽损失生命值的100%\n记载《强效融魔》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽当前生命值减少上限的50%\n主人当前法力值增加灵兽损失生命值的100%\n（手动技能）",
+      "desc": "【效果】灵兽当前生命值减少生命上限的50%，\n主人当前法力值增加灵兽损失生命值的100%\n记载《强效融魔》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽当前生命值减少上限的50%\n主人当前法力值增加灵兽损失生命值的100%\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5130,7 +5130,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】激活后灵兽将分担主人受到伤害的30%，持续12秒\n记载《庇护》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽分担驭魂者受到较多伤害\n（手动技能）",
+      "desc": "【效果】激活后灵兽将分担主人受到伤害的30%，持续12秒\n记载《庇护》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽分担驭灵者受到较多伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5145,7 +5145,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】激活后灵兽将分担主人受到伤害的50%，持续12秒\n记载《强效庇护》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽分担驭魂者受到大量伤害\n（手动技能）",
+      "desc": "【效果】激活后灵兽将分担主人受到伤害的50%，持续12秒\n记载《强效庇护》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽分担驭灵者受到大量伤害\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5160,7 +5160,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】激活后灵兽和主人均进入无敌状态，灵兽无法攻击，\n持续10秒。任何自主移动都将造成状态的消失\n记载《天佑》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽和驭魂者在当前位置\n进入持续时间较短的无敌状态\n（手动技能）",
+      "desc": "【效果】激活后灵兽和主人均进入无敌状态，灵兽无法攻击，\n持续3秒。任何自主移动都将造成状态的消失\n记载《天佑》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽和驭灵者在当前位置\n进入持续时间较短的无敌状态\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5175,7 +5175,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】激活后灵兽和主人均进入无敌状态，灵兽无法攻击，\n持续15秒。任何自主移动都将造成状态的消失\n记载《强效天佑》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽和驭魂者在当前位置\n进入持续时间较长的无敌状态\n（手动技能）",
+      "desc": "【效果】激活后灵兽和主人均进入无敌状态，灵兽无法攻击，\n持续15秒。任何自主移动都将造成状态的消失\n记载《强效天佑》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽和驭灵者在当前位置\n进入持续时间较长的无敌状态\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5190,7 +5190,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的物理及法术攻击力上升10%，防御力下降20%。持续15秒\n记载《嗜血》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的较多防御力\n转化为灵兽的物理及法术攻击力\n（手动技能）",
+      "desc": "【效果】灵兽的物理及法术攻击力上升10%，防御力下降20%。持续15秒\n记载《嗜血》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的较多防御力\n转化为灵兽的物理及法术攻击力\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5205,12 +5205,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的物理及法术攻击力上升20%，防御力下降40%。持续15秒\n记载《强效嗜血》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的大量防御力\n转化为灵兽的物理及法术攻击力\n（手动技能）",
+      "desc": "【效果】灵兽的物理及法术攻击力上升20%，防御力下降40%。持续15秒\n记载《强效嗜血》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的大量防御力\n转化为灵兽的物理及法术攻击力\n（手动技能）",
       "flavor": ""
     },
     {
       "key": "mijian_51122",
-      "name": "《魂力》秘笈",
+      "name": "《灵力》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 100000,
@@ -5220,12 +5220,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的物理攻击力增加10%，法术攻击力减少10%\n记载《魂力》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分法术攻击力\n转化为灵兽的物理攻击力\n（被动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽的物理攻击力增加10%，法术攻击力减少10%\n记载《灵力》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分法术攻击力\n转化为灵兽的物理攻击力\n（被动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
       "key": "mijian_51123",
-      "name": "《魂能》秘笈",
+      "name": "《灵能》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 100000,
@@ -5235,12 +5235,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的法术攻击增加10%，物理攻击减少10%\n记载《魂能》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分物理攻击力\n转化为灵兽的法术攻击力\n（被动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽的法术攻击增加10%，物理攻击减少10%\n记载《灵能》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分物理攻击力\n转化为灵兽的法术攻击力\n（被动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
       "key": "mijian_51124",
-      "name": "《魂甲》秘笈",
+      "name": "《灵甲》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 100000,
@@ -5250,7 +5250,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的物理防御增加15%，物理攻击和法术攻击减少15%\n记载《魂甲》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分物理攻击力\n及法术攻击力转化为灵兽的物理防御力\n（被动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽的物理防御增加15%，物理攻击和法术攻击减少15%\n记载《灵甲》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分物理攻击力\n及法术攻击力转化为灵兽的物理防御力\n（被动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5265,7 +5265,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的火系法术防御增加15%，冰系法术防御减少15%\n记载《抗火》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分冰法术防御力\n转化为灵兽的火法术防御力\n（被动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽的火系法术防御增加15%，冰系法术防御减少15%\n记载《抗火》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分冰法术防御力\n转化为灵兽的火法术防御力\n（被动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5280,7 +5280,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的冰系法术防御增加15%，火系法术防御减少15%\n记载《抗冰》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分火法术防御力\n转化为灵兽的冰法术防御力\n（被动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽的冰系法术防御增加15%，火系法术防御减少15%\n记载《抗冰》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分火法术防御力\n转化为灵兽的冰法术防御力\n（被动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5295,7 +5295,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的电系法术防御增加15%，暗系法术防御减少15%\n记载《抗电》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分暗法术防御力\n转化为灵兽的电法术防御力\n（被动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽的电系法术防御增加15%，暗系法术防御减少15%\n记载《抗电》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分暗法术防御力\n转化为灵兽的电法术防御力\n（被动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5310,12 +5310,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的暗系法术防御增加15%，电系法术防御减少15%\n记载《抗暗》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分电法术防御力\n转化为灵兽的暗法术防御力\n（被动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽的暗系法术防御增加15%，电系法术防御减少15%\n记载《抗暗》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分电法术防御力\n转化为灵兽的暗法术防御力\n（被动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
       "key": "mijian_51129",
-      "name": "《魂灵》秘笈",
+      "name": "《灵魄》秘笈",
       "type": "consumable",
       "effect_type": "companion_book",
       "price": 100000,
@@ -5325,7 +5325,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽的生命值上限增加15%，命中率和回避率减少10%\n记载《魂灵》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可将灵兽的部分命中\n转化为灵兽的生命值上限\n（被动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽的生命值上限增加15%，命中率和回避率减少10%\n记载《灵魄》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可将灵兽的部分命中\n转化为灵兽的生命值上限\n（被动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5340,7 +5340,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的力量5%，状态存在3分钟\n记载《刚力》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭魂者的力量\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的力量5%，状态存在3分钟\n记载《刚力》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭灵者的力量\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -5355,7 +5355,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的智力5%，状态存在3分钟\n记载《敏锐》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭魂者的智力\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的智力5%，状态存在3分钟\n记载《敏锐》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭灵者的智力\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -5370,7 +5370,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的敏捷5%，状态存在3分钟\n记载《疾风》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭魂者的敏捷\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的敏捷5%，状态存在3分钟\n记载《疾风》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭灵者的敏捷\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -5385,7 +5385,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的体质5%，状态存在3分钟\n记载《霸体》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭魂者的体质\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的体质5%，状态存在3分钟\n记载《霸体》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭灵者的体质\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -5400,7 +5400,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】增加主人的精神5%，状态存在3分钟\n记载《精力》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭魂者的精神\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
+      "desc": "【效果】增加主人的精神5%，状态存在3分钟\n记载《精力》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽在一定时间内\n小幅提升驭灵者的精神\n忠诚性格的灵兽释放该技能的几率更高\n（主动技能）",
       "flavor": ""
     },
     {
@@ -5415,7 +5415,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次物理属性的攻击，该次攻击增加500物理攻击力\n记载《猛击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次物理属性的攻击\n造成较多伤害\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽会发动一次物理属性的攻击，该次攻击增加500物理攻击力\n记载《猛击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次物理属性的攻击\n造成较多伤害\n无谋性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5430,7 +5430,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次火属性的攻击，该次攻击增加500法术攻击力\n记载《炎击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次火属性的攻击\n造成较多伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽会发动一次火属性的攻击，该次攻击增加500法术攻击力\n记载《炎击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次火属性的攻击\n造成较多伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5445,7 +5445,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次冰属性的攻击，该次攻击增加500法术攻击力\n记载《冰击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次冰属性的攻击\n造成较多伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽会发动一次冰属性的攻击，该次攻击增加500法术攻击力\n记载《冰击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次冰属性的攻击\n造成较多伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5460,7 +5460,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次电属性的攻击，该次攻击增加500法术攻击力\n记载《雷击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次电属性的攻击\n造成较多伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽会发动一次电属性的攻击，该次攻击增加500法术攻击力\n记载《雷击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次电属性的攻击\n造成较多伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5475,7 +5475,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】灵兽会发动一次暗属性的攻击，该次攻击增加500法术攻击力\n记载《暗击》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽发动一次暗属性的攻击\n造成较多伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
+      "desc": "【效果】灵兽会发动一次暗属性的攻击，该次攻击增加500法术攻击力\n记载《暗击》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽发动一次暗属性的攻击\n造成较多伤害\n胆小性格的灵兽释放该技能的几率更高\n（主动技能）\n灵兽书商处有售。",
       "flavor": ""
     },
     {
@@ -5490,7 +5490,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "【效果】吸引附近多个敌人的注意力，使他们强制攻击\n灵兽6秒；并产生大量的仇恨值，大约能使同\n级的敌人持续攻击灵兽15秒\n记载《怒嚎》修炼之法的秘笈，可令灵兽领悟该魂技（同组已有魂技会被顶替）。\n该技能可使灵兽对附近多个敌人造成大量的仇恨\n吸引周围的怪物攻击自己\n（手动技能）",
+      "desc": "【效果】吸引附近多个敌人的注意力，使他们强制攻击\n灵兽6秒；并产生大量的仇恨值，大约能使同\n级的敌人持续攻击灵兽15秒\n记载《怒嚎》修炼之法的秘笈，可令灵兽领悟该灵技（同组已有灵技会被顶替）。\n该技能可使灵兽对附近多个敌人造成大量的仇恨\n吸引周围的怪物攻击自己\n（手动技能）",
       "flavor": ""
     },
     {
@@ -5505,7 +5505,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七星岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
+      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七曜岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
       "flavor": "天枢星珠，镇魔石之钥"
     },
     {
@@ -5520,7 +5520,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七星岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
+      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七曜岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
       "flavor": "天璇星珠，镇魔石之钥"
     },
     {
@@ -5535,7 +5535,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七星岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
+      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七曜岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
       "flavor": "天玑星珠，镇魔石之钥"
     },
     {
@@ -5550,7 +5550,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七星岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
+      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七曜岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
       "flavor": "天权星珠，镇魔石之钥"
     },
     {
@@ -5565,7 +5565,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七星岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
+      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七曜岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
       "flavor": "玉衡星珠，镇魔石之钥"
     },
     {
@@ -5580,7 +5580,7 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七星岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
+      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七曜岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
       "flavor": "开阳星珠，镇魔石之钥"
     },
     {
@@ -5595,12 +5595,12 @@
       "level_required": 0,
       "tier": 0,
       "icon": "",
-      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七星岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
+      "desc": "化解道君封魔力的宝珠，可以用来释放被封印在镇魔石中魔将的分身。\n七曜岭镇魔石阵前使用（手动交互，挂机不可用）。珍稀无比。",
       "flavor": "摇光星珠，镇魔石之钥"
     },
     {
       "key": "boss_zhanhunzhu_tianzun",
-      "name": "灵兽珠-天尊",
+      "name": "灵兽珠-霄尊",
       "type": "consumable",
       "effect_type": "companion_boss_bead",
       "price": 0,
@@ -5610,12 +5610,12 @@
       "level_required": 109,
       "tier": 0,
       "icon": "",
-      "desc": "玄界封印灵兽的宝珠：使用后获得一只「天尊」灵兽（BOSS 外形）。\n由七星岭 BOSS 击败后掉落。",
-      "flavor": "败天尊分身，收其灵兽"
+      "desc": "玄界封印灵兽的宝珠：使用后获得一只「霄尊」灵兽（BOSS 外形）。\n由七曜岭 BOSS 击败后掉落。",
+      "flavor": "败霄尊分身，收其灵兽"
     },
     {
       "key": "boss_zhanhunzhu_yumo",
-      "name": "灵兽珠-狱魔",
+      "name": "灵兽珠-幽狱魔",
       "type": "consumable",
       "effect_type": "companion_boss_bead",
       "price": 0,
@@ -5625,12 +5625,12 @@
       "level_required": 109,
       "tier": 0,
       "icon": "",
-      "desc": "玄界封印灵兽的宝珠：使用后获得一只「狱魔」灵兽（BOSS 外形）。\n由七星岭 BOSS 击败后掉落。",
-      "flavor": "败狱魔分身，收其灵兽"
+      "desc": "玄界封印灵兽的宝珠：使用后获得一只「幽狱魔」灵兽（BOSS 外形）。\n由七曜岭 BOSS 击败后掉落。",
+      "flavor": "败幽狱魔分身，收其灵兽"
     },
     {
       "key": "boss_zhanhunzhu_yaojia",
-      "name": "灵兽珠-耀嘉",
+      "name": "灵兽珠-耀曦",
       "type": "consumable",
       "effect_type": "companion_boss_bead",
       "price": 0,
@@ -5640,12 +5640,12 @@
       "level_required": 109,
       "tier": 0,
       "icon": "",
-      "desc": "玄界封印灵兽的宝珠：使用后获得一只「耀嘉」灵兽（BOSS 外形）。\n由七星岭 BOSS 击败后掉落。",
-      "flavor": "败耀嘉分身，收其灵兽"
+      "desc": "玄界封印灵兽的宝珠：使用后获得一只「耀曦」灵兽（BOSS 外形）。\n由七曜岭 BOSS 击败后掉落。",
+      "flavor": "败耀曦分身，收其灵兽"
     },
     {
       "key": "boss_zhanhunzhu_qixingmojun",
-      "name": "灵兽珠-七星魔君",
+      "name": "灵兽珠-七曜魔君",
       "type": "consumable",
       "effect_type": "companion_boss_bead",
       "price": 0,
@@ -5655,8 +5655,8 @@
       "level_required": 109,
       "tier": 0,
       "icon": "",
-      "desc": "玄界封印灵兽的宝珠：使用后获得一只「七星魔君」灵兽（BOSS 外形）。\n由七星岭 BOSS 击败后掉落。",
-      "flavor": "败七星魔君分身，收其灵兽"
+      "desc": "玄界封印灵兽的宝珠：使用后获得一只「七曜魔君」灵兽（BOSS 外形）。\n由七曜岭 BOSS 击败后掉落。",
+      "flavor": "败七曜魔君分身，收其灵兽"
     },
     {
       "key": "yanshou_san",
