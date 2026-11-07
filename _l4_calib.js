@@ -108,9 +108,7 @@ function sim(mk, bossSpecKey, add, trialCombatHp, defScale, atkScale) {
     const targetCombatHp = Math.round(dps * TARGET_ROUNDS);
     const targetDataHp = Math.round(targetCombatHp / COMBAT_HP_SCALE);
     out[monsterKey] = { hp: targetDataHp, def: [Math.round(ORIG[monsterKey].min_phys_def * defScale), Math.round(ORIG[monsterKey].max_phys_def * defScale)] };
-    console.log('%-10s(%s) 入口Lv%-4s DPS≈%d/轮 → 建议 data hp=%d  def=%d~%d',
-      spec.name, monsterKey, (map.enter_level_min || 100) + 5, Math.round(dps), targetDataHp,
-      out[monsterKey].def[0], out[monsterKey].def[1]);
+    console.log(`${spec.name}(${monsterKey}) 入口Lv${(map.enter_level_min || 100) + 5} DPS≈${Math.round(dps)}/轮 → 建议 data hp=${targetDataHp}  def=${out[monsterKey].def[0]}~${out[monsterKey].def[1]}`);
   }
   console.log('SUGGEST=' + JSON.stringify(out));
   process.exit(0);
