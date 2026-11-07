@@ -32,7 +32,7 @@ export const BAG_SUBS=[
   {key:'eq_jewelry',label:'装备·首饰'},
   {key:'potion',label:'药品'},
   {key:'box',   label:'宝箱·钥匙'},
-  {key:'pill',  label:'百炼丹'},
+  {key:'pill',  label:'淬锋丹'},
   {key:'shenmo',label:'神魔道具'},
   {key:'exp',   label:'经验·辅助'},
   {key:'gem',   label:'宝石·矿石'},
@@ -103,7 +103,7 @@ export function subTabs(tab){
     if(!joined) return [{key:'level',label:'修验·变身'}];
     const out=TAB_SUBS.shenmo.slice(0,1);          // 「修验·变身」
     for(const t of smNodeTiers()) out.push({key:'tree_'+t, label:(smTierDef(t)||{}).name || ('第'+t+'档')});
-    out.push({key:'xianzhijing', label:'仙之境'});
+    out.push({key:'xianzhijing', label:'栖霞秘境'});
     out.push({key:'xr_task', label:'修验任务'});
     out.push({key:'xr_str', label:'强化'});
     out.push({key:'xr_trial', label:'导师考验'});
@@ -220,7 +220,7 @@ export function renderBag(sub){
   if(eqs.length){
     html+='<h3 class="sec">装备（'+eqs.length+' 件 · 词条各不相同，逐件显示）</h3>';
     for(const it of eqs){
-      const lt = it.bailian>0 ? ('百炼+'+it.bailian) : ('精炼+'+it.refine);
+      const lt = it.bailian>0 ? ('淬锋+'+it.bailian) : ('精炼+'+it.refine);
       const twoH = isTwoHand(it) ? ' <span class="pill">双手</span>' : '';
       html+='<div class="item q-'+it.quality+'" data-item="'+it.uid+'">'
         +'['+QNAME[it.quality]+'] '+SLOT_NAME[it.slot]+'·'+it.name+' <span class="pill">'+lt+'</span>'+twoH

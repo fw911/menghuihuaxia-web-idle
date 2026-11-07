@@ -204,7 +204,7 @@ export function bestZone(){
 export function autoZone(force){
   const A=state.auto, p=state.player;
   if(!A.zone || !p) return;
-  if(isXianzhiNow()) return;   // 仙之境为手动静修，autoZone 不强行换走
+  if(isXianzhiNow()) return;   // 栖霞秘境为手动静修，autoZone 不强行换走
   const b=bestZone(); if(!b) return;
   const cur=state.zone;
   const same = cur && cur.mapKey===b.mapKey && cur.zoneKey===b.zoneKey && cur.isBoss===b.isBoss;
@@ -243,8 +243,8 @@ export function allRegularExplored(map){ return campaignRegularZones(map).every(
 export function campaignTargetMap(){
   const p=state.player;
   for(const map of (DATA.maps.maps||[])){
-    if(isXianzhiNow() && map.key!=='xianzhijing') continue;   // 仙之境静修时不推进
-    if(campaignRegularZones(map).length===0) continue;          // 无练级区的图（如仙之境）视为已完成
+    if(isXianzhiNow() && map.key!=='xianzhijing') continue;   // 栖霞秘境静修时不推进
+    if(campaignRegularZones(map).length===0) continue;          // 无练级区的图（如栖霞秘境）视为已完成
     if(!allRegularExplored(map)) return map;                    // 第一张未完成的 → 当前目标
   }
   return null;
@@ -268,7 +268,7 @@ export function campaignDungeonTarget(map){
   }
   return anyLeft? {wait:true} : null;
 }
-// 战役主调度（由 loop() 在 idle 时定期调用）；combat/仙之境时让出
+// 战役主调度（由 loop() 在 idle 时定期调用）；combat/栖霞秘境时让出
 export function maybeCampaign(){
   if(!state.auto.campaign || !state.player) return;
   if(isXianzhiNow()) return;

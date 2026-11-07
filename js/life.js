@@ -63,9 +63,9 @@ export function courierTravel(toMap){
   travelTo(toMap);
   return {ok:true, msg:'支付 '+fmtNum(r.price||0)+' 金币，信使送你抵达 '+(instMapName(toMap))};
 }
-// 配置外补充物品名（炼化瓶/晶石/太古残片等）
-export const EXTRA_ITEM_NAME = {lianhua_ping:'炼化瓶', yumo_crystal:'镇魔晶石', taigu_canpian:'太古残片',
-  bailian_shi:'百炼石', shengzhe_fufu:'英灵护符', guangming_fufu:'光明护符', siwang_fufu:'死亡护符'};
+// 配置外补充物品名（蕴元瓶/晶石/太古残片等）
+export const EXTRA_ITEM_NAME = {lianhua_ping:'蕴元瓶', yumo_crystal:'镇魔晶石', taigu_canpian:'太古残片',
+  bailian_shi:'淬锋石', shengzhe_fufu:'英灵护符', guangming_fufu:'光明护符', siwang_fufu:'死亡护符'};
 export function itemCount(key){
   const p=state.player; let n=0;
   for(const b of p.bag) if(b.type==='consumable' && b.key===key) n += (b.count||1);
@@ -397,7 +397,7 @@ export function doGemRefine(series, grade){
   // L14：0.94 gem_recipes[].src_count 配置驱动（官方全表 4，缺省兜底 4）
   const need = r.src_count || 4;
   if(gemCount(series, grade) < need){ log('<span class="dmg">需要 '+r.src_name+' x'+need+'</span>'); return; }
-  if(!useMaterial(r.bottle_key||'lianhua_ping', 1)){ log('<span class="dmg">需要炼化瓶 x1</span>'); return; }
+  if(!useMaterial(r.bottle_key||'lianhua_ping', 1)){ log('<span class="dmg">需要蕴元瓶 x1</span>'); return; }
   gemConsume(series, grade, need);
   addToBag({type:'gem', series:series, grade:r.dst_grade, count:1});
   log('<span class="loot">炼制成功：'+r.dst_name+' x1</span>');
@@ -413,7 +413,7 @@ export function doPotionRefine(recipeKey){
   if(c.hp_potion && itemCount(c.hp_potion.key) < c.hp_potion.count){ log('<span class="dmg">需要 '+itemName(c.hp_potion.key)+' x'+c.hp_potion.count+'</span>'); return; }
   if(c.mp_potion && itemCount(c.mp_potion.key) < c.mp_potion.count){ log('<span class="dmg">需要 '+itemName(c.mp_potion.key)+' x'+c.mp_potion.count+'</span>'); return; }
   if(c.crystal && p.crystal < c.crystal.count){ log('<span class="dmg">需要神秘结晶 x'+c.crystal.count+'</span>'); return; }
-  if(c.bottle && !useMaterial(c.bottle.key, c.bottle.count||1)){ log('<span class="dmg">需要炼化瓶 x'+(c.bottle.count||1)+'</span>'); return; }
+  if(c.bottle && !useMaterial(c.bottle.key, c.bottle.count||1)){ log('<span class="dmg">需要蕴元瓶 x'+(c.bottle.count||1)+'</span>'); return; }
   if(c.hp_potion) itemConsume(c.hp_potion.key, c.hp_potion.count);
   if(c.mp_potion) itemConsume(c.mp_potion.key, c.mp_potion.count);
   if(c.crystal) useCrystal(c.crystal.count);
@@ -454,35 +454,35 @@ export function doForge(){
   checkAchievements();
   refreshStats(); renderHeader(); renderTab();
 }
-// ---- ② 百炼丹炼制链 ----
+// ---- ② 淬锋丹炼制链 ----
 export function doBailianCraft(L){
   const p=state.player;
   const r=DATA.bailian_recipes['level_'+L]; if(!r) return;
-  if(!useMaterial('lianhua_ping',1)){ log('<span class="dmg">需要 炼化瓶 x1</span>'); return; }
+  if(!useMaterial('lianhua_ping',1)){ log('<span class="dmg">需要 蕴元瓶 x1</span>'); return; }
   let shi=0; for(const m of r.materials) if(m.key==='bailian_shi') shi+=m.count;
-  if(!useMaterial('bailian_shi',shi)){ log('<span class="dmg">需要 百炼石 x'+shi+'</span>'); return; }
+  if(!useMaterial('bailian_shi',shi)){ log('<span class="dmg">需要 淬锋石 x'+shi+'</span>'); return; }
   let cry=0; for(const m of r.materials) if(m.kind==='crystal') cry+=m.count;
   if(cry && !useCrystal(cry)){ log('<span class="dmg">需要 晶石(神秘结晶) x'+cry+'</span>'); return; }
   const lowL=L-1;
   if(lowL>=1){
     const have=p.bag.filter(b=>b.type==='consumable'&&b.key==='bailian_dan_'+lowL);
-    if(have.length<2){ log('<span class="dmg">需要 百炼丹·'+cn(lowL)+' x2</span>'); return; }
+    if(have.length<2){ log('<span class="dmg">需要 淬锋丹·'+cn(lowL)+' x2</span>'); return; }
     for(let i=0;i<2;i++){ const d=have[i]; d.count--; if(d.count<=0) p.bag=p.bag.filter(b=>b.uid!==d.uid); }
   }
   addToBag({uid:uid(), type:'consumable', key:r.result_item, count:1});
   log('<span class="loot">炼制成功：'+r.result_name+'</span>');
   renderHeader(); renderTab();
 }
-// ---- ③ 百炼装备升阶 ----
+// ---- ③ 淬锋装备升阶 ----
 export function doBailianUse(){
   const p=state.player;
-  const u=LS.bailEquip; if(!u){ log('<span class="dmg">请先选择要百炼的装备</span>'); return; }
+  const u=LS.bailEquip; if(!u){ log('<span class="dmg">请先选择要淬锋的装备</span>'); return; }
   const it=findItem(u); if(!it||it.type!=='equip'){ log('<span class="dmg">装备不存在</span>'); return; }
   const cap=DATA.craft.craft_upgrade_max_tier;
-  if(it.bailian>=cap){ log('<span class="dmg">'+it.name+' 已达百炼上限 +'+cap+'</span>'); return; }
+  if(it.bailian>=cap){ log('<span class="dmg">'+it.name+' 已达淬锋上限 +'+cap+'</span>'); return; }
   const needL=it.bailian+1;
   const have=p.bag.filter(b=>b.type==='consumable'&&b.key==='bailian_dan_'+needL);
-  if(!have.length){ log('<span class="dmg">需要 百炼丹·'+cn(needL)+'（背包不足）</span>'); return; }
+  if(!have.length){ log('<span class="dmg">需要 淬锋丹·'+cn(needL)+'（背包不足）</span>'); return; }
   const dan=have[0]; dan.count--; if(dan.count<=0) p.bag=p.bag.filter(b=>b.uid!==dan.uid);
   it.bailian=needL;
   for(const s in it.stats) it.stats[s]=Math.round(it.stats[s]*1.15);

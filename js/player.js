@@ -1,4 +1,4 @@
-/* ===== 模块 player.js —— 经验/属性/技能学习/武魂系统/神魔修验基础/仙之境 =====
+/* ===== 模块 player.js —— 经验/属性/技能学习/武魂系统/神魔修验基础/栖霞秘境 =====
  * 来源：game.js L430-927（2026-10-21 模块化切分，内容逐字节保留）
  * 导出 59 个顶层名；import 由 AST 跨模块引用自动计算。
  */
@@ -628,7 +628,7 @@ export function smGain(charExp){
   }
 }
 
-// 仙之境（shenmo.json#xianzhijing）：安全区被动修验，按滞留 tick 结算，每日上限 60 分钟，24:00 重置
+// 栖霞秘境（shenmo.json#xianzhijing）：安全区被动修验，按滞留 tick 结算，每日上限 60 分钟，24:00 重置
 export const XIANZHI_TICKS_PER_MIN = 86;   // loop 700ms → 60000/700≈85.7，取整
 export function curMapKey(){ return (state.zone && state.zone.mapKey) || (state.player && state.player.map) || null; }
 export function xzCfg(){ return sm().xianzhijing || {}; }
@@ -658,7 +658,7 @@ export function smXianzhiTick(){
   while(s.level<smMaxLevel() && s.exp>=smExpNeed(s.level)){ s.exp-=smExpNeed(s.level); s.level++; up=true; }
   if(up){
     s.points=(s.points||0)+(smTier(s.spent||0).points_per_level||1);
-    eventLog('【仙之境】修验等级提升至 <span class="lv">'+s.level+'</span>，称号：'+smTitle(s.faction,s.level));
+    eventLog('【栖霞秘境】修验等级提升至 <span class="lv">'+s.level+'</span>，称号：'+smTitle(s.faction,s.level));
   }
 }
 // 直接结算 minutes 分钟（测试/补领用，最多到当日上限）

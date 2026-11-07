@@ -550,13 +550,13 @@ export function renderWuhun(sub){
   }
   return html;
 }
-// 仙之境子页：神魔专属安全区静修（无战斗，按滞留 tick 结算修验值）
+// 栖霞秘境子页：神魔专属安全区静修（无战斗，按滞留 tick 结算修验值）
 export function renderXianzhi(){
   const p=state.player, s=p.shenmo;
-  if(!s||!s.faction) return '<div class="muted">需先入神魔道才能进入仙之境。</div>';
+  if(!s||!s.faction) return '<div class="muted">需先入神魔道才能进入栖霞秘境。</div>';
   const rate=xzRatePerMin(s.level), cap=xzCapMin(), used=(s.xz_min||0);
   const left=Math.max(0,cap-used), here=isXianzhiNow();
-  let h='<h3 class="sec">仙之境（神魔专属静修）</h3>';
+  let h='<h3 class="sec">栖霞秘境（神魔专属静修）</h3>';
   h+='<div class="muted">安全区无战斗，滞留即按等级结算修验值。每日上限 '+cap+' 分钟，次日 0 点重置。</div>';
   h+='<div class="stat-grid">'
     +'<div class="st"><span>修验速率</span><b>'+rate.toLocaleString()+' / 分钟</b></div>'
@@ -564,8 +564,8 @@ export function renderXianzhi(){
     +'<div class="st"><span>今日剩余</span><b>'+left.toFixed(1)+' 分</b></div>'
     +'<div class="st"><span>累计获得</span><b>'+Math.round(s.xz_exp_total||0).toLocaleString()+'</b></div>'
     +'</div>';
-  if(here) h+='<div class="loot">你正在仙之境静修，每 700ms 自动结算。</div>';
-  else h+='<div class="bag-tools"><button class="mini" data-sm="go_xz">前往仙之境</button></div>';
+  if(here) h+='<div class="loot">你正在栖霞秘境静修，每 700ms 自动结算。</div>';
+  else h+='<div class="bag-tools"><button class="mini" data-sm="go_xz">前往栖霞秘境</button></div>';
   const needLv=((sm().entry||{}).min_char_level||101);
   h+='<div class="muted">入口：北原郡 NPC 欧文子（需角色 Lv.'+needLv+' 入道后开启）。</div>';
   return h;
@@ -610,7 +610,7 @@ export function renderXrTrial(){
   const q=xyQuestState(); if(!q) return '<div class="muted">需先入神魔道。</div>';
   const tr=q.trial=q.trial||{}, cfg=xyCfg().trial;
   let h='<h3 class="sec">修验导师的考验</h3>';
-  h+='<div class="muted">每日 '+(xyTrialCap())+' 次（今日 '+(tr.times||0)+'）。消耗百炼石，限时击杀指定数量怪物，按品阶给修验经验。</div>';
+  h+='<div class="muted">每日 '+(xyTrialCap())+' 次（今日 '+(tr.times||0)+'）。消耗淬锋石，限时击杀指定数量怪物，按品阶给修验经验。</div>';
   if(tr.active){ const a=tr.active, left=Math.max(0,Math.ceil((a.deadline-Date.now())/1000));
     h+='<div class="wh-slot"><b>进行中：'+a.grade+'</b> <span class="pill on">'+a.kills+'/'+a.target+' · '+left+'秒</span></div>';
   } else h+='<div class="muted">未开始。接取后挂机击杀即可累计（'+(cfg?cfg.kill_seconds:900)+'秒内）。</div>';

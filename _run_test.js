@@ -353,7 +353,7 @@ function ok(name, cond, extra) {
     if (iw && ih) {
       iw.slot = 'weapon'; iw.sockets = 1; iw.gems = [null];
       ih.slot = 'helmet'; ih.sockets = 1; ih.gems = [null];
-      ok('北斗可行白名单：可镶武器、不可镶头盔',
+      ok('玄璧可行白名单：可镶武器、不可镶头盔',
         E.gemCanInlay(gb, iw) === true && E.gemCanInlay(gb, ih) === false);
       ok('望月白名单：不可镶武器、可镶头盔',
         E.gemCanInlay(gw, iw) === false && E.gemCanInlay(gw, ih) === true);
@@ -662,7 +662,7 @@ function ok(name, cond, extra) {
     pl.bag = [mkJunk(1), Object.assign(mkJunk(2), { refine: 3 }),
       Object.assign(mkJunk(3), { quality: 'blue' }), Object.assign(mkJunk(4), { bailian: 1 })];
     const n2 = E.autoExtractJunk(true);
-    ok('跳过已强化/高品质/百炼装', n2 === 1 && pl.bag.length === 3, 'n=' + n2 + ' bag=' + pl.bag.length);
+    ok('跳过已强化/高品质/淬锋装', n2 === 1 && pl.bag.length === 3, 'n=' + n2 + ' bag=' + pl.bag.length);
 
     pl.bag = []; for (let i = 0; i < E.AUTO_SALVAGE_AT + 10; i++) pl.bag.push(mkJunk(i));
     E.state.auto.junk = false;
@@ -1601,8 +1601,8 @@ function ok(name, cond, extra) {
     const mine = E.renderLife('mine'), craft = E.renderLife('craft');
     ok('探矿子页含「资源概览」+「⑦ 探矿」', mine.indexOf('资源概览') >= 0 && mine.indexOf('⑦ 探矿') >= 0);
     ok('探矿子页不含「① 打造」', mine.indexOf('① 打造') < 0);
-    ok('打造子页含 ① 与 ③', craft.indexOf('① 打造') >= 0 && craft.indexOf('③ 百炼装备') >= 0);
-    ok('打造子页不含 ② 与 ④', craft.indexOf('② 百炼丹') < 0 && craft.indexOf('④ 提取') < 0);
+    ok('打造子页含 ① 与 ③', craft.indexOf('① 打造') >= 0 && craft.indexOf('③ 淬锋装备') >= 0);
+    ok('打造子页不含 ② 与 ④', craft.indexOf('② 淬锋丹') < 0 && craft.indexOf('④ 提取') < 0);
     ok('打造子页含 ⑩ 装备精炼（此前完全无入口）',
       craft.indexOf('⑩ 装备精炼') >= 0 && craft.indexOf('id="refine-equip"') >= 0
       && craft.indexOf('data-act="refine-eq"') >= 0);
@@ -1615,7 +1615,7 @@ function ok(name, cond, extra) {
     ok('炼丹·药水子页不含 ⑪', E.renderLife('refine').indexOf('⑪ 宝石镶嵌') < 0);
     ok('全量渲染含 ①~⑪', E.renderLife().indexOf('⑪ 宝石镶嵌') >= 0);
     const rf = E.renderLife('refine'), cb = E.renderLife('combine'), rc = E.renderLife('recycle');
-    ok('炼丹·药水子页含 ② 与 ⑨', rf.indexOf('② 百炼丹') >= 0 && rf.indexOf('⑨ 药水炼制') >= 0);
+    ok('炼丹·药水子页含 ② 与 ⑨', rf.indexOf('② 淬锋丹') >= 0 && rf.indexOf('⑨ 药水炼制') >= 0);
     ok('合成子页含 ⑤ ⑥ ⑧',
       cb.indexOf('⑤ 矿石炼制') >= 0 && cb.indexOf('⑥ 乾坤炉') >= 0 && cb.indexOf('⑧ 宝石炼制') >= 0);
     ok('提取·商店子页含 ④ 与「材料商店」', rc.indexOf('④ 提取') >= 0 && rc.indexOf('材料商店') >= 0);
@@ -1925,7 +1925,7 @@ function ok(name, cond, extra) {
       const D = E.DATA;
       // fuling / qiling / smith / ring_quest 未列入 DATA_FILES（引擎未接入的系统），测试直读配置
       const RD = f => JSON.parse(fs.readFileSync(path.join(DIR, f + '.json'), 'utf8'));
-      ok('0.94 百炼上限 7→8（与 L13 的 8 档装备体系配套）',
+      ok('0.94 淬锋上限 7→8（与 L13 的 8 档装备体系配套）',
         D.craft.craft_upgrade_max_tier === 8 && !!D.bailian_recipes.level_8);
       const fu = RD('fuling');
       const hp = Object.keys(fu.hp_base).map(Number).sort((a,b)=>a-b)
@@ -1980,7 +1980,7 @@ function ok(name, cond, extra) {
       const bl = Object.keys(D.bailian_recipes).filter(k => k.indexOf('level_') === 0);
       ok('0.94 淬锋丹 8 级配方每条材料都补 source 说明且展示文案线原样保留',
         bl.length === 8 && bl.every(k => D.bailian_recipes[k].materials.every(m => !!m.source)) &&
-        D.bailian_recipes.level_1.name.indexOf('百炼丹') >= 0);
+        D.bailian_recipes.level_1.name.indexOf('淬锋丹') >= 0);
       ok('0.94 引擎仍按 loot_probs.rolls/probs 掷骰（segments 未消费，配置忠实）',
         typeof E.rollLoot === 'function' && D.loot_probs.boss.rolls === 3);
     }
@@ -2102,13 +2102,13 @@ function ok(name, cond, extra) {
     E.state.player.shenmo = saved;
     const smSubs = E.subTabs('shenmo');
     const tiers = E.smNodeTiers();
-    ok('入道后神魔子菜单 = 修验·变身 + 档位 + 仙之境 + 3 修验任务页',
+    ok('入道后神魔子菜单 = 修验·变身 + 档位 + 栖霞秘境 + 3 修验任务页',
       smSubs.length === tiers.length + 5 && tiers.length > 1,
       smSubs.map(x => x.label).join(','));
     ok('技能树子菜单标签取自 shenmo.json#tiers 的 name',
       smSubs.slice(1, 1 + tiers.length).every((x, i) => x.label === (E.smTierDef(tiers[i]) || {}).name),
       smSubs.map(x => x.label).join(','));
-    ok('仙之境位于档位之后、修验任务页之前',
+    ok('栖霞秘境位于档位之后、修验任务页之前',
       smSubs[1 + tiers.length] && smSubs[1 + tiers.length].key === 'xianzhijing',
       smSubs.map(x => x.key).join(','));
     ok('修验任务三页（task/str/trial）位于子菜单末位',
@@ -2329,18 +2329,18 @@ function ok(name, cond, extra) {
   {
     ok('矿石显示中文名（霜髓铁矿）', E.itemName('hantie') === '霜髓铁矿');
     ok('武魂配方卷轴显示中文名（启魂符☆炼制配方）', E.itemName('recipe_lingyin_1') === '启魂符☆炼制配方');
-    ok('宝石原料显示中文名（北斗石）', E.itemName('beidou_石') === '北斗石');
+    ok('宝石原料显示中文名（玄璧石）', E.itemName('beidou_石') === '玄璧石');
     ok('武魂材料显示中文名（天魂）', E.itemName('sanhun_tian') === '天魂');
   }
 
-  // ---- 仙之境（shenmo.json#xianzhijing：神魔专属安全区被动修验）----
-  console.log('-- 仙之境（被动修验）--');
+  // ---- 栖霞秘境（shenmo.json#xianzhijing：神魔专属安全区被动修验）----
+  console.log('-- 栖霞秘境（被动修验）--');
   {
     // 配置存在性
     const xc = E.DATA.shenmo && E.DATA.shenmo.xianzhijing;
-    ok('仙之境配置存在', !!xc, xc ? '' : 'null');
-    ok('仙之境每日上限 60 分钟', E.xzCapMin() === 60, String(E.xzCapMin()));
-    ok('仙之境 per_min_exp 表存在（≥10 段）', !!(xc && xc.per_min_exp && xc.per_min_exp.length >= 10),
+    ok('栖霞秘境配置存在', !!xc, xc ? '' : 'null');
+    ok('栖霞秘境每日上限 60 分钟', E.xzCapMin() === 60, String(E.xzCapMin()));
+    ok('栖霞秘境 per_min_exp 表存在（≥10 段）', !!(xc && xc.per_min_exp && xc.per_min_exp.length >= 10),
       xc && xc.per_min_exp ? xc.per_min_exp.length + ' 段' : 'null');
 
     // 入道（神魔道）后才能进；未入道 travelTo 被拒
@@ -2355,10 +2355,10 @@ function ok(name, cond, extra) {
     ok('入道成功（Lv.105 神道）', j.ok, j.msg);
     ok('入道后 shenmo.faction 已设', !!ps.shenmo.faction, ps.shenmo.faction);
 
-    // 子菜单 / 路由：renderShenmo(xianzhijing) 应路由到仙之境页面
-    ok('神魔子菜单含仙之境', E.subTabs('shenmo').some(x => x.key === 'xianzhijing' && x.label === '仙之境'),
+    // 子菜单 / 路由：renderShenmo(xianzhijing) 应路由到栖霞秘境页面
+    ok('神魔子菜单含栖霞秘境', E.subTabs('shenmo').some(x => x.key === 'xianzhijing' && x.label === '栖霞秘境'),
       JSON.stringify(E.subTabs('shenmo').map(x => x.key)));
-    ok('renderShenmo(xianzhijing) 路由到仙之境', E.renderShenmo('xianzhijing').indexOf('仙之境') >= 0,
+    ok('renderShenmo(xianzhijing) 路由到栖霞秘境', E.renderShenmo('xianzhijing').indexOf('栖霞秘境') >= 0,
       E.renderShenmo('xianzhijing').slice(0, 30));
 
     // 速率按等级取表
@@ -2395,35 +2395,35 @@ function ok(name, cond, extra) {
     E.smXianzhiAddMinutes(1);
     ok('跨日重置：xz_min 归零后重新累加（≤1）', (ps.shenmo.xz_min || 0) <= 1 + 1e-9, String(ps.shenmo.xz_min));
 
-    // 进入仙之境：isXianzhiNow + tick 早退 + autoZone 不换走
+    // 进入栖霞秘境：isXianzhiNow + tick 早退 + autoZone 不换走
     ps.shenmo.level = 1;
     E.travelTo('xianzhijing');
     ok('入道后可进入 xianzhijing', E.state.player.map === 'xianzhijing', E.state.player.map);
     ok('进入后 isXianzhiNow 为 true', E.isXianzhiNow() === true);
-    ok('仙之境 zone 置空（安全区无战斗）', E.state.zone === null);
+    ok('栖霞秘境 zone 置空（安全区无战斗）', E.state.zone === null);
 
-    // tick 在仙之境早退、不进战斗分支
+    // tick 在栖霞秘境早退、不进战斗分支
     E.state.player.map = 'xianzhijing'; E.state.zone = null; E.state.combat = null; E.state.idle = true;
     let tickErr = null;
     try { for (let i = 0; i < 100; i++) E.tick(); } catch (e) { tickErr = e; }
-    ok('仙之境 tick 不崩溃且不进战斗', !tickErr && E.state.combat === null, tickErr ? tickErr.message : ('combat=' + E.state.combat));
+    ok('栖霞秘境 tick 不崩溃且不进战斗', !tickErr && E.state.combat === null, tickErr ? tickErr.message : ('combat=' + E.state.combat));
     E.state.idle = false;
 
-    // autoZone 不强行换走仙之境（zone 仍为空）
+    // autoZone 不强行换走栖霞秘境（zone 仍为空）
     E.state.auto.zone = true;
     E.state.zone = null;
     E.autoZone(false);
-    ok('autoZone 不换走仙之境', E.state.zone === null && E.isXianzhiNow());
+    ok('autoZone 不换走栖霞秘境', E.state.zone === null && E.isXianzhiNow());
     E.state.auto.zone = false;
 
-    // 渲染：未进入时含「前往仙之境」按钮；进入后含「静修中」
+    // 渲染：未进入时含「前往栖霞秘境」按钮；进入后含「静修中」
     E.state.player.map = 'beijun';
     const htmlOut = E.renderXianzhi();
-    ok('仙之境页面含进入按钮', htmlOut.indexOf('前往仙之境') >= 0, htmlOut.slice(0, 30));
-    ok('仙之境页面含每日上限说明', htmlOut.indexOf('60') >= 0);
+    ok('栖霞秘境页面含进入按钮', htmlOut.indexOf('前往栖霞秘境') >= 0, htmlOut.slice(0, 30));
+    ok('栖霞秘境页面含每日上限说明', htmlOut.indexOf('60') >= 0);
     E.state.player.map = 'xianzhijing';
     const htmlIn = E.renderXianzhi();
-    ok('在仙之境内页面显示静修中', htmlIn.indexOf('静修') >= 0);
+    ok('在栖霞秘境内页面显示静修中', htmlIn.indexOf('静修') >= 0);
   }
 
   // ---- 修验任务（shenmo.json#quest：炼丹产线三系统）----
@@ -2438,7 +2438,7 @@ function ok(name, cond, extra) {
     ok('5 个品阶均含 dan_pct/exp_cost/yinzi_qty/submit_gold/mat_qty',
       E.xyGrades().every(g => { const d = E.xyGradeDef(g); return d && typeof d.dan_pct==='number' && typeof d.exp_cost==='number' && typeof d.yinzi_qty==='number' && typeof d.submit_gold==='number' && typeof d.mat_qty==='number'; }),
       E.xyGrades().map(g => !!E.xyGradeDef(g)).join(','));
-    ok('yinzi.pool = 紫菱花/风铃珠/百炼石', JSON.stringify(E.xyYinziPool()) === JSON.stringify(['ziling_hua','fengling_zhu','bailian_shi']));
+    ok('yinzi.pool = 紫菱花/风铃珠/淬锋石', JSON.stringify(E.xyYinziPool()) === JSON.stringify(['ziling_hua','fengling_zhu','bailian_shi']));
     ok('furnace_item = liandan_shenlu', qcfg.furnace_item === 'liandan_shenlu');
     ok('submit_bonus_pct = 0.2', qcfg.submit_bonus_pct === 0.2);
     ok('talisman = 修验符 + dan_bonus_pct 0.2', qcfg.talisman.item === 'shenmo_xiulian_fu' && qcfg.talisman.dan_bonus_pct === 0.2);
@@ -2531,11 +2531,11 @@ function ok(name, cond, extra) {
     ok('强化每日上限 Lv100 = 3（基础1 + 符令加成2）', E.xyStrCap() === 3, String(E.xyStrCap()));
     const rStr = E.xyStrengthen();
     ok('强化成功（enhanced→1, times→1）', rStr.ok && ps.shenmo.quest.str.enhanced === 1 && ps.shenmo.quest.str.times === 1, rStr.msg);
-    ok('强化消耗 0 级材料（百炼石×10/紫菱花×1/风铃珠×1）',
+    ok('强化消耗 0 级材料（淬锋石×10/紫菱花×1/风铃珠×1）',
       E.itemCount('bailian_shi') === 90 && E.itemCount('ziling_hua') === 19 && E.itemCount('fengling_zhu') === 19,
       [E.itemCount('bailian_shi'),E.itemCount('ziling_hua'),E.itemCount('fengling_zhu')].join(','));
 
-    // 导师考验：消耗百炼石 + 限时击杀给经验
+    // 导师考验：消耗淬锋石 + 限时击杀给经验
     ps.shenmo.quest = {}; ps.shenmo.level = 100;
     E.addToBag({type:'consumable', key:'bailian_shi', count:100});
     ok('考验每日上限 Lv100 = 1', E.xyTrialCap() === 1, String(E.xyTrialCap()));

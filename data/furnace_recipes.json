@@ -34,7 +34,7 @@
   },
   "erpin_luopan_to_sanpin": {
     "key": "erpin_luopan_to_sanpin",
-    "name": "二品罗盘→三品罗盘",
+    "name": "中品勘矿罗盘→上品勘矿罗盘",
     "category": "compass",
     "src_key": "erpin_luopan",
     "src_count": 3,
@@ -154,7 +154,7 @@
   },
   "ore_wujin_to_liufang": {
     "key": "ore_wujin_to_liufang",
-    "name": "乌金矿→六方金刚石",
+    "name": "乌金矿→晶核刚玉",
     "category": "ore",
     "src_key": "wujin",
     "src_count": 100,
@@ -164,7 +164,7 @@
   },
   "ore_liufang_to_lihuo": {
     "key": "ore_liufang_to_lihuo",
-    "name": "六方金刚石→离火翡翠",
+    "name": "晶核刚玉→焚髓碧玉",
     "category": "ore",
     "src_key": "liufang",
     "src_count": 100,
@@ -174,7 +174,7 @@
   },
   "ore_lihuo_to_haihun": {
     "key": "ore_lihuo_to_haihun",
-    "name": "离火翡翠→海魂水晶",
+    "name": "焚髓碧玉→潮生水晶",
     "category": "ore",
     "src_key": "lihuo",
     "src_count": 100,

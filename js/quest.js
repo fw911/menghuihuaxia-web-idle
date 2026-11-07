@@ -14,8 +14,8 @@ import { itemConsume, itemCount } from './life.js';
 //   · 修验任务：接取随机品阶（按 grades.weight 加权，4A/5A 受 refresh.boost 影响）→ 扣修验经验 + 银子（yinzi.pool 道具池）
 //     → 提交配方材料（recipe_types 的 exact/any_of）→ 用炼丹神炉(liandan_shenlu)炼丹（grades.dan_pct 概率出修验丹，修验符 +dan_bonus_pct）
 //     → 提交领金币（grades.submit_gold × (1+submit_bonus_pct) × (1+10%×强化等级)）。
-//   · 强化修验任务：按当前强化等级消耗 百炼石/紫菱花/风铃珠，提升丹率(+5%/级)与提交金币(+10%/级)。
-//   · 修验导师的考验：消耗百炼石，限时击杀 N 怪，按品阶 per_kill_exp 给修验经验。
+//   · 强化修验任务：按当前强化等级消耗 淬锋石/紫菱花/风铃珠，提升丹率(+5%/级)与提交金币(+10%/级)。
+//   · 修验导师的考验：消耗淬锋石，限时击杀 N 怪，按品阶 per_kill_exp 给修验经验。
 // 每日次数受 daily 限制（基础 + 符令加成 + 80 级无限）；刷新/洗练含免费次数与金币/洗练道具消耗。
 export function xyCfg(){ return (sm() && sm().quest) || {}; }
 export function xyGrades(){ return xyCfg().grade_order || []; }
@@ -34,7 +34,7 @@ export function xyQuestState(){
   s.quest = s.quest || {}; xyDailyReset(s.quest); return s.quest;
 }
 
-// 银子（yinzi）：用 yinzi.pool 道具池（紫菱花/风铃珠/百炼石）抵扣 qty
+// 银子（yinzi）：用 yinzi.pool 道具池（紫菱花/风铃珠/淬锋石）抵扣 qty
 export function xyYinziPool(){ return ((xyCfg().yinzi) || {}).pool || []; }
 export function xyHasYinzi(qty){ let h = 0; for(const k of xyYinziPool()) h += itemCount(k); return h >= qty; }
 export function xyConsumeYinzi(qty){
@@ -179,7 +179,7 @@ export function xyTrialStart(){
   if((tr.times || 0) >= xyTrialCap()) return { ok:false, msg:'今日考验次数已用完' };
   const g = xyRollGrade(), gi = xyGrades().indexOf(g);
   const bq = cfg.bailian_qty[gi], mk = cfg.min_kills[gi];
-  if(itemCount('bailian_shi') < bq) return { ok:false, msg:'需要百炼石×' + bq };
+  if(itemCount('bailian_shi') < bq) return { ok:false, msg:'需要淬锋石×' + bq };
   itemConsume('bailian_shi', bq); tr.times = (tr.times || 0) + 1;
   tr.active = { grade:g, kills:0, target:mk, exp:(cfg.per_kill_exp[g] || 0), deadline:Date.now() + (cfg.kill_seconds || 900) * 1000 };
   return { ok:true, msg:'考验开始：' + mk + ' 杀 / ' + (cfg.kill_seconds || 900) + ' 秒内' };

@@ -1,16 +1,16 @@
 {
   "_meta": {
-    "comment": "百炼丹炼制配方表（2026-08-28 新增）。配方卷轴 items.json 里的 recipe_bailian_1~5 右键使用触发炼制（start/status/claim 三段式 + 炼化瓶1瓶1进度）。materials 支持混合来源：consumable（百炼石/上一级百炼丹/淬魂瓶走 savegame consumables）与 crystal（晶石走 crystal_store）。result_item 必须存在于 items.json（bailian_dan_1~5）。配方 1~3 级杂货店有售（20/50/200金），4~5 级仅 100 级+聚宝怪掉落。"
+    "comment": "淬锋丹炼制配方表（2026-08-28 新增；2026-10-11 扩到 6~8 级，数值照原版百炼丹 6/7/8 档：50万/100万/200万 修验值）。配方卷轴 items.json 里的 recipe_bailian_1~8 右键使用触发炼制（start/status/claim 三段式 + 炼化瓶1瓶1进度）。materials 支持混合来源：consumable（淬锋石/上一级淬锋丹/淬魂瓶走 savegame consumables）与 crystal（晶石走 crystal_store）。result_item 必须存在于 items.json（bailian_dan_1~8）。配方 1~3 级杂货店有售（20/50/200金），4~8 级仅 100 级以上聚宝怪掉落（晶石封顶 7 档，6~8 级用同档晶石堆数量拉成本）。"
   },
   "level_1": {
     "key": "recipe_bailian_1",
-    "name": "百炼丹升级配方·壹",
+    "name": "淬锋丹升级配方·壹",
     "icon": "static/icons/items/token_001.png",
     "category": "bailian_recipe",
     "effect_type": "bailian_recipe",
     "type": "consumable",
     "result_item": "bailian_dan_1",
-    "result_name": "百炼丹·壹",
+    "result_name": "淬锋丹·壹",
     "result_count": 1,
     "materials": [
       {
@@ -40,13 +40,13 @@
   },
   "level_2": {
     "key": "recipe_bailian_2",
-    "name": "百炼丹升级配方·贰",
+    "name": "淬锋丹升级配方·贰",
     "icon": "static/icons/items/token_002.png",
     "category": "bailian_recipe",
     "effect_type": "bailian_recipe",
     "type": "consumable",
     "result_item": "bailian_dan_2",
-    "result_name": "百炼丹·贰",
+    "result_name": "淬锋丹·贰",
     "result_count": 1,
     "materials": [
       {
@@ -82,13 +82,13 @@
   },
   "level_3": {
     "key": "recipe_bailian_3",
-    "name": "百炼丹升级配方·叁",
+    "name": "淬锋丹升级配方·叁",
     "icon": "static/icons/items/token_003.png",
     "category": "bailian_recipe",
     "effect_type": "bailian_recipe",
     "type": "consumable",
     "result_item": "bailian_dan_3",
-    "result_name": "百炼丹·叁",
+    "result_name": "淬锋丹·叁",
     "result_count": 1,
     "materials": [
       {
@@ -124,13 +124,13 @@
   },
   "level_4": {
     "key": "recipe_bailian_4",
-    "name": "百炼丹升级配方·肆",
+    "name": "淬锋丹升级配方·肆",
     "icon": "static/icons/items/token_001.png",
     "category": "bailian_recipe",
     "effect_type": "bailian_recipe",
     "type": "consumable",
     "result_item": "bailian_dan_4",
-    "result_name": "百炼丹·肆",
+    "result_name": "淬锋丹·肆",
     "result_count": 1,
     "materials": [
       {
@@ -166,13 +166,13 @@
   },
   "level_5": {
     "key": "recipe_bailian_5",
-    "name": "百炼丹升级配方·伍",
+    "name": "淬锋丹升级配方·伍",
     "icon": "static/icons/items/token_002.png",
     "category": "bailian_recipe",
     "effect_type": "bailian_recipe",
     "type": "consumable",
     "result_item": "bailian_dan_5",
-    "result_name": "百炼丹·伍",
+    "result_name": "淬锋丹·伍",
     "result_count": 1,
     "materials": [
       {

@@ -236,7 +236,7 @@ export function tick(){
     if(th.hp>0){ p.hp=Math.min(p._s.max_hp, p.hp+th.hp); }
     if(th.mp>0){ p.mp=Math.min(p._s.max_mp, p.mp+th.mp); }
   }
-  // 仙之境：安全区被动修验（无战斗），按滞留 tick 结算后直接返回（避免进入下方战斗分支）
+  // 栖霞秘境：安全区被动修验（无战斗），按滞留 tick 结算后直接返回（避免进入下方战斗分支）
   if(isXianzhiNow()){ smXianzhiTick(); renderHeader(); return; }
   // ---------- 群体战斗：普通练级区每次遇 2~6 只，首领/副本单只 ----------
   if(!state.combat || !state.combatGroup || !state.combatGroup.length){

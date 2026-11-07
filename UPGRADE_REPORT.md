@@ -1628,7 +1628,7 @@ bytes 直写；`loot_probs` / `ore_recipes` / `potion_recipes` 属历史畸形�
 | `gem_recipes` | 北斗石/北斗灵石 → 玄璧石/玄璧灵石（77 处） | `E.itemName('beidou_石')` 断言（现为「北斗石」）、`js/inlay.js` 系列说明 |
 | `ore_recipes` / `furnace_recipes` | 乌金矿石/六方金刚石/离火翡翠/海魂水晶 → 曜纹金矿/晶核刚玉/焚髓碧玉/潮生水晶（10+2 处） | `js/inlay.js` 提示文案 |
 | `mining` | 一/二/三品罗盘 → 初/中/上品勘矿罗盘（3 处） | 面板显示 |
-| `guide` | 仙之境静修 → 栖霞秘境静修（1 处） | 全站「仙之境」命名 |
+| `guide` | 仙之境静修 → 栖霞秘境静修（1 处） | 全站「仙之境」命名（注：L15 实证 0.94 的 `xianzhijing` 地图真名即「栖霞秘境」，web 此前 UI 硬编码「仙之境」系旧名，L15 已全站 UI 重命名为栖霞秘境） |
 | `potion_recipes` | 玉泉定神液 → 玉泉定神守心液 等（3 处） | 面板显示 |
 
 另：`quests.json` 的「战魂 → 灵兽」整条任务线（48 处）与 `wuhun_recipes.json`
@@ -1640,3 +1640,79 @@ bytes 直写；`loot_probs` / `ore_recipes` / `potion_recipes` 属历史畸形�
 - `_run_test.js`：**726 项 ALL PASS / 0 FAIL / 0 SKIP**（711 → 726，新增 15 条）
 - `_l4_survive.js` 挂机 6 例零死亡；`_l4_verify.js` 首领三档与前几轮一致
 - `node --check` / `py_compile` 通过；12 份数据回读后「除展示文案外与 0.94 全等」
+
+---
+
+## 十八、L15 按 0.94 对齐展示命名（改名线 · 数据 + JS 硬编码 + 断言，已落地）
+
+### 18.1 范围与证据
+
+0.94 发行包直接解密（`config_enc/*.enc` → `openssl enc -d -aes-256-cbc`，密钥仍
+`PBKDF2(SHA256, b64('kUmtE1a7/...'), 'MH_CONFIG_ENC_SALT_v1', 200000, 32)`）为权威源。
+
+`items.json` / `ores.json` / `gems.json` 此前已是 0.94 新名（淬锋丹、淬锋石、焚髓碧玉、潮生水晶、
+曜纹金矿、晶核刚玉、玄璧/流光/霜华/空明/含章、蕴元瓶、初/中/上品勘矿罗盘），但下列 7 份配置与
+JS 硬编码仍残留 web-idle 旧名，内部不一致：
+
+| 文件 | 旧名 → 0.94 名 | 牵连 |
+|---|---|---|
+| `gem_recipes` | 北斗石/北斗灵石 → 玄璧石/玄璧灵石 | `E.itemName('beidou_石')` 断言、inlay.js 系列说明 |
+| `bailian_recipes` | 百炼丹 → 淬锋丹 | inlay/life/tabs 硬编码、`_run_test.js` ② 断言 |
+| `ore_recipes` | 乌金矿石/六方金刚石/离火翡翠/海魂水晶 → 曜纹金矿/晶核刚玉/焚髓碧玉/潮生水晶 | inlay 提示文案 |
+| `mining` | 一/二/三品罗盘 → 初/中/上品勘矿罗盘 | 面板显示 |
+| `furnace_recipes` | 墨银矿→乌金矿、乌金矿→晶核刚玉（**保持**：0.94 同名字段亦为乌金矿，属 0.94 自身口径） | 配方名 |
+| `potion_recipes` | 玉泉定神液 → 玉泉定神守心液 等 | 面板显示 |
+| `guide` | 仙之境静修 → 栖霞秘境静修（1 处） | 见 18.3 关键更正 |
+
+### 18.2 数据落地（`_l15_apply.py`，字节级子串替换）
+
+- 取 web 与 0.94 的叶级差异，过滤文本字段（`name`/`desc`/`comment`/`result_name`/
+  `src_name`/`dst_name` 等），**显式排除 `icon`**（0.94 图标资源 web 缺失，保留 web 原路径）。
+- 子串替换按 `old` 串长度降序执行（长串/整句先替换，避免短子串提前改写致整句原始串失配）。
+- 强校验：替换后与 0.94 的差异**恰好只剩 `icon`**；`icon` 字段原样保留。
+- 7 份合计 **83 处**文本替换：gem 51 / bailian 11 / ore 10 / mining 3 / furnace 4 / potion 3 / guide 1。
+- `data/shenmo.json#bailian.name`：`百炼石` → `淬锋石`（0.94 `shenmo.json` 亦为淬锋石，web 旧名，补正）。
+
+### 18.3 关键更正：全站「仙之境」实为旧名
+
+先前 L14/L15 规划误判「`xianzhijing` 地图名未动」。实证 0.94 `maps.json` 该图 `name` 即为
+**栖霞秘境**（web `data/maps.json` 早已是栖霞秘境，仅 JS UI 硬编码残留「仙之境」）。因此 L15 将
+**玩家可见的 UI 文案**统一重命名为栖霞秘境：
+
+- `js/tabs.js` 神魔子菜单 label `仙之境` → `栖霞秘境`
+- `js/render.js` 栖霞秘境子页标题 / 「需先入神魔道才能进入」/ 「你正在栖霞秘境静修」/ 「前往栖霞秘境」按钮
+- `js/player.js` 修验升级 eventLog `【仙之境】` → `【栖霞秘境】`
+- `js/idle.js` / `js/battle.js` / `js/main.js` 相关注释与早退分支提示
+- `_run_test.js` 对应断言（`subTabs` label、`renderShenmo` indexOf、`前往`按钮 indexOf 等）
+
+代码标识符保持不变：`xianzhijing` 键、`isXianzhiNow()`、`go_xz`、`xzCapMin()`、`renderShenmo('xianzhijing')`。
+
+### 18.4 JS 硬编码与断言同步
+
+- `js/quest.js`：修验系统确实消费 `bailian_shi`（强化消耗、导师考验），硬编码 `百炼石` → `淬锋石`（4 处：L17/18/37 注释 + L182 `需要百炼石×` 提示）。
+- `js/render.js`：`百炼石` → `淬锋石`（L613 消耗提示）。
+- `js/inlay.js`：宝石系列旧名注释 `元如` → `含章`（2 处）。
+- `_run_test.js` 断言同步（仅改预期值字符串，不增删断言）：
+  - `② 百炼丹` → `② 淬锋丹`（L1605/L1618）、`百炼丹` recipe 名（L1983）
+  - `北斗石` → `玄璧石` 且 `itemName('beidou_石')` 断言（L2332）
+  - `③ 百炼装备` → `③ 淬锋装备`（L1604）
+  - `北斗` → `玄璧`（L356 白名单文案）、`百炼装`/`百炼上限`/`百炼石` 描述文案
+  - `仙之境` → `栖霞秘境`（23 处断言与描述）
+
+### 18.5 验证
+
+- `_run_test.js`：**726 项 ALL PASS / 0 FAIL / 0 SKIP**（后端 8014 在跑；与 L14 基线一致，改名不增删断言）
+- `node --check` 全部 `js/*.js` 通过；`_l15_js_rename.py` 字节级替换保留排版/行尾
+- 实测改名断言（栖霞秘境标签、`itemName('beidou_石')==='玄璧石'`、`② 淬锋丹`）均已随 ALL PASS 通过
+
+### 18.6 本轮未改 / 已发现待办（登记为后续）
+
+1. **`loot_tables.json` 描述字段改名线（建议 L16）**：大量 `desc` 仍写旧名
+   `北斗宝石`/`北斗五系`/`北斗灵石`/`乌金矿`/`离火翡翠`/`海魂水晶`，但 0.94 `loot_tables`
+   已用 `玄璧宝石` 等，属真实漂移。该批为 `desc` 元数据（不直接展示给玩家，掉落按键匹配），
+   且部分短语（如「五系」「灵石」）需逐条对照 0.94 措辞，故单独排期，不在 L15 内。
+   - 已证**非漂移**（0.94 同名字段一致，保持 web 现状）：`bases_warrior` 7 阶盾 `name:"北斗"`
+     （0.94 亦名北斗，系独立装备名非宝石系）、`furnace_recipes` 名 `乌金矿`（0.94 同）。
+2. **`quests.json` 战魂 → 灵兽 整条任务线（48 处）**：与 `wuhun_recipes.json`（279 处）绑定
+   companion / summons / wuhun 全套改造，独立大工程，维持 L14 登记不变。
+3. `monster_*` / `shenmo_*` / `achievements` / `shops` 等为已知自研改编线，维持现状。

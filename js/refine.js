@@ -98,7 +98,7 @@ export function doInlay(item, gem){
   // 系列对应属性
   const series = DATA.gems.gem_series.find(g=>g.key===gem.series);
   if(!series){ log('<span class="dmg">未知宝石</span>'); return; }
-  // gems.json#gem_series[].slots 是「本系列只能镶哪些部位」的中文白名单（如北斗→武器/护手/戒指）
+  // gems.json#gem_series[].slots 是「本系列只能镶哪些部位」的中文白名单（如玄璧→武器/护手/戒指）
   if(series.slots && series.slots.indexOf(SLOT_NAME[item.slot]) < 0){
     log('<span class="dmg">'+series.name+' 只能镶进 '+series.slots.join('/')+'，不能镶到'+SLOT_NAME[item.slot]+'</span>'); return;
   }

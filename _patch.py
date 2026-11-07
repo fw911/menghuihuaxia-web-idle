@@ -80,7 +80,7 @@ EXPORTS = [
     'consumeDungeonEntry', 'noteDungeonBossKilled',
     # 称号系统
     'titleList','titleByKey','titleUnlocked','titleEffect','titleDmgMult','titleHeal','titleProgress','titleTarget','grantTitle','checkTitles','equipTitle',
-    # 仙之境（shenmo.json#xianzhijing）
+    # 栖霞秘境（shenmo.json#xianzhijing）
     'xzRatePerMin','xzCapMin','smXianzhiAddMinutes','smXianzhiTick','isXianzhiNow','curMapKey','renderXianzhi',
     # 修验任务（shenmo.json#quest，炼丹产线）
     'xyCfg','xyGrades','xyGradeDef','xyRecipeTypes','xyRecipeName','xyDailyCap','xyQuestState','xyYinziPool',

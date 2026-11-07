@@ -14,8 +14,8 @@ import { cn, compassDef, crystalCount, crystalForTier, crystalName, crystalStart
 import { findItem } from './binds.js';
 
 // ---------- 宝石镶嵌（gems.json）----------
-// 系列限定部位必须接通：北斗/天行 → 武器·护手·戒指；望月/无相 → 头盔·护肩·盔甲·项链·护腿·盾牌；
-// 元如 → 上面六件 + 鞋子·披风·腰带；修仙石 → 仅武器。不检查会把专用宝石镶到不合适的部位上白费一颗。
+// 系列限定部位必须接通：玄璧/流光 → 武器·护手·戒指；霜华/空明 → 头盔·护肩·盔甲·项链·护腿·盾牌；
+// 含章 → 上面六件 + 鞋子·披风·腰带；修仙石 → 仅武器。不检查会把专用宝石镶到不合适的部位上白费一颗。
 export function gemSeriesDef(key){ return ((DATA.gems||{}).gem_series||[]).find(g=>g.key===key)||null; }
 export function gemSeriesName(key){ const s=gemSeriesDef(key); return s? s.name : key; }
 export function gemSeriesLabel(g){
@@ -105,14 +105,14 @@ export function gemGradeOpts(){
 export function oreCostPreview(){ const t=LS.forgeTier; const ore=ORE_BY_TIER[t-1]; return ORE_NAME[ore]+' x'+(3+t*2)+' + 金币 '+fmtNum(t*150); }
 export function bailianCostStr(r){
   const parts=[];
-  for(const m of r.materials){ if(m.key==='bailian_shi') parts.push('百炼石x'+m.count); else if(m.kind==='crystal') parts.push('晶石x'+m.count); else if(m.bottle) parts.push('炼化瓶x1'); }
+  for(const m of r.materials){ if(m.key==='bailian_shi') parts.push('淬锋石x'+m.count); else if(m.kind==='crystal') parts.push('晶石x'+m.count); else if(m.bottle) parts.push('蕴元瓶x1'); }
   const lowL=parseInt(r.key.split('_').pop(),10)-1;
-  if(lowL>=1) parts.push('百炼丹·'+cn(lowL)+'x2');
+  if(lowL>=1) parts.push('淬锋丹·'+cn(lowL)+'x2');
   return parts.join(' ');
 }
 export function bailianDanSummary(){
   const p=state.player; const s=[];
-  for(let L=1;L<=5;L++){ const n=p.bag.filter(b=>b.type==='consumable'&&b.key==='bailian_dan_'+L).reduce((a,b)=>a+b.count,0); if(n>0) s.push('百炼丹·'+cn(L)+'x'+n); }
+  for(let L=1;L<=5;L++){ const n=p.bag.filter(b=>b.type==='consumable'&&b.key==='bailian_dan_'+L).reduce((a,b)=>a+b.count,0); if(n>0) s.push('淬锋丹·'+cn(L)+'x'+n); }
   return s.length?s.join(' '):'（无）';
 }
 
@@ -128,7 +128,7 @@ export function renderLife(sub){
     const matKeys=Object.keys(p.materials).filter(k=>p.materials[k]>0);
     const matStr=matKeys.length? matKeys.map(k=>itemName(k)+'·'+p.materials[k]).join('  ') : '（无）';
     const cryStr=((DATA.crystals||{}).crystal_types||[]).filter(c=>crystalCount(c.key)>0).map(c=>c.name+'·'+crystalCount(c.key)).join('  ')||'（无）';
-    push('mine','<h3>资源概览</h3><div class="muted">矿石：'+oreParts+'<br>材料：'+matStr+'<br>晶石：'+cryStr+'<br>神秘结晶：'+fmtNum(p.crystal)+' · 百炼丹：'+bailianDanSummary()+'</div>');
+    push('mine','<h3>资源概览</h3><div class="muted">矿石：'+oreParts+'<br>材料：'+matStr+'<br>晶石：'+cryStr+'<br>神秘结晶：'+fmtNum(p.crystal)+' · 淬锋丹：'+bailianDanSummary()+'</div>');
   }
 
   // ① 打造
@@ -139,17 +139,17 @@ export function renderLife(sub){
     push('craft',h);
   }
 
-  // ② 百炼丹炼制
+  // ② 淬锋丹炼制
   if(any || sub==='refine'){
-    let h='<hr><h3>② 百炼丹炼制</h3><div class="muted">消耗 百炼石+晶石(神秘结晶)+炼化瓶；高階需上一级百炼丹 x2。配方链：'+DATA.bailian_recipes.level_1.result_name+' → … → '+DATA.bailian_recipes.level_5.result_name+'</div>';
+    let h='<hr><h3>② 淬锋丹炼制</h3><div class="muted">消耗 淬锋石+晶石(神秘结晶)+蕴元瓶；高階需上一级淬锋丹 x2。配方链：'+DATA.bailian_recipes.level_1.result_name+' → … → '+DATA.bailian_recipes.level_5.result_name+'</div>';
     for(let L=1;L<=5;L++){ const r=DATA.bailian_recipes['level_'+L]; if(!r) continue; h+='<div class="item" data-act="bailian-craft" data-l="'+L+'">炼制 '+r.result_name+' <span class="pill">'+bailianCostStr(r)+'</span></div>'; }
     push('refine',h);
   }
 
-  // ③ 百炼装备升阶
+  // ③ 淬锋装备升阶
   if(any || sub==='craft'){
-    let h='<hr><h3>③ 百炼装备（升阶）</h3><div class="muted">对装备使用 百炼丹·(当前+1)，提升一档并增强属性（上限 +'+DATA.craft.craft_upgrade_max_tier+'）。</div>';
-    h+='<div class="craft-row">装备：<select id="bail-equip">'+equipOpts(LS.bailEquip)+'</select> <button class="mini" data-act="bailian-use">百炼升阶</button></div>';
+    let h='<hr><h3>③ 淬锋装备（升阶）</h3><div class="muted">对装备使用 淬锋丹·(当前+1)，提升一档并增强属性（上限 +'+DATA.craft.craft_upgrade_max_tier+'）。</div>';
+    h+='<div class="craft-row">装备：<select id="bail-equip">'+equipOpts(LS.bailEquip)+'</select> <button class="mini" data-act="bailian-use">淬锋升阶</button></div>';
     push('craft',h);
   }
 
@@ -181,8 +181,8 @@ export function renderLife(sub){
   // ⑪ 宝石镶嵌（gems.json：系列限定部位；空孔由打造/兑换产出）
   if(any || sub==='craft'){
     let h='<hr><h3>⑪ 宝石镶嵌</h3><div class="muted">把背包里的宝石镶进有空孔的装备。'
-      +'各系列限定部位：北斗/天行→武器·护手·戒指；望月/无相→头盔·护肩·盔甲·项链·护腿·盾牌；'
-      +'元如→上面六件 + 鞋子·披风·腰带；修仙石→仅武器。4 颗同级宝石可在「合成」子页炼成更高一级。</div>';
+      +'各系列限定部位：玄璧/流光→武器·护手·戒指；霜华/空明→头盔·护肩·盔甲·项链·护腿·盾牌；'
+      +'含章→上面六件 + 鞋子·披风·腰带；修仙石→仅武器。4 颗同级宝石可在「合成」子页炼成更高一级。</div>';
     const gems=inlayGemList();
     if(!gems.length){
       h+='<div class="muted">背包里没有宝石（首领/精英掉落，或在「合成」子页炼制）。</div>';
@@ -242,11 +242,11 @@ export function renderLife(sub){
 
   // ⑧ 宝石炼制
   if(any || sub==='combine'){
-    let h='<hr><h3>⑧ 宝石炼制</h3><div class="muted">4 颗同系列同级宝石 + 炼化瓶 x1 → 1 颗高一级宝石（gem_recipes，需 Lv.40）。</div>';
+    let h='<hr><h3>⑧ 宝石炼制</h3><div class="muted">4 颗同系列同级宝石 + 蕴元瓶 x1 → 1 颗高一级宝石（gem_recipes，需 Lv.40）。</div>';
     h+='<div class="muted">系列：<select id="gem-series">'+gemSeriesOpts()+'</select> 品级：<select id="gem-grade">'+gemGradeOpts()+'</select> <button class="mini" data-act="gem-refine">炼制</button></div>';
     if(LS.gemSeries && LS.gemGrade){
       const r=gemRecipeFor(LS.gemSeries, LS.gemGrade);
-      if(r) h+='<div class="muted">'+r.src_name+' x4（持有 '+gemCount(LS.gemSeries,LS.gemGrade)+'）+ 炼化瓶（持有 '+(p.materials.lianhua_ping||0)+'）→ '+r.dst_name+' x1</div>';
+      if(r) h+='<div class="muted">'+r.src_name+' x4（持有 '+gemCount(LS.gemSeries,LS.gemGrade)+'）+ 蕴元瓶（持有 '+(p.materials.lianhua_ping||0)+'）→ '+r.dst_name+' x1</div>';
       else h+='<div class="muted">该品级已是最高或无可升配方</div>';
     }
     push('combine',h);
@@ -261,7 +261,7 @@ export function renderLife(sub){
       if(c.hp_potion) parts.push(itemName(c.hp_potion.key)+' x'+c.hp_potion.count+'(有'+itemCount(c.hp_potion.key)+')');
       if(c.mp_potion) parts.push(itemName(c.mp_potion.key)+' x'+c.mp_potion.count+'(有'+itemCount(c.mp_potion.key)+')');
       if(c.crystal) parts.push('神秘结晶 x'+c.crystal.count);
-      if(c.bottle) parts.push('炼化瓶 x'+(c.bottle.count||1));
+      if(c.bottle) parts.push('蕴元瓶 x'+(c.bottle.count||1));
       h+='<div class="item" data-act="potion-refine" data-r="'+k+'">炼制 '+r.result_name+' x'+(r.result_count||1)+' <span class="pill">'+parts.join(' + ')+'</span></div>';
     }
     push('refine',h);

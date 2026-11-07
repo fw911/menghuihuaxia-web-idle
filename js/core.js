@@ -347,7 +347,7 @@ export function rebuildItemNameCache(){
     const r=DATA.ore_recipes[k];
     if(r.name && !cache[k]) cache[k]=r.name;
   }
-  // 9) 百炼丹产物
+  // 9) 淬锋丹产物
   for(const k in (DATA.bailian_recipes||{})){
     const r=DATA.bailian_recipes[k];
     if(r.result_item && r.result_name && !cache[r.result_item]) cache[r.result_item]=r.result_name;

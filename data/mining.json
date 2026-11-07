@@ -16,7 +16,7 @@
     "compass": {
       "yipin": {
         "key": "yipin_luopan",
-        "name": "一品罗盘",
+        "name": "初品勘矿罗盘",
         "source": "shop",
         "level_required": 1,
         "ancient_max_level": 60,
@@ -28,7 +28,7 @@
       },
       "erpin": {
         "key": "erpin_luopan",
-        "name": "二品罗盘",
+        "name": "中品勘矿罗盘",
         "source": "BOSS/聚宝掉落(34级+)、点券罗盘包",
         "level_required": 13,
         "ancient_max_level": 80,
@@ -39,7 +39,7 @@
       },
       "sanpin": {
         "key": "sanpin_luopan",
-        "name": "三品罗盘",
+        "name": "上品勘矿罗盘",
         "source": "BOSS/聚宝掉落(66级+)、点券罗盘包",
         "level_required": 27,
         "open_maps": [
